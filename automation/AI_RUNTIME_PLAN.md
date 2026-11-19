@@ -13,8 +13,9 @@ An agent role is a prompt plus scope, tools, knowledge and permissions. Running 
 7. Observability: run IDs, inputs/outputs, duration, compute/tokens, errors and status.
 
 ## Dedicated Hustle City execution pilot
-A separate five-role manual pilot is stored under agents/runtime/hustle-city/:
+A separate six-role manual pilot is stored under agents/runtime/hustle-city/:
 - SAM game orchestrator
+- ATLAS systems architect
 - NEXUS game backend
 - VECTOR game developer
 - URBAN world designer
