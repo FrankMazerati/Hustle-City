@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "project": "Hustle City",
+  "mode": "manual_supervised_documentation_pilot",
+  "status": "ready_for_manual_dispatch",
+  "note": "Dedicated Hustle City team. Does not reuse Command Center agent instances or its Supabase database. First cycle is specifications only.",
+  "tasks": [
+    {
+      "task_id": "HC-ORCH-001",
+      "owner": "sam-game-orchestrator",
+      "title": "Define first playable vertical slice",
+      "status": "queued",
+      "deliverable": "planning/HUSTLE_CITY_FIRST_VERTICAL_SLICE.md",
+      "reviewer": "sentinel-qa",
+      "approval_required": "creator"
+    },
+    {
+      "task_id": "HC-BE-001",
+      "owner": "game-backend",
+      "title": "Design dedicated game backend and multiplayer contracts",
+      "status": "queued",
+      "deliverable": "architecture/HUSTLE_CITY_BACKEND_BLUEPRINT.md",
+      "reviewer": "atlas-systems-architect",
+      "approval_required": "creator"
+    },
+    {
+      "task_id": "HC-GAME-001",
+      "owner": "game-developer",
+      "title": "Specify first Godot 4 gameplay vertical slice",
+      "status": "queued",
+      "deliverable": "planning/HUSTLE_CITY_GODOT_VERTICAL_SLICE.md",
+      "reviewer": "atlas-systems-architect",
+      "approval_required": "creator"
+    },
+    {
+      "task_id": "HC-WORLD-001",
+      "owner": "world-designer",
+      "title": "Plan initial city/world blockout",
+      "status": "queued",
+      "deliverable": "world/HUSTLE_CITY_WORLD_BLOCKOUT_PLAN.md",
+      "reviewer": "atlas-systems-architect",
+      "approval_required": "creator"
+    },
+    {
+      "task_id": "HC-QA-001",
+      "owner": "sentinel-qa",
+      "title": "Independently review pilot deliverables",
+      "status": "queued",
+      "deliverable": "quality/HUSTLE_CITY_PILOT_QA_REVIEW.md",
+      "reviewer": "creator",
+      "approval_required": "creator"
+    }
+  ],
+  "statuses": [
+    "queued",
+    "in_progress",
+    "review",
+    "blocked",
+    "accepted",
+    "rejected"
+  ],
+  "acceptance_rule": "Workers may move their own task only to review or blocked. Only the creator may approve product decisions; only independent QA/orchestration may recommend acceptance. A successful provider call is not proof of QA acceptance."
+}
