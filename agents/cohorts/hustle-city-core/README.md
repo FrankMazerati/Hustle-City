@@ -1,15 +1,15 @@
 # Hustle City dedicated core cohort
 
-This cohort is a named, game-only working group within the existing Hustle City agent studio. It does not create duplicate canonical role IDs or replace the 48-role catalog. Each cohort identity maps to existing specialist role IDs in `agents/agent-registry.json`.
+This cohort is a named, game-only working group within the existing Hustle City agent studio. It does not create duplicate canonical role IDs or replace the 48-role catalog. Each cohort identity maps to existing specialist role IDs in agents/agent-registry.json.
 
 ## Status
 
-- Cohort definitions: recorded in this directory.
-- Canonical specialist roles: already defined in `agents/AGENT_CATALOG.md` and `agents/AGENT_PROMPTS.md`.
+- Ten named specialist identities and their instructions are recorded in this directory.
+- Canonical specialist roles are defined in agents/AGENT_CATALOG.md and agents/AGENT_PROMPTS.md.
 - Models: unassigned.
-- Runtime workers: not activated.
-- Tool permissions/schedules: pending runtime configuration.
-- First assignments: specification and planning deliverables only; no claim of implementation or execution.
+- The five-role execution pilot (SAM, NEXUS, VECTOR, URBAN and SENTINEL) has dedicated prompts, a task queue and a manual-only GitHub Actions workflow.
+- Runtime workers are not yet activated; the workflow requires provider secrets in this repository and a manual dispatch.
+- The first pilot tasks are documentation/specification only, not live database or game deployment.
 
 ## Cohort roster
 
@@ -26,8 +26,12 @@ This cohort is a named, game-only working group within the existing Hustle City 
 | VIBE | Venues, Activities & Social Experience Designer | venue-activities; poker-games; crew-social; economy-property; progression-guide | [VIBE.md](VIBE.md) |
 | SENTINEL | Independent QA & Safety Director | qa-director; gameplay-qa; visual-qa; performance-qa; security-agent; build-release | [SENTINEL.md](SENTINEL.md) |
 
+## Runtime pilot
+
+See [runtime pilot guide](../../runtime/hustle-city/README.md) for the five-role first execution group, relay and activation instructions.
+
+**Important:** GitHub files define agent identities and prompts. They do not instantiate persistent agents or select models. The pilot workflow runs temporary sequential worker sessions when manually dispatched; it is not an always-on autonomous swarm.
+
 ## Shared rules
 
-All agents follow the shared operating rules at the top of each individual instruction file, the project vision, decision log, communication protocol and integration contracts. SAM coordinates; ATLAS owns architecture and integration; SENTINEL independently verifies quality; the creator approves product-level decisions.
-
-**Important:** committing these files records the agent identities, prompts and first assignments in GitHub. It does not instantiate workers, choose models, send runtime messages or start automation. Activation requires the runtime/model/tool configuration described in `automation/AI_RUNTIME_PLAN.md`.
+All agents follow the project vision, decision log, communication protocol and integration contracts. SAM coordinates; ATLAS owns architecture and integration; SENTINEL independently verifies quality; the creator approves product-level decisions.
