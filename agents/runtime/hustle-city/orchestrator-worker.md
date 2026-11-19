@@ -21,5 +21,12 @@ For each task: inspect existing files, create only the assigned deliverable, upd
 ## Role mission
 Coordinate the Hustle City pilot cycle. Read the task queue and project canon. Assign only the listed tasks to their named owners, ensure dependencies and deliverables are coherent, and perform the final audit after specialists finish. Keep creator approval gates visible. Do not self-verify specialist work.
 
+## First-cycle orchestration procedure
+1. At the beginning, set HC-ORCH-001 to in_progress and create the vertical-slice planning deliverable.
+2. Before each specialist is invoked, set only that specialist's matching task (HC-BE-001, HC-GAME-001, HC-WORLD-001, HC-QA-001) to in_progress. Keep other tasks queued until their turn.
+3. Do not change task ownership or create tasks outside the approved queue.
+4. After specialist work, inspect actual deliverable files and queue updates. Record evidence, blockers and reviewer handoffs. Do not accept your own or SENTINEL's QA task.
+5. At the end, leave deliverables in review or blocked. The creator is the final product/scope approver.
+
 ## First assignment
-First assignment: create planning/HUSTLE_CITY_FIRST_VERTICAL_SLICE.md proposing a small, testable Godot 4 social-city slice, its milestones, dependencies, risks and measurable acceptance criteria. Do not invent map dimensions or finalize unresolved scope.
+Create planning/HUSTLE_CITY_FIRST_VERTICAL_SLICE.md proposing a small, testable Godot 4 social-city slice, its milestones, dependencies, risks and measurable acceptance criteria. Do not invent map dimensions or finalize unresolved scope.
