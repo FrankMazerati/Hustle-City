@@ -8,6 +8,8 @@ Hustle City is a cinematic, realistic 3D social-world/city-life game built with 
 - [AI agent studio catalog](agents/AGENT_CATALOG.md)
 - [Agent prompts](agents/AGENT_PROMPTS.md)
 - [Machine-readable agent registry](agents/agent-registry.json)
+- [Dedicated Hustle City cohort](agents/cohorts/hustle-city-core/README.md)
+- [Dedicated runtime pilot and activation steps](agents/runtime/hustle-city/README.md)
 - [Agent communication protocol](agents/COMMUNICATION_PROTOCOL.md)
 - [Cross-system integration contracts](architecture/INTEGRATION_CONTRACTS.md)
 - [QA and glitch prevention](quality/QUALITY_SYSTEM.md)
@@ -23,4 +25,4 @@ Hustle City is a cinematic, realistic 3D social-world/city-life game built with 
 6. Do not claim a feature, workflow, build or agent is running unless it has actually been activated and verified.
 
 ## Current status
-The design/agent architecture documents are being consolidated. The specialist roles are defined in the catalog, but are not yet running AI workers. No n8n workflows have been imported or activated. Godot implementation status must be tracked separately from design documentation.
+The ten-person named Hustle City cohort and five-role manual execution pilot are defined in GitHub. Models remain unassigned, provider secrets are not confirmed, and no live agent cycle has been run from this repository. The first pilot cycle is documentation/specification only. No Hustle City Supabase project has been provisioned or connected. Godot implementation status must be tracked separately from design documentation.
