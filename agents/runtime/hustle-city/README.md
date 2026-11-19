@@ -22,7 +22,7 @@ The 14-slot free-first relay is adapted from FrankMazerati/Maximus-Optimus-Globa
 
 - Workflow is manual dispatch only; no timer or automatic schedule is enabled.
 - To run, open Actions → Hustle City — supervised agent pilot → Run workflow and enter RUN.
-- The workflow runs agents sequentially and commits changes to main.
+- The workflow runs agents sequentially on an isolated branch and opens a pull request for human review; it does not write agent outputs directly to main.
 - It installs Gemini CLI and Aider and grants those tools write access to the checked-out repository during the run. Run only after reviewing prompts and adding provider secrets.
 - No provider key is committed to Git.
 - Initial tasks are documentation/specification only; no database deployment or production code is authorized.
