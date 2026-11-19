@@ -7,12 +7,13 @@ This is the separate Hustle City execution team. It reuses the relay pattern fro
 | Runtime role | Cohort identity | Purpose |
 |---|---|---|
 | Game Orchestrator | SAM | Assign, coordinate and audit |
+| Systems Architect | ATLAS | Define shared interfaces and dependencies |
 | Game Backend | NEXUS | Backend/multiplayer blueprint |
 | Game Developer | VECTOR | Godot gameplay vertical slice |
 | World Designer | URBAN | City/world blockout |
 | Independent QA | SENTINEL | Review and reject incomplete work |
 
-The broader ten-person named cohort remains defined in agents/cohorts/hustle-city-core/. This five-role pilot activates only the minimum leadership, backend, gameplay, world and QA functions. ATLAS and other specialists remain available for later expansion.
+The broader ten-person named cohort remains defined in agents/cohorts/hustle-city-core/. This six-role pilot activates the minimum leadership, architecture, backend, gameplay, world and QA functions. Other specialists remain available for later expansion.
 
 ## Relay
 
