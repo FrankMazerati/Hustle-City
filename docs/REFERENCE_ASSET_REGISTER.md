@@ -9,7 +9,8 @@
 
 - **24 files** in the two latest upload commits.
 - **2 PDF handoff documents** (30 pages each).
-- **22 PNG screenshots**.
+- **22 PNG screenshots** in those two commits.
+- One additional PNG, `Screenshot_20261119-012422.png`, was already present at the repository root before these uploads and is not included in the 24-file intake count.
 - The files currently live on `main`. This register is on `agents/mobile-ai-headquarters-v1`; do not assume the binary files have been copied to that branch.
 - The original filenames are preserved. Do not rename or overwrite source references during cataloguing.
 
@@ -51,7 +52,6 @@ Some other PNG files could not be rendered through the current repository file r
 - [`Hustle_City_Complete_Project_Handoff_UPDATED_Get_Wild_Beach.pdf`](https://github.com/FrankMazerati/Hustle-City/blob/main/Hustle_City_Complete_Project_Handoff_UPDATED_Get_Wild_Beach.pdf)
 
 ### PNG screenshots (22)
-- [ ] `Screenshot_20261119-012422.png` — visual classification pending unless noted below.
 - [ ] `Screenshot_20261119-143637.png` — visual classification pending unless noted below.
 - [ ] `Screenshot_20261119-143643.png` — visual classification pending unless noted below.
 - [ ] `Screenshot_20261119-143658.png` — visual classification pending unless noted below.
@@ -84,3 +84,7 @@ Some other PNG files could not be rendered through the current repository file r
 5. Keep environment references linked to the master world map/district plan so roads, waterways, skyline, venues and travel hubs remain geographically consistent.
 6. Keep the updated color direction in the project decision log: blue/white and pink/blue are major palettes; gold/black are selective luxury accents, not the dominant palette everywhere.
 7. Before production use, record asset origin, rights/license status, resolution, intended engine format, dependencies and approval state.
+
+
+### Pre-existing image (not part of the 24 new uploads)
+- [`Screenshot_20261119-012422.png`](https://github.com/FrankMazerati/Hustle-City/blob/main/Screenshot_20261119-012422.png) — already present before the two latest upload commits.
