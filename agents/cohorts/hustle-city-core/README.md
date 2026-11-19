@@ -7,7 +7,7 @@ This cohort is a named, game-only working group within the existing Hustle City 
 - Ten named specialist identities and their instructions are recorded in this directory.
 - Canonical specialist roles are defined in agents/AGENT_CATALOG.md and agents/AGENT_PROMPTS.md.
 - Models: unassigned.
-- The five-role execution pilot (SAM, NEXUS, VECTOR, URBAN and SENTINEL) has dedicated prompts, a task queue and a manual-only GitHub Actions workflow.
+- The six-role execution pilot (SAM, ATLAS, NEXUS, VECTOR, URBAN and SENTINEL) has dedicated prompts, a task queue and a manual-only GitHub Actions workflow.
 - Runtime workers are not yet activated; the workflow requires provider secrets in this repository and a manual dispatch.
 - The first pilot tasks are documentation/specification only, not live database or game deployment.
 
