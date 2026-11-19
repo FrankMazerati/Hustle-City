@@ -22,7 +22,7 @@ A separate five-role manual pilot is stored under agents/runtime/hustle-city/:
 
 The wider ten-person named cohort is under agents/cohorts/hustle-city-core/. The pilot uses its own task queue (automation/HUSTLE_CITY_TASK_QUEUE.json), relay log and 14-slot free-first provider fallback script. It does not share Command Center agent instances or the Command Center Supabase project.
 
-The workflow at .github/workflows/hustle-city-agent-pilot.yml is manual-dispatch only and requires the input RUN. No schedule is enabled. It runs temporary sequential model sessions; it does not create persistent always-on agents. The workflow installs Gemini CLI and Aider and grants the worker session repository write access. Review prompts before dispatch and keep the first cycle documentation-only.
+The workflow at .github/workflows/hustle-city-agent-pilot.yml is manual-dispatch only and requires the input RUN. No schedule is enabled. It runs temporary sequential model sessions; it does not create persistent always-on agents. The workflow installs Gemini CLI and Aider, grants the worker session repository write access on an isolated run branch, and opens a pull request for review. Review prompts before dispatch and keep the first cycle documentation-only.
 
 Provider credentials must be added as repository Actions secrets in Hustle City; secrets in the Command Center repository are not automatically shared. Paid relay slots remain disabled unless ALLOW_PAID_AI=true. Provider availability, model names, free quotas and billing can change; a relay slot is not a guarantee of free capacity.
 
