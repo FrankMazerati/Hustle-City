@@ -15,6 +15,15 @@
       "approval_required": "creator"
     },
     {
+      "task_id": "HC-ARCH-001",
+      "owner": "atlas-systems-architect",
+      "title": "Define shared system boundaries and interface contracts for the pilot",
+      "status": "queued",
+      "deliverable": "architecture/HUSTLE_CITY_PILOT_ARCHITECTURE.md",
+      "reviewer": "sentinel-qa",
+      "approval_required": "creator"
+    },
+    {
       "task_id": "HC-BE-001",
       "owner": "game-backend",
       "title": "Design dedicated game backend and multiplayer contracts",
