@@ -15,6 +15,12 @@ Use the Galaxy A17 as a lightweight mobile headquarters for managing a 12-agent 
 - **Four logical AI engine groups** — three agent seats per group. Agents share a configurable model pool; tasks route to the strongest suitable model under capability, privacy, latency, quota and budget rules. See [model strategy](model-strategy.md).
 - **Nexus** — shared backend/multiplayer engineering support role already described in the wider project; not counted among the 12 seats and not assumed to be a running agent.
 
+## Initial AI budget policy
+
+The creator selected **100% free initially; no paid API calls**. The router enforces a hard zero-dollar ceiling. If no verified free hosted model or verified local endpoint is available, tasks are queued rather than sent to a paid fallback. Free app/chat access is not assumed to provide free API access. Provider configuration remains disabled until current quotas, terms, model IDs and compatibility are verified.
+
+The first router implementation is in `runtime/model_router.py`, with a fail-closed configuration in `runtime/model-router.config.json` and policy tests in `runtime/tests/`.
+
 ## First implementation milestones
 
 1. Confirm this blueprint against the existing repository standards.
