@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: hustle-city-agent-pilot
@@ -26,6 +27,8 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
+      - name: Create isolated agent-run branch
+        run: git switch -c "agents/hustle-city-${GITHUB_RUN_ID}"
       - name: Set up Node and Python
         uses: actions/setup-node@v4
         with:
@@ -93,5 +96,5 @@ jobs:
           git add --all
           if git diff --cached --quiet; then echo "No agent changes to commit."; exit 0; fi
           git commit -m "chore(hustle-city): supervised agent pilot cycle"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          git push --set-upstream origin HEAD
+          gh pr create --title "Hustle City agent pilot run ${GITHUB_RUN_ID}" --body "Supervised, manually dispatched Hustle City agent pilot. Review all agent-generated files and QA evidence before merging. A successful relay is not proof of correctness."
