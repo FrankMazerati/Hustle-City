@@ -12,7 +12,7 @@ Use the Galaxy A17 as a lightweight mobile headquarters for managing a 12-agent 
 
 - **Trinity** — central coordinator; routes work, maintains project-wide context, resolves conflicts, and reports to the creator. Trinity is outside the 12 specialist seats.
 - **12 specialist agents** — see [agent-roster.json](agent-roster.json) and [agent-personas.md](agent-personas.md).
-- **Four logical AI engine groups** — three agent seats per group. Provider/model choices remain configurable and are intentionally unselected until capability, price, API access, context limits, and rate limits are compared.
+- **Four logical AI engine groups** — three agent seats per group. Agents share a configurable model pool; tasks route to the strongest suitable model under capability, privacy, latency, quota and budget rules. See [model strategy](model-strategy.md).
 - **Nexus** — shared backend/multiplayer engineering support role already described in the wider project; not counted among the 12 seats and not assumed to be a running agent.
 
 ## First implementation milestones
