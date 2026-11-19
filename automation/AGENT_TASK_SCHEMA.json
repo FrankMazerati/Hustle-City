@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "fields": [
+    "task_id",
+    "requester",
+    "owner",
+    "goal",
+    "context_refs",
+    "inputs",
+    "constraints",
+    "dependencies",
+    "deliverables",
+    "acceptance_criteria",
+    "reviewers",
+    "risk",
+    "approval_required",
+    "status"
+  ],
+  "statuses": [
+    "proposed",
+    "ready",
+    "in_progress",
+    "blocked",
+    "review",
+    "accepted",
+    "rejected"
+  ],
+  "example": {
+    "task_id": "HC-ARCH-0001",
+    "requester": "sam-chief-coordinator",
+    "owner": "architecture-agent",
+    "goal": "Specify a modular restaurant entrance and circulation contract",
+    "context_refs": [
+      "docs/PROJECT_VISION.md",
+      "architecture/INTEGRATION_CONTRACTS.md"
+    ],
+    "inputs": [
+      "approved character scale contract"
+    ],
+    "constraints": [
+      "support player and NPC navigation",
+      "do not invent unapproved world dimensions"
+    ],
+    "dependencies": [
+      "character-agent",
+      "navigation-agent",
+      "interaction-agent"
+    ],
+    "deliverables": [
+      "architecture/specs/restaurant-module.md"
+    ],
+    "acceptance_criteria": [
+      "dimensions and anchors documented",
+      "dependent agents review",
+      "QA reachability tests pass"
+    ],
+    "reviewers": [
+      "character-agent",
+      "navigation-agent",
+      "interaction-agent",
+      "integration-agent"
+    ],
+    "risk": "medium",
+    "approval_required": "QA",
+    "status": "proposed"
+  }
+}
