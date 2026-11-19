@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "status": "provider_selection_pending",
+  "execution": "remote_api",
+  "note": "Four logical engine groups with three specialist seats each. Provider/model identifiers intentionally blank pending evaluation and explicit selection.",
+  "engines": [
+    {
+      "id": "engine-1",
+      "name": "World and Construction",
+      "agents": [
+        "atlas",
+        "brick",
+        "blueprint"
+      ],
+      "provider": null,
+      "model": null,
+      "api_base": null,
+      "credential_ref": null,
+      "capabilities_required": [
+        "long-context reasoning",
+        "spatial and systems planning",
+        "structured output"
+      ]
+    },
+    {
+      "id": "engine-2",
+      "name": "People and Appearance",
+      "agents": [
+        "vibe",
+        "stitch",
+        "motion"
+      ],
+      "provider": null,
+      "model": null,
+      "api_base": null,
+      "credential_ref": null,
+      "capabilities_required": [
+        "creative design",
+        "character consistency",
+        "structured output"
+      ]
+    },
+    {
+      "id": "engine-3",
+      "name": "Vehicles and Transportation",
+      "agents": [
+        "torque",
+        "tracks",
+        "route"
+      ],
+      "provider": null,
+      "model": null,
+      "api_base": null,
+      "credential_ref": null,
+      "capabilities_required": [
+        "technical reasoning",
+        "systems engineering",
+        "structured output"
+      ]
+    },
+    {
+      "id": "engine-4",
+      "name": "Gameplay and Quality",
+      "agents": [
+        "ace",
+        "spark",
+        "lockdown"
+      ],
+      "provider": null,
+      "model": null,
+      "api_base": null,
+      "credential_ref": null,
+      "capabilities_required": [
+        "coding and tool use",
+        "test analysis",
+        "structured output"
+      ]
+    }
+  ],
+  "credential_policy": "Store credentials in a secure secret manager or protected runtime environment; never commit secrets to this repository.",
+  "routing_policy": "Choose model per task using capability, context window, latency, cost, rate limits, and availability. Record provider/model/version with each run."
+}
