@@ -1,0 +1,97 @@
+name: Hustle City — supervised agent pilot
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_run:
+        description: "Type RUN to start the manual agent cycle"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hustle-city-agent-pilot
+  cancel-in-progress: false
+
+jobs:
+  agent-cycle:
+    if: ${{ inputs.confirm_run == 'RUN' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - name: Checkout Hustle City
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Set up Node and Python
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install relay clients
+        run: |
+          set -euo pipefail
+          npm install -g @google/gemini-cli
+          pip install --break-system-packages aider-chat
+          chmod +x scripts/hustle-city-ai-relay.sh
+          bash -n scripts/hustle-city-ai-relay.sh
+          python -m json.tool automation/HUSTLE_CITY_TASK_QUEUE.json >/dev/null
+      - name: Run dedicated Hustle City team sequentially
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+          SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          COHERE_API_KEY: ${{ secrets.COHERE_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          ALLOW_PAID_AI: ${{ vars.ALLOW_PAID_AI }}
+          GEMINI_CLI_TRUST_WORKSPACE: "true"
+        shell: bash
+        run: |
+          set -uo pipefail
+          failures=()
+          run_agent() {
+            local prompt="$1"
+            echo "::group::Hustle City agent: $prompt"
+            if ./scripts/hustle-city-ai-relay.sh "$prompt"; then echo "Relay completed: $prompt"; else echo "::error::All configured relays failed for $prompt"; failures+=("$prompt"); fi
+            echo "::endgroup::"
+          }
+          run_agent "agents/runtime/hustle-city/orchestrator-worker.md"
+          run_agent "agents/runtime/hustle-city/backend-worker.md"
+          run_agent "agents/runtime/hustle-city/game-developer-worker.md"
+          run_agent "agents/runtime/hustle-city/world-designer-worker.md"
+          run_agent "agents/runtime/hustle-city/qa-worker.md"
+          run_agent "agents/runtime/hustle-city/orchestrator-worker.md"
+          if (( ${#failures[@]} > 0 )); then printf '%s\n' "${failures[@]}" > automation/HUSTLE_CITY_FAILED_AGENTS.txt; exit 1; fi
+      - name: Verify repository artifacts
+        if: always()
+        run: |
+          set -euo pipefail
+          python -m json.tool automation/HUSTLE_CITY_TASK_QUEUE.json >/dev/null
+          bash -n scripts/hustle-city-ai-relay.sh
+          git status --short
+      - name: Commit agent outputs
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "Hustle City Agent Bot"
+          git config user.email "hustle-city-agent-bot@users.noreply.github.com"
+          git add --all
+          if git diff --cached --quiet; then echo "No agent changes to commit."; exit 0; fi
+          git commit -m "chore(hustle-city): supervised agent pilot cycle"
+          git pull --rebase origin main
+          git push origin HEAD:main
