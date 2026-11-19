@@ -1,6 +1,6 @@
 # Model Strategy: strongest capability, maximum throughput, free-first
 
-Status: proposed operating policy; provider credentials and production models are not configured.
+Status: active policy baseline; **100% free initial budget**. No paid API calls are permitted. Provider credentials and production models are not configured.
 
 ## Objective
 
@@ -8,22 +8,19 @@ Maximize useful Hustle City work per dollar while preserving output quality. Sel
 
 ## Operating tiers
 
-### Tier A — Frontier / hardest tasks
+### Tier A — Frontier / hardest tasks (DISABLED under initial budget)
+No paid frontier endpoint may be called under the current policy. When a task needs frontier capability, Trinity must queue it for creator review or perform a bounded best-effort attempt with an explicitly approved free endpoint. Do not silently downgrade a high-risk task.
+
 Use the strongest model that is available and approved for:
 - Trinity's difficult coordination and conflict resolution;
 - architecture decisions and cross-system dependency analysis;
 - complex Godot engineering, debugging and code review;
 - security-sensitive design and difficult QA investigations.
 
-This tier may be paid. Never silently send work to a paid endpoint. Require an explicit budget/usage ceiling and record cost.
+This tier is disabled until the creator changes the budget policy in a future explicit decision. No paid candidate is configured.
 
-Candidate for evaluation: DeepSeek V4-Pro through its API for hard reasoning and multi-step coding. It is a paid API, not a free local model. Compare it against other current frontier candidates with the same Hustle City test suite before selection.
-
-### Tier B — Free or low-cost hosted throughput
-Use for routine agent work when free-tier limits and data terms are acceptable:
-- first candidate: Gemini 3.8 Flash API free tier, subject to current model eligibility, rate limits and Google data-use terms;
-- low-cost fallback candidate: DeepSeek V4.1 Flash API. Treat it as low-cost paid usage, not guaranteed free;
-- add other providers only after confirming current API access, terms, rate limits and tool-call compatibility.
+### Tier B — Verified free hosted throughput
+Use only a provider/model endpoint whose API free tier, current quota, data terms, model ID and tool compatibility have been checked. The router must require an explicit `verified_free` flag and a zero-cost policy classification. If no suitable verified endpoint is configured or its quota is exhausted, queue the task. Never treat a low-cost paid API as free.
 
 Free chat access in an app does not imply free API access. Do not assume a user's Copilot, Gemini, Manus or DeepSeek app subscription/plan includes API credits.
 
@@ -40,7 +37,7 @@ PocketPal supports on-device GGUF models on Android. Use it for local experiment
 2. Use Tier C first only for low-risk tasks where a small local model is sufficient.
 3. Use Tier B for ordinary production tasks when a suitable free quota is available.
 4. Escalate to Tier A for complex/high-impact work, repeated failures, ambiguous architecture, cross-domain integration or independent final review.
-5. If a free quota is exhausted, queue the task or use an approved low-cost fallback. Never silently incur charges.
+5. If a free quota is exhausted, queue the task. There is no paid fallback under the initial budget.
 6. Keep an independent QA pass for consequential outputs. A model must not approve its own high-impact work.
 7. Cache shared project context where supported, deduplicate repeated requests, batch suitable background jobs and cap retries.
 8. Preserve a human approval gate before merge, deployment, spending, account changes or external publication.
@@ -67,14 +64,13 @@ Score each run on correctness, completeness, repository consistency, tool-call r
 
 ## Device and runtime boundary
 
-The phone is the mobile command surface and local lightweight-model test device. It is not the dependable always-on worker. Long-running tasks belong on a controlled remote runner with persistent task state, bounded retries, logs and cost limits. Tablet is for review and monitoring. GitHub remains the shared source of truth.
+The phone is the mobile command surface and local lightweight-model test device. It is not the dependable always-on worker. Long-running tasks belong on a controlled remote runner with persistent task state, bounded retries, logs and a hard zero-dollar cost limit. Tablet is for review and monitoring. GitHub remains the shared source of truth.
 
 ## Initial recommended posture
 
 - Keep all provider/model fields configurable.
-- Benchmark Gemini 3.8 Flash (free-tier eligibility) as the first hosted throughput candidate.
-- Benchmark DeepSeek V4.1 Flash as a low-cost hosted fallback.
-- Evaluate DeepSeek V4-Pro as a paid escalation candidate; do not enable billing until a budget is explicitly approved.
+- Evaluate currently available free API tiers only after verifying model IDs, quota, privacy terms and tool compatibility. Do not hard-code unverified model names.
+- Paid escalation is disabled. Do not configure paid fallbacks.
 - Test one small GGUF model in PocketPal on the phone; do not download large models to the A17.
 - Use the existing Manus, Perplexity, NotebookLM, Copilot, Gemini and DeepSeek apps as human-facing research/development tools where useful. Do not assume they are automatically callable by Trinity; integrations require supported APIs and credentials.
 
