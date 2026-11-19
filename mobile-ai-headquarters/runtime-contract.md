@@ -55,7 +55,17 @@ These actions require explicit human authorization and appropriate tooling.
 
 ## Model routing
 
-Engine groups are logical assignments. Provider and model identifiers are configuration values, not hard-coded assumptions. A routing policy should consider task type, capability, context window, latency, cost, rate limits, and availability. Fallbacks must be recorded in the task run metadata.
+The initial creator-approved budget policy is **zero dollars: no paid API calls**.
+- Only verified free hosted endpoints or verified local endpoints may be used.
+- A hosted endpoint must have a currently verified free quota, approved data terms, a configured model ID, and a compatible API protocol.
+- A local endpoint must be tested on the actual device/runtime before being marked verified.
+- If no compliant model is available, the task is queued. Quota exhaustion, HTTP 402, or HTTP 429 must never trigger a paid fallback.
+- Paid frontier routing remains disabled. A task that requires unavailable frontier capability is marked blocked/needs_review rather than silently downgraded.
+- Free access in a consumer app does not imply free API access.
+- Provider credentials belong in protected environment variables or a secret manager, never in Git.
+- Record provider/model, config version, timestamp, latency, token usage and zero-dollar policy decision with each run.
+
+The implementation is in `runtime/model_router.py`; its configuration defaults to an empty provider pool and fail-closed behavior. See `runtime/model-router.config.json` and `runtime/tests/test_model_router.py`.
 
 ## Reliability
 
