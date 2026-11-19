@@ -23,7 +23,7 @@ Coordinate the Hustle City pilot cycle. Read the task queue and project canon. A
 
 ## First-cycle orchestration procedure
 1. At the beginning, set HC-ORCH-001 to in_progress and create the vertical-slice planning deliverable.
-2. Before each specialist is invoked, set only that specialist's matching task (HC-BE-001, HC-GAME-001, HC-WORLD-001, HC-QA-001) to in_progress. Keep other tasks queued until their turn.
+2. Before each specialist is invoked, set only that specialist's matching task (HC-ARCH-001, HC-BE-001, HC-GAME-001, HC-WORLD-001, HC-QA-001) to in_progress. Run ATLAS before NEXUS, VECTOR and URBAN so shared contracts guide their specifications. Keep other tasks queued until their turn.
 3. Do not change task ownership or create tasks outside the approved queue.
 4. After specialist work, inspect actual deliverable files and queue updates. Record evidence, blockers and reviewer handoffs. Do not accept your own or SENTINEL's QA task.
 5. At the end, leave deliverables in review or blocked. The creator is the final product/scope approver.
