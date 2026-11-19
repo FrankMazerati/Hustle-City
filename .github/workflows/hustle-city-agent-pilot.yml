@@ -72,6 +72,7 @@ jobs:
             echo "::endgroup::"
           }
           run_agent "agents/runtime/hustle-city/orchestrator-worker.md"
+          run_agent "agents/runtime/hustle-city/architecture-worker.md"
           run_agent "agents/runtime/hustle-city/backend-worker.md"
           run_agent "agents/runtime/hustle-city/game-developer-worker.md"
           run_agent "agents/runtime/hustle-city/world-designer-worker.md"
