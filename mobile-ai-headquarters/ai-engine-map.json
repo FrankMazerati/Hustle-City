@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "status": "provider_selection_pending",
-  "execution": "remote_api",
-  "note": "Four logical engine groups with three specialist seats each. Provider/model identifiers intentionally blank pending evaluation and explicit selection.",
+  "execution": "hybrid_router_remote_primary_local_fallback",
+  "note": "Four logical engine groups with three specialist seats each. Agents share a task-routed model pool; model choice is based on capability, privacy, latency, cost, free quota and availability. Local phone models are optional low-risk/offline helpers, not frontier reasoning workers.",
   "engines": [
     {
       "id": "engine-1",
@@ -78,5 +78,29 @@
     }
   ],
   "credential_policy": "Store credentials in a secure secret manager or protected runtime environment; never commit secrets to this repository.",
-  "routing_policy": "Choose model per task using capability, context window, latency, cost, rate limits, and availability. Record provider/model/version with each run."
+  "routing_policy": "Choose model per task using capability, context window, latency, cost, rate limits, and availability. Record provider/model/version with each run.",
+  "routing_tiers": {
+    "frontier_escalation": {
+      "purpose": "Hard reasoning, complex engineering, architecture and high-impact QA",
+      "enabled": false,
+      "budget_approval_required": true
+    },
+    "hosted_throughput": {
+      "purpose": "Routine agent tasks using verified free quota or approved low-cost API",
+      "enabled": false,
+      "free_quota_must_be_verified": true
+    },
+    "local_fallback": {
+      "purpose": "Private/offline low-risk tasks and lightweight assistance",
+      "enabled": false,
+      "device_fit_test_required": true
+    }
+  },
+  "local_device_constraints": {
+    "device": "Galaxy A17 Android phone",
+    "reported_ram_gb": 4,
+    "initial_model_target": "approximately 1B-2B quantized GGUF, subject to measured memory fit",
+    "large_models_on_phone": false,
+    "note": "External USB storage adds capacity but does not increase RAM or compute."
+  }
 }
