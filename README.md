@@ -6,6 +6,8 @@ Hustle City is a cinematic, realistic 3D social-world/city-life game built with 
 - [Project vision and game scope](docs/PROJECT_VISION.md)
 - [Decision log and unresolved items](docs/DECISION_LOG.md)
 - [AI agent studio catalog](agents/AGENT_CATALOG.md)
+- [Agent prompts](agents/AGENT_PROMPTS.md)
+- [Machine-readable agent registry](agents/agent-registry.json)
 - [Agent communication protocol](agents/COMMUNICATION_PROTOCOL.md)
 - [Cross-system integration contracts](architecture/INTEGRATION_CONTRACTS.md)
 - [QA and glitch prevention](quality/QUALITY_SYSTEM.md)
