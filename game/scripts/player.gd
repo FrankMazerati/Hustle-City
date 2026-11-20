@@ -53,6 +53,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		rotate_y(-event.relative.x*SENSITIVITY)
 		pitch = clampf(pitch-event.relative.y*SENSITIVITY,-0.9,0.45)
 		camera_pivot.rotation.x = pitch
+	if event is InputEventScreenDrag:
+		rotate_y(-event.relative.x*SENSITIVITY*1.6)
+		pitch = clampf(pitch-event.relative.y*SENSITIVITY*1.6,-0.9,0.45)
+		camera_pivot.rotation.x = pitch
 	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	if event is InputEventMouseButton and event.pressed and Input.mouse_mode == Input.MOUSE_MODE_VISIBLE:
