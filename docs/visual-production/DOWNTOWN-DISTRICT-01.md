@@ -111,6 +111,31 @@ Agents must use this shared world specification. Do not let separate specialists
 - The established blue/white and pink/blue visual language is present, with selective warm gold at night.
 - All assets can be decomposed into reusable game components and validated in-engine.
 
-## 11. Implementation honesty
+## 11. Player experience — live the neighborhood
+
+The downtown district must support a continuous, seamless-feeling player routine, not just a driving showcase:
+
+1. Drive through the neighborhood and pull over or park legally/where gameplay permits.
+2. Exit the vehicle and move freely on foot.
+3. Approach and interact with pedestrians and responsive NPCs through contextual conversation and activities.
+4. Discover street-corner social life: people talking, music, vendors, local fashion, people hanging out, smoke drifting from a small group, and other ambient neighborhood behaviors.
+5. Walk to an elevated or underground station, enter it, navigate the platform, board a train, ride through the city, and exit at another station.
+6. Continue on foot after exiting, explore nearby blocks, meet people, visit businesses, and reconnect with the city by car, rail, or other transport.
+
+The world should support this as a connected loop: **drive → park → exit → explore → interact → board transit → ride → exit → explore again.**
+
+### Neighborhood authenticity and respect
+- Create distinct neighborhood identities through architecture, storefronts, public spaces, music, fashion, NPC routines, and local activity—not stereotypes.
+- Include believable informal street economies and adult urban street culture as ambient fictional world details, without making every resident a criminal or reducing a neighborhood to drug activity.
+- NPCs should have varied goals, schedules, personalities, relationships, and reactions. Avoid static crowds that merely decorate the sidewalk.
+- Let players observe, approach, talk, build relationships, participate in permitted activities, and choose how they engage with the world.
+- Make the neighborhood feel active at different times of day and night.
+
+### Transit accuracy as inspiration, not a forced map
+Use real Chicago CTA references to make the experience credible, while keeping Hustle City's final rail network fictional and internally consistent. For reference, Chicago's Green Line serves 43rd and 47th Street stations and also has a King Drive station farther south at 63rd Street. The Red Line serves 43rd and 47th Street but does not have a King Drive station. Do not depict 43rd, 47th, and King Drive as one consecutive real-world route without checking the actual line and geography. Hustle City may create its own station names, routes, transfers, and neighborhood connections.
+
+Rideable trains are a gameplay system, not background animation: platform access, boarding, doors, passenger placement, route progression, station announcements/signage, arrival, and safe disembarkation should be considered in the design.
+
+## 12. Implementation honesty
 
 This brief records the creator-approved world direction. It does **not** claim that local Termux agents have executed, that a 3D scene exists, or that the generated concept image is already a game asset. Local execution, asset production, and in-engine validation remain separate production steps.
