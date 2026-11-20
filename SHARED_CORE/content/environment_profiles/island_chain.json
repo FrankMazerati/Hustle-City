@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "id": "island_chain",
+  "display_name": "Island Chain & Causeway Network",
+  "climate": "coastal_marine",
+  "biome_tags": ["island", "coastal", "marine"],
+  "vegetation_sets": ["coastal_palms_where_climate_allows", "island_shrubland", "salt_tolerant_grasses"],
+  "scenery_archetypes": ["island_village", "causeway_bridge", "ferry_terminal", "waterfront_homes", "small_marina", "beach_cove"],
+  "water_features": ["bay", "island", "beach", "marina", "canal"],
+  "weather_profile": {
+    "humidity_range": "high",
+    "precipitation_tags": ["coastal_showers", "storms", "clear_breezy_days"],
+    "seasonal_variation": "moderate",
+    "wind_tags": ["marine_breeze", "crosswind_on_bridges"],
+    "atmosphere_tags": ["wide_water_views", "sunset_reflections", "salt_air"]
+  },
+  "npc_activity_tags": ["ferry_passengers", "boaters", "island_residents", "day_trippers", "marina_crowds"]
+}
