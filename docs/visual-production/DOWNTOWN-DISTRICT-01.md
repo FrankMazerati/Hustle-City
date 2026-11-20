@@ -124,6 +124,30 @@ The downtown district must support a continuous, seamless-feeling player routine
 
 The world should support this as a connected loop: **drive → park → exit → explore → interact → board transit → ride → exit → explore again.**
 
+### Proximity-triggered, player-responsive NPC conversations
+
+NPCs should be able to initiate natural, situational conversation when a real player comes within an appropriate conversational distance. The player should not have to open a menu or press an interaction button for every ordinary greeting.
+
+Example station approach:
+- A player walks toward the station entrance.
+- Nearby NPCs notice the player and may offer a context-aware greeting: "Hey, how you doing? You heading to the train? Me too."
+- The NPC can naturally continue with an offer or question that fits their character and the location, such as offering loose cigarettes or cannabis.
+- The player can respond using the game's supported interaction method—selectable dialogue, typed text, or voice if enabled.
+- If the player says, "No, I'm straight," the NPC can answer, "All right, man. I'll see you later," and return to their activity.
+- If the player accepts an offer, asks a question, ignores the NPC, or walks away, the NPC responds appropriately without trapping the player in a conversation.
+
+Design requirements:
+- **Context awareness:** dialogue reflects location, time, nearby activity, NPC role, and what the player is doing.
+- **Natural timing:** vary initiation distance, eye contact, body orientation, pauses, and whether an NPC chooses to speak. Avoid every NPC shouting at every passerby.
+- **Player agency:** answer, decline, ask a follow-up, ignore, or leave. Conversations must not block movement unless the player chooses a deeper interaction.
+- **Continuity:** NPCs remember relevant recent exchanges and relationship context where appropriate.
+- **Multiplayer awareness:** NPCs address nearby players clearly; avoid duplicate greetings, dialogue collisions, and several NPCs speaking over one another.
+- **Character variety:** different personalities, moods, speech styles, and neighborhood familiarity. Avoid repetitive generic lines.
+- **Performance:** use proximity triggers, cooldowns, dialogue priorities, and lightweight ambient behaviors so busy sidewalks remain performant on mobile devices.
+- **Mature-world settings:** support appropriate age and platform settings; make offers and player choices clear without forcing participation.
+
+The conversation system supports quick spontaneous exchanges and optional deeper dialogue. A passing greeting should be brief and skippable; players who want to socialize can stay and talk.
+
 ### Neighborhood authenticity and respect
 - Create distinct neighborhood identities through architecture, storefronts, public spaces, music, fashion, NPC routines, and local activity—not stereotypes.
 - Include believable informal street economies and adult urban street culture as ambient fictional world details, without making every resident a criminal or reducing a neighborhood to drug activity.
