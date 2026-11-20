@@ -21,6 +21,18 @@ jobs:
       image: barichello/godot-ci:4.4.1
     steps:
       - uses: actions/checkout@v4
+      - name: Install matching Godot Web export templates
+        run: |
+          template_version="4.4.1.stable"
+          template_dir="$HOME/.local/share/godot/export_templates/$template_version"
+          mkdir -p "$template_dir" /tmp/godot-export-templates
+          curl --fail --location --retry 3 \
+            "https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_export_templates.tpz" \
+            --output /tmp/godot-export-templates.tpz
+          unzip -q /tmp/godot-export-templates.tpz -d /tmp/godot-export-templates
+          cp -a /tmp/godot-export-templates/templates/. "$template_dir/"
+          test -s "$template_dir/web_nothreads_debug.zip"
+          test -s "$template_dir/web_nothreads_release.zip"
       - name: Validate and export
         run: |
           mkdir -p game/build
