@@ -1,0 +1,162 @@
+name: Hustle City Web Preview
+on:
+  push:
+    branches: [main]
+    paths: ["game/**", ".github/workflows/hustle-city-web-preview.yml"]
+  pull_request:
+    paths: ["game/**", ".github/workflows/hustle-city-web-preview.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: hustle-city-web-preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Export Godot browser build
+    runs-on: ubuntu-latest
+    container:
+      image: barichello/godot-ci:4.4.1
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install download and archive utilities
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v curl >/dev/null 2>&1; then
+            if command -v apt-get >/dev/null 2>&1; then
+              apt-get update
+              apt-get install -y --no-install-recommends curl
+              rm -rf /var/lib/apt/lists/*
+            elif command -v apk >/dev/null 2>&1; then
+              apk add --no-cache curl
+            elif command -v wget >/dev/null 2>&1; then
+              echo "curl unavailable; wget will be used for template download."
+            else
+              echo "::error::No supported download utility or package manager is available in the Godot container."
+              exit 1
+            fi
+          fi
+          if ! command -v unzip >/dev/null 2>&1; then
+            if command -v apt-get >/dev/null 2>&1; then
+              apt-get update
+              apt-get install -y --no-install-recommends unzip
+              rm -rf /var/lib/apt/lists/*
+            elif command -v apk >/dev/null 2>&1; then
+              apk add --no-cache unzip
+            else
+              echo "::error::unzip is required but cannot be installed in this container."
+              exit 1
+            fi
+          fi
+          command -v curl || command -v wget
+          command -v unzip
+          godot --version
+
+      - name: Install matching Godot 4.4.1 Web export templates
+        shell: bash
+        run: |
+          set -euo pipefail
+          template_version="4.4.1.stable"
+          template_dir="$HOME/.local/share/godot/export_templates/$template_version"
+          archive="/tmp/Godot_v4.4.1-stable_export_templates.tpz"
+          extracted="/tmp/godot-export-templates"
+          mkdir -p "$template_dir" "$extracted"
+          url="https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_export_templates.tpz"
+          if command -v curl >/dev/null 2>&1; then
+            curl --fail --location --retry 3 --retry-delay 2 "$url" --output "$archive"
+          else
+            wget -O "$archive" "$url"
+          fi
+          test -s "$archive"
+          unzip -q "$archive" -d "$extracted"
+          test -d "$extracted/templates"
+          cp -a "$extracted/templates/." "$template_dir/"
+          test -s "$template_dir/web_nothreads_debug.zip"
+          test -s "$template_dir/web_nothreads_release.zip"
+
+      - name: Import project and export browser build
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p game/build
+          godot --headless --path game --editor --quit
+          godot --headless --path game --export-release "Web" build/index.html
+          test -s game/build/index.html
+          find game/build -maxdepth 1 -type f -printf '%f %s bytes\n' | sort
+          test -n "$(find game/build -maxdepth 1 -type f -name '*.wasm' -print -quit)"
+          test -n "$(find game/build -maxdepth 1 -type f -name '*.pck' -print -quit)"
+          (cd game/build && sha256sum * > SHA256SUMS)
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hustle-city-web-preview
+          path: game/build/
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Build summary
+        run: |
+          {
+            echo "## Hustle City browser build"
+            echo "Godot 4.4.1 Web export completed. The HTML, WebAssembly, PCK and checksum manifest are attached as the hustle-city-web-preview artifact."
+            echo "A successful build is not a creator approval or a live deployment."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  independent-artifact-qa:
+    name: Independently verify exported browser files
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: hustle-city-web-preview
+          path: ./preview
+      - name: Verify deliverable completeness and integrity
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s preview/index.html
+          test -n "$(find preview -maxdepth 1 -type f -name '*.wasm' -print -quit)"
+          test -n "$(find preview -maxdepth 1 -type f -name '*.pck' -print -quit)"
+          test -s preview/SHA256SUMS
+          (cd preview && sha256sum --check SHA256SUMS)
+          echo "PASS: HTML entry point, WebAssembly payload, PCK resources and checksums verified."
+      - name: QA summary
+        run: |
+          {
+            echo "## Independent artifact QA: PASS"
+            echo "Verified the exported HTML entry point, WebAssembly payload, PCK resource package and SHA-256 checksums."
+            echo "This is artifact-level QA; it does not replace browser/device gameplay testing."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  deploy:
+    name: Publish live browser preview
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: [build, independent-artifact-qa]
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: hustle-city-web-preview
+          path: ./site
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Add preview URL to run summary
+        run: |
+          echo "## Playable Hustle City preview" >> "$GITHUB_STEP_SUMMARY"
+          echo "${{ steps.deployment.outputs.page_url }}" >> "$GITHUB_STEP_SUMMARY"
