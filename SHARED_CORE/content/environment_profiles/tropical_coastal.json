@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "id": "tropical_coastal",
+  "display_name": "Warm Tropical Coastal District",
+  "climate": "warm_humid_subtropical",
+  "biome_tags": ["subtropical", "coastal", "warm_humid"],
+  "vegetation_sets": ["palm_groves", "subtropical_flowering_trees", "coastal_ornamental_planting", "salt_tolerant_shrubs"],
+  "scenery_archetypes": ["palm_boulevard", "beachfront", "tropical_marina", "waterfront_dining", "island_resort", "coastal_boardwalk"],
+  "water_features": ["bay", "lagoon", "beach", "island", "marina", "canal"],
+  "weather_profile": {
+    "humidity_range": "high",
+    "precipitation_tags": ["brief_heavy_showers", "thunderstorms", "sunshowers", "clear_hot_days"],
+    "seasonal_variation": "moderate",
+    "wind_tags": ["sea_breeze", "storm_gusts"],
+    "atmosphere_tags": ["humid_haze", "bright_sun", "dramatic_cloud_build_up", "warm_nights"]
+  },
+  "npc_activity_tags": ["beach_visitors", "marina_visitors", "outdoor_dining", "water_taxi_passengers", "nightlife_crowds"]
+}

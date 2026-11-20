@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hustle-city.invalid/schemas/city-location.schema.json",
+  "title": "Hustle City Location",
+  "description": "Engine-neutral location or place definition. Coordinates use project-defined world units documented by the consuming city map.",
+  "type": "object",
+  "required": ["schema_version", "id", "name", "kind"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "kind": { "type": "string", "enum": ["district", "neighborhood", "block", "building", "interior", "station", "landmark", "activity_site"] },
+    "parent_id": { "type": ["string", "null"] },
+    "tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "transform": {
+      "type": "object",
+      "properties": {
+        "position": { "$ref": "#/$defs/vector3" },
+        "rotation_degrees": { "$ref": "#/$defs/vector3" },
+        "scale": { "$ref": "#/$defs/vector3" }
+      },
+      "additionalProperties": false
+    },
+    "bounds": { "type": "object", "properties": { "size": { "$ref": "#/$defs/vector3" } }, "required": ["size"], "additionalProperties": false },
+    "playability": { "type": "string", "enum": ["playable", "ambient", "restricted", "decorative"] },
+    "interior_policy": { "type": "string", "enum": ["enterable", "non_enterable", "conditional", "not_applicable"] },
+    "metadata": { "type": "object", "additionalProperties": true }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "vector3": {
+      "type": "object",
+      "required": ["x", "y", "z"],
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "z": { "type": "number" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

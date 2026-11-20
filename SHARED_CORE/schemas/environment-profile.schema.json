@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hustle-city.invalid/schemas/environment-profile.schema.json",
+  "title": "Hustle City Environment Profile",
+  "description": "Engine-neutral climate, biome, scenery and atmosphere profile for procedural or authored world regions.",
+  "type": "object",
+  "required": ["schema_version", "id", "climate", "biome_tags", "vegetation_sets", "scenery_archetypes", "weather_profile"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+    "display_name": { "type": "string", "minLength": 1 },
+    "climate": { "type": "string", "enum": ["warm_humid_subtropical", "temperate_lakefront", "wetland_subtropical", "temperate_inland", "arid", "mountain", "coastal_marine", "custom"] },
+    "biome_tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "vegetation_sets": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "scenery_archetypes": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "water_features": { "type": "array", "items": { "type": "string", "enum": ["lake", "river", "canal", "bay", "lagoon", "ocean", "beach", "island", "wetland", "marina", "pond", "none"] }, "uniqueItems": true },
+    "weather_profile": {
+      "type": "object",
+      "required": ["humidity_range", "precipitation_tags", "seasonal_variation"],
+      "properties": {
+        "humidity_range": { "type": "string", "enum": ["low", "moderate", "high", "variable"] },
+        "precipitation_tags": { "type": "array", "items": { "type": "string" } },
+        "seasonal_variation": { "type": "string", "enum": ["low", "moderate", "high"] },
+        "wind_tags": { "type": "array", "items": { "type": "string" } },
+        "atmosphere_tags": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "npc_activity_tags": { "type": "array", "items": { "type": "string" } },
+    "metadata": { "type": "object", "additionalProperties": true }
+  },
+  "additionalProperties": false
+}

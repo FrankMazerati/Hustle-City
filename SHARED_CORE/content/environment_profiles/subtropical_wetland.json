@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "id": "subtropical_wetland",
+  "display_name": "Subtropical Wetland & Lagoon",
+  "climate": "wetland_subtropical",
+  "biome_tags": ["wetland", "marsh", "subtropical"],
+  "vegetation_sets": ["marsh_reeds", "wetland_grasses", "mangrove_inspired_trees", "water_edge_shrubs"],
+  "scenery_archetypes": ["lagoon", "boardwalk_trail", "wetland_reserve", "small_docks", "scenic_overlook"],
+  "water_features": ["lagoon", "wetland", "pond", "canal"],
+  "weather_profile": {
+    "humidity_range": "high",
+    "precipitation_tags": ["heavy_showers", "thunderstorms", "humid_mornings"],
+    "seasonal_variation": "moderate",
+    "wind_tags": ["gentle_breeze", "storm_gusts"],
+    "atmosphere_tags": ["misty_morning", "lush_greenery", "reflective_shallow_water"]
+  },
+  "npc_activity_tags": ["nature_walkers", "birdwatchers", "tour_groups", "kayak_visitors"]
+}

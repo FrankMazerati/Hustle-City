@@ -1,14 +1,29 @@
 # Hustle City — Project Vision
 
 ## Product identity
-A cinematic realistic 3D social world combining city life, crews, venues, card games, properties, businesses, transportation and persistent city activity. The fictional city draws inspiration from Chicago and Miami/Florida while retaining original geography, names, brands and identity.
+Hustle City is an original, cinematic, realistic 3D social-world and open-world city-life game. Its first flagship environment blends selected Chicago-inspired urban character with Florida-inspired tropical/coastal atmosphere, but it is **not a literal recreation of Chicago, Miami, or any single real city**. The game owns its fictional geography, district identities, landmarks, architecture, street culture, names and visual language.
 
-## Visual direction
-- Realistic cinematic 3D urban world, not cartoon or generic promotional imagery.
-- Car-focused convoy imagery is a core visual reference: luxury cars, motorcycles, crew identity, cinematic camera, city landmarks, marina, skyline, helicopters and expressive street culture.
-- Signature colors include pink, purple, black and gold; neighborhoods may have their own palettes.
-- **Mazerati Boys** is spelled with a Z and uses black and gold.
-- Maintain continuity across scenes: the same roads, landmarks, vehicles, signs, brands, lighting and city geography.
+The world-building foundation must be capable of creating scenery beyond this initial blend: dense downtowns, historic neighborhoods, modern waterfronts, tropical islands, inland lakes, parks, wetlands, industrial corridors, suburban edges, rural routes and other distinct U.S. regional environments as the project expands.
+
+## Visual identity and atmosphere
+- Photorealistic/cinematic 3D presentation, with believable scale, materials, lighting, weather, crowds, traffic, water and environmental storytelling.
+- Chicago inspiration: recognizable big-city density, downtown skyline composition, grid and arterial streets, brick and stone neighborhood architecture, bridges, river/canal moments, lakefront promenades, parks, elevated rail/L-train character and underground subway infrastructure.
+- Florida inspiration: warm and humid weather, palm-lined streets, tropical planting, coastal light, beaches, marinas, yacht harbors, canals, lagoons, islands, causeways, waterfront homes, resort and nightlife districts, sudden rain and dramatic sunsets.
+- Blend these influences intentionally. Do not simply paste Chicago landmarks into Miami scenery or reproduce either city block-for-block.
+- Hustle City must have its own skyline, fictional landmarks, neighborhood identities, architecture families, street furniture, signage, waterfront shapes and district transitions.
+- Environmental palette: electric blue, white, sunset pink, purple transitions and colorful sunrise/sunset gradients. Use black and gold selectively for luxury, premium brands and nighttime atmosphere. Neighborhoods may have distinct palettes that remain coherent with the larger world.
+- Preserve established visual continuity: wet reflective streets when weather calls for them, cinematic luxury/crew vehicle imagery, expressive street culture, skyline and waterfront vistas.
+- Mazerati Boys is spelled with a Z and uses black and gold.
+
+## World and scenery design principles
+1. Build a reusable world-generation foundation, not a one-city one-off.
+2. Use a library of environment archetypes and mix them through authored design, procedural tools and hand-built landmarks.
+3. Each district must have a readable identity, coherent street network, believable terrain/water edges, functional transportation and appropriate building typologies.
+4. Water is a first-class world system: lakefronts, rivers, canals, bays, lagoons, ponds, marinas, beaches, islands, docks, bridges, causeways, water taxis and safe access rules.
+5. Vegetation must be climate- and location-aware: palms in warm coastal/tropical settings, temperate street trees and parks in cooler/urban settings, marsh plants in wetlands, and appropriate native-inspired planting elsewhere.
+6. Weather and lighting must respond to the environment: humid haze, bright coastal sun, cloud build-up, showers, thunderstorms, rain-slick roads, fog, clear nights, seasonal variation and smooth transitions.
+7. Create distinctive scenery without copying protected real-world maps, landmarks, logos, or trade dress. Research references must carry source and license metadata.
+8. The initial Chicago/Florida blend is the flagship setting; future U.S. cities and regions should be generated from the same reusable rules with different geography, climate, architecture and vegetation profiles.
 
 ## Player experience
 - Persistent Player Shell above reusable game environments: profile/avatar, username, crew, Hustle Money, Diamonds, Poker Chips, level/XP, notifications, messages, map, navigation, settings and contextual actions.
@@ -18,10 +33,10 @@ A cinematic realistic 3D social world combining city life, crews, venues, card g
 - NPCs are responsive and answer using actual game state, not invented event or transit information.
 
 ## Living city
-Persistent automated events from launch, with NPCs driving much of the activity. Cars, traffic lights, pedestrians, buses, trains, weather, venues and NPC routines operate automatically. Players can discover, join, watch and interact with activities. An Operations Status Board should monitor live events, player participation, NPC activity, traffic/transit, venues and alerts.
+Persistent automated events from launch, with NPCs driving much of the activity. Cars, traffic lights, pedestrians, buses, trains, weather, venues, waterways and NPC routines operate automatically. Players can discover, join, watch and interact with activities. An Operations Status Board should monitor live events, player participation, NPC activity, traffic/transit, venues and alerts.
 
 ## Transportation
-Chicago-style elevated rail/L train and underground subway are important. Riders board, sit, see outside through windows and can change camera views (passenger, window, exterior, overhead/free camera); trains stop at stations and passengers disembark. Also plan buses, rideshare, water taxis, cars/motorcycles, helicopters, private aircraft, boats and yachts.
+Chicago-style elevated rail/L train and underground subway are important. Riders board, sit, see outside through windows and can change camera views (passenger, window, exterior, overhead/free camera); trains stop at stations and passengers disembark. Also plan buses, rideshare, water taxis, cars/motorcycles, helicopters, private aircraft, boats and yachts. Water and air transportation must fit the authored geography rather than appear arbitrarily.
 
 ## Safety
 No player death. Build prevention, detection and safe recovery for vehicle contact, falls, water, train tracks, doors, collisions, restricted areas and stuck states. Preserve progress and possessions after accidental hazards.
@@ -44,5 +59,9 @@ Velvet Club Lounge; Hustle Club; Hustle City Marina and Yacht Club; Hustle Tower
 ## Character and onboarding
 Bella Rose is a confident, fashionable, street-smart guide with humor and attitude. She introduces new players to venues, clothing, card rooms and activities; players can call for help, skip or revisit guidance.
 
-## Technology
-Godot 4 is the selected game engine. Keep client, backend services, player accounts, persistence and asset storage modular. Local development/testing and cloud-hosted live multiplayer are the intended direction; provider and detailed topology are undecided.
+## Technology and engine decision
+- **Unreal Engine 5 is the primary production engine.**
+- **Unity 6 is the secondary compatibility/migration target**, not a parallel production runtime.
+- Engine-neutral rules, data schemas, content definitions and source assets live in SHARED_CORE and SHARED_ASSETS. Engine-specific rendering, physics, animation, input, UI, networking and packaging live in ENGINE/unreal or ENGINE/unity.
+- Godot is retired from the approved engine architecture. Existing Godot work and history are not to be destructively deleted; archive or remove active references only after preserving relevant assets and documenting disposition.
+- Local development/testing and cloud-hosted live multiplayer are the intended direction; provider and detailed topology are undecided.

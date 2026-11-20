@@ -398,7 +398,7 @@
       "review_protocol": "agents/COMMUNICATION_PROTOCOL.md"
     },
     {
-      "id": "godot-engine",
+      "id": "unreal-engine",
       "department": "Engineering and platform",
       "prompt_pack": "agents/AGENT_PROMPTS.md",
       "catalog": "agents/AGENT_CATALOG.md",
@@ -487,5 +487,11 @@
       "tool_profile": "pending_runtime_configuration",
       "review_protocol": "agents/COMMUNICATION_PROTOCOL.md"
     }
-  ]
+  ],
+  "primary_engine": "Unreal Engine 5",
+  "secondary_engine": "Unity 6",
+  "retired_engine": "Godot",
+  "world_identity": "world/WORLD_IDENTITY_BIBLE.md",
+  "portable_environment_profiles": "SHARED_CORE/content/environment_profiles/",
+  "world_identity_summary": "Original fictional Hustle City flagship blends Chicago-inspired urban character with Florida-inspired tropical/coastal atmosphere; reusable profiles support other distinct U.S. scenery."
 }

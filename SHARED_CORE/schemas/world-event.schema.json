@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hustle-city.invalid/schemas/world-event.schema.json",
+  "title": "Hustle City World Event",
+  "description": "Portable schedule and event definition. Execution, replication, and presentation are engine/backend adapter responsibilities.",
+  "type": "object",
+  "required": ["schema_version", "id", "event_type", "location_id", "trigger"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+    "event_type": { "type": "string", "enum": ["ambient", "public", "crew", "seasonal", "scheduled", "emergency_drill"] },
+    "location_id": { "type": "string" },
+    "trigger": {
+      "type": "object",
+      "required": ["mode"],
+      "properties": {
+        "mode": { "type": "string", "enum": ["scheduled", "proximity", "player_action", "system_condition"] },
+        "schedule": { "type": ["string", "null"] },
+        "conditions": { "type": "object", "additionalProperties": true }
+      },
+      "additionalProperties": false
+    },
+    "participant_rules": { "type": "object", "additionalProperties": true },
+    "duration_minutes": { "type": "integer", "minimum": 1 },
+    "repeat_policy": { "type": "string", "enum": ["once", "daily", "weekly", "conditional"] },
+    "metadata": { "type": "object", "additionalProperties": true }
+  },
+  "additionalProperties": false
+}
