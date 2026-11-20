@@ -1,0 +1,66 @@
+name: Hustle City Web Preview
+on:
+  push:
+    branches: [main]
+    paths: ["game/**", ".github/workflows/hustle-city-web-preview.yml"]
+  pull_request:
+    paths: ["game/**", ".github/workflows/hustle-city-web-preview.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: hustle-city-web-preview
+  cancel-in-progress: true
+jobs:
+  build:
+    name: Export Godot browser build
+    runs-on: ubuntu-latest
+    container:
+      image: barichello/godot-ci:4.4.1
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate and export
+        run: |
+          mkdir -p game/build
+          godot --headless --path game --editor --quit
+          godot --headless --path game --export-release "Web" game/build/index.html
+          test -s game/build/index.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hustle-city-web-preview
+          path: game/build/
+          if-no-files-found: error
+          retention-days: 14
+      - name: Build summary
+        run: |
+          {
+            echo "## Hustle City browser build"
+            echo "Godot Web export completed. The browser build is attached as the hustle-city-web-preview artifact."
+            echo "Live deployment requires GitHub Pages to be enabled for this repository."
+          } >> "$GITHUB_STEP_SUMMARY"
+  deploy:
+    name: Publish live browser preview
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: hustle-city-web-preview
+          path: ./site
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Add preview URL to run summary
+        run: |
+          echo "## Playable Hustle City preview" >> "$GITHUB_STEP_SUMMARY"
+          echo "${{ steps.deployment.outputs.page_url }}" >> "$GITHUB_STEP_SUMMARY"
