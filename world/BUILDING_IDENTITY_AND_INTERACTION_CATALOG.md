@@ -1,0 +1,138 @@
+# Building Identity and Interaction Catalog
+Version: 1.0
+Status: Initial production catalog; creator approval required for final names, district placement, interiors, and gameplay scope.
+
+## 1. Core rule
+
+Most visible buildings in Hustle City must have an authored identity. Buildings should use fictional names that fit their business, residents, architecture, district, and world history. Do not fill major streets with anonymous repeated boxes or generic placeholder signage.
+
+Not every building needs a bespoke interior or full gameplay loop. Each building must, however, have a deliberate classification:
+- **Signature interactive destination:** authored identity, prominent exterior, enterable space, and one or more meaningful gameplay systems.
+- **Standard interactive business:** named exterior and a focused interaction, service, shop, or interior.
+- **Named ambient building:** named and visually authored; may be closed, private, inaccessible, or non-enterable.
+- **Residential building:** named apartment/condo/tower/property identity; entry and resident interactions depend on its gameplay tier.
+- **Restricted / closed / abandoned / under construction:** intentionally unavailable, with believable signage and world-state reasons. These are not accidental missing content.
+- **Unlabeled background structure:** allowed sparingly for distant skyline silhouettes, low-visibility industrial massing, or tightly controlled background dressing; never use as the default for street-level buildings.
+
+## 2. Building interaction tiers
+
+| Tier | Meaning | Expected player experience |
+|---|---|---|
+| A — Full destination | Major signature location | Enter, explore designed interior, interact with staff/NPCs, use core activities/services, attend events, and return through persistent systems |
+| B — Functional venue | Regular business or public venue | Enter or approach a service point; use a focused activity, purchase, service, or social interaction |
+| C — Limited interaction | Named building with a small gameplay footprint | Doorbell, lobby, reception, ATM, service window, directory, mission trigger, or contextual interaction |
+| D — Ambient / restricted | Named but not generally enterable | Exterior storytelling, signage, windows, deliveries, NPC activity, locked/private/closed state, or future expansion hook |
+| E — Background | Distant or low-priority scenery | Visual city density only; no implied gameplay access |
+
+Every building record must state its tier. Never let a locked door or inaccessible interior appear to be a broken interaction: communicate the state through signage, prompts, schedule, security, or world context.
+
+## 3. Initial signature-building inventory
+
+These names are drawn from established Hustle City concepts. They are working canon entries, not permission to invent unresolved final names.
+
+| Building / destination | Intended identity and gameplay | Initial tier |
+|---|---|---|
+| Hustle Towers | Major skyline landmark; lobby, reception, elevators, social/business access, and future floors or suites as approved | A |
+| Velvet Club Lounge | Upscale nightlife, social gathering, hosted events, music, VIP areas and venue operations | A |
+| Hustle Club | Major club destination; nightlife, events, social play and venue interactions | A |
+| Hustle City Marina & Yacht Club | Marina promenade, docks, yacht access, boating services, waterfront social activities and water transport connections | A |
+| The Shuffle Club | Social entertainment destination; club activities and event programming to be defined | A |
+| Swagger Shop | Fashion retail, browsing, fitting, purchasing and player style interaction | B |
+| American Swagger Clothing | Flagship fashion retail / clothing brand destination; fitting and purchase flow | B |
+| Bella Rose Collection | Fashion and retail destination; collection-specific presentation and shopping | B |
+| Mazerati Boys Automotive Group | Automotive showroom / dealership identity, vehicle browsing, purchase or approved vehicle services | A |
+| South Side Bar | Neighborhood bar and social meeting point | B |
+| East Side Bar | Neighborhood bar and social meeting point | B |
+| North Side Bar | Neighborhood bar and social meeting point | B |
+| West Side Bar | Neighborhood bar and social meeting point | B |
+| Casino — working concept | Major casino entertainment destination; final name, district, and approved activity scope remain unresolved | A |
+| Airport — name unresolved | Major airport and travel hub; use either “We Fly High International Airport” or “We Fly Sky International Airport” only after creator approval | A |
+
+## 4. How to decide what is enterable
+
+For every named building, record:
+1. Is the player allowed inside?
+2. Is the interior fully authored, modular, or represented by a focused service interaction?
+3. What can the player actually do there?
+4. Which NPC roles operate there?
+5. Does it have opening hours, event schedules, or changing business states?
+6. Is there a public lobby, private area, VIP area, staff-only area, or restricted floor?
+7. Does the location support player-owned or crew-related activity?
+8. Does it connect to transport, parking, pedestrian routes, docks, or transit?
+9. What happens when it is closed, full, under maintenance, or unavailable?
+10. What is the minimum launch implementation and what is deferred?
+
+A building is not meaningfully interactive just because the player can open its door. It needs a purposeful activity, service, social loop, information interaction, or other designed response.
+
+## 5. Naming system for the wider city
+
+Create a reusable naming library by district and building type:
+- Residential: apartment houses, condominium towers, lofts, residential courts and waterfront residences.
+- Commercial: offices, professional buildings, banks, agencies and business centers.
+- Retail: boutiques, shopping arcades, markets, salons, barbers, electronics, furniture and specialty stores.
+- Food and hospitality: restaurants, cafés, diners, bakeries, hotels and resorts.
+- Nightlife: lounges, clubs, bars, event halls and entertainment venues.
+- Civic and community: libraries, recreation centers, schools, clinics, fire stations and public service buildings.
+- Industrial and logistics: warehouses, workshops, depots, factories and distribution buildings.
+- Waterfront: marinas, yacht services, ferry terminals, boat clubs, beach facilities and waterfront restaurants.
+
+Names should be varied, believable, memorable, and original. Avoid repetitive filler such as “Building 01” or the same generic business name across multiple blocks. Use a consistent naming grammar without making every name sound like the same brand.
+
+## 6. Engine-neutral building data
+
+Canonical building identity and gameplay metadata belongs in SHARED_CORE, not exclusively in Unreal or Unity scene files. Each authored building should have a stable ID and fields equivalent to:
+
+- building_id: immutable unique identifier
+- display_name: approved in-world name
+- short_name: optional map/UI label
+- building_type: residential, retail, nightlife, civic, office, industrial, transport, waterfront, hospitality, or other approved category
+- district_id and block_id: canonical world placement
+- interaction_tier: A, B, C, D, or E
+- access_state: public, scheduled, private, restricted, closed, abandoned, construction, or background
+- enterable: explicit boolean
+- interior_profile_id: optional reusable interior template or bespoke interior reference
+- interaction_tags: approved gameplay interaction identifiers
+- services: services actually supported by gameplay
+- npc_roles: staff, residents, visitors, security, vendors, or other relevant roles
+- schedule_id: optional opening/event schedule
+- signage_profile_id: visual signage and branding reference
+- exterior_asset_ids and interior_asset_ids: asset manifest references
+- transport_links: nearby entrances, parking, transit, docks, or route nodes
+- launch_scope: launch, post-launch, or ambient-only
+- provenance / approval: creator approval and asset provenance metadata
+
+Use schema validation and stable references. Engine adapters may render and implement these records differently, but must not silently change the canonical identity or access rules.
+
+## 7. World Builder generation rules
+
+- Generate a high proportion of named street-level buildings; prioritize authored names around player routes, commercial streets, transit stations, waterfronts and landmarks.
+- Use district-specific naming pools and prevent accidental duplicate names within the same city.
+- Assign building type, architecture family, materials, height, frontage, signage, access tier and district identity together so the result feels coherent.
+- Place a deliberate mix of open businesses, residences, private properties, closed storefronts, vacant lots, construction sites and ambient structures.
+- Do not mark a building enterable unless a valid interior or supported interaction endpoint exists.
+- Do not create a visible “Press to Enter” prompt without a working destination or explicit unavailable-state response.
+- Preserve navigation, collision, accessibility, performance and streaming requirements for all tiers.
+- Support later upgrades: an ambient or limited-interaction building may become a full destination without changing its stable building_id.
+
+## 8. Department ownership
+
+- SAM: approve signature-building canon, names, priorities and launch scope.
+- ATLAS: building records, stable IDs, schema contracts and engine-neutral data.
+- URBAN: district placement, building types, architecture families, street frontage, signage and generated naming rules.
+- VIBE: venue identity, activity design, events and social loops.
+- PERSONA: staff, residents, visitors, fashion and character presentation.
+- PULSE: NPC schedules, crowd behavior, business activity and open/closed world states.
+- MOTION: parking, curb access, transit entrances, docks, pedestrian links and route connectivity.
+- VECTOR: Unreal implementation and Unity adapter parity for interaction, interiors, streaming and prompts.
+- NEXUS: persistent business/player state where required.
+- SENTINEL: test that names, access states, prompts, interiors, services and interactions agree and never imply unsupported functionality.
+
+## 9. Next production pass
+
+1. Creator reviews the initial signature-building inventory and resolves the airport and casino names.
+2. Assign each signature building to a district and block.
+3. Define the exact player actions and services for each Tier A and Tier B destination.
+4. Select reusable interior families and identify which destinations need bespoke interiors.
+5. Build the engine-neutral building registry and validation schema.
+6. Extend World Builder rules to generate named ordinary buildings around the signature destinations.
+7. QA every displayed name and interaction prompt against the actual building record and implemented gameplay.
