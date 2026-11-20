@@ -23,7 +23,7 @@ Use these six established central districts as the primary urban core:
 - **Downtown District** — skyline, civic/commercial core, Hustle Towers, casino and Velvet Lounge.
 - **Entertainment District** — venues, nightlife, upper-level entertainment businesses, film and music production.
 - **Marina District** — luxury exotic-car dealership/showroom, yacht club, marina, yacht harbor, docks, waterfront promenade, boat access and airport. These destinations belong in the same broader district, with distinct parcels and safe operational separation.
-- **Swagger District** (also referred to by the creator as “Swaggerty District”; confirm final spelling before locking signage) — clothing and fashion retail, restaurants, streetwear, lifestyle businesses and social spaces.
+- **Swagger District** — clothing and fashion retail, restaurants, streetwear, lifestyle businesses and social spaces.
 - **Diamond District** — upscale and luxury businesses: designer boutiques, jewelry, premium shopping, fine dining, luxury hotels, spas and high-end personal services.
 - **Financial District** — banks, financial institutions, investment and wealth-management firms, corporate offices, business services and major employment.
 
@@ -147,7 +147,7 @@ These are destination requirements, not a final surveyed placement. Blueprint mu
 - Airport within the same broader district, with separate secure airport property, runway/taxiway exclusion zones and dedicated terminal access.
 - Ferris-wheel pier and waterfront entertainment access may connect to the district's public waterfront edge where space allows.
 
-### Swagger / Swaggerty District
+### Swagger District
 - Clothing stores, fashion and streetwear retail.
 - Restaurants, cafés and food destinations.
 - Beauty/barber services, lifestyle businesses and social venues.
