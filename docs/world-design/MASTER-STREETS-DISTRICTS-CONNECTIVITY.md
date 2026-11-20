@@ -22,12 +22,12 @@ Use these six established central districts as the primary urban core:
 
 - **Downtown District** — skyline, civic/commercial core, Hustle Towers, casino and Velvet Lounge.
 - **Entertainment District** — venues, nightlife, upper-level entertainment businesses, film and music production.
-- **Marina District** — yacht harbor, yacht club, docks, waterfront promenade, boat access and luxury vehicle destination nearby.
-- **Swagger District** — fashion, lifestyle, shopping, social spaces, premium residences and distinctive street identity.
-- **Diamond District** — luxury retail, fine dining, premium services and high-end destinations.
-- **Financial District** — offices, banks, corporate towers, business services and major employment.
+- **Marina District** — luxury exotic-car dealership/showroom, yacht club, marina, yacht harbor, docks, waterfront promenade, boat access and airport. These destinations belong in the same broader district, with distinct parcels and safe operational separation.
+- **Swagger District** (also referred to by the creator as “Swaggerty District”; confirm final spelling before locking signage) — clothing and fashion retail, restaurants, streetwear, lifestyle businesses and social spaces.
+- **Diamond District** — upscale and luxury businesses: designer boutiques, jewelry, premium shopping, fine dining, luxury hotels, spas and high-end personal services.
+- **Financial District** — banks, financial institutions, investment and wealth-management firms, corporate offices, business services and major employment.
 
-Keep the airport and yacht/marina club in the same broader waterfront/transportation area as requested, but give each its own secure operational footprint and road access. They must not share runways, restricted zones, or marina navigation space.
+The Marina District groups the car dealership, yacht club/marina and airport in one broader area as requested. They must occupy distinct parcels with secure operational separation: airport runways/taxiways and restricted zones cannot overlap public roads, marina navigation space or pedestrian areas. Provide dedicated access routes for each.
 
 ## 3. Street hierarchy and proposed names
 
@@ -141,24 +141,29 @@ These are destination requirements, not a final surveyed placement. Blueprint mu
 - Good Vibes Only Publishing Company.
 - Performance venues, clubs, restaurants, creative offices and event plazas.
 
-### Marina District / waterfront transport area
-- Yacht Club and Marina Club facilities in the same broader area.
-- Yacht harbor, slips, docks, boat services and promenade.
-- Airport in the same broader district/transportation zone, but with secure separation and dedicated access.
+### Marina District
 - Exotic luxury-car dealership / fine exotic motor showroom. Do not use the unconfirmed name “Maserati Boys Car Club”; the final dealership brand/name is still to be confirmed.
-- Ferris-wheel pier and waterfront entertainment access.
+- Yacht Club and Marina Club facilities, yacht harbor, slips, docks, boat services and promenade.
+- Airport within the same broader district, with separate secure airport property, runway/taxiway exclusion zones and dedicated terminal access.
+- Ferris-wheel pier and waterfront entertainment access may connect to the district's public waterfront edge where space allows.
 
-### Swagger District
-- Fashion and streetwear retail.
+### Swagger / Swaggerty District
+- Clothing stores, fashion and streetwear retail.
+- Restaurants, cafés and food destinations.
 - Beauty/barber services, lifestyle businesses and social venues.
-- Premium residences and public gathering spaces.
+- Public gathering spaces and distinctive neighborhood shopping streets.
+
+### Diamond District
+- Upscale and luxury businesses, designer boutiques, jewelry, premium shopping, fine dining, luxury hotels, spas and high-end personal services.
+- Give this district a polished, premium identity distinct from the corporate/financial character of the Financial District.
+
+### Financial District
+- Banks, financial institutions, investment and wealth-management firms.
+- Corporate offices, business services, commercial towers and major employment destinations.
 
 ### Beach district / waterfront neighborhoods
 - Public beach access, boardwalk, restaurants, recreation and beach services.
 - Connect to Hustle Shore Drive and the wider street/transit/boat network.
-
-### Diamond and Financial districts
-- Luxury retail, premium services, offices, banks, corporate spaces and employment destinations.
 
 ## 7. Required World Builder data model
 
