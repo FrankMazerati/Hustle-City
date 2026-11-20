@@ -70,6 +70,25 @@ These environments must connect through a coherent fictional world map. Do not t
 
 Include believable street walls and varied building heights, active storefronts, pedestrians, traffic, luxury-car convoy activity, motorcycles, streetlights, public gathering places, and visible transit infrastructure. The city should feel inhabited, not staged or empty.
 
+## 6A. Landmark and building accessibility — scenery becomes gameplay
+
+The first visual build may contain distant or decorative buildings to establish skyline depth and city scale. These are valid early production placeholders, not a permanent limit on player access.
+
+Plan the world so that decorative-looking structures can be upgraded into functional, explorable locations over time:
+- **Navy Pier-inspired waterfront:** initially visible as a landmark; later open for exploration, entertainment, social gathering, shops, events, and waterfront activities.
+- **Ferris wheel:** initially a skyline/visual landmark; later a functional ride players can approach, enter, ride, and view the city from.
+- **Street-side and background buildings:** initially some may be exterior-only or visual placeholders; later selected buildings become enterable and gain interiors, businesses, apartments, services, activities, or social spaces.
+- **Landmark towers and prominent buildings:** plan entrances, lobby access, elevators, rooftop or upper-floor experiences, and interior access as future features where appropriate.
+- **Transit-adjacent buildings and storefronts:** prioritize functionality where it enriches the walk-to-train experience and neighborhood life.
+
+Use a staged accessibility roadmap:
+1. **Visual presence:** building silhouettes, exteriors, signage, lighting, and believable street-level detail.
+2. **Exterior interaction:** doors, entrances, windows, storefronts, pedestrian access, and contextual NPC activity.
+3. **Functional access:** enterable interiors, shops, venues, services, and public spaces.
+4. **Deep gameplay:** rides, events, jobs, social activities, missions, services, and persistent player/NPC interactions.
+
+Production rule: preserve scale, geometry, naming, and connection points so future functionality can be added without rebuilding the entire district. Track each structure's status (visual-only, exterior-interactive, enterable, fully functional) in the world/building registry. Do not promise every background building will be enterable at launch; prioritize the most valuable locations and expand access through updates.
+
 ## 7. Visual language
 
 - Cinematic realistic 3D / photoreal urban environments.
