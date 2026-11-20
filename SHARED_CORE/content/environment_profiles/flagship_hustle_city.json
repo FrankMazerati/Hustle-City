@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "id": "flagship_hustle_city_blended",
+  "display_name": "Hustle City Flagship — Urban Lakefront & Tropical Coast",
+  "climate": "custom",
+  "biome_tags": ["fictional_american_metro", "dense_urban", "freshwater_lakefront", "warm_coastal_districts", "subtropical_pockets"],
+  "vegetation_sets": ["temperate_street_canopy", "urban_park_trees", "subtropical_palms_coastal_only", "marsh_reeds_wetland_edges", "ornamental_waterfront_planting"],
+  "scenery_archetypes": ["highrise_downtown", "historic_brick_neighborhood", "elevated_rail_corridor", "underground_subway", "lakefront_prom_enade", "river_canal_bridge_network", "tropical_marina", "island_causeway", "waterfront_nightlife", "wetland_park", "industrial_waterfront"],
+  "water_features": ["lake", "river", "canal", "lagoon", "beach", "island", "wetland", "marina", "pond"],
+  "weather_profile": {
+    "humidity_range": "variable",
+    "precipitation_tags": ["sunshowers", "heavy_rain", "thunderstorms", "clear_skies", "seasonal_snow_in_cooler_profiles"],
+    "seasonal_variation": "high",
+    "wind_tags": ["lake_breeze", "coastal_wind", "urban_wind_corridors"],
+    "atmosphere_tags": ["humid_haze_in_warm_districts", "bright_coastal_sun", "dramatic_sunset_gradients", "rain_reflections_when_wet"]
+  },
+  "npc_activity_tags": ["downtown_commuters", "lakefront_walkers", "marina_visitors", "beach_visitors_weather_dependent", "transit_riders", "nightlife_crowds"],
+  "metadata": {
+    "design_note": "Original fictional geography inspired by selected Chicago urban character and Florida tropical/coastal atmosphere. Do not copy either city.",
+    "palm_placement": "Only warm coastal and subtropical districts.",
+    "status": "approved_direction_geography_unresolved"
+  }
+}
