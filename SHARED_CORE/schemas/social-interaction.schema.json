@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hustle-city.invalid/schemas/social-interaction.schema.json",
+  "title": "Hustle City Social Interaction",
+  "description": "Portable interaction definition; animation clips, montage assets, and engine state machines are referenced through adapter mappings.",
+  "type": "object",
+  "required": ["schema_version", "id", "category", "participants_min", "participants_max"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+    "category": { "type": "string", "enum": ["greeting", "celebration", "conversation", "nightlife", "dining", "sports", "crew", "relationship", "gesture"] },
+    "participants_min": { "type": "integer", "minimum": 1 },
+    "participants_max": { "type": "integer", "minimum": 1 },
+    "initiator_allowed": { "type": "boolean", "default": true },
+    "requires_consent": { "type": "boolean", "default": true },
+    "context_tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "duration_seconds": { "type": "number", "exclusiveMinimum": 0 },
+    "animation_mapping_id": { "type": ["string", "null"] },
+    "cancel_policy": { "type": "string", "enum": ["safe_exit", "finish_current_phase", "immediate_recover"] },
+    "metadata": { "type": "object", "additionalProperties": true }
+  },
+  "additionalProperties": false
+}
