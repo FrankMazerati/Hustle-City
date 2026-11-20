@@ -87,6 +87,35 @@ func _build_hud() -> void:
 	help.add_theme_font_size_override("font_size",14)
 	help.add_theme_color_override("font_color",Color(0.93,0.91,1))
 	layer.add_child(help)
+	# Large on-screen directional controls for touch devices.
+	var touch_actions := [
+		["↑", "move_forward", Vector2(104, -190)],
+		["↓", "move_back", Vector2(104, -76)],
+		["←", "move_left", Vector2(32, -133)],
+		["→", "move_right", Vector2(176, -133)]
+	]
+	for item in touch_actions:
+		var button := Button.new()
+		button.text = item[0]
+		button.position = item[2]
+		button.size = Vector2(64, 64)
+		button.anchor_top = 1.0
+		button.anchor_bottom = 1.0
+		button.add_theme_font_size_override("font_size", 26)
+		button.focus_mode = Control.FOCUS_NONE
+		button.modulate = Color(0.85, 0.93, 1.0, 0.88)
+		button.button_down.connect(_press_touch_action.bind(item[1]))
+		button.button_up.connect(_release_touch_action.bind(item[1]))
+		layer.add_child(button)
+	var touch_hint := Label.new()
+	touch_hint.text = "DRAG TO LOOK"
+	touch_hint.anchor_left = 1.0
+	touch_hint.anchor_right = 1.0
+	touch_hint.anchor_top = 1.0
+	touch_hint.anchor_bottom = 1.0
+	touch_hint.position = Vector2(-190, -48)
+	touch_hint.add_theme_color_override("font_color", Color(0.8, 0.88, 1.0, 0.8))
+	layer.add_child(touch_hint)
 	var footer := Label.new()
 	footer.text = "FIRST PLAYABLE BLOCK  •  DEVELOPMENT PREVIEW"
 	footer.anchor_top = 1.0
@@ -94,3 +123,9 @@ func _build_hud() -> void:
 	footer.position = Vector2(24,-42)
 	footer.add_theme_color_override("font_color",Color(1,0.55,0.78))
 	layer.add_child(footer)
+
+func _press_touch_action(action: String) -> void:
+	Input.action_press(action)
+
+func _release_touch_action(action: String) -> void:
+	Input.action_release(action)
