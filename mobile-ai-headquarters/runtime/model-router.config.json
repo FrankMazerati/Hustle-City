@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "budget_policy": {
+    "mode": "zero_dollar",
+    "paid_calls_allowed": false,
+    "max_cost_usd_per_run": 0,
+    "max_cost_usd_per_day": 0,
+    "on_no_free_capacity": "queue_task",
+    "on_quota_exhausted": "queue_task",
+    "never_fallback_to_paid": true
+  },
+  "providers": [],
+  "provider_requirements": {
+    "hosted_free": [
+      "verified_free",
+      "quota_available",
+      "data_terms_approved",
+      "endpoint",
+      "model"
+    ],
+    "local": [
+      "verified_local",
+      "endpoint",
+      "model"
+    ],
+    "api_key_storage": "environment_or_secret_manager_only",
+    "never_commit_credentials": true
+  },
+  "notes": [
+    "No provider is enabled by default.",
+    "Free chat-app access does not prove free API access.",
+    "Verify current API price, quota, data terms, model ID and compatibility before adding a hosted provider.",
+    "PocketPal and Msty are not assumed to expose a local HTTP endpoint; configure only after testing actual integration support."
+  ]
+}
