@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hustle-city.invalid/schemas/character-profile.schema.json",
+  "title": "Hustle City Character Profile",
+  "description": "Engine-neutral player or NPC identity and appearance definition; runtime rigs and meshes are engine-specific.",
+  "type": "object",
+  "required": ["schema_version", "id", "character_type", "appearance"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+    "character_type": { "type": "string", "enum": ["player", "npc"] },
+    "display_name": { "type": "string" },
+    "personality_tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "appearance": {
+      "type": "object",
+      "required": ["outfit_id"],
+      "properties": {
+        "outfit_id": { "type": "string" },
+        "clothing_item_ids": { "type": "array", "items": { "type": "string" } },
+        "accessory_item_ids": { "type": "array", "items": { "type": "string" } },
+        "colorway_id": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "behavior_profile_id": { "type": ["string", "null"] },
+    "animation_profile_id": { "type": ["string", "null"] },
+    "metadata": { "type": "object", "additionalProperties": true }
+  },
+  "additionalProperties": false
+}
