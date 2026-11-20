@@ -5,7 +5,7 @@
   "climate": "custom",
   "biome_tags": ["fictional_american_metro", "dense_urban", "freshwater_lakefront", "warm_coastal_districts", "subtropical_pockets"],
   "vegetation_sets": ["temperate_street_canopy", "urban_park_trees", "subtropical_palms_coastal_only", "marsh_reeds_wetland_edges", "ornamental_waterfront_planting"],
-  "scenery_archetypes": ["highrise_downtown", "historic_brick_neighborhood", "elevated_rail_corridor", "underground_subway", "lakefront_prom_enade", "river_canal_bridge_network", "tropical_marina", "island_causeway", "waterfront_nightlife", "wetland_park", "industrial_waterfront"],
+  "scenery_archetypes": ["highrise_downtown", "historic_brick_neighborhood", "elevated_rail_corridor", "underground_subway", "lakefront_promenade", "river_canal_bridge_network", "tropical_marina", "island_causeway", "waterfront_nightlife", "wetland_park", "industrial_waterfront"],
   "water_features": ["lake", "river", "canal", "lagoon", "beach", "island", "wetland", "marina", "pond"],
   "weather_profile": {
     "humidity_range": "variable",
