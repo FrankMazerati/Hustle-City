@@ -87,7 +87,7 @@ jobs:
           set -euo pipefail
           mkdir -p game/build
           godot --headless --path game --editor --quit
-          godot --headless --path game --export-release "Web" game/build/index.html
+          godot --headless --path game --export-release "Web" build/index.html
           test -s game/build/index.html
           find game/build -maxdepth 1 -type f -printf '%f %s bytes\n' | sort
           test -n "$(find game/build -maxdepth 1 -type f -name '*.wasm' -print -quit)"
