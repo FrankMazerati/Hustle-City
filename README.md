@@ -1,9 +1,11 @@
 # Hustle City
 
-Hustle City is a cinematic, realistic 3D social-world/city-life game built with **Godot 4**. This repository is the durable source of truth for project vision, approved decisions, agent roles, architecture, workflows, assets and implementation.
+Hustle City is a cinematic, realistic 3D social-world/city-life game built primarily with **Unreal Engine 5**, with **Unity 6** as a secondary compatibility target. This repository is the durable source of truth for project vision, approved decisions, agent roles, architecture, workflows, assets and implementation.
 
 ## Start here
 - [Project vision and game scope](docs/PROJECT_VISION.md)
+- [World identity bible — original Chicago/Florida-inspired scenery](world/WORLD_IDENTITY_BIBLE.md)
+- [Portable engine architecture](architecture/PORTABILITY_CONTRACT.md)
 - [Decision log and unresolved items](docs/DECISION_LOG.md)
 - [Database foundation and deployment status](database/README.md)
 - [Core data model](database/DATA_MODEL.md)
@@ -27,6 +29,9 @@ Hustle City is a cinematic, realistic 3D social-world/city-life game built with 
 4. A generated image is a concept reference, not automatically a production-ready 3D asset.
 5. Never commit API keys, credentials, private player data or secrets.
 6. Do not claim a feature, workflow, build or agent is running unless it has actually been activated and verified.
+
+## Engine direction
+Unreal Engine 5 is the primary production engine. Unity 6 is the secondary compatibility/migration target. Godot is retired as an active target; existing work/history is preserved pending review. The flagship fictional world blends Chicago-inspired urban character with Florida-inspired tropical/coastal atmosphere while retaining original Hustle City geography, landmarks and identity. Reusable environment profiles must support other distinct U.S. scenery types.
 
 ## Current status
 The ten-person named Hustle City cohort and five-role manual execution pilot are defined in GitHub. Models remain unassigned, provider secrets are not confirmed, and no live agent cycle has been run from this repository. The first pilot cycle is documentation/specification only. An initial database model and SQL schema draft now exist in the repository, but no schema has been applied to Supabase. The active Supabase project currently visible has a general command-center name and has not been confirmed as the Hustle City project. Godot implementation status must be tracked separately from design documentation.
