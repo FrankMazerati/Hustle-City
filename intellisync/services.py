@@ -218,9 +218,16 @@ class AgentServices:
             "approved_input": payload, "QA_correction_feedback": feedback,
             "instruction": "Produce this station's deliverable. Include assumptions, dependencies, risks and handoff notes."
         }, ensure_ascii=False, indent=2)
-        output = self.client.chat(self._model_for(item["agent_id"]),
-                                  [{"role": "system", "content": system},
-                                   {"role": "user", "content": user}])
+        try:
+            output = self.client.chat(self._model_for(item["agent_id"]),
+                                      [{"role": "system", "content": system},
+                                       {"role": "user", "content": user}])
+        except ProviderUnavailable as exc:
+            self.runtime.release_claim(
+                item["package_id"], item["station_id"], item["agent_id"],
+                str(exc), event_key=f"{run_id}:provider-requeued"
+            )
+            raise
         self.runtime.submit(item["package_id"], item["station_id"], item["agent_id"],
                             output, event_key=f"{run_id}:submission")
         self.messages.send(item["agent_id"], "Deliverable submitted",
