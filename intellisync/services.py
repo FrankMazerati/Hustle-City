@@ -17,6 +17,7 @@ from pathlib import Path
 from typing import Any
 
 from .runtime import IntelliSync, InvalidTransition, RuntimeErrorBase, utc_now
+from .providers import HostedModelClient, ProviderUnavailable
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_AGENT_CONFIG = Path(__file__).parent / "config" / "agents.json"
@@ -161,13 +162,21 @@ class AgentServices:
         self.runtime = runtime
         self.config_path = Path(config_path)
         self.config = json.loads(self.config_path.read_text(encoding="utf-8"))
-        self.client = client or OllamaClient(
-            self.config.get("ollama", {}).get("endpoint", "http://127.0.0.1:11434")
-        )
+        if client is not None:
+            self.client = client
+        elif self.config.get("model_backend", "ollama") == "hosted":
+            self.client = HostedModelClient(self.config.get("hosted_providers", {}))
+        else:
+            self.client = OllamaClient(
+                self.config.get("ollama", {}).get("endpoint", "http://127.0.0.1:11434"),
+                timeout_s=self.config.get("ollama", {}).get("timeout_seconds", 180)
+            )
         self.messages = MessageHub(runtime.db_path)
         self.trinity = TrinityCoordinator(runtime, self.messages)
 
     def _model_for(self, agent_id: str) -> str:
+        if self.config.get("model_backend", "ollama") == "hosted":
+            return "hosted:auto"
         model = self.config.get("models", {}).get(agent_id)
         if not model:
             raise ServiceConfigurationError(
@@ -287,6 +296,8 @@ class Scheduler:
         self._validate_ready()
 
     def _validate_ready(self) -> None:
+        if isinstance(self.services.client, HostedModelClient):
+            self.services.client.validate()
         for station in self.runtime.stations:
             qa = station.get("qa_supervisor_id")
             if not qa:
