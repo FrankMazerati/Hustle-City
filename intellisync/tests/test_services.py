@@ -5,6 +5,7 @@ from pathlib import Path
 
 from intellisync.runtime import IntelliSync
 from intellisync.services import AgentServices, Scheduler, ServiceConfigurationError
+from intellisync.providers import ProviderUnavailable
 
 
 class FakeOllama:
@@ -92,6 +93,24 @@ class ServiceTests(unittest.TestCase):
         result = scheduler.tick()
         self.assertIn("not valid JSON", result["outcomes"][0]["error"])
         self.assertEqual(self.runtime.status("HC-SERVICE-TEST")[0]["status"], "qa_pending")
+
+    def test_provider_quota_failure_releases_claim_back_to_ready_queue(self):
+        config = json.loads(self.agent_config.read_text(encoding="utf-8"))
+        config["model_backend"] = "hosted"
+        self.agent_config.write_text(json.dumps(config), encoding="utf-8")
+
+        class QuotaFailureClient:
+            def chat(self, model, messages, temperature=0.2):
+                raise ProviderUnavailable("All configured free providers are unavailable; task must remain queued.")
+
+        services = AgentServices(self.runtime, self.agent_config, QuotaFailureClient())
+        scheduler = Scheduler(services)
+        self.create()
+        result = scheduler.tick()
+        self.assertIn("task must remain queued", result["outcomes"][0]["error"])
+        status = self.runtime.status("HC-SERVICE-TEST")[0]
+        self.assertEqual(status["status"], "ready")
+        self.assertEqual(status["stations"][0]["status"], "ready")
 
 
 if __name__ == "__main__":
