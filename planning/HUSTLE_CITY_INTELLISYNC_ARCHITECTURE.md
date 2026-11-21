@@ -88,6 +88,48 @@ Agents may recommend changes across team boundaries, but they may not overwrite 
 
 Provide a shared view of agent activity, change history, dependencies, open risks, test status, decisions, and integration health. Preserve enough information to reproduce why a change was accepted or rejected.
 
+
+## 3A. Synchronization cadence and living-world services
+
+IntelliSync must support three complementary synchronization modes:
+
+1. **Daily development synchronization:** at a configured daily checkpoint, reconcile the Command Center and Hustle City development rosters, role ownership, assignments, progress reports, completed work, blockers, dependency changes, open reviews, and integration status. Produce a dated snapshot and carry unresolved work forward. This is a recurring reconciliation cycle, not a claim that a scheduled job is already deployed.
+2. **Event-driven development synchronization:** publish relevant changes as they happen so dependent agents can see new work and review requests without waiting for the daily checkpoint.
+3. **Real-time runtime synchronization:** coordinate live player presence, world events, NPC activity, dialogue, and relationship state using authoritative game services and event timestamps.
+
+The daily cycle should detect stale assignments, missing owner reports, conflicting edits, newly introduced dependencies, and work awaiting review. It should not overwrite a contributor's work or silently change role assignments. Each team retains its own source of truth; IntelliSync reconciles references and reports discrepancies.
+
+### Player and event synchronization
+
+The runtime layer must connect player context to the living city. It should support:
+
+- player presence, current location, party/crew context, and relevant activity state
+- event discovery, eligibility, invitations, attendance, participation, outcomes, and follow-up
+- event changes that reach affected players and NPCs in a timely, consistent way
+- shared event state so participants see compatible status and outcomes
+- reconnect/recovery behavior when a player disconnects or misses an update
+- privacy and permission checks so players only receive information they are allowed to see
+
+A player should be able to encounter an event naturally, receive a relevant invitation or notification, join with others where allowed, and see the event's consequences reflected in the world.
+
+### Conversational synchronization
+
+Dialogue is a first-class runtime system, not a collection of disconnected one-line NPC responses. IntelliSync should coordinate:
+
+- speaker identity, conversation participants, and turn order
+- conversation/session ID and dialogue history or a bounded context summary
+- current topic, location, event context, relationship context, and conversation intent
+- NPC personality, voice, age-appropriate language, and relationship boundaries
+- player responses and NPC follow-up turns, including interruptions or topic changes where supported
+- world events that can start, interrupt, or change a conversation
+- durable outcomes such as a promise, invitation, rumor, relationship change, or event lead, subject to game rules
+
+A conversation should remain coherent across back-and-forth turns. The system should not have two agents independently speak for the same character at once; a dialogue/session owner coordinates turns while other agents may provide reviewed context or suggestions.
+
+### Story character continuity
+
+Frank Maserati is a named story character. His female travel companion remains a canon character whose permanent name is intentionally undecided. Until the project owner chooses her name, use the stable temporary identifier `character.frank_companion_temporary` and the display label **Frank's Companion**. Do not invent a permanent name or infer her identity. Her dialogue, reactions, travel arrival, and relationship to Frank must remain consistent across opening scenes and later story references.
+
 ## 4. First vertical slice: intelligent downtown intersection
 
 The first proof should connect five independently owned concerns:
@@ -163,7 +205,7 @@ Before connecting services, verify authentication, permissions, data ownership, 
 5. Build the intersection scenario and deterministic test fixtures.
 6. Connect agent review and approval workflow.
 7. Add runtime adapters for the Unreal prototype after the contracts are validated.
-8. Verify integration with Command Center services without assuming an existing live connection.
+8. Verify integration with Command Center services without assuming an existing live connection.\n9. Add daily development reconciliation and event-driven change notifications.\n10. Add runtime player/event synchronization and stateful dialogue sessions.
 
 ## 9. Definition of the first demonstration
 
@@ -177,4 +219,4 @@ The first IntelliSync demonstration is successful when contributors can see:
 - an owner decision
 - before/after test results and an audit record
 
-**Current implementation status:** this document locks the architecture direction. It does not claim that the event bus, dependency graph, agent review loop, simulation engine, or Command Center connection has already been implemented or tested.
+**Current implementation status:** the architecture and initial registry/event contracts are committed, and a first dependency-impact checker exists in the repository. Daily scheduling, live player/event synchronization, stateful dialogue runtime, the event bus, agent review loop, simulation engine, and Command Center connection are not yet verified as deployed or operational.
