@@ -232,9 +232,17 @@ class IntelliSync:
                 raise InvalidTransition("Self-approval is prohibited.")
             now = utc_now()
             if decision == "reject":
+                correction = feedback or "QA requested corrections."
                 con.execute(
-                    "UPDATE station_runs SET status='rework',qa_feedback=?,reviewed_at=? WHERE run_id=?",
-                    (feedback or "QA requested corrections.", now, run["run_id"])
+                    "UPDATE station_runs SET status='rejected',qa_feedback=?,reviewed_at=? WHERE run_id=?",
+                    (correction, now, run["run_id"])
+                )
+                # Keep the rejected attempt immutable and create a fresh correction run.
+                con.execute(
+                    """INSERT INTO station_runs(run_id,package_id,station_id,agent_id,
+                    qa_supervisor_id,status,attempt,qa_feedback) VALUES(?,?,?,?,?,?,?,?)""",
+                    (uuid.uuid4().hex, package_id, run["station_id"], run["agent_id"],
+                     run["qa_supervisor_id"], "ready", run["attempt"] + 1, correction)
                 )
                 con.execute("UPDATE packages SET status='rework',updated_at=? WHERE package_id=?",
                             (now, package_id))
