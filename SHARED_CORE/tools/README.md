@@ -47,3 +47,24 @@ Run all tool tests:
 ```bash
 python -m unittest discover -s SHARED_CORE/tools/tests -v
 ```
+
+
+## Player, world-event, and dialogue contracts
+
+The first runtime-facing contracts are now defined:
+
+- `SHARED_CORE/schemas/player-event-context.schema.json` — player session, presence, location reference, party/crew context, and event-discovery preferences.
+- `SHARED_CORE/schemas/world-event-lifecycle.schema.json` — event visibility, eligibility, invitations/participation state, lifecycle, and outcome.
+- `SHARED_CORE/schemas/dialogue-session.schema.json` — participants, single session coordinator, ordered turns, continuity context, and interruptions.
+- `SHARED_CORE/examples/frank-companion-event-dialogue-flow.json` — illustrative end-to-end example with Frank Maserati and **Frank's Companion**. Her permanent name remains undecided.
+
+Validate that these files are syntactically valid JSON:
+
+```bash
+python -m json.tool SHARED_CORE/schemas/player-event-context.schema.json > /dev/null
+python -m json.tool SHARED_CORE/schemas/world-event-lifecycle.schema.json > /dev/null
+python -m json.tool SHARED_CORE/schemas/dialogue-session.schema.json > /dev/null
+python -m json.tool SHARED_CORE/examples/frank-companion-event-dialogue-flow.json > /dev/null
+```
+
+These are data contracts and a sample sequence, not a deployed multiplayer event service or live conversational AI runtime. The next implementation step is a local event/session prototype that validates event routing and dialogue turn ownership before engine integration.
