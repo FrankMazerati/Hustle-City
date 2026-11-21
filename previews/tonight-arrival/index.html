@@ -100,7 +100,7 @@ function startOriginalAmbience(){
     gain.gain.setValueAtTime(.0001,ctx.currentTime);gain.gain.exponentialRampToValueAtTime(.095,ctx.currentTime+.12);gain.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+1.15);
     osc.connect(filter);filter.connect(gain);gain.connect(master);osc.start();osc.stop(ctx.currentTime+1.2);beat++;
   }
-  musicBeat();ambienceTimer=setInterval(musicBeat,1150);
+  musicBeat();
   // Distant thunder: filtered low-frequency noise swell.
   function thunder(){
     if(!audioCtx)return;
