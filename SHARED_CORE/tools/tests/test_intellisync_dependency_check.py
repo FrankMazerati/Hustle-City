@@ -4,7 +4,7 @@ from pathlib import Path
 
 from intellisync_dependency_check import analyze_change, load_json
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 REGISTRY = load_json(ROOT / "SHARED_CORE/content/world-intelligence-registry.json")
 
 
