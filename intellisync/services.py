@@ -369,7 +369,7 @@ def main() -> int:
             print("IntelliSync scheduler running. Ctrl+C to stop.", flush=True)
             scheduler.run_forever(args.interval)
         return 0
-    except (RuntimeErrorBase, sqlite3.Error, OSError, ValueError) as exc:
+    except (RuntimeErrorBase, ProviderUnavailable, sqlite3.Error, OSError, ValueError) as exc:
         print(f"intellisync-services: {exc}", file=__import__("sys").stderr)
         return 2
 
