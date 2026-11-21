@@ -60,7 +60,7 @@ body{display:grid;place-items:center;padding:14px}
 <nav class="timeline" aria-label="Cinematic shots">
 <button class="shot active" data-shot="0">01 · JOURNEY</button><button class="shot" data-shot="1">02 · SKYLINE</button><button class="shot" data-shot="2">03 · 360° PASS</button><button class="shot" data-shot="3">04 · STATION</button><button class="shot" data-shot="4">05 · ARRIVAL</button><button class="shot" data-shot="5">06 · NEXT</button>
 </nav>
-<div class="actions"><button class="play" id="play">▶ PLAY SEQUENCE</button><div class="note">Rick Ross soundtrack (private local preview): <label class="audio-pick">CHOOSE AUDIO FILE <input id="musicFile" type="file" accept="audio/*"></label><span id="audioName">No audio selected yet</span><audio id="soundtrack" preload="none"></audio><br>Choose a music file stored on this tablet. You can replace it later; the audio stays local and is not uploaded to GitHub.</div><div class="status" id="status">VISUAL PREVIEW · NO GAMEPLAY</div></div>
+<div class="actions"><button class="play" id="play">▶ PLAY SEQUENCE</button><div class="note">Original cinematic ambience: rain, distant thunder, and a simple instrumental synth theme play when you start the sequence. <label class="audio-pick">OPTIONAL: CHOOSE YOUR OWN SONG <input id="musicFile" type="file" accept="audio/*"></label><span id="audioName">Built-in original soundtrack selected</span><audio id="soundtrack" preload="none"></audio><br>The built-in audio is generated in your browser. Your optional music file stays on this tablet and is not uploaded to GitHub.</div><div class="status" id="status">VISUAL PREVIEW · NO GAMEPLAY</div></div>
 </section>
 </main>
 <script>
@@ -77,11 +77,51 @@ const soundtrack=document.getElementById("soundtrack");
 const musicFile=document.getElementById("musicFile");
 const audioName=document.getElementById("audioName");
 let localAudioUrl=null;
+let audioCtx=null, ambienceNodes=[], ambienceTimer=null;
+function startOriginalAmbience(){
+  const AC=window.AudioContext||window.webkitAudioContext;
+  if(!AC)return;
+  if(!audioCtx)audioCtx=new AC();
+  audioCtx.resume();
+  const ctx=audioCtx, master=ctx.createGain();master.gain.value=.42;master.connect(ctx.destination);ambienceNodes.push(master);
+  // Soft continuous rain, synthesized locally.
+  const length=ctx.sampleRate*3, buffer=ctx.createBuffer(1,length,ctx.sampleRate), data=buffer.getChannelData(0);
+  for(let i=0;i<length;i++)data[i]=(Math.random()*2-1)*.42;
+  const rain=ctx.createBufferSource();rain.buffer=buffer;rain.loop=true;
+  const rainFilter=ctx.createBiquadFilter();rainFilter.type="lowpass";rainFilter.frequency.value=3200;
+  const rainGain=ctx.createGain();rainGain.gain.value=.20;
+  rain.connect(rainFilter);rainFilter.connect(rainGain);rainGain.connect(master);rain.start();ambienceNodes.push(rain);
+  // Original four-note cinematic pulse, not a commercial recording.
+  const notes=[110,146.83,164.81,130.81];let beat=0;
+  function musicBeat(){
+    if(!audioCtx)return;
+    const osc=ctx.createOscillator(),gain=ctx.createGain(),filter=ctx.createBiquadFilter();
+    osc.type="triangle";osc.frequency.value=notes[beat%notes.length];filter.type="lowpass";filter.frequency.value=520;
+    gain.gain.setValueAtTime(.0001,ctx.currentTime);gain.gain.exponentialRampToValueAtTime(.095,ctx.currentTime+.12);gain.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+1.15);
+    osc.connect(filter);filter.connect(gain);gain.connect(master);osc.start();osc.stop(ctx.currentTime+1.2);beat++;
+  }
+  musicBeat();ambienceTimer=setInterval(musicBeat,1150);
+  // Distant thunder: filtered low-frequency noise swell.
+  function thunder(){
+    if(!audioCtx)return;
+    const n=ctx.createBufferSource(),b=ctx.createBuffer(1,ctx.sampleRate*2,ctx.sampleRate),d=b.getChannelData(0);
+    for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*(1-i/d.length);
+    n.buffer=b;const f=ctx.createBiquadFilter();f.type="lowpass";f.frequency.value=115;
+    const g=ctx.createGain();g.gain.setValueAtTime(.0001,ctx.currentTime);g.gain.exponentialRampToValueAtTime(.32,ctx.currentTime+.35);g.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+2);
+    n.connect(f);f.connect(g);g.connect(master);n.start();n.stop(ctx.currentTime+2);
+  }
+  thunder();ambienceTimer=setInterval(()=>{musicBeat();if(Math.random()>.52)thunder();},2300);
+}
+function stopOriginalAmbience(){
+  if(ambienceTimer)clearInterval(ambienceTimer);ambienceTimer=null;
+  ambienceNodes.forEach(n=>{try{n.stop();}catch(e){}try{n.disconnect();}catch(e){}});ambienceNodes=[];
+  if(audioCtx){audioCtx.close();audioCtx=null;}
+}
 musicFile.addEventListener("change",()=>{const file=musicFile.files&&musicFile.files[0];if(!file)return;if(localAudioUrl)URL.revokeObjectURL(localAudioUrl);localAudioUrl=URL.createObjectURL(file);soundtrack.src=localAudioUrl;soundtrack.load();audioName.textContent="Selected: "+file.name;});
 const buttons=[...document.querySelectorAll(".shot")];
 function show(i){current=i;document.getElementById("eyebrow").textContent=shots[i][0];document.getElementById("headline").innerHTML=shots[i][1];document.getElementById("subline").textContent=shots[i][2];buttons.forEach((b,n)=>b.classList.toggle("active",n===i));document.getElementById("status").textContent="SHOT "+String(i+1).padStart(2,"0")+" / 06 · VISUAL PREVIEW";}
 buttons.forEach(b=>b.addEventListener("click",()=>{stop();show(Number(b.dataset.shot));}));
-function stop(){if(timer)clearInterval(timer);timer=null;soundtrack.pause();document.getElementById("play").textContent="▶ PLAY SEQUENCE";}
-document.getElementById("play").addEventListener("click",()=>{if(timer){stop();return;}if(current===5)show(0);if(soundtrack.src){soundtrack.currentTime=0;soundtrack.play().catch(()=>{audioName.textContent="Tap play again to start audio";});}document.getElementById("play").textContent="Ⅱ PAUSE";timer=setInterval(()=>{if(current>=5){stop();return;}show(current+1);},4200);});
+function stop(){if(timer)clearInterval(timer);timer=null;soundtrack.pause();stopOriginalAmbience();document.getElementById("play").textContent="▶ PLAY SEQUENCE";}
+document.getElementById("play").addEventListener("click",()=>{if(timer){stop();return;}if(current===5)show(0);if(soundtrack.src){soundtrack.currentTime=0;soundtrack.play().catch(()=>{audioName.textContent="Tap play again to start audio";});}else{startOriginalAmbience();}document.getElementById("play").textContent="Ⅱ PAUSE";timer=setInterval(()=>{if(current>=5){stop();return;}show(current+1);},4200);});
 </script>
 </body></html>
