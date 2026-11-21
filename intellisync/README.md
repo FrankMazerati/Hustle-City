@@ -48,7 +48,7 @@ ready → in_progress → qa_pending → approved → next station ready
 
 A QA rejection creates a correction state for the same station:
 
-qa_pending → rework → in_progress → qa_pending
+qa_pending → rejected attempt + new ready correction attempt → in_progress → qa_pending
 
 After the last station passes QA, the package becomes complete. Downstream work never starts from an unapproved station output.
 
