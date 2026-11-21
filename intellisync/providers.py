@@ -9,6 +9,7 @@ import json
 import os
 import urllib.error
 import urllib.request
+from urllib.parse import quote
 from typing import Any, Callable
 
 
@@ -37,7 +38,7 @@ class HostedModelClient:
             api_key = self.environ.get(key_env, "") if key_env else ""
             model = self.environ.get(item.get("model_env", ""), "") or item.get("model", "")
             if api_key and model and item.get("endpoint"):
-                eligible.append({**item, "id": provider_id, "api_key": api_key, "model": model})
+                eligible.append({**item, "id": provider_id, "api_key": api_key, "model": model,\n                             "endpoint": item["endpoint"].replace("{model}", quote(model, safe=""))})
         return eligible
 
     def validate(self) -> None:
