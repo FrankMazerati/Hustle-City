@@ -11,7 +11,7 @@
 - [x] Next-station release only after approval.
 - [x] Duplicate event-key protection.
 - [x] Restart recovery/status snapshot.
-- [x] Unit tests for core transitions.
+- [x] Unit test suite authored for core transitions (execution pending).
 
 ## Not implemented or not verified
 
