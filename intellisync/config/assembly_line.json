@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "project": "Hustle City",
+  "runtime_mode": "package_relay",
+  "note": "Starter pipeline only. QA ownership must be explicitly configured for every station before package creation. Do not infer QA assignments from station order.",
+  "stations": [
+    {
+      "station_id": "world-builder",
+      "role": "World Builder",
+      "agent_id": "world-builder",
+      "qa_supervisor_id": null
+    },
+    {
+      "station_id": "city-builder",
+      "role": "City Builder",
+      "agent_id": "city-builder",
+      "qa_supervisor_id": null
+    },
+    {
+      "station_id": "roads-infrastructure",
+      "role": "Roads & Infrastructure",
+      "agent_id": "roads-infrastructure",
+      "qa_supervisor_id": null
+    },
+    {
+      "station_id": "building-architecture",
+      "role": "Building & Architecture",
+      "agent_id": "building-architecture",
+      "qa_supervisor_id": null
+    }
+  ],
+  "defaults": {
+    "database": "data/intellisync.sqlite3",
+    "max_parallel_station_claims": 4,
+    "require_qa_before_handoff": true
+  }
+}
