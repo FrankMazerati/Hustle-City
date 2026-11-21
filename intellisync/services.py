@@ -107,6 +107,54 @@ class MessageHub:
             return [dict(row) for row in rows]
 
 
+class TrinityCoordinator:
+    """Top-level coordinator services for queue oversight and escalations."""
+    def __init__(self, runtime: IntelliSync, messages: MessageHub):
+        self.runtime = runtime
+        self.messages = messages
+
+    def snapshot(self) -> dict[str, Any]:
+        with sqlite3.connect(self.runtime.db_path) as con:
+            packages = {row[0]: row[1] for row in con.execute(
+                "SELECT status,COUNT(*) FROM packages GROUP BY status")}
+            station_runs = {row[0]: row[1] for row in con.execute(
+                "SELECT status,COUNT(*) FROM station_runs GROUP BY status")}
+        return {
+            "coordinator": "Trinity",
+            "packages": packages,
+            "station_runs": station_runs,
+            "ready": station_runs.get("ready", 0),
+            "in_progress": station_runs.get("in_progress", 0),
+            "awaiting_qa": station_runs.get("qa_pending", 0),
+            "rework": station_runs.get("rework", 0),
+            "escalation_required": station_runs.get("blocked", 0)
+        }
+
+    def audit_qa(self, run_id: str, qa_result: dict[str, Any]) -> dict[str, Any]:
+        qa = qa_result.get("qa", {})
+        checks = qa.get("checks", [])
+        audit = {
+            "reviewed_by": "Trinity",
+            "qa_decision": qa.get("decision"),
+            "checks_present": bool(checks),
+            "feedback_present": bool(qa.get("feedback")),
+            "confidence": qa.get("confidence"),
+            "audit_status": "recorded" if checks and qa.get("feedback") else "escalate"
+        }
+        with sqlite3.connect(self.runtime.db_path) as con:
+            row = con.execute("SELECT package_id,station_id FROM station_runs WHERE run_id=?",
+                              (run_id,)).fetchone()
+        if row:
+            self.messages.send("Trinity", "QA oversight audit",
+                               json.dumps(audit, ensure_ascii=False),
+                               feed="command", package_id=row[0])
+        return audit
+
+    def escalate(self, subject: str, details: str, package_id: str | None = None) -> int:
+        return self.messages.send("Trinity", subject, details, feed="command",
+                                  package_id=package_id)
+
+
 class AgentServices:
     def __init__(self, runtime: IntelliSync, config_path: str | Path = DEFAULT_AGENT_CONFIG,
                  client: OllamaClient | None = None):
@@ -117,6 +165,7 @@ class AgentServices:
             self.config.get("ollama", {}).get("endpoint", "http://127.0.0.1:11434")
         )
         self.messages = MessageHub(runtime.db_path)
+        self.trinity = TrinityCoordinator(runtime, self.messages)
 
     def _model_for(self, agent_id: str) -> str:
         model = self.config.get("models", {}).get(agent_id)
@@ -224,22 +273,7 @@ class AgentServices:
         return {"result": result, "qa": decision}
 
     def audit_qa(self, run_id: str, qa_result: dict[str, Any]) -> dict[str, Any]:
-        """Trinity's deterministic oversight record; it does not override QA."""
-        qa = qa_result.get("qa", {})
-        checks = qa.get("checks", [])
-        audit = {
-            "reviewed_by": "Trinity",
-            "qa_decision": qa.get("decision"),
-            "checks_present": bool(checks),
-            "feedback_present": bool(qa.get("feedback")),
-            "confidence": qa.get("confidence"),
-            "audit_status": "recorded" if checks and qa.get("feedback") else "escalate"
-        }
-        item = self._work_record(run_id)
-        self.messages.send("Trinity", "QA oversight audit",
-                           json.dumps(audit, ensure_ascii=False),
-                           feed="command", package_id=item["package_id"])
-        return audit
+        return self.trinity.audit_qa(run_id, qa_result)
 
 
 class Scheduler:
