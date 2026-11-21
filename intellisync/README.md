@@ -1,63 +1,53 @@
-# Hustle City IntelliSync Runtime — starter implementation
+# Hustle City IntelliSync Runtime
 
-This is the first executable orchestration layer for the rolling package relay. It is deliberately separate from the older six-role manual GitHub pilot and does not activate that workflow.
+IntelliSync is the durable package relay and worker execution layer for Hustle City. This runtime is separate from the older six-role manual GitHub pilot.
 
-## What this version does
+## Implemented
 
-- Creates durable work packages in SQLite.
-- Sends each package through the configured station sequence.
-- Lets the assigned station agent claim and submit a deliverable.
-- Moves each submission into its assigned QA supervisor's review queue.
-- Releases the next station only after QA approval.
-- Sends rejected work back to the same station for correction.
-- Prevents self-approval and review by the wrong QA supervisor.
-- Records event history and ignores repeated event keys.
-- Preserves queue state across process restarts.
-- Supports multiple packages in the same database; independent packages can be in progress at different stations.
+- SQLite persistence for work packages, station runs, events and agent messages.
+- Station-to-station package relay with QA approval before downstream release.
+- Rework loops that return rejected work to its original station.
+- Restart recovery and bounded worker scheduling.
+- Trinity coordinator snapshot, QA oversight record and escalation message services.
+- Hosted model adapters for Google Gemini and OpenRouter.
+- API keys read from environment variables only; no credentials are stored in the repository.
+- Fail-closed provider eligibility: a hosted provider is callable only when enabled, verified as free, quota is available, data terms are approved, and its key/model are present.
+- Quota/rate-limit fallback is limited to the next explicitly verified-free provider. If no free provider is available, work remains queued; paid fallback is prohibited.
 
-## What it does not do yet
+## Gemini and OpenRouter connection
 
-- It does not autonomously invoke LLMs or run 16 agents.
-- It does not yet run continuous background workers or enforce a global concurrency semaphore.
-- It does not connect to Supabase. SQLite is a local starter adapter pending confirmation of the dedicated project.
-- It does not change the existing model router or old manual GitHub pilot.
-- It does not merge code, deploy services, spend money, or activate schedules.
+The GitHub Actions worker entrypoint supplies these existing repository secrets to the runtime:
 
-The starter pipeline contains the geography-to-city opening stations: World Builder → City Builder → Roads & Infrastructure → Building & Architecture. The exact QA-supervisor-to-specialist ownership map is not guessed. Supply an explicit QA mapping for every station at package creation until the approved roster mapping is configured.
+- `GEMINI_API_KEY`
+- `OPENROUTER_API_KEY`
 
-## Requirements
+Set model IDs as GitHub Actions repository variables (not secrets):
 
-Python 3.10+; standard library only.
+- `GEMINI_MODEL`
+- `OPENROUTER_MODEL`
 
-## Run
+The provider definitions live in `config/agents.json`. Both providers are intentionally disabled until their current API pricing/free quota and data terms have been checked. Do not set `enabled`, `verified_free`, `quota_available`, or `data_terms_approved` to true without verifying each condition for the exact model. API keys by themselves do not prove an API call is free.
 
-    python -m intellisync.runtime init
-    python -m unittest discover -s intellisync/tests -v
+The manually dispatched `.github/workflows/intellisync-hosted-worker.yml` is gated by both the input `confirm_run=RUN` and repository variable `INTELLISYNC_ENABLE_HOSTED_WORKERS=true`. It processes one bounded queue cycle, not an overnight or continuous run. It is not dispatched automatically.
 
-Create a package and map every station to its approved QA supervisor:
+## Current activation blockers
 
-    python -m intellisync.runtime create --type geography_to_city --payload '{"objective":"Build the approved world-to-city foundation"}' --qa-map world-builder=QA-1,city-builder=QA-1,roads-infrastructure=QA-2,building-architecture=QA-2
+- The starter geography pipeline still has no approved QA supervisor IDs. The scheduler refuses to start until each station has an explicit QA owner.
+- The final specialist-to-QA ownership map has not yet been supplied.
+- Provider model IDs, free quota and data terms still require explicit verification and configuration.
+- No unattended overnight worker or 24/7 host is active.
 
-The QA IDs above are examples only; replace them with the actual approved ownership map. Do not copy the example as a permanent assignment.
+The starter geography pipeline is World Builder → City Builder → Roads & Infrastructure → Building & Architecture. Functional role IDs are not approved permanent specialist names. SCRIBE and LENS remain separate creative leads and are not forced into this geography pipeline.
 
-Then use the package ID returned by create with the claim, submit, review, status and recover commands. A review decision must come from the configured QA supervisor.
+## Tests
 
-## State model
+```bash
+python -m unittest discover -s intellisync/tests -v
+```
 
-ready → in_progress → qa_pending → approved → next station ready
+## Safety
 
-A QA rejection creates a correction state for the same station:
-
-qa_pending → rejected attempt + new ready correction attempt → in_progress → qa_pending
-
-After the last station passes QA, the package becomes complete. Downstream work never starts from an unapproved station output.
-
-## Safety and operating rules
-
-- Configure QA ownership explicitly; no inferred roster mapping.
-- Agent IDs in the starter pipeline are functional role IDs, not approved permanent agent names.
-- SCRIBE and LENS remain separate creative leads and are not forced into this geography pipeline.
-- Trinity remains the coordinator above the three QA supervisors; coordinator audit/assignment services are a later layer.
-- Do not mark a model endpoint verified until it is tested on the actual device.
-- Keep API keys outside Git.
-- Do not connect or mutate a Supabase project until the creator confirms the dedicated IntelliSync database.
+- Keep API keys in GitHub Secrets or another secret manager; never commit them.
+- Do not infer QA assignments or final roster names.
+- Do not connect or mutate a Supabase project until the dedicated IntelliSync database is confirmed.
+- Do not merge or deploy generated work without review.

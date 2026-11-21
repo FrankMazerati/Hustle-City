@@ -1,13 +1,12 @@
 """Agent execution services for IntelliSync.
 
-Workers and QA supervisors use a local Ollama chat endpoint. Model assignments
-are explicit configuration, not inferred. The scheduler is opt-in and refuses
-to start if any required model or QA ownership is missing.
+Workers and QA supervisors use either the configured hosted provider chain
+(Gemini/OpenRouter) or the explicitly selected local Ollama adapter. The
+scheduler is opt-in and refuses incomplete provider or QA configuration.
 """
 from __future__ import annotations
 
 import json
-import os
 import sqlite3
 import time
 import urllib.error
@@ -17,6 +16,7 @@ from pathlib import Path
 from typing import Any
 
 from .runtime import IntelliSync, InvalidTransition, RuntimeErrorBase, utc_now
+from .providers import HostedModelClient, ProviderUnavailable
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_AGENT_CONFIG = Path(__file__).parent / "config" / "agents.json"
@@ -161,13 +161,21 @@ class AgentServices:
         self.runtime = runtime
         self.config_path = Path(config_path)
         self.config = json.loads(self.config_path.read_text(encoding="utf-8"))
-        self.client = client or OllamaClient(
-            self.config.get("ollama", {}).get("endpoint", "http://127.0.0.1:11434")
-        )
+        if client is not None:
+            self.client = client
+        elif self.config.get("model_backend", "ollama") == "hosted":
+            self.client = HostedModelClient(self.config.get("hosted_providers", {}))
+        else:
+            self.client = OllamaClient(
+                self.config.get("ollama", {}).get("endpoint", "http://127.0.0.1:11434"),
+                timeout_s=self.config.get("ollama", {}).get("timeout_seconds", 180)
+            )
         self.messages = MessageHub(runtime.db_path)
         self.trinity = TrinityCoordinator(runtime, self.messages)
 
     def _model_for(self, agent_id: str) -> str:
+        if self.config.get("model_backend", "ollama") == "hosted":
+            return "hosted:auto"
         model = self.config.get("models", {}).get(agent_id)
         if not model:
             raise ServiceConfigurationError(
@@ -209,9 +217,16 @@ class AgentServices:
             "approved_input": payload, "QA_correction_feedback": feedback,
             "instruction": "Produce this station's deliverable. Include assumptions, dependencies, risks and handoff notes."
         }, ensure_ascii=False, indent=2)
-        output = self.client.chat(self._model_for(item["agent_id"]),
-                                  [{"role": "system", "content": system},
-                                   {"role": "user", "content": user}])
+        try:
+            output = self.client.chat(self._model_for(item["agent_id"]),
+                                      [{"role": "system", "content": system},
+                                       {"role": "user", "content": user}])
+        except ProviderUnavailable as exc:
+            self.runtime.release_claim(
+                item["package_id"], item["station_id"], item["agent_id"],
+                str(exc), event_key=f"{run_id}:provider-requeued"
+            )
+            raise
         self.runtime.submit(item["package_id"], item["station_id"], item["agent_id"],
                             output, event_key=f"{run_id}:submission")
         self.messages.send(item["agent_id"], "Deliverable submitted",
@@ -287,6 +302,8 @@ class Scheduler:
         self._validate_ready()
 
     def _validate_ready(self) -> None:
+        if isinstance(self.services.client, HostedModelClient):
+            self.services.client.validate()
         for station in self.runtime.stations:
             qa = station.get("qa_supervisor_id")
             if not qa:
@@ -358,7 +375,7 @@ def main() -> int:
             print("IntelliSync scheduler running. Ctrl+C to stop.", flush=True)
             scheduler.run_forever(args.interval)
         return 0
-    except (RuntimeErrorBase, sqlite3.Error, OSError, ValueError) as exc:
+    except (RuntimeErrorBase, ProviderUnavailable, sqlite3.Error, OSError, ValueError) as exc:
         print(f"intellisync-services: {exc}", file=__import__("sys").stderr)
         return 2
 
