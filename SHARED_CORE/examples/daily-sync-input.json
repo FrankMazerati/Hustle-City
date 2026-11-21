@@ -1,0 +1,33 @@
+{
+  "project": "Hustle City",
+  "snapshot_date": "2026-11-20",
+  "timezone": "America/Chicago",
+  "roster": [
+    {"agent_id": "roads-infrastructure", "role": "Roads and Infrastructure", "report_required": true},
+    {"agent_id": "traffic-agent", "role": "Traffic Systems", "report_required": true},
+    {"agent_id": "npc-intelligence", "role": "NPC and Pedestrian Intelligence", "report_required": true},
+    {"agent_id": "vehicle-simulation", "role": "Vehicle Simulation", "report_required": true},
+    {"agent_id": "gameplay-qa", "role": "Gameplay Safety and QA", "report_required": true},
+    {"agent_id": "character-dialogue", "role": "Character Dialogue", "report_required": true},
+    {"agent_id": "world-events", "role": "World Events", "report_required": true},
+    {"agent_id": "intellisync-coordinator", "role": "IntelliSync Coordination", "report_required": true}
+  ],
+  "reports": [
+    {
+      "agent_id": "roads-infrastructure",
+      "report_date": "2026-11-20",
+      "completed": ["Reviewed downtown road and crossing ownership contract"],
+      "in_progress": ["Prepare intersection geometry fixture"],
+      "blockers": [],
+      "reviews_pending": []
+    },
+    {
+      "agent_id": "traffic-agent",
+      "report_date": "2026-11-20",
+      "completed": [],
+      "in_progress": ["Define signal phase event payload"],
+      "blockers": ["Waiting for approved intersection fixture"],
+      "reviews_pending": ["roads-infrastructure"]
+    }
+  ]
+}
