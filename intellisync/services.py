@@ -1,13 +1,12 @@
 """Agent execution services for IntelliSync.
 
-Workers and QA supervisors use a local Ollama chat endpoint. Model assignments
-are explicit configuration, not inferred. The scheduler is opt-in and refuses
-to start if any required model or QA ownership is missing.
+Workers and QA supervisors use either the configured hosted provider chain
+(Gemini/OpenRouter) or the explicitly selected local Ollama adapter. The
+scheduler is opt-in and refuses incomplete provider or QA configuration.
 """
 from __future__ import annotations
 
 import json
-import os
 import sqlite3
 import time
 import urllib.error
