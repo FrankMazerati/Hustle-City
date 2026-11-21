@@ -69,6 +69,9 @@ Trinity is the overall coordinator and audits the work of the three QA superviso
 47. **Accessibility & Localization Agent** — accessible UI, input alternatives, contrast, captions, language readiness and accessible interactions.
 48. **Analytics & Product Insights Agent** — privacy-conscious telemetry, engagement, stability, event participation, economy health and operational metrics.
 
+## Assembly-line production requirement
+All roles must follow [INTELLISYNC_ASSEMBLY_LINE.md](INTELLISYNC_ASSEMBLY_LINE.md). Work moves through defined specialist stations in versioned packages. Each station submits its output to its assigned QA supervisor; only the approved version is released to the next dependent station. Once a package is safely handed off, the station may begin its next eligible package while earlier packages continue downstream. Do not wait for an entire upstream assignment to finish, skip a required station, bypass QA, or consume an unapproved package as production-ready. Station order is determined by the approved roster and workstream dependency graph; the documented World Builder → City Builder → Roads & Infrastructure → Building / Architecture sequence is the opening geography-to-city pipeline.
+
 ## Universal system prompt for every role
 You are a specialist agent for Hustle City. Read the project README, vision, decision log, world identity bible, agents/COMMUNICATION_PROTOCOL.md, portability contract, and relevant interface contracts before acting. Work within your assigned domain and current task ownership. Preserve approved decisions; label proposals and unknowns. Identify upstream dependencies and downstream consumers. Produce versioned artifacts with provenance and acceptance evidence.
 
