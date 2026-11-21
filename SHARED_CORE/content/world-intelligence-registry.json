@@ -194,6 +194,159 @@
         "world.geometry.transit_corridors",
         "world.navigation.transit_routes"
       ]
+    },
+    {
+      "id": "development.daily_sync",
+      "name": "Daily Development Reconciliation",
+      "owner_agent": "intellisync-coordinator",
+      "responsibilities": [
+        "daily_role_roster_reconciliation",
+        "assignment_and_progress_snapshots",
+        "blocker_and_review_tracking",
+        "cross_team_dependency_reconciliation"
+      ],
+      "publishes": [
+        "development.daily_sync.completed",
+        "development.assignment.changed",
+        "development.blocker.reported"
+      ],
+      "depends_on": [
+        "development.agent_activity"
+      ],
+      "reads": [
+        "development.agent_activity.reports",
+        "development.change_log",
+        "development.review_queue"
+      ]
+    },
+    {
+      "id": "development.agent_activity",
+      "name": "Agent Activity and Change Ledger",
+      "owner_agent": "intellisync-coordinator",
+      "responsibilities": [
+        "agent_task_activity",
+        "change_provenance",
+        "review_status",
+        "integration_evidence"
+      ],
+      "publishes": [
+        "development.change.proposed",
+        "development.review.requested",
+        "development.review.completed"
+      ],
+      "depends_on": [],
+      "reads": [
+        "development.agent_registry",
+        "development.repository_changes"
+      ]
+    },
+    {
+      "id": "players.presence",
+      "name": "Player Presence and Context",
+      "owner_agent": "player-experience",
+      "responsibilities": [
+        "player_presence",
+        "location_context",
+        "party_and_crew_context",
+        "session_reconnect"
+      ],
+      "publishes": [
+        "player.presence.updated",
+        "player.location.changed",
+        "player.session.reconnected"
+      ],
+      "depends_on": [
+        "world.geometry",
+        "world.navigation"
+      ],
+      "reads": [
+        "world.geometry.locations",
+        "world.navigation.routes"
+      ]
+    },
+    {
+      "id": "events.lifecycle",
+      "name": "World Events and Player Participation",
+      "owner_agent": "world-events",
+      "responsibilities": [
+        "event_discovery",
+        "eligibility",
+        "invitations",
+        "attendance",
+        "participation",
+        "outcomes",
+        "event_follow_up"
+      ],
+      "publishes": [
+        "world.event.discovered",
+        "world.event.invited",
+        "world.event.joined",
+        "world.event.updated",
+        "world.event.completed"
+      ],
+      "depends_on": [
+        "players.presence",
+        "pedestrians.crossing",
+        "transit.operations"
+      ],
+      "reads": [
+        "players.presence.context",
+        "world.event.definitions",
+        "transit.operations.status"
+      ]
+    },
+    {
+      "id": "dialogue.sessions",
+      "name": "Stateful Character Conversations",
+      "owner_agent": "character-dialogue",
+      "responsibilities": [
+        "conversation_sessions",
+        "speaker_turns",
+        "dialogue_context",
+        "conversation_continuity",
+        "event_triggered_dialogue"
+      ],
+      "publishes": [
+        "dialogue.session.started",
+        "dialogue.turn.completed",
+        "dialogue.session.interrupted",
+        "dialogue.session.ended"
+      ],
+      "depends_on": [
+        "players.presence",
+        "events.lifecycle",
+        "social.relationships"
+      ],
+      "reads": [
+        "players.presence.context",
+        "events.lifecycle.context",
+        "social.relationships.context",
+        "character.personality_profiles"
+      ]
+    },
+    {
+      "id": "social.relationships",
+      "name": "Character and Player Relationships",
+      "owner_agent": "character-social-systems",
+      "responsibilities": [
+        "relationship_state",
+        "friendships",
+        "rivalries",
+        "reputation_context",
+        "conversation_boundaries"
+      ],
+      "publishes": [
+        "relationship.changed",
+        "social.interaction.recorded"
+      ],
+      "depends_on": [
+        "players.presence",
+        "dialogue.sessions"
+      ],
+      "reads": [
+        "players.presence.identity",
+        "dialogue.sessions.outcomes"
+      ]
     }
   ],
   "relationships": [
@@ -232,6 +385,30 @@
       "to": "traffic.signals",
       "type": "reviews",
       "reason": "Safety validation checks signal interactions with crossing and vehicle behavior."
+    },
+    {
+      "from": "development.daily_sync",
+      "to": "development.agent_activity",
+      "type": "reconciles",
+      "reason": "Daily sync compiles agent reports, changes, blockers, and reviews into a dated team snapshot."
+    },
+    {
+      "from": "players.presence",
+      "to": "events.lifecycle",
+      "type": "personalizes_and_routes",
+      "reason": "Player context determines relevant event discovery, eligibility, invitations, and participation state."
+    },
+    {
+      "from": "events.lifecycle",
+      "to": "dialogue.sessions",
+      "type": "triggers_context",
+      "reason": "Events can initiate, interrupt, or change conversations and provide shared context."
+    },
+    {
+      "from": "social.relationships",
+      "to": "dialogue.sessions",
+      "type": "personalizes",
+      "reason": "Relationship context influences dialogue tone, continuity, and permitted interaction."
     }
   ],
   "conventions": {
