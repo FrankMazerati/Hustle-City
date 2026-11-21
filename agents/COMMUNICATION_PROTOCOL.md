@@ -71,6 +71,9 @@ Messages should be structured enough to be actionable without making ordinary co
 
 Use stable task and artifact references so conversations can be traced. Keep decisions and accepted changes in canonical repository artifacts or the decision log; chat alone is not the source of truth. Preserve message history, timestamps, delivery status, unread state, and task-linked discussion in the runtime communication hub.
 
+## Rolling assembly-line package relay
+All specialists follow [INTELLISYNC_ASSEMBLY_LINE.md](INTELLISYNC_ASSEMBLY_LINE.md): each specialist is a defined production station; versioned packages move to the next dependent station only after the assigned QA supervisor approves that station's output. A station may begin its next eligible package once the current package is safely handed off, while earlier packages continue downstream. Use event-driven review and handoff notifications; do not wait for a full upstream project to finish, skip required stations, or bypass QA. The World Builder → City Builder → Roads & Infrastructure → Building / Architecture sequence is the opening geography-to-city pipeline. Other workstreams use configured dependency-based station sequences.
+
 ## Continuous QA communication and handoffs
 
 - All 12 specialists may work in parallel when their dependencies allow.
