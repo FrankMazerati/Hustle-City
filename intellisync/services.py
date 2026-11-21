@@ -200,12 +200,19 @@ class AgentServices:
             raise RuntimeErrorBase("QA response has no valid decision; left in QA queue.")
         if not isinstance(decision.get("feedback"), str) or not isinstance(decision.get("checks"), list):
             raise RuntimeErrorBase("QA response schema invalid; left in QA queue.")
-        # A low-confidence approval is held for human review, never auto-released.
-        if decision["decision"] == "approve" and float(decision.get("confidence", 0)) < float(
-            self.config.get("qa", {}).get("minimum_auto_approval_confidence", 0.85)
-        ):
-            self.messages.send(qa_id, "QA escalation required",
-                               f"Low-confidence approval for {item['package_id']} held for human review.",
+        # Trinity's gate audits the QA record before any approval can release downstream work.
+        confidence = float(decision.get("confidence", 0))
+        qa_policy = self.config.get("qa", {})
+        audit_ok = (
+            (not qa_policy.get("require_nonempty_checks", True) or bool(decision["checks"]))
+            and (not qa_policy.get("require_feedback", True) or bool(decision["feedback"].strip()))
+            and (decision["decision"] != "approve" or confidence >= float(
+                qa_policy.get("minimum_auto_approval_confidence", 0.85)
+            ))
+        )
+        if not audit_ok:
+            self.messages.send("Trinity", "QA decision held for oversight",
+                               f"QA result for {item['package_id']} at {item['station_id']} lacks required evidence or confidence. Human review required. Raw QA: {json.dumps(decision)}",
                                feed="command", package_id=item["package_id"])
             return {"result": "human_review_required", "qa": decision}
         result = self.runtime.review(item["package_id"], item["station_id"], qa_id,
@@ -269,19 +276,25 @@ class Scheduler:
         outcomes: list[dict[str, Any]] = []
         # Process existing QA queue first, then new production. The next tick
         # picks up the downstream run released by a successful QA review.
-        for row in pending:
+        def review_one(row: sqlite3.Row) -> dict[str, Any]:
             try:
                 reviewed = self.services.review_station(row["run_id"])
                 audit = self.services.audit_qa(row["run_id"], reviewed)
-                outcomes.append({"run_id": row["run_id"], "qa": reviewed, "trinity_audit": audit})
+                return {"run_id": row["run_id"], "qa": reviewed, "trinity_audit": audit}
             except Exception as exc:
-                outcomes.append({"run_id": row["run_id"], "error": str(exc)})
-        for row in ready:
+                return {"run_id": row["run_id"], "error": str(exc)}
+
+        def execute_one(row: sqlite3.Row) -> dict[str, Any]:
             try:
                 self.services.execute_station(row["run_id"])
-                outcomes.append({"run_id": row["run_id"], "result": "submitted_for_qa"})
+                return {"run_id": row["run_id"], "result": "submitted_for_qa"}
             except Exception as exc:
-                outcomes.append({"run_id": row["run_id"], "error": str(exc)})
+                return {"run_id": row["run_id"], "error": str(exc)}
+
+        # Bound concurrent model calls. SQLite claim transactions prevent duplicate ownership.
+        with ThreadPoolExecutor(max_workers=self.max_workers) as pool:
+            outcomes.extend(pool.map(review_one, pending))
+            outcomes.extend(pool.map(execute_one, ready))
         return {"processed": len(outcomes), "outcomes": outcomes, "recovery": self.runtime.recover()}
 
     def run_forever(self, interval_s: float = 2.0) -> None:
