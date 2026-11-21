@@ -16,6 +16,7 @@ Hustle City is a cinematic, realistic 3D social-world/city-life game built prima
 - [Machine-readable agent registry](agents/agent-registry.json)
 - [Dedicated Hustle City cohort](agents/cohorts/hustle-city-core/README.md)
 - [Dedicated runtime pilot and activation steps](agents/runtime/hustle-city/README.md)
+- [IntelliSync package-relay runtime](intellisync/README.md)
 - [Rolling assembly-line production standard](agents/INTELLISYNC_ASSEMBLY_LINE.md)
 - [Agent communication protocol](agents/COMMUNICATION_PROTOCOL.md)
 - [Cross-system integration contracts](architecture/INTEGRATION_CONTRACTS.md)
