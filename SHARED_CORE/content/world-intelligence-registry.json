@@ -1,0 +1,249 @@
+{
+  "schema_version": "1.0.0",
+  "registry_id": "hustle-city.shared-world-intelligence",
+  "project": "Hustle City",
+  "status": "initial_baseline",
+  "authority_rule": "Each system owns its authoritative state. This registry describes ownership, interfaces, and dependencies; it is not a competing runtime state store.",
+  "systems": [
+    {
+      "id": "world.geometry",
+      "name": "World Geometry",
+      "owner_agent": "roads-infrastructure",
+      "responsibilities": [
+        "roads",
+        "lanes",
+        "intersections",
+        "sidewalks",
+        "crosswalk_geometry"
+      ],
+      "publishes": [
+        "world.entity.registered",
+        "world.geometry.changed"
+      ],
+      "depends_on": [
+        "world.navigation"
+      ],
+      "reads": [
+        "world.navigation.constraints"
+      ]
+    },
+    {
+      "id": "world.navigation",
+      "name": "Navigation Graph",
+      "owner_agent": "navigation-agent",
+      "responsibilities": [
+        "walkable_routes",
+        "vehicle_routes",
+        "route_connectivity"
+      ],
+      "publishes": [
+        "navigation.graph.updated",
+        "navigation.route.blocked"
+      ],
+      "depends_on": [
+        "world.geometry"
+      ],
+      "reads": [
+        "world.geometry.topology"
+      ]
+    },
+    {
+      "id": "traffic.signals",
+      "name": "Traffic Signals",
+      "owner_agent": "traffic-agent",
+      "responsibilities": [
+        "signal_phases",
+        "right_of_way",
+        "intersection_signal_state"
+      ],
+      "publishes": [
+        "traffic.signal.phase_changed"
+      ],
+      "depends_on": [
+        "world.geometry",
+        "pedestrians.crossing",
+        "vehicles.simulation"
+      ],
+      "reads": [
+        "world.geometry.intersections",
+        "pedestrians.crossing.occupancy",
+        "vehicles.simulation.approach_state"
+      ]
+    },
+    {
+      "id": "pedestrians.crossing",
+      "name": "Pedestrian Movement",
+      "owner_agent": "npc-intelligence",
+      "responsibilities": [
+        "pedestrian_routes",
+        "crossing_intent",
+        "crossing_occupancy"
+      ],
+      "publishes": [
+        "pedestrian.crossing.entered",
+        "pedestrian.crossing.cleared"
+      ],
+      "depends_on": [
+        "world.geometry",
+        "world.navigation",
+        "traffic.signals"
+      ],
+      "reads": [
+        "world.geometry.crosswalks",
+        "world.navigation.walkable_routes",
+        "traffic.signals.right_of_way"
+      ]
+    },
+    {
+      "id": "vehicles.simulation",
+      "name": "Vehicle Simulation",
+      "owner_agent": "vehicle-simulation",
+      "responsibilities": [
+        "vehicle_motion",
+        "stopping_distance",
+        "turning_paths",
+        "vehicle_queue_state"
+      ],
+      "publishes": [
+        "vehicle.intersection.approach",
+        "vehicle.stopped",
+        "vehicle.conflict_detected"
+      ],
+      "depends_on": [
+        "world.geometry",
+        "world.navigation",
+        "traffic.signals",
+        "pedestrians.crossing"
+      ],
+      "reads": [
+        "world.geometry.lanes",
+        "world.navigation.vehicle_routes",
+        "traffic.signals.right_of_way",
+        "pedestrians.crossing.occupancy"
+      ]
+    },
+    {
+      "id": "safety.recovery",
+      "name": "Safety and Recovery",
+      "owner_agent": "gameplay-qa",
+      "responsibilities": [
+        "hazard_detection",
+        "collision_mitigation",
+        "safe_recovery",
+        "regression_scenarios"
+      ],
+      "publishes": [
+        "safety.conflict.detected",
+        "safety.recovery.started",
+        "safety.recovery.completed"
+      ],
+      "depends_on": [
+        "traffic.signals",
+        "pedestrians.crossing",
+        "vehicles.simulation"
+      ],
+      "reads": [
+        "traffic.signals.state",
+        "pedestrians.crossing.occupancy",
+        "vehicles.simulation.motion"
+      ]
+    },
+    {
+      "id": "weather.environment",
+      "name": "Weather and Environment",
+      "owner_agent": "environment-agent",
+      "responsibilities": [
+        "weather_state",
+        "visibility",
+        "surface_conditions"
+      ],
+      "publishes": [
+        "environment.weather.changed",
+        "environment.visibility.changed"
+      ],
+      "depends_on": [
+        "vehicles.simulation",
+        "pedestrians.crossing"
+      ],
+      "reads": [
+        "vehicles.simulation.motion_constraints",
+        "pedestrians.crossing.movement_constraints"
+      ]
+    },
+    {
+      "id": "transit.operations",
+      "name": "Transit Operations",
+      "owner_agent": "transit-network",
+      "responsibilities": [
+        "Skyway_routes",
+        "bus_routes",
+        "transit_stops",
+        "boarding_and_arrival"
+      ],
+      "publishes": [
+        "transit.vehicle.approaching",
+        "transit.stop.occupied",
+        "transit.journey.completed"
+      ],
+      "depends_on": [
+        "world.geometry",
+        "world.navigation",
+        "vehicles.simulation"
+      ],
+      "reads": [
+        "world.geometry.transit_corridors",
+        "world.navigation.transit_routes"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "traffic.signals",
+      "to": "pedestrians.crossing",
+      "type": "constrains",
+      "reason": "Signal phases and right-of-way govern when crossings may be entered."
+    },
+    {
+      "from": "traffic.signals",
+      "to": "vehicles.simulation",
+      "type": "coordinates",
+      "reason": "Signal phases govern vehicle movement through intersections."
+    },
+    {
+      "from": "pedestrians.crossing",
+      "to": "vehicles.simulation",
+      "type": "conflict_sensitive",
+      "reason": "Crossing occupancy and vehicle paths must be evaluated together."
+    },
+    {
+      "from": "weather.environment",
+      "to": "vehicles.simulation",
+      "type": "modifies_constraints",
+      "reason": "Visibility and surface conditions can change stopping and movement constraints."
+    },
+    {
+      "from": "world.geometry",
+      "to": "world.navigation",
+      "type": "defines_topology",
+      "reason": "Road, sidewalk, and crossing geometry constrain route connectivity."
+    },
+    {
+      "from": "safety.recovery",
+      "to": "traffic.signals",
+      "type": "reviews",
+      "reason": "Safety validation checks signal interactions with crossing and vehicle behavior."
+    }
+  ],
+  "conventions": {
+    "ids": "Stable lowercase dotted identifiers; do not recycle IDs after deletion.",
+    "units": "Spatial units and coordinate conventions must be defined by the engine-neutral integration contract before production simulation data is authored.",
+    "ownership": "One authoritative owner per system; shared changes require review by affected owners.",
+    "lifecycle": [
+      "proposed",
+      "accepted",
+      "active",
+      "deprecated"
+    ],
+    "agent_status_note": "Agent IDs identify intended role ownership. They do not assert that an agent process is currently running or activated."
+  }
+}
