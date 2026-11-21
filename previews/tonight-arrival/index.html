@@ -38,7 +38,7 @@ body{display:grid;place-items:center;padding:14px}
 .caption p{font-size:clamp(10px,1.5vw,15px);margin:0;color:#e1eaf4;line-height:1.4}
 .controls{padding:14px 17px 16px;background:#081426}
 .timeline{display:flex;gap:6px;margin-bottom:12px}.shot{flex:1;border:1px solid #2b4562;background:#10213a;color:#c9d9e9;padding:9px 4px;border-radius:7px;font-size:10px;cursor:pointer}.shot.active{border-color:var(--pink);color:#fff;background:#372342}
-.actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.play{background:linear-gradient(100deg,#2b9de0,#8b68d8);border:0;color:#fff;padding:11px 18px;border-radius:30px;font-weight:800;cursor:pointer}.note{font-size:11px;color:#9fb3c9;line-height:1.45}.status{margin-left:auto;color:#8fcfff;font-size:10px;letter-spacing:.13em}
+.actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.audio-pick{display:inline-block;margin:5px 6px;padding:7px 10px;border:1px solid #5d8eb5;border-radius:20px;color:#d9efff;cursor:pointer;font-weight:bold}.audio-pick input{max-width:175px;color:#b9d2e8;font-size:10px}#audioName{color:#ffb8dc;font-size:10px;margin-left:5px}#soundtrack{display:none}.play{background:linear-gradient(100deg,#2b9de0,#8b68d8);border:0;color:#fff;padding:11px 18px;border-radius:30px;font-weight:800;cursor:pointer}.note{font-size:11px;color:#9fb3c9;line-height:1.45}.status{margin-left:auto;color:#8fcfff;font-size:10px;letter-spacing:.13em}
 @keyframes rain{to{background-position:-80px 100px}}@keyframes cloud{to{transform:translateX(8%)}}@keyframes citypan{0%,100%{transform:translateX(0)}50%{transform:translateX(-4%)}}@keyframes trainin{0%,10%{transform:translateX(-35%)}50%,72%{transform:translateX(40%)}100%{transform:translateX(115%)}}
 @keyframes lightning{0%,7%,9%,53%,55%,100%{opacity:0}8%,54%{opacity:.45}}
 @media(max-width:560px){body{padding:0}.shell{border-radius:0;border-left:0;border-right:0}.stage{aspect-ratio:4/3}.timeline{display:grid;grid-template-columns:repeat(3,1fr)}.shot{font-size:9px;padding:8px 2px}.caption{max-width:83%}.train{width:75%;height:18%}.status{margin-left:0}}
@@ -60,7 +60,7 @@ body{display:grid;place-items:center;padding:14px}
 <nav class="timeline" aria-label="Cinematic shots">
 <button class="shot active" data-shot="0">01 · JOURNEY</button><button class="shot" data-shot="1">02 · SKYLINE</button><button class="shot" data-shot="2">03 · 360° PASS</button><button class="shot" data-shot="3">04 · STATION</button><button class="shot" data-shot="4">05 · ARRIVAL</button><button class="shot" data-shot="5">06 · NEXT</button>
 </nav>
-<div class="actions"><button class="play" id="play">▶ PLAY SEQUENCE</button><div class="note">Soundtrack cue: “Every Day I’m Hustlin’” — Rick Ross. Commercial/game use requires music licensing; audio is not embedded in this preview.</div><div class="status" id="status">VISUAL PREVIEW · NO GAMEPLAY</div></div>
+<div class="actions"><button class="play" id="play">▶ PLAY SEQUENCE</button><div class="note">Rick Ross soundtrack (private local preview): <label class="audio-pick">CHOOSE AUDIO FILE <input id="musicFile" type="file" accept="audio/*"></label><span id="audioName">No audio selected yet</span><audio id="soundtrack" preload="none"></audio><br>Choose a music file stored on this tablet. You can replace it later; the audio stays local and is not uploaded to GitHub.</div><div class="status" id="status">VISUAL PREVIEW · NO GAMEPLAY</div></div>
 </section>
 </main>
 <script>
@@ -73,10 +73,15 @@ const shots=[
 ["SHOT 06 / THE STORY BEGINS","FRANK MASERATI<br>HAS ARRIVED.","Next: Frank and his companion step into the crowded station, then make their way toward Bella Rose at the exit."]
 ];
 let current=0,timer=null;
+const soundtrack=document.getElementById("soundtrack");
+const musicFile=document.getElementById("musicFile");
+const audioName=document.getElementById("audioName");
+let localAudioUrl=null;
+musicFile.addEventListener("change",()=>{const file=musicFile.files&&musicFile.files[0];if(!file)return;if(localAudioUrl)URL.revokeObjectURL(localAudioUrl);localAudioUrl=URL.createObjectURL(file);soundtrack.src=localAudioUrl;soundtrack.load();audioName.textContent="Selected: "+file.name;});
 const buttons=[...document.querySelectorAll(".shot")];
 function show(i){current=i;document.getElementById("eyebrow").textContent=shots[i][0];document.getElementById("headline").innerHTML=shots[i][1];document.getElementById("subline").textContent=shots[i][2];buttons.forEach((b,n)=>b.classList.toggle("active",n===i));document.getElementById("status").textContent="SHOT "+String(i+1).padStart(2,"0")+" / 06 · VISUAL PREVIEW";}
 buttons.forEach(b=>b.addEventListener("click",()=>{stop();show(Number(b.dataset.shot));}));
-function stop(){if(timer)clearInterval(timer);timer=null;document.getElementById("play").textContent="▶ PLAY SEQUENCE";}
-document.getElementById("play").addEventListener("click",()=>{if(timer){stop();return;}if(current===5)show(0);document.getElementById("play").textContent="Ⅱ PAUSE";timer=setInterval(()=>{if(current>=5){stop();return;}show(current+1);},4200);});
+function stop(){if(timer)clearInterval(timer);timer=null;soundtrack.pause();document.getElementById("play").textContent="▶ PLAY SEQUENCE";}
+document.getElementById("play").addEventListener("click",()=>{if(timer){stop();return;}if(current===5)show(0);if(soundtrack.src){soundtrack.currentTime=0;soundtrack.play().catch(()=>{audioName.textContent="Tap play again to start audio";});}document.getElementById("play").textContent="Ⅱ PAUSE";timer=setInterval(()=>{if(current>=5){stop();return;}show(current+1);},4200);});
 </script>
 </body></html>
