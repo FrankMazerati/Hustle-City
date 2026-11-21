@@ -90,7 +90,7 @@ class ProviderTests(unittest.TestCase):
             "GEMINI_API_KEY": "gemini-key", "GEMINI_MODEL": "gemini-test",
             "OPENROUTER_API_KEY": "router-key", "OPENROUTER_MODEL": "free/test"
         }, urlopen=fake_open)
-        with self.assertRaisesRegex(ProviderUnavailable, "no paid fallback"):
+        with self.assertRaisesRegex(ProviderUnavailable, "queued"):
             client.chat("hosted:auto", [{"role": "user", "content": "hello"}])
 
 
