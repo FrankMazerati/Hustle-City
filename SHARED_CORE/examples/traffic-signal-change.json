@@ -1,0 +1,8 @@
+{
+  "change_id": "demo-traffic-signal-timing-001",
+  "summary": "Proposed change to downtown intersection signal phase timing.",
+  "changed_systems": [
+    "traffic.signals"
+  ],
+  "max_dependency_depth": 1
+}
