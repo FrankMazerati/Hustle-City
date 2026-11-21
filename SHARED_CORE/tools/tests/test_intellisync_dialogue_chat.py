@@ -49,6 +49,10 @@ class DialogueChatTests(unittest.TestCase):
         self.session["participants"] = [
             p for p in self.session["participants"] if p["speaker_id"] != MODULE.COMPANION_ID
         ]
+        self.session["turns"] = [
+            turn for turn in self.session["turns"] if turn["speaker_id"] != MODULE.COMPANION_ID
+        ]
+        self.session["turn_index"] = len(self.session["turns"]) - 1
         with self.assertRaisesRegex(ValueError, "outside this session"):
             MODULE.process_player_turn(self.session, "Yeah, let's go")
 
