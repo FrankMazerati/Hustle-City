@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "operating_mode": "safe_unactivated",
+  "ollama": {
+    "endpoint": "http://127.0.0.1:11434",
+    "timeout_seconds": 180
+  },
+  "models": {},
+  "qa": {
+    "minimum_auto_approval_confidence": 0.85,
+    "require_nonempty_checks": true,
+    "require_feedback": true,
+    "low_confidence_action": "hold_for_human_review"
+  },
+  "scheduler": {
+    "max_workers": 1,
+    "recovery_interval_seconds": 2,
+    "enabled": false
+  },
+  "notes": [
+    "No model is assigned by default. Configure model IDs after the device endpoint and model inventory are verified.",
+    "Known previously installed local models are not automatically assigned to roles.",
+    "QA supervisor ownership is configured in assembly_line.json and must not be guessed.",
+    "The scheduler is disabled until all model and QA mappings are explicitly configured.",
+    "No paid provider fallback is implemented in this service."
+  ]
+}
