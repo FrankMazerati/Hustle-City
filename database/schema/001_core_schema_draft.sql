@@ -1,10 +1,21 @@
--- Hustle City core schema draft.
--- Review only: do not apply until the correct Supabase project is confirmed
--- and the creator approves the schema. Generate the real migration with the
--- Supabase CLI so migration history is tracked correctly.
+-- HISTORICAL REVIEW DRAFT — NOT APPROVED FOR DEPLOYMENT.
+-- Target Supabase project has since been confirmed as Hustle City Shuffle Club,
+-- but this SQL still encodes unapproved geography assumptions:
+--   * master_grid_x/master_grid_y constrained to 1..7
+--   * city_blocks constrained to a 5x5 subdivision
+-- The creator has confirmed six central district boxes and that all surrounding
+-- boxes are neighborhoods, but the total map dimensions, neighborhood count,
+-- and block subdivision remain unresolved. Remove or redesign those constraints
+-- after reconciling the original map and conversation archive.
+--
+-- Do not apply this monolithic draft as-is. Use it only as historical model
+-- material while creating small, reviewed, ordered Supabase migrations.
+-- No schema has been deployed from this file.
 --
 -- RLS is enabled on every application table. No broad client policies are
--- created here; access remains deny-by-default pending policy design.
+-- created here; access remains deny-by-default pending a table-specific policy
+-- and least-privilege grant design. RLS without policies is not a finished
+-- production access model.
 
 create table if not exists public.profiles (
   id uuid primary key references auth.users(id) on delete cascade,
