@@ -175,3 +175,50 @@ The Unreal Engine 5 implementation is primary. Shared route, station, and author
 - [ ] The Frank Maserati opening arrival is assigned to HIM.
 - [ ] Route count, line names, colors, stations, and schedules remain open until approved.
 - [ ] Rail, road, pedestrian, and waterfront corridors are coordinated in the master map.
+
+
+
+## 11. Visual fidelity and real-world infrastructure standard
+
+**Creator requirement:** All HIM and HCTA trains, stations, platforms, tunnels, elevated structures, rail yards, entrances, concourses, signage, and surrounding environments must meet a premium, realistic, high-quality 3D standard. They must read as believable modern urban infrastructure, not generic low-detail game props.
+
+### 11.1 Reference and design method
+- Use carefully selected real-world railway and urban-architecture references to study engineering logic, proportions, passenger circulation, construction methods, materials, signage systems, lighting, accessibility, and maintenance infrastructure.
+- References inform realism; Hustle City must retain original station names, architecture, logos, route identity, and fictional geography. Do not copy protected branding or reproduce a real station one-for-one.
+- Create a distinct architectural identity for major terminals, district stations, neighborhood stations, elevated stops, subway stations, and surface platforms while maintaining a coherent HCTA/HIM design language.
+- No train or station concept image is approved as a final asset merely because it appeared in a planning conversation.
+
+### 11.2 Modeling and material requirements
+- Believable full-scale proportions, track gauge consistency, platform-to-vehicle clearances, door positions, bogies/wheel assemblies, couplers where visible, undercarriage, roof equipment, windows, lighting, safety markings, and operational details.
+- Physically based materials with convincing response: brushed and painted metals, stainless steel, glass, concrete, stone, brick, asphalt, ceramic tile, rubber, weather seals, plastics, acoustic panels, tactile paving, and weathered surfaces.
+- High-quality geometry and silhouettes at expected gameplay viewing distances. Use detailed hero assets for close inspection and optimized LODs/impostors only at appropriate distances; optimization must not make close-up assets visibly crude.
+- High-resolution texture work with consistent texel density, clean UVs, normal/roughness/metallic/ambient-occlusion intent, and appropriate decals. Use 4K-class source textures for hero assets where justified, with efficient lower-resolution variants for secondary assets; do not make 8K real-time textures a blanket requirement.
+- Realistic glass, interior visibility, reflections, emissive lighting, grime, rain streaks, puddles, track wear, wheel/rail contact detail, and environmental aging where appropriate.
+- No stretched textures, blurry signage, visibly pixelated close-up surfaces, floating rails, unsupported track geometry, repeated obvious tiling, or toy-like vehicle proportions.
+
+### 11.3 Station architecture and public realm
+- Major HIM terminal: architecturally significant city landmark with a convincing exterior, large-scale concourse, train hall/platform arrangement, passenger circulation, ticketing or game-equivalent service areas, luggage/arrival logic, accessible routes, clear wayfinding, retail/amenities where appropriate, and direct HCTA interchange.
+- HCTA district stations: designed for urban passenger throughput, with coherent entrances, platform canopies or enclosed structures as appropriate, fare/access-control concept if used, signage, lighting, vertical circulation, emergency exits, and street integration.
+- Underground stations: believable tunnel bores/cut-and-cover spaces, structural columns, waterproofing/drainage cues, ventilation, emergency egress, lighting, platform edge safety, tactile warning surfaces, service rooms, and coherent transitions to surface entrances.
+- Elevated stations: credible piers, beams, spans, vibration/noise mitigation where appropriate, drainage, maintenance access, structural supports, stair/elevator connections, and believable integration with streets and adjacent buildings.
+- Street-level stations: clear right-of-way, safe crossings, platform edges, signals, traffic coordination, pedestrian access, curb and sidewalk integration, and realistic separation from road traffic where required.
+- Neighborhood stations must feel like designed civic infrastructure, not a small generic shelter pasted beside a track. Their scale may vary, but materials, access, signage, safety, and architectural finish remain intentional.
+
+### 11.4 Lighting, atmosphere, and environmental integration
+- Day/night lighting must be physically plausible and legible; interior and exterior lighting should work together without flat, overbright, or uniformly glowing surfaces.
+- Stations and trains must respond convincingly to rain, wet surfaces, humid haze, sun angle, cloud cover, nighttime city light, and seasonal environment profiles.
+- Ambient context should include believable street frontage, adjacent buildings, sidewalks, roads, bridges, retaining walls, utilities, landscaping, drainage, service access, and pedestrian activity.
+- Audio design should eventually support rail rumble, wheel squeal where appropriate, brakes, door chimes, ventilation, announcements, crowd ambience, traffic, and environment-specific reverberation.
+
+### 11.5 Quality gates — visual and functional
+A rail asset or station is not accepted as production-ready until it passes:
+1. **Reference review:** documented real-world reference study and original Hustle City design approval.
+2. **Scale review:** measured dimensions, platform heights, vehicle clearances, track geometry, stairs, doors, and accessibility paths are coherent.
+3. **Material review:** PBR response, texture resolution, UV quality, signage sharpness, weathering, and close-up inspection pass.
+4. **Lighting review:** day, night, interior, exterior, and wet-weather conditions remain credible.
+5. **Context review:** asset integrates into a complete urban environment and does not float, clip, or terminate implausibly.
+6. **Performance review:** LODs, instancing, streaming, collision, draw calls, and texture budgets are appropriate for the target hardware and viewing distance.
+7. **Gameplay review:** boarding, alighting, passenger circulation, route access, emergency egress, and safety systems function as designed.
+8. **Creator approval:** visual reference or rendered review is explicitly approved before an asset is called final.
+
+**Rejection criteria:** cartoon/toy styling, generic placeholder stations presented as finished work, low-poly close-up geometry, blurry or stretched textures, inaccurate train proportions, implausible structural supports, incomplete platforms, nonsensical passenger paths, or unconvincing integration with the surrounding city.
