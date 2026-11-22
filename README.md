@@ -47,3 +47,6 @@ The world/transit foundation branch contains an interactive Babylon.js browser b
 
 ## Free 99 asset acquisition
 The $0-only, editable/reconfigurable asset and template shortlist, license gates, creator-credit register requirements, and acquisition checklist are maintained in [planning/FREE_99_RESOURCE_CATALOG.md](planning/FREE_99_RESOURCE_CATALOG.md). Catalog entries are research candidates until downloaded, imported, technically validated, and approved; no third-party binaries are implied to be present in this repository.
+
+## Free 99 modular implementation
+The reusable module architecture, district/transit/landmark assembly formulas, UE content conventions, transformation pipeline and QA gates are documented in [world/FREE_99_MODULAR_IMPLEMENTATION_BLUEPRINT.md](world/FREE_99_MODULAR_IMPLEMENTATION_BLUEPRINT.md). The research shortlist and license/creator-credit register are in [planning/FREE_99_RESOURCE_CATALOG.md](planning/FREE_99_RESOURCE_CATALOG.md). A local staging-folder inventory and SHA-256 provenance scanner is provided at [tools/free99_asset_intake.py](tools/free99_asset_intake.py), with [tools/asset_manifest.template.json](tools/asset_manifest.template.json). These documents and tools do not imply third-party binaries have been downloaded or imported.
