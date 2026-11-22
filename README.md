@@ -5,6 +5,9 @@ Hustle City is a cinematic, realistic 3D social-world/city-life game built prima
 ## Start here
 - [Project vision and game scope](docs/PROJECT_VISION.md)
 - [World identity bible — original Chicago/Florida-inspired scenery](world/WORLD_IDENTITY_BIBLE.md)
+- [Master geography blueprint](world/MASTER_GEOGRAPHY_BLUEPRINT.md)
+- [Transportation network specification — HIM and HCTA](world/TRANSPORTATION_NETWORK_SPEC.md)
+- [World foundation workplan](planning/WORLD_FOUNDATION_WORKPLAN.md)
 - [Portable engine architecture](architecture/PORTABILITY_CONTRACT.md)
 - [Decision log and unresolved items](docs/DECISION_LOG.md)
 - [Database foundation and deployment status](database/README.md)

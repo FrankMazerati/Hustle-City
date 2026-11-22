@@ -12,10 +12,14 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - Car-focused crew convoy visual direction; wet reflective streets where weather and scene conditions support them.
 - Automated destination-based vehicle travel is preferred over manual driving. Players can travel as driver/passenger and travel together in crew convoys.
 - City should feel alive with NPCs, traffic, transit and persistent automated events.
-- Chicago-style elevated rail and underground subway are important.
+- Local rail is operated by the **Hustle City Transit Authority (HCTA)** and connects downtown, all six central districts, surrounding neighborhoods, and outer areas.
+- HCTA is intended to support elevated rail, underground rail, and street-level rail. Individual route count, names, colors, and operating environments remain to be finalized.
+- The **Hustle International Metro (HIM)** is a separate intercity/regional passenger railway connecting Hustle City with other cities and regions, with Chicago, Atlanta, New York, and Florida destinations given as examples.
+- Every designated outer neighborhood must have HCTA station access. Neighborhoods must be able to reach HIM through a transfer; direct HIM service at every neighborhood is not assumed.
+- The opening passenger-train arrival of Frank Maserati and his female companion belongs to HIM.
 - NPCs must answer from authoritative game state, not hallucinate events.
 - No player death; implement safe prevention/detection/recovery.
-- Master grid 7x7; six central boxes and 43 potential outer neighborhood boxes; each outer box planned as 5x5 blocks.
+- Six central district boxes are established, with all surrounding boxes reserved for neighborhoods. An earlier repository plan records a 7x7 / 43-outer-box / 5x5-block capacity model; exact count, dimensions, and block subdivision require reconciliation with the creator's original map references before being treated as final.
 - Persistent Player Shell is separate from individual world environments.
 - Basic transport must not consume premium Diamonds.
 - Neighborhood ownership/founding, crew leadership, property/business ownership and residency are separate concepts.
@@ -32,7 +36,9 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 ## Unresolved
 - Final city name and exact geography.
 - Airport name: We Fly High International Airport vs We Fly Sky International Airport.
-- Final district boundaries and Fashion/Swagger District name.
+- Final district boundaries, exact district positions, and Fashion/Swagger District name.
+- Exact outer neighborhood box count, arrangement, and block dimensions pending original-map review.
+- HIM/HCTA terminal locations, route count, route names/colors, line alignments, station positions, and service patterns.
 - Casino placement.
 - Final list of five interactive neighborhood locations.
 - Population milestones for neighborhood expansion.
