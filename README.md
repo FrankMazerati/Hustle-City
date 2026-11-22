@@ -44,3 +44,6 @@ Unreal Engine 5 is the primary production engine. Unity 6 is the secondary compa
 
 ## Current status
 The world/transit foundation branch contains an interactive Babylon.js browser blockout with separate HIM, HCTA, Fashion / Swagger District, and Diamond District / Hustle Towers views. The 100-floor Hustle Towers specification locates the tower in the Diamond District. The browser preview is source code only until hosted/deployed; no public preview URL has been verified. The scene is an early geometry blockout, not final high-fidelity art or a playable game. No Unreal project has been compiled. Models remain unassigned, provider secrets are not confirmed, and no live agent cycle has been run from this repository. An initial database model and SQL schema draft exist, but no schema has been applied to Supabase.
+
+## Free 99 asset acquisition
+The $0-only, editable/reconfigurable asset and template shortlist, license gates, creator-credit register requirements, and acquisition checklist are maintained in [planning/FREE_99_RESOURCE_CATALOG.md](planning/FREE_99_RESOURCE_CATALOG.md). Catalog entries are research candidates until downloaded, imported, technically validated, and approved; no third-party binaries are implied to be present in this repository.
