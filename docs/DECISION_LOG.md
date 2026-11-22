@@ -25,9 +25,11 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - Neighborhood ownership/founding, crew leadership, property/business ownership and residency are separate concepts.
 - Neighborhoods can be visually complete/ambient while only a small number of locations are fully interactive at launch.
 - Existing SAM-led 10-person named Hustle City cohort and 48-role specialist catalog remain the canonical agent system; engine-specific role mappings must reflect Unreal primary / Unity secondary.
-- **Creator-directed Fashion Hub landmark:** Hustle Towers is specified as a 100-floor vertical landmark in the Fashion Hub. Its design must rise straight up and avoid horizontal resort/campus sprawl.
-- The requested Fashion Hub program includes malls, multiple casino areas, multiple food concierge lounges, multiple welcoming help desks, the Heavenly Hallway, and “kicking areas” (wording preserved; exact meaning unconfirmed).
-- “Caesar's Palace” is a creator-specified name in the Fashion Hub request; its exact relationship to Hustle Towers is not yet established.
+- **District separation correction (creator-confirmed):** The Fashion District / Swagger District and Diamond District are separate central districts. They must not be conflated.
+- **Hustle Towers location (creator-confirmed):** Hustle Towers is in the **Diamond District**, not the Fashion / Swagger District.
+- **Hustle Towers design (creator-confirmed):** 100 floors, vertical-first, rising straight up rather than sprawling horizontally.
+- The Hustle Towers / Diamond District development brief includes malls, multiple casino areas, multiple food concierge lounges, multiple welcoming help desks, the Heavenly Hallway, and “kicking areas” (exact meaning unconfirmed).
+- “Caesar's Palace” is a creator-specified name in the Hustle Towers context; its exact architectural relationship to the tower remains unresolved.
 - A mobile browser-compatible development preview is a required companion review target alongside UE5 production. Browser preview is not a replacement for UE5.
 
 ## Working direction
@@ -41,15 +43,15 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 ## Unresolved
 - Final city name and exact geography.
 - Airport name: We Fly High International Airport vs We Fly Sky International Airport.
-- Final district boundaries, exact district positions, and Fashion/Swagger District name.
+- Final boundaries, exact positions, and Fashion / Swagger District's distinct identity.
+- Exact Diamond District boundary and location within the original master map.
 - Exact outer neighborhood box count, arrangement, and block dimensions pending original-map review.
 - HIM/HCTA terminal locations, route count, route names/colors, line alignments, station positions, and service patterns.
-- Exact Fashion Hub location within the original master map.
-- Whether Caesar's Palace is a casino/venue inside Hustle Towers, an attached vertical component, or a separate destination.
 - Meaning and gameplay purpose of “kicking areas”.
 - Exact floor-by-floor assignment and counts for mall areas, casino areas, food concierge lounges, and welcoming help desks.
 - Heavenly Hallway's visual identity, exact location, and gameplay function.
-- Casino placement and operating/gameplay rules.
+- Whether Caesar's Palace is inside Hustle Towers, attached to it, or a separate Diamond District destination.
+- Fashion / Swagger District's visual identity, venues, and gameplay purpose.
 - Final list of five interactive neighborhood locations.
 - Population milestones for neighborhood expansion.
 - Backend/cloud/database/auth vendors and architecture details.
