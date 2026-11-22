@@ -17,9 +17,9 @@
       "id": "HC-ALL-AGENTS",
       "members": [
         "Trinity",
-        "QA-1",
-        "QA-2",
-        "QA-3",
+        "qa-1",
+        "qa-2",
+        "qa-3",
         "atlas",
         "brick",
         "blueprint",
@@ -104,7 +104,7 @@
     {
       "id": "HC-QA-INTAKE",
       "members": [
-        "QA-1"
+        "qa-1"
       ],
       "permissions": [
         "read_all_submitted_artifacts",
@@ -118,7 +118,7 @@
     {
       "id": "HC-QA-ROUTING",
       "members": [
-        "QA-2"
+        "qa-2"
       ],
       "permissions": [
         "read_QA1_reports",
@@ -131,7 +131,7 @@
     {
       "id": "HC-QA-VERIFICATION",
       "members": [
-        "QA-3"
+        "qa-3"
       ],
       "permissions": [
         "read_original_issue_and_fix",
