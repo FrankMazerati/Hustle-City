@@ -50,3 +50,6 @@ The $0-only, editable/reconfigurable asset and template shortlist, license gates
 
 ## Free 99 modular implementation
 The reusable module architecture, district/transit/landmark assembly formulas, UE content conventions, transformation pipeline and QA gates are documented in [world/FREE_99_MODULAR_IMPLEMENTATION_BLUEPRINT.md](world/FREE_99_MODULAR_IMPLEMENTATION_BLUEPRINT.md). The research shortlist and license/creator-credit register are in [planning/FREE_99_RESOURCE_CATALOG.md](planning/FREE_99_RESOURCE_CATALOG.md). A local staging-folder inventory and SHA-256 provenance scanner is provided at [tools/free99_asset_intake.py](tools/free99_asset_intake.py), with [tools/asset_manifest.template.json](tools/asset_manifest.template.json). These documents and tools do not imply third-party binaries have been downloaded or imported.
+
+## Living city simulation systems
+The NPC life simulation, Mass AI/ZoneGraph crowd and traffic architecture, vehicle rules, HIM/HCTA operating protocols, event director, safety/boundary rules, persistence tiers and acceptance tests are specified in [gameplay/LIVING_CITY_SIMULATION_NPC_TRAFFIC_EVENTS_SAFETY_SPEC.md](gameplay/LIVING_CITY_SIMULATION_NPC_TRAFFIC_EVENTS_SAFETY_SPEC.md). This is an authored specification, not a claim that these systems are already implemented or running.
