@@ -8,14 +8,15 @@ This log records identifiable work sessions and checkpoints across Hustle City w
 - **Start date:** 2026-11-22
 - **Start time:** Approximately 14:49 CST (estimated from the beginning of this work block)
 - **End date:** 2026-11-22
-- **End time:** 14:55:21 CST (time checkpoint)
-- **Recorded span:** Approximately 6 minutes 21 seconds; start time estimated, so duration is an estimate rather than verified continuous work.
+- **End time:** 14:55:59 CST (time checkpoint)
+- **Recorded span:** Approximately 6 minutes 59 seconds (about 0.12 hours); start time estimated, so duration is an estimate rather than verified continuous work.
 - **Conversation intent:** User requested activation of the AI workforce, explicit local model assignments, QA supervisor roles, continuous-worker behavior, cross-department collaboration and Active Directory-style group policies, while consolidating existing pull requests into one permanent PR.
 - **Completed and verified:**
   - Consolidated PR #8 Unreal foundation and PR #10 IntelliSync work into PR #11's branch tree and commit ancestry.
   - Verified PR #11 contains both original branch heads as ancestors; both comparisons report the PR #11 head ahead with zero commits behind.
   - Updated PR #11 title and description to identify it as the single permanent foundation.
   - Closed PR #8 and PR #10 as superseded by PR #11, with explanatory comments linking to PR #11.
+  - Closed PR #5 without incorporation because it proposed Godot, which is not an approved Hustle City engine; confirmed Unreal Engine 5 primary / Unity 6 secondary.
   - No merge into `main`.
   - Added explicit Ollama model assignments for 12 specialists and three QA supervisors.
   - Configured one active local model call at a time for the shared constrained device.
