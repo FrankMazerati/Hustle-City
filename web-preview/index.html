@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#10131b">
+  <title>Hustle City — Interactive World Preview</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://cdn.babylonjs.com/babylon.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="mark">HC</span><div><strong>HUSTLE CITY</strong><small>INTERACTIVE WORLD PREVIEW</small></div></div>
+    <span class="status">EARLY BLOCKOUT</span>
+  </header>
+  <main>
+    <section class="intro">
+      <p class="eyebrow">CREATOR REVIEW BUILD · MOBILE WEB</p>
+      <h1>See the city take shape.</h1>
+      <p>Explore the two rail authorities and the Fashion Hub's 100-floor vertical landmark. This is an early geometry preview, not final production art.</p>
+    </section>
+    <nav class="view-tabs" aria-label="Preview views">
+      <button class="active" data-view="him">HIM</button>
+      <button data-view="hcta">HCTA</button>
+      <button data-view="fashion">FASHION HUB</button>
+    </nav>
+    <section class="viewer-wrap">
+      <div class="viewer-head"><div><span class="eyebrow" id="view-kicker">INTERCITY RAIL</span><h2 id="view-title">Hustle International Metro</h2></div><span class="live-dot">3D SCENE</span></div>
+      <div class="canvas-wrap"><canvas id="renderCanvas" aria-label="Interactive 3D Hustle City preview"></canvas><div id="loading" class="loading">Preparing 3D scene…</div></div>
+      <div class="viewer-controls"><button id="resetCamera" class="secondary">Reset view</button><span>Drag to orbit · pinch to zoom</span></div>
+    </section>
+    <section class="details">
+      <h2 id="detail-heading">Intercity arrival and departure</h2>
+      <p id="detail-copy">HIM connects Hustle City with other cities and regions. Its terminal is the arrival point for Frank Maserati and his companion. Exact city routes and station locations remain unapproved.</p>
+      <div id="feature-list" class="feature-list"></div>
+    </section>
+    <section class="notice"><strong>Design status</strong><p>HIM and HCTA are separate rail systems. The Fashion Hub is shown as a conceptual preview zone, not a finalized position on the master city map. Geometry, route alignments, floor assignments, and architectural dimensions still require review.</p></section>
+    <footer>HUSTLE CITY · CREATOR-LED DEVELOPMENT · UE5 PRIMARY / UNITY 6 SECONDARY</footer>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
