@@ -7,7 +7,7 @@
   },
   "qa_supervisors": [
     {
-      "id": "QA-1",
+      "id": "qa-1",
       "title": "Quality Intake & Evidence Analyst",
       "scope": "specialist_slots_01_to_04",
       "specialist_slots": [
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "id": "QA-2",
+      "id": "qa-2",
       "title": "Quality Triage & Routing Coordinator",
       "scope": "specialist_slots_05_to_08",
       "specialist_slots": [
@@ -42,7 +42,7 @@
       ]
     },
     {
-      "id": "QA-3",
+      "id": "qa-3",
       "title": "Independent Verification & Release Analyst",
       "scope": "specialist_slots_09_to_12",
       "specialist_slots": [
