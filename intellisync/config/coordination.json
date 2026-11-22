@@ -1,61 +1,89 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "coordinator": {
     "id": "Trinity",
     "role": "overall_coordinator",
-    "authority": "Coordinates assignments, dependencies, workload, handoffs, escalations and QA oversight. Does not silently change creator-approved canon or roster."
+    "authority": "Coordinates assignments, dependencies, workload, handoffs, escalations and QA oversight. Audits QA supervisors; does not silently change creator-approved canon or roster."
   },
   "qa_supervisors": [
     {
       "id": "QA-1",
-      "scope": "production_specialist_slots_01_to_04",
+      "title": "Quality Intake & Evidence Analyst",
+      "scope": "specialist_slots_01_to_04",
       "specialist_slots": [
-        "specialist-slot-01",
-        "specialist-slot-02",
-        "specialist-slot-03",
-        "specialist-slot-04"
+        "atlas",
+        "brick",
+        "blueprint",
+        "route"
+      ],
+      "responsibilities": [
+        "Identify defects, bugs, omissions, visual/integration issues and requirement mismatches",
+        "Document reproducible evidence, severity, expected versus actual behavior, affected systems and acceptance criteria",
+        "Maintain a clear issue record; do not assign production work directly or approve own findings as fixed",
+        "Send complete issue record to QA-2"
       ]
     },
     {
       "id": "QA-2",
-      "scope": "production_specialist_slots_05_to_08",
+      "title": "Quality Triage & Routing Coordinator",
+      "scope": "specialist_slots_05_to_08",
       "specialist_slots": [
-        "specialist-slot-05",
-        "specialist-slot-06",
-        "specialist-slot-07",
-        "specialist-slot-08"
+        "vibe",
+        "stitch",
+        "motion",
+        "torque"
+      ],
+      "responsibilities": [
+        "Review QA-1 issue reports and clarify missing evidence",
+        "Identify the responsible production department and agent",
+        "Assign priority, dependencies, repair scope and acceptance criteria",
+        "Track assignment and route corrected work to QA-3",
+        "Re-route when ownership or dependency analysis changes"
       ]
     },
     {
       "id": "QA-3",
-      "scope": "production_specialist_slots_09_to_12",
+      "title": "Independent Verification & Release Analyst",
+      "scope": "specialist_slots_09_to_12",
       "specialist_slots": [
-        "specialist-slot-09",
-        "specialist-slot-10",
-        "specialist-slot-11",
-        "specialist-slot-12"
+        "tracks",
+        "ace",
+        "spark",
+        "lockdown"
+      ],
+      "responsibilities": [
+        "Independently test the corrected artifact against the original issue and acceptance criteria",
+        "Record evidence and pass/fail decision; never approve unsupported claims",
+        "On failure, route directly to the responsible production agent for another correction cycle",
+        "Return to QA-1 when the defect definition, evidence or scope needs reassessment",
+        "Release only verified versions and keep failed versions out of downstream production"
       ]
     }
   ],
   "production_specialists": {
     "count": 12,
-    "slots": "specialist-slot-01 through specialist-slot-12",
-    "status": "role-to-slot mapping pending creator-approved final roster"
+    "slots": "approved 12-agent roster",
+    "mapping_status": "mapped in agents/hustle-city-core-roster.json"
   },
   "communications": {
     "department_feeds": [
-      "QA-1",
-      "QA-2",
-      "QA-3"
+      "city-fabric-infrastructure",
+      "people-appearance",
+      "vehicles-transportation",
+      "gameplay-social"
     ],
     "shared_team_feed": "team",
+    "cross_department_feed": "cross-department",
     "command_feed": "command",
     "direct_messages": true,
-    "cross_department_contact": "allowed"
+    "cross_department_contact": "allowed",
+    "qa_contact": "all specialists may contact any QA supervisor or Trinity"
   },
   "controls": {
     "qa_may_not_self_approve": true,
     "qa_deliverables_require_independent_review": true,
-    "creator_approval_required_for_canon_or_irreversible_changes": true
+    "creator_approval_required_for_canon_or_irreversible_changes": true,
+    "least_privilege": true,
+    "deny_by_default": true
   }
 }
