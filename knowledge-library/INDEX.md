@@ -14,6 +14,7 @@
 
 ## Frameworks
 - [Framework catalog](frameworks/README.md)
+- [Agent knowledge protocol](AGENT_KNOWLEDGE_PROTOCOL.md)
 - [Transportation framework](frameworks/TRANSPORTATION_FRAMEWORK.md)
 - [Building and environment framework](frameworks/BUILDING_ENVIRONMENT_FRAMEWORK.md)
 - [Sims / MPC / NPC simulation framework](frameworks/SIMS_MPC_NPC_FRAMEWORK.md)
