@@ -14,7 +14,7 @@
         "atlas",
         "brick",
         "blueprint",
-        "route"
+        "vibe"
       ],
       "responsibilities": [
         "Identify defects, bugs, omissions, visual/integration issues and requirement mismatches",
@@ -28,10 +28,10 @@
       "title": "Quality Triage & Routing Coordinator",
       "scope": "specialist_slots_05_to_08",
       "specialist_slots": [
-        "vibe",
         "stitch",
         "motion",
-        "torque"
+        "torque",
+        "tracks"
       ],
       "responsibilities": [
         "Review QA-1 issue reports and clarify missing evidence",
@@ -46,7 +46,7 @@
       "title": "Independent Verification & Release Analyst",
       "scope": "specialist_slots_09_to_12",
       "specialist_slots": [
-        "tracks",
+        "route",
         "ace",
         "spark",
         "lockdown"
