@@ -1,0 +1,61 @@
+{
+  "example_version": "1.0.0",
+  "description": "Illustrative sequence only: Frank and his unnamed companion encounter a public city event, then have a coherent NPC conversation about it. This is a contract fixture, not a running game feature.",
+  "story_characters": [
+    {"character_id": "character.frank_maserati", "display_name": "Frank Maserati"},
+    {"character_id": "character.frank_companion_temporary", "display_name": "Frank's Companion", "permanent_name_status": "undecided"}
+  ],
+  "player_context": {
+    "context_version": "1.0.0",
+    "player_id": "player.demo.001",
+    "session_id": "session.demo.001",
+    "presence": "online",
+    "location": {"world_id": "hustle-city", "area_id": "downtown-plaza", "district_id": "downtown", "position_ref": "position.demo.plaza"},
+    "party_id": "party.frank-arrival",
+    "crew_id": null,
+    "event_preferences": {"discovery_enabled": true, "categories": ["community", "music", "street-culture"], "quiet_mode": false},
+    "last_seen_at": "2026-11-20T17:00:00-06:00"
+  },
+  "world_event": {
+    "event_version": "1.0.0",
+    "event_id": "event.downtown.welcome-gathering.demo",
+    "category": "community",
+    "title": "Downtown Welcome Gathering",
+    "description": "A public gathering with music, local vendors, and neighborhood conversations.",
+    "status": "discoverable",
+    "location": {"world_id": "hustle-city", "area_id": "downtown-plaza", "venue_id": null},
+    "starts_at": "2026-11-20T17:15:00-06:00",
+    "ends_at": null,
+    "audience": {"visibility": "nearby", "eligible_player_ids": ["player.demo.001"], "capacity": 100},
+    "participants": [],
+    "outcome": null
+  },
+  "dialogue_session": {
+    "dialogue_version": "1.0.0",
+    "session_id": "dialogue.demo.001",
+    "status": "active",
+    "coordinator_id": "character-dialogue",
+    "participants": [
+      {"speaker_id": "player.demo.001", "speaker_type": "player", "display_name": "Player"},
+      {"speaker_id": "npc.vendor.014", "speaker_type": "npc", "display_name": "Local Vendor"},
+      {"speaker_id": "character.frank_companion_temporary", "speaker_type": "story_character", "display_name": "Frank's Companion"}
+    ],
+    "turn_index": 3,
+    "context": {
+      "location_ref": "downtown-plaza",
+      "event_ref": "event.downtown.welcome-gathering.demo",
+      "relationship_context_ref": "relationship.demo.player-vendor",
+      "topic": "downtown gathering",
+      "continuity_summary": "The vendor welcomed the group and mentioned the gathering nearby. The player asked what was happening."
+    },
+    "turns": [
+      {"turn_index": 0, "speaker_id": "npc.vendor.014", "text": "Y'all just get into town? Welcome. There's a whole lot happening over at the plaza.", "occurred_at": "2026-11-20T17:00:05-06:00", "intent": "greeting", "triggered_event_ref": null},
+      {"turn_index": 1, "speaker_id": "player.demo.001", "text": "What's going on over there?", "occurred_at": "2026-11-20T17:00:08-06:00", "intent": "ask_about_event", "triggered_event_ref": null},
+      {"turn_index": 2, "speaker_id": "npc.vendor.014", "text": "Welcome gathering. Music, vendors, good people. You should slide through if you're free.", "occurred_at": "2026-11-20T17:00:12-06:00", "intent": "invite_to_event", "triggered_event_ref": "event.downtown.welcome-gathering.demo"},
+      {"turn_index": 3, "speaker_id": "character.frank_companion_temporary", "text": "Sounds like we should check it out. We just got here, might as well see what's happening.", "occurred_at": "2026-11-20T17:00:16-06:00", "intent": "respond_to_invitation", "triggered_event_ref": "event.downtown.welcome-gathering.demo"}
+    ],
+    "interruption_reason": null,
+    "started_at": "2026-11-20T17:00:05-06:00",
+    "updated_at": "2026-11-20T17:00:16-06:00"
+  }
+}

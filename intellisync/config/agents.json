@@ -18,10 +18,47 @@
     "enabled": false
   },
   "notes": [
-    "No model is assigned by default. Configure model IDs after the device endpoint and model inventory are verified.",
-    "Known previously installed local models are not automatically assigned to roles.",
-    "QA supervisor ownership is configured in assembly_line.json and must not be guessed.",
-    "The scheduler is disabled until all model and QA mappings are explicitly configured.",
-    "No paid provider fallback is implemented in this service."
-  ]
+    "Hosted Gemini/OpenRouter adapters are integrated; API keys are read only from environment variables.",
+    "Both providers are disabled until model IDs, current free-tier quota, and data terms are verified.",
+    "Set GEMINI_MODEL and OPENROUTER_MODEL as GitHub Actions variables; never store API keys as variables.",
+    "The scheduler still refuses to start until all station QA owners are explicitly assigned.",
+    "Switch model_backend to ollama only when intentionally using the local Ollama adapter.",
+    "No paid provider fallback is permitted."
+  ],
+  "model_backend": "hosted",
+  "hosted_providers": {
+    "provider_chain": [
+      "gemini",
+      "openrouter"
+    ],
+    "providers": {
+      "gemini": {
+        "enabled": false,
+        "verified_free": false,
+        "quota_available": false,
+        "data_terms_approved": false,
+        "api_key_env": "GEMINI_API_KEY",
+        "model_env": "GEMINI_MODEL",
+        "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+        "timeout_seconds": 90
+      },
+      "openrouter": {
+        "enabled": false,
+        "verified_free": false,
+        "quota_available": false,
+        "data_terms_approved": false,
+        "api_key_env": "OPENROUTER_API_KEY",
+        "model_env": "OPENROUTER_MODEL",
+        "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+        "timeout_seconds": 90,
+        "max_output_tokens": 4096,
+        "app_name": "Hustle City IntelliSync"
+      }
+    },
+    "policy": {
+      "require_verified_zero_cost": true,
+      "on_quota_exhausted": "try_next_verified_free_provider_then_queue",
+      "paid_fallback": false
+    }
+  }
 }

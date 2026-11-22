@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hustle-city.invalid/schemas/world-event-lifecycle.schema.json",
+  "title": "Hustle City World Event Lifecycle",
+  "description": "Shared event state used for discovery, invitations, participation, updates, and outcomes.",
+  "type": "object",
+  "required": ["event_version", "event_id", "category", "title", "status", "location", "starts_at", "audience"],
+  "properties": {
+    "event_version": {"const": "1.0.0"},
+    "event_id": {"type": "string", "minLength": 1, "maxLength": 128},
+    "category": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1, "maxLength": 160},
+    "description": {"type": "string", "maxLength": 2000},
+    "status": {"type": "string", "enum": ["scheduled", "discoverable", "invited", "in_progress", "paused", "completed", "cancelled"]},
+    "location": {
+      "type": "object",
+      "required": ["world_id", "area_id"],
+      "properties": {
+        "world_id": {"type": "string"},
+        "area_id": {"type": "string"},
+        "venue_id": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "starts_at": {"type": "string", "format": "date-time"},
+    "ends_at": {"type": ["string", "null"], "format": "date-time"},
+    "audience": {
+      "type": "object",
+      "required": ["visibility"],
+      "properties": {
+        "visibility": {"type": "string", "enum": ["public", "nearby", "invitation_only", "party", "crew"]},
+        "eligible_player_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "capacity": {"type": ["integer", "null"], "minimum": 1}
+      },
+      "additionalProperties": false
+    },
+    "participants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["player_id", "state"],
+        "properties": {
+          "player_id": {"type": "string"},
+          "state": {"type": "string", "enum": ["invited", "accepted", "attending", "left", "completed"]},
+          "joined_at": {"type": ["string", "null"], "format": "date-time"}
+        },
+        "additionalProperties": false
+      },
+      "uniqueItems": true
+    },
+    "outcome": {"type": ["object", "null"], "description": "Authoritative result summary after event completion."}
+  },
+  "additionalProperties": false
+}

@@ -180,6 +180,29 @@ class IntelliSync:
                                {"station_id": station_id, "attempt": run["attempt"]})
             con.commit()
 
+    def release_claim(self, package_id: str, station_id: str, agent_id: str,
+                      reason: str, event_key: str | None = None) -> None:
+        """Return a claimed task to ready when a provider cannot accept work."""
+        with self._connect() as con:
+            con.execute("BEGIN IMMEDIATE")
+            run = con.execute(
+                """SELECT * FROM station_runs WHERE package_id=? AND station_id=?
+                AND status='in_progress' ORDER BY attempt DESC LIMIT 1""",
+                (package_id, station_id)
+            ).fetchone()
+            if not run or run["agent_id"] != agent_id:
+                con.rollback()
+                raise InvalidTransition("No in-progress task owned by this agent can be released.")
+            con.execute(
+                "UPDATE station_runs SET status='ready',started_at=NULL WHERE run_id=?",
+                (run["run_id"],)
+            )
+            con.execute("UPDATE packages SET status='ready',updated_at=? WHERE package_id=?",
+                        (utc_now(), package_id))
+            self._record_event(con, package_id, "station_claim_released", agent_id,
+                               {"station_id": station_id, "reason": reason}, event_key)
+            con.commit()
+
     def submit(self, package_id: str, station_id: str, agent_id: str,
                output_text: str, event_key: str | None = None) -> None:
         if not output_text.strip():
