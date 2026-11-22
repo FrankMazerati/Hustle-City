@@ -1,6 +1,17 @@
 # Database Questions and Deferred Design
 
-These questions must be settled before production policies, RPCs, or live deployment. They are intentionally not guessed in the core schema draft.
+These questions must be settled before production policies, RPCs, or live deployment. They are intentionally not guessed.
+
+## Geography and transit — resolve against recovered map/history
+- What are the exact dimensions and arrangement of the map boxes?
+- What are the final names, boundaries, and placements of the six central districts?
+- How many surrounding neighborhood boxes are present in the approved map?
+- Are neighborhoods subdivided into blocks? If so, what are the exact subdivision rules?
+- What is the approved district/neighborhood identity and placement for every box?
+- Where is the HIM central terminal/interchange, and are there other HIM interchanges?
+- What are the final HCTA lines, names/colors, modes, station positions, and interchange rules?
+- Confirm that every designated outer neighborhood has HCTA station access.
+- Which neighborhoods, if any, are direct HIM stops? Do not assume every neighborhood receives HIM service.
 
 ## Identity and progression
 - Can one account own multiple playable characters, or is launch limited to one?
@@ -33,7 +44,7 @@ These questions must be settled before production policies, RPCs, or live deploy
 - Define event recurrence, NPC ownership, admin controls, and participation rewards.
 - Define moderation, data retention, reporting, and privacy requirements.
 
-## Transport
+## Transport and vehicles
 - Define ownership and rental rules for cars, motorcycles, boats, and yachts.
 - Define driver/passenger permissions, crew convoy behavior, destination routing, cancellation, and safe recovery.
 - Detailed train lines/stations, schedules, buses, taxis, aircraft, and water transport need their own schema after interface contracts are approved.
@@ -42,4 +53,5 @@ These questions must be settled before production policies, RPCs, or live deploy
 - Define trusted server/Edge Function boundaries for wallet writes, purchases, inventory grants, ownership changes, table settlement, and event rewards.
 - Define and test exact RLS policies for anonymous, authenticated, and privileged roles.
 - Define Data API exposure and grants intentionally.
-- Confirm the actual Hustle City Supabase project and region before applying any schema.
+- Review the pre-existing `public.rls_auto_enable()` SECURITY DEFINER function warning in the confirmed Supabase project before production.
+- Confirm backups, data retention, moderation, account deletion, and privacy requirements.
