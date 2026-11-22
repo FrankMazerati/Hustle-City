@@ -224,6 +224,12 @@
         2,
         3,
         4
+      ],
+      "supervises_agents": [
+        "atlas",
+        "brick",
+        "blueprint",
+        "vibe"
       ]
     },
     {
@@ -235,6 +241,12 @@
         6,
         7,
         8
+      ],
+      "supervises_agents": [
+        "stitch",
+        "motion",
+        "torque",
+        "tracks"
       ]
     },
     {
@@ -246,6 +258,12 @@
         10,
         11,
         12
+      ],
+      "supervises_agents": [
+        "route",
+        "ace",
+        "spark",
+        "lockdown"
       ]
     }
   ],
