@@ -80,3 +80,17 @@ Unreal Engine 5 is the primary production runtime. Unity 6 is the secondary migr
 - VECTOR: Unreal gameplay/client implementation and Unity adapter coordination.
 - NEXUS: persistent and authoritative backend/multiplayer state.
 - SENTINEL: independent visual, functional, safety, performance and compatibility QA.
+
+
+
+## 11. Premium urban infrastructure fidelity
+
+All visible transit infrastructure and its surrounding city environment must use a premium, realistic, high-quality 3D visual standard. This applies to intercity and local trains, station buildings, platforms, concourses, tunnel interiors, elevated guideways, bridges, stairs, elevators, trackside equipment, signage, street furniture, and the surrounding blocks.
+
+Design from real-world architectural and engineering references: credible dimensions, structural logic, construction materials, passenger circulation, accessibility, maintenance access, safety systems, weathering, and urban integration. References are for study, not one-to-one copying of protected real stations, logos, or trade dress.
+
+Use detailed geometry and physically based materials with appropriate texture resolution, sharp signage, convincing glass/metal/concrete/stone/brick/asphalt/tile/rubber surfaces, realistic lighting, reflections, and weather response. Hero assets should hold up at close camera distance; optimize with sensible LODs and texture tiers rather than making close-up content crude. 4K-class source textures may be used for hero assets where useful; 8K real-time textures are not a blanket requirement.
+
+A station must be designed as a complete piece of city infrastructure, including approaches, sidewalks, road/rail relationships, structural supports, lighting, passenger access, platform safety, vertical circulation, drainage, utilities, emergency egress, and believable adjacent buildings. No generic placeholder station, toy-like train, low-detail prop, blurry texture, floating track, or flat facade may be represented as finished production quality.
+
+All concepts and assets pass documented reference, scale, material, lighting, contextual integration, performance, functional, and creator-approval gates before being called final. A concept image is a reference, not a production-ready 3D asset.
