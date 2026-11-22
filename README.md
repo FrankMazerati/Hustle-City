@@ -13,6 +13,7 @@ Hustle City is a cinematic, realistic 3D social-world/city-life game built prima
 - [Free 99 resource catalog — Batch 01](resources/FREE_99_RESOURCE_CATALOG_BATCH_01.md)
 - [Interactive mobile browser preview](web-preview/README.md)
 - [Open browser preview source](web-preview/index.html)
+- [Device, production, and viewing protocol](architecture/DEVICE_AND_VIEWING_PROTOCOL.md)
 - [Portable engine architecture](architecture/PORTABILITY_CONTRACT.md)
 - [Decision log and unresolved items](docs/DECISION_LOG.md)
 - [Database foundation and deployment status](database/README.md)
