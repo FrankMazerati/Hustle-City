@@ -1,43 +1,37 @@
 # Hustle City IntelliSync Runtime
 
-IntelliSync is the durable package relay and worker execution layer for Hustle City. This runtime is separate from the older six-role manual GitHub pilot.
+IntelliSync is the durable work-package relay, agent execution and coordination foundation for Hustle City.
 
-## Implemented
+## Workforce configuration
 
-- SQLite persistence for work packages, station runs, events and agent messages.
-- Station-to-station package relay with QA approval before downstream release.
-- Rework loops that return rejected work to its original station.
-- Restart recovery and bounded worker scheduling.
-- Trinity coordinator snapshot, QA oversight record and escalation message services.
-- Hosted model adapters for Google Gemini and OpenRouter.
-- API keys read from environment variables only; no credentials are stored in the repository.
-- Fail-closed provider eligibility: a hosted provider is callable only when enabled, verified as free, quota is available, data terms are approved, and its key/model are present.
-- Quota/rate-limit fallback is limited to the next explicitly verified-free provider. If no free provider is available, work remains queued; paid fallback is prohibited.
+The canonical 12-specialist roster is in [agents/hustle-city-core-roster.json](../agents/hustle-city-core-roster.json). Department collaboration, QA roles and continuous-worker behavior are documented in [agents/WORKFORCE_OPERATING_MODEL.md](../agents/WORKFORCE_OPERATING_MODEL.md). Active Directory-style application groups and permissions are specified in [agents/ACCESS_CONTROL_POLICY.json](../agents/ACCESS_CONTROL_POLICY.json).
 
-## Gemini and OpenRouter connection
+Local Ollama is the configured default backend. Explicit model assignments for the 12 specialists and three QA supervisors are in `config/agents.json`. The shared mobile host is configured for one active model call at a time. Assignments do not prove that the model tags exist on the current device or that agents are running; the activation checklist requires a live inventory check and one bounded inference per assigned model.
 
-The GitHub Actions worker entrypoint supplies these existing repository secrets to the runtime:
+## Implemented runtime capabilities
 
-- `GEMINI_API_KEY`
-- `OPENROUTER_API_KEY`
+- SQLite persistence for packages, station runs, events and agent messages.
+- Configurable station pipeline, station claims and deliverable submission.
+- Independent QA review gate, correction loop and next-station release.
+- Duplicate-event protection and restart recovery.
+- Trinity status snapshot, QA oversight record and escalation services.
+- Bounded scheduler and Ollama chat adapter.
+- Gemini and OpenRouter adapters with environment-only credentials and fail-closed free-only eligibility gates.
 
-Set model IDs as GitHub Actions repository variables (not secrets):
+## Not yet implemented or activated
 
-- `GEMINI_MODEL`
-- `OPENROUTER_MODEL`
+- Group-aware task fan-out so all members of a department can be selected for work.
+- Runtime enforcement of the application-level group/permission policy.
+- The complete QA-1 intake → QA-2 routing → production correction → QA-3 independent verification workflow, including QA-3 returns to production or QA-1 reassessment.
+- A verified local model inventory and inference test for every assignment on the target device.
+- A continuous local service with heartbeat, graceful shutdown, resource-pressure handling and operational monitoring.
+- A persistent hosted worker, 24/7 hosting or Supabase persistence.
 
-The provider definitions live in `config/agents.json`. Both providers are intentionally disabled until their current API pricing/free quota and data terms have been checked. Do not set `enabled`, `verified_free`, `quota_available`, or `data_terms_approved` to true without verifying each condition for the exact model. API keys by themselves do not prove an API call is free.
+For those reasons, `scheduler.enabled` remains false and production stations do not yet have a legacy single-stage QA owner configured. The scheduler must not be started until the missing workflow and group execution support are implemented and tested. The current one-cycle GitHub Actions workflow is manually gated and is not a continuous worker.
 
-The manually dispatched `.github/workflows/intellisync-hosted-worker.yml` is gated by both the input `confirm_run=RUN` and repository variable `INTELLISYNC_ENABLE_HOSTED_WORKERS=true`. It processes one bounded queue cycle, not an overnight or continuous run. It is not dispatched automatically.
+## Hosted providers
 
-## Current activation blockers
-
-- The starter geography pipeline still has no approved QA supervisor IDs. The scheduler refuses to start until each station has an explicit QA owner.
-- The final specialist-to-QA ownership map has not yet been supplied.
-- Provider model IDs, free quota and data terms still require explicit verification and configuration.
-- No unattended overnight worker or 24/7 host is active.
-
-The starter geography pipeline is World Builder → City Builder → Roads & Infrastructure → Building & Architecture. Functional role IDs are not approved permanent specialist names. SCRIBE and LENS remain separate creative leads and are not forced into this geography pipeline.
+Gemini and OpenRouter remain disabled by default. They may be enabled only after the exact model's current zero-cost quota and data terms are verified. API keys belong in GitHub Secrets; model IDs belong in repository variables. If no verified free provider is available, work remains queued. Paid fallback is prohibited.
 
 ## Tests
 
@@ -45,9 +39,11 @@ The starter geography pipeline is World Builder → City Builder → Roads & Inf
 python -m unittest discover -s intellisync/tests -v
 ```
 
-## Safety
+## Safety and authority
 
-- Keep API keys in GitHub Secrets or another secret manager; never commit them.
-- Do not infer QA assignments or final roster names.
-- Do not connect or mutate a Supabase project until the dedicated IntelliSync database is confirmed.
-- Do not merge or deploy generated work without review.
+- QA may not approve its own work.
+- Low-confidence or malformed QA results remain pending for human review.
+- Trinity coordinates and audits; it does not silently alter creator-approved canon.
+- Agents may communicate across departments, but tool and write permissions remain least-privilege.
+- No agent writes to `main`, merges pull requests, changes roster membership or spends money without explicit creator authorization.
+- Do not connect or mutate Supabase until the dedicated IntelliSync database is confirmed.
