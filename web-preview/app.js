@@ -32,7 +32,7 @@
   mat("steel","#9da7b1",.82,.25); mat("gold","#c49a56",.78,.24); mat("dark","#111923",.35,.38);
   mat("white","#e7e6df",.15,.3); mat("blue","#277ca8",.5,.28); mat("red","#a74b4b",.45,.3);
   mat("green","#3f8b70",.35,.35); mat("purple","#7655a6",.4,.3); mat("neon","#e4bf77",.2,.3,"#6e4b1c");
-  const groups = {him:[],hcta:[],fashion:[]};
+  const groups = {him:[],hcta:[],fashion:[],diamond:[]};
   const all = [];
   function keep(mesh, group) { groups[group].push(mesh); all.push(mesh); return mesh; }
   function box(name, pos, scale, material, group, parent=null) {
@@ -94,30 +94,43 @@
   track(5,51,15,"hcta","red"); label("UNDERGROUND / SURFACE MODE EXAMPLES",[28,5,15],"hcta");
   box("hcta-surfaceplatform",[28,0,31],[34,.5,8],"concrete","hcta");
   label("LOCAL ACCESS TO DISTRICTS + NEIGHBORHOODS",[0,17,-40],"hcta");
-  // Fashion Hub: a vertical tower with 100 visible floor bands, no horizontal resort sprawl.
+  // Fashion / Swagger District is independent from the Diamond District. This is only a neutral blockout pending creator's district design.
   base("fashion");
-  box("fashion-plaza",[0,-.4,4],[70,.45,54],"concrete","fashion");
-  // Tower body is deliberately tall and narrow; 100 floor bands are represented as repeated visible slabs.
-  box("tower-core",[0,51,0],[22,102,22],"glass","fashion");
+  box("fashion-road",[0,-.55,0],[125,.3,18],"dark","fashion");
+  for(let side of [-1,1]) {
+    for(let x=-48;x<=48;x+=24) {
+      box("fashion-block-"+side+"-"+x,[x,5,side*25],[16,10,13],"concrete","fashion");
+      box("fashion-storefront-"+side+"-"+x,[x,1.8,side*18],[13,3.6,.35],"glass","fashion");
+      box("fashion-sign-"+side+"-"+x,[x,4.4,side*17.7],[8,.65,.2],"gold","fashion");
+    }
+  }
+  label("FASHION / SWAGGER DISTRICT",[0,16,-38],"fashion");
+  label("SEPARATE CENTRAL DISTRICT",[0,12,38],"fashion");
+
+  // Diamond District: Hustle Towers, the 100-floor vertical landmark.
+  base("diamond");
+  box("diamond-plaza",[0,-.4,4],[48,.45,42],"concrete","diamond");
+  box("tower-core",[0,51,0],[22,102,22],"glass","diamond");
   for(let f=1;f<=100;f++){
     const y=f*1.02;
-    box("tower-floor-"+f,[0,y,0],[23.2,.16,23.2],f%10===0?"gold":"steel","fashion");
-    if(f%5===0) box("tower-lightband-"+f,[0,y+.15,-11.65],[18,.12,.12],"neon","fashion");
+    box("tower-floor-"+f,[0,y,0],[23.2,.16,23.2],f%10===0?"gold":"steel","diamond");
+    if(f%5===0) box("tower-lightband-"+f,[0,y+.15,-11.65],[18,.12,.12],"neon","diamond");
   }
-  box("tower-podium",[0,2,0],[29,4,29],"dark","fashion");
-  box("tower-crown",[0,103,0],[25,1.5,25],"gold","fashion");
-  label("HUSTLE TOWERS · 100 FLOORS",[0,111,0],"fashion");
-  box("mall-entry",[-24,2,0],[15,4,12],"glass","fashion");
-  label("MALL / RETAIL",[ -24,6,0],"fashion");
-  box("casino-entry",[24,2,0],[14,4,12],"dark","fashion");
-  label("CASINO AREAS",[24,6,0],"fashion");
-  box("concierge-entry",[0,2,23],[22,4,9],"white","fashion");
-  label("FOOD CONCIERGE LOUNGES",[0,7,23],"fashion");
-  box("helpdesk-a",[-21,1,20],[5,2,3],"gold","fashion");label("WELCOME DESK A",[-21,4,20],"fashion");
-  box("helpdesk-b",[21,1,20],[5,2,3],"gold","fashion");label("WELCOME DESK B",[21,4,20],"fashion");
-  label("HEAVENLY HALLWAY",[0,9,-22],"fashion");
-  label("KICKING / SOCIAL AREAS · MEANING TO CONFIRM",[0,5,-34],"fashion","#d5b7ff");
-  label("CAESAR'S PALACE · PLACEMENT TO CONFIRM",[0,13,35],"fashion");
+  box("tower-podium",[0,2,0],[29,4,29],"dark","diamond");
+  box("tower-crown",[0,103,0],[25,1.5,25],"gold","diamond");
+  label("DIAMOND DISTRICT",[0,116,-24],"diamond");
+  label("HUSTLE TOWERS · 100 FLOORS",[0,111,0],"diamond");
+  box("mall-entry",[-24,2,0],[15,4,12],"glass","diamond");
+  label("MALL / RETAIL",[-24,6,0],"diamond");
+  box("casino-entry",[24,2,0],[14,4,12],"dark","diamond");
+  label("CASINO AREAS",[24,6,0],"diamond");
+  box("concierge-entry",[0,2,23],[22,4,9],"white","diamond");
+  label("FOOD CONCIERGE LOUNGES",[0,7,23],"diamond");
+  box("helpdesk-a",[-21,1,20],[5,2,3],"gold","diamond");label("WELCOME DESK A",[-21,4,20],"diamond");
+  box("helpdesk-b",[21,1,20],[5,2,3],"gold","diamond");label("WELCOME DESK B",[21,4,20],"diamond");
+  label("HEAVENLY HALLWAY",[0,9,-22],"diamond");
+  label("KICKING AREAS · MEANING TO CONFIRM",[0,5,-34],"diamond","#d5b7ff");
+  label("CAESAR'S PALACE · PLACEMENT TO CONFIRM",[0,13,35],"diamond");
 
   let current="him";
   function activate(view) {
@@ -137,17 +150,23 @@
       copy.textContent="HCTA connects downtown, all six central districts, and every designated outer neighborhood. Elevated, underground, and street-level operation are supported design environments; actual line alignments and mode assignments remain open.";
       features(["Elevated rail","Underground rail","Street-level rail","HIM transfer access","District and neighborhood stations","Compatible vehicle / track families"]);
       camera.setTarget(new BABYLON.Vector3(0,2,0));camera.radius=140;
+    } else if(view==="fashion") {
+      kicker.textContent="FASHION / SWAGGER DISTRICT";title.textContent="Fashion District";
+      heading.textContent="A separate central district";
+      copy.textContent="The Fashion / Swagger District is independent from the Diamond District. This neutral street-and-building blockout is only a separate preview placeholder; its final identity, geography, venues, and architecture await creator direction. Hustle Towers does not belong here.";
+      features(["Independent district identity","Separate geography and streetscape","Its own buildings and venues","No Hustle Towers placement"]);
+      camera.setTarget(new BABYLON.Vector3(0,2,0));camera.radius=125;
     } else {
-      kicker.textContent="FASHION HUB · VERTICAL LANDMARK";title.textContent="Hustle Towers — 100 Floors";
-      heading.textContent="A vertical destination, not a sprawling campus";
-      copy.textContent="This early massing preview shows a narrow, 100-floor tower. Requested program includes malls, multiple casino areas, multiple food concierge lounges, multiple welcoming help desks, the Heavenly Hallway, and kicking areas. Caesar's Palace placement is still to be confirmed.";
-      features(["100-floor vertical tower","Mall / retail spaces","Multiple casino areas","Multiple food concierge lounges","Multiple welcome help desks","Heavenly Hallway","Kicking areas — meaning to confirm","Caesar's Palace — relationship to confirm"]);
+      kicker.textContent="DIAMOND DISTRICT · VERTICAL LANDMARK";title.textContent="Hustle Towers — 100 Floors";
+      heading.textContent="Hustle Towers rises in the Diamond District";
+      copy.textContent="This early massing preview shows the 100-floor vertical landmark in the Diamond District, separate from the Fashion / Swagger District. Requested program includes malls, multiple casino areas, multiple food concierge lounges, multiple welcoming help desks, the Heavenly Hallway, and kicking areas. Caesar's Palace placement is still to be confirmed.";
+      features(["Diamond District location","100-floor vertical tower","Mall / retail spaces","Multiple casino areas","Multiple food concierge lounges","Multiple welcome/help desks","Heavenly Hallway","Kicking areas — meaning to confirm","Caesar's Palace — relationship to confirm"]);
       camera.setTarget(new BABYLON.Vector3(0,48,0));camera.radius=165;
     }
   }
   function features(items){featureList.innerHTML=items.map(x=>'<div class="feature"><strong>'+x.replace(/</g,"&lt;")+'</strong><span>Requested design element · detail pending review</span></div>').join("");}
   tabs.forEach(t=>t.addEventListener("click",()=>activate(t.dataset.view)));
-  document.getElementById("resetCamera").addEventListener("click",()=>{camera.alpha=-Math.PI/2.2;camera.beta=1.12;camera.radius=current==="fashion"?165:current==="hcta"?140:115;camera.setTarget(current==="fashion"?new BABYLON.Vector3(0,48,0):current==="hcta"?new BABYLON.Vector3(0,2,0):new BABYLON.Vector3(0,7,8));});
+  document.getElementById("resetCamera").addEventListener("click",()=>{camera.alpha=-Math.PI/2.2;camera.beta=1.12;camera.radius=current==="diamond"?165:current==="fashion"?125:current==="hcta"?140:115;camera.setTarget(current==="diamond"?new BABYLON.Vector3(0,48,0):current==="fashion"?new BABYLON.Vector3(0,2,0):current==="hcta"?new BABYLON.Vector3(0,2,0):new BABYLON.Vector3(0,7,8));});
   activate("him");
   engine.runRenderLoop(()=>scene.render());
   window.addEventListener("resize",()=>engine.resize());
