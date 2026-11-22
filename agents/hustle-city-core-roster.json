@@ -216,7 +216,7 @@
   ],
   "qa": [
     {
-      "id": "QA-1",
+      "id": "qa-1",
       "title": "Quality Intake & Evidence Analyst",
       "model": "qwen3:0.6b",
       "supervises_slots": [
@@ -230,10 +230,11 @@
         "brick",
         "blueprint",
         "vibe"
-      ]
+      ],
+      "display_name": "QA-1"
     },
     {
-      "id": "QA-2",
+      "id": "qa-2",
       "title": "Quality Triage & Routing Coordinator",
       "model": "deepseek-r1:1.5b",
       "supervises_slots": [
@@ -247,10 +248,11 @@
         "motion",
         "torque",
         "tracks"
-      ]
+      ],
+      "display_name": "QA-2"
     },
     {
-      "id": "QA-3",
+      "id": "qa-3",
       "title": "Independent Verification & Release Analyst",
       "model": "granite3.2:2b",
       "supervises_slots": [
@@ -264,7 +266,8 @@
         "ace",
         "spark",
         "lockdown"
-      ]
+      ],
+      "display_name": "QA-3"
     }
   ],
   "creative_leads": [
