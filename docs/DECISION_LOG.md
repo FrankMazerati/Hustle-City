@@ -25,13 +25,18 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - Neighborhood ownership/founding, crew leadership, property/business ownership and residency are separate concepts.
 - Neighborhoods can be visually complete/ambient while only a small number of locations are fully interactive at launch.
 - Existing SAM-led 10-person named Hustle City cohort and 48-role specialist catalog remain the canonical agent system; engine-specific role mappings must reflect Unreal primary / Unity secondary.
- 
+- **Creator-directed Fashion Hub landmark:** Hustle Towers is specified as a 100-floor vertical landmark in the Fashion Hub. Its design must rise straight up and avoid horizontal resort/campus sprawl.
+- The requested Fashion Hub program includes malls, multiple casino areas, multiple food concierge lounges, multiple welcoming help desks, the Heavenly Hallway, and “kicking areas” (wording preserved; exact meaning unconfirmed).
+- “Caesar's Palace” is a creator-specified name in the Fashion Hub request; its exact relationship to Hustle Towers is not yet established.
+- A mobile browser-compatible development preview is a required companion review target alongside UE5 production. Browser preview is not a replacement for UE5.
+
 ## Working direction
 - Fictional city draws from Chicago and Miami/Florida but has original geography, names, architecture, landmarks and district identities.
 - Develop/test locally and host live multiplayer in the cloud.
 - Build reusable world-building foundations and expand through validated layers.
 - Use Unreal Engine 5 for primary implementation; keep Unity 6 compatibility contracts and adapters documented/testable without duplicating production effort.
 - 8K is a cinematic capture/output ambition where hardware permits, not a minimum real-time gameplay resolution.
+- The browser preview currently uses a lightweight Babylon.js geometry blockout for early spatial review. It is not final art or a compiled game.
 
 ## Unresolved
 - Final city name and exact geography.
@@ -39,7 +44,12 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - Final district boundaries, exact district positions, and Fashion/Swagger District name.
 - Exact outer neighborhood box count, arrangement, and block dimensions pending original-map review.
 - HIM/HCTA terminal locations, route count, route names/colors, line alignments, station positions, and service patterns.
-- Casino placement.
+- Exact Fashion Hub location within the original master map.
+- Whether Caesar's Palace is a casino/venue inside Hustle Towers, an attached vertical component, or a separate destination.
+- Meaning and gameplay purpose of “kicking areas”.
+- Exact floor-by-floor assignment and counts for mall areas, casino areas, food concierge lounges, and welcoming help desks.
+- Heavenly Hallway's visual identity, exact location, and gameplay function.
+- Casino placement and operating/gameplay rules.
 - Final list of five interactive neighborhood locations.
 - Population milestones for neighborhood expansion.
 - Backend/cloud/database/auth vendors and architecture details.
