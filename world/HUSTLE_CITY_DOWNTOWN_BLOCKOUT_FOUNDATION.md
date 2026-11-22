@@ -149,3 +149,30 @@ Create a UE5 greybox scene for the station → forecourt → skyline reveal → 
 - `architecture/INTEGRATION_CONTRACTS.md`
 - `architecture/PORTABILITY_CONTRACT.md`
 - `agents/COMMUNICATION_PROTOCOL.md`
+
+## Creator-approved district identity update — 2026-11-22
+
+This section supersedes earlier tentative references to a Financial District, Marina District, and Fashion District. The earlier six-district list was a planning sketch, not a finalized canon.
+
+### Current central district identities
+
+1. **Downtown District** — the city's major destination and commercial core. It contains casinos, hotels, luxury dining, movie theaters, financial institutions, and major commercial buildings. There is no separate Financial District in the current plan.
+2. **Diamond District** — the luxury and prestige district, including jewelry, high-end retail, upscale shopping, and established Diamond District destinations. Its exact venue mix and boundary with Downtown remain to be planned.
+3. **Travel District** — replaces the former Marina District. It brings together the marina, yacht club, car club, airport, and intercity train station, with major transportation connections nearby. The Travel District should be directly adjacent to the Diamond District.
+4. **Swagger District** — replaces the former Fashion District. Its identity includes fashion, clothing, sneaker culture, barber shops, beauty, personal style, and streetwear.
+5. **Entertainment District** — nightlife, music, clubs, live performances, and entertainment venues.
+6. **Hustle District** — a distinct, working commercial district focused on real-world money-making: independent businesses, street vendors, small shops, markets, entrepreneurs, and active street-level commerce. It should be close to Downtown, but remain its own district with a different economic character.
+
+### Planning rules
+
+- Do not create a separate Financial District unless the creator explicitly reintroduces one. Financial institutions belong in Downtown.
+- Use **Travel District**, not Marina District; the marina is one of its anchors, not the whole district.
+- Use **Swagger District**, not Fashion District.
+- Keep the Diamond District and Travel District directly adjacent in the district plan.
+- Keep the Hustle District close to Downtown, but do not collapse the two into one district: Downtown is the major destination/commercial core, while Hustle is everyday enterprise and street-level commerce.
+- District boundaries, compass positions, exact grid cells, and the full 7×7 allocation remain unapproved. Do not assign geographic positions or water/shoreline geometry yet.
+- The earlier opening-sequence plan remains valid as a proposed arrival experience, but the central train station's final district assignment must now be reconciled with the creator's Travel District definition. Treat the station as a Travel District anchor in the updated plan.
+
+### District framework status
+
+The six identities above are the current creator-directed central district framework. Any additional central planning boxes or districts are still open for creator discussion; do not invent three extra districts or assume the former six-box sketch defines the final count.
