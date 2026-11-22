@@ -1,10 +1,8 @@
 # Hustle City — Consolidated Design Atlas
 
 ## 1. World map and districts
-- Master map: 7x7 large boxes = 49 total.
-- Six central boxes reserved for central districts; 43 boxes are potential outer neighborhoods.
-- Each outer neighborhood box contains a 5x5 planning grid = 25 blocks. Long-term capacity across all 43 is 1,075 blocks.
-- This is a capacity plan, not a requirement to build every box at launch.
+- Six central district boxes are established; all surrounding boxes are reserved for neighborhoods.
+- An earlier planning model records a 7x7 grid, 43 potential outer neighborhood boxes, and a 5x5 block-planning grid inside each outer box. Treat this as a historical capacity model pending reconciliation with the creator's original map references; do not assume the exact count or dimensions are locked.
 - Six central district concepts: Diamond District, Entertainment District, Marina District, Fashion/Swagger District (working label), Financial District and Downtown District.
 - Casino is planned; its district is unresolved.
 - Hamburger/map UI should show the full map, color-coded districts and neighborhoods, names, ownership/crew identity and destinations. A separate transit layer should show routes and stations.
@@ -25,7 +23,11 @@ Keep separate: neighborhood founding/ownership; crew leadership; property/busine
 - Players choose driver or passenger, enter together, select destination and travel together. Crew convoy vehicles travel as a group and arrive together.
 - NPC traffic, traffic lights, buses and trains operate automatically. Traffic signals coordinate protected turns, safe stopping distances, lane reservations and intersection occupancy.
 - Rideshare should always be available through NPC drivers; players may optionally drive and earn Hustle Money. Basic rides use in-game Hustle Money or are free according to the service; Diamonds are for premium travel.
-- Transit includes buses, Chicago-style elevated rail/L train, underground subway, water taxis, cars/motorcycles, helicopters, private aircraft, yachts and boats.
+- Passenger rail has two separate authorities: Hustle International Metro (HIM) for intercity/regional travel, and Hustle City Transit Authority (HCTA) for downtown, the six districts, neighborhoods, and surrounding city areas.
+- HCTA is intended to support elevated rail, underground rail, and street-level rail. Route count, colors, names, station positions, and which lines use each environment remain open.
+- Every outer neighborhood must have HCTA station access and a transfer path to HIM. Direct HIM service at every neighborhood is not assumed; selected outer interchanges may be considered.
+- HIM examples include Chicago, Atlanta, New York, and Florida destinations. The opening train arrival of Frank Maserati and his companion is an HIM arrival.
+- Other transit includes buses, water taxis, cars/motorcycles, helicopters, private aircraft, yachts and boats.
 - Train ride is immersive: players board, sit, see the city through windows, switch passenger/window/exterior/overhead camera views, stop at stations and disembark.
 - Do not invent route maps or travel metrics. Geographic and transit agents must record sources and licenses.
 
