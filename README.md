@@ -23,6 +23,7 @@ Hustle City is a cinematic, realistic 3D social-world/city-life game built prima
 - [17-agent local workforce and coordinator structure](intellisync/config/coordination.json)
 - [Library workstation and portable project handoff](planning/LIBRARY_WORKSTATION_QUICKSTART.md)
 - [Opening cinematic and Bella Rose introduction brief](planning/OPENING_SEQUENCE_PRODUCTION_BRIEF.md)
+- [Opening sequence 17-agent assignment matrix](planning/OPENING_SEQUENCE_AGENT_ASSIGNMENTS.md)
 - [Asset import manifest](ASSET_IMPORT/IMPORT_MANIFEST.md)
 - [Rolling assembly-line production standard](agents/INTELLISYNC_ASSEMBLY_LINE.md)
 - [Agent communication protocol](agents/COMMUNICATION_PROTOCOL.md)
