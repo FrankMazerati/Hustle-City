@@ -1,10 +1,36 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "coordinator": {
     "id": "Trinity",
     "role": "overall_coordinator",
     "authority": "Coordinates assignments, dependencies, workload, handoffs, escalations and QA oversight. Does not silently change creator-approved canon or roster."
   },
+  "creative_leads": [
+    {
+      "id": "SCRIBE",
+      "role": "Story Director",
+      "reports_to": "Trinity",
+      "counts_as_production_specialist": false,
+      "responsibilities": [
+        "storyline and narrative architecture",
+        "scripts, dialogue direction and character motivations",
+        "plot continuity and narrative canon",
+        "story packages and handoffs to consuming production specialists"
+      ]
+    },
+    {
+      "id": "LENS",
+      "role": "Cinematic Camera Director",
+      "reports_to": "Trinity",
+      "counts_as_production_specialist": false,
+      "responsibilities": [
+        "camera choreography and shot design",
+        "camera movement, framing and transitions",
+        "cinematic visual storytelling",
+        "cinematic direction packages and handoffs to consuming production specialists"
+      ]
+    }
+  ],
   "qa_supervisors": [
     {
       "id": "QA-1",
@@ -42,6 +68,13 @@
     "slots": "specialist-slot-01 through specialist-slot-12",
     "status": "role-to-slot mapping pending creator-approved final roster"
   },
+  "workforce_totals": {
+    "coordinator": 1,
+    "creative_leads": 2,
+    "qa_supervisors": 3,
+    "production_specialists": 12,
+    "total_agents": 18
+  },
   "communications": {
     "department_feeds": [
       "QA-1",
@@ -56,6 +89,8 @@
   "controls": {
     "qa_may_not_self_approve": true,
     "qa_deliverables_require_independent_review": true,
-    "creator_approval_required_for_canon_or_irreversible_changes": true
+    "creator_approval_required_for_canon_or_irreversible_changes": true,
+    "creative_leads_are_peer_roles_under_trinity": true,
+    "creative_leads_do_not_consume_production_qa_slots": true
   }
 }
