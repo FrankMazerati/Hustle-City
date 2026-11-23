@@ -14,7 +14,10 @@ The creator is Visual Director and Game Architect and retains final creative aut
 6. Confirm the GitHub repository is `FrankMazerati/Hustle-City`, default branch `main`; agents work in task branches and submit PRs.
 
 ## Required reading
+
+Every agent must read the complete organization directory and communication/breadcrumb standard, not only its own role file. Before accepting a downstream package, read and acknowledge the upstream agent's breadcrumb and record the exact version consumed.
 - `agents/operations/FIVE_WEEK_TEAM_OPERATING_BLUEPRINT.md`
+- `agents/operations/AGENT_COMMUNICATION_AND_BREADCRUMB_STANDARD.md`
 - `agents/blueprints/README.md`
 - Each agent's own file under `agents/blueprints/`
 - Existing specialist manuals under `agents/manuals/`
@@ -48,18 +51,33 @@ All agents begin **Week 1, Day 1** of their own blueprint. Do not jump to Week 2
 - Read canon and their own roadmaps.
 - Establish their domain baselines, identify upstream/downstream dependencies and report which Week 1 outputs can safely proceed in parallel.
 
-## Week 1 exit gate
-By the end of Day 7, each agent must submit:
-- A verified inventory of relevant existing artifacts and source versions.
-- A source-linked requirements/baseline document for its domain.
-- An assumptions and unresolved-decisions register.
-- A dependency/contact list with acknowledgements or explicit relay limitations.
-- A prioritized Week 2 backlog.
-- A status of ACCEPTED, ACCEPTED WITH ACTIONS, REVISE or BLOCKED, supported by evidence.
+## Week 1 exit gate — foundation design completion
+By the end of Day 7, Week 1 is successful only when each domain owner has completed and submitted its first-pass design foundation, not merely researched the domain or prepared a plan:
+- Atlas: complete world design foundation.
+- Brick: complete city design foundation.
+- Blueprint: complete building/architectural typology foundation.
+- Vibe: complete core character and NPC design foundation.
+- Stitch: majority of scoped clothing designs completed, with a measurable designed-versus-planned catalog.
+- Motion: complete animation design foundation.
+- Torque: complete vehicle design foundation.
+- Tracks: complete HIM/HCTA train, station and transit concept.
+- Route: complete road, traffic-light, intersection, pedestrian and navigation foundation.
+- Ace: complete core gameplay foundation.
+- Spark: complete events/social foundation.
+- Lockdown: cross-domain QA gates and integration baseline.
+- SCRIBE: narrative premise and character motivation foundation.
+- LENS: camera language and cinematic foundation.
+- Nexus: backend/multiplayer architecture foundation.
+- QA-1/2/3: independent review dispositions and evidence for their assigned four specialists.
+- Trinity: integrated scorecard, dependency/decision escalation and Week 2 queue.
 
-Trinity must publish an integrated Week 1 report, verify QA dispositions and present creator decisions needed to unlock Week 2.
+Every package must include source references, design decisions and rationale, exact artifact paths/version, interfaces, assumptions/unknowns, open issues, next owner and QA status. Stitch must show the majority threshold with a count or percentage; no unsupported target count is to be invented. Do not invent map dimensions, neighborhood/station counts or transit alignments. A Week 1 inventory or backlog without the completed design artifact does not pass the exit gate.
 
-## Communication and model use
+## Communication feeds, breadcrumbs and model use
+
+Use the three named feeds in the shared IntelliSync runtime communication hub: Department Communication Feed, Cross-Department Communication Feed and Command Communication Feed. Verify relay health first. Every agent leaves breadcrumbs documenting what changed, where it lives, current status, design method/rationale, upstream inputs, interfaces, assumptions, unresolved work, QA evidence and next owner. Downstream agents read/acknowledge the breadcrumb, cite its version and leave their own continuation breadcrumb. Transfer approved artifacts through the rolling assembly-line package relay (producer → assigned QA → downstream receiver). The breadcrumb explains; the artifact delivers; the relay controls handoff.
+
+
 Use the registered IntelliSync relay and model router only after health is verified. Messages must include sender, recipient, task ID, timestamp, priority, type, source/context, request/deliverable, dependencies, status and acknowledgement requirement. Model borrowing/second opinions must be routed and queued under model-owner and hardware constraints. Never commandeer another agent's session. Gemini/OpenRouter are allowed only with approved credentials and verified free quota.
 
 ## Cost and integrity
