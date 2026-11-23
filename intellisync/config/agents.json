@@ -22,6 +22,14 @@
     "Known previously installed local models are not automatically assigned to roles.",
     "QA supervisor ownership is configured in assembly_line.json and must not be guessed.",
     "The scheduler is disabled until all model and QA mappings are explicitly configured.",
-    "No paid provider fallback is implemented in this service."
-  ]
+    "No paid provider fallback is implemented in this service.",
+    "Timed cycle configuration is present, but scheduler remains disabled until workforce roster, QA ownership, and model mappings are explicitly completed."
+  ],
+  "cycle": {
+    "production_seconds": 1200,
+    "qa_seconds": 300,
+    "correction_seconds": 300,
+    "extension_seconds": 600,
+    "description": "20 minutes production, 5 minutes independent QA, 5 minutes correction, with up to 10 additional minutes alternating correction and re-review when work remains."
+  }
 }
