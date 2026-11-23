@@ -64,10 +64,9 @@ Animation bible; locomotion/action catalogue; interaction contracts; animation s
 The five-week horizon is cumulative. Each week leaves a usable artifact for the next. These are target outcomes, not claims that work has already happened. Completion requires evidence and QA acceptance, not elapsed time.
 
 ## 5. Five-week roadmap
-### Week 1 — Foundation & discovery
-**Mission:** Read creator profile, project canon, role directive, decision log and source files. Inventory current work, verify what is real, record unknowns and establish acceptance criteria.
-**Week-end outcome:** Verified baseline, source register, scope boundary, assumptions register and accepted task backlog.
-**Your domain exit target:** Animation bible; locomotion/action catalogue; interaction contracts; animation spec; movement QA suite.
+### Week 1 — Foundation design complete
+**Mission:** Complete the animation design foundation: movement-state architecture, locomotion catalog, core player/NPC actions, interaction list, vehicle/transit movement needs and priority animation matrix.
+**Week-end outcome:** A complete first-pass design package saved in the repository, with source links, explicit unknowns, partner interfaces and QA disposition. Week 1 is a design-completion sprint, not an inventory-only week.
 
 ### Week 2 — Design & contracts
 **Mission:** Turn the baseline into detailed domain standards, specifications, workflows, interfaces, data/asset requirements and collaboration agreements. Request creator decisions early.
