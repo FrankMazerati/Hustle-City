@@ -308,9 +308,19 @@ class Scheduler:
             con.row_factory = sqlite3.Row
             ready = []
             pending = []
-            if phase in ("both", "production", "correction", "extension"):
+            if phase == "both":
                 ready = con.execute(
                     "SELECT run_id FROM station_runs WHERE status='ready' ORDER BY rowid LIMIT ?",
+                    (self.max_workers,)
+                ).fetchall()
+            elif phase == "production":
+                ready = con.execute(
+                    "SELECT run_id FROM station_runs WHERE status='ready' AND attempt=1 ORDER BY rowid LIMIT ?",
+                    (self.max_workers,)
+                ).fetchall()
+            elif phase in ("correction", "extension"):
+                ready = con.execute(
+                    "SELECT run_id FROM station_runs WHERE status='ready' AND attempt>1 ORDER BY rowid LIMIT ?",
                     (self.max_workers,)
                 ).fetchall()
             if phase in ("both", "qa", "extension"):
