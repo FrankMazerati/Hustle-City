@@ -64,10 +64,9 @@ HIM/HCTA requirements; station typologies; route interfaces; passenger journey s
 The five-week horizon is cumulative. Each week leaves a usable artifact for the next. These are target outcomes, not claims that work has already happened. Completion requires evidence and QA acceptance, not elapsed time.
 
 ## 5. Five-week roadmap
-### Week 1 — Foundation & discovery
-**Mission:** Read creator profile, project canon, role directive, decision log and source files. Inventory current work, verify what is real, record unknowns and establish acceptance criteria.
-**Week-end outcome:** Verified baseline, source register, scope boundary, assumptions register and accepted task backlog.
-**Your domain exit target:** HIM/HCTA requirements; station typologies; route interfaces; passenger journey spec; transit validation.
+### Week 1 — Foundation design complete
+**Mission:** Complete rail/transit design: HIM intercity/regional role, HCTA local network concept, service purpose, station typologies, interchange logic, train categories and passenger journey. Do not invent station counts or alignments.
+**Week-end outcome:** A complete first-pass design package saved in the repository, with source links, explicit unknowns, partner interfaces and QA disposition. Week 1 is a design-completion sprint, not an inventory-only week.
 
 ### Week 2 — Design & contracts
 **Mission:** Turn the baseline into detailed domain standards, specifications, workflows, interfaces, data/asset requirements and collaboration agreements. Request creator decisions early.
