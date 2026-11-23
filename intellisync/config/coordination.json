@@ -1,79 +1,206 @@
 {
-  "schema_version": "1.1.0",
-  "coordinator": {
-    "id": "Trinity",
+  "schema_version": "1.2.0",
+  "external_coordinator": {
+    "id": "ChatGPT",
     "role": "overall_coordinator",
-    "authority": "Coordinates assignments, dependencies, workload, handoffs, escalations and QA oversight. Does not silently change creator-approved canon or roster."
+    "runtime": "external_to_local_ollama_workforce",
+    "counts_as_local_agent": false,
+    "responsibilities": [
+      "decompose creator direction into scoped work packages",
+      "coordinate assignments, dependencies, workload, handoffs and escalations",
+      "audit QA decisions and resolve cross-team conflicts",
+      "maintain repository source of truth and report verified status"
+    ],
+    "authority": "The creator retains final authority over product vision, visual direction, canon, scope and irreversible decisions. ChatGPT coordinates; it is not a local Ollama worker."
   },
-  "creative_leads": [
-    {
-      "id": "SCRIBE",
-      "role": "Story Director",
-      "reports_to": "Trinity",
-      "counts_as_production_specialist": false,
-      "responsibilities": [
-        "storyline and narrative architecture",
-        "scripts, dialogue direction and character motivations",
-        "plot continuity and narrative canon",
-        "story packages and handoffs to consuming production specialists"
-      ]
-    },
-    {
-      "id": "LENS",
-      "role": "Cinematic Camera Director",
-      "reports_to": "Trinity",
-      "counts_as_production_specialist": false,
-      "responsibilities": [
-        "camera choreography and shot design",
-        "camera movement, framing and transitions",
-        "cinematic visual storytelling",
-        "cinematic direction packages and handoffs to consuming production specialists"
-      ]
-    }
-  ],
-  "qa_supervisors": [
-    {
-      "id": "QA-1",
-      "scope": "production_specialist_slots_01_to_04",
-      "specialist_slots": [
-        "specialist-slot-01",
-        "specialist-slot-02",
-        "specialist-slot-03",
-        "specialist-slot-04"
-      ]
-    },
-    {
-      "id": "QA-2",
-      "scope": "production_specialist_slots_05_to_08",
-      "specialist_slots": [
-        "specialist-slot-05",
-        "specialist-slot-06",
-        "specialist-slot-07",
-        "specialist-slot-08"
-      ]
-    },
-    {
-      "id": "QA-3",
-      "scope": "production_specialist_slots_09_to_12",
-      "specialist_slots": [
-        "specialist-slot-09",
-        "specialist-slot-10",
-        "specialist-slot-11",
-        "specialist-slot-12"
-      ]
-    }
-  ],
-  "production_specialists": {
-    "count": 12,
-    "slots": "specialist-slot-01 through specialist-slot-12",
-    "status": "role-to-slot mapping pending creator-approved final roster"
-  },
-  "workforce_totals": {
-    "coordinator": 1,
-    "creative_leads": 2,
-    "qa_supervisors": 3,
-    "production_specialists": 12,
-    "total_agents": 18
+  "local_workforce": {
+    "target_total": 17,
+    "count_rule": "17 local agents = 2 creative leads + 3 QA supervisors + 12 production specialists. The external coordinator is not counted.",
+    "creative_leads": [
+      {
+        "id": "SCRIBE",
+        "role": "Story Director",
+        "local_agent": true,
+        "qa_group": "independent_review_required",
+        "reports_to": "ChatGPT",
+        "responsibilities": [
+          "storyline and narrative architecture",
+          "opening sequence and Bella Rose dialogue direction",
+          "character motivations, plot continuity and narrative canon",
+          "story packages and handoffs to production specialists"
+        ]
+      },
+      {
+        "id": "LENS",
+        "role": "Cinematic Camera Director",
+        "local_agent": true,
+        "qa_group": "independent_review_required",
+        "reports_to": "ChatGPT",
+        "responsibilities": [
+          "camera choreography and shot design",
+          "camera movement, framing, lenses and transitions",
+          "cinematic visual storytelling for train arrival and guided introduction",
+          "cinematic direction packages and handoffs to production specialists"
+        ]
+      }
+    ],
+    "qa_supervisors": [
+      {
+        "id": "QA-1",
+        "scope": "production_specialists_01_to_04",
+        "specialist_ids": [
+          "P01-GEOGRAPHY",
+          "P02-CITY-PLAN",
+          "P03-DISTRICTS",
+          "P04-ARCHITECTURE"
+        ],
+        "reports_to": "ChatGPT"
+      },
+      {
+        "id": "QA-2",
+        "scope": "production_specialists_05_to_08",
+        "specialist_ids": [
+          "P05-INTERIORS",
+          "P06-TRANSIT",
+          "P07-VEHICLES",
+          "P08-CHARACTERS"
+        ],
+        "reports_to": "ChatGPT"
+      },
+      {
+        "id": "QA-3",
+        "scope": "production_specialists_09_to_12",
+        "specialist_ids": [
+          "P09-NPC-NAV",
+          "P10-GAMEPLAY",
+          "P11-ONBOARDING",
+          "P12-UNREAL-INTEGRATION"
+        ],
+        "reports_to": "ChatGPT"
+      }
+    ],
+    "production_specialists": [
+      {
+        "id": "P01-GEOGRAPHY",
+        "role": "World Geography & Environment Foundation",
+        "qa_supervisor": "QA-1",
+        "responsibilities": [
+          "fictional world geography",
+          "terrain, water, climate and environment profiles",
+          "opening route and arrival geography"
+        ]
+      },
+      {
+        "id": "P02-CITY-PLAN",
+        "role": "City Masterplanning & District Layout",
+        "qa_supervisor": "QA-1",
+        "responsibilities": [
+          "masterplan, city footprint and district connections",
+          "station-to-city approach and skyline composition",
+          "preserve approved district identities"
+        ]
+      },
+      {
+        "id": "P03-DISTRICTS",
+        "role": "District & Neighborhood Design",
+        "qa_supervisor": "QA-1",
+        "responsibilities": [
+          "Hustle District and Trapper District contrast",
+          "neighborhood identity, boundaries and street-level composition",
+          "venue and destination placement"
+        ]
+      },
+      {
+        "id": "P04-ARCHITECTURE",
+        "role": "Architecture & Building Systems",
+        "qa_supervisor": "QA-1",
+        "responsibilities": [
+          "Hustle Towers and station architecture",
+          "modular building assets, scale, entrances and exteriors",
+          "building collision and access requirements"
+        ]
+      },
+      {
+        "id": "P05-INTERIORS",
+        "role": "Interiors, Venues & Environment Dressing",
+        "qa_supervisor": "QA-2",
+        "responsibilities": [
+          "station concierge hall and Hustle Towers interiors",
+          "courtyard, lobby, rooms and venue layouts",
+          "furniture, props, materials and environment dressing"
+        ]
+      },
+      {
+        "id": "P06-TRANSIT",
+        "role": "Rail, Transit & Transportation Infrastructure",
+        "qa_supervisor": "QA-2",
+        "responsibilities": [
+          "train, rail, station, platform and passenger flow",
+          "arrival, boarding, disembarking and transit interfaces",
+          "future bus, subway and transit integration"
+        ]
+      },
+      {
+        "id": "P07-VEHICLES",
+        "role": "Vehicles, Traffic & Simulation",
+        "qa_supervisor": "QA-2",
+        "responsibilities": [
+          "vehicle assets and traffic systems",
+          "automated traffic, lane and intersection behavior",
+          "vehicle/transit performance and safety contracts"
+        ]
+      },
+      {
+        "id": "P08-CHARACTERS",
+        "role": "Player Characters, Character Art & Animation",
+        "qa_supervisor": "QA-2",
+        "responsibilities": [
+          "Bella Rose and player character visual requirements",
+          "rigs, animation, locomotion and gestures",
+          "character asset compatibility and presentation"
+        ]
+      },
+      {
+        "id": "P09-NPC-NAV",
+        "role": "NPC Intelligence, Navigation & Crowd Behavior",
+        "qa_supervisor": "QA-3",
+        "responsibilities": [
+          "NPC schedules, crowd behavior and navigation",
+          "Bella Rose guided movement and companion behavior",
+          "pedestrian flow and stuck-route recovery"
+        ]
+      },
+      {
+        "id": "P10-GAMEPLAY",
+        "role": "Gameplay Interaction & Venue Systems",
+        "qa_supervisor": "QA-3",
+        "responsibilities": [
+          "room booking and player interaction systems",
+          "dialogue, doors, elevators and destination interactions",
+          "venue services, guided tour state and save/revisit behavior"
+        ]
+      },
+      {
+        "id": "P11-ONBOARDING",
+        "role": "Onboarding, Story Progression & Player Journey",
+        "qa_supervisor": "QA-3",
+        "responsibilities": [
+          "new-player introduction flow and tour modes",
+          "short/full tour choices and tour completion gating",
+          "player start location, skip/revisit and return-home rules"
+        ]
+      },
+      {
+        "id": "P12-UNREAL-INTEGRATION",
+        "role": "Unreal Integration, Asset Pipeline & Performance",
+        "qa_supervisor": "QA-3",
+        "responsibilities": [
+          "Unreal project integration and asset import pipeline",
+          "Blueprint/C++ integration, build and automation checks",
+          "asset provenance, performance, packaging and validation"
+        ]
+      }
+    ]
   },
   "communications": {
     "department_feeds": [
@@ -89,8 +216,11 @@
   "controls": {
     "qa_may_not_self_approve": true,
     "qa_deliverables_require_independent_review": true,
+    "creative_lead_deliverables_require_independent_review": true,
     "creator_approval_required_for_canon_or_irreversible_changes": true,
-    "creative_leads_are_peer_roles_under_trinity": true,
-    "creative_leads_do_not_consume_production_qa_slots": true
+    "creative_leads_are_local_agents": true,
+    "creative_leads_do_not_consume_the_12_production_specialist_qa_slots": true,
+    "local_trinity_agent": false,
+    "external_coordinator_is_not_a_local_model": true
   }
 }
