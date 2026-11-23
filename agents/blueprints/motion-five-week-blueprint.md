@@ -87,7 +87,86 @@ Run role-specific self-checks, prepare QA evidence, submit to assigned QA superv
 ### Day 7 — Close & hand off
 Publish weekly report, exact artifact paths/commit, QA state, unresolved decisions, next owner and next-week backlog.
 
-## 7. Collaboration and communication
+## 7. Full day-by-day calendar (35 workdays)
+
+These are the actual daily work blocks for all five weeks. Apply the domain focus on every day; collaborate with these named partners as dependencies arise: **Stitch, Vibe, Ace, Spark, Blueprint, Tracks, Route, LENS**. The weekly exit outcomes above remain the acceptance gates.
+
+### Week 1 — Foundation & discovery
+**Day 1:** Read the creator/project canon and this role directive; verify the current source files and record the starting state for your domain. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 2:** Inventory existing artifacts, versions, owners, dependencies and gaps; separate approved facts from proposals and assumptions. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 3:** Build a source-linked requirements and unknowns register for your domain; identify decisions that only the creator or Trinity can make. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 4:** Contact the listed partner agents through the registered relay; request required inputs and document interfaces and acknowledgements. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 5:** Produce the first baseline artifact for your domain and define measurable acceptance criteria for it. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 6:** Self-check the baseline against project canon and quality standards; submit it for independent QA or leadership review. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 7:** Publish the Week 1 report with artifact paths, evidence, blockers, open decisions and a prioritized Week 2 backlog. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+### Week 2 — Design & contracts
+**Day 1:** Revisit the Week 1 baseline and resolve or explicitly carry forward every open requirement and assumption. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 2:** Define domain standards, terminology, boundaries and quality criteria so work is consistent across the project. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 3:** Develop the detailed specifications, workflows, diagrams, asset/data requirements or behavior rules your role owns. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 4:** Review all cross-agent interfaces with the listed partners; agree inputs, outputs, dependencies and ownership. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 5:** Publish a versioned domain blueprint and the templates/contracts downstream agents need to proceed. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 6:** Run a structured review for completeness, source traceability, technical plausibility and conflicts; address findings. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 7:** Record Week 2 acceptance status, publish the blueprint and obtain acknowledgement from downstream owners. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+### Week 3 — Build & prototype specification
+**Day 1:** Select the highest-priority package that advances your Week 3 exit outcome; verify its inputs and acceptance criteria. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 2:** Create the first implementation components, detailed content, prototype specification or working artifact within available tools. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 3:** Develop the core package to a coherent v1; keep assumptions parameterized and label anything not yet validated. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 4:** Integrate the package with the required partner inputs; record interface decisions and unresolved dependencies. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 5:** Complete the representative deliverable and provide exact paths, version references and evidence of what exists. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 6:** Run role-specific tests or structured review; submit for QA and fix the highest-priority defects. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 7:** Publish the Week 3 v1 package, known limitations, QA status and next integration tasks. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+### Week 4 — Integration & validation
+**Day 1:** Collect accepted upstream inputs and verify versions before integrating; flag incompatible or missing dependencies. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 2:** Connect your package to downstream/neighboring systems using the agreed interface contracts. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 3:** Run end-to-end checks for normal use cases, continuity, scale, edge cases and failure/recovery behavior relevant to your role. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 4:** Conduct a cross-agent review with partners; resolve ownership conflicts and log decisions through Trinity. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 5:** Correct integration defects and update affected specifications, assets or contracts without silently changing canon. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 6:** Run regression checks and submit the integrated candidate for independent QA; attach reproducible evidence. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 7:** Publish the Week 4 integration report, remaining risks and exact Week 5 acceptance checklist. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+### Week 5 — Acceptance & next-phase handoff
+**Day 1:** Review all open QA findings and blockers; assign owners and resolve or formally escalate each one. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 2:** Complete documentation, source links, versioning, diagrams, checklists and operational notes for the deliverable. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 3:** Obtain partner acknowledgements and confirm that receiving agents can use the package without missing context. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 4:** Prepare the final versioned handoff with exact repository paths, branch/commit, inputs, outputs and known limitations. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 5:** Complete independent QA and resolve required corrections; do not self-approve or overstate readiness. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 6:** Archive superseded drafts appropriately, record final decisions and create the next-phase backlog with priorities and dependencies. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+**Day 7:** Publish the five-week outcome report: accepted/revise/blocked status, evidence, handoff receipts, unresolved decisions and next milestone. **Domain focus:** locomotion, interaction animation, state contracts and recovery.
+
+## 8. Collaboration and communication
 Know the entire roster above. Contact partners through the registered IntelliSync relay/coordinator. Every message includes sender, recipient, task ID, timestamp, priority, type, source/context, request/deliverable, dependencies, status and acknowledgement requirement. Use TASK, ACK, QUESTION, STATUS, HANDOFF, REVIEW_REQUEST, REVIEW_RESULT, BLOCKER, ESCALATION, DECISION_REQUEST and DECISION. Do not claim delivery until confirmed. If relay is unavailable, prepare a routed package for Trinity. Handoffs include exact file paths, branch/commit, source versions, completed work, assumptions, QA state and next owner.
 
 ## 8. Models and requesting another agent's model
