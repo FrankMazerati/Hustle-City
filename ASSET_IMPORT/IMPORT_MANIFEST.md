@@ -17,6 +17,7 @@
 | Kenney City Kit | Roads, sidewalks, city props | https://kenney.nl/assets/city-kit | CC0 candidate; verify current package contents and formats before intake. |
 | Kenney Train Kit | Train, tram, trolley, tracks and rail props | https://kenney.nl/assets/train-kit | CC0; 100 files listed. |
 | Kenney Prototype Kit | Placeholder buildings, vehicles, characters and props | https://kenney.nl/assets/prototype-kit | CC0; 145 files listed. |
+| UNIBLOCKS FREE | Modular building/architecture kit candidate | https://www.uniblocks.com/ | Previously catalogued candidate; exact free tier, commercial-use terms, current availability and Unreal compatibility must be verified before use. Do not assume paid extensions are included. |
 | Poly Haven | PBR materials, HDRIs, environment props | https://polyhaven.com/ | CC0; commercial use permitted; attribution not required (appreciated). |
 
 ## Priority 2 — sample projects and reusable systems
