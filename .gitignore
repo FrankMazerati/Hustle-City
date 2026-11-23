@@ -1,0 +1,47 @@
+# Unreal Engine generated output
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+*.sln
+*.suo
+*.VC.db
+*.VC.VC.opendb
+*.opendb
+*.sdf
+*.opensdf
+
+# Local asset staging: keep source archives on the external asset drive
+/Content/_Staging/
+
+# Local editor and operating-system files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+*.log
+*.tmp
+
+# Local secrets and environment configuration
+.env
+.env.*
+!.env.example
+
+# Local runtime databases, backups and transient state
+*.sqlite
+*.sqlite3
+*.db
+*.bak
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Download archives should not enter ordinary Git history
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
