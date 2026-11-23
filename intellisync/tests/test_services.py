@@ -61,6 +61,30 @@ class ServiceTests(unittest.TestCase):
         self.assertEqual(second["outcomes"][0]["qa"]["result"], "released:city-builder")
         self.assertEqual(self.runtime.status("HC-SERVICE-TEST")[0]["current_station"], "city-builder")
 
+    def test_production_and_qa_phases_are_separated(self):
+        replies = [
+            "World Builder deliverable: terrain and elevation.",
+            json.dumps({"decision": "approve", "feedback": "Checks passed.",
+                        "checks": ["terrain", "elevation"], "confidence": 0.96})
+        ]
+        services = AgentServices(self.runtime, self.agent_config, FakeOllama(replies))
+        scheduler = Scheduler(services, max_workers=1)
+        self.create()
+
+        production = scheduler.tick("production")
+        self.assertEqual(production["outcomes"][0]["result"], "submitted_for_qa")
+        self.assertEqual(self.runtime.status("HC-SERVICE-TEST")[0]["status"], "qa_pending")
+
+        qa = scheduler.tick("qa")
+        self.assertEqual(qa["outcomes"][0]["qa"]["result"], "released:city-builder")
+        self.assertEqual(self.runtime.status("HC-SERVICE-TEST")[0]["current_station"], "city-builder")
+
+    def test_invalid_scheduler_phase_is_rejected(self):
+        services = AgentServices(self.runtime, self.agent_config, FakeOllama([]))
+        scheduler = Scheduler(services)
+        with self.assertRaises(ValueError):
+            scheduler.tick("unrecognized")
+
     def test_low_confidence_approval_is_held_for_human_review(self):
         replies = [
             "Draft deliverable.",
