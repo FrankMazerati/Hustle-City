@@ -49,6 +49,34 @@ Every agent is accountable for:
 
 **QA stage decisions:** QA-1 may mark an intake incomplete or ready for triage; QA-2 may assign/reassign a defect owner and repair scope; QA-3 may mark a version verified or failed against original criteria. A QA pass does not authorize a canon change, paid action or merge to `main`.
 
+### 2.4 Role-to-model assignment register
+
+The repository roster/configuration remains the source of truth for local model tags. These are assigned resources, not evidence that a worker is instantiated, loaded or active. Agents must not self-select, swap, or run a second model without Creator approval and a coordinated roster/configuration change.
+
+| Agent | Assigned role | Local model / execution assignment |
+|---|---|---|
+| Atlas | World Architect | `qwen3:0.6b` |
+| Brick | City Builder | `qwen2.5-coder:0.5b` |
+| Blueprint | Building Architect | `qwen2.5-coder:1.5b` |
+| Vibe | Sims Creator | `gemma3:1b` |
+| Stitch | Fashion Director | `gemma3:270m-it-qat` |
+| Motion | Animation Director | `smollm2:1.7b-instruct-q2_K` |
+| Torque | Vehicle Director | `codegemma:2b` |
+| Tracks | Transportation Director | `qwen2.5:0.5b` |
+| Route | Traffic & Navigation Director | `tinyllama:1.1b` |
+| Ace | Gameplay Director | `deepseek-r1:1.5b` |
+| Spark | Events & Social Director | `llama3.2:1b` |
+| Lockdown | QA & Integration Director | `granite3.2:2b` |
+| QA-1 | Quality Intake & Evidence Analyst | `qwen3:0.6b` |
+| QA-2 | Quality Triage & Routing Coordinator | `deepseek-r1:1.5b` |
+| QA-3 | Independent Verification & Release Analyst | `granite3.2:2b` |
+| Trinity | Overall Coordinator | Deterministic coordinator service; no LLM model assigned |
+| SCRIBE | Story Director | Model assignment not specified in the approved roster |
+| LENS | Cinematic Camera Director | Model assignment not specified in the approved roster |
+| Nexus | Backend & Multiplayer | Model assignment pending |
+
+**Execution rule:** only one local model inference may run at a time on the shared mobile host. Trinity's deterministic coordination does not consume a specialist LLM assignment. Cloud providers remain disabled by default; no paid fallback or cloud escalation is permitted without explicit Creator approval and verified provider/model/data terms. Nexus cannot be activated until its model and runtime assignment are explicitly approved and configured.
+
 ## 3. Work lifecycle and mandatory obligations
 
 Every task follows this control path unless Trinity records a justified exception:
