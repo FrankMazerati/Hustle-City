@@ -20,6 +20,10 @@ Hustle City is a cinematic, realistic 3D social-world/city-life game built prima
 - [Dedicated Hustle City cohort](agents/cohorts/hustle-city-core/README.md)
 - [Dedicated runtime pilot and activation steps](agents/runtime/hustle-city/README.md)
 - [IntelliSync package-relay runtime](intellisync/README.md)
+- [17-agent local workforce and coordinator structure](intellisync/config/coordination.json)
+- [Library workstation and portable project handoff](planning/LIBRARY_WORKSTATION_QUICKSTART.md)
+- [Opening cinematic and Bella Rose introduction brief](planning/OPENING_SEQUENCE_PRODUCTION_BRIEF.md)
+- [Asset import manifest](ASSET_IMPORT/IMPORT_MANIFEST.md)
 - [Rolling assembly-line production standard](agents/INTELLISYNC_ASSEMBLY_LINE.md)
 - [Agent communication protocol](agents/COMMUNICATION_PROTOCOL.md)
 - [Cross-system integration contracts](architecture/INTEGRATION_CONTRACTS.md)
@@ -40,3 +44,6 @@ Unreal Engine 5 is the primary production engine. Unity 6 is the secondary compa
 
 ## Current status
 The ten-person named Hustle City cohort and five-role manual execution pilot are defined in GitHub. Models remain unassigned, provider secrets are not confirmed, and no live agent cycle has been run from this repository. The first pilot cycle is documentation/specification only. An initial database model and SQL schema draft now exist in the repository, but no schema has been applied to Supabase. The active Supabase project currently visible has a general command-center name and has not been confirmed as the Hustle City project. Godot implementation status must be tracked separately from design documentation.
+
+## Current local development handoff
+The approved workforce target is 17 local agents (SCRIBE, LENS, three QA supervisors and twelve production specialists) coordinated externally by ChatGPT. Model mappings and the scheduler remain disabled until the device inventory, model tags, QA ownership and hardware capacity are verified. Large binary assets belong on the external asset drive or in their original asset-provider libraries, not in Git history. See the library workstation quickstart for the portable workflow.
