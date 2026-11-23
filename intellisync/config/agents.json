@@ -33,7 +33,31 @@
       "gemma3:4b",
       "qwen2.5-coder:3b"
     ],
-    "note": "The three planned pulls are not counted as installed until the user confirms successful downloads and Ollama list output."
+    "note": "13 user-reported chat-capable local models plus one embedding-only model are listed as installed; three additional chat-model pulls are planned, not confirmed. If all three pulls complete, that yields 16 chat-capable models plus one embedding model, not 17 distinct chat models. Reuse a suitable chat model for two low-concurrency roles if needed; do not assign the embedding model as a chat worker.",
+    "chat_model_count": 13,
+    "embedding_only": [
+      "embeddinggemma:300m-qat-q4_0"
+    ],
+    "chat_capable_installed": [
+      "deepseek-r1:1.5b",
+      "qwen3:0.6b",
+      "gemma3:1b",
+      "gemma3:270m-it-qat",
+      "llama3.2:1b",
+      "smollm2:1.7b-instruct-q2_K",
+      "smollm2:135m",
+      "tinyllama:1.1b",
+      "qwen2.5-coder:1.5b",
+      "qwen2.5-coder:0.5b",
+      "granite3.2:2b",
+      "codegemma:2b",
+      "qwen2.5:0.5b"
+    ],
+    "planned_chat_models": [
+      "qwen3.5:4b",
+      "gemma3:4b",
+      "qwen2.5-coder:3b"
+    ]
   },
   "qa": {
     "minimum_auto_approval_confidence": 0.85,
@@ -56,7 +80,8 @@
     "Gemini and OpenRouter may be configured only as optional free-tier escalation/backup paths after credentials and limits are verified; they are not local defaults.",
     "No paid provider fallback is implemented in this service.",
     "QA supervisors review only their four assigned production specialists; creative-lead deliverables require independent review and may not self-approve.",
-    "The 20-minute production, 5-minute QA, 5-minute correction cadence with optional 10-minute extension remains the intended cycle."
+    "The 20-minute production, 5-minute QA, 5-minute correction cadence with optional 10-minute extension remains the intended cycle.",
+    "Model count clarification: embeddinggemma is an embedding model, not a normal Ollama chat worker. The current reported inventory is 13 chat-capable models + 1 embedding model; the three planned pulls would bring the chat-capable count to 16."
   ],
   "cycle": {
     "production_seconds": 1200,
