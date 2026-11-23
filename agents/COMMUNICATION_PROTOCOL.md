@@ -4,14 +4,14 @@
 
 Hustle City agents operate as one coordinated production team, not isolated chatbots or sealed departments. Every agent must be able to discover the team, understand who owns each responsibility, communicate directly with relevant colleagues, and coordinate work across specialties.
 
-The approved target structure is **ChatGPT as the external overall coordinator** (not a local Ollama agent), with **17 local agents**: two creative leads (SCRIBE and LENS), three QA supervisors, and twelve production specialists. The QA supervisors report to ChatGPT and each owns quality review for a designated group of four production specialists. There is no local Trinity agent or Trinity model. QA ownership determines review responsibility; it does **not** restrict who may communicate with whom.
+The approved target structure is **ChatGPT as the external overall coordinator** (not a local Ollama agent), with **17 local agents**: two creative leads (SCRIBE and LENS), three QA supervisors, and twelve production specialists. The QA supervisors report to ChatGPT and each owns quality review for a designated group of four production specialists. There is no local coordinator agent or coordinator model. QA ownership determines review responsibility; it does **not** restrict who may communicate with whom.
 
 This document describes the intended IntelliSync operating rules. Repository instructions do not, by themselves, prove that a live messaging service, agent runtime, model connection, or automatic repository synchronization is active. Runtime implementation must provide the channels, delivery, persistence, and notifications described here.
 
 ## Communication is open; authority remains structured
 
 - All 12 production specialists, both creative leads, and all three QA supervisors are members of the same communication network. ChatGPT participates as the external coordinator.
-- Any agent may initiate a relevant direct conversation with any other agent, including across departments and QA groups. Agents do not need the creator's or Trinity's advance permission merely to ask a question, share information, coordinate a dependency, request a review, or resolve a routine working issue.
+- Any agent may initiate a relevant direct conversation with any other agent, including across departments and QA groups. Agents do not need the creator's or ChatGPT's advance permission merely to ask a question, share information, coordinate a dependency, request a review, or resolve a routine working issue.
 - Agents may join relevant department and cross-department discussions, share progress, flag risks, and propose solutions.
 - An agent must not take over another agent's assigned deliverable, change another role's ownership, or silently alter approved project canon.
 - Open communication is not open authority. Product-direction changes, scope changes, priority overrides, permission changes, irreversible actions, and changes to approved shared contracts follow the appropriate approval path.
@@ -32,7 +32,7 @@ Department feeds are collaboration spaces, not communication barriers. A member 
 
 ### 2. Cross-department communication feed
 
-Provide a team-wide cross-department feed and direct agent-to-agent messaging. Any specialist may contact any other specialist, any QA supervisor, or Trinity when a task crosses ownership boundaries or requires expertise elsewhere.
+Provide a team-wide cross-department feed and direct agent-to-agent messaging. Any specialist may contact any other specialist, any QA supervisor, or ChatGPT when a task crosses ownership boundaries or requires expertise elsewhere.
 
 Use cross-department communication for:
 - interface and asset dependencies;
@@ -49,9 +49,9 @@ The command feed connects the external coordinator (ChatGPT) and all three QA su
 Production specialists must be able to:
 - contact their assigned QA supervisor directly about reviews, findings, evidence, and corrections;
 - contact another QA supervisor when a cross-department issue requires that supervisor's expertise or the assigned reviewer is unavailable;
-- contact Trinity directly for blockers, conflicting direction, priority or ownership disputes, urgent risks, or matters that cannot be resolved at working level.
+- contact ChatGPT directly for blockers, conflicting direction, priority or ownership disputes, urgent risks, or matters that cannot be resolved at working level.
 
-QA supervisors may communicate directly with one another and with every production specialist. ChatGPT coordinates and audits QA decisions; QA supervisors do not sit above Trinity.
+QA supervisors may communicate directly with one another and with every production specialist. ChatGPT coordinates and audits QA decisions; QA supervisors report to ChatGPT; the creator remains final authority.
 
 ## Team directory and shared context
 
@@ -81,11 +81,11 @@ All specialists follow [INTELLISYNC_ASSEMBLY_LINE.md](INTELLISYNC_ASSEMBLY_LINE.
 - The assigned QA supervisor reviews the actual artifact against its acceptance criteria, project canon, relevant contracts, and applicable tests. A creator's self-report is not QA evidence.
 - If work fails, QA sends actionable findings, evidence, severity, and correction instructions to the original owner. The owner corrects and resubmits; QA retests the new version.
 - QA tracks the exact artifact version under review. Do not approve a stale version or allow conflicting reviewers to review different versions unknowingly.
-- Once QA passes a deliverable, notify the owner, relevant downstream agents, and Trinity as appropriate. The approved artifact becomes eligible for dependent handoff.
+- Once QA passes a deliverable, notify the owner, relevant downstream agents, and ChatGPT as appropriate. The approved artifact becomes eligible for dependent handoff.
 - Independent work continues when another task fails. Block only work that genuinely depends on the unapproved output; use an explicitly agreed interface or mock when appropriate.
 - QA supervisors may help one another during overload while preserving the designated supervisor's ownership and recording who performed each review.
-- No QA supervisor may approve their own work. QA-supervisor deliverables require independent review coordinated by Trinity.
-- Repeated failures, unresolved disagreements, missed critical reviews, or conflicts between QA supervisors escalate to Trinity.
+- No QA supervisor may approve their own work. QA-supervisor deliverables require independent review coordinated by ChatGPT.
+- Repeated failures, unresolved disagreements, missed critical reviews, or conflicts between QA supervisors escalate to ChatGPT.
 - Time targets and review service levels are alerts and planning aids, never permission to stop unfinished work or approve work without evidence.
 
 ## Change proposals and dependency notifications
@@ -115,9 +115,9 @@ Agents may discuss and develop proposals autonomously. Approval is required only
 
 ## Conflict resolution and approval boundaries
 
-Agents first check approved canon, decisions, and contracts. Resolve routine misunderstandings directly and record the outcome when it affects work. Technical owners document interface impact; QA documents quality and risk impact; Trinity coordinates competing priorities, cross-team conflicts, and QA escalations.
+Agents first check approved canon, decisions, and contracts. Resolve routine misunderstandings directly and record the outcome when it affects work. Technical owners document interface impact; QA documents quality and risk impact; ChatGPT coordinates competing priorities, cross-team conflicts, and QA escalations.
 
-The creator retains final authority over product vision, creative direction, and major scope decisions. Trinity may coordinate and recommend but must not silently replace the creator's decision. No agent may silently overwrite another department's approved decision.
+The creator retains final authority over product vision, creative direction, and major scope decisions. ChatGPT may coordinate and recommend but must not silently replace the creator's decision. No agent may silently overwrite another department's approved decision.
 
 ## Task envelope
 
@@ -137,7 +137,7 @@ deliverables: [paths, schemas, code, evidence]
 acceptance_criteria: [testable checks]
 reviewers: [affected agent IDs]
 risk: low|medium|high
-approval_required: none|Trinity|creator
+approval_required: none|ChatGPT|creator
 status: proposed|ready|in_progress|blocked|review|accepted|rejected
 ```
 
