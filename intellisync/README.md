@@ -1,63 +1,49 @@
-# Hustle City IntelliSync Runtime — starter implementation
+# Hustle City IntelliSync Runtime
 
-This is the first executable orchestration layer for the rolling package relay. It is deliberately separate from the older six-role manual GitHub pilot and does not activate that workflow.
+IntelliSync is the durable work-package relay, agent execution and coordination foundation for Hustle City.
 
-## What this version does
+## Workforce configuration
 
-- Creates durable work packages in SQLite.
-- Sends each package through the configured station sequence.
-- Lets the assigned station agent claim and submit a deliverable.
-- Moves each submission into its assigned QA supervisor's review queue.
-- Releases the next station only after QA approval.
-- Sends rejected work back to the same station for correction.
-- Prevents self-approval and review by the wrong QA supervisor.
-- Records event history and ignores repeated event keys.
-- Preserves queue state across process restarts.
-- Supports multiple packages in the same database; independent packages can be in progress at different stations.
+The canonical 12-specialist roster is in [agents/hustle-city-core-roster.json](../agents/hustle-city-core-roster.json). Department collaboration, QA roles and continuous-worker behavior are documented in [agents/WORKFORCE_OPERATING_MODEL.md](../agents/WORKFORCE_OPERATING_MODEL.md). Active Directory-style application groups and permissions are specified in [agents/ACCESS_CONTROL_POLICY.json](../agents/ACCESS_CONTROL_POLICY.json).
 
-## What it does not do yet
+Local Ollama is the configured default backend. Explicit model assignments for the 12 specialists and three QA supervisors are in `config/agents.json`. The shared mobile host is configured for one active model call at a time. Assignments do not prove that the model tags exist on the current device or that agents are running; the activation checklist requires a live inventory check and one bounded inference per assigned model.
 
-- It does not autonomously invoke LLMs or run 16 agents.
-- It does not yet run continuous background workers or enforce a global concurrency semaphore.
-- It does not connect to Supabase. SQLite is a local starter adapter pending confirmation of the dedicated project.
-- It does not change the existing model router or old manual GitHub pilot.
-- It does not merge code, deploy services, spend money, or activate schedules.
+## Implemented runtime capabilities
 
-The starter pipeline contains the geography-to-city opening stations: World Builder → City Builder → Roads & Infrastructure → Building & Architecture. The exact QA-supervisor-to-specialist ownership map is not guessed. Supply an explicit QA mapping for every station at package creation until the approved roster mapping is configured.
+- SQLite persistence for packages, station runs, events and agent messages.
+- Configurable station pipeline, station claims and deliverable submission.
+- Independent QA review gate, correction loop and next-station release.
+- Duplicate-event protection and restart recovery.
+- Trinity status snapshot, QA oversight record and escalation services.
+- Bounded scheduler and Ollama chat adapter.
+- Gemini and OpenRouter adapters with environment-only credentials and fail-closed free-only eligibility gates.
 
-## Requirements
+## Not yet implemented or activated
 
-Python 3.10+; standard library only.
+- Group-aware task fan-out so all members of a department can be selected for work.
+- Runtime enforcement of the application-level group/permission policy.
+- The complete QA-1 intake → QA-2 routing → production correction → QA-3 independent verification workflow, including QA-3 returns to production or QA-1 reassessment.
+- A verified local model inventory and inference test for every assignment on the target device.
+- A continuous local service with heartbeat, graceful shutdown, resource-pressure handling and operational monitoring.
+- A persistent hosted worker, 24/7 hosting or Supabase persistence.
 
-## Run
+For those reasons, `scheduler.enabled` remains false and production stations do not yet have a legacy single-stage QA owner configured. The scheduler must not be started until the missing workflow and group execution support are implemented and tested. The current one-cycle GitHub Actions workflow is manually gated and is not a continuous worker.
 
-    python -m intellisync.runtime init
-    python -m unittest discover -s intellisync/tests -v
+## Hosted providers
 
-Create a package and map every station to its approved QA supervisor:
+Gemini and OpenRouter remain disabled by default. They may be enabled only after the exact model's current zero-cost quota and data terms are verified. API keys belong in GitHub Secrets; model IDs belong in repository variables. If no verified free provider is available, work remains queued. Paid fallback is prohibited.
 
-    python -m intellisync.runtime create --type geography_to_city --payload '{"objective":"Build the approved world-to-city foundation"}' --qa-map world-builder=QA-1,city-builder=QA-1,roads-infrastructure=QA-2,building-architecture=QA-2
+## Tests
 
-The QA IDs above are examples only; replace them with the actual approved ownership map. Do not copy the example as a permanent assignment.
+```bash
+python -m unittest discover -s intellisync/tests -v
+```
 
-Then use the package ID returned by create with the claim, submit, review, status and recover commands. A review decision must come from the configured QA supervisor.
+## Safety and authority
 
-## State model
-
-ready → in_progress → qa_pending → approved → next station ready
-
-A QA rejection creates a correction state for the same station:
-
-qa_pending → rejected attempt + new ready correction attempt → in_progress → qa_pending
-
-After the last station passes QA, the package becomes complete. Downstream work never starts from an unapproved station output.
-
-## Safety and operating rules
-
-- Configure QA ownership explicitly; no inferred roster mapping.
-- Agent IDs in the starter pipeline are functional role IDs, not approved permanent agent names.
-- SCRIBE and LENS remain separate creative leads and are not forced into this geography pipeline.
-- Trinity remains the coordinator above the three QA supervisors; coordinator audit/assignment services are a later layer.
-- Do not mark a model endpoint verified until it is tested on the actual device.
-- Keep API keys outside Git.
-- Do not connect or mutate a Supabase project until the creator confirms the dedicated IntelliSync database.
+- QA may not approve its own work.
+- Low-confidence or malformed QA results remain pending for human review.
+- Trinity coordinates and audits; it does not silently alter creator-approved canon.
+- Agents may communicate across departments, but tool and write permissions remain least-privilege.
+- No agent writes to `main`, merges pull requests, changes roster membership or spends money without explicit creator authorization.
+- Do not connect or mutate Supabase until the dedicated IntelliSync database is confirmed.

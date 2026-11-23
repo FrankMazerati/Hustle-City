@@ -1,0 +1,13 @@
+{
+  "FileVersion": 3,
+  "EngineAssociation": "",
+  "Category": "Games",
+  "Description": "Hustle City — cinematic open-world city-life and business empire game.",
+  "Modules": [
+    {
+      "Name": "HustleCity",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ]
+}

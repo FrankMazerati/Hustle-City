@@ -1,0 +1,299 @@
+{
+  "schema_version": "1.0.0",
+  "project": "Hustle City",
+  "status": "approved_target_roster_not_live_instances",
+  "leadership": {
+    "coordinator": {
+      "id": "Trinity",
+      "role": "Overall Coordinator",
+      "model": "deterministic_coordinator_service_no_llm_assigned"
+    },
+    "qa_supervisors": [
+      "QA-1",
+      "QA-2",
+      "QA-3"
+    ]
+  },
+  "departments": [
+    {
+      "id": "city-fabric-infrastructure",
+      "name": "World, City, Buildings & Streets",
+      "purpose": "Own the physical city fabric as one coordinated department: world geography, city plan, districts, building architecture, street geometry, sidewalks, intersections, traffic and navigation.",
+      "members": [
+        "atlas",
+        "brick",
+        "blueprint",
+        "route"
+      ]
+    },
+    {
+      "id": "people-appearance",
+      "name": "People, Appearance & Animation",
+      "purpose": "Create believable characters, NPCs, fashion, appearance, movement and animation; coordinate scale, rigs, interaction points and social context.",
+      "members": [
+        "vibe",
+        "stitch",
+        "motion"
+      ]
+    },
+    {
+      "id": "vehicles-transportation",
+      "name": "Vehicles & Transportation",
+      "purpose": "Design and integrate vehicles, rail/transit networks, passenger operations, vehicle physics, routes, stops and mobility systems.",
+      "members": [
+        "torque",
+        "tracks"
+      ]
+    },
+    {
+      "id": "gameplay-social",
+      "name": "Gameplay, Events & Quality",
+      "purpose": "Own gameplay loops, social systems, city events, integration testing, cross-system quality and release readiness.",
+      "members": [
+        "ace",
+        "spark",
+        "lockdown"
+      ]
+    }
+  ],
+  "specialists": [
+    {
+      "id": "atlas",
+      "name": "Atlas",
+      "role": "World Architect",
+      "slot": 1,
+      "department": "city-fabric-infrastructure",
+      "model": "qwen3:0.6b",
+      "responsibilities": [
+        "World geography and scale",
+        "World-to-city spatial continuity",
+        "Terrain, water, boundaries and world context"
+      ]
+    },
+    {
+      "id": "brick",
+      "name": "Brick",
+      "role": "City Builder",
+      "slot": 2,
+      "department": "city-fabric-infrastructure",
+      "model": "qwen2.5-coder:0.5b",
+      "responsibilities": [
+        "City masterplan and district layout",
+        "Street/block relationships",
+        "City grid and urban circulation"
+      ]
+    },
+    {
+      "id": "blueprint",
+      "name": "Blueprint",
+      "role": "Building Architect",
+      "slot": 3,
+      "department": "city-fabric-infrastructure",
+      "model": "qwen2.5-coder:1.5b",
+      "responsibilities": [
+        "Building architecture and modular systems",
+        "Interior/exterior spatial logic",
+        "Scale, access, structure and interaction anchors"
+      ]
+    },
+    {
+      "id": "vibe",
+      "name": "Vibe",
+      "role": "Sims Creator",
+      "slot": 4,
+      "department": "people-appearance",
+      "model": "gemma3:1b",
+      "responsibilities": [
+        "Character and NPC behavior",
+        "Social simulation and everyday life",
+        "Contextual character interactions"
+      ]
+    },
+    {
+      "id": "stitch",
+      "name": "Stitch",
+      "role": "Fashion Director",
+      "slot": 5,
+      "department": "people-appearance",
+      "model": "gemma3:270m-it-qat",
+      "responsibilities": [
+        "Fashion collections and styling",
+        "Character appearance and customization",
+        "Clothing/rig compatibility and cultural consistency"
+      ]
+    },
+    {
+      "id": "motion",
+      "name": "Motion",
+      "role": "Animation Director",
+      "slot": 6,
+      "department": "people-appearance",
+      "model": "smollm2:1.7b-instruct-q2_K",
+      "responsibilities": [
+        "Character animation and motion",
+        "Locomotion, gestures and interactions",
+        "Animation continuity and retargeting requirements"
+      ]
+    },
+    {
+      "id": "torque",
+      "name": "Torque",
+      "role": "Vehicle Director",
+      "slot": 7,
+      "department": "vehicles-transportation",
+      "model": "codegemma:2b",
+      "responsibilities": [
+        "Vehicle design and behavior",
+        "Vehicle physics and handling requirements",
+        "Vehicle asset and interaction integration"
+      ]
+    },
+    {
+      "id": "tracks",
+      "name": "Tracks",
+      "role": "Transportation Director",
+      "slot": 8,
+      "department": "vehicles-transportation",
+      "model": "qwen2.5:0.5b",
+      "responsibilities": [
+        "HIM and HCTA transport networks",
+        "Stations, passenger circulation and transfers",
+        "Transit operations, schedules and route dependencies"
+      ]
+    },
+    {
+      "id": "route",
+      "name": "Route",
+      "role": "Traffic & Navigation Director",
+      "slot": 9,
+      "department": "city-fabric-infrastructure",
+      "model": "tinyllama:1.1b",
+      "responsibilities": [
+        "Traffic systems and road navigation",
+        "Street/vehicle/pedestrian route connectivity",
+        "Intersections, signals and traffic integration"
+      ]
+    },
+    {
+      "id": "ace",
+      "name": "Ace",
+      "role": "Gameplay Director",
+      "slot": 10,
+      "department": "gameplay-social",
+      "model": "deepseek-r1:1.5b",
+      "responsibilities": [
+        "Gameplay systems and player activities",
+        "Progression and interaction loops",
+        "Gameplay integration and acceptance criteria"
+      ]
+    },
+    {
+      "id": "spark",
+      "name": "Spark",
+      "role": "Events & Social Director",
+      "slot": 11,
+      "department": "gameplay-social",
+      "model": "llama3.2:1b",
+      "responsibilities": [
+        "City events and social activities",
+        "Player/NPC social systems",
+        "Event orchestration and community experiences"
+      ]
+    },
+    {
+      "id": "lockdown",
+      "name": "Lockdown",
+      "role": "QA & Integration Director",
+      "slot": 12,
+      "department": "gameplay-social",
+      "model": "granite3.2:2b",
+      "responsibilities": [
+        "Integration QA and defect verification support",
+        "Cross-system compatibility and regression planning",
+        "Release readiness evidence and risk tracking"
+      ]
+    }
+  ],
+  "qa": [
+    {
+      "id": "qa-1",
+      "title": "Quality Intake & Evidence Analyst",
+      "model": "qwen3:0.6b",
+      "supervises_slots": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "supervises_agents": [
+        "atlas",
+        "brick",
+        "blueprint",
+        "vibe"
+      ],
+      "display_name": "QA-1"
+    },
+    {
+      "id": "qa-2",
+      "title": "Quality Triage & Routing Coordinator",
+      "model": "deepseek-r1:1.5b",
+      "supervises_slots": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "supervises_agents": [
+        "stitch",
+        "motion",
+        "torque",
+        "tracks"
+      ],
+      "display_name": "QA-2"
+    },
+    {
+      "id": "qa-3",
+      "title": "Independent Verification & Release Analyst",
+      "model": "granite3.2:2b",
+      "supervises_slots": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "supervises_agents": [
+        "route",
+        "ace",
+        "spark",
+        "lockdown"
+      ],
+      "display_name": "QA-3"
+    }
+  ],
+  "creative_leads": [
+    {
+      "id": "SCRIBE",
+      "role": "Story Director",
+      "status": "separate_peer_creative_lead",
+      "reports_to": "Trinity"
+    },
+    {
+      "id": "LENS",
+      "role": "Cinematic Camera Director",
+      "status": "separate_peer_creative_lead",
+      "reports_to": "Trinity"
+    }
+  ],
+  "platform_roles": [
+    {
+      "id": "Nexus",
+      "role": "Backend & Multiplayer",
+      "status": "separate_platform_role; model_assignment_pending"
+    }
+  ],
+  "resource_policy": {
+    "models_are_preassigned": true,
+    "only_one_active_local_model_call_at_a_time": true,
+    "model_assignments_are_not_proof_of_live_workers": true
+  }
+}

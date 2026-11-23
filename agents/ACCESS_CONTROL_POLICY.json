@@ -1,0 +1,203 @@
+{
+  "schema_version": "1.0.0",
+  "policy_name": "Hustle City IntelliSync Workforce Access Control",
+  "model": "role_based_access_control",
+  "analogy": "Active Directory-style groups and scoped permissions; this file is policy configuration, not proof of an OS domain or runtime-enforced identity service.",
+  "defaults": {
+    "deny_by_default": true,
+    "least_privilege": true,
+    "explicit_membership_required": true,
+    "all_actions_audited": true,
+    "credentials_never_in_agent_messages": true,
+    "production_main_branch_write": false,
+    "creator_approval_for_canon_changes": true
+  },
+  "groups": [
+    {
+      "id": "HC-ALL-AGENTS",
+      "members": [
+        "Trinity",
+        "qa-1",
+        "qa-2",
+        "qa-3",
+        "atlas",
+        "brick",
+        "blueprint",
+        "vibe",
+        "stitch",
+        "motion",
+        "torque",
+        "tracks",
+        "route",
+        "ace",
+        "spark",
+        "lockdown",
+        "SCRIBE",
+        "LENS",
+        "Nexus"
+      ],
+      "permissions": [
+        "read_approved_canon",
+        "read_shared_schemas",
+        "read_team_directory",
+        "send_direct_message",
+        "read_relevant_cross_department_feed",
+        "submit_status_and_blockers"
+      ]
+    },
+    {
+      "id": "HC-CITY-FABRIC",
+      "members": [
+        "atlas",
+        "brick",
+        "blueprint",
+        "route"
+      ],
+      "permissions": [
+        "read_city_fabric_workspace",
+        "write_owned_city_fabric_drafts",
+        "submit_city_fabric_deliverables",
+        "request_cross_department_review"
+      ]
+    },
+    {
+      "id": "HC-PEOPLE-APPEARANCE",
+      "members": [
+        "vibe",
+        "stitch",
+        "motion"
+      ],
+      "permissions": [
+        "read_people_workspace",
+        "write_owned_people_drafts",
+        "submit_people_deliverables",
+        "request_cross_department_review"
+      ]
+    },
+    {
+      "id": "HC-VEHICLES-TRANSPORT",
+      "members": [
+        "torque",
+        "tracks"
+      ],
+      "permissions": [
+        "read_mobility_workspace",
+        "write_owned_mobility_drafts",
+        "submit_mobility_deliverables",
+        "request_cross_department_review"
+      ]
+    },
+    {
+      "id": "HC-GAMEPLAY-QUALITY",
+      "members": [
+        "ace",
+        "spark",
+        "lockdown"
+      ],
+      "permissions": [
+        "read_gameplay_workspace",
+        "write_owned_gameplay_drafts",
+        "submit_gameplay_deliverables",
+        "submit_test_evidence"
+      ]
+    },
+    {
+      "id": "HC-QA-INTAKE",
+      "members": [
+        "qa-1"
+      ],
+      "permissions": [
+        "read_all_submitted_artifacts",
+        "create_defect_records",
+        "attach_evidence",
+        "set_severity",
+        "request_clarification",
+        "route_report_to_QA2"
+      ]
+    },
+    {
+      "id": "HC-QA-ROUTING",
+      "members": [
+        "qa-2"
+      ],
+      "permissions": [
+        "read_QA1_reports",
+        "assign_production_owner",
+        "set_priority_and_dependencies",
+        "route_work_to_departments",
+        "track_rework"
+      ]
+    },
+    {
+      "id": "HC-QA-VERIFICATION",
+      "members": [
+        "qa-3"
+      ],
+      "permissions": [
+        "read_original_issue_and_fix",
+        "run_independent_verification",
+        "record_pass_fail",
+        "route_failed_fix_to_owner",
+        "return_unclear_issue_to_QA1",
+        "release_verified_artifact"
+      ]
+    },
+    {
+      "id": "HC-TRINITY-COORDINATION",
+      "members": [
+        "Trinity"
+      ],
+      "permissions": [
+        "read_all_project_status",
+        "assign_and_rebalance_work",
+        "resolve_department_conflicts",
+        "audit_QA_decisions",
+        "escalate_blockers",
+        "coordinate_handoffs",
+        "propose_policy_changes"
+      ]
+    },
+    {
+      "id": "HC-CREATIVE-LEADS",
+      "members": [
+        "SCRIBE",
+        "LENS"
+      ],
+      "permissions": [
+        "read_approved_canon",
+        "write_owned_story_or_cinematic_drafts",
+        "coordinate_with_all_departments",
+        "request_creator_approval_for_canon_changes"
+      ]
+    },
+    {
+      "id": "HC-PLATFORM",
+      "members": [
+        "Nexus"
+      ],
+      "permissions": [
+        "read_approved_interfaces",
+        "write_owned_backend_drafts",
+        "propose_schema_changes",
+        "request_security_and_QA_review"
+      ]
+    }
+  ],
+  "restricted_permissions": {
+    "approve_own_work": "denied",
+    "modify_creator_approved_canon": "creator_approval_required",
+    "merge_to_main": "creator_approval_required_and_disabled_for_agents",
+    "change_agent_roster_or_group_membership": "Trinity_proposal_plus_creator_approval",
+    "access_API_keys_or_secrets": "never_exposed_to_agents",
+    "spend_money_or_enable_paid_API": "prohibited_without_explicit_creator_approval",
+    "delete_shared_artifacts_or_history": "creator_approval_required"
+  },
+  "communication": {
+    "team_feed": "all relevant agents",
+    "department_feeds": "members plus assigned QA supervisor",
+    "cross_department_direct_messages": "allowed",
+    "command_feed": "Trinity and QA supervisors with escalation access",
+    "no_silo_rule": "department membership never blocks relevant cross-department communication"
+  },
+  "enforcement_status": "policy_defined_runtime_enforcement_pending"
+}

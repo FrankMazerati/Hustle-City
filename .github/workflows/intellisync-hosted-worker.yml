@@ -1,0 +1,38 @@
+name: IntelliSync hosted worker (manual, guarded)
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_run:
+        description: "Type RUN to permit one IntelliSync queue cycle"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: intellisync-hosted-worker
+  cancel-in-progress: false
+
+jobs:
+  one-cycle:
+    if: ${{ inputs.confirm_run == 'RUN' && vars.INTELLISYNC_ENABLE_HOSTED_WORKERS == 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+      OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run IntelliSync tests
+        run: python -m unittest discover -s intellisync/tests -v
+      - name: Process one bounded queue cycle
+        run: python -m intellisync.services --once --max-workers 1

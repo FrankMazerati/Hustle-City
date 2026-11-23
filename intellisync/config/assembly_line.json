@@ -1,37 +1,90 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "project": "Hustle City",
-  "runtime_mode": "package_relay",
-  "note": "Starter pipeline only. QA ownership must be explicitly configured for every station before package creation. Do not infer QA assignments from station order.",
+  "runtime_mode": "grouped_package_relay",
+  "note": "Four production departments are defined. Multi-agent group fan-out and the three-stage QA workflow are specified but not yet implemented in the current scheduler. Do not activate until those runtime gates pass.",
   "stations": [
     {
-      "station_id": "world-builder",
-      "role": "World Builder",
-      "agent_id": "world-builder",
-      "qa_supervisor_id": null
+      "station_id": "city-fabric-infrastructure",
+      "role": "World, City, Buildings & Streets Department",
+      "agent_id": "atlas",
+      "group_id": "city-fabric-infrastructure",
+      "qa_supervisor_id": null,
+      "qa_scope": "pending_three_stage_workflow"
     },
     {
-      "station_id": "city-builder",
-      "role": "City Builder",
-      "agent_id": "city-builder",
-      "qa_supervisor_id": null
+      "station_id": "people-appearance",
+      "role": "People, Appearance & Animation Department",
+      "agent_id": "vibe",
+      "group_id": "people-appearance",
+      "qa_supervisor_id": null,
+      "qa_scope": "pending_three_stage_workflow"
     },
     {
-      "station_id": "roads-infrastructure",
-      "role": "Roads & Infrastructure",
-      "agent_id": "roads-infrastructure",
-      "qa_supervisor_id": null
+      "station_id": "vehicles-transportation",
+      "role": "Vehicles & Transportation Department",
+      "agent_id": "torque",
+      "group_id": "vehicles-transportation",
+      "qa_supervisor_id": null,
+      "qa_scope": "pending_three_stage_workflow"
     },
     {
-      "station_id": "building-architecture",
-      "role": "Building & Architecture",
-      "agent_id": "building-architecture",
-      "qa_supervisor_id": null
+      "station_id": "gameplay-social",
+      "role": "Gameplay, Events & Quality Department",
+      "agent_id": "ace",
+      "group_id": "gameplay-social",
+      "qa_supervisor_id": null,
+      "qa_scope": "pending_three_stage_workflow"
     }
   ],
   "defaults": {
     "database": "data/intellisync.sqlite3",
-    "max_parallel_station_claims": 4,
-    "require_qa_before_handoff": true
+    "max_parallel_station_claims": 1,
+    "require_qa_before_handoff": true,
+    "group_execution": "not_yet_implemented"
+  },
+  "qa_workflow": {
+    "stages": [
+      {
+        "stage": "QA-1",
+        "action": "intake_and_document",
+        "outputs": [
+          "issue_id",
+          "reproduction_or_evidence",
+          "severity",
+          "expected_vs_actual",
+          "affected_systems",
+          "acceptance_criteria"
+        ],
+        "next": "QA-2"
+      },
+      {
+        "stage": "QA-2",
+        "action": "triage_and_route",
+        "outputs": [
+          "responsible_department",
+          "assigned_agent",
+          "priority",
+          "dependencies",
+          "repair_instructions"
+        ],
+        "next": "production"
+      },
+      {
+        "stage": "production",
+        "action": "correct_and_resubmit",
+        "next": "QA-3"
+      },
+      {
+        "stage": "QA-3",
+        "action": "independent_verification",
+        "pass": "close_and_release",
+        "fail": [
+          "responsible_production_agent",
+          "QA-1_reassessment_if_issue_definition_is_unclear"
+        ]
+      }
+    ],
+    "trinity_oversight": "audit routing, resolve ownership conflicts, monitor queue and escalate; never silently change creator-approved canon"
   }
 }

@@ -2,6 +2,12 @@
 
 Hustle City is a cinematic, realistic 3D social-world/city-life game built primarily with **Unreal Engine 5**, with **Unity 6** as a secondary compatibility target. This repository is the durable source of truth for project vision, approved decisions, agent roles, architecture, workflows, assets and implementation.
 
+## Project knowledge library
+- [Hustle City Knowledge Library](knowledge-library/README.md) — permanent home for new ideas, approved decisions and reusable frameworks.
+- [Idea inbox](knowledge-library/ideas/INBOX.md) — drop freestyle ideas here immediately.
+- [Knowledge index](knowledge-library/INDEX.md) — browse transportation, building, Sims/MPC/NPC and other frameworks.
+- [Decision register](knowledge-library/DECISION_REGISTER.md) — current captured decisions and unresolved questions.
+
 ## Start here
 - [Project vision and game scope](docs/PROJECT_VISION.md)
 - [World identity bible — original Chicago/Florida-inspired scenery](world/WORLD_IDENTITY_BIBLE.md)

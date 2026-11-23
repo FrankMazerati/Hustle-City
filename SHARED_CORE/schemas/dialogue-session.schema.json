@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hustle-city.invalid/schemas/dialogue-session.schema.json",
+  "title": "Hustle City Stateful Dialogue Session",
+  "description": "A turn-coordinated conversation shared between player and character systems. One session coordinator owns speaker turn order.",
+  "type": "object",
+  "required": ["dialogue_version", "session_id", "status", "participants", "turn_index", "context", "turns"],
+  "properties": {
+    "dialogue_version": {"const": "1.0.0"},
+    "session_id": {"type": "string", "minLength": 1, "maxLength": 128},
+    "status": {"type": "string", "enum": ["active", "interrupted", "ended"]},
+    "coordinator_id": {"type": "string", "minLength": 1},
+    "participants": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["speaker_id", "speaker_type"],
+        "properties": {
+          "speaker_id": {"type": "string"},
+          "speaker_type": {"type": "string", "enum": ["player", "npc", "story_character"]},
+          "display_name": {"type": "string"},
+          "personality_profile_ref": {"type": ["string", "null"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "turn_index": {"type": "integer", "minimum": 0},
+    "context": {
+      "type": "object",
+      "properties": {
+        "location_ref": {"type": ["string", "null"]},
+        "event_ref": {"type": ["string", "null"]},
+        "relationship_context_ref": {"type": ["string", "null"]},
+        "topic": {"type": ["string", "null"]},
+        "continuity_summary": {"type": "string", "maxLength": 2000}
+      },
+      "additionalProperties": false
+    },
+    "turns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["turn_index", "speaker_id", "text", "occurred_at"],
+        "properties": {
+          "turn_index": {"type": "integer", "minimum": 0},
+          "speaker_id": {"type": "string"},
+          "text": {"type": "string", "minLength": 1, "maxLength": 4000},
+          "occurred_at": {"type": "string", "format": "date-time"},
+          "intent": {"type": ["string", "null"]},
+          "triggered_event_ref": {"type": ["string", "null"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "interruption_reason": {"type": ["string", "null"]},
+    "started_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"}
+  },
+  "additionalProperties": false
+}

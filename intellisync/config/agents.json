@@ -1,27 +1,97 @@
 {
-  "schema_version": "1.0.0",
-  "operating_mode": "safe_unactivated",
+  "schema_version": "1.1.0",
+  "operating_mode": "configured_not_activated",
   "ollama": {
     "endpoint": "http://127.0.0.1:11434",
     "timeout_seconds": 180
   },
-  "models": {},
+  "model_backend": "ollama",
+  "models": {
+    "atlas": "qwen3:0.6b",
+    "brick": "qwen2.5-coder:0.5b",
+    "blueprint": "qwen2.5-coder:1.5b",
+    "vibe": "gemma3:1b",
+    "stitch": "gemma3:270m-it-qat",
+    "motion": "smollm2:1.7b-instruct-q2_K",
+    "torque": "codegemma:2b",
+    "tracks": "qwen2.5:0.5b",
+    "route": "tinyllama:1.1b",
+    "ace": "deepseek-r1:1.5b",
+    "spark": "llama3.2:1b",
+    "lockdown": "granite3.2:2b",
+    "qa-1": "qwen3:0.6b",
+    "qa-2": "deepseek-r1:1.5b",
+    "qa-3": "granite3.2:2b"
+  },
+  "execution_policy": {
+    "one_model_per_agent": true,
+    "shared_device_model_concurrency": 1,
+    "max_parallel_model_calls": 1,
+    "load_model_on_demand": true,
+    "unload_after_idle": true,
+    "no_simultaneous_models_per_agent": true,
+    "cloud_default": false,
+    "cloud_escalation_requires_verified_free": true,
+    "paid_fallback": false
+  },
   "qa": {
     "minimum_auto_approval_confidence": 0.85,
     "require_nonempty_checks": true,
     "require_feedback": true,
-    "low_confidence_action": "hold_for_human_review"
+    "low_confidence_action": "hold_for_human_review",
+    "workflow": "qa-1-intake-qa-2-routing-production-qa-3-independent-verification",
+    "qa3_failure_routes": [
+      "responsible_production_agent",
+      "qa-1_reassessment"
+    ],
+    "no_self_approval": true
   },
   "scheduler": {
     "max_workers": 1,
     "recovery_interval_seconds": 2,
     "enabled": false
   },
+  "hosted_providers": {
+    "provider_chain": [
+      "gemini",
+      "openrouter"
+    ],
+    "providers": {
+      "gemini": {
+        "enabled": false,
+        "verified_free": false,
+        "quota_available": false,
+        "data_terms_approved": false,
+        "api_key_env": "GEMINI_API_KEY",
+        "model_env": "GEMINI_MODEL",
+        "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+        "timeout_seconds": 90
+      },
+      "openrouter": {
+        "enabled": false,
+        "verified_free": false,
+        "quota_available": false,
+        "data_terms_approved": false,
+        "api_key_env": "OPENROUTER_API_KEY",
+        "model_env": "OPENROUTER_MODEL",
+        "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+        "timeout_seconds": 90,
+        "max_output_tokens": 4096,
+        "app_name": "Hustle City IntelliSync"
+      }
+    },
+    "policy": {
+      "require_verified_zero_cost": true,
+      "on_quota_exhausted": "try_next_verified_free_provider_then_queue",
+      "paid_fallback": false
+    }
+  },
   "notes": [
-    "No model is assigned by default. Configure model IDs after the device endpoint and model inventory are verified.",
-    "Known previously installed local models are not automatically assigned to roles.",
-    "QA supervisor ownership is configured in assembly_line.json and must not be guessed.",
-    "The scheduler is disabled until all model and QA mappings are explicitly configured.",
-    "No paid provider fallback is implemented in this service."
+    "Local Ollama is the default backend; all 12 specialist and three QA model assignments are explicit.",
+    "Model assignments are configuration only; they do not prove that agents are instantiated or running.",
+    "The shared mobile device uses one model call at a time to avoid competing memory use.",
+    "The scheduler remains disabled until the three-stage QA workflow and group execution are implemented and tested.",
+    "Hosted providers remain disabled unless exact model, free quota, and data terms are verified.",
+    "Trinity is a deterministic coordinator service in the current runtime; no LLM model is assigned to Trinity yet."
   ]
 }

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hustle-city.invalid/schemas/player-event-context.schema.json",
+  "title": "Hustle City Player and Event Context",
+  "description": "Engine-neutral context for routing relevant city events to player sessions. Use opaque game IDs, not real-world personal identifiers.",
+  "type": "object",
+  "required": ["context_version", "player_id", "session_id", "presence", "location", "event_preferences"],
+  "properties": {
+    "context_version": {"const": "1.0.0"},
+    "player_id": {"type": "string", "minLength": 1, "maxLength": 128},
+    "session_id": {"type": "string", "minLength": 1, "maxLength": 128},
+    "presence": {"type": "string", "enum": ["online", "away", "offline", "reconnecting"]},
+    "location": {
+      "type": "object",
+      "required": ["world_id", "area_id"],
+      "properties": {
+        "world_id": {"type": "string", "minLength": 1},
+        "area_id": {"type": "string", "minLength": 1},
+        "district_id": {"type": ["string", "null"]},
+        "position_ref": {"type": ["string", "null"], "description": "Reference to authoritative game-world position; avoid embedding unnecessary high-frequency coordinates."}
+      },
+      "additionalProperties": false
+    },
+    "party_id": {"type": ["string", "null"]},
+    "crew_id": {"type": ["string", "null"]},
+    "event_preferences": {
+      "type": "object",
+      "properties": {
+        "discovery_enabled": {"type": "boolean"},
+        "categories": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "quiet_mode": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    "last_seen_at": {"type": "string", "format": "date-time"}
+  },
+  "additionalProperties": false
+}
