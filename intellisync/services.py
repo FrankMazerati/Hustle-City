@@ -107,8 +107,8 @@ class MessageHub:
             return [dict(row) for row in rows]
 
 
-class TrinityCoordinator:
-    """Top-level coordinator services for queue oversight and escalations."""
+class CoordinatorPolicyAudit:
+    """Local policy-audit helper for QA evidence and queue oversight. It is not an LLM agent and does not impersonate ChatGPT."""
     def __init__(self, runtime: IntelliSync, messages: MessageHub):
         self.runtime = runtime
         self.messages = messages
@@ -120,7 +120,7 @@ class TrinityCoordinator:
             station_runs = {row[0]: row[1] for row in con.execute(
                 "SELECT status,COUNT(*) FROM station_runs GROUP BY status")}
         return {
-            "coordinator": "Trinity",
+            "coordinator": "ChatGPT (external)",
             "packages": packages,
             "station_runs": station_runs,
             "ready": station_runs.get("ready", 0),
@@ -134,7 +134,7 @@ class TrinityCoordinator:
         qa = qa_result.get("qa", {})
         checks = qa.get("checks", [])
         audit = {
-            "reviewed_by": "Trinity",
+            "reviewed_by": "coordinator-policy-gate",
             "qa_decision": qa.get("decision"),
             "checks_present": bool(checks),
             "feedback_present": bool(qa.get("feedback")),
@@ -145,13 +145,13 @@ class TrinityCoordinator:
             row = con.execute("SELECT package_id,station_id FROM station_runs WHERE run_id=?",
                               (run_id,)).fetchone()
         if row:
-            self.messages.send("Trinity", "QA oversight audit",
+            self.messages.send("coordinator-policy-gate", "QA oversight audit",
                                json.dumps(audit, ensure_ascii=False),
                                feed="command", package_id=row[0])
         return audit
 
     def escalate(self, subject: str, details: str, package_id: str | None = None) -> int:
-        return self.messages.send("Trinity", subject, details, feed="command",
+        return self.messages.send("coordinator-policy-gate", subject, details, feed="command",
                                   package_id=package_id)
 
 
@@ -165,7 +165,7 @@ class AgentServices:
             self.config.get("ollama", {}).get("endpoint", "http://127.0.0.1:11434")
         )
         self.messages = MessageHub(runtime.db_path)
-        self.trinity = TrinityCoordinator(runtime, self.messages)
+        self.coordinator_audit = CoordinatorPolicyAudit(runtime, self.messages)
 
     def _model_for(self, agent_id: str) -> str:
         model = self.config.get("models", {}).get(agent_id)
@@ -249,7 +249,7 @@ class AgentServices:
             raise RuntimeErrorBase("QA response has no valid decision; left in QA queue.")
         if not isinstance(decision.get("feedback"), str) or not isinstance(decision.get("checks"), list):
             raise RuntimeErrorBase("QA response schema invalid; left in QA queue.")
-        # Trinity's gate audits the QA record before any approval can release downstream work.
+        # Local policy gate checks evidence; this is not a separate coordinator agent.
         confidence = float(decision.get("confidence", 0))
         qa_policy = self.config.get("qa", {})
         audit_ok = (
@@ -273,7 +273,7 @@ class AgentServices:
         return {"result": result, "qa": decision}
 
     def audit_qa(self, run_id: str, qa_result: dict[str, Any]) -> dict[str, Any]:
-        return self.trinity.audit_qa(run_id, qa_result)
+        return self.coordinator_audit.audit_qa(run_id, qa_result)
 
 
 class Scheduler:
@@ -335,7 +335,7 @@ class Scheduler:
             try:
                 reviewed = self.services.review_station(row["run_id"])
                 audit = self.services.audit_qa(row["run_id"], reviewed)
-                return {"run_id": row["run_id"], "qa": reviewed, "trinity_audit": audit}
+                return {"run_id": row["run_id"], "qa": reviewed, "coordinator_audit": audit}
             except Exception as exc:
                 return {"run_id": row["run_id"], "error": str(exc)}
 
