@@ -2,7 +2,9 @@
 
 **Status:** Roster, model assignments, department boundaries and policy are defined. Live workers are not yet activated. Runtime support and local-device verification remain required.
 
-**Detailed role instructions:** See [AGENT_PROFILES.md](AGENT_PROFILES.md) for each specialist, Trinity, QA-1/2/3, SCRIBE, LENS, and Nexus. It defines role boundaries, required deliverables, acceptance expectations, handoff rules, and model-aware evaluation. These profiles do not change model assignments or indicate live activation.
+**Workforce governance:** The [WORKFORCE_AUTHORITY_CHARTER.md](WORKFORCE_AUTHORITY_CHARTER.md) is the controlling reference for authority hierarchy, decision rights, task lifecycle, role mandates, collaboration and escalation. The [AGENT_PROFILES.md](AGENT_PROFILES.md) contains detailed specialist instructions, required deliverables, acceptance expectations, handoff rules and model-aware evaluation. Read these together; neither changes model assignments or indicates live activation.
+
+**Chain of authority:** Creator / Visual Director & Game Architect → Trinity (overall coordinator) → domain-owned production assignments. QA-1 → QA-2 → production owner → QA-3 is the independent defect-control path, audited by Trinity. QA stage authority is not a separate department command tier. Specialists report status to Trinity and retain authority only within their own defined domains.
 
 ## Leadership and departments
 
