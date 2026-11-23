@@ -1,11 +1,40 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "operating_mode": "safe_unactivated",
   "ollama": {
     "endpoint": "http://127.0.0.1:11434",
     "timeout_seconds": 180
   },
+  "workforce_source": "intellisync/config/coordination.json",
+  "target_local_agents": 17,
+  "target_model_slots": 17,
+  "model_assignment_policy": "one assigned local Ollama model per agent at a time; do not assign or launch until exact Ollama tags are verified on the target device. Model sharing is permitted if hardware requires it; never run two local models simultaneously for one agent.",
   "models": {},
+  "reported_model_inventory": {
+    "status": "user_reported_inventory_not_device_verified",
+    "installed": [
+      "deepseek-r1:1.5b",
+      "qwen3:0.6b",
+      "gemma3:1b",
+      "gemma3:270m-it-qat",
+      "llama3.2:1b",
+      "smollm2:1.7b-instruct-q2_K",
+      "smollm2:135m",
+      "embeddinggemma:300m-qat-q4_0",
+      "tinyllama:1.1b",
+      "qwen2.5-coder:1.5b",
+      "qwen2.5-coder:0.5b",
+      "granite3.2:2b",
+      "codegemma:2b",
+      "qwen2.5:0.5b"
+    ],
+    "planned_not_confirmed": [
+      "qwen3.5:4b",
+      "gemma3:4b",
+      "qwen2.5-coder:3b"
+    ],
+    "note": "The three planned pulls are not counted as installed until the user confirms successful downloads and Ollama list output."
+  },
   "qa": {
     "minimum_auto_approval_confidence": 0.85,
     "require_nonempty_checks": true,
@@ -15,15 +44,19 @@
   "scheduler": {
     "max_workers": 1,
     "recovery_interval_seconds": 2,
-    "enabled": false
+    "enabled": false,
+    "reason": "Keep disabled until all 17 role/model mappings, QA ownership, target hardware capacity and tests are verified. One local worker at a time is the safe initial tablet profile."
   },
   "notes": [
-    "No model is assigned by default. Configure model IDs after the device endpoint and model inventory are verified.",
-    "Known previously installed local models are not automatically assigned to roles.",
-    "QA supervisor ownership is configured in assembly_line.json and must not be guessed.",
-    "The scheduler is disabled until all model and QA mappings are explicitly configured.",
+    "ChatGPT is the external overall coordinator; there is no local Trinity agent or Trinity model.",
+    "SCRIBE and LENS are two local creative-lead agents. The three QA supervisors and twelve production specialists complete the 17-local-agent target.",
+    "The 14 listed Ollama models are user-reported installed inventory, not independently verified on the target device.",
+    "Three additional model pulls are planned only; do not assume they completed.",
+    "No model is actively assigned by default. Match roles to verified model tags after the final inventory is confirmed.",
+    "Gemini and OpenRouter may be configured only as optional free-tier escalation/backup paths after credentials and limits are verified; they are not local defaults.",
     "No paid provider fallback is implemented in this service.",
-    "Timed cycle configuration is present, but scheduler remains disabled until workforce roster, QA ownership, and model mappings are explicitly completed."
+    "QA supervisors review only their four assigned production specialists; creative-lead deliverables require independent review and may not self-approve.",
+    "The 20-minute production, 5-minute QA, 5-minute correction cadence with optional 10-minute extension remains the intended cycle."
   ],
   "cycle": {
     "production_seconds": 1200,
