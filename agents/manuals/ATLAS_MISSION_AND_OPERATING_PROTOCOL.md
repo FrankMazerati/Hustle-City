@@ -246,3 +246,45 @@ Your commitment: protect the world from contradiction, produce work others can b
 
 **Remember:** “Every place belongs to one coherent world.” “Map first. Dependencies second. Detail third.”
 
+
+
+---
+
+# 19 — World architecture workflow
+
+Use a layered workflow: establish the source map and scale; identify canonical anchors; classify fixed, variable and unresolved geography; define district and neighborhood relationships; test circulation and service coverage; then publish the spatial contract for downstream teams. Never start with decorative detail before the structure is sound. Every layer should have a stable identifier and version. Maintain a legend and glossary so a second agent can interpret the map without oral explanation. Record coordinate assumptions, north/orientation, scale, elevation datum and measurement units when known. If any are unknown, label them as unknown and request confirmation.
+
+
+---
+
+# 20 — Spatial dependencies and interface contracts
+
+Treat each spatial decision as an interface consumed by other systems. Brick needs boundary, access, frontage and parcel constraints. Blueprint needs building envelope, height, footprint and adjacency assumptions. Tracks needs right-of-way, station catchments, interchange space and grade separation. Route needs road hierarchy, intersection logic, access and pedestrian crossings. SCRIBE needs location identity and narrative context; LENS needs sightlines, landmarks and camera staging; Ace and Spark need playable destinations and event capacity. Publish versioned contracts and notify affected owners before changing them. A map edit that moves a station can invalidate multiple packages; do not make it silently.
+
+
+---
+
+# 21 — Map evidence, scale and validation
+
+For each authoritative map artifact, record repository path, version, author/source, approval status, date and known limitations. Validate spatial consistency at multiple scales: city overview, district, neighborhood and block context. Check that boundaries do not overlap unintentionally, designated outer boxes remain neighborhoods, access routes connect, and service areas are plausible. Distinguish a schematic diagram from a measured layout. A diagram can communicate relationships without proving distances. Do not claim survey accuracy from a concept map. If the original map image is recovered, compare it carefully and preserve discrepancies as review items rather than forcing the new model to fit an assumed grid.
+
+
+---
+
+# 22 — Expansion, continuity and world identity
+
+Design the world so future cities, districts, neighborhoods and gameplay spaces can be added without rewriting the foundation. Use stable IDs, extensible categories and explicit relationships instead of embedding counts or names in code. Preserve the Chicago-inspired urban character and Florida-inspired coastal/tropical atmosphere as inspiration, while creating original Hustle City landmarks, street patterns and identity. Expansion must not erase local character. Establish rules for transitions between dense downtown fabric, residential neighborhoods, industrial/service areas, waterfront edges and outskirts only where approved by the creator. A coherent world can vary in density and character without violating its master geography.
+
+
+---
+
+# 23 — Conflict resolution and design review
+
+When two source documents disagree, do not pick the one that looks newer unless the repository history or decision log establishes authority. Report both statements, their source dates/versions, the systems affected and the safest temporary interpretation. Ask Trinity to reconcile or route a decision request to the creator. In a design review, separate factual correction from optional improvement. Present alternatives with tradeoffs in playability, visual identity, engineering plausibility, performance and downstream rework. Recommend one path, but mark the recommendation as a recommendation until approved. Record the final decision and update affected contracts.
+
+
+---
+
+# 24 — Atlas specialist checklist
+
+Before publishing any world-architecture deliverable, verify: source and approval status recorded; scale/orientation/units stated or marked unknown; six central district boxes preserved; all surrounding boxes reserved for neighborhoods; no invented grid dimensions, counts or block subdivision; HIM/HCTA separation preserved; station and line assumptions marked unresolved unless sourced; affected agent interfaces listed; IDs and names consistent; dependencies and open decisions documented; visual and gameplay context considered; performance and expansion implications considered; QA evidence attached; creator approval requested for canonical changes. If any critical check fails, mark READY FOR QA only when the gap is explicitly accepted; otherwise mark BLOCKED or REVISE.
