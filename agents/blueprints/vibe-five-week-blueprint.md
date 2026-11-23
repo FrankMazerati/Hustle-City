@@ -64,10 +64,9 @@ NPC behavior framework; schedules/social systems; venue matrices; integration co
 The five-week horizon is cumulative. Each week leaves a usable artifact for the next. These are target outcomes, not claims that work has already happened. Completion requires evidence and QA acceptance, not elapsed time.
 
 ## 5. Five-week roadmap
-### Week 1 — Foundation & discovery
-**Mission:** Read creator profile, project canon, role directive, decision log and source files. Inventory current work, verify what is real, record unknowns and establish acceptance criteria.
-**Week-end outcome:** Verified baseline, source register, scope boundary, assumptions register and accepted task backlog.
-**Your domain exit target:** NPC behavior framework; schedules/social systems; venue matrices; integration contracts; test scenarios.
+### Week 1 — Foundation design complete
+**Mission:** Complete the first-pass character/NPC design: core named-character roster, profiles, motivations, relationships, archetypes, daily routine concepts and social behavior matrix. Coordinate story canon with SCRIBE.
+**Week-end outcome:** A complete first-pass design package saved in the repository, with source links, explicit unknowns, partner interfaces and QA disposition. Week 1 is a design-completion sprint, not an inventory-only week.
 
 ### Week 2 — Design & contracts
 **Mission:** Turn the baseline into detailed domain standards, specifications, workflows, interfaces, data/asset requirements and collaboration agreements. Request creator decisions early.
