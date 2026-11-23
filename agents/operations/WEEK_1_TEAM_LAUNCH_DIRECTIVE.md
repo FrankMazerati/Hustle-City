@@ -14,7 +14,10 @@ The creator is Visual Director and Game Architect and retains final creative aut
 6. Confirm the GitHub repository is `FrankMazerati/Hustle-City`, default branch `main`; agents work in task branches and submit PRs.
 
 ## Required reading
+
+Every agent must read the complete organization directory and communication/breadcrumb standard, not only its own role file. Before accepting a downstream package, read and acknowledge the upstream agent's breadcrumb and record the exact version consumed.
 - `agents/operations/FIVE_WEEK_TEAM_OPERATING_BLUEPRINT.md`
+- `agents/operations/AGENT_COMMUNICATION_AND_BREADCRUMB_STANDARD.md`
 - `agents/blueprints/README.md`
 - Each agent's own file under `agents/blueprints/`
 - Existing specialist manuals under `agents/manuals/`
@@ -59,7 +62,11 @@ By the end of Day 7, each agent must submit:
 
 Trinity must publish an integrated Week 1 report, verify QA dispositions and present creator decisions needed to unlock Week 2.
 
-## Communication and model use
+## Communication feeds, breadcrumbs and model use
+
+Use the three named feeds in the shared IntelliSync runtime communication hub: Department Communication Feed, Cross-Department Communication Feed and Command Communication Feed. Verify relay health first. Every agent leaves breadcrumbs documenting what changed, where it lives, current status, design method/rationale, upstream inputs, interfaces, assumptions, unresolved work, QA evidence and next owner. Downstream agents read/acknowledge the breadcrumb, cite its version and leave their own continuation breadcrumb. Transfer approved artifacts through the rolling assembly-line package relay (producer → assigned QA → downstream receiver). The breadcrumb explains; the artifact delivers; the relay controls handoff.
+
+
 Use the registered IntelliSync relay and model router only after health is verified. Messages must include sender, recipient, task ID, timestamp, priority, type, source/context, request/deliverable, dependencies, status and acknowledgement requirement. Model borrowing/second opinions must be routed and queued under model-owner and hardware constraints. Never commandeer another agent's session. Gemini/OpenRouter are allowed only with approved credentials and verified free quota.
 
 ## Cost and integrity
