@@ -355,7 +355,7 @@ class Scheduler:
     def _phase_work_remaining(self) -> bool:
         with sqlite3.connect(self.runtime.db_path) as con:
             row = con.execute(
-                "SELECT COUNT(*) FROM station_runs WHERE status IN ('ready','qa_pending')"
+                "SELECT COUNT(*) FROM station_runs WHERE status='qa_pending' OR (status='ready' AND attempt>1)"
             ).fetchone()
         return bool(row and row[0])
 
