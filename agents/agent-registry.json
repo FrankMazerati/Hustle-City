@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
   "project": "Hustle City",
-  "coordinator": "sam-chief-coordinator",
+  "coordinator": "ChatGPT (external; not a local Ollama agent)",
   "total_roles": 48,
-  "lifecycle_note": "Role definitions and prompts are committed. These entries are not live agent instances. Runtime, model endpoint, tool permissions, schedule and credentials must be configured separately.",
+  "lifecycle_note": "These 48 entries are reusable role definitions, not live agent instances and not the active local staffing roster. The active local workforce target is defined in intellisync/config/coordination.json. ChatGPT is the external coordinator; SCRIBE, LENS, three QA supervisors and twelve production specialists make up the 17 local agents. Runtime, model endpoint, tool permissions, schedule and credentials must be configured separately.",
   "default_model_profile": "shared-model-pool/unassigned",
   "default_permissions": "least-privilege; read-only until explicitly granted scoped write access",
   "agents": [
@@ -12,8 +12,8 @@
       "department": "Executive orchestration",
       "prompt_pack": "agents/AGENT_PROMPTS.md",
       "catalog": "agents/AGENT_CATALOG.md",
-      "status": "defined_not_activated",
-      "model_profile": "inherit_shared_pool",
+      "status": "legacy_role_definition_not_staffed",
+      "model_profile": "not_assigned",
       "tool_profile": "pending_runtime_configuration",
       "review_protocol": "agents/COMMUNICATION_PROTOCOL.md"
     },
@@ -493,5 +493,6 @@
   "retired_engine": "Godot",
   "world_identity": "world/WORLD_IDENTITY_BIBLE.md",
   "portable_environment_profiles": "SHARED_CORE/content/environment_profiles/",
-  "world_identity_summary": "Original fictional Hustle City flagship blends Chicago-inspired urban character with Florida-inspired tropical/coastal atmosphere; reusable profiles support other distinct U.S. scenery."
+  "world_identity_summary": "Original fictional Hustle City flagship blends Chicago-inspired urban character with Florida-inspired tropical/coastal atmosphere; reusable profiles support other distinct U.S. scenery.",
+  "registry_scope": "Legacy 48-role capability catalog, not the active 17-agent local workforce roster."
 }
