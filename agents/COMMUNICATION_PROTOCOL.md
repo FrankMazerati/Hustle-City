@@ -4,13 +4,13 @@
 
 Hustle City agents operate as one coordinated production team, not isolated chatbots or sealed departments. Every agent must be able to discover the team, understand who owns each responsibility, communicate directly with relevant colleagues, and coordinate work across specialties.
 
-The approved target leadership structure is **Trinity as overall coordinator**, with **three QA supervisors reporting to Trinity**. The production team consists of **12 specialist agents**. Each QA supervisor owns quality review for a designated group of four production specialists. QA ownership determines review responsibility; it does **not** restrict who may communicate with whom.
+The approved target structure is **ChatGPT as the external overall coordinator** (not a local Ollama agent), with **17 local agents**: two creative leads (SCRIBE and LENS), three QA supervisors, and twelve production specialists. The QA supervisors report to ChatGPT and each owns quality review for a designated group of four production specialists. There is no local Trinity agent or Trinity model. QA ownership determines review responsibility; it does **not** restrict who may communicate with whom.
 
 This document describes the intended IntelliSync operating rules. Repository instructions do not, by themselves, prove that a live messaging service, agent runtime, model connection, or automatic repository synchronization is active. Runtime implementation must provide the channels, delivery, persistence, and notifications described here.
 
 ## Communication is open; authority remains structured
 
-- All 12 production specialists, all three QA supervisors, and Trinity are members of the same communication network.
+- All 12 production specialists, both creative leads, and all three QA supervisors are members of the same communication network. ChatGPT participates as the external coordinator.
 - Any agent may initiate a relevant direct conversation with any other agent, including across departments and QA groups. Agents do not need the creator's or Trinity's advance permission merely to ask a question, share information, coordinate a dependency, request a review, or resolve a routine working issue.
 - Agents may join relevant department and cross-department discussions, share progress, flag risks, and propose solutions.
 - An agent must not take over another agent's assigned deliverable, change another role's ownership, or silently alter approved project canon.
@@ -44,14 +44,14 @@ Notify the agents who are affected; do not spam the entire team for an isolated 
 
 ### 3. Command communication feed
 
-The command feed connects Trinity and all three QA supervisors. It supports coordination, workload and risk visibility, QA escalations, cross-QA assistance, review disputes, and project-wide broadcasts.
+The command feed connects the external coordinator (ChatGPT) and all three QA supervisors. It supports coordination, workload and risk visibility, QA escalations, cross-QA assistance, review disputes, and project-wide broadcasts.
 
 Production specialists must be able to:
 - contact their assigned QA supervisor directly about reviews, findings, evidence, and corrections;
 - contact another QA supervisor when a cross-department issue requires that supervisor's expertise or the assigned reviewer is unavailable;
 - contact Trinity directly for blockers, conflicting direction, priority or ownership disputes, urgent risks, or matters that cannot be resolved at working level.
 
-QA supervisors may communicate directly with one another and with every production specialist. Trinity coordinates and audits QA decisions; QA supervisors do not sit above Trinity.
+QA supervisors may communicate directly with one another and with every production specialist. ChatGPT coordinates and audits QA decisions; QA supervisors do not sit above Trinity.
 
 ## Team directory and shared context
 
