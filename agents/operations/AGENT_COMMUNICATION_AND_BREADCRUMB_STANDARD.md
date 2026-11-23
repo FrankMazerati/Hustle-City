@@ -68,3 +68,55 @@ A downstream agent must read and acknowledge the upstream breadcrumb before cons
 
 ## Formal handoff: rolling assembly-line package relay
 Breadcrumbs explain the work; the versioned package is the deliverable; the relay is the controlled transfer. Trinity assigns the task envelope and dependency order. The producing specialist submits the package and breadcrumb to its assigned QA supervisor. After QA disposition, the approved version is released to the next dependent station with exact paths, version/commit, evidence, assumptions, open issues and receiving owner. The receiver acknowledges receipt, reads the breadcrumb, and records its own continuation breadcrumb. No downstream station treats an unreviewed draft as accepted production input unless Trinity explicitly marks it as a permitted parallel draft.
+
+
+## Copy-ready breadcrumb entry template
+
+Use one entry per meaningful change or handoff. Keep prior entries; append new dated/versioned entries instead of rewriting history.
+
+```markdown
+# Breadcrumb — [Agent] — [Task ID]
+- Timestamp:
+- Status: PROPOSED | READY | IN_PROGRESS | BLOCKED | REVIEW | ACCEPTED | REVISE | REJECTED
+- Version / branch / commit:
+- QA owner and disposition:
+- Upstream breadcrumb(s) read (agent + exact version/path):
+
+## What changed
+- Deliverables and exact repository paths / asset IDs:
+
+## Where it stands
+- Complete:
+- In progress:
+- Blocked / not started:
+
+## How it was designed
+- Method, workflow, tools and important constraints:
+
+## Why / sources / decisions
+- Source links and approved canon:
+- Decisions and rationale:
+- Alternatives considered / rejected:
+
+## Interfaces and dependencies
+- Units, dimensions, coordinates, formats and contracts:
+- Inputs consumed:
+- Downstream consumers and required inputs:
+
+## Open ends
+- Assumptions:
+- Unresolved questions / creator decisions:
+- Defects / risks:
+
+## Evidence
+- Diagrams, screenshots, tests, review notes, PR/commit links:
+
+## Handoff
+- Next owner(s):
+- What they should do next:
+- What they must not assume:
+- Acceptance checks:
+- Receiver acknowledgement:
+```
+
+A breadcrumb must be factual and useful to the next station. Do not put secrets, credentials or unsupported claims in it.
