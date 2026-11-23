@@ -3,10 +3,10 @@
 This is a sequence, not a guaranteed schedule.
 
 ## Phase 0 — AI studio foundation
-Consolidate canon, agent prompts, task schema, dependency map, review gates, shared knowledge and model/runtime plan. Confirm n8n version before importing workflows. Establish Godot 4 conventions and build pipeline.
+Consolidate canon, agent prompts, task schema, dependency map, review gates, shared knowledge and model/runtime plan. Confirm n8n version before importing workflows. Establish Unreal Engine 5 conventions and build pipeline; keep Unity 6 as a secondary compatibility target and Godot retired.
 
 ## Phase 1 — Technical vertical slice
-One coherent city block; one player character; a small NPC population; basic movement; one enterable venue with doors/interior/seating; basic interaction; small traffic/pedestrian demonstration; Player Shell prototype; tests for entry/exit, collisions and recovery.
+First visual vertical slice: rainy passenger-train window and exterior approach, skyline reveal, station arrival and concierge hall, Bella Rose introduction, Hustle Towers exterior/courtyard/lobby/room, room booking, and narrated short/full guided tour. Player control remains locked until the full introduction/tour is complete. Validate Sequencer, assets, guided movement, persistence, control gating and a viewable Unreal test map.
 
 ## Phase 2 — Core social and activity loop
 Multiplayer foundation, identity, chat/friends/crew basics, one fully specified card-game variant, venue activity, NPC schedules, persistent event foundation and economy transaction foundation.
