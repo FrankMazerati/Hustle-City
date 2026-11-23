@@ -260,7 +260,7 @@ class AgentServices:
             ))
         )
         if not audit_ok:
-            self.messages.send("Trinity", "QA decision held for oversight",
+            self.messages.send("coordinator-policy-gate", "QA decision held for oversight",
                                f"QA result for {item['package_id']} at {item['station_id']} lacks required evidence or confidence. Human review required. Raw QA: {json.dumps(decision)}",
                                feed="command", package_id=item["package_id"])
             return {"result": "human_review_required", "qa": decision}
