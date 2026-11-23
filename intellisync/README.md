@@ -17,7 +17,7 @@ This is the first executable orchestration layer for the rolling package relay. 
 
 ## What it does not do yet
 
-- It does not autonomously invoke LLMs or run 16 agents.
+- It does not autonomously invoke all 17 local agents. The current local workforce target is SCRIBE, LENS, three QA supervisors and twelve production specialists; ChatGPT is external coordinator, not a local worker.
 - It does not yet run continuous background workers or enforce a global concurrency semaphore.
 - It does not connect to Supabase. SQLite is a local starter adapter pending confirmation of the dedicated project.
 - It does not change the existing model router or old manual GitHub pilot.
