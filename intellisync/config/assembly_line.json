@@ -2,36 +2,36 @@
   "schema_version": "1.0.0",
   "project": "Hustle City",
   "runtime_mode": "package_relay",
-  "note": "Starter pipeline only. QA ownership must be explicitly configured for every station before package creation. Do not infer QA assignments from station order.",
+  "note": "Opening geography-to-city starter pipeline. QA ownership is explicit and follows the approved 12-specialist roster. The scheduler remains disabled until local Ollama tags are verified and model mappings are configured.",
   "stations": [
     {
-      "station_id": "world-builder",
-      "role": "World Builder",
-      "agent_id": "world-builder",
-      "qa_supervisor_id": null
+      "station_id": "world-geography",
+      "role": "World Geography & Environment Foundation",
+      "agent_id": "P01-GEOGRAPHY",
+      "qa_supervisor_id": "QA-1"
     },
     {
-      "station_id": "city-builder",
-      "role": "City Builder",
-      "agent_id": "city-builder",
-      "qa_supervisor_id": null
+      "station_id": "city-masterplan",
+      "role": "City Masterplanning & District Layout",
+      "agent_id": "P02-CITY-PLAN",
+      "qa_supervisor_id": "QA-1"
     },
     {
-      "station_id": "roads-infrastructure",
-      "role": "Roads & Infrastructure",
-      "agent_id": "roads-infrastructure",
-      "qa_supervisor_id": null
+      "station_id": "rail-transit-foundation",
+      "role": "Rail, Transit & Transportation Infrastructure",
+      "agent_id": "P06-TRANSIT",
+      "qa_supervisor_id": "QA-2"
     },
     {
-      "station_id": "building-architecture",
-      "role": "Building & Architecture",
-      "agent_id": "building-architecture",
-      "qa_supervisor_id": null
+      "station_id": "architecture-buildings",
+      "role": "Architecture & Building Systems",
+      "agent_id": "P04-ARCHITECTURE",
+      "qa_supervisor_id": "QA-1"
     }
   ],
   "defaults": {
     "database": "data/intellisync.sqlite3",
-    "max_parallel_station_claims": 4,
+    "max_parallel_station_claims": 1,
     "require_qa_before_handoff": true
   }
 }
