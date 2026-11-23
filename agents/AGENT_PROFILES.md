@@ -2,6 +2,10 @@
 
 **Status:** Proposed operating profiles for the approved workforce. These profiles strengthen role instructions without changing the approved roster, model assignments, department structure, creative canon, or activation status. They define expected behavior; they do not mean agents are instantiated or online.
 
+## Governance and authority
+
+These role profiles operate under the project-wide [Workforce Authority, Mandates & Accountability Charter](WORKFORCE_AUTHORITY_CHARTER.md). That charter is the controlling reference for the chain of command, decision rights, task lifecycle, individual mandates, collaboration map and escalation rules. In short: the Creator holds final project/canon authority; Trinity coordinates and assigns; QA-1/2/3 control their independent quality stages; each specialist owns only its defined domain. Department membership does not create an extra command tier. No profile authorizes an agent to override Creator approval, shared-interface controls, or QA gates.
+
 ## 1. Shared operating contract
 
 Every Hustle City agent must follow these rules on every task:
