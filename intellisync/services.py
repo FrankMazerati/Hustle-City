@@ -296,17 +296,28 @@ class Scheduler:
             self.services._model_for(station["agent_id"])
             self.services._model_for(qa)
 
-    def tick(self) -> dict[str, Any]:
+    def tick(self, phase: str = "both") -> dict[str, Any]:
+        """Process one bounded queue batch for a named operating phase.
+
+        production/correction phases execute ready work only; qa reviews pending
+        deliverables only. "both" preserves the legacy one-shot behavior.
+        """
+        if phase not in ("both", "production", "qa", "correction", "extension"):
+            raise ValueError("Unknown scheduler phase.")
         with sqlite3.connect(self.runtime.db_path) as con:
             con.row_factory = sqlite3.Row
-            ready = con.execute(
-                "SELECT run_id FROM station_runs WHERE status='ready' ORDER BY rowid LIMIT ?",
-                (self.max_workers,)
-            ).fetchall()
-            pending = con.execute(
-                "SELECT run_id FROM station_runs WHERE status='qa_pending' ORDER BY rowid LIMIT ?",
-                (self.max_workers,)
-            ).fetchall()
+            ready = []
+            pending = []
+            if phase in ("both", "production", "correction", "extension"):
+                ready = con.execute(
+                    "SELECT run_id FROM station_runs WHERE status='ready' ORDER BY rowid LIMIT ?",
+                    (self.max_workers,)
+                ).fetchall()
+            if phase in ("both", "qa", "extension"):
+                pending = con.execute(
+                    "SELECT run_id FROM station_runs WHERE status='qa_pending' ORDER BY rowid LIMIT ?",
+                    (self.max_workers,)
+                ).fetchall()
         outcomes: list[dict[str, Any]] = []
         # Process existing QA queue first, then new production. The next tick
         # picks up the downstream run released by a successful QA review.
@@ -331,6 +342,52 @@ class Scheduler:
             outcomes.extend(pool.map(execute_one, ready))
         return {"processed": len(outcomes), "outcomes": outcomes, "recovery": self.runtime.recover()}
 
+    def _phase_work_remaining(self) -> bool:
+        with sqlite3.connect(self.runtime.db_path) as con:
+            row = con.execute(
+                "SELECT COUNT(*) FROM station_runs WHERE status IN ('ready','qa_pending')"
+            ).fetchone()
+        return bool(row and row[0])
+
+    def run_cycles(self, interval_s: float = 2.0,
+                   production_s: int = 1200, qa_s: int = 300,
+                   correction_s: int = 300, extension_s: int = 600) -> None:
+        """Run 20m production, 5m QA, 5m correction, optional 10m extension.
+
+        Phase windows are minimum wall-clock windows, not forced termination
+        of an in-flight model request. Extension alternates correction and QA
+        so rejected work can be revised and independently re-reviewed.
+        """
+        if interval_s < 0.25:
+            raise ValueError("Scheduler recovery interval cannot be below 0.25 seconds.")
+        durations = (production_s, qa_s, correction_s, extension_s)
+        if any(not isinstance(value, int) or value < 1 for value in durations):
+            raise ValueError("Cycle phase durations must be positive whole seconds.")
+
+        def run_phase(phase: str, duration: int) -> None:
+            deadline = time.monotonic() + duration
+            while time.monotonic() < deadline:
+                self.tick(phase)
+                remaining = deadline - time.monotonic()
+                if remaining > 0:
+                    time.sleep(min(interval_s, remaining))
+
+        while True:
+            print("Cycle: production phase", flush=True)
+            run_phase("production", production_s)
+            print("Cycle: independent QA phase", flush=True)
+            run_phase("qa", qa_s)
+            print("Cycle: correction phase", flush=True)
+            run_phase("correction", correction_s)
+            if self._phase_work_remaining():
+                print("Cycle: 10-minute extension (correction and re-review)", flush=True)
+                deadline = time.monotonic() + extension_s
+                while time.monotonic() < deadline and self._phase_work_remaining():
+                    self.tick("extension")
+                    remaining = deadline - time.monotonic()
+                    if remaining > 0:
+                        time.sleep(min(interval_s, remaining))
+
     def run_forever(self, interval_s: float = 2.0) -> None:
         if interval_s < 0.25:
             raise ValueError("Scheduler recovery interval cannot be below 0.25 seconds.")
@@ -347,6 +404,8 @@ def main() -> int:
     parser.add_argument("--max-workers", type=int, default=1)
     parser.add_argument("--interval", type=float, default=2.0)
     parser.add_argument("--once", action="store_true")
+    parser.add_argument("--cycle", action="store_true",
+                        help="Run timed production/QA/correction cycles")
     args = parser.parse_args()
     try:
         runtime = IntelliSync(args.db)
@@ -354,6 +413,16 @@ def main() -> int:
         scheduler = Scheduler(services, args.max_workers)
         if args.once:
             print(json.dumps(scheduler.tick(), indent=2))
+        elif args.cycle:
+            cycle = services.config.get("cycle", {})
+            print("IntelliSync timed workforce cycle running. Ctrl+C to stop.", flush=True)
+            scheduler.run_cycles(
+                interval_s=args.interval,
+                production_s=int(cycle.get("production_seconds", 1200)),
+                qa_s=int(cycle.get("qa_seconds", 300)),
+                correction_s=int(cycle.get("correction_seconds", 300)),
+                extension_s=int(cycle.get("extension_seconds", 600)),
+            )
         else:
             print("IntelliSync scheduler running. Ctrl+C to stop.", flush=True)
             scheduler.run_forever(args.interval)
