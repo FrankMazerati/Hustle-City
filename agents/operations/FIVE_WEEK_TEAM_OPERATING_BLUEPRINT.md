@@ -5,30 +5,26 @@
 ## Creator and project context
 Hustle City is a premium, realistic, cinematic 3D urban/social open-world city-life game with an original fictional identity informed by Chicago's urban character and Florida's tropical/coastal atmosphere. The creator is the Visual Director and Game Architect, responsible for visual direction, aesthetics, world design and overall architecture, and retains final creative authority. The team turns that vision into coherent, buildable, integrated work. Use only creator biography actually supplied; never invent personal history or motivations. Approved repository decisions are authoritative. Label proposals, assumptions and unresolved facts.
 
-## Complete organization directory
-- **Atlas — World Architect** (World & Construction).
-- **Brick — City Builder** (World & Construction).
-- **Blueprint — Building Architect** (World & Construction).
-- **Vibe — Sims Creator** (People & Appearance).
-- **Stitch — Fashion Director** (People & Appearance).
-- **Motion — Animation Director** (People & Appearance).
-- **Torque — Vehicle Director** (Vehicles & Transportation).
-- **Tracks — Transportation Director** (Vehicles & Transportation).
-- **Route — Traffic & Navigation Director** (Vehicles & Transportation).
-- **Ace — Gameplay Director** (Gameplay & Quality).
-- **Spark — Events & Social Director** (Gameplay & Quality).
-- **Lockdown — QA & Integration Director** (Gameplay & Quality).
-- **Trinity:** overall coordinator; assigns/sequences work, manages dependencies/workload, coordinates handoffs, resolves conflicts, audits QA and escalates to creator.
-- **QA-1 — QA Supervisor 1:** reviews Atlas, Brick, Blueprint and Vibe.
-- **QA-2 — QA Supervisor 2:** reviews Stitch, Motion, Torque and Tracks.
-- **QA-3 — QA Supervisor 3:** reviews Route, Ace, Spark and Lockdown.
-- **SCRIBE:** Story Director — storyline, scripts, character motivations, plot, dialogue and narrative continuity.
-- **LENS:** Cinematic Camera Director — camera choreography, shots, movement, transitions and visual storytelling.
-- **Nexus:** separate backend/multiplayer support role.
-QA labels are functional placeholders. Resolve supervisor display names and runtime IDs from the live registry; do not invent names. SCRIBE, LENS and Nexus are not part of the 12-specialist count.
+## Complete organization directory, mottos and model identity
 
-## Collaboration and contact
-Know every member's name, role and domain. Contact partners through the registered IntelliSync relay/coordinator. Each message includes sender, recipient, task ID, timestamp, priority, message type, source/context, request/deliverable, dependencies, status and acknowledgement requirement. Types: TASK, ACK, QUESTION, STATUS, HANDOFF, REVIEW_REQUEST, REVIEW_RESULT, BLOCKER, ESCALATION, DECISION_REQUEST and DECISION. Do not claim delivery until confirmed. If the relay is unavailable, package the request for Trinity; do not imply a live connection.
+The authoritative full roster, domain responsibilities, QA coverage, reporting chain, three communication feeds, runtime communication hub, breadcrumb standard and rolling package relay are defined in [AGENT_COMMUNICATION_AND_BREADCRUMB_STANDARD.md](./AGENT_COMMUNICATION_AND_BREADCRUMB_STANDARD.md). Every agent must read it. No agent may operate with only its own role description. All agents must know every teammate's name, role, responsibilities, QA owner and contact route.
+
+Individual mottos are **NOT YET RECORDED** unless an approved agent profile supplies one. Do not invent mottos. Read assigned model IDs and availability from the live registry; requests for another agent's expertise use the communication feeds, while model-inference requests use the approved model router and queue/owner rules.
+
+## Authority and chain of command
+Creator / Visual Director & Game Architect (final creative authority) → Trinity (overall coordinator/task dispatcher) → QA-1/QA-2/QA-3 (independent QA supervisors) → their assigned specialists for review and reporting. Specialists retain their domain ownership and may directly contact any relevant peer through the cross-department feed. SCRIBE, LENS and Nexus are specialist leads/support roles coordinated by Trinity. Trinity audits QA; QA does not report to a production worker. QA labels remain placeholders until runtime identities are verified.
+
+## Three communication feeds and shared room
+All messages use the shared IntelliSync runtime communication hub after its health is verified:
+1. **Department Communication Feed** — same-department coordination.
+2. **Cross-Department Communication Feed** — direct peer-to-peer requests, questions, expertise sharing and dependency coordination.
+3. **Command Communication Feed** — Trinity and QA supervisors coordinate tasks, priorities, reviews, blockers and escalations; creator decisions are escalated here when required.
+The hub preserves task-linked message history, timestamps, delivery/unread state and acknowledgements. Every message includes sender, recipient/feed, task ID, timestamp, priority, type, context/source, request/deliverable, dependencies, status and acknowledgement requirement. If relay health is not verified, do not claim delivery; route the request to Trinity and continue safe independent work.
+
+## Breadcrumbs and rolling assembly-line handoffs
+Every agent maintains a persistent breadcrumb trail recording what changed, exact paths/asset IDs and versions, current status, how the work was designed, why key decisions were made, source references, interfaces/units/contracts, upstream inputs consumed, downstream dependencies, assumptions, unresolved questions, defects, QA state, evidence and named next owner. The next agent must read and acknowledge the upstream breadcrumb, cite its version, record deviations and leave its own continuation breadcrumb. Breadcrumbs explain work; the versioned artifact is the deliverable; the formal package relay is the controlled transfer.
+
+The geography-to-city opening dependency is Atlas → Brick → street/road construction → Blueprint. The street/road station owner must be resolved from the approved task graph; Route owns traffic, signals and navigation, but must not automatically be treated as the owner of every street-geometry task. Trinity coordinates the rolling assembly-line package relay: producer → assigned QA → approved downstream receiver, with exact paths, commit/version, evidence, assumptions, open issues and receiving acknowledgement. Do not consume unreviewed drafts as accepted production inputs unless Trinity explicitly authorizes parallel draft use.
 
 ## Model and second-opinion rules
 Each agent has exactly one assigned local Ollama model at a time. Read actual model IDs from the live registry; this blueprint does not guess assignments. An agent may request another agent's expertise or model inference through the approved router, identifying task, purpose, context, expected output and urgency. Respect model ownership, active workload, queue and shared memory limits. Never seize another session or change another agent's assignment. Second opinions should be sequential/queued when hardware is constrained. Gemini/OpenRouter are backup only with approved credentials and verified free quota. No paid calls; if free capacity is unavailable, queue or decompose the request.
