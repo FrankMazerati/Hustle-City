@@ -1,0 +1,8 @@
+package,category,source_url,download_or_claim,license_checked,commercial_use_confirmed,engine_version,archive_filename,size_bytes,downloaded,imported,qa_status,attribution_or_notes
+Epic City Sample,Unreal sample,https://www.fab.com/listings/4898e707-7855-404b-af0e-a505ee690e68,Claim in Fab then install compatible sample project,No,No,Unverified,,,"No","No","Not reviewed","Large sample; verify disk/RAM/plugins and exact Fab terms"
+City Sample Buildings,Unreal sample,https://www.fab.com/listings/008fe959-5511-428e-93bd-f99b1179f6d5,Claim in Fab,No,No,Unverified,,,"No","No","Not reviewed","UE-only content; verify compatibility"
+Quaternius Downtown City MegaKit,Interchange pack,https://quaternius.com/packs/downtowncitymegakit.html,Download standard/free tier only,No,No,Any supported FBX/OBJ/glTF,,,"No","No","Not reviewed","Do not select paid Source tier; retain package license"
+Kenney Train Kit,Interchange pack,https://kenney.nl/assets/train-kit,Download archive,Yes,Yes,Any supported FBX/OBJ/glTF,,,"No","No","Not reviewed","CC0"
+Kenney City Kit,Interchange pack,https://kenney.nl/assets/city-kit,Download archive,Verify,Verify,Any supported FBX/OBJ/glTF,,,"No","No","Not reviewed","Confirm current pack license and contents"
+Kenney Prototype Kit,Interchange pack,https://kenney.nl/assets/prototype-kit,Download archive,Yes,Yes,Any supported FBX/OBJ/glTF,,,"No","No","Not reviewed","CC0"
+Poly Haven selected assets,Materials and models,https://polyhaven.com/,Download selected assets only,Yes,Yes,Any supported format,,,"No","No","Not reviewed","CC0; retain asset IDs/source links"
