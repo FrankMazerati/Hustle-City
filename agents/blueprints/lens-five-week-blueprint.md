@@ -64,10 +64,9 @@ Five-week outcomes: Own camera choreography, cinematic shots, camera movement, t
 The five-week horizon is cumulative. Each week leaves a usable artifact for the next. These are target outcomes, not claims that work has already happened. Completion requires evidence and QA acceptance, not elapsed time.
 
 ## 5. Five-week roadmap
-### Week 1 — Foundation & discovery
-**Mission:** Read creator profile, project canon, role directive, decision log and source files. Inventory current work, verify what is real, record unknowns and establish acceptance criteria.
-**Week-end outcome:** Verified baseline, source register, scope boundary, assumptions register and accepted task backlog.
-**Your domain exit target:** Five-week outcomes: Own camera choreography, cinematic shots, camera movement, transitions and visual storytelling.; publish weekly artifacts, verified decisions, integration notes and next-phase handoffs.
+### Week 1 — Foundation design complete
+**Mission:** Complete the cinematic camera foundation: camera language, perspective rules, gameplay camera modes, shot vocabulary, movement principles, transition grammar and visual storytelling approach for opening/key city experiences.
+**Week-end outcome:** A complete first-pass design package saved in the repository, with source links, explicit unknowns, partner interfaces and QA disposition. Week 1 is a design-completion sprint, not an inventory-only week.
 
 ### Week 2 — Design & contracts
 **Mission:** Turn the baseline into detailed domain standards, specifications, workflows, interfaces, data/asset requirements and collaboration agreements. Request creator decisions early.
