@@ -33,6 +33,10 @@ This directory contains one five-week mission roadmap for every member of the pr
 | LENS | Cinematic Camera Director | [LENS](./lens-five-week-blueprint.md) |
 | Nexus | Backend & Multiplayer Support | [Nexus](./nexus-five-week-blueprint.md) |
 
+## Required team operating standards
+
+- [Agent Communication and Breadcrumb Standard](../operations/AGENT_COMMUNICATION_AND_BREADCRUMB_STANDARD.md) — complete roster, responsibilities, motto/model identity, chain of command, three communication feeds, runtime room, breadcrumb protocol and rolling assembly-line handoffs.
+
 ## Shared operating standard
 See [Five-Week Team Operating Blueprint](../operations/FIVE_WEEK_TEAM_OPERATING_BLUEPRINT.md) for the team directory, contact protocol, model-routing rules, assembly-line handoffs, quality gates, global constraints and shared daily rhythm.
 
