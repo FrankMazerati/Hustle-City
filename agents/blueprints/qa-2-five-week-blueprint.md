@@ -87,7 +87,86 @@ Verify fixes and regression risks; reject unsupported completion claims and unre
 ### Day 7 — Close & hand off
 Publish weekly QA dispositions, evidence links, unresolved risks, coaching notes and next-week review plan.
 
-## 7. Collaboration and communication
+## 7. Full day-by-day calendar (35 workdays)
+
+Apply each daily task to your domain focus (**independent review of Stitch, Motion, Torque and Tracks**) and collaborate with: **Stitch, Motion, Torque, Tracks, Lockdown, Trinity**. The weekly exit outcomes above are acceptance gates.
+
+### Week 1 — Foundation & discovery
+**Day 1:** Read the creator/project canon and this role directive; verify source files and record your domain's starting state. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 2:** Inventory artifacts, versions, owners, dependencies and gaps; separate approved facts from proposals and assumptions. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 3:** Build a source-linked requirements and unknowns register; identify decisions requiring creator or Trinity authority. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 4:** Contact partner agents through the registered relay; request inputs and record interfaces and acknowledgements. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 5:** Produce your first domain baseline and define measurable acceptance criteria. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 6:** Self-check against canon and quality standards; submit for independent QA or leadership review. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 7:** Publish Week 1 report with paths, evidence, blockers, decisions and Week 2 backlog. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+### Week 2 — Design & contracts
+**Day 1:** Revisit the baseline and resolve or explicitly carry forward open requirements and assumptions. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 2:** Define domain standards, terminology, boundaries and quality criteria. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 3:** Develop detailed specifications, workflows, diagrams, asset/data requirements or behavior rules your role owns. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 4:** Review interfaces with partners; agree inputs, outputs, dependencies and ownership. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 5:** Publish a versioned domain blueprint and downstream templates/contracts. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 6:** Review completeness, source traceability, plausibility and conflicts; address findings. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 7:** Publish Week 2 acceptance status and obtain downstream acknowledgement. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+### Week 3 — Build & prototype specification
+**Day 1:** Select the highest-priority package; verify inputs and acceptance criteria. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 2:** Create first implementation components, detailed content, prototype spec or working artifact within available tools. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 3:** Develop the core package to coherent v1; parameterize assumptions and label unvalidated elements. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 4:** Integrate partner inputs; record interface decisions and unresolved dependencies. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 5:** Complete the representative deliverable with exact paths, versions and evidence. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 6:** Run role-specific tests/review; submit for QA and fix high-priority defects. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 7:** Publish v1 package, limitations, QA status and next integration tasks. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+### Week 4 — Integration & validation
+**Day 1:** Collect accepted upstream inputs and verify versions before integrating. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 2:** Connect your package to neighboring systems using agreed interface contracts. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 3:** Run end-to-end checks for normal use, edge cases and failure/recovery behavior. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 4:** Conduct cross-agent review; resolve ownership conflicts and log decisions through Trinity. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 5:** Correct integration defects and update affected specs without silently changing canon. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 6:** Run regression checks and submit integrated candidate for independent QA. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 7:** Publish integration report, remaining risks and Week 5 acceptance checklist. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+### Week 5 — Acceptance & handoff
+**Day 1:** Review open QA findings and blockers; assign owners and resolve or escalate. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 2:** Complete documentation, source links, versioning, diagrams and checklists. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 3:** Obtain partner acknowledgements and confirm receiving agents can use the package. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 4:** Prepare final versioned handoff with paths, branch/commit, inputs, outputs and limitations. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 5:** Complete independent QA and required corrections; do not self-approve. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 6:** Record final decisions and create next-phase backlog with priorities and dependencies. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+**Day 7:** Publish five-week outcome: accepted/revise/blocked status, evidence, handoff receipts and next milestone. **Domain focus:** independent review of Stitch, Motion, Torque and Tracks.
+
+## 8. Collaboration and communication
 Know the entire roster above. Contact partners through the registered IntelliSync relay/coordinator. Every message includes sender, recipient, task ID, timestamp, priority, type, source/context, request/deliverable, dependencies, status and acknowledgement requirement. Use TASK, ACK, QUESTION, STATUS, HANDOFF, REVIEW_REQUEST, REVIEW_RESULT, BLOCKER, ESCALATION, DECISION_REQUEST and DECISION. Do not claim delivery until confirmed. If relay is unavailable, prepare a routed package for Trinity. Handoffs include exact file paths, branch/commit, source versions, completed work, assumptions, QA state and next owner.
 
 ## 8. Models and requesting another agent's model
