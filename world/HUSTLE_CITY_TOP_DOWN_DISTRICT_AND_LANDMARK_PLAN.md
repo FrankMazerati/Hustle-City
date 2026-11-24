@@ -281,3 +281,24 @@ The creator has directed that the North Side, South Side, East Side and West Sid
 - The master transportation map must label **HUSTLE CITY DRIVE** prominently and show its relationship to the central city, neighborhood access points, rail stations and waterfront crossings.
 - Rail remains a separate continuous transit network through the city, connecting both established train stations and neighborhood stations. Do not imply that the expressway itself is the train route.
 - Water transport remains a separate connected mobility layer. Boat access to selected upscale/waterfront neighborhoods is an approved possibility for detailed planning; routine boat access into hood neighborhoods is not part of the current direction. Exact eligible neighborhoods, docks and routes remain unresolved.
+
+## 19. Creator-approved Chicago-style map orientation and fixed beachfront party adjacency
+
+This section supersedes any earlier map-layout instruction that leaves the cardinal orientation undecided or uses a different left/right/up/down arrangement. The creator has explicitly approved the following presentation orientation for Hustle City's overhead maps and visual blueprint boards:
+
+- **North Side neighborhoods: top of the map.**
+- **South Side neighborhoods: left side of the map.**
+- **West Side neighborhoods: right side of the map.**
+- **East Side neighborhoods: bottom of the map.**
+- Keep the central city in the middle, with the four neighborhood groupings arranged around it in this creator-specified Chicago-inspired visual orientation. Include a north arrow consistent with this layout.
+- This is the required visual-map orientation. It does not authorize copying Chicago's real street map or imply that exact coordinates, neighborhood counts, district boundaries or parcel geometry have been finalized.
+
+**Hustle Club / Get Wild Beach adjacency is fixed:**
+- **Hustle Club** is the beachfront casino and nightlife destination.
+- **Get Wild Beach** is directly beside Hustle Club. Keep the casino and beach together as one connected waterfront party area, with the casino immediately adjacent to the beach rather than separated elsewhere along the waterfront.
+- Preserve the original approved visual relationship in every future map, angle, zoom-in and concept image. Do not relocate Hustle Club away from Get Wild Beach when creating alternate views.
+- **Monster Beach** remains a separate beach located inside the Upper Level Entertainment Studios campus. Do not confuse it with Get Wild Beach.
+- Exact building footprints, shoreline geometry, promenade layout and access paths remain open for detailed planning; the direct Hustle Club–Get Wild Beach adjacency itself is approved and must not be changed.
+
+**Visual continuity rule:** Future multi-angle boards and zoomed-in views must preserve this orientation and the fixed Hustle Club–Get Wild Beach relationship. Alternate camera angles may change perspective, but must not silently rearrange the approved city geography.
+
