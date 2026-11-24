@@ -802,3 +802,31 @@ No agent may independently invent database schemas, network authority or transac
 5. Players can discover reciprocal card matches through profile inspection without having to ask every person individually.
 6. Viewing a profile or card never reserves, offers or transfers an item.
 7. A trade still requires explicit negotiation/offer, acceptance and confirmation with server-side ownership validation.
+
+
+
+## 38. Device-native gameplay: phone, tablet and PC experiences
+
+**Creator-approved product direction:** Hustle City should adapt its interaction model to the device instead of simply shrinking one interface across every screen. The tablet remains the primary design target, while the phone and PC receive experiences suited to their screen size and input style.
+
+### Phone: tap-driven city navigation with playable hands-on activities
+- Design the phone experience around quick, clear taps and compact contextual screens. Players should be able to choose a destination or activity and tap to go there, rather than needing to manually steer a character through a small, crowded view for every ordinary trip.
+- City travel and general navigation can use destination selection, contextual action menus and clear transitions/arrival feedback. The underlying city schedule, travel and location systems must remain coherent; tap-to-travel is an accessible control model, not permission to ignore world state.
+- Preserve direct, satisfying gameplay where it matters. Poker must be genuinely playable on a phone, including seeing and playing the cards in the hand, following the hand's action flow, and using clear touch controls for poker decisions. It must not be reduced to a passive result screen or a single generic "play" button.
+- Apply the same principle to other activities: use focused, touch-friendly interaction surfaces for the actual activity, while keeping broader navigation and management compact.
+- Prioritize readable text, large touch targets, uncluttered screens and short interaction paths. Do not force the full tablet city view, tiny controls or dense panels onto the phone.
+
+### Tablet: primary full city experience
+- Treat the tablet as the primary experience for seeing more of the living city at once, exploring venues, inspecting people and profiles, and moving between social, economic and activity interfaces.
+- Take advantage of the larger display for a more immersive live scene and richer simultaneous context without making every action require precision mouse-like control.
+- Keep touch-first navigation and interaction, with room for detailed poker tables, cards, profiles, social discovery and city activities.
+
+### PC: expanded view and precision controls
+- Support a larger, more detailed presentation with mouse/keyboard interaction and room for broader panels or additional simultaneous information.
+- Preserve the same game rules, authoritative state and gameplay possibilities across platforms; PC is not a separate game economy or simulation.
+
+### Cross-device consistency and open details
+- The core world, player identity, progression, inventory, poker rules, NPC behavior and persistent activity state should remain consistent across phone, tablet and PC.
+- Adapt layout, navigation density, input affordances and information hierarchy to each device. Do not merely scale the same UI up or down.
+- Exact phone orientation, camera treatment, travel transition style, activity-by-activity mobile controls, responsive breakpoints and PC layout remain implementation/design details to prototype and validate.
+- **Acceptance criteria:** a phone player can navigate the city through intuitive destination/activity taps and can play a complete interactive poker hand using readable, reliable touch controls; a tablet player can comfortably explore the broader city scene; and a PC player can use the expanded interface without changing the underlying game rules.
