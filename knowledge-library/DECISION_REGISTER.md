@@ -211,3 +211,14 @@ This register captures decisions promoted through the knowledge library. The exi
 - Attendants should recognize players naturally without mentioning hidden codes, database records or technical memory mechanisms.
 - Meaningful social interactions can contribute to player stars/experience/levels under the progression system. These player progression measures remain distinct from NPC trust/familiarity; prevent farming through repeated parking, tapping or dialogue spam.
 - **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 36.
+
+
+## 2026-11-24 — Tap-to-view player balances, progression and card collection
+- **Status:** APPROVED — creator-directed profile/social discovery requirement.
+- A tapped player's profile should show their in-game money balance, stars, poker-chip balance, level, rank, neighborhood and crew affiliation. Keep money, poker chips, stars, level and rank as separate fields backed by authoritative game records.
+- The profile should visually show the player's owned trading-card collection, including visible quantities/duplicates and a clear distinction between owned cards and cards explicitly offered for trade.
+- Players may also share a wishlist/needed-card list, enabling reciprocal discovery. Do not expose an unshared wishlist or hidden inventory.
+- This creates an organic social loop: inspect people at a table/venue, spot a card match, approach and talk, negotiate and optionally trade—rather than asking everyone individually whether they own a card.
+- Profile/card inspection does not reserve, offer or transfer an item. Trades require explicit offer, acceptance, final confirmation and authoritative ownership validation.
+- Do not expose real-world payment, bank or account credentials. Apply existing in-game profile visibility controls.
+- **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 37.
