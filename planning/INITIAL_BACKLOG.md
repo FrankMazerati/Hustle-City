@@ -306,3 +306,28 @@
 - [ ] Distinguish invited NPC guests, ambient attendees and venue staff; guests should socialize and participate as guests, not all act as employees.
 - [ ] Make NPC event attendance schedule-, relationship-, capacity- and context-aware; do not force attendance when unavailable.
 - [ ] QA cross-location identity continuity, off-duty encounters, party participation, NPC-to-NPC social behavior and later recognition of shared encounters.
+
+
+## P22 — Player-specific relationships, social outings and dating
+- [ ] Maintain separate NPC relationship states and shared histories for each player.
+- [ ] Support gradual friendship and dating development through repeated interactions.
+- [ ] Let players invite NPCs to lunch/dinner, comedy shows, concerts, clubs, beach events, yacht parties and other activities.
+- [ ] Give NPCs agency to accept, decline, suggest another time and set boundaries.
+- [ ] Protect relationship privacy between players; include consent, age-appropriate rules, rejection handling, blocking and reporting.
+
+## P23 — Jokes on You Comedy Club (proposed name)
+- [ ] Design a paid-admission comedy/date-night venue with scheduled shows, varied tables/seating, food/drink service, NPC/player guests and a cigar-lounge concept.
+- [ ] Confirm final venue name, layout, capacity, schedule, ticket pricing and rating/platform requirements with creator before locking implementation.
+
+## P24 — Expandable multi-floor casino architecture
+- [ ] Design Shuffle Club as a large multi-floor flagship with multiple poker rooms, tables and supporting social/service spaces.
+- [ ] Include Hustle Towers as the second initial casino destination.
+- [ ] Architect expandable floors/rooms, table instances, concurrent capacity, staff coverage, wayfinding, room discovery and overflow handling.
+- [ ] Determine building dimensions, floor count, poker-room count and capacity targets through performance and concurrency planning; do not guess these values.
+- [ ] Support distinct casino brands for future cities rather than cloning the initial two names.
+
+## P25 — Procedural naming and automated venue population
+- [ ] Define naming principles and configurable name-generation rules for cities, casinos and other businesses, including local flavor and distinctiveness.
+- [ ] Ensure generated names are stable, non-duplicate within relevant scopes, suitable, and free of avoidable trademark confusion; allow creator review and override.
+- [ ] Provision generated venues with stable IDs, venue type, city/district placement, brand/name metadata, staffing needs and NPC population/activity schedules.
+- [ ] Make generation repeatable, seedable, auditable and safe to rerun without duplicating or overwriting existing venues or NPC identities.
