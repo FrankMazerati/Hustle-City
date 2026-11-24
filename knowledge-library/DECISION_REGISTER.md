@@ -150,3 +150,14 @@ This register captures decisions promoted through the knowledge library. The exi
 - Use a shared interaction model with adaptive layouts: touch selection on tablet/phone, mouse and keyboard support on PC, and controller focus/navigation for possible future consoles.
 - Do not merely shrink the tablet UI on smaller screens; preserve readable profiles, usable touch targets and reliable selection in crowded scenes.
 - **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 30.
+
+
+## 2026-11-24 — Full inspectable profiles for Sims/NPCs and population cohort history
+- **Status:** APPROVED — creator-directed living-city and profile requirement.
+- Give named Sims/NPCs full inspectable profiles through the same tap-to-identify interaction used for player characters. Profiles should show name, in-world age, neighborhood/residence, occupation/workplace, workdays, shift hours, days off and supported ownership/asset details.
+- Example schedule: Ebony works at the bar Monday–Friday, 9 AM–5 PM, and is off Saturday/Sunday. This illustrates individualized schedules; it is not a universal staffing rule.
+- Record each Sim's introduction/tenure in the persistent game world and stable population cohort/batch (e.g. first, second, third 10,000-person cohort). Cohort provenance must not change identity or imply rank/quality.
+- Keep in-world age, time in the game/city and cohort introduction metadata distinct.
+- Where supported by authoritative records, profiles may show homes, total properties, vehicles, car lots/businesses and other approved possessions. Do not fabricate ownership or expose exact private residential coordinates.
+- Profiles must remain consistent with actual persistent identity, employment, schedule, residence and asset records.
+- **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 31.
