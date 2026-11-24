@@ -32,8 +32,9 @@ Exact quantities, tier allocations and whether every tier includes all four curr
 ### No cards in memberships
 - No tier includes collectible cards, card packs, card draws, guaranteed card drops or card-collection progress.
 - Membership does not grant City Keys, crowns, businesses, properties, vehicles or other ownership entitlements.
-- Cards belong to a separate gameplay-earned progression system. The creator has not finalized which activities award cards, the amounts, frequency, eligibility or odds.
-- Daily login, poker participation and other activities are candidate card-earning routes only; none is approved as a card source yet.
+- Cards belong to a separate gameplay-earned progression system and are never included in membership packages.
+- Approved acquisition channels are qualifying poker hands/achievements, qualifying daily play sessions, and player-to-player trading. Trading transfers existing cards and does not create new supply.
+- Daily login currency rewards are separate and do not grant cards. Exact eligibility, thresholds, frequency, quantities, odds and anti-farming rules remain TBD.
 
 ## Economy goals
 
@@ -52,9 +53,9 @@ Daily login rewards are separate from membership contents. They should be availa
 
 Exact reward schedule, currency amounts, streak rules, catch-up rules, reset timezone and caps are TBD. Rewards should be modest enough to preserve the value of gameplay earning and optional purchases. Do not grant cards through daily login until the creator approves the card-acquisition system. Server-side claims must be idempotent so retries or reconnects cannot duplicate rewards.
 
-## Card acquisition — unresolved
+## Card acquisition — approved channels; detailed rules unresolved
 
-Potential sources for future consideration include daily login/daily objectives, poker participation or milestones, and other activities across the game. These are ideas, not approved mechanics. The creator will determine the actual card-earning activities and rules.
+The approved channels are qualifying poker hands/achievements, qualifying daily play sessions, and player-to-player trading. Trading moves existing cards between players and does not mint additional cards. Daily login currency rewards remain separate and do not grant cards. Exact eligible games, hand conditions, achievement thresholds, daily-session qualification, quantities, frequency, odds, duplicate handling and anti-farming rules remain TBD.
 
 All card acquisition must respect the approved city-based collection rule: players may acquire cards for a city only while physically present in that in-game city; player-to-player trading is the explicit exception. Preserve pending valid rewards until the player returns to the relevant city.
 
@@ -78,7 +79,7 @@ This is a conversion between separate wallets, not direct payment of food, drink
 - Food and beverages remain payable with Hustle Money, not Poker Chips.
 - Do not create currency through conversion or bypass store purchase/refund controls.
 
-**Unresolved — do not invent:** exchange ratio, fee, daily/weekly limits, minimum/maximum amount, eligibility of purchased chips versus gameplay winnings, cooldowns, venue/location restrictions, reversal rules, regional/platform restrictions and launch timing.
+**Approved conversion rate:** 1:1 nominal in-game denomination (one eligible Poker Chip converts to one Hustle Money). This is not real-world cash value or cash redemption. **Unresolved — do not invent:** fee, daily/weekly limits, minimum/maximum amount, eligibility of purchased chips versus gameplay winnings, cooldowns, venue/location restrictions, reversal rules, regional/platform restrictions and launch timing.
 
 Because Poker Chips may be purchased, wagered, won or transferred, the conversion mechanic requires separate legal, platform-policy and economy-abuse review before implementation. Do not imply cash redemption or real-world monetary value.
 
