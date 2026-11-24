@@ -1,0 +1,23 @@
+{
+  "manifest_status": "template",
+  "building_id": "TBD",
+  "display_name": "TBD",
+  "building_type": "TBD",
+  "district_id": "TBD",
+  "block_id": "TBD",
+  "interaction_tier": "TBD",
+  "access_state": "TBD",
+  "enterable": null,
+  "interior_profile_id": null,
+  "interaction_tags": [],
+  "services": [],
+  "npc_roles": [],
+  "schedule_id": null,
+  "signage_profile_id": null,
+  "exterior_asset_ids": [],
+  "interior_asset_ids": [],
+  "transport_links": [],
+  "launch_scope": "TBD",
+  "provenance": "TBD",
+  "creator_approval": "pending"
+}
