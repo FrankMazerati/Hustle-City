@@ -291,3 +291,56 @@ No agent may independently invent database schemas, network authority or transac
 - Build respectful consent, age-appropriate relationship rules, rejection handling, block/report tools and anti-harassment protections. Dating/romance is adult-only where applicable; never enable romantic or sexual interactions involving minors.
 - Keep NPCs' independent lives and other relationships active. NPCs are not exclusive player-owned companions and can have their own friends, dates, plans and social circles.
 - Coordinate P09 relationship simulation with P10 social activities/invitations/events and the account/privacy systems.
+
+
+## 19. Player-specific familiarity, recognition and trust progression
+**Creator-approved requirement:** Every meaningful recurring NPC interaction can build a persistent, player-specific familiarity relationship. This applies across the whole city—not only dating candidates—including valets, parking attendants, bartenders, servers, doormen, cashiers, shopkeepers, mechanics, hosts, concierge staff, security, coworkers and other service or neighborhood NPCs.
+
+### Two separate relationship measurements
+- **Familiarity level:** Measures how well this specific NPC knows/recognizes this specific player through meaningful encounters. It can progress through first meeting, repeat recognition, familiar acquaintance and deeper familiarity. The exact level count, thresholds and UI presentation remain implementation details.
+- **Trust meter:** A separately visible player↔NPC trust value/bar. It represents the NPC's earned comfort and confidence in the player, based on relevant behavior and shared experiences. Trust is not the same as familiarity, attraction, friendship, or permission.
+- Familiarity can rise through repeated meaningful encounters even when trust stays low. Trust can rise or fall through the quality and context of interactions; simply appearing nearby or grinding repeated button presses must not automatically create trust.
+- Trust should be earned gradually through reliable, respectful, consistent behavior and relevant shared interactions. Broken promises, disrespect, boundary violations or other contextually meaningful negative behavior may reduce it. Do not make every interaction a numeric transaction.
+- Higher trust may make an NPC more comfortable sharing appropriate information, accepting certain invitations or allowing a closer friendship, but never guarantees attraction, romance, access, consent or a particular response.
+- Keep romantic attraction and relationship status separate from familiarity and trust. An NPC can know and trust a player without being romantically interested; a high attraction score cannot override the NPC's boundaries or relationship status.
+
+### Player and NPC characteristics that shape first impressions and progression
+- Player-side traits may include height, appearance, grooming, clothing/style, swagger or movement style, confidence/presentation, conversational approach, social behavior and relevant reputation/context.
+- NPC-side traits may include personality, interests, attraction/preferences where relevant, relationship status, mood, confidence, sociability, social awareness, trust disposition, boundaries, schedule and current circumstances.
+- These characteristics inform contextual reactions and compatibility; they must not become rigid stereotypes or deterministic gates. The NPC's own preferences and choices remain authoritative.
+- Conversation quality, listening, respectful behavior, shared interests, remembered details, reliability and context-appropriate actions can affect familiarity, trust and relationship development.
+- Mood and availability can change by time, events, workload, companions and personal schedule. A previously receptive NPC may be busy or not interested on another visit.
+
+### Recognition in both directions
+- Persist enough approved, privacy-conscious player appearance/identity cues for an NPC to recognize a returning player where technically and legally appropriate.
+- The player should also be able to recognize recurring NPCs through stable names, faces, appearance, voice/style, role and schedule continuity.
+- Dialogue should reflect the actual familiarity level and known shared history: first-time greeting; recognition of a returning guest; reference to a previous conversation or service; or a more familiar greeting after repeated encounters.
+- Recognition must be grounded in authoritative game records. If the NPC or player cannot reliably identify the other, use a neutral greeting rather than false recognition.
+- Maintain separate relationship records for every player-NPC pair. One player's trust/familiarity must never be copied to another player's relationship with the same NPC.
+
+### Player-facing relationship UI
+- Where appropriate, expose a familiarity level and a distinct trust bar in the NPC/contact profile. Do not show hidden NPC calculations or sensitive internal traits.
+- The UI should communicate progression clearly without promising that a certain bar value unlocks romance or a guaranteed service outcome.
+- The player contact entry may include the NPC's name, portrait, known role/venue, last meaningful encounter, familiarity level, trust indicator where appropriate, and mutually shared contact methods only when exchanged.
+- Avoid cluttering every first-time ambient interaction with a full relationship HUD. Show detail in contextual interaction panels, profiles or contacts.
+
+## 20. Shift-based staffing and recurring workplace faces
+**Creator-approved requirement:** Recurring service NPCs work predictable, persistent shifts so players can learn who is commonly working at particular times. The same service role can be staffed by different named NPCs across the day; the game must not assume one worker is always present.
+
+- Support three staggered eight-hour staffing shifts as the creator's example operating pattern (24-hour coverage where a business is open continuously). Exact shift start times, overlap, break coverage, staffing counts and business-specific exceptions remain to be configured per workplace.
+- Assign each worker a stable identity, role, employer/workplace and recurring shift schedule. Staff can have days off, leave, breaks, shift swaps, absences and schedule changes without losing identity or relationship history.
+- Maintain a roster for each staffed service point. When one worker clocks out, another eligible worker can take over; the incoming worker is a different person with their own player-specific familiarity and trust history.
+- The player should be able to learn patterns through repeated visits—for example, a player who usually visits around midnight may commonly encounter the overnight-shift valet or bartender. This is in-world schedule continuity, not surveillance of real-world login habits.
+- The NPC on duty should be selected from authoritative shift and availability state, not randomly replaced every time the player looks away. Avoid implausible simultaneous staffing or a single NPC serving two distant locations.
+- Shift handoffs should preserve service continuity while keeping each worker's personal identity separate. An incoming valet does not inherit the outgoing valet's personal familiarity or trust with a player, though shared workplace records may support an appropriate handoff of an active vehicle/service ticket.
+- Schedule exceptions must be believable and testable: break relief, sick day/absence, special event staffing, venue closure, overtime/overlap and emergency replacement. Do not imply every business must run all three shifts if its approved opening hours do not require 24-hour staffing.
+
+### Acceptance tests
+1. The same player meets the same named valet on multiple visits; familiarity progresses and the valet's greetings reflect verified history.
+2. Familiarity can rise while trust remains low; trust can rise or fall independently.
+3. A player who visits at different times encounters different workers according to their actual shift roster, not arbitrary identity swaps.
+4. Returning at a familiar time commonly surfaces the expected on-duty NPC, subject to recorded days off and schedule exceptions.
+5. The incoming shift worker has their own independent relationship record; they do not inherit another worker's personal trust or memories.
+6. NPC recognition persists across player sessions, district travel and NPC off-duty activities where supported.
+7. Player appearance, height, swagger and conversation approach can inform social reactions without overriding NPC agency, consent or boundaries.
+8. Trust/familiarity never guarantees a date, access, confidential information or a positive response.
