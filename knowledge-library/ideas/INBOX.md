@@ -125,3 +125,13 @@ _Add new entries above this line._
 - **Design notes:** Share the underlying interaction system across platforms and adapt layout/input: touch on tablet/phone, mouse/keyboard on PC, and controller navigation for future consoles. Keep the scene visible, profiles readable and targets clear in crowds. Do not silently select the wrong person or trigger actions from proximity alone. Final phone orientation and detailed platform mappings remain open.
 - **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 30.
 - **Source:** Creator conversation, 2026-11-24.
+
+### 2026-11-24 — Full Sim/NPC profiles and population cohort identity
+- **Status:** APPROVED
+- **Domain:** living city / NPC identity / profile UI / population persistence
+- **Creator direction:** Every named Sim should have an inspectable profile comparable in depth to player profiles. Example: tap Ebony at the bar to see her name, age, neighborhood/home, occupation and workplace, her Monday–Friday 9 AM–5 PM schedule and Saturday/Sunday days off, how long she has been in the game, which 10,000-person population cohort she belongs to, and what she owns.
+- **Population metadata:** Track stable cohort/batch provenance (first 10,000, second 10,000, third 10,000, etc.) and introduction/tenure separately from in-world age. Cohort is not rank or identity and must not be renumbered when new cohorts are added.
+- **Ownership:** Show supported homes, properties, vehicles, car lots/businesses and other possessions from authoritative Sim ownership records. Do not invent assets or expose exact private residential coordinates.
+- **Design notes:** Use the tap-to-identify profile pop-up, no permanent overhead name labels. Compact summary plus expanded details; social actions remain contextual to schedule, activity and agency.
+- **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 31.
+- **Source:** Creator conversation, 2026-11-24.
