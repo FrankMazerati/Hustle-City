@@ -18,6 +18,7 @@
 - [ ] NPC live-state query contract.
 - [ ] QA scenario and bug report format.
 - [ ] Define player status/rank presentation interfaces and progression data contract from the creator-approved 100-level rank framework.
+- [ ] Define separate career-progression and star/social-recognition data contracts.
 
 ## P2 — First vertical slice
 - [ ] One city block with roads, sidewalks and one building.
@@ -32,4 +33,6 @@
 - [ ] Implement and validate the creator-approved 100-level player status ladder and its ten prestige families.
 - [ ] Finalize the exact ten descriptor labels and their level mapping.
 - [ ] Design post-Level-100 prestige/reset progression, beginning with the proposed Hustler Platinum I naming direction.
-- [ ] Define XP thresholds, progression pacing, rewards, and any unlock behavior separately from the approved rank-name structure.
+- [ ] Build activity-based career progression that can recognize daily logins, poker wins, casino wins, other game victories, and eligible world/social activities.
+- [ ] Design a separate star/social-recognition track earned through meaningful NPC and real-player interactions.
+- [ ] Define XP and star thresholds, pacing, rewards, daily limits, anti-exploit protections, and any unlock behavior separately from the approved rank-name structure.
