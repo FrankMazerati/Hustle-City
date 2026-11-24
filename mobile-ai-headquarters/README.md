@@ -1,5 +1,8 @@
 # Hustle City Mobile AI Headquarters
 
+> **Superseded blueprint — not the current command-center operating plan (2026-11-24).** This document describes an earlier Galaxy A17/12-specialist/remote-model/branch-per-task concept. Current direction prioritizes the tablet as the dedicated Hustle City command center, a 17-role local workforce target, one shared `main` branch and no per-agent branches. ChatGPT is the external coordinator. Preserve this file as historical design context; do not use its older roster, device hierarchy or branch workflow as current instructions. See [the conversation-to-repository audit](../docs/CONVERSATION_TO_REPOSITORY_AUDIT_2026-11-24.md).
+
+
 Status: architecture and configuration blueprint; not yet deployed or running.
 
 Working branch: `agents/mobile-ai-headquarters-v1`
