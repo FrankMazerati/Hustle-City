@@ -180,3 +180,8 @@ Use a shared economy model to keep comparable menu tiers affordable across all 3
 - Do not use Poker Chips to buy food or drinks.
 - Do not finalize daily reward amounts before catalog and spending assumptions are modeled.
 - Keep proposed items and prices clearly distinguished from creator-approved canon.
+
+
+## 10. First item-level menu draft
+
+The first item-level menu proposal is maintained separately in `docs/economy/ANCHOR_ITEM_LEVEL_MENUS_DRAFT.md`. It covers the flagship fictional Hustle City menu and Chicago, with draft item IDs, portion descriptions and proposed Hustle Money prices. These prices are proposals for creator review, not approved canon. Use the creator's price anchors as fixed references and do not finalize daily rewards until menu and other spending assumptions are balanced.
