@@ -177,13 +177,13 @@
 
  
 ## P13 — Universal IDs, entity registry and inventory traceability
-- [ ] Design a universal entity-ID strategy for every trackable game object and record: clothing, individual garments, vehicle models and individual cars, businesses, venues, property, furniture, cards, food, drinks, cigars, cigarettes, menus, menu versions, menu entries, products, services and other inventory.
+- [ ] Design a universal entity-ID strategy for every trackable game object and record: clothing, individual garments, vehicle models and individual cars, motorcycles, trucks, helicopters, private jets, boats, yachts, buildings, apartments, garages, businesses, venues, property, furniture, cards, food, drinks, cigars, cigarettes, menus, menu versions, menu entries, products, services and other inventory.
 - [ ] Define the distinction between catalog/type IDs and unique instance IDs; one catalog definition may have many individually tracked instances.
 - [ ] Define typed entity namespaces, immutable/non-recycled identifiers, uniqueness constraints and opaque internal IDs that do not expose sensitive account/business data.
 - [ ] Define shared entity metadata and typed extensions for ownership, custody, access permissions, location/container, condition, lifecycle status, source/creation and timestamps.
 - [ ] Preserve the distinction between ownership, possession/custody and permission/access; integrate the existing vehicle key/authorization model.
 - [ ] Create auditable lifecycle events for creation, acquisition, sale, transfer, lending, reservation, use/consumption, location change, maintenance, retirement and administrative correction as appropriate.
-- [ ] Define business/venue records and their relationships to independently identified menus, menu versions, menu entries, products and services.
+- [ ] Define business/venue records and their relationships to independently identified menus, menu versions, menu entries, products and services; identify buildings/properties independently from businesses occupying them, and model trackable sub-assets such as rooms, parking spaces and garage slots where needed.
 - [ ] Catalogue food, drinks, cigars and cigarettes as explicit item definitions with category, price, availability and applicable age/content/regulatory metadata.
 - [ ] Choose unit-level instance tracking for unique assets/collectibles and quantity/lot/batch tracking for fungible stock where appropriate.
 - [ ] Ensure transactions reference player/account, item/catalog or instance ID, quantity, counterparty/business, timestamp, currency/price and resulting inventory state.
