@@ -46,8 +46,9 @@ T0 is the actual start time tomorrow; no clock-in time has been assumed.
 | 3. Group B | 90 min | P05–P08 with QA-2 | Four versioned spaces/mobility packages reviewed |
 | 4. Group C | 90 min | P09–P12 with QA-3 | Four versioned living-city/gameplay packages reviewed |
 | 5. Integration | 45 min | P12 and affected specialists; QA cross-boundary checks | Interfaces/conflicts/dependencies recorded |
-| 6. Creative continuity/final QA | 30 min | SCRIBE, LENS and QA supervisors | Continuity review and defect disposition |
-| 7. Commit/archive/next queue | 15 min | Package owners and coordinator | Accepted artifacts committed; logs backed up; next queue ready |
+| 6. Rework and second production pass | 60 min | Return failed packages to owners; run another 20/5/5 cycle on priority fixes or next bounded tasks | Priority defects retested; next packages advanced where ready |
+| 7. Creative continuity/final QA | 30 min | SCRIBE, LENS and QA supervisors | Continuity review and defect disposition |
+| 8. Commit/archive/next queue | 15 min | Package owners and coordinator | Accepted artifacts committed; logs backed up; next queue ready |
 | **Total** | **8 hours** |  |  |
 
 If startup overruns, protect QA and correction; shorten optional polish. If UE tooling is unavailable in UserLAnd, produce engine-neutral specifications, data contracts, validation scripts or source artifacts and clearly label what could not be built/imported.
