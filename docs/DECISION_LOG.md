@@ -120,3 +120,9 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - **Approved creator direction:** Custom typed requests must be handled in context; when an NPC cannot fulfill a request, it should clarify or explain supported alternatives instead of pretending.
 - **Implementation details still open:** Role/service configuration, conversation continuity, booking and payment integrations, navigation data, error recovery, interaction layout and production phasing.
 - **Canonical specification:** `docs/gameplay/SOCIAL_WORLD_LIFESTYLE_AND_PLAYER_INTERACTION_REQUIREMENTS.md`.
+
+## Distinct NPC personality, voice, look and swagger
+- **Approved creator direction:** NPCs should have their own recognizable personalities, voices, visual looks, fashion/styles, swagger, mannerisms and conversational delivery rather than feeling interchangeable.
+- **Approved creator direction:** Individual identity should be expressed through dialogue, voice tone/cadence, grooming, clothing, posture, movement, facial expressions and gestures, and should remain consistent across conversations and service interactions.
+- **Implementation details still open:** Character archetypes/roster, voice production, visual style library, animation coverage, dialogue continuity and production budgets.
+- **Canonical specification:** `docs/gameplay/SOCIAL_WORLD_LIFESTYLE_AND_PLAYER_INTERACTION_REQUIREMENTS.md`.
