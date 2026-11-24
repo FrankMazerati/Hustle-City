@@ -420,3 +420,41 @@ All purchases must use authoritative server-side balances and idempotent transac
 - **Critical distinction:** “Cash out” in this feature means cashing game chips into Hustle Money within the game economy. It does not authorize real-world cash redemption, cash prizes, withdrawals or claims of real monetary value.
 - **Unresolved:** Which city markets receive this identity; venue names and locations; game variants/rules; wager limits and table stakes; whether each game uses Poker Chips or another approved in-game wallet; payouts/house rules; NPC and multiplayer participation; age-rating/platform constraints; launch scope; and detailed balancing.
 - **Required review before implementation:** Gambling simulations, paid currency, purchases, wagers, prizes, chip conversion, transferability and any cash-out terminology require legal, platform-policy, age-rating and consumer-protection review for each target market. Do not assume that using fictional currency automatically removes regulatory or platform restrictions. No real-money gambling or real-world redemption is implied.
+
+
+## Functional businesses, player jobs and phased city activation
+
+**Approved creator direction — functional world rule:** Hustle City should be built around functional businesses and purposeful locations, not rows of decorative storefronts. A building presented as a business should have a real gameplay purpose: a player-facing service, purchasable goods, an activity, employment/earning opportunity, social use, or another defined interaction. The goal is that commercial buildings are actual businesses rather than empty background facades.
+
+**NPC-operated business ecosystem:**
+- Populate businesses with role-appropriate NPC owners, employees, service workers, customers and ambient visitors.
+- NPCs should operate the business, provide products/services, interact conversationally with players and support the location's activities.
+- Reuse common business, inventory, checkout, service, staffing, dialogue, animation and transaction systems across different business types while preserving each venue's unique identity.
+- Examples include barbershops, beauty/braiding salons, nail salons, car washes, gas stations, convenience stores, clothing and retail stores, restaurants, shopping malls, lounges, casinos, concert venues and nightlife destinations.
+- Do not claim every structure must be a retail business: residential, civic, transportation, hospitality and other non-commercial buildings must likewise have a coherent world purpose and appropriate interactions if included as player-facing locations. Avoid purposeless buildings presented as meaningful destinations.
+
+**Player employment and side hustles:**
+- Give players ways to take jobs, work shifts or perform side hustles that earn in-game money and provide something purposeful to do in the city.
+- Candidate job categories include working at restaurants/retail, service and hospitality roles, delivery and errands, car washing/detailing, automotive support, event/concert staffing, and other neighborhood services.
+- Jobs and side hustles should connect to the functional business network: businesses have staffing/service needs, players can perform suitable work, and completed work can produce an authoritative in-game payment.
+- NPC-run businesses remain active and useful even when no player employee is online; player employment should complement, not be required for, a business to operate.
+- Job selection, qualifications, schedules, shift length, task loops, earnings, progression, employer ownership, player-run businesses and exact payouts remain to be designed. Candidate examples are not a locked job catalog or payout schedule.
+
+**Service and activity simulations:**
+- Support visible, character-driven service experiences where appropriate. Examples include entering a barbershop, selecting a haircut or beard service, sitting in the barber chair, seeing a barber NPC perform the service animation, and seeing the player's hairstyle/appearance update after completion and payment.
+- Beauty and braiding salons can offer appropriate hairstyle and braiding services; nail salons can offer nail services and appearance customization. Exact style catalogs, prices, service duration and animation coverage remain to be designed.
+- Car washes should provide an actual vehicle-cleaning service and visible vehicle presentation change, not just a menu-only purchase.
+- Retail businesses should support entering, browsing/selecting products, checkout/payment and receiving purchased items where applicable.
+- Chess is an approved activity direction: players should be able to play chess with NPCs and, where supported, other players. Barbershops and other neighborhood gathering spots may host chess tables. Chess rules, clocks, matchmaking, rewards and competitive ranking remain to be designed.
+- Street dice, card games, casino games and chess should help create recognizable neighborhood social activity, subject to the separate gambling review requirements for wagering games.
+
+**Phased playable-world rollout:**
+- Build and release the city in phases rather than requiring every planned building, neighborhood and entertainment destination to be fully playable before the first release.
+- The initial release should contain a deliberately selected, coherent playable area with genuinely functioning businesses, NPC services, activities, earning opportunities and spending loops.
+- Other planned buildings and areas may remain visible as future destinations and be clearly designated "Coming Soon" or equivalent until their gameplay is implemented and activated.
+- As the player population and production capacity grow, additional businesses, blocks, neighborhoods, shopping areas, malls, concerts, nightlife and other destinations can be activated in planned waves.
+- A location must not be presented as open or functional until its services and player-facing interactions are actually available. Coming-soon presentation should be clear and should not mislead players into expecting unavailable functionality.
+- Prefer a world/content configuration that can change a location's activation state without rebuilding the entire city. Plan for states such as planned, visible-coming-soon, playable/open, temporarily unavailable and retired/renovated; exact state model and player messaging remain technical design decisions.
+- Rollout sequencing should be driven by a balanced playable loop and verified readiness, not simply by the number of buildings rendered. Each activated business should have defined purpose, staffing/NPC behavior, interaction, products/services or activities, payment/earning rules, and appropriate feed/event integration.
+
+**Implementation and scope discipline:** This direction establishes the functional-business principle, player job/side-hustle capability, barber/beauty/nail/car-wash/retail service simulations, chess activity and phased activation model. It does not mean every business type is implemented in the first release. Initial playable-area boundaries, first-wave business list, staffing density, job catalog, earnings, business ownership, service catalogs, animation coverage, activation schedule and technical architecture remain to be designed and creator-approved.
