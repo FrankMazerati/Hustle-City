@@ -198,3 +198,29 @@ Secure Creator Studio should manage vehicle packs, clothing, buildings, characte
 - Add phone/valet retrieval so the player can request the vehicle back at an approved pickup point. Enforce owner/key/permission checks for both valet drop-off and retrieval.
 - NPC valet movement should follow safe controlled paths. No random collisions, vehicle damage, theft, loss or fees caused by valet/pathing simulation. A safe state transition may substitute for a fully simulated drive into the garage while retaining an appropriate arrival animation/feedback.
 - Define parking/garage capacities, fees, eligibility, service coverage, retrieval time, vehicle state persistence and recovery from disconnects/session interruption before implementation.
+
+ 
+## Universal entity IDs, catalog and inventory traceability
+Hustle City requires a universal identity and traceability layer across the game economy and world. Every trackable entity receives a stable unique ID, including individual clothing pieces, cars, businesses, food and drink products, cigars, cigarettes, cards, furniture, property, venues, menus and menu entries.
+
+### Identity model
+- Use separate IDs for a catalog definition/type and for an individually tracked instance. A clothing style or car model is a catalog entity; each individually owned garment or vehicle is an instance. A menu item definition is distinct from each stock/transaction/consumption record.
+- IDs are immutable, unique, durable and never reassigned to another entity. Display names, descriptions, prices, owners, locations and other attributes are mutable metadata, not identity.
+- Use typed entity namespaces or equivalent schema constraints to prevent collisions and preserve clear entity categories.
+- Track ownership separately from possession/custody and access permission. A player may own a vehicle while another player has authorized keys; transfers must not accidentally change ownership.
+- Keep current state plus auditable event history for creation, acquisition, sale, transfer, lending, reservation, use/consumption, location change, maintenance, retirement and administrative correction, as applicable.
+- Businesses/venues have their own entity IDs. Their menus, menu versions, products, services and individual menu entries have their own IDs and relationships to the business. Food, drinks, cigars and cigarettes must be represented as explicit catalog records with relevant category, availability, price and regulatory/content metadata.
+- Inventory records should support quantities and lot/batch tracking where individual unit identity is unnecessary, while unique assets and collectibles receive individual instance IDs. Do not create millions of unit records for fungible stock unless there is a real traceability requirement.
+- Every transaction should reference the relevant player/account, item or catalog/instance ID, quantity, counterparty/business, timestamp, price/currency and resulting state. Use append-only or otherwise auditable transaction/event records with controlled correction paths.
+
+### Population growth and card-supply management
+- Player population and card inventory are distinct datasets with an explicit configurable relationship, not a hard-coded one-card-per-player assumption.
+- The system must support growth from an initial card pool to 100,000+ players and beyond by issuing additional uniquely identified card instances and, if the creator approves, introducing additional values, variants, rarities or sets.
+- Define supply policies per card family/game mode: initial print/issue quantity, reserve pool, issuance trigger, release batch size, rarity/value distribution, duplicate rules, replacement policy and maximum/target circulation.
+- Maintain reconciled counts for total created, in circulation, unissued/available, reserved, held by players, held by businesses/system accounts, consumed/retired and invalidated. Card movement between players, tables, inventory, trades and system pools must update the ledger exactly once.
+- Never silently alter the identity or value of an existing card to inflate supply. New supply should be new instances; new values/variants should be new catalog definitions and be introduced through an approved, versioned content/economy change.
+- Add anti-duplication safeguards, idempotent transaction handling, concurrency-safe issuance, audit logs and reconciliation alerts. A card cannot be issued twice or simultaneously owned by multiple players.
+- Exact supply ratios, issuance thresholds, new card values, rarity and distribution remain unresolved and require creator approval plus economy simulation.
+
+### Implementation boundary
+This is an approved product requirement for the architecture and backlog, not a claim that the registry or card issuance system is already implemented. The exact database schema, ID encoding, partitioning/indexing, public-facing reference format and operational tooling are technical design tasks.
