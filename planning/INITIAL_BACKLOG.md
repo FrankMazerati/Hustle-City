@@ -59,3 +59,16 @@
 - [ ] Build modular activation boundaries and documentation so later systems can be introduced without rebuilding the social/poker foundation.
 - [ ] Treat crime-oriented player gameplay, jail scenarios, weapons and drugs as possible post-launch proposals only; require separate creator approval plus legal, platform-rating, safety, moderation and technical review before specification or implementation.
 - [ ] Prepare concise architecture/product documentation that future investors, partners and development contributors can understand without changing the approved launch scope.
+
+
+## P6 — Lifestyle package economy and healthy engagement loop
+- [ ] Design a single recurring Lifestyle Package that can bundle housing, phone service and utilities, with transparent weekly pricing as the leading candidate.
+- [ ] Prototype candidate Starter, Comfortable, Premium and Elite package tiers; define contents and allow component-by-component upgrades as a design option.
+- [ ] Balance every package against realistic in-game earning opportunities; basic housing/phone/utilities must not require real-money purchases.
+- [ ] Define billing UI with package contents, price, due date, payment status and clear earning options.
+- [ ] Define daily login rewards and weekly streak rewards with transparent schedules, reasonable caps, grace/catch-up rules and no punitive loss of essential services.
+- [ ] Award XP and in-game currency for meaningful poker, social, event and city activities; avoid idle-time farming and repetitive check-in exploits.
+- [ ] Tune incremental progress-bar feedback and level pacing to feel rewarding without excessive grinding, forced multiple-daily logins or prolonged sessions.
+- [ ] Add economy simulations for income, weekly package costs, upgrades, sinks, inflation and new-player affordability.
+- [ ] Add healthy-engagement metrics and player-feedback checks alongside retention metrics; prohibit deceptive urgency, coercive streak loss and uncapped playtime incentives.
+- [ ] Obtain creator approval for package tiers/prices, weekly billing rules, rewards, streak policy, XP curves and upgrade costs before implementation.
