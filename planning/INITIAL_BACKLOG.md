@@ -160,3 +160,17 @@
 - [ ] Protect player assets and balances from simulation defects; no random crashes, vehicle loss, damage fees or financial penalties caused by automated pathing.
 - [ ] Define service costs, staging rules, aircraft access/fuel state, routing, travel times, camera behavior and airport flow for creator review.
 - [ ] Keep manual driving out of launch scope unless separately approved after technical, safety and accessibility review.
+
+
+## P12 — Parking garages and valet/concierge arrival
+- [ ] Design standard self-parking at relevant destinations with clear designated spaces for owned/authorized vehicles.
+- [ ] Add indoor/covered garages to appropriate residential properties, upscale venues, hotels/clubs and major destinations; define slot capacity and availability.
+- [ ] Design a premium valet/concierge drop-off point at eligible destinations.
+- [ ] Allow qualifying players to exit at the entrance and have an NPC valet/concierge move the vehicle to secure parking.
+- [ ] Allow premium valet convenience to be accessed through an eligible paid service tier OR earned in-game wealth, with exact eligibility and costs requiring creator approval.
+- [ ] Keep basic vehicle ownership and standard parking available to non-subscribers.
+- [ ] Persist authoritative vehicle location and state (owner, keys/authorized users, garage/slot, condition, availability) during and after valet handoff.
+- [ ] Add phone/valet retrieval so players can request their parked vehicle at an approved pickup point.
+- [ ] Enforce ownership/key/permission checks for valet drop-off, storage and retrieval.
+- [ ] Implement safe NPC valet routing or a safe parking transition; prevent collisions, damage, theft, vehicle loss and penalties caused by simulation errors.
+- [ ] Define overflow parking for full garages, service coverage, fees, retrieval timing and disconnect/session recovery.
