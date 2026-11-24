@@ -289,3 +289,20 @@ Required behavior:
 
 Interaction presentation, exact number/layout of quick replies, text-entry UI, moderation/safety, speech-to-text/voice options, localization, dialogue orchestration and runtime model strategy remain to be designed.
 
+
+## 24. Universal role-based NPC interaction across the city
+
+The contextual quick-reply and free-text conversation system is a shared, world-wide interaction foundation. It must work wherever players interact with an NPC, not only in restaurants, bars or poker rooms.
+
+Required behavior:
+- Apply role-aware conversations to valet attendants, hotel front-desk staff, concierges, doormen, bellhops/luggage attendants, elevator attendants, hosts, servers, bartenders, cigar attendants, shopkeepers, security staff, transportation workers and other appropriate NPC roles.
+- Quick replies must match the NPC's actual responsibilities and the player's current situation. A valet can offer to park or retrieve a vehicle; a front-desk clerk can help book or check into an available room; a concierge can provide directions or information; a bellhop can help with luggage; an elevator attendant can help select a floor or destination.
+- Support complete service journeys where appropriate: request, clarify details, show valid options, confirm the player's selection, perform the action, and report the verified result. Examples include vehicle drop-off and retrieval, room search/booking/check-in, directions and destination guidance, luggage assistance, elevator/facility access and other venue services.
+- For reservations, purchases or other consequential actions, show the relevant available options and terms (including price or fees when applicable) and obtain the required player confirmation before committing. Do not imply a room, vehicle, service or destination is secured until the authoritative game system confirms it.
+- Provide a custom text-entry route alongside quick replies so players can ask unusual questions, give specific instructions, make special requests or simply converse naturally. NPCs should understand and respond to the intent when supported; otherwise they should clarify or explain the available alternatives rather than pretend to comply.
+- Conversations should remain continuous across follow-up questions and actions, and should reflect NPC role, venue, player context, available services, current world state and prior turns in the interaction.
+- NPCs must use authoritative game/service systems for availability, prices, booking status, vehicle ownership/location, route/destination data and action outcomes. Never fabricate directions, room availability, booking confirmations, fees, vehicle retrieval, inventory or completed actions.
+- Keep interactions touch-friendly and concise. Quick replies should reduce friction without preventing free-form conversation or interrupting core gameplay.
+- The same framework should be extensible to future NPC roles and services through role/service configuration rather than one-off conversation implementations.
+
+Exact interaction layouts, booking and reservation rules, payment/fee policies, service APIs, navigation data, dialogue orchestration, error recovery and implementation phasing remain to be designed.
