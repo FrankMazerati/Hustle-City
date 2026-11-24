@@ -20,7 +20,7 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - Basic transport must not consume premium Diamonds.
 - Neighborhood ownership/founding, crew leadership, property/business ownership and residency are separate concepts.
 - Neighborhoods can be visually complete/ambient while only a small number of locations are fully interactive at launch.
-- Existing SAM-led 10-person named Hustle City cohort and 48-role specialist catalog remain the canonical agent system; engine-specific role mappings must reflect Unreal primary / Unity secondary.
+- **Superseded workforce baseline:** the earlier SAM-led 10-person cohort and 48-role catalog are historical role-library material, not the current staffing roster. Current creator-approved target is 17 local roles: SCRIBE and LENS as parallel creative leads, QA-1 through QA-3, and P01–P12 production specialists. ChatGPT in the coordinating conversation is the overall coordinator; Trinity is not a locally running agent/model. The exact P01–P12 domain mapping and runtime config reconciliation remain required.
  
 ## Working direction
 - Fictional city draws from Chicago and Miami/Florida but has original geography, names, architecture, landmarks and district identities.
@@ -45,9 +45,9 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 ## Hustle City memberships and currency economy
 - **Approved:** Eight membership tiers and USD price points: Hustle City Starter ($9.99), Hustle City Connect ($19.99), Hustle City Boss ($29.99), Hustle City Mogul ($39.99), Hustle City Elite ($49.99), Hustle City Royalty ($59.99), Hustle City Legend ($79.99), Hustle City Empire ($99.99). There is no $69.99 tier.
 - **Approved:** Membership packages contain only Hustle Money, Diamonds, Poker Chips and Wings. No membership includes cards, card packs or card drops.
-- **Approved:** Cards are earned through a separate gameplay system; specific activities and award rules are unresolved. Daily login, poker participation and other activities are candidates only, not finalized card sources.
+- **Approved:** Cards are earned through a separate gameplay system via qualifying poker hands/achievements, qualifying daily play sessions and player-to-player trading. Trading transfers existing cards and does not create new supply. Daily login currency rewards do not grant cards; exact thresholds, amounts, frequency, odds and anti-farming rules remain unresolved.
 - **Approved design goal:** Balance membership value against gameplay earning and optional individual purchases. Do not over-grant currency or make paid membership necessary for core progression.
-- **Unresolved:** Billing cadence, exact currency quantities and tier allocations, daily reward amounts/streak rules, card acquisition methods, store catalog/prices and Poker Chip monetization.
+- **Unresolved:** Billing cadence, exact currency quantities and tier allocations, daily reward amounts/streak/catch-up/reset rules, card thresholds/odds, store catalog/prices, and Poker Chip monetization limits/eligibility.
 - Canonical specification: `docs/economy/MEMBERSHIPS_AND_REWARDS.md`.
 
 ## Live entertainment, sports and music
@@ -138,7 +138,7 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - **Canonical flagship catalog:** `docs/economy/HUSTLE_CITY_FLAGSHIP_MASTER_MENU.md`. The catalog contains items/brand families and research references; game prices remain a separate creator-approved pass. Existing draft game-price worksheet is preserved unchanged.
 - **Approved creator direction — Poker Chip conversion:** Players should be able to exchange Poker Chips for Hustle Money when they need general spending money, then use Hustle Money for eligible city purchases. This is a conversion between separate wallets, not direct payment of food/drinks with Poker Chips.
 - **Conversion implementation guardrails:** Atomic debit/credit; authoritative auditable ledger; idempotency and anti-replay/concurrency protections; show quote, fee and limits and obtain confirmation before conversion.
-- **Unresolved:** Exchange ratio, fees, limits, eligibility of purchased chips versus winnings, cooldowns, restrictions, reversal rules and launch timing. Paid chips/wagering/prizes/transfer/redemption and conversion require legal/platform-policy review; do not imply cash-out or real-world value.
+- **Approved conversion rate:** 1 Poker Chip = 1 Hustle Money as a nominal in-game denomination, not real-world value or cash redemption. **Unresolved:** fees, limits, eligibility of purchased chips versus winnings, cooldowns, restrictions, reversal rules and launch timing. Paid chips/wagering/prizes/transfer/redemption and conversion require legal/platform-policy review.
 - Canonical economy specification: `docs/economy/MEMBERSHIPS_AND_REWARDS.md`.
 
 
