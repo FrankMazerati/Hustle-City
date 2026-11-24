@@ -34,7 +34,7 @@ A player can own a property in one neighborhood and belong to a crew headquarter
 - wallet_accounts supports player-owned or crew-owned currency accounts.
 - wallet_transactions is the auditable transaction header.
 - wallet_entries is the append-only balance-change ledger.
-- Currency codes remain separate: HUSTLE_MONEY, DIAMONDS, and POKER_CHIPS.
+- Currency codes remain separate: HUSTLE_MONEY, DIAMONDS, POKER_CHIPS, and WINGS.
 - inventory_items and player_inventory track non-card items.
 - collectible_cards, player_cards, card_packs, and card_pack_placements track collectible cards and packs. Five pack slots per location is the current design rule.
 The client must never set balances, grant items, authorize ownership, or settle competitive outcomes.
@@ -77,7 +77,7 @@ The draft enables RLS on every application table and defines no permissive polic
 
 ## Health, consumables and currency boundaries
 - Player health/condition and any food/drink effects need authoritative state and item-effect definitions if the health system is retained in the playable design.
-- Food and beverages purchased at venues use Hustle Money/Cash, not Poker Chips. Store item identity, price charged, effect applied and transaction outcome so health restoration can be audited and replay-safe.
+- Food and beverages purchased at venues use Hustle Money/Cash, not Poker Chips. Food and drinks at poker tables are specifically intended to restore table health; the wider distinction among health, energy/stamina, hunger and condition remains a design question. Store item identity, price charged, effect applied and transaction outcome so restoration can be audited and replay-safe.
 - Keep four distinct wallets: Hustle Money/Cash, Diamonds, Poker Chips and Wings. The current SQL draft's three-currency constraint is incomplete relative to the approved four-currency economy and must be reconciled before migration.
 - Poker Chip → Hustle Money conversion is a separate, explicit cashier/kiosk flow with atomic debit/credit and an auditable idempotent transaction. It is not direct Poker Chip payment for ordinary goods.
 
