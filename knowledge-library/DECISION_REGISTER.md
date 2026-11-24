@@ -63,3 +63,16 @@ This register captures decisions promoted through the knowledge library. The exi
 - Level, stars and playtime are context cues, not proof of trustworthiness, wealth, consent, authority, romantic compatibility or entitlement. They do not replace player-specific familiarity/trust or NPC agency.
 - **Open implementation details:** final panel layout, profile visibility defaults/settings, exact public/social fields, UI behavior on different screens, data contracts and dialogue-selection rules.
 - **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 21.
+
+
+## 2026-11-24 — Conversation-earned trust and NPC-hosted social life
+- **Status:** APPROVED — creator explicitly directed that trust should grow through conversations and that NPCs should host and invite players to social gatherings.
+- Trust is primarily earned through meaningful conversation and interaction. After completing a practical interaction (for example, “park a vehicle” with Marcus the valet/parking attendant), the player can choose to remain and talk with that same NPC.
+- Conversation choices can include ordinary topics, questions about family or work, shared interests, personal updates from the player, and more personal questions when context and boundaries support them. NPCs can answer, decline, deflect or redirect naturally.
+- A sustained positive conversation can raise trust gradually (illustratively, 63→64→65). Trust changes depend on conversation quality and the NPC's response, not elapsed time, repetitive prompts or button-spamming. Listening, empathy, relevant follow-ups and respectful reciprocal sharing can help; intrusive, dismissive or boundary-violating behavior can stall or reduce trust.
+- NPCs can initiate conversation, ask questions and share appropriate personal updates grounded in their own lives and recorded shared history. Trust remains separate from familiarity, attraction, relationship status and consent.
+- NPCs and NPC social circles can host city social events, including yacht parties, street-car meets/parties and club parties. Hosts select guests and can invite players, including new players, through contextual social pathways; invitations are not restricted to high-trust relationships or established crews.
+- Support the full event lifecycle: host and event selection, location/time, guest list, invitations/responses, attendance, social interactions and persistent outcomes. NPCs retain agency to accept, decline, defer, attend, leave and interact independently.
+- Player-hosted parties remain supported; NPC-hosted events are a separate capability in which NPCs have genuine social agency rather than acting as decoration.
+- **Open implementation details:** conversation topic catalog and scoring/decay model; trust increment sizes and thresholds; NPC memory representation; social graph and host selection; event scheduling, capacity, invitation discovery and safety/content rules.
+- **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 22.
