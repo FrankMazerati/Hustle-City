@@ -385,3 +385,13 @@ Create a reusable naming framework for cities, casinos, venues and businesses. G
 - Clearly distinguish owned cards, duplicates, cards listed for trade and cards not offered. An extra copy is not automatically tradable; the owner controls listings. Discovery can lead to chat and negotiation, but transfers require explicit trade confirmation and validation.
 - Keep profile inspection quick and player-directed, without arbitrary friction. Respect privacy, blocks, moderation and recipient agency. Profile inspection alone does not increase trust/familiarity.
 - See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 28.
+
+
+## 30. Tap-to-identify and cross-platform player interaction
+- The default live scene should not display permanent floating name labels above every character. Players tap/select a person to reveal their portrait, name and permitted profile details in the compact in-world pop-up.
+- Continue the same direct actions from the pop-up: chat, invite to sit, invite for a drink or meal, and ask to join a group when appropriate.
+- Tablet is the primary design target, with phone and PC support and possible future PlayStation/Xbox support. Phone landscape/horizontal presentation is the current direction to evaluate.
+- Use one shared interaction model with adaptive layouts and input: touch for tablet/phone, mouse/keyboard for PC, and controller navigation for future consoles.
+- Preserve readable profiles, usable touch targets, clear selection feedback in crowds and the live scene context. Do not simply shrink the tablet UI or infer selection from proximity.
+- Exact orientation rules, responsive breakpoints, accessibility settings and console control mapping remain open implementation details.
+- See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 30.
