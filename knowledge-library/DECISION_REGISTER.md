@@ -51,3 +51,15 @@ This register captures decisions promoted through the knowledge library. The exi
 - Different named workers can cover the same role at different times. Players can learn who is commonly on duty at familiar in-game times. Incoming workers retain their own independent familiarity/trust records; they do not inherit another worker's personal relationship.
 - **Open implementation details:** familiarity level count and thresholds; trust scale and change weights; exact shift hours and staffing per business; UI presentation; persistence schema; recognition implementation and performance budgets.
 - **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), sections 16–20.
+
+
+## 2026-11-24 — Reciprocal NPC/player profiles and contextual recognition UI
+- **Status:** APPROVED — creator explicitly requested visible NPC profiles and reciprocal player recognition information.
+- When a player approaches or interacts with a named NPC, a compact profile/relationship area can appear alongside the conversation or be opened as a fuller profile.
+- The player can see the NPC's stable name and role, plus the player-specific familiarity level and trust bar.
+- The NPC recognition system can consult approved in-game player profile fields such as display name (example: Frank Maserati), player level, visible stars/rank, playtime/tenure and visit frequency at the relevant venue.
+- NPC greetings and behavior should adapt to verified context: first-time visitor, returning guest, venue regular, recognized player, prior service or conversation history.
+- Venue visit frequency must be distinguished from total playtime/tenure. NPCs may only use fields approved as visible in that context; private/account data must not be exposed.
+- Level, stars and playtime are context cues, not proof of trustworthiness, wealth, consent, authority, romantic compatibility or entitlement. They do not replace player-specific familiarity/trust or NPC agency.
+- **Open implementation details:** final panel layout, profile visibility defaults/settings, exact public/social fields, UI behavior on different screens, data contracts and dialogue-selection rules.
+- **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 21.
