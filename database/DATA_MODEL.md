@@ -54,3 +54,14 @@ Detailed transit lines, stations, schedules, NPC routines, game rounds, and sett
 
 ## Security baseline
 The draft enables RLS on every application table and defines no permissive policies. Access remains unavailable to ordinary client roles until table-specific policies and trusted server operations are designed and tested. Never expose service-role credentials in a game client.
+
+## Lifestyle services and recurring costs (conceptual; schema not finalized)
+- Candidate records may be needed for housing occupancy/tenancy, property ownership, vehicle financing obligations, insurance policies, fuel/service records, and recurring lifestyle charges.
+- Do not assume each candidate needs a separate player-managed bill or table. A bundled recurring charge is under consideration to keep the simulation lightweight; itemized expense breakdown may be optional.
+- Exact entities, payment cadence, prices, delinquency behavior, coverage/claims and whether fuel is separately tracked are unresolved. Do not implement financial penalties until the creator approves the rules.
+- Vehicle simulation faults must not cause loss of player-owned assets or unfair insurance/repair charges.
+
+## In-world phone and messaging
+- Reuse the existing social_conversations, conversation_participants and messages foundation for phone-based player messaging rather than creating a disconnected duplicate messaging system.
+- Phone UI/device state and message presentation are client/gameplay concerns unless persistent device ownership or settings become necessary.
+- Enforce the same server-side authorization, privacy, blocking, reporting and moderation rules regardless of whether a message is opened from the phone UI or another social interface.
