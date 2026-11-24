@@ -21,6 +21,8 @@ Hustle City is a cinematic, realistic 3D social-world/city-life game built prima
 - [Dedicated Hustle City cohort](agents/cohorts/hustle-city-core/README.md)
 - [Dedicated runtime pilot and activation steps](agents/runtime/hustle-city/README.md)
 - [IntelliSync package-relay and local Ollama worker runtime](intellisync/README.md)
+- [Approved overlapping workforce and 20/5/5 operating specification](intellisync/OVERLAPPING_WORKFORCE_SPEC.md)
+- [Database deployment readiness and security guardrails](database/DEPLOYMENT_READINESS.md)
 - [17-agent Ollama model assignment registry](intellisync/config/model_assignments.json)
 - [On-demand local Ollama worker](intellisync/worker.py)
 - [17-agent local workforce and coordinator structure](intellisync/config/coordination.json)
