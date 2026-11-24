@@ -80,3 +80,17 @@
 - [ ] Treat social login (including Facebook) as authentication only; require separate supported permission/consent for any social-platform notifications.
 - [ ] Build a low-frequency re-engagement notification service with quiet hours, frequency caps, deduplication, privacy-safe message previews, delivery audit and channel preference enforcement.
 - [ ] Define absence thresholds, deterioration stages, maintenance timing, restoration costs, reminder cadence and approved message templates with the creator before implementation.
+
+
+## P7 — May 2027 MVP delivery and advertising revenue
+- [ ] Build a critical-path milestone plan targeting a focused, playable Hustle City launch by May 2027; separate MVP blockers from post-launch world expansion.
+- [ ] Create a $10,000/month revenue model with explicit assumptions for DAU/MAU, impressions, rewarded-video opt-in/completion, eCPM, payer conversion, average payer spend, store/ad fees and taxes.
+- [ ] Implement a persistent, unobtrusive bottom banner for eligible free players; ensure it does not cover gameplay or controls and respects provider policy.
+- [ ] Validate banner refresh rules with the selected ad provider. Do not implement the proposed 10–15-second refresh unless explicitly permitted; AdMob's documented custom refresh range is 30–150 seconds and it recommends optimized refresh.
+- [ ] Design an optional rewarded-video chip recovery offer at the bar when a player runs out of poker chips, with a clear reward, frequency cap and non-ad earning alternative.
+- [ ] Design occasional opt-in double-reward videos for selected activities/claims, with cooldowns and no prompt on every action.
+- [ ] Review any casino-context advertising for age-rating, gambling-advertising, legal and platform compliance; do not imply virtual chips have cash value or are redeemable.
+- [ ] Prevent forced ads during poker hands, critical decisions, conversations or other key gameplay.
+- [ ] Instrument ad impressions, viewability, fill, opt-in/completion, eCPM, revenue per DAU, retention and player complaints; compare actual results with the revenue model.
+- [ ] Confirm whether any approved membership tier includes ad-free play before adding ad-free entitlements; do not assume this benefit.
+- [ ] Obtain creator approval for ad provider, placements, refresh timing, reward amounts, cooldowns, frequency caps and monetization mix before production rollout.
