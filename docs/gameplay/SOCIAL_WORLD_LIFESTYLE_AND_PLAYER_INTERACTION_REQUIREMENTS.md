@@ -306,3 +306,19 @@ Required behavior:
 - The same framework should be extensible to future NPC roles and services through role/service configuration rather than one-off conversation implementations.
 
 Exact interaction layouts, booking and reservation rules, payment/fee policies, service APIs, navigation data, dialogue orchestration, error recovery and implementation phasing remain to be designed.
+
+## 25. Distinct NPC identity, personality, voice and style
+
+NPCs must be individually recognizable characters with their own identity and presence. They should not feel like interchangeable copies differentiated only by job title.
+
+Required creator direction:
+- Give NPCs distinct personalities, conversational attitudes, humor, confidence, warmth, temperament and social energy appropriate to their role and background.
+- Give NPCs distinctive voices, including varied vocal tone, cadence, delivery and speaking style. Voice casting/creation must support recognizable character identity and avoid every NPC sounding alike.
+- Give NPCs distinct visual looks and personal styles: clothing, grooming, hair, accessories, posture, movement and overall presentation.
+- Reflect individual swagger, confidence and mannerisms through dialogue, facial expression, gesture, walk cycles and idle behavior.
+- Keep character design coherent with venue, occupation, neighborhood, age-appropriate presentation and local setting while allowing memorable individual variation.
+- NPC personality and style should carry into quick replies, free-text responses, flirting, service interactions and ambient conversations; the same character should remain recognizable across encounters.
+- NPCs should not all use the same catchphrases, flirt, approach players or behave with the same level of energy. Their social approach should reflect their individual personality and context.
+- Distinct identity must not undermine service accuracy, player boundaries or the authoritative game-state rules governing bookings, purchases, inventory and other actions.
+
+Exact character roster, voice approach, dialogue performance, visual archetypes, animation sets, memory/continuity depth and production budgets remain to be designed.
