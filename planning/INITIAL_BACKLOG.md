@@ -17,6 +17,7 @@
 - [ ] Transit station/platform contract.
 - [ ] NPC live-state query contract.
 - [ ] QA scenario and bug report format.
+- [ ] Define player status/rank presentation interfaces and progression data contract from the creator-approved 100-level rank framework.
 
 ## P2 — First vertical slice
 - [ ] One city block with roads, sidewalks and one building.
@@ -26,3 +27,9 @@
 - [ ] One automated vehicle route with safe stops.
 - [ ] Player Shell prototype.
 - [ ] Automated tests for stuck state, doors, collisions and recovery.
+
+## P3 — Player progression and recognition
+- [ ] Implement and validate the creator-approved 100-level player status ladder and its ten prestige families.
+- [ ] Finalize the exact ten descriptor labels and their level mapping.
+- [ ] Design post-Level-100 prestige/reset progression, beginning with the proposed Hustler Platinum I naming direction.
+- [ ] Define XP thresholds, progression pacing, rewards, and any unlock behavior separately from the approved rank-name structure.
