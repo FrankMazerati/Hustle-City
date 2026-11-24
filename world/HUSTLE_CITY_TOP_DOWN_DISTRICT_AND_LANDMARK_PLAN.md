@@ -39,6 +39,32 @@ Their shared visual identity is **blue and black**. They remain three distinct e
 - This requirement is about coverage across every neighborhood, not a currently fixed house count.
 - Exact properties and number per neighborhood remain unresolved.
 
+## 2. Refined district identities and venue separation
+
+### Entertainment District — a broader interactive destination
+The Entertainment District must contain more than the Upper Level Entertainment Studios / Upper Level Films / Monster Beats campus. Reserve space for several additional named, entertainment-appropriate buildings and venues that can receive distinct identities and meaningful player interactions. Suitable building roles may include event/production, performance, screening, creative, media, live-event and entertainment-service spaces. These are category directions only; do not invent final business names or claim every candidate is a launch feature. The blue-and-black identity specifically applies to the three co-located Upper Level / Monster Beats entities unless the creator extends it.
+
+### Diamond District — downtown luxury and nightlife
+Diamond District is explicitly the downtown district. It combines the central downtown skyline and Diamond Row with upscale destinations, including:
+- Velvet Lounge.
+- Cigar bars / cigar lounges.
+- Upscale jewelry stores.
+- Upscale clothing boutiques and luxury fashion retail.
+- Other downtown luxury and nightlife venues as later approved.
+
+Diamond District clothing is luxury/upscale retail, not the hip-hop streetwear identity assigned to Swagger District.
+
+### Swagger District — hip-hop fashion and streetwear
+Swagger is the hip-hop/streetwear fashion destination: urban clothing stores, sneaker and shoe shops, streetwear boutiques and related fashion businesses. Keep its retail identity visually and commercially distinct from Diamond District's upscale jewelry and boutique shopping.
+
+### Get Wild Beach — beach-party destination
+Get Wild Beach is a distinct beach-party area connected to the broader coastal/waterfront geography. Give it a recognizable party/beach identity and room for beach gatherings and event activity. Do not collapse it into the yacht club or treat it as generic shoreline decoration. Exact footprint and adjacency remain unresolved.
+
+### Hustle Towers and Hustle Club — separate functions and locations
+- Hustle Towers remains a major downtown landmark in Diamond District. Its own interior can host the approved gambling experience; gambling does not need to be placed inside Hustle Club.
+- Hustle Club is a separate club/nightlife destination and should **not** be placed in the downtown/Diamond District cluster by default. Its final district and exact placement remain unresolved pending creator direction.
+- Do not conflate Hustle Club with Hustle Towers or treat the club as the casino merely because both may support social/nightlife experiences.
+
 ## 2. Conceptual overhead relationship diagram
 
 This is a relationship diagram, **not a surveyed map or locked compass layout**. It communicates the approved clusters and centrality without inventing exact coordinates.
