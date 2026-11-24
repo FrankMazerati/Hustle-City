@@ -769,3 +769,36 @@ No agent may independently invent database schemas, network authority or transac
 5. Service alone may support modest recognition when personally experienced, but does not automatically increase trust; meaningful conversation drives trust.
 6. Qualifying social interactions can contribute to player stars/experience/levels without enabling parking, tapping or dialogue spam exploits.
 7. NPCs express recognition naturally and never explain hidden codes or internal database mechanics to the player.
+
+
+## 37. Tap-to-view player economy, progression and collectible-card profile
+**Creator-approved requirement:** Tapping a player should open a useful social profile that makes their in-game standing and collectible-card collection visible, allowing players to discover common interests and trade opportunities without having to ask everyone individually.
+
+### Player status at a glance
+- The player profile should visibly present the player's current in-game money balance, earned stars, poker-chip balance, level and rank.
+- Also show the player's neighborhood/home-district affiliation and crew representation, consistent with the existing player-profile and visibility requirements.
+- These are distinct data categories: money is not poker chips; stars are not level or rank. Display authoritative current balances/progression values and update them when the underlying game records change.
+- Show only the in-game values designated for player-to-player profile visibility. Do not expose real-world payment details, account credentials, banking information or private financial records.
+
+### Trading-card collection discovery
+- The profile should provide a visual view of the player's owned trading-card collection, so another player can inspect cards they may need without asking every person at a table or venue.
+- Clearly distinguish cards owned/collected from duplicate copies and cards explicitly offered/available for trade. Ownership does not automatically mean an item is for sale or trade.
+- Where the player has chosen to share their collecting needs or wishlist, the profile may also show cards they are seeking. This enables reciprocal discovery: one player sees a card they need, or sees that they own something the other player wants.
+- Collection display should make card identity and quantity clear enough to support discovery, while respecting the player's profile/inventory visibility settings.
+- Profile inspection does not reserve, transfer or offer a card. It only reveals information the owner has made visible.
+
+### Natural social and trade loop
+- Tap a person, inspect their profile and collection, discover a card match or shared interest, then choose to approach/chat/negotiate or initiate a trade offer.
+- Players may discover that another person has a card they need, or that they have a card the other person is seeking. This should make social discovery at tables, clubs and other venues more organic than repeatedly asking the room "Do you have this card?"
+- Actual trades remain a separate explicit process: eligible item validation, offer, counter/acceptance, final confirmation and authoritative ownership transfer. No transfer occurs merely because a profile was viewed or a card was displayed.
+- Support the same profile discovery pattern in both directions: players can inspect one another's visible profiles and collections.
+- The profile is a social discovery surface, not a forced transaction prompt. Players remain free to talk, ignore, negotiate or decline.
+
+### Acceptance criteria
+1. Tapping a player shows their visible in-game money, stars, poker chips, level, rank, neighborhood and crew information.
+2. The displayed values come from authoritative game records and distinguish money, chips, stars, level and rank.
+3. A player can visually inspect another player's visible owned-card collection and see quantities/duplicates where shared.
+4. Trade-listed cards are clearly distinguished from cards merely owned; a visible wishlist/needed-card list is shown only when the owner shares it.
+5. Players can discover reciprocal card matches through profile inspection without having to ask every person individually.
+6. Viewing a profile or card never reserves, offers or transfers an item.
+7. A trade still requires explicit negotiation/offer, acceptance and confirmation with server-side ownership validation.
