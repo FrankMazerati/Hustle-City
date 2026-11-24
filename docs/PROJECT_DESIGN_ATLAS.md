@@ -425,3 +425,12 @@ Create a reusable naming framework for cities, casinos, venues and businesses. G
 - Merely tapping/selecting someone, opening a profile or touching an object does not create a meaningful social connection or increase trust. Communication establishes the named social memory; conversational substance and quality govern what is retained and relationship changes.
 - Keep each relationship pair-specific and persistent across sessions. Design for 10,000 players and 100,000 Sims with sparse per-person/per-pair records and sensible event/memory retention, not a fully populated all-to-all matrix.
 - See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 34 and related relationship sections.
+
+## 35. Database-backed persistent Sim memory records
+- Attach Sim person-memory libraries and pair-specific relationship records to the game's database as durable state, not session-only memory.
+- Persist stable person references, the remembering Sim, meaningful encounter/conversation history, familiarity, trust and current relationship state. Keep historical events distinct from mutable current values.
+- Records survive logout, reconnect, server restart and population expansion. Runtime caches may accelerate access but the database remains authoritative.
+- Keep relationship records directional and pair-specific. Use sparse, indexed retrieval for scale; do not pre-create every possible player/Sims pair.
+- Apply access controls, data minimization, retention/deletion, backup and migration policies. Private memories must not leak into public profiles.
+- Exact schema, database product and storage/indexing strategy remain implementation decisions.
+- See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 35.
