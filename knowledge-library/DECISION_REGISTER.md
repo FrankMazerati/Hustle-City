@@ -200,3 +200,14 @@ This register captures decisions promoted through the knowledge library. The exi
 - Use sparse, indexed retrieval for the 10,000-player / 100,000-Sim scale example; do not pre-create every possible relationship pair. Access controls, data minimization, retention, deletion, backup and migrations are required.
 - Exact schema, database product, indexes/partitioning and retention implementation remain open.
 - **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 35.
+
+
+## 2026-11-24 — Persistent valet/concierge service history and attendant-specific memory
+- **Status:** APPROVED — creator-directed gameplay and database requirement.
+- Persist each valet/concierge service event with player, attendant, business/service point, date/time, vehicle reference and service outcome. Multiple cars and visits (example: seven cars across seven days) must remain individually attributable.
+- Each attendant maintains their own independent memory/relationship with the player based on the services and conversations they personally experienced. Ricky's memory is not copied to Sammy, or vice versa.
+- Shared workplace records may support operational vehicle retrieval and shift handoff, but must not merge attendants' personal memories/trust.
+- Service history can support recognition/familiarity when the attendant personally handled the service. Parking alone does not automatically build trust; meaningful conversation remains the primary trust path.
+- Attendants should recognize players naturally without mentioning hidden codes, database records or technical memory mechanisms.
+- Meaningful social interactions can contribute to player stars/experience/levels under the progression system. These player progression measures remain distinct from NPC trust/familiarity; prevent farming through repeated parking, tapping or dialogue spam.
+- **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 36.
