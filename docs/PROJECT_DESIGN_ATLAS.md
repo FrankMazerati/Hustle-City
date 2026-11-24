@@ -186,3 +186,15 @@ Secure Creator Studio should manage vehicle packs, clothing, buildings, characte
 - Use safe routing, traffic-aware movement and collision avoidance. Prevent random collisions and protect player-owned assets and balances from pathing/simulation defects. No damage charges or loss of a vehicle caused by an automated travel bug.
 - Manual driving is outside initial launch scope unless the creator separately approves it after a dedicated feasibility and safety review. The automated travel approach is the approved initial direction.
 - Define vehicle/aircraft staging, access permissions, airport/terminal flow, fuel state, service costs, travel duration, routing, camera controls, cancellation and recovery from interrupted sessions before implementation.
+
+
+## 25. Parking, indoor garages and premium valet arrival
+- Support two arrival paths:
+  1. **Standard parking:** regular players arrive in their owned/authorized vehicle and park in an available designated space. Provide appropriate parking lots/structures and indoor or covered garages at destinations where the setting calls for them.
+  2. **Valet/concierge arrival:** eligible players (through a qualifying paid service tier or earned in-game wealth) pull up to a designated drop-off point, exit at the entrance, and have an NPC valet/concierge take the vehicle to secure parking.
+- Treat earned wealth and paid subscription/service eligibility as alternative possible routes to premium valet convenience; final thresholds, tier benefits and fees need creator approval. Basic ownership and standard parking must remain available without a subscription.
+- Add indoor/covered parking garages to relevant properties and destinations: residential buildings, upscale venues, hotels/clubs and other suitable locations. Define parking slots, capacity and availability; handle full garages with a clear overflow/remote parking option.
+- After valet handoff, maintain authoritative vehicle state: owner, authorized users/keys, current parking facility/slot, condition and availability. The car is not deleted or lost when the player enters the venue.
+- Add phone/valet retrieval so the player can request the vehicle back at an approved pickup point. Enforce owner/key/permission checks for both valet drop-off and retrieval.
+- NPC valet movement should follow safe controlled paths. No random collisions, vehicle damage, theft, loss or fees caused by valet/pathing simulation. A safe state transition may substitute for a fully simulated drive into the garage while retaining an appropriate arrival animation/feedback.
+- Define parking/garage capacities, fees, eligibility, service coverage, retrieval time, vehicle state persistence and recovery from disconnects/session interruption before implementation.
