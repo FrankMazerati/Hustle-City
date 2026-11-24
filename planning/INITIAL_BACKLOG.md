@@ -32,7 +32,9 @@
 ## P3 — Player progression and recognition
 - [ ] Implement and validate the creator-approved 100-level player status ladder and its ten prestige families.
 - [ ] Finalize the exact ten descriptor labels and their level mapping.
-- [ ] Design post-Level-100 prestige/reset progression, beginning with the proposed Hustler Platinum I naming direction.
+- [ ] Design post-Level-100 career prestige/reset progression, beginning with the proposed Hustler Platinum I naming direction.
 - [ ] Build activity-based career progression that can recognize daily logins, poker wins, casino wins, other game victories, and eligible world/social activities.
-- [ ] Design a separate star/social-recognition track earned through meaningful NPC and real-player interactions.
-- [ ] Define XP and star thresholds, pacing, rewards, daily limits, anti-exploit protections, and any unlock behavior separately from the approved rank-name structure.
+- [ ] Design a separate star-points/star-rank system earned through eligible NPC and real-player interactions and other qualifying city activities.
+- [ ] Establish configurable star-point awards for individual actions, including initiating street conversations, meaningful NPC/player interactions, adding friends, trading cards, and eligible poker-table chip purchases/transactions.
+- [ ] Implement the proposed first 100 street-oriented star-rank titles as a working naming ladder, with a progression architecture expandable beyond Rank 100 to 1,000+.
+- [ ] Define XP and star-point thresholds, pacing, rewards, daily limits, anti-exploit protections, and any unlock behavior separately from the approved rank-name structure.
