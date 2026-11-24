@@ -111,9 +111,9 @@ The external SSD was confirmed mounted at:
 
 The model directory reported 8.8 GB and the SSD reported 869 GB available at the time of the check. The six displayed model sizes total approximately 7.9 GB; directory size can differ because of shared layers, metadata and filesystem allocation.
 
-### Provisional model specialties — not activated assignments
+### Initial model assignments — committed, not yet device-tested
 
-These are starting recommendations only; benchmark each model against actual tasks before final assignment:
+The initial assignment registry is `intellisync/config/model_assignments.json`. It maps all 17 local roles across the six verified models using the capability profiles below. These are starting assignments, not benchmark-proven rankings; test task quality and revise based on evidence:
 - `deepseek-r1:1.5b`: reasoning and technical analysis.
 - `qwen3:1.7b`: coding and implementation support.
 - `qwen2.5:1.5b`: structured code, scripts and data/configuration tasks.
@@ -121,7 +121,7 @@ These are starting recommendations only; benchmark each model against actual tas
 - `gemma2:2b`: QA assistance and review checklists.
 - `gemma3:1b`: lightweight classification, summaries and support.
 
-Each agent may use one assigned local model at a time. Models may be shared by multiple agents through sequential scheduling. Do not assume all 24 agents can run simultaneously or that model assignments/scheduler are already active. Gemini and OpenRouter are cloud escalation options for larger tasks, alternate reasoning or work beyond local model capability; local models remain the default.
+Each agent may use one assigned local model at a time. Models may be shared by multiple agents through sequential scheduling. The initial on-demand worker runner is `intellisync/worker.py`; it serializes one local model request at a time and asks Ollama to unload the model after each task. Device execution remains unverified until tested in Termux. Do not assume all 24 agents can run simultaneously or that a background scheduler is active. Gemini and OpenRouter are cloud escalation options for larger tasks, alternate reasoning or work beyond local model capability; local models remain the default.
 
 ## 8. Production workflow
 
