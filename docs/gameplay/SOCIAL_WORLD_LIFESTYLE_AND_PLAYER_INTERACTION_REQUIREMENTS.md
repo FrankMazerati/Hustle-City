@@ -507,3 +507,27 @@ The creator has directed that the social world support player relationships and 
 These are required social-world directions. The exact relationship progression, mutual-consent/acceptance flow, privacy and visibility settings, breakup/block/report tools, relationship status display, group permissions, benefits (if any), NPC relationship scope, and moderation/safety rules remain to be designed. Do not invent romance bonuses, exclusivity rules, marriage, shared property or other relationship mechanics without creator approval.
 
 The social architecture should support clear player control: relationship invitations and status changes should be consensual, reversible and protected by privacy/blocking controls. No player should be forced into a romantic or social interaction.
+
+
+## Creator clarification — energy recovery, offline behavior and expanded romance
+
+### Energy, sitting activities and alcohol/smoking indicators
+
+The creator has clarified the intended player-condition behavior:
+
+- **Restorative seated activities:** Sitting at a bar and sitting while trading cards are approved activities that can restore player energy. The character should be able to recover while participating in these social activities rather than being required to stop having fun and enter a separate maintenance routine.
+- **Smoking:** Smoking does not restore energy and does not decrease energy.
+- **Drinking alcohol:** Drinking does not decrease energy. Alcohol consumption may instead be reflected through a separate visible alcohol-level/intoxication indicator. Do not treat that indicator as an energy meter.
+- **No offline energy drain:** Energy must not deplete while the player is logged out. Do not impose offline decay or require players to log in multiple times per real-world day to maintain their character.
+- **Return to play:** The creator's direction is that energy should come back when the player leaves/quits a session and returns, rather than carrying a depleted energy state forward as an offline penalty. The exact reset/recovery trigger, timing and whether recovery is immediate or uses a short transition remain technical details to specify; preserve the intended result of no persistent offline depletion.
+- **Meter separation:** Keep energy distinct from alcohol level and do not make smoking or drinking an energy penalty. The broader distinction among health, energy/stamina and hunger/nutrition remains to be designed.
+
+### Romantic relationships with players and NPCs
+
+The creator has approved romantic relationship possibilities with **both real players and NPC characters**. The player may pursue a girlfriend/boyfriend or other supported romantic connection with either kind of character, based on who they find attractive and the interactions they choose.
+
+For player-to-player relationships, the intended social value includes spending time together in Hustle City, talking and doing activities together, building a relationship through shared experiences, and potentially choosing to continue the connection outside the game. Any real-world connection, contact exchange or meeting must remain voluntary and mutual, with appropriate privacy, consent, blocking and safety controls. The game should facilitate social connection without exposing private information or pressuring players to move interactions off-platform.
+
+NPC romance is also in scope as a relationship/roleplay possibility, with the exact NPC character eligibility, dialogue, progression, boundaries and gameplay depth still to be designed. Do not assume romance rewards, exclusivity, marriage, shared assets or other unapproved mechanics.
+
+These clarifications are creator-approved product direction. Exact recovery rules, meter implementation, alcohol presentation, romance UX, consent and safety flows, moderation, NPC scope and technical implementation remain to be specified.
