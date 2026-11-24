@@ -28,6 +28,20 @@ For each configured building, author exactly five explicit card slots and map th
 
 A set completion is not automatically a building deed if the creator defines it as an unlock/eligibility key. The exact sequence (complete set → unlock claim → claim/activate ownership) must be shown clearly.
 
+
+## 3A. Venue-specific completion rewards (creator direction)
+
+The five-card collection standard applies to each configured building/venue collection, including the casino experience. Completion rewards are venue-specific and must not be interpreted as automatic ownership of the entire venue.
+
+- **Hustle Towers:** a new player may begin by renting an apartment. Completing the five-card collection for that apartment permanently unlocks ownership of that specific apartment, subject to the configured claim/eligibility flow. The exact rent terms, apartment inventory and card rank titles remain TBD.
+- **Shuffle Club / casino:** players do not own the Shuffle Club or its casino. Completing the relevant five-card collection may unlock a private room inside the Shuffle Club. The private-room entitlement is distinct from venue ownership and casino operation. Confirm whether the casino experience uses its own five-card set or shares the Shuffle Club set before implementation.
+- **Velvet Lounge:** it receives its own five-card collection; the exact completion privilege is TBD. Do not assume venue ownership.
+- **Hustle Club, Hustle City Marina and Yacht Club, American Swagger Clothing, the car dealership, Upper Level Entertainment Studios, Upper Level Films and Monster Beats:** create venue-specific five-card collections where configured; each completion reward must be explicitly authored. Do not infer ownership from the existence of a collection.
+- **Beach:** excluded from the five-card building collection requirement.
+
+The marina/yacht club venue collection is separate from individual boat/yacht collections. The car dealership collection is separate from individual car collections. Collecting a venue set never grants every vehicle sold, stored or hosted there.
+
+Maintain a creator-approved building/venue registry with stable building_id, canonical display name, category, collection_id (nullable), five card slots, completion_reward_type, completion_entitlement_id, rental/ownership rules and approval status. Do not add brands, streets, districts, transport hubs or decorative background structures as owned buildings without explicit creator direction.
 ## 4. Card pack system
 A pack definition includes pack_id, display_name, theme/set, price_currency, price_amount (TBD), guaranteed contents, random slots, odds table, duplicate protection policy, eligibility, repeatability, availability window and disclosure text. Pack opening is a server-authoritative operation:
 1. Confirm pack is available and player is eligible.
