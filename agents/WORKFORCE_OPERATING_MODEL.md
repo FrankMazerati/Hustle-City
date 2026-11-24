@@ -1,5 +1,8 @@
 # Hustle City Workforce Operating Model
 
+> **Current creator-approved workforce overlay (2026-11-24):** This operating-model document contains earlier department/role descriptions. The current local workforce target is 17 agents: SCRIBE and LENS (parallel creative leads), QA-1 through QA-3, and P01–P12 (12 production specialists in three groups of four, each group owned by one QA supervisor). ChatGPT in the coordinating conversation is the overall coordinator; Trinity is not a locally running agent/model. Production uses overlapping waves with a 20-minute production window, 5-minute independent QA window and 5-minute correction window. The shared repository workflow is one shared `main` branch, not per-agent branches. The existing 12-specialist/3-QA configs and department mapping are legacy and must not be treated as the current roster or activated until reconciled. The 17-role target does not mean 17 workers are currently running.
+
+
 **Status:** Roster, model assignments, department boundaries and policy are defined. Live workers are not yet activated. Runtime support and local-device verification remain required.
 
 **Workforce governance:** The [WORKFORCE_AUTHORITY_CHARTER.md](WORKFORCE_AUTHORITY_CHARTER.md) is the controlling reference for authority hierarchy, decision rights, task lifecycle, role mandates, collaboration and escalation. The [AGENT_PROFILES.md](AGENT_PROFILES.md) contains detailed specialist instructions, required deliverables, acceptance expectations, handoff rules and model-aware evaluation. Read these together; neither changes model assignments or indicates live activation.
