@@ -657,3 +657,40 @@ No agent may independently invent database schemas, network authority or transac
 4. Supported ownership totals and item lists reflect authoritative Sim ownership records.
 5. Profile details remain coherent after the Sim changes shifts, jobs, residence or possessions and after population expansion.
 6. Tapping a Sim does not expose private simulation internals or exact private residential location, and does not create a permanent overhead name label.
+
+
+## 32. Sim self-knowledge, personal history, lifestyle and earned finances
+**Creator-approved requirement:** Each Sim should maintain a coherent internal self-profile grounded in their persistent identity and lived game history. A Sim should be able to act and converse consistently with who they are, where they work, what they own, how they travel, what they enjoy and what has happened in their life.
+
+### Personal self-model and history
+- Maintain an authoritative personal record the Sim's behavior/dialogue systems can consult: stable identity, in-world age, home/neighborhood, household context, occupation, employer/workplace, work schedule and relevant life history.
+- The Sim should know their own current circumstances and not speak as if they have a different job, home, vehicle, schedule or personal history.
+- Track interests, hobbies, preferred activities, favorite/regular places, social connections and weekend/off-duty preferences. These preferences influence plans and choices without making every weekend identical.
+- Maintain meaningful personal memories and milestones, such as employment changes, moves, purchases, trips, friendships, important conversations and other supported experiences. Memory must be based on recorded events, not fabricated biography.
+- When asked about themselves, Sims should be able to answer in a manner consistent with their own facts and conversational personality. They should not reveal internal system data or another person's private information.
+
+### Mobility, vehicles and service use
+- Track whether a Sim owns or has authorized access to a vehicle, the vehicle identity/type and relevant usage state.
+- Sims without a personally available vehicle can choose from supported transportation options, including walking, public transit, taxi or ride-hail services where available.
+- A Sim may use a ride-hail provider (Uber or Lyft were examples) when that service exists in the game world and is available to them. Actual real-world brand licensing/branding remains a separate decision; generic in-world ride-hail services can fulfill the gameplay role.
+- Travel choices should reflect schedule, destination, availability, cost, preferences and current circumstances. A Sim should not claim to own or drive a vehicle they do not own or have permission to use.
+
+### Work, earnings and savings
+- Sims' financial circumstances should be earned and persistent: they work, receive wages/approved income and accumulate savings through recorded economic activity.
+- Do not give Sims arbitrary unexplained wealth or fabricate balances to make a profile or dialogue sound interesting. Financial records should reconcile with actual wages, purchases, transfers and other supported transactions.
+- Track income and savings in the authoritative economy record. Exact wage rates, expense categories, banking mechanics and financial UI remain economy-design decisions.
+- The creator's direction is that Sims work and save money; this does not establish that every Sim begins wealthy or receives free money.
+
+### Profile and simulation consistency
+- The player-facing Sim profile may summarize appropriate facts—occupation, schedule, neighborhood, vehicle/transport mode, interests and approved ownership/financial indicators—while private or sensitive details remain hidden according to game rules.
+- The Sim's internal self-model may contain operational detail needed for simulation, but player-facing visibility is separately controlled. Do not expose exact private residential coordinates, private financial/account data or unrelated personal memories.
+- Changes to job, home, vehicle, finances, relationships or preferences update the Sim's persistent record and future behavior without changing their stable identity.
+- This is a simulation requirement for coherent identity, memory and agency; it does not require claiming that Sims possess real-world consciousness.
+
+### Acceptance criteria
+1. A Sim can accurately describe their own job, workplace, schedule, residence, vehicle/transport situation and interests using persistent records.
+2. Their weekend/off-duty choices reflect recorded interests and preferences while allowing variation and changing circumstances.
+3. A Sim without a vehicle can select an available supported transport service; a Sim does not falsely claim vehicle ownership.
+4. Earnings and savings derive from recorded work and economic transactions; no arbitrary unexplained money is injected.
+5. Personal history and memories reflect events that actually occurred in the simulation.
+6. Player-facing profiles reveal only approved public/social information, not private simulation records.
