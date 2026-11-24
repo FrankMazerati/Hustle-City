@@ -85,6 +85,18 @@ Server-authoritative: balances, ledger, paid entitlements, card ownership, pack 
 - Hustle Towers apartment collection grants permanent ownership of the specific apartment; rental remains a distinct state.
 - All these outcomes are represented by separate entitlement types and cannot accidentally grant the host building or adjacent assets.
 
+## Universal social-sharing and reward acceptance
+- Every meaningful gameplay feature includes a documented shareability decision: eligible authoritative events, generated artifact, privacy rules, supported share destinations, reward policy and referral opportunity.
+- Share artifacts are generated only from confirmed server state and never reveal private player data or hidden content.
+- Share proof is bound to a unique share event and player; screenshot evidence is treated as evidence for review, not definitive proof of a live public post.
+- Proof review supports pending, approved, rejected and appeal/retry states; ambiguous evidence can be escalated for human review.
+- Only an approved, configured claim can issue a share reward; duplicate submissions, retries and concurrent requests cannot create duplicate grants.
+- Referral rewards are separate from share rewards and require a server-verified new-player qualifying milestone.
+- Referral attribution, proof decisions, reward grants/reversals and fraud actions are auditable.
+- Sharing is optional and never a prerequisite for core gameplay progression.
+- Social sharing integrations obey platform policies; no social passwords, unauthorized scraping or unsupported direct-posting claims.
+- Share artifacts, feeds and referral flows obey player privacy, block/report and moderation settings.
+
 ## 5. QA evidence required
 For each feature, retain test ID, build/version, account fixtures, setup, action, expected result, actual result, server log/transaction reference, pass/fail and defect link. QA supervisors must independently verify economy, card/ownership and social privacy boundaries.
 
