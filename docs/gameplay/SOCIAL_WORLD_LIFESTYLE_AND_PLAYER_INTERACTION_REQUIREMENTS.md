@@ -269,3 +269,23 @@ Required interaction direction:
 
 Dialogue personality, relationship/memory depth, player-to-player consent controls, animation sets, voice performance and localization remain to be designed.
 
+## 23. Contextual quick replies and free-text NPC conversation
+
+NPC conversations must give players fast, context-relevant response choices while also allowing custom typed replies. Players should not have to type every routine response, but should not be limited to canned dialogue.
+
+Required behavior:
+- When an NPC asks a question or offers a service, present a small set of quick-response choices tailored to that exact prompt, NPC role, venue, player state and available services.
+- For a drink offer, quick replies can include relevant available drink categories/items, asking to see the drink selection, and declining. The actual choices must reflect what that NPC and venue can provide.
+- For food offers, show relevant food options or a way to view the menu, plus decline/other appropriate responses.
+- For cigar attendants, choices can include available cigar options, asking to see the selection, asking a question, or declining another cigar. Only offer items/services actually available in that venue and NPC role.
+- Apply the same contextual approach to valet, concierge, front desk, bellhop, elevator attendant, poker-room server, bartender and other NPC interactions. For example, valet choices should relate to retrieving or parking a vehicle, not food or drinks.
+- Include a custom text-entry option so the player can type a specific question, request, joke, compliment, flirtatious response or other natural-language reply.
+- NPC responses to custom text must account for the conversation so far, NPC role/personality, venue context, player intent and authoritative game state. The NPC must not claim to perform an unavailable action or invent stock, prices, events, directions or player information.
+- Quick replies and free-text input must coexist in the same conversation experience. Players can use quick replies for speed and switch to custom text whenever they want.
+- Choices should be concise, readable and usable on mobile/touch interfaces; avoid covering essential gameplay or poker controls.
+- If a player declines, the NPC should acknowledge it naturally and stop pressing the offer. Repeated prompts must respect the player's response and current state.
+- When a choice selects a purchasable item or service, clearly communicate the selection and applicable price before charging where needed; confirm the order/action, then fulfill it through the appropriate service workflow. Do not charge for a declined or unconfirmed purchase.
+- The system must support conversation continuity: NPCs should respond to the player's latest reply rather than treating each message as an unrelated interaction.
+
+Interaction presentation, exact number/layout of quick replies, text-entry UI, moderation/safety, speech-to-text/voice options, localization, dialogue orchestration and runtime model strategy remain to be designed.
+
