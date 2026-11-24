@@ -309,3 +309,19 @@ This section supersedes any earlier map-layout instruction that leaves the cardi
 - Gas stations and stores should be distributed as believable city infrastructure, with only selected locations receiving full or limited interactions. Other examples may remain ambient buildings; do not require every gas station or store to have an interior.
 - The visual master plan should communicate the difference between active destinations and future/ambient buildings through map legend or production metadata, without cluttering every façade with prominent “Coming Soon” signage.
 - Grocery shopping remains an **open design question**, not an approved full gameplay system. A small focused retail interaction may be evaluated later; do not assume full grocery simulation, household inventory upkeep or shopping chores.
+
+## 21. Creator-directed Diamond District landmark and stadium cluster
+The Diamond District is the downtown landmark center and must plan for the following creator-directed staple destinations:
+
+- Hustle Towers.
+- Sears Tower / Willis Tower-inspired landmark.
+- John Hancock Building-inspired landmark.
+- The Bean / Cloud Gate-inspired reflective silver public-art landmark.
+- A Bulls basketball stadium.
+- A Blackhawks hockey stadium.
+- A Sox baseball stadium.
+- A Cubs baseball stadium.
+
+Treat each as a distinct landmark/destination in the downtown master-planning inventory. The stadium concepts are four separate sports venues, not one interchangeable arena. Give them meaningful site presence, public approaches, pedestrian/crowd space and connections to the city transport network. Include active NPC life around them and preserve room for future game-day events and expanded player interactions.
+
+Exact parcel placement, building names/final fictionalized identities, stadium design/capacity, team and league licensing, sports gameplay, event schedules and launch phasing remain unresolved. The Chicago references are visual/worldbuilding direction, not permission to copy protected marks or claim official affiliation. Do not invent exact locations or coordinates before the downtown plan is reviewed.
