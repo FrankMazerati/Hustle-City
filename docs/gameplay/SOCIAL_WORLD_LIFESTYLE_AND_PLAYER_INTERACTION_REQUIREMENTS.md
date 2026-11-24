@@ -409,3 +409,14 @@ Creator direction:
 To be designed: exact stores/brands or fictional equivalents; inventory and stock/restocking; fuel grades and vehicle compatibility; fare and fuel pricing formulas; personal-care catalog; interaction locations/animations; whether hygiene is a tracked stat; condition decay and effects; health/food effect rules; accessibility and offline/low-connectivity behavior; and economy balancing.
 
 All purchases must use authoritative server-side balances and idempotent transaction processing. Show item/service prices before confirmation. Do not charge for failed, cancelled or unfulfilled actions.
+
+
+## Casino variety, street dice and gambling-centered city identities
+
+- **Approved creator direction:** Some Hustle City city markets should have a recognizable “hood version of Vegas” identity: gambling is a visible part of the city's nightlife, entertainment, social culture and economy, not limited to a single poker venue.
+- **Approved creator direction:** Expand gambling beyond poker to recognizable casino and dice games, including blackjack, baccarat, roulette, craps/dice tables, slot machines and street dice/shooting dice. Poker remains part of the wider selection.
+- **Approved creator direction:** Support varied gambling environments, which may include polished casino floors, neighborhood dice games, local craps tables, card rooms, lounges and late-night gambling venues. Each city and venue can have its own character and mix of activities; do not make every casino or gambling location identical.
+- **Approved economy direction:** Players can participate using supported in-game wager currency, win or lose in-game funds according to each game's rules, and use the established in-game cashier/kiosk flow to convert eligible Poker Chips into Hustle Money at the already approved nominal 1:1 in-game rate. Keep wallets, wager settlement and conversion records separate and auditable.
+- **Critical distinction:** “Cash out” in this feature means cashing game chips into Hustle Money within the game economy. It does not authorize real-world cash redemption, cash prizes, withdrawals or claims of real monetary value.
+- **Unresolved:** Which city markets receive this identity; venue names and locations; game variants/rules; wager limits and table stakes; whether each game uses Poker Chips or another approved in-game wallet; payouts/house rules; NPC and multiplayer participation; age-rating/platform constraints; launch scope; and detailed balancing.
+- **Required review before implementation:** Gambling simulations, paid currency, purchases, wagers, prizes, chip conversion, transferability and any cash-out terminology require legal, platform-policy, age-rating and consumer-protection review for each target market. Do not assume that using fictional currency automatically removes regulatory or platform restrictions. No real-money gambling or real-world redemption is implied.
