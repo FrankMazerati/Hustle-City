@@ -368,3 +368,11 @@ Create a reusable naming framework for cities, casinos, venues and businesses. G
 - Meaningful, reciprocal communication can contribute to experience/star progression. Do not reward spam, empty messages, repeated low-value exchanges or farming. Keep earned progression separate from pair-specific trust/familiarity, consent and trade acceptance.
 - Real-money progression was mentioned only as an unfinished possibility; no paid status/level/star advancement or pay-to-win mechanic is approved until separately clarified.
 - See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 26.
+
+
+## 28. Tap-to-inspect profiles and social actions in the live scene
+- Players can tap a visible NPC or player character on the touchscreen to open a compact portrait/profile pop-up showing approved profile details and stats.
+- Include a direct Chat action on the pop-up. Where the scene supports it, also offer **Invite to sit with me** and **Ask to join their group**.
+- Use clear target selection in crowded scenes and keep the live scene visible where practical. Proximity can assist selection, but mere proximity must not trigger a social action.
+- Invitations are requests: the recipient or relevant group can accept, decline or defer. Respect seating availability, current activity, group context, privacy, blocks, boundaries and moderation rules. No forced movement or automatic group entry.
+- Support both NPC and player targets using their respective conversation and agency systems. See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 27.
