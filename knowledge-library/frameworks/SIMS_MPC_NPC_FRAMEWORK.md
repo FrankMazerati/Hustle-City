@@ -229,3 +229,38 @@ No agent may independently invent database schemas, network authority or transac
 5. A job and neighborhood distribution plan aligned with business staffing and city activity needs.
 6. Batch import/update validation: unique IDs, name checks, required-field completeness, occupation assignment, schedule validity, and no overwriting of existing people.
 7. Crowd and return-visit tests demonstrating that the city feels inhabited and that named Sims retain identity across player sessions.
+
+
+## 16. Memorable relationship NPCs and player recognition
+**Creator-approved requirement:** NPCs whom players meaningfully interact with at recurring venues and services must be memorable individuals, not interchangeable service prompts. This includes casino staff, club and venue staff, bartenders, restaurant workers, hotel/venue concierge, doormen, valets and parking attendants, shop staff, hosts, dealers and other recurring service roles.
+
+### Persistent identity and relationship continuity
+- Preserve the NPC's stable name, face/appearance, voice or dialogue style, role, workplace, personality and relevant history across player sessions.
+- Track a privacy-conscious, gameplay-scoped relationship state between the NPC and each player: first meeting, prior encounters, familiarity, relevant preferences, notable shared interactions and recent visit context.
+- NPCs should recognize returning players and greet them with contextually appropriate familiarity. Recognition should grow naturally through repeated encounters; do not make every NPC instantly act like a close friend.
+- NPCs can remember relevant player preferences and past choices when useful to their role: a bartender may remember a usual order; a concierge/valet may remember vehicles the player commonly brings; a casino host may remember preferred games or prior visits; a venue host may remember seating or event preferences.
+- NPCs should notice relevant changes and refer to them naturally when the information is available and appropriate. Example: a valet recognizes a returning player and comments that they arrived in a different luxury car today, or asks when they will bring the other car again.
+- Dialogue must be varied, personality-aware, role-aware, relationship-aware and grounded in actual recorded game context. Do not fabricate memories, ownership, prior encounters, player details or promises.
+- NPCs should also retain continuity in their own lives: work shifts, coworkers, routines, relationships and recent events. Their lives do not exist only to react to the player.
+
+### Role-specific examples
+- **Valet/concierge:** remembers a regular guest, their authorized vehicle history, usual arrival pattern and service preferences; recognizes the current vehicle only when the game has reliable access to that vehicle's identity and the player has permission to use it.
+- **Bartender/server:** remembers a returning guest's usual order, favorite table or prior conversation where appropriate; can offer a familiar greeting without forcing a purchase.
+- **Casino host/dealer/cashier:** remembers repeat visits and relevant service preferences or prior table interactions, while respecting poker fairness, privacy and responsible-gambling safeguards. Do not use memory to pressure spending or exploit player vulnerabilities.
+- **Club, restaurant and hotel staff:** remember regular attendance, preferred experiences and prior service interactions; recognize friends/crew only where the game context supports it.
+
+### Data, privacy and safeguards
+- Keep player-NPC relationship memory scoped to the game and to the minimum relevant facts needed for believable continuity. Do not infer sensitive traits or collect unrelated personal information.
+- Define retention, reset, correction and deletion controls for relationship data; provide moderation and abuse protections. Do not let NPCs reveal one player's private information to another player.
+- Treat vehicles and other possessions carefully: mention them only when ownership/access and current game state confirm the fact. Never expose another player's asset or activity history.
+- Build memory tiers: persistent identity and role facts; durable relationship/familiarity facts; bounded recent interaction summaries; and short-lived conversational context. Exact storage and model architecture remain implementation decisions.
+- If memory is unavailable or uncertain, use a warm generic greeting rather than pretending to remember. NPC memory must be testable, auditable and resistant to cross-player data leakage.
+
+### Acceptance tests
+1. A player visits the same venue repeatedly and is recognized by the same named staff member across separate sessions.
+2. The NPC's familiarity changes gradually and dialogue reflects actual prior interactions without repeating one canned line.
+3. A valet can recognize a player's different authorized vehicles and comment accurately on the current arrival vehicle.
+4. A bartender can recall a relevant usual order or preference, and can gracefully handle a changed preference.
+5. NPCs never claim false memories or disclose another player's private information.
+6. NPC relationships remain consistent through NPC shifts, venue changes, player reconnects and ordinary world simulation.
+7. Casino memory never becomes manipulative spending pressure or compromises game fairness.
