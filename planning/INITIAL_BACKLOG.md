@@ -143,3 +143,20 @@
 - [ ] Implement anti-spam safeguards: rate limits, cooldowns, duplicate detection, abuse monitoring and recipient opt-out; prohibit unsolicited bulk external messaging.
 - [ ] Separate player-initiated event shares from platform-generated marketing/re-engagement alerts; require appropriate channel-specific consent for platform email/SMS.
 - [ ] Define presence defaults, audience permissions, invitation limits, notification cadence, retention, provider costs and consent language with creator approval and privacy/security review.
+
+
+## P11 — In-game phone transportation and automated passenger travel
+- [ ] Add a Transportation section to the in-game phone as the player's city mobility control center.
+- [ ] Implement “Call my car” for owned/authorized vehicles, with vehicle selection and delivery to the player's current location.
+- [ ] Design and implement in-world taxi/cab pickup requests.
+- [ ] Design and implement an in-world ride-hailing request flow.
+- [ ] Add premium concierge vehicle/chauffeur requests.
+- [ ] Design private-aircraft staging: request an owned/authorized plane, have it ready at the airport and confirm fuel/departure readiness.
+- [ ] Enforce ownership, keys and access permissions when retrieving/summoning vehicles; do not let players summon vehicles they do not own or have permission to use.
+- [ ] Implement automated passenger travel for initial launch; no direct manual steering/acceleration in the initial release.
+- [ ] Build safe, predictable route following, traffic handling and collision avoidance for automated vehicle travel.
+- [ ] Add passenger-perspective camera controls so players can rotate/orbit the view and enjoy city scenery while being transported.
+- [ ] Display pickup/destination, service status, arrival/travel estimate and cost where applicable; provide cancel/exit and interruption recovery.
+- [ ] Protect player assets and balances from simulation defects; no random crashes, vehicle loss, damage fees or financial penalties caused by automated pathing.
+- [ ] Define service costs, staging rules, aircraft access/fuel state, routing, travel times, camera behavior and airport flow for creator review.
+- [ ] Keep manual driving out of launch scope unless separately approved after technical, safety and accessibility review.
