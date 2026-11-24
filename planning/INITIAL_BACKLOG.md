@@ -66,7 +66,8 @@
 - [ ] Prototype candidate Starter, Comfortable, Premium and Elite package tiers; define contents and allow component-by-component upgrades as a design option.
 - [ ] Balance every package against realistic in-game earning opportunities; basic housing/phone/utilities must not require real-money purchases.
 - [ ] Define billing UI with package contents, price, due date, payment status and clear earning options.
-- [ ] Define daily login rewards and weekly streak rewards with transparent schedules, reasonable caps, grace/catch-up rules and no punitive loss of essential services.
+- [ ] Define daily login rewards and weekly streak rewards with transparent schedules, reasonable safeguards, grace/catch-up rules and no punitive loss of essential services.
+- [ ] Design optional repeat-session and sustained-meaningful-play milestones so players who choose to return multiple times in one day or play for several hours feel recognized, without requiring uninterrupted sessions, rewarding idle AFK time or making shorter sessions feel pointless.
 - [ ] Award XP and in-game currency for meaningful poker, social, event and city activities; avoid idle-time farming and repetitive check-in exploits.
 - [ ] Tune incremental progress-bar feedback and level pacing to feel rewarding without excessive grinding, forced multiple-daily logins or prolonged sessions.
 - [ ] Add economy simulations for income, weekly package costs, upgrades, sinks, inflation and new-player affordability.
