@@ -74,6 +74,17 @@ Server-authoritative: balances, ledger, paid entitlements, card ownership, pack 
 - Marina/yacht-club venue collection and dealership collection are separate from individual boat and car collections.
 - Beach has no five-card building ownership collection.
 
+## Creator-approved ownership and production acceptance
+- Monster Beats is represented as a production company/facility; a player may own a studio inside it and produce music, but cannot acquire ownership of the Monster Beats building/company through that studio collection.
+- A player can establish a film crew and make movies using the Upper Level studio/production facility without automatically owning that facility.
+- A car-lot collection grants the configured individual lot, not the entire dealership group or every vehicle.
+- A clothing-store collection grants the configured store.
+- A yacht collection grants the individual yacht and never the Hustle City Marina and Yacht Club.
+- Hustle Club and Velvet Lounge collections can grant their respective venue/business ownership.
+- Shuffle Club/casino collection grants private-room access only; no player can claim ownership of the Shuffle Club or casino.
+- Hustle Towers apartment collection grants permanent ownership of the specific apartment; rental remains a distinct state.
+- All these outcomes are represented by separate entitlement types and cannot accidentally grant the host building or adjacent assets.
+
 ## 5. QA evidence required
 For each feature, retain test ID, build/version, account fixtures, setup, action, expected result, actual result, server log/transaction reference, pass/fail and defect link. QA supervisors must independently verify economy, card/ownership and social privacy boundaries.
 
