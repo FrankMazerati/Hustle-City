@@ -221,3 +221,12 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - **Visual production:** ten coordinated images per blueprint push, fixed master geography, progressive city-to-district-to-building zoom, multi-angle buildings/characters/vehicles, detailed street life and functional-geography QA.
 - **Naming discrepancy:** current conversation says Booker Cole Theater and Jokes on You Comedy Club; older repository content says Book of Code Movie Theater and Ain't You Funny Comedy Club. Preserve both records pending creator resolution; use latest conversation names in the new visual manuscript.
 - Canonical references: `world/HUSTLE_CITY_TOP_DOWN_DISTRICT_AND_LANDMARK_PLAN.md`, `docs/VISUAL_WORLD_BLUEPRINT_AND_META_AI_MANUSCRIPT.md`.
+
+## Creator approval — final district palettes and city grid/orientation (2026-11-24)
+- Approved all seven palettes: Entertainment electric/cobalt blue; Downtown Diamond black/gold; Trapper red/white; Hustle blue/white; Swagger purple/silver; Transportation slate gray/teal; Financial emerald/platinum-silver.
+- Corrected Trapper/Hustle colors: Trapper is red/white; Hustle is blue/white. This supersedes the earlier Trapper blue/white and Hustle red/white register.
+- Map orientation: WEST top, NORTH right, EAST bottom, SOUTH left. This is the required display convention for city, district, neighborhood and block maps.
+- Grid: preserve the 7×7 master grid (49 equal square cells), six central-core cells and 43 outer neighborhood cells; subdivide each outer neighborhood cell into 5×5 equal block boxes at neighborhood zoom. Grid organizes planning; natural water/shorelines and building footprints remain organic.
+- Hierarchy: seven official districts remain top-level. Hollywood-style Entertainment, Downtown, Transportation/Travel, Trapper City, Hustle, Swagger and Financial are neighborhood/campus/area identities mapped within the official district structure. Trapper City is not a second Trapper District unless creator explicitly reclassifies it.
+- Supporting buildings: use original fictional visible names and stable IDs HC-[DISTRICT]-[GRID-CELL]-[TYPE]-[NNN]; distinguish creator-owned landmarks from generic city properties. Example names in the planning docs are illustrative, not approved canon names.
+- Canonical updated references: world/HUSTLE_CITY_TOP_DOWN_DISTRICT_AND_LANDMARK_PLAN.md and docs/VISUAL_WORLD_BLUEPRINT_AND_META_AI_MANUSCRIPT.md.
