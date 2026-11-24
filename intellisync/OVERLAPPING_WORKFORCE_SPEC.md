@@ -86,6 +86,8 @@ Every work package must carry a stable ID, version, owner, assigned QA superviso
 
 ## 7. Current implementation boundary
 
-The repository contains a SQLite package relay, an on-demand serialized Ollama worker, a scheduler prototype, and tests. The current scheduler prototype's timed loop runs global production, QA, and correction phases in sequence. That is **not yet** the required per-agent overlapping-window scheduler described here. The scheduler remains unactivated until the rolling scheduler, resource controls, model assignments, and tests are implemented and verified on the tablet.
+The repository contains a SQLite package relay, an on-demand Ollama worker, a rolling queue scheduler, and tests. The scheduler can advance QA-pending packages alongside unrelated ready production/correction packages in the same tick; a single bounded executor enforces the configured global model-call concurrency cap. Failed worker executions are returned to the ready queue instead of being stranded in an in-progress state.
+
+The exact 20/5/5 wall-clock deadlines, correction-window expiry/escalation, and optional 10-minute extension are not yet enforced. The current Ollama worker is still a one-shot model invocation rather than a continuously checkpointing 20-minute work session. The device-aware resource broker, verified model assignments, autonomous package claiming, and tablet smoke test also remain outstanding. Keep the scheduler unactivated until those activation gates are satisfied.
 
 The live IntelliSync queue currently uses SQLite. Supabase persistence is not implemented. Do not apply the game database draft to a Supabase project until the dedicated Hustle City database is positively identified and the creator approves deployment.
