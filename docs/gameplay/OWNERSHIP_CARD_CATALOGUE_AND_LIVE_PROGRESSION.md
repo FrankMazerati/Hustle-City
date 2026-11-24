@@ -90,6 +90,25 @@ New buildings and assets added after launch receive new stable IDs, collection d
 
 Retiring a pack must not erase cards already owned, invalidate a completed collection or revoke an entitlement. Reprints/re-releases must have explicit duplicate and trade rules.
 
+## 5A. City keys and city completion progression
+
+Each city has its own **City Key** progression milestone. Players travel to a city, collect that city's cards through eligible activities and collections, and work toward earning that city's key.
+
+- The Hustle City Key is the key associated with completing the designated Hustle City collection requirements.
+- Chicago has its own City Key; Florida/Miami, Texas, Washington and every other approved city have their own distinct keys.
+- A City Key is a major milestone reward, not an ordinary collectible card.
+- City Keys are intended to carry substantial bonuses and special surprises. Exact rewards, quantities, mechanics and reveal content remain TBD until creator approval.
+- City Keys can be used as progression credentials for configured city-specific business, ownership and feature unlocks. The exact unlock map and eligibility rules must be authored per city; do not assume one key automatically grants every business.
+- The exact completion threshold (all city cards, all designated collections, or another explicitly configured city checklist) must be defined in each CityKeyDefinition. The creator's intended direction is to collect the city's required cards/collections to earn its key; do not silently choose a smaller threshold.
+- A player can pursue different cities' keys over time. The system is designed to encourage travel and continued collection, not to make the world a one-time linear checklist.
+- City Keys, card collection completion, individual business ownership and travel access are separate data entities and entitlements.
+
+Required data model extension:
+- **CityKeyDefinition:** city_key_id, city_id, completion_requirements, reward_bundle_id, unlock_rules, release_version, status.
+- **PlayerCityKey:** player_id, city_key_id, earned_at, completion_snapshot, grant_transaction_id.
+
+City Keys and earned rewards must be permanent, auditable and idempotent unless a future creator-approved rule explicitly defines otherwise.
+
 ## 6. Player progression beyond cards
 
 Cards and asset ownership are only one progression track. The architecture must also allow separately configurable systems for:
