@@ -97,8 +97,8 @@
     },
     {
       "agent_id": "P05-INTERIORS",
-      "model": "qwen3:1.7b",
-      "profile": "general_instruction_and_analysis",
+      "model": "gemma3:1b",
+      "profile": "lightweight_summaries_and_triage",
       "enabled": true
     },
     {
