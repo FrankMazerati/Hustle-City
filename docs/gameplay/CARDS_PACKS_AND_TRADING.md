@@ -81,6 +81,21 @@ Building card packs must be part of the daily engagement loop, not only a store 
 - Pack catalogue must support a pack associated with each eligible building/set, plus any approved general or event pack. Do not invent building names, card contents, rarity or odds.
 - Rewarded packs use the same server-side pack-opening and inventory grant path as purchased packs; free does not mean client-authoritative.
 
+## 5A. Strict city-presence eligibility for all card acquisition
+
+**Mandatory rule:** A player can collect/acquire a new card only while physically present in the in-game city to which that card belongs. This applies regardless of acquisition source, including card packs, poker/activity rewards, daily login rewards, prize wheels, events, achievements, direct grants and purchases. Each card has a city_id and the server validates current city presence when the card is granted.
+
+Examples:
+- Poker or other activities in Chicago may award eligible Chicago cards, never Miami or Texas cards.
+- To earn Miami cards, the player must travel to Miami and participate in an eligible Miami acquisition source.
+- Daily rewards and prize-wheel card rewards must be scoped to the player's current city. If the player is not in the relevant city, preserve a pending reward if applicable and require presence there before card grant/opening.
+- A pack's entire eligible card pool must be scoped to the player's current city. Do not mix cities in one pack-opening pool.
+- Players may browse their Card Album and wish lists from anywhere.
+
+**Only exception: player-to-player trading.** Eligible card trades can take place anywhere, regardless of the city printed/assigned to the cards. Trading must remain in-game, server-authoritative and subject to all normal trade safeguards. Trading is not new-card earning and must not be used to bypass trade locks or restrictions.
+
+The city-presence check is server-side and based on authoritative active world/session location, not a client-supplied city string. A pending reward must not be lost if the player travels away before claiming it; defer the actual card grant until they return to the required city. This rule is strict and global across the city roster unless the creator explicitly approves a versioned exception.
+
 ## 6. Acquisition catalogue
 The card catalogue should identify each permitted source separately: earned gameplay rewards, event rewards, referral rewards if approved, card packs, direct purchase of a specified missing card if approved, and player-to-player trade. The exact source list and eligibility are unresolved. Store listings must clearly distinguish randomized packs from guaranteed single-card offers.
 
