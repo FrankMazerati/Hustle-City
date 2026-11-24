@@ -162,3 +162,14 @@ For each new release:
 - Launch order, expansion cadence and any paid progression limits.
 
 Do not silently resolve any item above. Record future approvals in the project decision log and update dependent documents.
+
+
+## 11. City-specific dealership and venue collections
+
+The five-card collection structure also supports a multi-city content catalogue. The creator approved city-specific business names and city-specific character titles/roles: a dealership collection in Chicago and one in another city may have different local dealership names, five character titles, characters and stories while retaining the same five-card low-to-high progression principle.
+
+The approved parent automotive group name is **Hustle Boys Automotive Group**. Its local dealerships may use distinct city-specific names. The dealership title concepts currently in discussion include Lot Runner, Car Plug, Sales Boss, Motor Mogul (wording to confirm), Auto King, Lot Scout, Luxury Car Broker, Showroom Boss, Exotic Car Lot Hustler, Exotic Car Plug and Showroom Chief. These are working concepts, not a locked city-by-city mapping.
+
+Apply the same city-specific naming and character approach to yacht clubs, nightclubs, hotels/hotel chains, bars and lounges, sports venues, clothing stores, restaurants, studios and other suitable local businesses. The complete 30-city roster and final local business names remain to be approved.
+
+See [City Identity and Local Business Catalogue](CITY_IDENTITY_AND_LOCAL_BUSINESS_CATALOGUE.md) for the authoring workflow, data model and review rules. This localization layer does not change the exact-entitlement rule: a collection grants only its configured reward, not automatically the host building, parent company or unrelated assets.
