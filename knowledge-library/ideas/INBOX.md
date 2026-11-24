@@ -115,3 +115,13 @@ _Add new entries above this line._
 - **Design intent:** Make player-driven discovery a satisfying reason to spend time in venues and interact with the population, not a friction-heavy menu task. Keep inspection quick and voluntary; retain privacy, agency and trade confirmation safeguards. Inspection itself does not build trust.
 - **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 28.
 - **Source:** Creator conversation, 2026-11-24.
+
+
+### 2026-11-24 — Tap-to-identify, clean world presentation and multi-platform interaction
+- **Status:** APPROVED
+- **Domain:** UI/UX / player interaction / accessibility / cross-platform
+- **Creator direction:** Remove the default permanent name labels above characters. Players should tap/select a person to reveal their portrait, name and profile in the compact in-world pop-up. This continues the roaming social discovery loop rather than filling the scene with floating labels.
+- **Platform direction:** Tablet is the primary target; phone and PC are also intended, with PlayStation and Xbox possible later. Landscape/horizontal phone presentation is the current direction to evaluate.
+- **Design notes:** Share the underlying interaction system across platforms and adapt layout/input: touch on tablet/phone, mouse/keyboard on PC, and controller navigation for future consoles. Keep the scene visible, profiles readable and targets clear in crowds. Do not silently select the wrong person or trigger actions from proximity alone. Final phone orientation and detailed platform mappings remain open.
+- **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 30.
+- **Source:** Creator conversation, 2026-11-24.
