@@ -70,11 +70,11 @@ The repository contains multiple incompatible workforce descriptions:
 ### 4.2 Economy contradictions
 
 - The membership document states the Poker Chip conversion ratio is unresolved in one section, but later states the creator-approved rate is 1:1. The 1:1 nominal in-game conversion is the approved direction; fees, limits, eligibility and policy review remain unresolved.
-- The membership document previously treated all card-acquisition channels as unresolved, while the social-world requirements specify approved channels: qualifying poker hands/achievements, qualifying daily play sessions and player-to-player trading. Daily login currency rewards remain separate and do not award cards.
+- The membership document previously treated all card-acquisition channels as unresolved, while the social-world requirements specify approved channels: qualifying poker hands/achievements, qualifying daily play sessions and player-to-player trading. **Corrected during this audit:** the membership document now records those channels; daily login currency rewards remain separate and do not award cards.
 - Food/drink language sometimes says health/condition and sometimes implies energy. The creator specifically directed food/drinks at poker tables to restore table health. The broader relationship among health, energy/stamina, hunger and condition remains unresolved.
 - Hustle Cash and Hustle Money refer to the ordinary wallet in different discussions. Use one canonical wallet/ledger code (`HUSTLE_MONEY`); treat Hustle Cash as a display-language alias unless a later creator decision changes it.
 
-**Action:** Align membership, social-world, food catalog, database README, data model and SQL before migration.
+**Action remaining:** Check the flagship food catalog and any secondary economy references for the same wording, then preserve the aligned membership, social-world and database contracts through migration review.
 
 ### 4.3 Launch scope versus later ideas
 
@@ -122,7 +122,17 @@ These are schema gaps, not a mandate to create every table immediately. Define c
 7. The active Supabase project must be positively identified as the Hustle City database. Do not reuse the separate Command Center Supabase project.
 8. No migration should be applied until schema review, project confirmation, migration generation, tests and explicit creator approval.
 
-## 6. Required update sequence
+## 6. Changes made during this audit
+
+- Added this audit register and linked it from the repository root README.
+- Updated the SQL draft wallet constraint and database README/data model/schema-gap wording to include all four currency codes, including `WINGS`.
+- Clarified that poker-table food/drinks are intended to restore table health while the broader health/energy/condition model remains open.
+- Reconciled the membership document to the approved 1:1 nominal chip conversion and approved card-acquisition channels; daily login currency rewards remain card-free.
+- Corrected stale root README and database data-model status text.
+- Updated the decision log and added explicit current-workforce overlays/supersession notices to workforce, assembly-line, IntelliSync status and mobile-AI-HQ documentation.
+- Updated PR #11's description to reflect the current 17-role target, legacy runtime configuration and actual verification gates.
+
+## 7. Required update sequence
 
 **P0 — Canon reconciliation**
 1. Publish this audit as the current cross-project gap register.
@@ -144,10 +154,10 @@ These are schema gaps, not a mandate to create every table immediately. Define c
 3. Reconcile the world map, district/landmark catalog and building identities.
 4. Verify Unreal builds, gameplay acceptance tests, CI and runtime agent workflows before claiming activation.
 
-## 7. What remains explicitly unresolved
+## 8. What remains explicitly unresolved
 
 Do not invent: membership billing cadence and currency quantities; daily reward amounts/streak/catch-up/reset/caps; card odds and exact thresholds; health versus energy/hunger meters and decay/recovery values; wages and living costs; property prices/caps/rental/resale; premium-versus-earned vehicle/yacht/aircraft access; detailed transit routes/fares/schedules; Sim memory retention/deletion policy; exact schema/indexing/partitioning; full RLS policy matrix; device orientation/camera/breakpoints; final 17-agent-to-specialist domain mapping and verified local model availability.
 
-## 8. Audit maintenance rule
+## 9. Audit maintenance rule
 
 Every new creator-approved requirement should be added to its canonical domain document and reflected in this audit register when it changes coverage, status or an unresolved dependency. Keep proposal status explicit. A repository commit is evidence of documentation only; implementation status requires code, tests, deployment/build evidence and acceptance verification.
