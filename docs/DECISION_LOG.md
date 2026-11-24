@@ -74,3 +74,20 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - **Working proposal, not yet creator-approved:** `docs/economy/ANCHOR_ITEM_LEVEL_MENUS_DRAFT.md` defines draft item-level menus for the flagship fictional Hustle City market and Chicago, including item IDs, serving descriptions and proposed Hustle Money prices.
 - The draft preserves creator-provided anchors: basic meal around $5.00; hamburger and fries $5.99; pop/soda around $2–$3; inexpensive liquor serving around $5.00. All other draft prices require creator review.
 - **Unresolved:** final item selection, names, prices, portion sizes, venue availability, food/health/energy effects and alcohol details. The draft does not authorize implementation or final daily-reward amounts.
+
+## Social world, lifestyle, hospitality and conversational NPC requirements
+- **Approved creator direction:** Hustle City is a 3D social-life world first; poker is one activity inside the larger persistent world, not the product's defining purpose.
+- **Approved creator direction:** Expand character creation and identity with diverse body builds, facial hair, hairstyles, clothing, shoes, accessories and distinct men's/women's fashion catalogs. Creator-provided outfit images will guide visual direction when supplied.
+- **Approved creator direction:** Players manage individual clothing items and saved outfits through physical wardrobes/closets at apartments, houses and designated locations including Hustle Towers; clothing choices should account for weather and seasons.
+- **Approved creator direction:** Players can pack owned clothing into travel bags/suitcases for trips and access packed items at suitable destinations. Capacity and packing rules remain unresolved.
+- **Approved creator direction:** Build broad, believable restaurant, food, non-alcoholic beverage, alcohol, cocktail, bottle, cigar and cigarette catalogs. Use real-world price research as reference evidence while preserving existing creator price anchors; final game prices remain subject to review.
+- **Approved creator direction:** Provide contextual social-action buttons at poker tables, including drink pouring/consumption, cigar/cigarette interactions and shot offers, without displacing the primary poker interface.
+- **Approved creator direction:** Full bottles are persistent possessions with tracked remaining pours; players can carry them between locations and retain them through vehicle entry/exit and travel.
+- **Approved creator direction:** Players can gift food and drinks to other players through the in-game messaging/inbox. Recipients must accept before fulfillment. NPC servers can deliver accepted gifts. Refund/expiry edge cases remain unresolved.
+- **Approved creator direction:** Include cigar bars, cigar lounges, private/executive boss-style cigar rooms and VIP social spaces for conversation, drinks, socializing and card trading.
+- **Approved creator direction:** Character simulation should include expressive drinking, smoking and social animations and a nonessential, non-competitive bubbly/intoxication presentation. Exact effects and limits remain unresolved.
+- **Approved creator direction:** Hotels and Hustle Towers should support staffed hospitality: doormen, circular-driveway drop-off, valet vehicle parking/retrieval, concierge/front desk, bellhops/luggage assistance and elevator attendants.
+- **Approved creator direction:** NPCs must communicate proactively and conversationally with players, ask questions, accept player responses and react contextually. They should provide directions, local/service information and game-world guidance using authoritative state rather than inventing events or player information.
+- **Implementation discipline:** These are required product directions, not claims that features are already implemented or included in the first playable release. Interaction details, content, capacities, economics, technical architecture and production phasing remain to be designed. The creator remains final design authority.
+- **Canonical specification:** `docs/gameplay/SOCIAL_WORLD_LIFESTYLE_AND_PLAYER_INTERACTION_REQUIREMENTS.md`.
+
