@@ -146,3 +146,8 @@ Use schema validation and stable references. Engine adapters may render and impl
 5. Build the engine-neutral building registry and validation schema.
 6. Extend World Builder rules to generate named ordinary buildings around the signature destinations.
 7. QA every displayed name and interaction prompt against the actual building record and implemented gameplay.
+
+
+## 3B. Hustle Club placement refinement
+
+Creator direction places Hustle Club in the waterfront cluster as a beachfront casino/nightlife destination. It is not a downtown Diamond District venue. Keep it distinct from Get Wild Beach, which is a separate beach-party destination in the broader coastal area. Hustle Towers remains a separate downtown landmark. Exact waterfront parcel adjacency and access are unresolved.
