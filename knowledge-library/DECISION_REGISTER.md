@@ -128,3 +128,14 @@ This register captures decisions promoted through the knowledge library. The exi
 - Apply to player characters and NPCs with their respective conversation, relationship, availability and agency systems. Proximity may assist selection, but direct touch selection is the clear intended interaction; exact targeting mechanics remain open.
 - Invitations are requests, not forced actions. The recipient/group may accept, decline or defer. Respect privacy, blocks, boundaries, available seating, group context and moderation controls.
 - **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 27.
+
+
+## 2026-11-24 — Roaming social discovery and collectible-card hunt loop
+- **Status:** APPROVED — creator-defined core gameplay loop.
+- Players should routinely roam populated venues and tap people to inspect profiles, learn who is present and decide whom to approach. Tapping/inspection is expected to be a frequent activity, not just an occasional profile feature.
+- Profile pop-ups can offer contextual actions including chat, invite to sit, invite for a drink, invite for a meal and ask to join a group, subject to scene/venue conditions and recipient agency.
+- Trading cards provide a concrete exploration goal: a player missing a specific card can inspect people in the room and discover who owns it and, where visible, how many copies they have.
+- Clearly distinguish card ownership, duplicates, trade-listed copies and copies not offered for trade. Duplicates are not automatically tradable; owners choose what to list. Respect collection visibility.
+- This loop is intended to encourage meaningful time spent exploring venues, discovering people, socializing and negotiating. Do not create needless friction or arbitrary restrictions on ordinary profile inspection.
+- Profile inspection alone does not build trust; relationship and trade safeguards remain in force.
+- **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 28.
