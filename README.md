@@ -9,7 +9,8 @@ Hustle City is a cinematic, realistic 3D social-world/city-life game built prima
 - [Decision register](knowledge-library/DECISION_REGISTER.md) — current captured decisions and unresolved questions.
 - [Conversation-to-repository audit](docs/CONVERSATION_TO_REPOSITORY_AUDIT_2026-11-24.md) — cross-project coverage, conflicts, database gaps and update priorities.
 - [Master visual blueprint and Meta AI manuscript](docs/VISUAL_WORLD_BLUEPRINT_AND_META_AI_MANUSCRIPT.md) — seven districts, color identities, geographic continuity, functional geography and ten-image production batches.
-- [Implementation Day handoff](docs/IMPLEMENTATION_DAY_HANDOFF_2026-11-25.md) — UserLAnd, external-drive diagnostics, Ollama inventory, agent startup gates and first production cycle.
+- [Implementation Day handoff](docs/IMPLEMENTATION_DAY_HANDOFF_2026-11-25.md) — Primitive FTPd/SFTP storage workaround, UserLAnd, Ollama inventory and startup gates.
+- [Full-day 17-agent production schedule](docs/FULL_DAY_17_AGENT_PRODUCTION_SCHEDULE_2026-11-25.md) — agent-by-agent assignments, four-agent rotations, QA gates, deliverables and eight-hour runbook.
 
 ## Start here
 - [Project vision and game scope](docs/PROJECT_VISION.md)
