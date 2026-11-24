@@ -264,3 +264,17 @@ No agent may independently invent database schemas, network authority or transac
 5. NPCs never claim false memories or disclose another player's private information.
 6. NPC relationships remain consistent through NPC shifts, venue changes, player reconnects and ordinary world simulation.
 7. Casino memory never becomes manipulative spending pressure or compromises game fairness.
+
+
+## 17. Shared social world: NPCs beyond their workplaces
+**Creator-approved requirement:** Named, memorable NPCs must exist as people throughout the shared city, not remain permanently stationed at their assigned workplace. A bartender may be encountered on the sidewalk, at a shop, beach, club, concert, restaurant, neighborhood gathering or a player's yacht party. The same stable NPC identity, appearance and relationship continuity follow them across all appropriate locations and activities.
+
+- Separate an NPC's occupation/workplace identity from their current activity and location. An NPC remains the same bartender/valet/host when off shift and participating in ordinary life.
+- Give NPCs off-duty schedules, personal errands, leisure destinations, friendships, social invitations and event attendance. Their movement should be plausible for their home, interests, schedule, transport access and social connections.
+- Enable natural recognition across contexts: a player who knows the bartender from her workplace may recognize her downtown or at a beach party; she may greet the player using appropriate shared history without acting as though she is on duty.
+- Support NPC-to-NPC relationships and encounters. Familiar workers may attend events together, meet friends, visit venues and form believable social groups; the city should not feel like every NPC's life revolves around the player.
+- Support mixed player/NPC social gatherings. Player-hosted yacht parties, beach parties, club events and other gatherings may include player-invited friends/crew and suitable NPC guests/attendees. NPC attendance must respect event context, capacity, schedules, relationships, invitation rules and world simulation.
+- Distinguish invited guests from ambient NPC attendees and venue staff. NPC guests should behave as guests—socialize, dance, eat, talk, mingle and move around—rather than all appearing as employees or service props.
+- NPCs may accept/decline invitations or attend appropriate public events according to their schedules and relationships. Do not guarantee attendance when a character is unavailable; provide believable alternatives and continuity.
+- Preserve social continuity: if a player meets an NPC at a party and later sees them at work or elsewhere, the NPC can recognize the player and optionally refer to the shared event when relevant.
+- Coordinate P09 with P10 for event/party systems, P03/P04/P05 for public spaces and venues, P06/P07 for NPC travel, and P08 for persistent character appearance.
