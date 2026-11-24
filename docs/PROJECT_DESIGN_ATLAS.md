@@ -112,3 +112,14 @@ Secure Creator Studio should manage vehicle packs, clothing, buildings, characte
 - Reward schedules should be transparent and tested against economy inflation/exploitation. Multiple sessions and longer play sessions can earn additional milestones, but do not require uninterrupted play, make rewards coercive or allow idle AFK farming. Players choosing shorter sessions must still make worthwhile progress, and the system should provide natural stopping points.
 - Design for healthy voluntary engagement: no coercive multiple-daily-check-in requirement, artificial urgency, deceptive near-miss mechanics or punitive streak resets. Include natural stopping points and monitor player feedback and wellbeing alongside retention.
 - Exact bundle contents, names, prices, billing day, grace period, reward values, streak length, activity eligibility, XP curve, level rewards and anti-exploit controls remain unresolved and require creator approval plus playtesting.
+
+
+## 19. Away-state property care and return reminders
+- The city may continue advancing an owned/rented player's home and vehicle care states while the player is offline. After a configurable period away, the apartment can visibly become neglected (dust, flies, roaches or other reversible signs of infestation/deterioration); a vehicle may become due for routine maintenance.
+- This is an atmospheric re-engagement mechanic, not an asset-loss mechanic. No eviction, loss of apartment ownership, permanent vehicle damage, confiscation or lockout from poker/social play because of inactivity. Returning players need clear and reasonably affordable clean-up/maintenance actions.
+- The creator wants players to want to return at least daily, but not to be forced to do so to protect essential possessions. Absence thresholds and deterioration stages are configurable and not yet finalized.
+- At onboarding, offer optional email and SMS/text update subscriptions with clear channel-specific consent, purpose and expected frequency. Let players manage or withdraw preferences later.
+- Social login (including Facebook login) is authentication, not notification consent. Only use social-platform notification features if separately supported by the platform and explicitly authorized by the player; linking a Facebook account alone does not authorize Facebook notifications.
+- Send occasional, factual, friendly reminders such as an apartment-care notice or vehicle-maintenance reminder. Avoid alarmist/shaming copy and deceptive urgency.
+- Notification delivery must support frequency caps, quiet hours, deduplication, channel preferences, unsubscribe/STOP handling for SMS, auditability and applicable privacy/messaging/carrier/platform requirements. Avoid revealing sensitive account/property details in lock-screen previews.
+- Final thresholds, decay stages, restoration costs, reminder cadence, supported channels and consent language require creator approval and testing.
