@@ -42,6 +42,21 @@ The five-card collection standard applies to each configured building/venue coll
 The marina/yacht club venue collection is separate from individual boat/yacht collections. The car dealership collection is separate from individual car collections. Collecting a venue set never grants every vehicle sold, stored or hosted there.
 
 Maintain a creator-approved building/venue registry with stable building_id, canonical display name, category, collection_id (nullable), five card slots, completion_reward_type, completion_entitlement_id, rental/ownership rules and approval status. Do not add brands, streets, districts, transport hubs or decorative background structures as owned buildings without explicit creator direction.
+## 3B. Creator-approved ownership and production rewards
+
+The five-card collection unlocks the player's specific asset or privilege, not necessarily the host building:
+- **Monster Beats:** the player does not own the Monster Beats building or production company. The player owns a studio within the Monster Beats facility and can produce music there. The exact studio naming, production-company relationship, operating rights and upgrade catalogue remain to be authored.
+- **Upper Level Films / Upper Level studio:** the player can establish and operate their own film crew and make movies, using the Upper Level studio/production facility. The player's crew/production operation is distinct from ownership of the studio building. Confirm the exact relationship between Upper Level Films and Upper Level Entertainment Studios in the content registry.
+- **Car dealership:** completion can grant ownership of a car lot, not automatic ownership of the entire dealership group or every vehicle.
+- **Clothing retail:** completion can grant ownership of a clothing store.
+- **Yacht:** completion grants ownership of the specific yacht, never the Hustle City Marina and Yacht Club.
+- **Hustle Club:** eligible collection can grant ownership of the Hustle Club venue/business.
+- **Velvet Lounge:** eligible collection can grant ownership of the lounge venue/business.
+- **Shuffle Club / casino:** collection grants a private room inside the casino/club only; no ownership of the Shuffle Club or casino.
+- **Hustle Towers:** apartment collection grants permanent ownership of the specific apartment; rental is a separate starting/temporary state.
+
+These are different entitlement types and must be represented separately in card-set configuration. Do not label a studio, car lot, clothing store, yacht, crew, private room or business as ownership of its host building unless the creator explicitly says so.
+
 ## 4. Card pack system
 A pack definition includes pack_id, display_name, theme/set, price_currency, price_amount (TBD), guaranteed contents, random slots, odds table, duplicate protection policy, eligibility, repeatability, availability window and disclosure text. Pack opening is a server-authoritative operation:
 1. Confirm pack is available and player is eligible.
