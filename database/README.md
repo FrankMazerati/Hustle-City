@@ -9,7 +9,7 @@
 ## Non-negotiable data boundaries
 1. A player account/profile is not the same thing as a playable character.
 2. Neighborhood ownership, neighborhood residency, crew membership, crew leadership, property ownership, and business ownership are separate relationships.
-3. Hustle Money, Diamonds, and Poker Chips are separate currencies.
+3. Hustle Money, Diamonds, Poker Chips, and Wings are four separate currencies.
 4. Currency and ownership changes must be server-authoritative, auditable, and idempotent.
 5. Home-city selection is separate from neighborhood ownership.
 6. Geography is hierarchical: city → districts/neighborhoods → neighborhood planning box → 5×5 city blocks.
