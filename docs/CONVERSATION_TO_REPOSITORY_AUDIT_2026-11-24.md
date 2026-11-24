@@ -161,3 +161,37 @@ Do not invent: membership billing cadence and currency quantities; daily reward 
 ## 9. Audit maintenance rule
 
 Every new creator-approved requirement should be added to its canonical domain document and reflected in this audit register when it changes coverage, status or an unresolved dependency. Keep proposal status explicit. A repository commit is evidence of documentation only; implementation status requires code, tests, deployment/build evidence and acceptance verification.
+
+
+## 10. Follow-up diagnostic — visual blueprint, districts and live Supabase (2026-11-24)
+
+### New creator direction captured
+- The city visual-production workflow now has **seven official districts**: Entertainment, Downtown Diamond, Trapper, Hustle, Swagger, Transportation and Financial.
+- Transportation District is explicitly an official district centered on the airport, car lot/automotive destination and marina/yacht facilities. It is not merely the citywide rail/transit corridor. Rail and road networks remain connected citywide.
+- Financial District is a separate official banking, finance and corporate-business district, distinct from Diamond District's luxury/prestige identity.
+- Current approved color directions: Entertainment electric/cobalt blue; Diamond black/gold; Trapper blue/white; Hustle red/white. Proposed pending approval: Swagger purple/silver; Transportation slate gray/teal; Financial emerald/platinum-silver.
+- Shuffle Club stays directly beside the beach on the right/east waterfront. The visual brief requires ten coordinated images per blueprint push, progressive zoom from city to district/block/building/interior, consistent camera/location registers and functional-geography QA (including a navigable harbor opening).
+- New consolidated manuscript: `docs/VISUAL_WORLD_BLUEPRINT_AND_META_AI_MANUSCRIPT.md`.
+- Tomorrow handoff: `docs/IMPLEMENTATION_DAY_HANDOFF_2026-11-25.md`.
+
+### Canonical conflicts discovered and retained for resolution
+- Existing top-down plan section 8 still says Transportation is a continuous corridor/system, not a boxed district. This is superseded by the creator's latest direction; preserve the citywide transit corridor as infrastructure while treating Transportation District as the airport/car lot/marina destination district.
+- Existing plan includes older district/venue naming and color details. This conversation reasserts Booker Cole Theater and Jokes on You Comedy Club, while the current repository spatial plan contains Book of Code Movie Theater and Ain't You Funny Comedy Club. Do not silently erase either historical record; the latest creator instruction governs the new visual manuscript, and the name conflict needs creator confirmation before changing all legacy assets.
+- Existing plan has prior Entertainment campus color blue/black; current creator direction says Entertainment District electric/cobalt blue. Use the current district color register in new visuals; retain any black campus detail only as a possible architectural accent, not a competing district palette.
+- Airport, car lot and marina grouping is approved; exact parcels, airport runway orientation, shoreline geometry and district boundaries remain unresolved. Do not invent final coordinates.
+
+### Live Supabase diagnostic
+- Queried the Supabase account explicitly labeled **Hustle City** and identified project **Hustle City Shuffle Club**, project ref `jtkbtogtxfbtammdlewv`, region `us-west-2`, database engine Postgres 17, status `ACTIVE_HEALTHY`.
+- Read-only table inventory for schema `public` returned **zero tables**.
+- Migration history contains one migration: `20261122193313_harden_rls_auto_enable_event_trigger`.
+- This confirms the game schema draft has not been deployed into the public schema of this project. No SQL or schema writes were performed during this diagnostic.
+- Keep the database SQL draft as review-only until schema design, project/environment confirmation, RLS policies, migration tests and creator approval are complete.
+
+### Repository and implementation diagnostic
+- Reconfirmed foundation PR #11 is open, draft and unmerged; head `knowledge-library-foundation`, base `main`. Do not claim it is merged.
+- Reconfirmed current 17-role target remains unreconciled with older runtime configs. Scheduler remains disabled pending group-aware execution, runtime permissions, full independent QA/correction workflow and tests.
+- The existing `scripts/hustle-city-ai-relay.sh` is a legacy 14-slot provider relay, not the current 17-local-agent scheduler. It has hosted-provider paths and paid-provider branches guarded by `ALLOW_PAID_AI`; keep paid providers disabled. The expected `scripts/hustle-city-status.sh` and `intellisync/worker.py` paths were not found in this branch.
+- Existing UserLAnd/USB/Ollama details conflict across prior sessions. The implementation handoff records known paths, commands and hard limits; verify the actual drive mount and Ollama host before moving or downloading models.
+
+### Audit coverage limitation
+This is an incremental diagnostic against repository files and connected live Supabase metadata, plus the conversation history/summaries available to this session. It is not a byte-for-byte audit of every raw historical chat message. No claim of complete transcript export is made.
