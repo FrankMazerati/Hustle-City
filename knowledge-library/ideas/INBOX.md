@@ -105,3 +105,13 @@ _Add new entries above this line._
 - **Design notes:** Support clear target selection in crowded scenes, compact overlays that preserve scene context, direct chat initiation and contextual social invitations. Invitations require recipient/group acceptance and can be declined or deferred. Apply to NPCs and player characters with their respective agency/privacy rules. Proximity may assist selection but must not trigger actions by itself.
 - **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 27.
 - **Source:** Creator conversation, 2026-11-24.
+
+
+### 2026-11-24 — Roaming social discovery and trading-card hunt
+- **Status:** APPROVED
+- **Domain:** gameplay loop / social exploration / multiplayer / collectibles / trading
+- **Creator direction:** Players will often roam around and tap people throughout a venue to learn their names, in-game age, profile and stats, then choose to chat, invite them to sit, invite them for a drink or meal, or ask to join their group. This is expected to be one of the main things players do while exploring populated spaces.
+- **Card-hunt example:** A player missing the last two cards in a collection walks around a room inspecting players. If someone has the desired card, the player can approach, talk and negotiate. Profile/collection visibility should distinguish owned cards, duplicates and cards explicitly offered for trade; having extras does not automatically mean they are available.
+- **Design intent:** Make player-driven discovery a satisfying reason to spend time in venues and interact with the population, not a friction-heavy menu task. Keep inspection quick and voluntary; retain privacy, agency and trade confirmation safeguards. Inspection itself does not build trust.
+- **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 28.
+- **Source:** Creator conversation, 2026-11-24.
