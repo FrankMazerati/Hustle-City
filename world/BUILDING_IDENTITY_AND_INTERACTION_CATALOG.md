@@ -208,3 +208,23 @@ This section supersedes the previous section 3E placement of Monster Beach:
 - **Monster Beats** remains an established separate name; do not assume it is a synonym for Monster Beach or invent a relationship between them.
 - Upper Level Films / Television / Production remains a separate, nearby major campus.
 - Ain't You Funny Comedy Club remains the creator-confirmed comedy-club name.
+
+## 3G. Creator direction — mixed-access city buildings and Coming Soon destinations
+
+The creator has clarified that Hustle City should contain a substantial mix of buildings with different levels of access and interaction. A fully playable interior is not required for every visible storefront or building.
+
+- **Coming Soon / future activation:** Some named destinations may be visible in the world before their gameplay is released. **Ain't You Funny Comedy Club is currently designated Coming Soon**, not an initial playable venue. Preserve its confirmed name and planned comedy-club identity. Its exterior/signage can contribute to the city, but do not present its interior or activities as playable until activated.
+- **Functional businesses:** Some gas stations and stores should support real player interactions, such as focused fuel, convenience or retail services when those systems are implemented.
+- **Limited-interaction businesses:** Some locations may support only a focused interaction, such as a service window, ATM, fuel pump, pickup point or other small interaction, without requiring a complete interior.
+- **Ambient storefronts/buildings:** Other gas stations, stores and commercial buildings may be named or visually authored scenery with no player-facing service. Their non-interactive status must be intentional and must not display misleading interaction prompts.
+- **Do not make every building enterable by default.** Select interaction tier according to gameplay value, launch priority, production cost and the needs of the street/world composition.
+
+The existing A–E interaction tiers remain the implementation vocabulary. “Coming Soon” is an access/activation state and launch-scope designation, not a new interaction tier. Stable building identity should allow a future upgrade from ambient/limited access to a functional venue without replacing its building ID.
+
+## 3H. Grocery shopping — exploratory, not approved as a full simulation
+
+The creator raised whether players should be able to grocery shop but has not approved a full grocery-shopping feature. Keep this as an open design question rather than a committed system.
+
+A lightweight option may be evaluated later: a player visits a selected grocery store or market, chooses a small set of useful everyday items, pays, and receives them in inventory. This would be a focused retail interaction, not a requirement to simulate aisles, carts, household meal planning, perishables, pantry management or recurring grocery chores.
+
+Do not build or document full grocery simulation as approved scope without further creator direction. Compare its moment-to-moment fun and economy value against its implementation cost and overlap with existing convenience-store / food-and-beverage systems.
