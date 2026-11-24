@@ -209,3 +209,15 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - **Unresolved implementation details:** Exact service/activity scope and acceptance tests for each location; NPC staffing; business inventory; beach activities; car/yacht club features; Hustle Towers' functional program; number and selection of houses in each neighborhood; vehicle roster and acquisition; airport routes/operations; both train stations' rail/transit coverage; and initial map connections.
 - **Economy and compliance:** Do not invent prices, fees or payouts for these locations. Casino implementation remains subject to legal, platform-policy, age-rating and consumer-protection review; no real-world cash redemption or gambling is implied.
 - **Canonical specifications:** docs/gameplay/SOCIAL_WORLD_LIFESTYLE_AND_PLAYER_INTERACTION_REQUIREMENTS.md and docs/economy/MEMBERSHIPS_AND_REWARDS.md.
+
+
+## Creator correction — seven official districts and visual blueprint (2026-11-24)
+- **Approved district structure:** Entertainment, Downtown Diamond, Trapper, Hustle, Swagger, Transportation and Financial.
+- **Approved color directions:** Entertainment electric/cobalt blue; Downtown Diamond black/gold; Trapper blue/white; Hustle red/white.
+- **Proposed colors pending approval:** Swagger purple/silver; Transportation slate gray/teal; Financial emerald/platinum-silver.
+- **Transportation District clarification:** this is an official district centered on the airport, car lot/automotive destination and marina/yacht facilities. It is not a replacement for the continuous citywide road, rail and public-transit network.
+- **Financial District:** separate banking, finance and corporate-business district; do not conflate with Diamond District luxury/prestige retail.
+- **Waterfront placement:** Shuffle Club remains directly beside the beach on the right/east side. Harbor/marina must have navigable access to open water.
+- **Visual production:** ten coordinated images per blueprint push, fixed master geography, progressive city-to-district-to-building zoom, multi-angle buildings/characters/vehicles, detailed street life and functional-geography QA.
+- **Naming discrepancy:** current conversation says Booker Cole Theater and Jokes on You Comedy Club; older repository content says Book of Code Movie Theater and Ain't You Funny Comedy Club. Preserve both records pending creator resolution; use latest conversation names in the new visual manuscript.
+- Canonical references: `world/HUSTLE_CITY_TOP_DOWN_DISTRICT_AND_LANDMARK_PLAN.md`, `docs/VISUAL_WORLD_BLUEPRINT_AND_META_AI_MANUSCRIPT.md`.
