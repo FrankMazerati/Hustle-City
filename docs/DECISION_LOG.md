@@ -55,10 +55,9 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - **Approved direction:** Build fictional sports broadcasts and shared in-world watch parties first, using original Hustle City basketball/football content. Real-world NBA, NFL and other sports broadcasts are a later phase, after the game is built and has an active player base, and only after the required rights and distribution agreements are secured.
 - **Approved direction:** Real-world music by real artists is intended from the outset; music is part of the world experience (for example, clubs, lounges, bars, vehicles and events), not only a separate menu player. Use only music with the appropriate rights cleared for the intended game uses.
 - **Approved experience direction:** DJ sets/music events, nightclubs/lounges, sports bars with screens and watch parties, and potential concert/performance venues.
-- **Unresolved:** Specific artists, tracks, labels/publishers, rights agreements, licensing budget, venue names/locations/counts, radio/playback design, event schedules, fictional team/league identities, match simulation/broadcast details and implementation scope.
 - Rights for compositions and sound recordings, territories, platforms, term, interactive playback, marketing, player streams/clips and other uses must be reviewed and secured as applicable. Consumer music subscriptions are not game-use licenses.
+- **Unresolved:** Specific artists, tracks, labels/publishers, rights agreements, licensing budget, venue names/locations/counts, radio/playback design, event schedules, fictional team/league identities, match simulation/broadcast details and implementation scope.
 - Canonical specification: `docs/gameplay/LIVE_ENTERTAINMENT_SPORTS_AND_MUSIC.md`.
-
 
 ## 30-city food and beverage catalog foundation
 - **Approved direction:** Build distinct local food and beverage menus for 30 major U.S. starter city markets, while keeping everyday affordability and shared price tiers reasonably comparable across markets.
@@ -68,7 +67,6 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - **Menu identity examples:** Chicago-style pizza and local comfort food; New York borough-specific menus; Texas regional food; Florida/Caribbean/seafood influences; California regional and international food; and distinct local specialties across the remaining markets. Hustle City's own broad menu direction includes soul food bowls, jerk chicken, shrimp dinners, rib tip dinners and seafood.
 - **Unresolved:** final roster confirmation/substitutions; full item-level menus; final prices, portions and bottle sizes; venue-specific menus; food/health/energy effects; clothing prices; and daily reward amounts. Do not finalize daily rewards before the food/beverage and other major spending catalogs are modeled.
 - **Canonical catalog foundation:** `docs/economy/30_CITY_FOOD_BEVERAGE_CATALOG.md`. The selected roster and menu examples are a working foundation; individual items and prices remain subject to research and creator approval.
-
 
 ## Initial item-level food and beverage menus
 - **Working proposal, not yet creator-approved:** `docs/economy/ANCHOR_ITEM_LEVEL_MENUS_DRAFT.md` defines draft item-level menus for the flagship fictional Hustle City market and Chicago, including item IDs, serving descriptions and proposed Hustle Money prices.
@@ -113,5 +111,12 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - **Approved creator direction:** Choices must match the NPC's role, venue inventory/services and current player/game state. NPCs cannot promise unavailable services or invent prices, stock or events.
 - **Approved creator direction:** Purchases/services must be clearly selected and confirmed before fulfillment/charging; declines must be respected.
 - **Implementation details still open:** Choice layout/count, touch UI, text entry, voice input, moderation, localization and dialogue orchestration.
-- **Canonical specification:** `docs/gameplay/SOCIAL_WORLD_LIFESTYLE_AND_PLAYER_INTERACTION_REQUIREMENTS.md`.
 
+## Universal role-based NPC interaction across the city
+- **Approved creator direction:** The contextual quick-reply and custom free-text conversation system applies across the entire city and all appropriate NPC roles, not only hospitality servers or poker venues.
+- **Approved creator direction:** Players can use role-specific quick replies and custom text to interact with valet attendants (park/retrieve vehicles), hotel front desks (room search/booking/check-in), concierges (directions and local information), bellhops (luggage), elevator attendants (floors/destinations), and other city staff.
+- **Approved creator direction:** NPC interactions should support complete service conversations and workflows: ask, clarify, present valid choices, confirm, perform the requested action and report the verified outcome.
+- **Approved creator direction:** Consequential actions such as bookings, reservations and purchases require authoritative availability/terms and player confirmation; NPCs must never claim a service or action is complete before the underlying game system confirms it.
+- **Approved creator direction:** Custom typed requests must be handled in context; when an NPC cannot fulfill a request, it should clarify or explain supported alternatives instead of pretending.
+- **Implementation details still open:** Role/service configuration, conversation continuity, booking and payment integrations, navigation data, error recovery, interaction layout and production phasing.
+- **Canonical specification:** `docs/gameplay/SOCIAL_WORLD_LIFESTYLE_AND_PLAYER_INTERACTION_REQUIREMENTS.md`.
