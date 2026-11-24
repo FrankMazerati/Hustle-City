@@ -7,7 +7,7 @@ All systems must use stable IDs for player, account, currency, transaction, card
 Server-authoritative: balances, ledger, paid entitlements, card ownership, pack outcomes, trades, collection completion, building unlock/claim, property/business ownership, upgrade effects, travel charges, referral qualification, event capacity and moderation state. Clients request actions and display confirmed state.
 
 ## 3. Cross-system invariants
-- Three currencies never merge or silently convert.
+- Four currencies (Hustle Money, Diamonds, Wings and Poker Chips) remain separate and never merge or silently convert.
 - Basic transportation never requires Diamonds.
 - Poker Chips are non-redeemable virtual chips under the baseline.
 - A five-card set unlocks only its configured building entitlement.
@@ -22,7 +22,7 @@ Server-authoritative: balances, ledger, paid entitlements, card ownership, pack 
 - No player death; safety/recovery rules remain in force.
 
 ## 4. End-to-end acceptance scenarios
-1. New player joins, creates profile, sees three separate wallet balances and understands their uses.
+1. New player joins, creates profile, sees four separate wallet balances and understands their uses.
 2. Player takes a basic ride using free/Hustle Money service without Diamonds.
 3. Player selects premium travel, sees Diamond fare and confirms before debit.
 4. Player opens a card pack; server records one debit and one unique result despite retry.
