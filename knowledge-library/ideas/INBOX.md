@@ -161,3 +161,13 @@ _Add new entries above this line._
 - **Scale:** Design for 10,000 players and 100,000 Sims using persistent, sparse records rather than a fully materialized all-to-all relationship matrix. Preserve pair-specific records across sessions.
 - **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 34 and existing relationship sections.
 - **Source:** Creator conversation, 2026-11-24.
+
+### 2026-11-24 — Database-backed persistent memory records
+- **Status:** APPROVED
+- **Direction:** Attach each Sim's person-memory library and pair-specific relationship records to the game's database. Records must survive logout, reconnect, server restart and population expansion.
+- **Stored information:** Stable person references, remembering Sim, meaningful encounter/conversation history, familiarity, trust and current relationship state. Preserve historical events separately from mutable current values.
+- **Architecture:** Directional, pair-specific, sparse and indexed records. Do not mirror one person's memory/trust to another or pre-create all possible pairs. Runtime caches may be used, but database persistence is authoritative.
+- **Privacy/security:** Restrict internal memory access to authorized game services; do not expose private memories through public profiles. Define retention, deletion, backup and migration behavior.
+- **Open details:** Database product, exact schema, indexing/partitioning and retention policy.
+- **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 35.
+- **Source:** Creator conversation, 2026-11-24.
