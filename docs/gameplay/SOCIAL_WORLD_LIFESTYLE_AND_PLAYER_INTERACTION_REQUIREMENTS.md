@@ -353,3 +353,38 @@ Creator direction:
 Proposed planning range only: approximately 5–10 houses on a city block. The final count, parcel sizes, prices, purchase currency, property types, ownership caps, rental/resale/transfer rules, taxes/maintenance and whole-block purchase behavior remain open for creator decision.
 
 Implementation should use authoritative parcel records, unique IDs, transaction history, concurrency-safe purchase processing, explicit purchase confirmation and clear owner/occupancy states.
+
+
+## 28. Neighborhood economic identity, localized pricing and NPC populations
+
+Hustle City neighborhoods must have distinct economic identities. The city should not feel as though every neighborhood is the same environment with a different sign.
+
+Creator direction:
+- Establish a range of neighborhood identities, including affluent/upscale areas, middle-income areas, working-class areas and lower-income/hood areas.
+- Give neighborhoods distinct names and recognizable identities. Final neighborhood names and the complete tier map remain to be determined.
+- Prices for comparable goods and services may differ by neighborhood. Local restaurants, bars, shops, salons, transportation/service providers and other businesses should have pricing appropriate to their neighborhood positioning, clientele, operating costs and service level.
+- Do not assume a single universal citywide price for every item or service. The economy must support neighborhood-specific price data and clearly defined exceptions for chain-wide or standardized prices.
+- Neighborhood pricing should be authored and balanced deliberately; do not generate arbitrary price differences or change existing catalog prices during this requirements pass.
+- NPC populations should reflect the neighborhood's social and economic character through believable variation in clothing, grooming, vehicles, occupations, conversation, behavior, leisure activities and use of local businesses and public spaces.
+- Upscale neighborhoods should feel upscale through the complete environment and population, not merely expensive storefronts. Hood and working-class neighborhoods should feel authentic and lived-in through local businesses, residents, street activity and distinct styles, without making every resident a stereotype or reducing a community to criminality.
+- NPCs remain individually distinct, with varied personalities, backgrounds, voices and appearances; neighborhood identity informs but does not dictate every character.
+- Neighborhood identity must connect with the established contrast between upscale Hustle District and gritty Trapper District while allowing variation across the wider residential map.
+
+To be designed: canonical neighborhood names and economic classifications; item/service price tables and localized modifiers; which businesses use local versus chain pricing; economic simulation inputs; NPC archetype distribution and schedules; visual/audio style guides; and balancing/QA procedures. No exact price multipliers or neighborhood-specific prices are approved by this direction alone.
+
+## 29. Modest daily rewards and petty-cash earning opportunities
+
+Free players should have small, dependable ways to earn enough Hustle Money to participate in ordinary city life, while larger purchases, luxury ownership and premium activities retain meaningful progression and premium value.
+
+Creator direction:
+- Add a daily login reward as a candidate baseline earning route for all eligible players, including free players.
+- Add several modest petty-cash earning opportunities beyond login rewards, integrated naturally into city life. The exact activities, qualification rules, frequency, payouts and limits remain to be designed.
+- The intended scale is everyday spending money: enough to buy ordinary drinks, food and occasional low-cost lifestyle items, not enough to trivialize major purchases or premium activities.
+- Preserve optional membership/kit value and premium activity incentives without making paid access mandatory for core city participation.
+- Daily rewards and petty-cash routes must not award collectible cards unless the creator separately approves a card-acquisition rule. Keep reward wallets and card progression distinct.
+- Rewards must be credited through authoritative, idempotent server-side transactions, with clear claim status and protections against duplicate claims, clock manipulation, multi-account abuse, bots and farming exploits.
+- Social participation can be considered as one optional petty-cash/reward route, but must not require external public posting or reward spam, fake engagement or disclosure of personal information.
+
+**Proposed values only — not approved final tuning:** The creator floated approximately $500 Hustle Money per day as a modest baseline, potentially enough for ordinary food, drinks and occasional cigars; a possible 5,000–10,000 Poker Chip daily grant; and a seven-day progression in which the cash reward could rise by about $100. A much larger initial Poker Chip amount (100,000) was also mentioned as an example and then reconsidered. None of these quantities or schedules is locked. The seven-day design could be a progressive reward, but its exact cadence, streak requirements, reset and catch-up rules are unresolved.
+
+Balancing must account for the established Poker Chip-to-Hustle Money conversion, all currency sources and sinks, ordinary item prices, membership/kit contents, play frequency, and premium activity costs. The daily grant must not create an easy route to luxury purchases or undermine the reason to pursue kits and premium content.
