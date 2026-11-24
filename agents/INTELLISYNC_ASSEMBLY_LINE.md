@@ -160,7 +160,7 @@ Never overwrite an approved package in place. Publish a new version and identify
 - Staggered starts are encouraged. Agents do not need to start at the same clock time.
 - Start an agent's dependent work when its required input package is approved and available.
 - A station may prepare tools, research, templates, reusable assets, tests, and non-dependent work before its first package arrives, but must not fabricate or finalize work that depends on missing upstream decisions.
-- The suggested 10-minute production / 5-minute QA / 5-minute correction rhythm is a planning target and checkpoint, not a hard deadline. A package may take less or more time.
+- The creator-approved operating cadence is 20 minutes production / 5 minutes independent QA / 5 minutes correction for each agent/package cycle, with an optional 10-minute extension when required. These are rolling per-agent/package windows, not global phases; unrelated production, QA, and correction work must overlap. See intellisync/OVERLAPPING_WORKFORCE_SPEC.md.
 - Completion events should trigger QA immediately; do not wait for a 20- or 30-minute polling cycle.
 - Checkpoints report throughput, package state, review backlog, blockers, workload, and next handoffs. They do not force agents to stop, submit unfinished work, or auto-approve.
 - 24-hour continuity means the queue and handoff state persist across shifts and restarts. If an agent is unavailable, Trinity may route work to an approved backup or mark the station blocked; it must not silently skip a required station.
