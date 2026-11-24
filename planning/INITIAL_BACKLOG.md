@@ -226,3 +226,30 @@
 - [ ] Extend the world calendar/weather design to include cold-weather periods and the possibility of occasional snow.
 - [ ] Define snow coverage, frequency, accumulation, seasonal behavior and NPC/environment response without locking dates or frequency before creator review.
 - [ ] Preserve safe pedestrian and automated vehicle behavior in rain, cold and snow; no random crashes, asset damage, loss or financial penalties caused by weather simulation.
+
+
+## P16 — Expanded agent charters and complete ownership briefs
+- [ ] Reconcile the repository's legacy 48-role capability catalog, named cohort identities and creator-approved 17-agent operating roster; do not infer or silently replace the canonical roster or QA assignments.
+- [ ] Create a dedicated, detailed charter file for every approved production agent and QA supervisor, with mission, ownership, explicit responsibilities, interfaces, inputs, outputs, permissions, dependencies, non-goals, acceptance criteria and handoff rules.
+- [ ] Expand SCRIBE and LENS creative-lead responsibilities and define how creative direction, canon, visual references and implementation packages flow to production specialists.
+- [ ] Expand QA-1 through QA-3 charters with their four-worker review assignments, independent test expectations, evidence requirements, correction loops and escalation rules.
+- [ ] Expand all P01–P12 production-specialist charters to cover the full approved product blueprint in their assigned domains, not just isolated task summaries.
+- [ ] Ensure every charter references the same current project canon and shared interfaces; cross-link relevant frameworks and prohibit contradictory duplicate sources of truth.
+- [ ] Give each agent a substantial role-specific knowledge pack and task checklist, sized to its actual domain; avoid generic one-paragraph prompts.
+- [ ] Define a shared deliverable template: scope, canon references, assumptions, dependencies, interface impact, design/implementation, artifact paths/version, tests/evidence, risks and next handoff.
+- [ ] Preserve the 20-minute production, 5-minute independent QA, 5-minute correction cadence and overlapping wave/resource schedule; time targets must not replace evidence or QA approval.
+- [ ] Verify that role files, registry IDs, cohort mapping, permissions and QA ownership agree before activating or assigning production work.
+
+## P17 — Persistent named NPC population and full work/life simulation
+- [ ] Implement the creator-approved NPC requirement: every represented Sim has a stable unique ID, actual name, assigned job/occupation/function, profile, schedule and persistent continuity.
+- [ ] Design a scalable population roster capable of representing 100,000 named/job-assigned people without requiring 100,000 simultaneous full-detail AI processes.
+- [ ] Build occupation taxonomy and employer/workplace mapping, including casino hosts, dealers, chip cashiers, bartenders, servers, doormen, concierge, valets, rideshare/taxi drivers, barbershop staff, shop workers, cleaners, maintenance, transit and construction staff.
+- [ ] Specify full job workflows: arrival, clock-in, station preparation, service/task execution, queues, breaks, meals, coworker handoffs, closing and clock-out.
+- [ ] Build varied daily routines: home preparation, breakfast, commute, work, breaks, lunch, errands, barber visits, dinner, social visits, events, return home and rest.
+- [ ] Implement feasible destination choice and integration with walking, vehicles, public transit, taxi/ride-hail and approved travel systems.
+- [ ] Define personality, dialogue style, language/register, player interaction and NPC-to-NPC social behavior by role and context; prevent fabricated facts and harmful caricatures.
+- [ ] Integrate time, weather, venue hours, event schedules, crowding, route closures and transport availability into NPC decisions.
+- [ ] Define identity continuity, persistence, memory scope, privacy/retention and reconnect/restart recovery with backend and multiplayer owners.
+- [ ] Implement detailed/local/background simulation tiers and profile performance at staged population scales; retain identity and abstract state when people are outside active streaming range.
+- [ ] Deliver role-specific service workflows for launch-critical staff and test each end-to-end against authoritative venue/economy systems.
+- [ ] Independently QA identity continuity, job completion, breaks, commuting, meals, dialogue, service queues, transaction integrity, pathfinding recovery, multiplayer consistency and performance.
