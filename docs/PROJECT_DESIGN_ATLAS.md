@@ -88,3 +88,14 @@ Secure Creator Studio should manage vehicle packs, clothing, buildings, characte
 - The phone is both a diegetic character prop/animation and an interface entry point; it should not require the player to leave the city world or permanently replace the main HUD.
 - Exact calling/voice features, phone models, apps, contact permissions, message delivery rules, UI layout and animation scope remain to be designed.
 - Phone communication must respect existing social safety requirements, including blocking, reporting, privacy and unwanted-contact protections.
+
+
+## 17. Launch scope and long-term expansion boundary
+- Initial release is a **poker-first multiplayer social activity game**, not a full crime sandbox. The immediate goal is to attract players, build an active community, validate retention and revenue, and establish a strong foundation.
+- Launch priorities: multiplayer social presence, poker/card activities using non-redeemable virtual chips, venues, events, player identity/crew/friends, protected messaging, virtual economy and ambient city life.
+- Initial player characters do not rob, steal, use guns/weapons, commit player-directed crimes, get arrested, go to jail, die, or enter player hospital/medical consequence loops. No player-targeted police enforcement or punitive law-enforcement gameplay at launch.
+- NPC-only city incidents (including police activity, arrests, intoxicated NPCs, addiction/homelessness depiction, fires and medical emergencies) can provide ambient world life. Player-facing contact with authorities may be limited to friendly, non-punitive contextual interactions, such as a noise reminder at a yacht party.
+- Avoid intentional random car crashes. Traffic should be predictable and safety-first; player assets/progress must be protected from simulation defects.
+- Lifestyle realism must not overwhelm the core activity loop. Housing, vehicle ownership/financing, insurance, fuel, phone service and maintenance are candidate systems, but should use a low-friction default and must not become prerequisites for enjoying poker/social features.
+- Later crime-oriented gameplay (including player crime, jail scenarios, weapons and drugs) is a possible post-launch expansion after the initial product has traction/revenue and potentially additional investors or partners. It is explicitly future/proposed scope, not approved launch scope. Each such expansion requires a separate creator decision and legal, platform-rating, safety, moderation and technical review.
+- Keep systems modular, data-driven and independently activatable so future contributors can extend the game without forcing speculative features into the first release.
