@@ -531,3 +531,63 @@ For player-to-player relationships, the intended social value includes spending 
 NPC romance is also in scope as a relationship/roleplay possibility, with the exact NPC character eligibility, dialogue, progression, boundaries and gameplay depth still to be designed. Do not assume romance rewards, exclusivity, marriage, shared assets or other unapproved mechanics.
 
 These clarifications are creator-approved product direction. Exact recovery rules, meter implementation, alcohol presentation, romance UX, consent and safety flows, moderation, NPC scope and technical implementation remain to be specified.
+
+
+## Creator direction — city calendar, reputation, shared transportation and personal collections
+
+### City calendar and events
+
+The creator approved the proposed living city calendar. Hustle City should provide a discoverable calendar/schedule of city happenings, including events such as concerts and performances, car meets, casino nights, beach parties, card-trading gatherings, sporting events and seasonal/special celebrations. These are examples of event categories, not a finalized event schedule or launch list. The calendar should help players find reasons to gather and participate. Player-organized events may be explored alongside game-organized events; permissions, event creation tools, moderation, scheduling, RSVP and notification rules remain to be designed.
+
+### Social reputation
+
+The creator approved a social-reputation system that can recognize different kinds of player identity and accomplishments. Candidate reputation signals include collecting rare cards, vehicle collections, fashion/style, hosting gatherings, spending/lifestyle activity and social or crew connections. Reputation should be expressed through appropriate profile details, world recognition and NPC/player reactions rather than reducing a player's identity to one universal score. Exact categories, evidence requirements, visibility/privacy controls, anti-manipulation rules and any progression or rewards remain to be designed. Do not assume wealth alone determines reputation.
+
+### Shared rides and passenger experiences
+
+The creator approved shared transportation experiences:
+- Players should be able to ride together in an Uber/rideshare-style vehicle.
+- NPC passengers should also be able to enter and ride in player vehicles where supported.
+- In-car interaction should allow a player to switch between an interior/in-car view and an exterior/outside view.
+- Players should be able to select a destination from within the vehicle.
+- Shared rides should support friends, crews, dates and other social outings.
+
+The exact driver/owner permissions, fare/payment model, NPC passenger behavior, seating limits, vehicle compatibility, destination UI, camera controls and safety/abuse protections remain to be designed. Do not assume a fare amount or that every vehicle supports every passenger configuration.
+
+### Home displays and personal collections
+
+The creator approved using the player's house as a place to display accomplishments and collections. Examples include:
+- A shelf or display showing the player's collected City Keys.
+- Displays showing how many cars the player has acquired in each city.
+- Displaying cards and other suitable collectibles at home.
+
+The display should make a player's travel and collection history tangible and visible to invited visitors, subject to privacy and home-access controls. Exact display furniture, capacity, presentation, city-by-city statistics and collectible categories remain to be designed.
+
+### Travel motivation and multi-city progression
+
+Travel to other cities should have meaningful reasons and be connected to the wider game loop. The creator specifically wants city travel to motivate players to visit places such as Miami and participate in poker and other city activities. The broader concept is that players build a history across multiple cities, collect city-specific cards/keys and vehicles, and have visible accomplishments that make travel worthwhile.
+
+The previously established direction that players complete the card collection for a city before progressing to another city remains relevant. Different cities should have their own people, names and collectible identities; do not assume every city's collection is a reskin of the same characters. The existing City Key concept and home-city selection/entry flow must be reconciled with this progression rather than silently replaced.
+
+### Card rewards, collection pacing and unlocks — partly approved, partly exploratory
+
+The creator is exploring a progression loop in which:
+- Cards can be earned through poker achievements, including winning or making particular hands, with exact qualifying hands and rewards TBD.
+- Login/session rewards may include cards, but the creator does not want cards to become so plentiful that collections lose meaning. Exact login cadence and quantities are TBD.
+- Card rewards are randomized so that collection progress has an element of discovery. Randomization must still be designed to feel fair and not make completion depend on unreasonable luck or spending.
+- Completing a defined card collection can unlock a building, venue or other playable opportunity/asset. The creator is considering a target pace in which a meaningful unlock might take roughly one to two weeks, with an early first unlock perhaps in the two-to-three-week range. These are exploratory pacing thoughts, not approved guarantees, fixed timers or final balance targets.
+- Potential early unlock examples mentioned include a car club or lounge. These examples are not a finalized unlock sequence.
+
+Prior card-system decisions to preserve:
+- The five-card collection structure has been discussed and accepted as an expandable structure.
+- The original five role/card concepts discussed were runner, artist, music producer, record-label owner and building owner.
+- Players can collect and trade building/asset cards.
+- Completing a set can unlock a specific asset or opportunity.
+- Unlocking an individual studio, production opportunity, car lot, clothing store, yacht, Hustle Club, lounge, private casino room or apartment does not automatically grant ownership of the larger building, venue, marina or destination.
+- Collections and content should remain expandable over the long term, leaving room for future packs, levels, stats, stars and progression systems without treating those unfinalized elements as already specified.
+
+**Important launch-scope constraint:** Do not use randomized card completion to gate the creator-mandated signature destinations that must already be playable in the initial release (including the casino, cigar lounges, Velvet Lounge, beach, car club, yacht club, Hustle Towers, airport, both train stations, cars and playable houses in every neighborhood). Card-based unlocks may instead apply to additional venues, later city content, specific personal assets, ownership opportunities or other progression rewards. If the creator intends a named launch-required destination itself to be card-locked, that would require an explicit scope reconciliation.
+
+The creator is unsure whether a full player-job system should be central to progression and is not currently endorsing it as the main loop. Keep jobs/side hustles optional or unresolved; do not make employment a prerequisite for card collection, city travel or poker participation. The intended core motivation remains playing poker, collecting/trading cards, unlocking meaningful content, traveling between cities and building a social lifestyle.
+
+All card drop rates, duplicate handling, trading restrictions, pity/guarantee rules, set sizes beyond the established five-card concept, qualifying poker hands, login rewards, city completion requirements, unlock inventory, pacing and monetization rules remain TBD and require creator approval.
