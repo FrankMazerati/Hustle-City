@@ -12,7 +12,7 @@ The game must support both active play and social presence: a player can be at a
 ## 2. Player lifecycle
 1. **Discover and join:** player arrives through the opening experience, creates a character/profile and username, accepts terms and configures privacy.
 2. **Establish identity:** profile, avatar, wardrobe, optional crew affiliation, friends and social preferences.
-3. **Learn the economy:** clearly distinguish Hustle Money, Diamonds and Poker Chips; explain earn/spend sources before the first purchase.
+3. **Learn the economy:** clearly distinguish Hustle Money, Diamonds, Wings and Poker Chips; explain earn/spend sources before the first purchase.
 4. **Explore:** use map and destination travel to visit districts, venues, shops, transit and social gatherings.
 5. **Connect:** add friends, follow feeds, chat, join crews, accept invites and share a trackable invitation link externally.
 6. **Collect:** obtain cards through defined packs, activities, rewards and approved offers; complete collections.
