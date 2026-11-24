@@ -37,10 +37,10 @@ Building card packs must be part of the daily engagement loop, not only a store 
 - Pack catalogue must support a pack associated with each eligible building/set, plus any approved general or event pack. Do not invent building names, card contents, rarity or odds.
 - Rewarded packs use the same server-side pack-opening and inventory grant path as purchased packs; free does not mean client-authoritative.
 
-## 5. Acquisition catalogue
+## 6. Acquisition catalogue
 The card catalogue should identify each permitted source separately: earned gameplay rewards, event rewards, referral rewards if approved, card packs, direct purchase of a specified missing card if approved, and player-to-player trade. The exact source list and eligibility are unresolved. Store listings must clearly distinguish randomized packs from guaranteed single-card offers.
 
-## 6. In-game card discovery and social trading
+## 7. In-game card discovery and social trading
 The complete card-trading experience lives inside Hustle City. Players must not need a companion app, external website, Discord server, Facebook group or spreadsheet to find trading partners, negotiate or complete exchanges.
 
 ### Card Album and collection visibility
@@ -78,7 +78,7 @@ The complete card-trading experience lives inside Hustle City. Players must not 
 - Report trade fraud, impersonation, harassment and coercion. Moderators need auditable tools to investigate without silently rewriting inventories.
 - Support trade dispute review, but never promise automatic reversal after a completed valid exchange. Any administrative correction must be permissioned, logged and auditable.
 
-## 6. Player-to-player trading
+## 8. Player-to-player trading
 Trade flow:
 1. Player A selects a friend/eligible player and offers one or more tradeable card instances.
 2. Player B proposes counter-items or accepts the offer.
@@ -90,10 +90,10 @@ Trade flow:
 
 No card can be in two active trades simultaneously. Reject stale offers, missing items, bound cards, duplicate confirmations and attempts to transfer non-tradeable entitlements. Trade cancellation/expiry returns offered cards to available inventory. A currency-plus-card trade is disabled unless explicitly approved. Include block/report controls and scam warnings; no external payment or off-platform settlement.
 
-## 7. Duplicate cards
+## 9. Duplicate cards
 Duplicate handling is unresolved. The system must support one or more creator-selected policies: keep duplicates for trading; allow duplicates toward separate sets only if the rules say so; convert duplicates to a defined reward only if approved; or mark duplicates as non-tradeable. Do not auto-convert duplicates by default.
 
-## 8. In-game card trading acceptance
+## 10. In-game card trading acceptance
 - A player can add another player as a friend and initiate a card trade entirely in Hustle City.
 - A player can search for a missing card and discover eligible traders without leaving the game.
 - Collection visibility and wish-list visibility obey player privacy settings.
@@ -106,5 +106,5 @@ Duplicate handling is unresolved. The system must support one or more creator-se
 - Trade history and audit records are available to players and authorized support staff under role controls.
 - The full experience works without external trading apps, websites or social groups.
 
-## 8. Anti-abuse and QA
+## 11. Anti-abuse and QA
 Test pack purchase retries, server timeout, duplicate grants, manipulated client odds, card duplication, concurrent trades, trade cancellation, blocked players, bound cards, set completion, ownership claim, refund/revocation, and version changes to card sets. Audit every acquisition and transfer.
