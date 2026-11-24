@@ -174,3 +174,12 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - **Approved direction:** Food and drinks may restore health or affect player condition through item-specific gameplay effects; exact effects remain to be designed.
 - **Unresolved:** Rideshare fare formula; fuel consumption and prices; store stock and item prices; personal-care catalog and use locations; whether hygiene/cleanliness is tracked and what effects it has; item depletion; and balancing against free-player rewards and premium progression.
 - Canonical specifications: docs/gameplay/SOCIAL_WORLD_LIFESTYLE_AND_PLAYER_INTERACTION_REQUIREMENTS.md and docs/economy/MEMBERSHIPS_AND_REWARDS.md.
+
+
+## Gambling variety and casino-city identities
+- **Approved creator direction:** Some city markets should have a “hood version of Vegas” identity, with gambling integrated into nightlife, entertainment, social culture and the city's economy.
+- **Approved creator direction:** Expand beyond poker with blackjack, baccarat, roulette, craps/dice tables, slots and street dice/shooting dice.
+- **Approved venue direction:** The world can feature a mix of upscale casino floors, neighborhood dice games, local craps tables, card rooms, lounges and late-night gambling venues, with distinct city and venue personalities.
+- **Approved economy direction:** Wagering and payouts operate within the in-game economy. The existing nominal 1 Poker Chip = 1 Hustle Money conversion remains an in-game cashier/kiosk conversion only; “cash out” does not mean real-world cash redemption or withdrawal.
+- **Unresolved:** Which city markets receive this identity, exact game variants/rules, wager wallets/limits, payout balancing, venue placement/access, multiplayer/NPC implementation and release scope.
+- **Required before implementation:** Legal, platform-policy, age-rating and consumer-protection review of simulated gambling and any paid currency, wagering, prizes, conversion or cash-out terminology. No real-money gambling or real-world redemption is approved by this direction.
