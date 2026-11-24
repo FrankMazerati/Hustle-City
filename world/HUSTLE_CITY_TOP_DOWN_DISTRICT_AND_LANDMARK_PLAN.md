@@ -169,3 +169,42 @@ The creator has now directed that Hustle Club belongs in the waterfront cluster,
 - Hustle Club is in the waterfront cluster as a beachfront casino/nightlife destination. Get Wild Beach remains its own distinct beach-party area in the coastal zone.
 
 **Next map pass:** replace simple district rectangles with a larger street-and-water drawing board. Show continuous expressway and arterial paths, the through-running transportation corridor, local street grids and block shapes, lakes/waterways, bridges/causeways, shoreline, waterfront destinations and district boundaries. Mark road and water geometry as proposed until the creator approves the actual map. Do not invent street names or lock compass orientation yet.
+
+
+## 9. Creator-approved Entertainment District and automotive destination additions
+
+The creator has approved the following additional Entertainment District direction. These are required planning concepts; exact footprints, final building names (except Book of Code), parcel positions and implementation details remain open.
+
+### Circular glass automotive tower
+- Plan a major circular, glass-dominant, multi-level automotive landmark.
+- The creator's current scale direction is approximately **30–40 levels**; treat this as a planning target, not a finalized engineering height.
+- Vehicles are visibly displayed around the structure on every level, creating a vertical automotive showcase.
+- The most expensive / most exclusive vehicles are concentrated toward the top, with other vehicle categories arranged progressively down the building.
+- The building should support a walkable visitor experience and meaningful vehicle browsing/inspection; do not treat it as a static skyline prop.
+- Exact ramp/elevator circulation, vehicle movement, floor-by-floor category taxonomy, purchasing and showroom ownership are unresolved.
+
+### Separate walk-through automotive marketplace
+- In addition to the tower, plan a distinct car-lot / automotive marketplace with clearly differentiated sections for expensive vehicles and regular vehicles, plus other categories as later approved.
+- Players can walk through the lot, look at vehicles, inspect/browse choices, interact with salespeople and other visitors, and select a vehicle through the implemented purchase/selection flow.
+- This is a social destination as well as a vehicle-shopping location; it is not interchangeable with the vertical glass tower.
+- Whether either destination operates under Mazerati Boys Automotive Group or another approved identity remains unresolved.
+
+### Book of Code Movie Theater
+- **Book of Code** is the creator-confirmed name of the movie theater. Preserve this exact name.
+- Include it as a distinct Entertainment District destination. Screening formats, film catalog, schedules, ticketing and special events remain to be designed.
+
+### Additional approved Entertainment District venue concepts
+- Outdoor concert amphitheater.
+- Comedy club.
+- Film and television production campus, including the co-located Upper Level Entertainment Studios, Upper Level Films and Monster Beats entities with their shared blue-and-black campus identity.
+- The Entertainment District is a broader collection of destinations, not only the media campus. Other venues may be proposed and approved in later planning.
+
+### Social, NPC and future event/mission interaction direction
+Entertainment venues should be designed around repeatable player activity and social participation, not just entry and ambient NPCs. The comedy-club example establishes the intended interaction depth:
+- A player can arrange or initiate an outing with friends or a group, travel to the venue together, pay admission where applicable, and enter as a social party.
+- Inside, players can socialize and use supported venue activities, including drinks, smoking interactions, and card trading where those systems are enabled and appropriate to the venue.
+- NPCs should perform purposeful venue roles. At the comedy club, an NPC comedian can take the stage and perform while the audience gathers and responds.
+- Venue interactions should support both player-to-player social activity and NPC-driven activity, so a venue can remain active even when no player is hosting.
+- The creator intends later development of scheduled events, missions and automated interactive sequences involving NPCs. Design the venue framework so these can be added after the core destinations and interactions are established; do not invent specific missions, event names, rewards or schedules yet.
+
+These directions should inform the Entertainment District zoom-in: district boundaries, street frontage, pedestrian approaches, parking/vehicle access, venue entrances, crowd areas, service access and links to the citywide road/transport network.
