@@ -144,3 +144,20 @@ _Add new entries above this line._
 - **Simulation notes:** Maintain a persistent self-model that supports accurate conversation and lifestyle decisions. Interests and weekend routines guide behavior but allow variation. Memories must reflect actual simulated events. Keep internal facts distinct from player-visible profile fields and protect private details. Real-world ride-hail branding/licensing is not assumed.
 - **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 32.
 - **Source:** Creator conversation, 2026-11-24.
+
+### 2026-11-24 — Wealthy Sims and aspirational luxury lifestyles
+- **Status:** APPROVED
+- **Direction:** Include wealthy Sims from launch so players encounter an aspirational high-end lifestyle in the living city. This is a wealthy population segment, not a claim that all Sims start rich.
+- **Activities/assets:** Earned income and savings can support luxury travel, hotels, vacations, tickets, parties, yachts, expensive vehicles, luxury homes, estates and eventually mansions.
+- **Economy rule:** Spending and ownership must be supported by actual finances and recorded transactions. Do not fabricate money/assets. Wealth is not a proxy for trustworthiness or personal worth.
+- **Open details:** Starting wealth distribution, income bands, prices, upkeep and financing.
+- **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 33.
+- **Source:** Creator conversation, 2026-11-24.
+
+### 2026-11-24 — Per-Sim memory library for people and communication
+- **Status:** APPROVED
+- **Direction:** Each Sim keeps a persistent individual memory/relationship record for people they have communicated with: players, other Sims and coworkers. Records support remembering who someone is and their name, encounter/conversation context, meaningful details, familiarity and trust.
+- **Recognition rule:** Tapping/selecting a person or opening their profile alone does not create a meaningful relationship or raise trust. Communication establishes the social memory; actual conversational content and quality determine what is remembered and how familiarity/trust evolve.
+- **Scale:** Design for 10,000 players and 100,000 Sims using persistent, sparse records rather than a fully materialized all-to-all relationship matrix. Preserve pair-specific records across sessions.
+- **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 34 and existing relationship sections.
+- **Source:** Creator conversation, 2026-11-24.
