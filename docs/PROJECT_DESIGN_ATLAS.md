@@ -99,3 +99,16 @@ Secure Creator Studio should manage vehicle packs, clothing, buildings, characte
 - Lifestyle realism must not overwhelm the core activity loop. Housing, vehicle ownership/financing, insurance, fuel, phone service and maintenance are candidate systems, but should use a low-friction default and must not become prerequisites for enjoying poker/social features.
 - Later crime-oriented gameplay (including player crime, jail scenarios, weapons and drugs) is a possible post-launch expansion after the initial product has traction/revenue and potentially additional investors or partners. It is explicitly future/proposed scope, not approved launch scope. Each such expansion requires a separate creator decision and legal, platform-rating, safety, moderation and technical review.
 - Keep systems modular, data-driven and independently activatable so future contributors can extend the game without forcing speculative features into the first release.
+
+
+## 18. Lifestyle bundles, weekly bills and progression rewards
+- Use a simple recurring **Lifestyle Package** rather than numerous separate player-managed bills. A package can bundle housing, phone service and utilities at a single transparent in-game price; vehicle/fuel/insurance may be separate optional services or later package components.
+- Candidate package tiers: Starter (affordable apartment/basic phone/utilities), Comfortable (upgraded apartment/phone/utilities), Premium and Elite. These are examples for design exploration, not finalized names, contents or prices.
+- Players can upgrade one component at a time or move to a higher package. The price of each tier must be balanced against reliable ordinary in-game earning opportunities.
+- A weekly billing cadence is the current preferred concept, subject to economy testing. Clearly show the next due date, amount, included services and available balance.
+- Daily login rewards and weekly streak rewards are desired retention features. Meaningful poker, social, event and city activities can also grant Hustle Money and XP.
+- The level/progress bar should advance in small, satisfying increments during normal play. Avoid excessive grind or making players spend hours or repeatedly log in each day just to preserve progress.
+- Protect basic access: a missed login or missed streak must not cause eviction, loss of phone access, utility shutoff or exclusion from poker/social activities. Add reasonable streak grace/catch-up rules and a clear path to earn the basic lifestyle cost.
+- Reward schedules should be transparent, capped and tested against economy inflation/exploitation. Do not reward idle AFK time as if it were meaningful play, and do not create uncapped playtime incentives.
+- Design for healthy voluntary engagement: no coercive multiple-daily-check-in requirement, artificial urgency, deceptive near-miss mechanics or punitive streak resets. Include natural stopping points and monitor player feedback and wellbeing alongside retention.
+- Exact bundle contents, names, prices, billing day, grace period, reward values, streak length, activity eligibility, XP curve, level rewards and anti-exploit controls remain unresolved and require creator approval plus playtesting.
