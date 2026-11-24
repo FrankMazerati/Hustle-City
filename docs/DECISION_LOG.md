@@ -164,3 +164,13 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - **Proposed values only:** Around $500 Hustle Money daily; around 5,000–10,000 Poker Chips daily; a possible seven-day progression adding roughly $100 cash; and a floated 100,000-chip starting example that the creator reconsidered. These are discussion values, not approved tuning.
 - **Unresolved:** Neighborhood names/economic tiers; localized price lists and multipliers; NPC population distributions; exact daily reward amounts and schedule; streak/catch-up rules; petty-cash activity list and payouts; and balancing against Poker Chip conversion, kits and premium activity costs.
 - Canonical specifications: docs/economy/MEMBERSHIPS_AND_REWARDS.md and docs/gameplay/SOCIAL_WORLD_LIFESTYLE_AND_PLAYER_INTERACTION_REQUIREMENTS.md.
+
+
+## Everyday living costs, rideshare, fuel, convenience retail and hygiene
+- **Approved direction:** Rideshare-style travel is a paid service; players should pay believable real-world-style fares rather than receive unlimited free rides.
+- **Approved direction:** Fuel-powered player vehicles require fuel, purchased at gas stations. Refueling is an in-world interaction and a recurring Hustle Money expense.
+- **Approved direction:** Gas stations and convenience stores offer purchasable everyday food, drinks, snacks and other suitable retail goods.
+- **Approved direction:** Players can purchase and use personal hygiene/personal-care products. Potential categories include bathing, hair care, oral care, deodorant, grooming and other everyday essentials.
+- **Approved direction:** Food and drinks may restore health or affect player condition through item-specific gameplay effects; exact effects remain to be designed.
+- **Unresolved:** Rideshare fare formula; fuel consumption and prices; store stock and item prices; personal-care catalog and use locations; whether hygiene/cleanliness is tracked and what effects it has; item depletion; and balancing against free-player rewards and premium progression.
+- Canonical specifications: docs/gameplay/SOCIAL_WORLD_LIFESTYLE_AND_PLAYER_INTERACTION_REQUIREMENTS.md and docs/economy/MEMBERSHIPS_AND_REWARDS.md.
