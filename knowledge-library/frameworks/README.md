@@ -6,7 +6,7 @@ Frameworks are reusable design and production rules. They explain how systems sh
 |---|---|---|
 | [Transportation](TRANSPORTATION_FRAMEWORK.md) | HIM, HCTA, rail modes, stations, NPCs and construction | Initial framework; route details open |
 | [Building and environment](BUILDING_ENVIRONMENT_FRAMEWORK.md) | Realistic 3D buildings, lots, interiors, interactions and construction | Initial framework; catalog integration pending |
-| [Sims / MPC / NPC simulation](SIMS_MPC_NPC_FRAMEWORK.md) | Living populations, schedules, needs, jobs and social behavior | Initial framework; acronym to confirm |
+| [Sims / MPC / NPC simulation](SIMS_MPC_NPC_FRAMEWORK.md) | Living populations, schedules, needs, jobs, recognition, familiarity, trust, relationships and shift continuity | Creator-approved framework; implementation details open |
 
 ## Lifecycle
 Capture source idea → draft framework → mark unapproved material proposed → obtain creator approval → record approved decisions → link framework and agent briefs → preserve change history.
