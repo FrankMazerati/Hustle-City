@@ -183,3 +183,40 @@ This document records creator-required product directions. It does not mean the 
 - **Implementation status:** not started / specified / in development / tested / shipped, based only on verified project evidence.
 
 The creator is the final design authority. Assistant and agent recommendations may improve or challenge implementation plans but cannot silently override creator requirements or turn unresolved details into canon.
+
+## 18. Hotel hospitality, valet and Hustle Towers services
+
+Hotels and appropriate upscale residential/commercial towers must feel staffed and operational. Required service roles and interactions include:
+- Doormen who greet arriving players and assist at entrances.
+- A circular driveway / porte-cochère drop-off experience where a player can pull up, exit the vehicle and hand it over to a valet.
+- Valet/parking attendants who take the player's vehicle to parking and can retrieve/return it when requested.
+- A concierge desk where players can approach staff, ask questions and request assistance.
+- Front-desk staff for check-in and hotel services.
+- Bellhops/luggage attendants who can assist with travel bags.
+- Elevator attendants who greet guests, assist with elevator use and direct players to floors or facilities.
+- Staff who can give directions to rooms, lounges, restaurants, meeting spaces and other destinations.
+- Comparable hospitality interactions at Hustle Towers where appropriate.
+
+The desired vehicle flow is visible and physical: arrive at the circular driveway, exit, hand off the vehicle, see the valet take it away, then request and receive it when leaving. Vehicle ownership and persistence must remain intact throughout.
+
+Exact hotel systems, parking layouts, valet routing, fees, staff schedules, elevator controls and service availability remain to be designed.
+
+## 19. Conversational, proactive and context-aware NPCs
+
+NPCs must be active participants in the social world, not merely static scenery or silent counter staff. Their purpose includes helping players understand and participate in the world through ongoing, two-way communication.
+
+Required direction:
+- NPCs can proactively greet or approach players when contextually appropriate.
+- NPCs can ask players questions and allow the player to respond.
+- NPCs can react to player responses with contextually appropriate follow-up dialogue.
+- NPCs can answer questions about nearby businesses, venues, services, activities, events, directions and relevant game systems.
+- NPCs can explain how to use local services and what a player can do in the current location.
+- NPC conversations should reflect the venue, neighborhood, role, current activity and recognizable Hustle City voice/personality.
+- Staff NPCs should have role-appropriate dialogue: concierge, doorman, valet, elevator attendant, front desk, bellhop, host, waiter, bartender, shopkeeper, security and other city workers.
+- Neighborhood residents and other city personalities should contribute to the feeling of ongoing local conversation and city communication.
+- Players should be able to choose or enter responses; NPC dialogue should not be a one-way monologue.
+- NPC dialogue must use authoritative game/world state for factual claims about player inventory, transactions, events, schedules, locations and services. NPCs must not invent game events, claim actions succeeded when they did not, or hallucinate player-specific information.
+- NPC communication should help players discover activities and feel welcomed and informed without becoming constant, intrusive or blocking gameplay.
+
+This is a core living-world requirement. The exact dialogue architecture, memory/context boundaries, interaction UI, voice/text presentation, language/localization, concurrency and runtime model strategy remain technical design work.
+
