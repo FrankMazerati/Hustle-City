@@ -416,3 +416,25 @@ No agent may independently invent database schemas, network authority or transac
 8. Players can accept or decline invitations, and NPCs can independently accept, decline or defer player invitations.
 9. Event attendance and post-event relationship changes respect schedules, capacity, relationship context, NPC agency and applicable safety/content rules.
 10. Conversation-earned trust and event invitations never guarantee romance, consent, confidential information, access or entitlement.
+
+
+## 23. Separate passive recognition from conversation-earned trust
+**Creator-approved clarification:** Being seen by an NPC and building trust with that NPC are different processes. Recognition/familiarity may increase through repeated, meaningful exposure and encounters, while trust primarily develops through actual conversation and meaningful reciprocal interaction.
+
+- A player who parks a vehicle with Marcus and immediately leaves should not gain meaningful trust merely for using the valet service. Marcus may begin to recognize the returning customer, and familiarity may rise modestly over repeated service encounters.
+- Repeatedly entering a venue, passing an NPC or standing nearby is not equivalent to getting to know that NPC. Mere proximity or idle presence should not automatically create trust and should only affect recognition/familiarity when the encounter is meaningful enough to be noticed.
+- A player who chooses to stop and talk can build trust. This applies to conversations at a bar, club, restaurant, workplace or other social setting, including talking with an NPC the player is interested in.
+- Support both pre-selected dialogue choices and player-authored typed messages as conversation input paths. Both feed the same contextual conversation/relationship evaluation; neither should grant trust simply because a message was sent. Meaning, relevance, respect, reciprocity, NPC response and boundaries determine whether trust changes.
+- Pre-selected choices should provide accessible, authored options. Typed messages should be interpreted within the same NPC personality, topic availability, knowledge, memory and safety/boundary rules. The NPC may answer, ask a follow-up, decline, redirect or end the conversation.
+- A conversation can build trust for both sides in the sense that each participant's player↔NPC relationship state may change based on their own experience. Do not assume perfectly symmetrical gains: the NPC's response and judgment determine the NPC-side state, while the player-facing relationship UI communicates the resulting relationship appropriately.
+- Distinguish the signals explicitly in the relationship model and UI: recognition/familiarity answers “Have I seen or encountered this person before?”; trust answers “Have we built confidence through meaningful interaction?”
+- Avoid farming: repeated identical dialogue, empty typed messages, proximity loops and rapid interaction spam must not produce automatic progression.
+
+### Acceptance tests
+1. Completing a valet interaction and leaving without conversation can support modest recognition/familiarity from a meaningful service encounter, but does not automatically increase trust.
+2. Repeatedly visiting a venue without interacting can gradually improve recognition only where the NPC plausibly notices the player; it does not automatically build trust.
+3. Standing idle near an NPC does not function as a trust-building action.
+4. Choosing to continue a conversation after a service interaction can build trust when the exchange is meaningful and positively received.
+5. At a bar or other social venue, both pre-selected dialogue and typed messages can support trust progression under the same relationship rules.
+6. Empty, repetitive, intrusive or disrespectful messages do not farm trust and may leave it unchanged or reduce it.
+7. Recognition/familiarity and trust can progress independently in either direction.
