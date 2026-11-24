@@ -302,3 +302,10 @@ This section supersedes any earlier map-layout instruction that leaves the cardi
 
 **Visual continuity rule:** Future multi-angle boards and zoomed-in views must preserve this orientation and the fixed Hustle Club–Get Wild Beach relationship. Alternate camera angles may change perspective, but must not silently rearrange the approved city geography.
 
+## 20. Creator direction — visible city density with selective building access
+
+- Populate streets with a deliberate mix of fully playable destinations, standard interactive businesses, limited-interaction storefronts, named ambient buildings and future/Coming Soon venues.
+- **Ain't You Funny Comedy Club is Coming Soon** for the current launch/world-state plan. Keep its name and intended venue identity, but do not count it as an initially playable destination or show it operating as an accessible venue before activation.
+- Gas stations and stores should be distributed as believable city infrastructure, with only selected locations receiving full or limited interactions. Other examples may remain ambient buildings; do not require every gas station or store to have an interior.
+- The visual master plan should communicate the difference between active destinations and future/ambient buildings through map legend or production metadata, without cluttering every façade with prominent “Coming Soon” signage.
+- Grocery shopping remains an **open design question**, not an approved full gameplay system. A small focused retail interaction may be evaluated later; do not assume full grocery simulation, household inventory upkeep or shopping chores.
