@@ -271,3 +271,13 @@ The creator has directed that the North Side, South Side, East Side and West Sid
 - Exact neighborhood counts per side, boundaries, block IDs, street names and precise road alignments remain unresolved. Do not divide the 43 potential outer neighborhood boxes into invented equal counts.
 
 **Map composition requirement:** the next master drawing board should show the central city in the middle and North Side, South Side, East Side and West Side neighborhood zones outside it on their corresponding sides. Include a north arrow because the creator has now established cardinal orientation at the macro-layout level; detailed surveyed coordinates and parcel geometry remain provisional.
+
+
+## 14. Creator-confirmed primary expressway name and role
+
+- The city's main expressway is officially named **Hustle City Drive**.
+- Hustle City Drive is the primary expressway running around the city as the main citywide route. It should read as the recognizable major expressway on the master map, with clear connections that let players reach the central city and the North, South, East and West Side neighborhood areas.
+- Other expressways, ramps, interchanges, arterial roads and local streets may connect to Hustle City Drive. Their names and exact alignments remain to be designed; do not invent them as approved street-name canon.
+- The master transportation map must label **HUSTLE CITY DRIVE** prominently and show its relationship to the central city, neighborhood access points, rail stations and waterfront crossings.
+- Rail remains a separate continuous transit network through the city, connecting both established train stations and neighborhood stations. Do not imply that the expressway itself is the train route.
+- Water transport remains a separate connected mobility layer. Boat access to selected upscale/waterfront neighborhoods is an approved possibility for detailed planning; routine boat access into hood neighborhoods is not part of the current direction. Exact eligible neighborhoods, docks and routes remain unresolved.
