@@ -737,3 +737,35 @@ No agent may independently invent database schemas, network authority or transac
 5. The system can query a Sim's known people and retrieve one pair's relationship/history without scanning all possible entities.
 6. Runtime cache loss does not erase persisted records.
 7. Internal memory data is not exposed to unauthorized players or public profile views.
+
+
+## 36. Persistent concierge/valet service history and attendant-specific recognition
+**Creator-approved requirement:** Repeated valet and concierge services must create durable service-history records that support both operational continuity and individual social recognition. A player's repeated use of the service should be remembered by the actual attendants who served them.
+
+### Service and vehicle history
+- Persist each valet/concierge service event in the database, including player identity, attendant identity, service point/business, date/time, vehicle identity/reference, and relevant service state/outcome.
+- Track repeated visits and multiple vehicles independently. Example: a player may bring seven different cars across seven different days; each vehicle handoff and attendant assignment is recorded rather than collapsed into one generic "valet used" flag.
+- Preserve which attendant handled which vehicle on which visit. Support operational handoff/retrieval state so a vehicle can be returned correctly even when another shift worker is now on duty.
+- Use authoritative vehicle ownership/authorization and service-ticket records. An attendant must not claim to have parked or handled a vehicle unless the service record supports it.
+
+### Separate attendant memories
+- Each attendant (e.g. Ricky and Sammy) has an independent, persistent memory/relationship record for the player, grounded in the services and conversations that attendant personally experienced.
+- If Ricky handled one or more of the player's cars, Ricky may recognize the returning player and refer naturally to their prior valet interactions. If Sammy handled a different visit, Sammy develops his own recognition and memory from his own service/conversation history.
+- Ricky does not inherit Sammy's personal memories or trust, and Sammy does not inherit Ricky's. Shared workplace service records may be available for legitimate operational duties (such as locating/retrieving a vehicle), but they must remain distinct from each attendant's personal relationship memory.
+- A service event can support recognition/familiarity when the attendant was actually involved and could plausibly remember the player. Completing a vehicle handoff without conversation does not automatically create trust. Meaningful communication is the primary path for developing trust, consistent with the existing relationship rules.
+- Attendants can greet and respond in a way that reflects what they personally know, without exposing technical database records, hidden codes, memory architecture or system explanations. The player experiences this as natural recognition: the attendant remembers them "somehow" because of their past interactions.
+
+### Player progression and motivation
+- Meaningful social interaction with attendants and other service NPCs can contribute to the game's approved stars/experience/level progression, in accordance with the broader progression system.
+- Reward constructive communication and genuine interaction, not simply bringing many cars, repeating a parking transaction, tapping the attendant, or spamming dialogue. Service history and social progression are related but distinct records.
+- Repeated interactions with different attendants give players reasons to get to know more people around the city. Do not make one attendant's relationship or progression rewards transfer to another attendant.
+- Stars/experience/levels are player progression measures; they are not the same as an NPC's personal trust or familiarity toward the player.
+
+### Acceptance criteria
+1. Seven vehicle visits across seven days can produce seven distinct service events, with the correct player, vehicle, attendant and timestamp.
+2. Ricky and Sammy can each independently recognize a returning player based on their own recorded service/conversation history.
+3. One attendant's personal memories and trust are not copied to another attendant.
+4. Shared service records support legitimate vehicle retrieval/handoffs without merging personal memories.
+5. Service alone may support modest recognition when personally experienced, but does not automatically increase trust; meaningful conversation drives trust.
+6. Qualifying social interactions can contribute to player stars/experience/levels without enabling parking, tapping or dialogue spam exploits.
+7. NPCs express recognition naturally and never explain hidden codes or internal database mechanics to the player.
