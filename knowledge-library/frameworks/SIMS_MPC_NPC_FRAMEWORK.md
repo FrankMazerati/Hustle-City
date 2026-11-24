@@ -379,3 +379,40 @@ No agent may independently invent database schemas, network authority or transac
 6. Different players see their own separate relationship values with the same NPC.
 7. Hidden/private player data and another player's relationship history are never exposed.
 8. If recognition/profile data is missing or unavailable, the NPC uses a natural neutral greeting and the profile omits unsupported fields.
+
+
+## 22. Conversation-earned trust, extended interactions and NPC-hosted social events
+**Creator-approved requirement:** Trust must be earned through actual conversations and meaningful interactions with an NPC. Players can continue an interaction beyond its basic service/action, ask questions, share personal news and build rapport over time. NPCs also create and host social experiences across the city, invite players—including new players—and maintain social networks beyond their workplaces.
+
+### Conversation as the primary trust-building channel
+- Treat conversation as a primary way trust grows. A player may complete a practical interaction (for example, selecting “park a vehicle” with Marcus the parking attendant) and then choose to remain and talk rather than ending the encounter immediately.
+- Provide a set of available interaction choices appropriate to the NPC and context, such as talk, ask about family, discuss shared interests, ask about work, share personal news, talk about cars or other hobbies, and—when the relationship and NPC boundaries support it—ask more personal questions.
+- Conversation can be extended through multiple turns and topics. The player should feel they are spending time with a person, not repeatedly activating a generic “increase trust” button.
+- Trust changes in small, context-sensitive increments when conversation is meaningful and the NPC's response supports it. A displayed value might move from 63 to 64 to 65 over a sustained positive conversation; these numbers are illustrative, not a fixed rate or guaranteed outcome.
+- Listening, relevant follow-up questions, remembering details, reciprocal sharing, empathy, honesty and respectful conversation can strengthen trust. Disinterest, dismissiveness, intrusive questions, repeated topic pushing, disrespect, broken promises or boundary violations can leave trust unchanged or reduce it.
+- The NPC's personality, mood, time, workload, interests, social energy, familiarity, trust, relationship history and boundaries determine what topics are available and how the NPC responds. Personal questions should become available contextually; an NPC may answer, decline, deflect, joke, or say the subject is private.
+- Do not award trust for raw conversation length, repeated identical questions, idle proximity, spammed interaction choices or farming dialogue loops. Meaningful content and the NPC's independent response matter.
+- Trust remains distinct from familiarity, attraction, friendship status, romance and consent. A long conversation or high trust never entitles the player to private information, a party invitation, a date, a service exception or any other outcome.
+- NPCs may also initiate conversation, ask the player questions, share appropriate personal updates and remember details that were actually exchanged. Dialogue and memory must remain grounded in recorded interactions; never fabricate shared history.
+
+### Relationship-aware social circles and NPC-hosted events
+- NPCs should be able to organize and host social gatherings as part of their own lives and networks, not only attend player-created events. Examples include yacht parties, street-car meets/parties, club parties and other venue- or interest-based gatherings.
+- The event host may be an individual NPC or an appropriate NPC group/social circle. Hosts choose event type, location, timing, guest list and invitations in ways consistent with their identity, resources, interests, relationships and schedule. Exact hosting authority and event-generation rules remain implementation details.
+- NPC hosts can invite player characters they know or want to include. New players must also have credible paths to receive invitations and enter the city's social life; invitation opportunities should not be limited to established high-trust players or existing crews.
+- Invitations should be contextual and earned/selected by the host's independent judgment: shared interests, recent conversation, social connections, event fit, familiarity, availability and other relevant game state may matter. No single trust score or player level guarantees an invitation.
+- Support the social lifecycle: event idea/host selection, venue and time selection, guest selection, invitations and responses, attendance, NPC/player interactions during the gathering, and persistent memories/relationship consequences afterward.
+- Social events should feel populated by people with their own motives and relationships. NPC guests can arrive, socialize, introduce people, leave, decline, bring appropriate companions where supported, and respond to how the event unfolds.
+- Event types should be extensible beyond the examples above. Venue parties, yacht gatherings and street-car events are explicit examples, not an exhaustive list. Event capacity, access rules, safety, age/content restrictions, moderation and scheduling are to be designed per event type.
+- Player-hosted events remain supported and distinct from NPC-hosted events. NPC-hosted gatherings must not be reduced to player-owned party instances with NPCs as decoration; NPCs should have genuine hosting agency within the simulation rules.
+
+### Acceptance tests
+1. A player can finish a valet service interaction and choose to continue talking with the same named valet without restarting or losing the service context.
+2. Contextually appropriate conversation choices include ordinary and personal topics; the NPC can answer, decline or redirect based on personality, familiarity, mood and boundaries.
+3. A sustained, meaningful positive conversation can increment trust gradually (for example, 63→64→65), while spam or repetitive empty dialogue does not farm trust.
+4. Respectful listening and remembered details can support trust; intrusive or disrespectful behavior can leave it unchanged or lower it.
+5. NPCs can initiate topics and share appropriate personal updates grounded in their own simulated life and recorded shared history.
+6. NPCs or NPC social groups can organize yacht parties, street-car meets/parties, club parties and extensible social gatherings.
+7. NPC hosts can invite players, including new players, through credible contextual invitation paths; established high trust is not the only entry route.
+8. Players can accept or decline invitations, and NPCs can independently accept, decline or defer player invitations.
+9. Event attendance and post-event relationship changes respect schedules, capacity, relationship context, NPC agency and applicable safety/content rules.
+10. Conversation-earned trust and event invitations never guarantee romance, consent, confidential information, access or entitlement.
