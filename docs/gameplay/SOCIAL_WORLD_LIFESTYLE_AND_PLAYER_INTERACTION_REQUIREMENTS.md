@@ -458,3 +458,28 @@ All purchases must use authoritative server-side balances and idempotent transac
 - Rollout sequencing should be driven by a balanced playable loop and verified readiness, not simply by the number of buildings rendered. Each activated business should have defined purpose, staffing/NPC behavior, interaction, products/services or activities, payment/earning rules, and appropriate feed/event integration.
 
 **Implementation and scope discipline:** This direction establishes the functional-business principle, player job/side-hustle capability, barber/beauty/nail/car-wash/retail service simulations, chess activity and phased activation model. It does not mean every business type is implemented in the first release. Initial playable-area boundaries, first-wave business list, staffing density, job catalog, earnings, business ownership, service catalogs, animation coverage, activation schedule and technical architecture remain to be designed and creator-approved.
+
+
+## Initial playable release — creator-mandated signature locations and systems
+
+**Creator-approved launch requirement:** The initial playable release must include the creator's established signature Hustle City businesses, destinations and core transportation/lifestyle systems as genuinely playable portions of the world. Do not defer these named signature locations to later Coming Soon waves merely to reduce the initial playable footprint.
+
+The creator explicitly requires the following to be playable in the initial release:
+
+- **Casino:** a functioning casino destination with playable casino activity, subject to the separate legal, platform-policy, age-rating and consumer-protection review requirements for simulated gambling.
+- **Cigar lounges:** the established cigar-lounge businesses should be open and interactive, with appropriate NPC operations, products/services and social use.
+- **Velvet Lounge:** the Velvet Lounge must be a functioning, playable venue, not a decorative exterior.
+- **Beach:** the beach must be an accessible, usable destination with meaningful player activities and social presence.
+- **Car club:** the car club must be a functioning automotive/social destination with meaningful vehicle and community interactions.
+- **Yacht club:** the yacht club must be a functioning destination with appropriate player-facing activities and services.
+- **Hustle Towers:** Hustle Towers must be accessible and playable as a signature property/destination, with its intended functions implemented for launch.
+- **Residential presence:** include a selection of playable houses in every neighborhood in the initial release. This is a requirement for neighborhood-wide playable residential coverage; the exact number and which properties are selected remain to be specified.
+- **Cars:** cars and the associated core vehicle gameplay must be playable in the initial release. Exact vehicle roster, acquisition/ownership rules and availability remain governed by their respective specifications.
+- **Airport:** the airport must be a functioning, playable transportation destination, not merely scenery. Exact flight routes, aircraft access and travel rules remain governed by their respective specifications.
+- **Both train stations:** each of the two established train stations must be accessible and functional in the initial release, with the associated rail/transit gameplay available.
+
+**Meaning of playable:** These locations and systems must support their intended player-facing access, interactions, services, activities or transportation functionality. A rendered building, inaccessible interior, static prop or Coming Soon sign alone does not satisfy this requirement. NPC staffing and ambient activity should support the business/destination where appropriate.
+
+**Phased rollout remains in effect for the rest of the city:** The creator's launch requirement above identifies signature locations and systems that must be included from the start. Other businesses, buildings, blocks, neighborhoods, services and attractions can still be activated in later waves and may be visibly marked Coming Soon until ready. The initial playable map should connect the required locations into a coherent usable experience; do not interpret the phased rollout approach as permission to postpone any item in the creator-approved list above.
+
+**Scope still to define:** Detailed acceptance criteria and service depth for each named destination; exact launch map boundaries and connections; NPC staffing; business inventories and activities; beach activities; car/yacht-club feature sets; Hustle Towers' full functional program; the number and selection of playable houses per neighborhood; vehicle roster and acquisition; airport operations/routes; and the two stations' route/service coverage. These implementation details do not weaken the approved requirement that each listed location/system be playable at initial launch.
