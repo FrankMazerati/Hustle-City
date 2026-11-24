@@ -434,3 +434,12 @@ Create a reusable naming framework for cities, casinos, venues and businesses. G
 - Apply access controls, data minimization, retention/deletion, backup and migration policies. Private memories must not leak into public profiles.
 - Exact schema, database product and storage/indexing strategy remain implementation decisions.
 - See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 35.
+
+## 36. Valet/concierge service history and attendant-specific recognition
+- Persist every valet/concierge service event with player, attendant, vehicle, business/service point, timestamp and outcome. Multiple cars and repeat visits must be individually attributable.
+- Each attendant maintains an independent personal memory/relationship record based on their own service encounters and conversations with the player. Ricky's memory is not Sammy's; do not copy personal trust or familiarity between attendants.
+- Shared workplace service records may support vehicle retrieval and shift handoffs, but are distinct from personal memories.
+- Service history may support recognition/familiarity when personally experienced. Parking alone does not automatically create trust; meaningful conversation remains the primary trust path.
+- Meaningful NPC interactions can contribute to player stars/experience/levels, distinct from NPC trust/familiarity. Avoid repetitive parking, tapping or dialogue farming.
+- NPCs express recognition naturally without exposing hidden codes or database mechanics.
+- See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 36.
