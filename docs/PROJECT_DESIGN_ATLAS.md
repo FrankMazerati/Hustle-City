@@ -443,3 +443,11 @@ Create a reusable naming framework for cities, casinos, venues and businesses. G
 - Meaningful NPC interactions can contribute to player stars/experience/levels, distinct from NPC trust/familiarity. Avoid repetitive parking, tapping or dialogue farming.
 - NPCs express recognition naturally without exposing hidden codes or database mechanics.
 - See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 36.
+
+## 37. Tap-to-view player balances and card-collection discovery
+- A tapped player's visible profile should show in-game money, stars, poker chips, level, rank, neighborhood and crew affiliation as distinct authoritative values.
+- Show the player's visible owned trading-card collection and quantities/duplicates, clearly distinguishing owned cards from explicitly trade-listed cards. A shared wishlist/needed-card list can show what the player is seeking.
+- This supports reciprocal card discovery at tables and venues: players can spot who has a card they need or who may want a card they own, then approach and negotiate naturally.
+- Profile inspection is informational only; it does not reserve, offer or transfer cards. Trades require explicit offer, acceptance, confirmation and authoritative ownership validation.
+- Respect profile/inventory visibility settings and never reveal real-world payment/account credentials or unshared wishlists/hidden inventory.
+- See [Sims / MPC / NPC Simulation Framework](../knowledge-library/SIMS_MPC_NPC_FRAMEWORK.md), section 37.
