@@ -6,6 +6,21 @@ Cards are collectible game items with at least two distinct roles: collection/pr
 ## 2. Card catalogue
 Each card definition needs: card_definition_id, display_name, artwork_asset_id, collection_id, set_id, rarity_tier (only after tiers are approved), card_number, description/lore, acquisition_sources, trade_policy, duplicate_policy, building_unlock_target (nullable), release_window, version and creator approval. Each owned instance has a unique instance_id, owner_player_id, acquisition_source, acquired_at, bound/locked state and trade history.
 
+## 3. Standard five-card ranked ownership collection
+
+**Recommended standard:** five ranked cards per eligible building, boat/yacht collection and car/dealership collection. This preserves the creator's earlier five-card progression decision and avoids making every ownership collection unnecessarily grind-heavy. The beach is explicitly excluded from this card-collection ownership requirement.
+
+Each asset collection is a five-step rank ladder, ordered from entry level to the highest rank. The five cards are not five unrelated collectibles: each card represents the next rank in that asset's themed progression. Completing all five ranks completes the collection and unlocks the corresponding ownership claim. The fifth/top-rank card is part of the five; do not add a separate sixth ownership card.
+
+Draft examples only; rank names require creator approval:
+- Yacht/boat: Deck Hand → Yacht Crew Member → First Mate → Captain → Yacht Master.
+- Car dealership: Lot Attendant → Sales Associate → Sales Consultant → Sales Manager → Dealership Owner.
+- Music Studio precedent from earlier design: Runner → Artist → Music Producer → Record Label Owner → building ownership. The exact fifth-card label should be authored consistently with the chosen card-rank presentation.
+
+Every other eligible building gets its own five-card ladder with role/title names appropriate to that venue or business. Do not reuse yacht or dealership titles indiscriminately. The beach is excluded. The creator may later approve special ten-card prestige collections, but ten cards are not the baseline and must not be silently substituted.
+
+**Asset scope to confirm in content authoring:** distinguish collecting a card set to own the car dealership/building from collecting a separate set to unlock an individual car or boat. Do not assume one collection grants both the venue and every vehicle sold there.
+
 ## 3. Five-card building collection
 For each configured building, author exactly five explicit card slots and map the completed set to one stable building_id. UI displays 0/5 through 5/5, card artwork, missing slots, eligible sources and target building. On completion, server verifies ownership and set membership before issuing the configured unlock entitlement.
 
