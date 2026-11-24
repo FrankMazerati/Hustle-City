@@ -174,3 +174,24 @@
 - [ ] Enforce ownership/key/permission checks for valet drop-off, storage and retrieval.
 - [ ] Implement safe NPC valet routing or a safe parking transition; prevent collisions, damage, theft, vehicle loss and penalties caused by simulation errors.
 - [ ] Define overflow parking for full garages, service coverage, fees, retrieval timing and disconnect/session recovery.
+
+ 
+## P13 — Universal IDs, entity registry and inventory traceability
+- [ ] Design a universal entity-ID strategy for every trackable game object and record: clothing, individual garments, vehicle models and individual cars, businesses, venues, property, furniture, cards, food, drinks, cigars, cigarettes, menus, menu versions, menu entries, products, services and other inventory.
+- [ ] Define the distinction between catalog/type IDs and unique instance IDs; one catalog definition may have many individually tracked instances.
+- [ ] Define typed entity namespaces, immutable/non-recycled identifiers, uniqueness constraints and opaque internal IDs that do not expose sensitive account/business data.
+- [ ] Define shared entity metadata and typed extensions for ownership, custody, access permissions, location/container, condition, lifecycle status, source/creation and timestamps.
+- [ ] Preserve the distinction between ownership, possession/custody and permission/access; integrate the existing vehicle key/authorization model.
+- [ ] Create auditable lifecycle events for creation, acquisition, sale, transfer, lending, reservation, use/consumption, location change, maintenance, retirement and administrative correction as appropriate.
+- [ ] Define business/venue records and their relationships to independently identified menus, menu versions, menu entries, products and services.
+- [ ] Catalogue food, drinks, cigars and cigarettes as explicit item definitions with category, price, availability and applicable age/content/regulatory metadata.
+- [ ] Choose unit-level instance tracking for unique assets/collectibles and quantity/lot/batch tracking for fungible stock where appropriate.
+- [ ] Ensure transactions reference player/account, item/catalog or instance ID, quantity, counterparty/business, timestamp, currency/price and resulting inventory state.
+- [ ] Design concurrency-safe issuance, idempotent transactions, duplicate prevention, audit logging and inventory reconciliation.
+- [ ] Define card catalog IDs separately from individual card instance IDs; new card copies must receive new unique instance IDs.
+- [ ] Design configurable card-supply policies for population growth, including initial pool, reserve, issuance triggers, batch size, distribution/value/rarity rules, duplicate policy, replacement policy and circulation targets.
+- [ ] Track card counts across created, unissued/available, reserved, in-circulation, player-held, system/business-held, consumed/retired and invalidated states.
+- [ ] Model player population and card supply as separate metrics; do not assume one card per player unless a specific creator-approved rule says so.
+- [ ] Simulate supply and economy behavior at 1,000, 10,000, 100,000 and higher player populations; test simultaneous issuance/trading and ensure no duplicate ownership or count drift.
+- [ ] Require creator approval for card-to-player ratios, issuance thresholds, new values/variants/sets, rarity distributions and any supply inflation rules.
+- [ ] Select database schema, ID encoding, indexes/partitioning, retention and operational admin tools after the domain model is reviewed.
