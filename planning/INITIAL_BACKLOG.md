@@ -38,3 +38,14 @@
 - [ ] Establish configurable star-point awards for individual actions, including initiating street conversations, meaningful NPC/player interactions, adding friends, trading cards, and eligible poker-table chip purchases/transactions.
 - [ ] Implement the proposed first 100 street-oriented star-rank titles as a working naming ladder, with a progression architecture expandable beyond Rank 100 to 1,000+.
 - [ ] Define XP and star-point thresholds, pacing, rewards, daily limits, anti-exploit protections, and any unlock behavior separately from the approved rank-name structure.
+
+
+## P4 — Lifestyle services, vehicles and in-world phone
+- [ ] Specify a low-friction cost-of-living model covering housing, vehicle ownership/financing, insurance, fuel, phone service and optional maintenance; explicitly prevent routine bills from becoming a second job.
+- [ ] Evaluate a bundled recurring lifestyle payment as the default, with itemized expense detail as an optional design path; creator approval required before prices, cadence or consequences are locked.
+- [ ] Define rent-versus-own housing states and outright-purchase-versus-financing vehicle states without making either mandatory for core social/poker participation.
+- [ ] Define vehicle insurance scope and protect players from financial/asset penalties caused by simulation defects.
+- [ ] Specify safe NPC traffic behavior, collision avoidance, collision recovery and regression tests for intersections, lane changes, pedestrian crossings and congestion.
+- [ ] Design an in-world cellphone prop and pull-out/look-at interaction that opens a diegetic phone UI while the player remains in the world.
+- [ ] Connect phone messaging to player contacts/conversations, notifications, delivery state and social privacy/block/report enforcement.
+- [ ] Define optional voice/calling capability separately; do not assume it is part of the first phone implementation.
