@@ -154,3 +154,29 @@ Google AdMob guidance says interstitials belong at natural transition points, wa
 
 ---
 **Open decisions:** exact short/long ad format and close timing; realized eCPM assumptions by country and platform; banner refresh/viewability rules; final frequency cap; contextual placements; rewarded-ad limits. Keep these unresolved until tested and approved.
+
+
+## 13. Three-to-four-hour daily active-play target and complete ad journey
+The creator's product/business target is an average of **three to four hours of active daily play per active user**. This is a design and measurement target, not a guarantee, and not a minimum expected from every player.
+
+The intended experience is a poker-centered social city with enough variety that players can naturally move between:
+- Poker and other card-table activity.
+- Earning/recovering virtual poker chips.
+- Bar hangouts, card trading, conversations and meeting other players.
+- Travel between districts, venues and events.
+- Apartment/house furnishing, customization and upgrades.
+- Vehicle and lifestyle progression, plus discovery of the living city.
+
+### Example regular-user journey
+A regular player runs low on poker chips, goes to the bar, trades cards and interacts with people. They can spend time on other meaningful activities rather than being forced to sit idle. At eligible moments, they may choose a rewarded video for a clearly disclosed virtual-chip recovery reward or opt into doubling an eligible activity reward. They can then return to poker.
+
+Keep the ad types separate:
+1. **Persistent bottom banner:** always present, including for paid members.
+2. **Scheduled interstitials:** up to four non-rewarded opportunities per active hour at 15-minute milestones, shown only at safe transitions.
+3. **Rewarded video:** optional chip recovery or selected reward doubling. These are separate from the four scheduled interstitial slots and are not included in the revenue tables until their own realized eCPM, opt-in/completion rate and reward economics are measured.
+
+The creator wants rewarded videos to offer attractive additional in-game rewards and is considering longer rewarded-video experiences. The selected provider controls available rewarded formats and completion rules; longer duration does not automatically guarantee higher revenue. Show the exact reward before opt-in, apply frequency caps/cooldowns, and balance reward value against ad proceeds and virtual-economy inflation. Do not promise a fixed duration or payout until provider and economy testing.
+
+Do not make ad watching the only way to recover chips or progress. Preserve ordinary non-ad earning routes and social/poker access. Virtual chips and in-game currency are not cash and are not redeemable. Do not create mandatory 30-minute waits, idle farming or ad-viewing loops; if an opportunity has a cooldown, players should have other worthwhile activities rather than being trapped waiting.
+
+Measure the three-to-four-hour target with average daily active play and session distribution, but also track activity diversity, social participation, progression, chip recovery source, rewarded-ad opt-in/completion, retention, player complaints and healthy stopping behavior. A longer average session is valuable only when players are choosing to stay because the world is enjoyable.
