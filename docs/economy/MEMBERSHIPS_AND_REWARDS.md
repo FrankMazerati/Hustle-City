@@ -82,6 +82,27 @@ This is a conversion between separate wallets, not direct payment of food, drink
 
 Because Poker Chips may be purchased, wagered, won or transferred, the conversion mechanic requires separate legal, platform-policy and economy-abuse review before implementation. Do not imply cash redemption or real-world monetary value.
 
+
+## Poker winnings, lifestyle progression and premium access
+
+**Creator-approved direction:** Connect poker success to the wider Hustle City lifestyle. A player can win Poker Chips at a poker table, visit a staffed cashier or self-service cash-out kiosk, and exchange eligible chips into Hustle Money for eligible in-game spending. The creator specified a **1:1, dollar-for-dollar nominal in-game conversion**: one eligible Poker Chip converts to one Hustle Money. This is an in-game denomination rule, not real-world cash value or cash redemption.
+
+**Creator-approved direction:** Poker is one meaningful earning route, not the only way to participate in or progress through the city. Players should have reasons to socialize, add friends, communicate and share optional social posts. Any social-engagement rewards must encourage authentic participation without requiring public posting or creating spam, fake-account, referral or engagement-farming loops. Reward amounts and qualifying actions remain TBD.
+
+**Creator-approved direction:** Free players retain access to core city life and practical transportation, including walking, public transportation and rideshare-style services (fictional in-world equivalents of services such as Uber/Lyft). The previously established rideable public bus and city L train direction remains relevant. Exact availability, fares and coverage remain TBD.
+
+**Creator-approved premium-lifestyle direction:** Paid packages and/or premium progression may provide access to luxury ownership and services such as personal cars, yachts, private jets and private helicopters. Ordinary free play should not make yachts, private aviation or equivalent luxury access trivially available. The exact boundary between direct purchase, premium entitlement, earned progression, rental/charter access and ownership is not finalized. Preserve meaningful earned paths where directed; do not silently make every vehicle or lifestyle goal pay-only.
+
+**Creator-approved property concept, with parcel details still proposed:** Neighborhood homes should be individually identifiable properties offered for sale when available/unoccupied. Each home needs a stable unique property/house ID and authoritative availability, occupancy and ownership state, so the game can distinguish a vacant listing from an occupied or already-owned home. Players may be able to acquire multiple homes on one block and potentially an entire block; five homes or a whole block are examples, not final ownership caps. A proposed density of roughly 5–10 houses per block is a planning range only, not a locked count.
+
+**Existing world-grid context:** The accepted master layout is a 7×7 grid of 49 large boxes, with six central districts and 43 neighborhood boxes. Each neighborhood box was previously laid out as 5×5 city blocks (25 blocks), yielding 1,075 outer-neighborhood blocks across the 43 neighborhood boxes. This does not determine the number of houses on each individual city block; that remains open.
+
+**Property-system requirements to design:** Unique parcel IDs; address/block/neighborhood linkage; for-sale, reserved, occupied and owned states; authoritative owner records; listing/price/terms; purchase confirmation; transaction history; transfer/resale rules if supported; concurrency protection so two players cannot buy the same parcel; and a clear distinction between owning a house, owning several houses on a block, owning a whole block, and founding/claiming a neighborhood. Neighborhood founding/claiming remains distinct from ordinary home ownership.
+
+**Unresolved — do not invent:** Property prices, exact houses per block, player ownership caps, whole-block purchase rules, rental/resale mechanics, whether homes are bought with Hustle Money, Diamonds or platform purchases, package entitlements, social-reward amounts and limits, rideshare fares, vehicle eligibility, yacht/aircraft access rules, and the precise earned-versus-paid progression boundary. Model the economy and obtain creator approval before locking these details.
+
+**Policy/economy guardrail:** Keep game-currency conversion separate from real-money cash-out. Any real-money purchase, paid currency, poker wagering/prizes, social rewards or premium property/vehicle sale requires platform-policy, legal, consumer-protection and anti-fraud review appropriate to the final design. Do not imply that Poker Chips or Hustle Money are redeemable for real-world money.
+
 ## Required balancing work before amounts are set
 
 Do not guess currency quantities. Model:
