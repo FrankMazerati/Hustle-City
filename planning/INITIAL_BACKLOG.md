@@ -97,3 +97,17 @@
 - [ ] Instrument ad impressions, viewability, fill, opt-in/completion, eCPM, revenue per DAU, retention and player complaints; compare actual results with the revenue model.
 - [ ] Ensure no membership tier removes the persistent bottom banner; all tiers retain it as a permanent revenue placement.
 - [ ] Obtain creator approval for ad provider, placements, refresh timing, reward amounts, cooldowns, frequency caps and monetization mix before production rollout.
+
+
+## P8 — Three-to-four-hour daily destination and monetization loop
+- [ ] Design toward the creator's target of an average of 3–4 hours of active daily play per active user; validate by cohort analytics rather than assuming every player will reach it.
+- [ ] Build a connected activity portfolio around poker: chip earning/recovery, bar socializing, card trading, player conversations/meeting people, travel between venues/districts, events, home/apartment furnishing and upgrades, vehicle/lifestyle progression, and city discovery.
+- [ ] Map several natural player journeys that move between poker, social venues, card trading, travel, events and property progression without making any one activity mandatory.
+- [ ] Design the regular-user chip-shortage journey: clearly show available non-ad chip earning/recovery options and an optional rewarded-video offer at the bar for a disclosed, capped virtual-chip reward.
+- [ ] Add optional rewarded-video doubling for selected eligible activity rewards/claims; disclose the base and doubled reward before opt-in, and apply transparent eligibility, frequency caps and cooldowns.
+- [ ] Keep rewarded-video chip recovery and reward doubling separate from the four scheduled non-rewarded interstitial opportunities per active hour and the persistent bottom banner.
+- [ ] Explore a longer rewarded-video placement only if supported by the chosen ad provider; do not assume longer viewing automatically means higher payout. Balance reward value against realized ad revenue and virtual-economy inflation.
+- [ ] Never make ads the only route to poker chips, progression or social participation; preserve fair ordinary gameplay earning paths and ensure virtual chips/currency are non-redeemable.
+- [ ] Do not require forced 30-minute waits, idle AFK farming or ad-viewing loops; offer meaningful activities during any genuine cooldown and never trap a player waiting to play.
+- [ ] Instrument average daily active hours, session distribution, activity diversity, social participation, progression, chip recovery source, rewarded-ad opt-in/completion, retention, complaints and healthy stopping behavior.
+- [ ] Review whether the 3–4-hour target is being achieved through enjoyment and activity variety rather than excessive interruptions, coercive rewards or unhealthy play pressure.
