@@ -48,6 +48,16 @@ These names are drawn from established Hustle City concepts. They are working ca
 | Casino — working concept | Major casino entertainment destination; final name, district, and approved activity scope remain unresolved | A |
 | Airport — name unresolved | Major airport and travel hub; use either “We Fly High International Airport” or “We Fly Sky International Airport” only after creator approval | A |
 
+## 3A. Creator-directed district identity and placement refinements
+
+- **Diamond District is downtown.** Its identity includes the central downtown skyline, Diamond Row, Velvet Lounge, cigar bars/lounges, upscale jewelry stores, upscale clothing boutiques and related luxury/nightlife businesses.
+- **Swagger District** is specifically the hip-hop/streetwear fashion area: urban clothing stores, sneaker/shoe shops and streetwear boutiques. Do not merge this identity with Diamond District luxury retail.
+- **Entertainment District** must include several additional entertainment-appropriate buildings beyond the co-located Upper Level Entertainment Studios, Upper Level Films and Monster Beats campus. These buildings should be given distinct names and meaningful interactions as their concepts are approved. Potential building roles can include media, production, performance, screening, event and live-entertainment functions; names and final venue selection remain creator-approved, not auto-generated canon.
+- **Get Wild Beach** is a distinct beach-party destination/area in the coastal plan, with its own visual identity and beach gathering/event function.
+- **Hustle Towers** is a major downtown landmark and may host the gambling experience within its own building/interior.
+- **Hustle Club** is a separate nightlife/club destination and is not to be placed in the downtown/Diamond District cluster by default. Its district assignment is unresolved. Do not assume Hustle Club is the casino or that gambling must happen there.
+- The blue-and-black coordinated visual identity applies to Upper Level Entertainment Studios, Upper Level Films and Monster Beats as their shared campus identity. Do not automatically apply it to every Entertainment District building.
+
 ## 4. How to decide what is enterable
 
 For every named building, record:
