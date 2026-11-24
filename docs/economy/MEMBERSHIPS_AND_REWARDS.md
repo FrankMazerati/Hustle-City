@@ -66,6 +66,22 @@ Purchases must display exact price and contents, use the applicable platform bil
 
 Poker Chips remain a separate activity currency. Any paid Poker Chip purchase, wagering, prize, transfer or redemption feature requires separate product, platform-policy and legal review before implementation.
 
+## Poker Chips → Hustle Money conversion
+
+**Creator-approved feature direction:** A player who has Poker Chips but is short on Hustle Money should be able to exchange some Poker Chips for Hustle Money, then spend the received Hustle Money on eligible ordinary city-life purchases.
+
+This is a conversion between separate wallets, not direct payment of food, drinks or retail purchases with Poker Chips:
+- Debit Poker Chips and credit Hustle Money as one atomic, authoritative transaction.
+- Record both sides in an auditable server-side ledger.
+- Make requests idempotent and protect against replay, duplicate submission, concurrent-spend and rollback exploits.
+- Show the exchange quote, amount debited, amount credited, any fee/limit and confirmation before committing.
+- Food and beverages remain payable with Hustle Money, not Poker Chips.
+- Do not create currency through conversion or bypass store purchase/refund controls.
+
+**Unresolved — do not invent:** exchange ratio, fee, daily/weekly limits, minimum/maximum amount, eligibility of purchased chips versus gameplay winnings, cooldowns, venue/location restrictions, reversal rules, regional/platform restrictions and launch timing.
+
+Because Poker Chips may be purchased, wagered, won or transferred, the conversion mechanic requires separate legal, platform-policy and economy-abuse review before implementation. Do not imply cash redemption or real-world monetary value.
+
 ## Required balancing work before amounts are set
 
 Do not guess currency quantities. Model:
@@ -75,6 +91,7 @@ Do not guess currency quantities. Model:
 - Currency balances accumulated over 7, 30 and 90 days.
 - Time-to-afford key purchases and purchase value versus normal gameplay earning.
 - Inflation, hoarding, exploit loops and multi-account abuse.
+- Poker Chip conversion as a currency sink/source pair, with simulations for arbitrage, farming and circular conversion.
 
 Keep quantities, exchange rates, tier allocations, billing rules and unapproved mechanics marked TBD until creator approval.
 
@@ -90,9 +107,10 @@ Keep quantities, exchange rates, tier allocations, billing rules and unapproved 
 - Test free-player progression alongside every membership tier.
 - Test that membership purchase/renewal never grants cards.
 - Test that each currency credits only its correct wallet.
+- For conversion, test atomic debit/credit, insufficient balance, stale quotes, retries, simultaneous requests, rollback, caps, fees and abuse detection.
 
 ## Decision summary
 
-**Approved:** Eight tier names/prices; no $69.99 tier; membership contents limited to Hustle Money, Diamonds, Poker Chips and Wings; no cards in memberships; cards earned through a separate, not-yet-defined gameplay system; balanced value that preserves play and optional purchase incentives.
+**Approved:** Eight tier names/prices; no $69.99 tier; membership contents limited to Hustle Money, Diamonds, Poker Chips and Wings; no cards in memberships; cards earned through a separate, not-yet-defined gameplay system; balanced value that preserves play and optional purchase incentives; players can convert Poker Chips into Hustle Money for eligible general city spending.
 
-**Unresolved:** Billing cadence; exact currency quantities and tier allocations; daily reward schedule; card acquisition activities and rules; optional store catalog/prices; Poker Chip monetization and wagering-related features.
+**Unresolved:** Billing cadence; exact currency quantities and tier allocations; daily reward schedule; card acquisition activities and rules; optional store catalog/prices; conversion ratio, fees, limits and eligibility; Poker Chip monetization and wagering-related features.
