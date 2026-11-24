@@ -10,7 +10,7 @@ Server-authoritative: balances, ledger, paid entitlements, card ownership, pack 
 - Four currencies (Hustle Money, Diamonds, Wings and Poker Chips) remain separate and never merge or silently convert.
 - Basic transportation never requires Diamonds.
 - Poker Chips are non-redeemable virtual chips under the baseline.
-- A five-card set unlocks only its configured building entitlement.
+- Each eligible building (except the beach), boat/yacht and car/dealership collection uses the standard five-card ranked ladder; completing all five unlocks only its configured ownership claim. Ten-card prestige collections require separate creator approval.
 - Building ownership is distinct from neighborhood ownership, crew leadership and residency.
 - Card trade is atomic and cannot duplicate or destroy cards.
 - Platform purchase grants only after server receipt validation.
