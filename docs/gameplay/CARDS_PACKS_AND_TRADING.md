@@ -40,6 +40,44 @@ Building card packs must be part of the daily engagement loop, not only a store 
 ## 5. Acquisition catalogue
 The card catalogue should identify each permitted source separately: earned gameplay rewards, event rewards, referral rewards if approved, card packs, direct purchase of a specified missing card if approved, and player-to-player trade. The exact source list and eligibility are unresolved. Store listings must clearly distinguish randomized packs from guaranteed single-card offers.
 
+## 6. In-game card discovery and social trading
+The complete card-trading experience lives inside Hustle City. Players must not need a companion app, external website, Discord server, Facebook group or spreadsheet to find trading partners, negotiate or complete exchanges.
+
+### Card Album and collection visibility
+- Each player has a Card Album showing each building collection, the five required slots, cards owned, missing cards and duplicate counts.
+- The album supports search/filter by building, set, card name/ID, owned/missing/duplicate status and trade eligibility.
+- Players can choose whether their collection progress, duplicate inventory and wish list are visible to friends, eligible traders or nobody. Respect privacy settings and blocks.
+- A player may mark missing cards as wanted and maintain a wish list. They can remove or change a request at any time.
+
+### Friend discovery and relationships
+- Players can search/add another player using approved in-game identifiers, send a friend request, accept/decline, remove friends, block and report.
+- A trade can be initiated from a friend's profile, the Card Album, a card's detail screen, a wish-list match or the in-game Card Finder.
+- Friend status and trade eligibility are checked by the server. Being friends does not override blocks, account restrictions or card binding.
+- Provide optional in-game messaging or a trade conversation thread; keep private messages private and provide mute/report controls.
+
+### In-game Card Finder and matching
+- Players can search for a specific missing card and see eligible players who have a tradeable duplicate, subject to each player's visibility settings.
+- Finder can show reciprocal matches (what I need / what they need), suggested fair swaps based on card metadata and duplicate availability, and filters for friends/available traders.
+- Players can create a trade request with requested card(s) and offered card(s), set an expiry, edit/cancel before acceptance and receive in-game notifications.
+- Finder must never expose hidden inventory, private account details or precise player location.
+- No external trading communities or companion app are required for discovery or completion.
+
+### Safe multi-card exchange
+- Support one-for-one and multi-card-for-multi-card offers. Both sides see every card instance and the exact final terms before approval.
+- Cards remain reserved/locked while an offer is pending; they cannot be offered in another trade, consumed, sold or used to complete another transaction.
+- Either side may counter, decline or cancel while allowed by the trade state. A counteroffer creates a new version and requires both players to approve that exact version.
+- The server revalidates ownership, duplicates, tradeability, friend/block state, account restrictions and offer version at final acceptance.
+- The exchange is atomic: all items transfer together or none transfer. No partial completion, double spend, duplicate card, or one-sided loss.
+- If an offer expires or is canceled, all reserved cards return to available inventory. A disconnected player can resume and see the authoritative trade state.
+- Default design: card-for-card only. Any currency, real-money or off-platform consideration is disabled unless separately approved. Never allow real-money settlement through chat or trade notes.
+
+### Trust, limits and moderation
+- Provide trade history and receipts showing cards exchanged, participants, timestamps and final state.
+- Establish configurable new-account safeguards, trade rate limits, daily limits if needed, suspicious-activity detection and cooldowns. Exact limits remain TBD.
+- A reputation indicator may reflect verified completed trades and upheld moderation findings; do not allow users to buy reputation or publicly shame players based on unverified accusations.
+- Report trade fraud, impersonation, harassment and coercion. Moderators need auditable tools to investigate without silently rewriting inventories.
+- Support trade dispute review, but never promise automatic reversal after a completed valid exchange. Any administrative correction must be permissioned, logged and auditable.
+
 ## 6. Player-to-player trading
 Trade flow:
 1. Player A selects a friend/eligible player and offers one or more tradeable card instances.
