@@ -360,3 +360,11 @@ Create a reusable naming framework for cities, casinos, venues and businesses. G
 - Use authoritative live ownership/inventory records so counts and item lists stay accurate after transactions. Viewing a profile does not reserve or transfer an item; trades require explicit confirmation and eligibility/ownership validation.
 - Provide a compact profile summary with expanded category views. Respect owner visibility settings and protect exact home addresses, private account data, credentials and hidden inventory. Status and wealth indicators do not automatically establish trust.
 - See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 25.
+
+
+## 27. Profile-driven player choice and social progression
+- Players can use visible profile details—level, rank, stars, neighborhood, crew, homes/properties, vehicles, travel/lifestyle and collections—to decide whom they want to approach, socialize with, trade with or do business with.
+- Some players may seek peers with similar progression or assets; others may choose to meet, mentor or do business with newer players. Optional filters and comparisons support discovery but do not impose universal wealth/rank gates.
+- Meaningful, reciprocal communication can contribute to experience/star progression. Do not reward spam, empty messages, repeated low-value exchanges or farming. Keep earned progression separate from pair-specific trust/familiarity, consent and trade acceptance.
+- Real-money progression was mentioned only as an unfinished possibility; no paid status/level/star advancement or pay-to-win mechanic is approved until separately clarified.
+- See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 26.
