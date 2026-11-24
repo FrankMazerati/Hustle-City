@@ -26,6 +26,8 @@ Hustle City is a cinematic, realistic 3D social-world/city-life game built prima
 - [17-agent Ollama model assignment registry](intellisync/config/model_assignments.json)
 - [On-demand local Ollama worker](intellisync/worker.py)
 - [17-agent local workforce and coordinator structure](intellisync/config/coordination.json)
+- [Opening-sequence dependency-aware work-package graph](intellisync/config/opening_sequence_work_packages.json)
+- [Opening-sequence graph validation tests](intellisync/tests/test_opening_sequence_config.py)
 - [Library workstation and portable project handoff](planning/LIBRARY_WORKSTATION_QUICKSTART.md)
 - [Opening cinematic and Bella Rose introduction brief](planning/OPENING_SEQUENCE_PRODUCTION_BRIEF.md)
 - [Opening sequence 17-agent assignment matrix](planning/OPENING_SEQUENCE_AGENT_ASSIGNMENTS.md)
