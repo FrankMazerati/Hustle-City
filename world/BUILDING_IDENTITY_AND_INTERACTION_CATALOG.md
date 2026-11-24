@@ -151,3 +151,40 @@ Use schema validation and stable references. Engine adapters may render and impl
 ## 3B. Hustle Club placement refinement
 
 Creator direction places Hustle Club in the waterfront cluster as a beachfront casino/nightlife destination. It is not a downtown Diamond District venue. Keep it distinct from Get Wild Beach, which is a separate beach-party destination in the broader coastal area. Hustle Towers remains a separate downtown landmark. Exact waterfront parcel adjacency and access are unresolved.
+
+
+## 3C. Creator-approved Entertainment District additions and interaction direction
+
+### Circular glass automotive tower — approved concept
+- A major circular, glass-dominant automotive tower with a current creator-directed planning target of approximately **30–40 levels**.
+- Display vehicles around the structure on every level. The most expensive and exclusive vehicles belong toward the top; other vehicle categories descend through the lower levels.
+- It must be a visitable, explorable automotive destination with meaningful browsing and vehicle inspection, not merely a decorative tower.
+- Exact building name, operator/brand association, final height, floor taxonomy, circulation, vehicle access, sales flow and launch scope remain unresolved.
+
+### Walk-through automotive marketplace / car lot — approved concept
+- A separate ground-oriented automotive marketplace, distinct from the circular tower.
+- Organize it into recognizable sections, including expensive vehicles and regular vehicles; additional categories can be determined during detailed design.
+- Players can walk through the lot, look at and inspect vehicles, interact with NPC salespeople and other visitors, and choose a vehicle through a supported selection/purchase interaction.
+- The lot should feel socially active, not like a static vehicle menu.
+- Whether it is operated by Mazerati Boys Automotive Group or another approved entity remains unresolved.
+
+### Book of Code Movie Theater — confirmed name
+- **Book of Code** is the creator-confirmed movie theater name.
+- Preserve the exact title. It is a distinct Entertainment District destination.
+- Screening catalog, schedules, ticketing, premieres and other event functions remain to be specified.
+
+### Other approved Entertainment District destinations
+- Outdoor concert amphitheater.
+- Comedy club.
+- Film and television production campus containing Upper Level Entertainment Studios, Upper Level Films and Monster Beats, co-located under their shared blue-and-black visual identity.
+- The district must contain additional entertainment destinations beyond the media campus.
+
+### Venue interaction standard: NPC-led activity and group outings
+Entertainment venues should support purposeful social sessions and NPC activity. The creator's comedy-club example establishes this design direction:
+- Players can go with friends or a group, enter together, and pay admission where applicable.
+- Inside, players can socialize and use supported activities such as drinks, smoking interactions and card trading where enabled and appropriate to the venue.
+- NPC performers should carry out actual venue roles; at the comedy club, an NPC comedian can stand on stage and perform for an audience.
+- NPC staff, performers and visitors should make venues feel active even when players are not hosting an event.
+- Future systems should support creator-designed events, missions and automated NPC-interactive sequences. These are a planned extension of the venue framework; no specific event, mission, schedule, reward or automation behavior is locked by this entry.
+
+Implementation must distinguish a visible prop from a functioning interaction. Admission, party/group arrival, NPC performance, social activities and any consumable/card interactions must be connected to real game state and validated systems when implemented. Exact mechanics, schedules, pricing and launch scope remain TBD.
