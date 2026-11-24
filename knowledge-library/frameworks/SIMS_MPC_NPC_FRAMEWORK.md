@@ -466,3 +466,40 @@ No agent may independently invent database schemas, network authority or transac
 5. The profile can display visible cards and keys and distinguish items owned from items available for trade.
 6. A player can initiate a trade offer for eligible listed cards/keys, but no item transfers without the required explicit confirmations.
 7. Hidden inventory, private information and real account credentials are never exposed through social profiles or trade displays.
+
+
+## 25. Comprehensive player-owned assets, collections and status profile
+**Creator-approved requirement:** The player-to-player profile should provide a broad view of a player's in-game identity, status, holdings and collections—not merely a small social card. The profile should show useful counts and, where enabled, the actual in-game items the player owns or has listed for trade.
+
+### Identity, status and affiliation
+- Show the player's in-game display name, online/offline status, rank, level, stars, neighborhood/home district (for example, Hustle District), and crew affiliation/representation.
+- Show only game-defined status fields and accurate current game state. Do not infer a player's home from temporary location or reveal a live precise location through a neighborhood label.
+
+### Property, housing and vehicle holdings
+- Show the number of houses/homes the player owns and the number of properties they own overall. If the game distinguishes homes from other real estate, display those categories separately as well as a clear total where meaningful.
+- Show the number of vehicles the player owns and, where appropriate, their visible vehicle collection/list.
+- Show how many car lots/dealership properties the player owns, separately from the number of cars. Do not conflate owning a car lot with owning the vehicles displayed or stored there.
+- Support a clear inventory/asset summary for other creator-approved property categories as the in-game economy expands. Counts and item lists must come from authoritative ownership records and update when ownership changes.
+
+### Cards, keys and collectible/trade inventory
+- Show the player's card collection: collection count and the actual cards the player chooses to make visible, with clear identification of which cards are available for trade.
+- Show the player's in-game keys and other explicitly approved game-key items/entitlements, distinguishing owned items from those offered for trade where trading is supported.
+- Distinguish total owned/collected quantity, currently listed/tradable quantity and items not available for trade. Make it clear that viewing a collection does not reserve, transfer or grant access to an item.
+- A player can start a trade offer from eligible visible cards/keys (and other categories only if separately enabled). Transfers require explicit confirmation by the relevant parties and authoritative validation of ownership, eligibility and current availability.
+
+### Profile presentation, accuracy and privacy
+- Organize the profile into readable areas such as identity/status, neighborhood/crew, properties, vehicles/car lots, cards, keys and trade listings. A compact summary can lead to expanded category views; the full inventory need not crowd the initial encounter screen.
+- The owner should have game-level controls over which profile categories and item details are visible to other players, consistent with the creator's intended social/trading experience. Exact defaults and controls remain implementation details.
+- Only show counts and items the viewer is permitted to see. Never expose private account data, credentials, protected inventory, hidden ownership records, exact home addresses, or sensitive real-world information.
+- Public profile stats are factual game-state indicators, not proof of character, trustworthiness, wealth beyond what the game explicitly represents, authority, consent or entitlement. Familiarity and trust remain pair-specific relationship measurements and are not replaced by holdings or status.
+
+### Acceptance tests
+1. An inspected player profile can show display name, online status, rank, level, stars, neighborhood and crew affiliation.
+2. The profile can show counts for houses/homes, total properties, vehicles and owned car lots/dealerships as distinct categories.
+3. Where visibility permits, the viewer can open the relevant owned-asset lists, not just see aggregate counts.
+4. The profile can show the player's cards and keys, including which eligible items are explicitly available for trade.
+5. Car-lot ownership is not confused with vehicle ownership; houses and other property categories are clearly distinguished.
+6. Counts and item lists update from authoritative ownership/inventory state after purchases, sales, transfers or other valid ownership changes.
+7. No trade or ownership transfer occurs from profile viewing; trades require explicit confirmation and server-side validation.
+8. Profile visibility controls prevent disclosure of hidden categories, private inventory, exact home addresses and account credentials.
+9. Wealth/asset counts, stars, rank and level do not automatically increase another player's trust or familiarity.
