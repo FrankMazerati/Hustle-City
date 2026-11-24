@@ -10,13 +10,14 @@ This file distinguishes code present in the repository from code verified on the
 - [x] Duplicate event-key protection and restart recovery/status snapshot.
 - [x] Persistent SQLite message/feed helper in `intellisync/services.py`.
 - [x] On-demand Ollama worker runner and model assignment configuration.
-- [x] Scheduler prototype with bounded worker batches and a timed 20/5/5 global-phase cycle plus optional 10-minute extension.
+- [x] Rolling scheduler: production/correction-ready packages and QA-pending packages are eligible in the same tick; one bounded executor enforces the configured global model-call concurrency cap.
+- [x] Continuous scheduler entry points now use rolling package-level scheduling rather than global production/QA/correction phases.
 - [x] Unit tests authored for runtime and service transitions.
 
 ## Not yet implemented or not verified
 
-- [ ] Required rolling per-agent 20/5/5 scheduler with overlapping production, independent QA, and correction windows. The current prototype runs global phases sequentially.
-- [ ] Resource broker with measured model-load/inference concurrency, memory headroom, model switching and queue priorities.
+- [ ] Enforced per-package 20/5/5 wall-clock deadlines, correction-window expiry/escalation, and optional 10-minute extension tracking. The rolling scheduler now overlaps eligible package states, but the current Ollama worker remains a one-shot task invocation rather than a continuously checkpointing 20-minute work session.
+- [ ] Device-aware resource broker with live memory/headroom telemetry, model load/unload management and adaptive concurrency. The scheduler currently enforces a configured global inference-call cap through its bounded executor; the safe default remains one.
 - [ ] Reconciled 17-agent model mapping based on the live tablet `ollama list`; current configuration files contain differing provisional/reported inventories.
 - [ ] Verified Ollama endpoint, model response quality, and worker execution on the Android tablet.
 - [ ] Autonomous continuous agent workers that claim IntelliSync packages, load the correct role instructions, submit artifacts, and recover safely.
