@@ -97,3 +97,15 @@ This register captures decisions promoted through the knowledge library. The exi
 - Players may initiate trade offers for eligible visible cards/keys, but inspection does not reserve or transfer items. Transfers require explicit confirmation and applicable game-economy safeguards. Hidden inventory, private information and real account credentials remain protected.
 - **Open implementation details:** exact profile layout and visibility controls; relationship UI; neighborhood/crew identity rules; asset metadata; trade eligibility, confirmation, cancellation and anti-fraud flow.
 - **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 24.
+
+
+## 2026-11-24 — Comprehensive player status and asset-ownership profiles
+- **Status:** APPROVED — creator explicitly expanded the player-to-player profile to include in-game status, property, vehicle and collection holdings.
+- Player profiles should show in-game identity/status: display name, online status, rank, level, stars, neighborhood/home district and crew affiliation.
+- Show ownership counts for houses/homes, total properties, vehicles and car lots/dealerships. Keep these as distinct categories; owning a car lot is not the same as owning the cars associated with it. Where permitted, viewers can inspect the actual owned items as well as totals.
+- Show trading-card collection and individual visible cards, plus in-game keys, distinguishing owned/collected items from items explicitly available for trade.
+- Profile categories should be organized into a compact summary and expanded views. Counts and item lists must reflect authoritative, current game ownership/inventory records.
+- Players can initiate offers for eligible visible trade items, but profile inspection does not reserve or transfer assets. Transfers require explicit confirmation and ownership/eligibility validation.
+- **Privacy boundary:** show only profile categories/items the owner has made visible under game rules. Do not expose exact home addresses, private/account data, credentials or hidden inventory. Profile wealth/status does not substitute for relationship trust.
+- **Open implementation details:** exact categories and labels; profile visibility defaults and controls; which property/vehicle details are public; inventory filters and item metadata; trade flow and validation.
+- **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 25.
