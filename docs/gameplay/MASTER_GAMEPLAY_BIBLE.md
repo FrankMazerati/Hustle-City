@@ -25,7 +25,7 @@ The game must support both active play and social presence: a player can be at a
 | System | Player-facing purpose | Authoritative state |
 |---|---|---|
 | Player identity | Character, profile, username, status | Account/profile service |
-| Wallet | Three distinct currencies | Economy ledger |
+| Wallet | Four distinct currencies: Hustle Money, Diamonds, Wings and Poker Chips | Economy ledger |
 | Card collection | Packs, cards, duplicates, collection progress | Inventory/collection service |
 | Card trading | Player-to-player exchange | Atomic trade service |
 | Building unlock | Five-card set unlocks configured building | Collection + ownership service |
@@ -39,9 +39,12 @@ The game must support both active play and social presence: a player can be at a
 | Customization | Clothing, accessories, vehicle/apartment/business upgrades | Inventory + ownership services |
 
 ## 4. Currency separation
-- **Hustle Money:** general in-game cash for ordinary game economy, purchases and services where configured.
-- **Diamonds:** premium currency. Premium travel and explicitly approved premium goods/services may use Diamonds. Basic transportation must not require Diamonds.
-- **Hustle City Poker Chips:** virtual chips used for poker and other explicitly chip-denominated game activities. They are separate from Hustle Money and Diamonds and are not cash-equivalent or redeemable under this baseline.
+- **Hustle Money:** ordinary in-game purchases, goods, services and eligible upgrades.
+- **Diamonds:** boats and cars, including approved purchase and upgrade flows.
+- **Wings:** flying and air-travel services.
+- **Poker Chips:** actually playing poker and other explicitly chip-denominated table activities. They are non-redeemable virtual chips under the baseline.
+
+These are exactly four separate balances. There is no additional “poker money” currency. Never silently convert between them.
 
 Never silently convert one currency into another. Any exchange feature requires a separately approved rate, limits, confirmation and ledger entries.
 
@@ -53,7 +56,7 @@ External sharing supports a message such as **“I just joined Hustle City. Join
 ## 6. Travel and cruising
 Destination-based automated travel is the preferred baseline, not manual driving as the core loop. Players choose destination and travel mode; they may ride as driver/passenger, travel with friends and crew, and form visible convoys. Names or crew emblems can identify participants where privacy settings allow. Map views show destinations, nearby players and crew gatherings where visibility is permitted.
 
-Basic travel uses free or Hustle Money-based services according to service rules. Diamonds are reserved for premium travel choices. Exact Diamond fares, vehicle tiers, destinations and travel durations require approval.
+Boats and cars use Diamonds under their approved purchase/upgrade rules. Flying uses Wings. Hustle Money covers ordinary in-game goods and services. Poker Chips are used only for poker/table play. Exact prices, routes, fares and upgrade costs require approval.
 
 ## 7. Buildings and the five-card key
 A configured building may have a five-card ownership collection. The five cards form a building-specific set/key; completion unlocks eligibility to claim or activate that building. The card set must map explicitly to one building ID. Completing the set must not grant an unrelated building. Whether a completed set is consumed, retained as a permanent collection achievement, or converted to an ownership entitlement is unresolved and must be decided before implementation. The UI must show all five slots, card identity, acquisition status, trade eligibility and the exact building unlocked.
