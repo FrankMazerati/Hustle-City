@@ -139,3 +139,14 @@ This register captures decisions promoted through the knowledge library. The exi
 - This loop is intended to encourage meaningful time spent exploring venues, discovering people, socializing and negotiating. Do not create needless friction or arbitrary restrictions on ordinary profile inspection.
 - Profile inspection alone does not build trust; relationship and trade safeguards remain in force.
 - **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 28.
+
+
+## 2026-11-24 — Tap-to-identify; no permanent overhead name tags; cross-platform UI
+- **Status:** APPROVED — creator-directed presentation and platform requirement.
+- The default live scene should not show permanent floating name labels above every character. Players identify people by deliberately tapping/selecting them and opening the compact portrait/profile pop-up.
+- Preserve the existing tap-to-inspect flow: inspect identity/stats, chat, invite to sit, invite for a drink or meal, or ask to join a group when context supports it.
+- Tablet is the primary target. Phone and PC are also target platforms; PlayStation and Xbox are possible future platforms.
+- Phone landscape/horizontal presentation is the current design direction to evaluate. Exact orientation policy, safe areas, layout breakpoints and control mapping remain implementation decisions.
+- Use a shared interaction model with adaptive layouts: touch selection on tablet/phone, mouse and keyboard support on PC, and controller focus/navigation for possible future consoles.
+- Do not merely shrink the tablet UI on smaller screens; preserve readable profiles, usable touch targets and reliable selection in crowded scenes.
+- **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 30.
