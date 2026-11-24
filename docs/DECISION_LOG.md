@@ -28,8 +28,11 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
  
 - **City identity system:** The initial expansion plan targets 30 cities. Each city may have distinct local business/venue names and its own character cast and five-card role/title ladder. The underlying five-card low-to-high progression remains recognizable while local names, characters, ages, genders, personalities, biographies and artwork vary by city.
 - **Automotive parent group:** **Hustle Boys Automotive Group** is the creator-approved name. Individual dealerships may have different local names in each city.
+- **Strict city-based card collection:** A player may earn/acquire a new card only while physically present in the in-game city assigned to that card. Activities, poker, packs, daily rewards, wheels, events and other acquisition sources are city-scoped. Eligible player-to-player card trading is permitted anywhere and is the explicit exception. City presence is server-validated.
+- **City Keys:** Each city has its own major City Key milestone, earned by completing that city's configured card/collection requirements. Keys are intended to carry significant bonuses/surprises and unlock configured city-specific business opportunities. Exact thresholds, reward bundles and unlock maps remain to be authored.
 
 ## Working direction
+- City-to-city travel is a core repeatable progression loop: players visit each city to collect its local cards, complete its collections and pursue its City Key. Card trading remains available anywhere.
 - Fictional city draws from Chicago and Miami/Florida but has original geography, names, architecture, landmarks and district identities.
 - Develop/test locally and host live multiplayer in the cloud.
 - Build reusable world-building foundations and expand through validated layers.
