@@ -96,3 +96,12 @@ _Add new entries above this line._
 - **Unresolved proposal:** The creator started a thought about spending real-world money in-app to reach a certain point, but did not finish the mechanic. Keep monetization unapproved until clarified.
 - **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 26.
 - **Source:** Creator conversation, 2026-11-24.
+
+
+### 2026-11-24 — Tap-to-inspect and in-world social action pop-up
+- **Status:** APPROVED
+- **Domain:** player interaction / UI / social / multiplayer / NPC interaction
+- **Creator direction:** Tap a visible character (example: Ebony at the bar) on the tablet touchscreen. Open the person's profile picture and stats in a compact pop-up, with an immediate option to chat. The same interaction should work for someone seated with a group: inspect their profile, invite them to sit with you, or ask to join their group.
+- **Design notes:** Support clear target selection in crowded scenes, compact overlays that preserve scene context, direct chat initiation and contextual social invitations. Invitations require recipient/group acceptance and can be declined or deferred. Apply to NPCs and player characters with their respective agency/privacy rules. Proximity may assist selection but must not trigger actions by itself.
+- **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 27.
+- **Source:** Creator conversation, 2026-11-24.
