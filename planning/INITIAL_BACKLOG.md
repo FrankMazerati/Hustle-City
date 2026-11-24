@@ -111,3 +111,20 @@
 - [ ] Do not require forced 30-minute waits, idle AFK farming or ad-viewing loops; offer meaningful activities during any genuine cooldown and never trap a player waiting to play.
 - [ ] Instrument average daily active hours, session distribution, activity diversity, social participation, progression, chip recovery source, rewarded-ad opt-in/completion, retention, complaints and healthy stopping behavior.
 - [ ] Review whether the 3–4-hour target is being achieved through enjoyment and activity variety rather than excessive interruptions, coercive rewards or unhealthy play pressure.
+
+
+## P9 — Daily return, home/garage upkeep, bills and live event calendar
+- [ ] Create a daily return/check-in surface that summarizes true pending home-care, vehicle-maintenance, weekly-bill, daily-reward and upcoming-event items.
+- [ ] Add state-aware apartment reminders and reversible home-care actions; never send a dirty-home alert if the player's home state does not warrant it.
+- [ ] Add garage reminders for owned vehicles that are actually due for routine maintenance, with clear service actions and reasonably affordable costs.
+- [ ] Show weekly lifestyle package amount, due date, inclusions and fair in-game earning/payment options in a transparent bill reminder.
+- [ ] Preserve ownership and core access: no eviction, car confiscation, permanent asset damage, punitive shutoff or poker/social lockout due to absence or missed bill.
+- [ ] Add daily reward claim and streak/milestone progress to the return surface, with transparent rules and reasonable grace/catch-up.
+- [ ] Draft and test friendly reminder copy such as “Hustle City is missing you. Your garage could use a little attention, and your apartment is ready for a quick refresh. Your weekly lifestyle package is coming due. Come back, collect your rewards, and see what's happening around the city.”
+- [ ] Ensure every reminder is based on actual account state; do not fabricate urgency, maintenance needs, overdue balances or available rewards.
+- [ ] Design a central event calendar for stadium-scale parties/headline events and smaller venue concerts, club nights and social gatherings.
+- [ ] Support event schedules, venue/time details, hosts/performers, RSVP/attendance, friend/crew attendance and recurring/special event programming.
+- [ ] Build event activities for dancing, socializing, conversations, networking, group attendance and card trading where appropriate.
+- [ ] Apply privacy, mutual-consent, moderation, block/report and safety controls to networking; off-platform contact exchange must be voluntary and mutually authorized.
+- [ ] Connect event reminders to in-game inbox and separately consented supported notification channels, with quiet hours, frequency caps, deduplication and unsubscribe controls.
+- [ ] Test the daily return loop for usefulness and enjoyment; ensure reminders invite players back rather than shame or pressure them.
