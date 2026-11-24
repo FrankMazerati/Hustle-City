@@ -15,10 +15,22 @@ This is the first executable orchestration layer for the rolling package relay. 
 - Preserves queue state across process restarts.
 - Supports multiple packages in the same database; independent packages can be in progress at different stations.
 
+## Local Ollama worker pilot (new)
+
+The first local worker layer is now available:
+
+- `intellisync/config/model_assignments.json` maps all 17 canonical local roles to the six verified Termux Ollama models. These are initial capability-based assignments, not benchmark-proven rankings.
+- `python -m intellisync.worker list` displays the mapping without calling a model.
+- `python -m intellisync.worker run --agent P01-GEOGRAPHY --task "..." ` invokes one model for one task through the local Ollama HTTP API.
+- Runs are serialized with a filesystem lock, and `keep_alive: 0` asks Ollama to unload the model after the task.
+- Deliverables and a JSONL run record are saved under `data/agent_runs/`.
+
+This is an on-demand single-task worker, not an always-on agent fleet. It has no repository write tools, does not commit code, does not autonomously claim package-relay tasks, and does not activate the 20/5/5 scheduler. Ollama endpoint reachability and model performance must be tested on the Termux device before any worker is treated as verified live.
+
 ## What it does not do yet
 
-- It does not autonomously invoke all 17 local agents. The current local workforce target is SCRIBE, LENS, three QA supervisors and twelve production specialists; ChatGPT is external coordinator, not a local worker.
-- It does not yet run continuous background workers or enforce a global concurrency semaphore.
+- It does not autonomously schedule or continuously invoke the 17 roles. Workers are started manually, one task at a time. The current local workforce target is SCRIBE, LENS, three QA supervisors and twelve production specialists; ChatGPT is external coordinator, not a local worker.
+- It does not yet run continuous background workers or the 20/5/5 production cycle. The worker runner serializes its own invocations with a local lock.
 - It does not connect to Supabase. SQLite is a local starter adapter pending confirmation of the dedicated project.
 - It does not change the existing model router or old manual GitHub pilot.
 - It does not merge code, deploy services, spend money, or activate schedules.
