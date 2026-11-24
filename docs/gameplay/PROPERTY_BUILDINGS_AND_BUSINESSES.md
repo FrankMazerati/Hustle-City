@@ -48,6 +48,22 @@ Apartment/property features may include furnishing, decor, layout packages, stor
 - The beach is excluded from the five-card building collection requirement.
 
 The building registry must distinguish venue ownership, private-room access, apartment tenancy, permanent apartment ownership, business operating rights and individual vehicle ownership as separate entitlement types.
+## 5B. Creator-approved asset ownership versus host-building ownership
+
+The following distinctions are approved direction:
+
+- **Monster Beats:** Monster Beats is a production company. The player does not own its building or the company; the player can own a studio located inside the Monster Beats facility and produce music there.
+- **Upper Level Films / Upper Level studio:** the player can form and operate their own film crew and make movies using the Upper Level studio/production facility. This does not automatically grant ownership of the Upper Level studio building. The exact brand/facility relationship between Upper Level Films and Upper Level Entertainment Studios needs canonical naming confirmation.
+- **Car dealership:** the player can own an individual car lot. Do not conflate the lot with ownership of the entire dealership group or all cars on sale.
+- **Clothing store:** the player can own an individual clothing store.
+- **Yacht:** the player can own an individual yacht. The Hustle City Marina and Yacht Club remains a separate venue and is not granted with yacht ownership.
+- **Hustle Club:** the player can own the Hustle Club venue/business.
+- **Velvet Lounge:** the player can own the lounge venue/business.
+- **Shuffle Club / casino:** the player can earn a private room inside the casino/club, but cannot own the Shuffle Club or casino.
+- **Hustle Towers:** a player may begin as a renter; the five-card collection for a specific apartment unlocks permanent ownership of that apartment.
+
+The entitlement catalogue must distinguish at least: host_building_ownership, studio_unit_ownership, film_crew_operation, car_lot_ownership, clothing_store_ownership, yacht_ownership, venue_business_ownership, private_room_access and apartment_tenancy/apartment_ownership. The five-card reward must point to the correct entitlement ID. Ownership of an asset inside a building never implies ownership of the building itself.
+
 ## 6. Business operations
 A business record should define business_id, building_id, owner_id, managers, business_type, operating_state, hours, staff roles, service catalogue, inventory/stock, upgrade_level, revenue ledger, expenses, event capability and moderation/access policy. Revenue must come from simulated, auditable game activity; do not promise passive income rates until balanced.
 
