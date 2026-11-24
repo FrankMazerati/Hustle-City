@@ -224,3 +224,21 @@ Hustle City requires a universal identity and traceability layer across the game
 
 ### Implementation boundary
 This is an approved product requirement for the architecture and backlog, not a claim that the registry or card issuance system is already implemented. The exact database schema, ID encoding, partitioning/indexing, public-facing reference format and operational tooling are technical design tasks.
+
+
+## 26. World clock, day/night cycle and live weather
+### Player-facing clock and conditions
+- Provide a persistent HUD clock showing the current **in-game** time, with an unambiguous in-game label. Also expose current local in-game weather for the player's district/location.
+- The clock and weather should be easy to check without opening a deep menu; the phone/map may provide expanded detail.
+- In multiplayer, players sharing a world instance see the same authoritative world time and consistent weather state for the same location. Do not let each client independently invent a different time or weather condition.
+### Time-of-day presentation
+- Support dawn, sunrise, morning, noon, afternoon, golden hour, sunset, dusk and night, with smooth transitions to sun angle, sky, ambient light, shadows, reflections, street/building/vehicle lights and venue lighting.
+- NPC routines, traffic patterns, venue activity, event schedules and city ambience may respond to the world clock. These responses should be coordinated with existing NPC schedules and event systems.
+### Weather simulation
+- Support climate-appropriate changing conditions including sunshine, cloud cover, humid haze, rain/showers, thunderstorms and fog. Conditions may vary by district or region where appropriate, rather than forcing one identical weather state across the entire map.
+- Show a concise current-condition label/icon; optionally expose temperature, wind, precipitation intensity and forecast information if useful and supported.
+- Weather can influence environmental presentation, visibility, ambient audio, wet-road reflections and NPC/venue behavior. It must not introduce unfair driving danger, random crashes, damage, asset loss or financial penalties.
+### Decisions required before implementation
+- Choose world-day duration and time acceleration, calendar/date rules, pause/maintenance behavior, server-authoritative synchronization and handling of players in different world instances.
+- Define weather-region boundaries, transition rates, forecast horizon/accuracy, seasonal behavior and whether/when major weather events are scripted.
+- Ensure clock, lighting and weather remain consistent across clients and recover correctly after reconnects or server restarts.
