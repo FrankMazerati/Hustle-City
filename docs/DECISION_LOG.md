@@ -100,3 +100,10 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - **Implementation details still open:** Room dimensions/table count/occupancy, NPC density and performance budget, pathfinding/service routes, spoken dialogue and localization, order/payment timing, animation coverage and staff scheduling.
 - **Canonical specification:** `docs/gameplay/SOCIAL_WORLD_LIFESTYLE_AND_PLAYER_INTERACTION_REQUIREMENTS.md`.
 
+## Flirting, playful banter and social chemistry
+- **Approved creator direction:** Adult NPCs and players should be able to exchange playful, flirtatious banter; female characters can flirt with male players and male characters can flirt with female players.
+- **Approved creator direction:** Social behavior includes smiles, laughter, eye contact, compliments, teasing and expressive conversational gestures.
+- **Approved creator direction:** Light physical gestures such as a shoulder touch may be used when contextually appropriate and welcomed; interactions must respect refusal and social boundaries.
+- **Implementation details still open:** Dialogue variation, personality/context systems, animation/gesture sets, player consent controls, voice and localization.
+- **Canonical specification:** `docs/gameplay/SOCIAL_WORLD_LIFESTYLE_AND_PLAYER_INTERACTION_REQUIREMENTS.md`.
+
