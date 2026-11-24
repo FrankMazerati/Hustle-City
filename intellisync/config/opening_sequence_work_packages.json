@@ -1,0 +1,337 @@
+{
+  "schema_version": "1.0.0",
+  "project": "Hustle City",
+  "workstream": "opening_train_arrival_bella_rose_vertical_slice",
+  "status": "prepared_not_dispatched",
+  "source_documents": [
+    "planning/OPENING_SEQUENCE_PRODUCTION_BRIEF.md",
+    "planning/OPENING_SEQUENCE_AGENT_ASSIGNMENTS.md",
+    "AI/KNOWLEDGE/HUSTLE_CITY_MASTER_CONTEXT.md",
+    "intellisync/config/coordination.json",
+    "intellisync/OVERLAPPING_WORKFORCE_SPEC.md"
+  ],
+  "coordinator": {
+    "id": "ChatGPT",
+    "runtime": "external",
+    "local_agent": false
+  },
+  "schedule": {
+    "mode": "rolling_overlapping_per_agent_package_cycles",
+    "production_seconds": 1200,
+    "independent_qa_seconds": 300,
+    "correction_seconds": 300,
+    "optional_extension_seconds": 600,
+    "dependency_gate": "all_hard_dependencies_must_be_qa_approved",
+    "start_offsets": "scheduler_managed_after_resource_benchmark",
+    "scheduler_enabled": false
+  },
+  "resource_policy": {
+    "logical_agent_slots": 17,
+    "initial_max_concurrent_model_requests": 1,
+    "initial_max_loaded_models": 1,
+    "unload_model_after_task": true,
+    "concurrency_adjustment": "increase one step at a time after tablet benchmark; never treat swap as RAM",
+    "note": "Conservative unactivated starting cap, not final target. Logical agent cycles and QA windows may overlap while the resource broker queues model inference."
+  },
+  "qa_ownership": {
+    "QA-1": [
+      "P01-GEOGRAPHY",
+      "P02-CITY-PLAN",
+      "P03-DISTRICTS",
+      "P04-ARCHITECTURE"
+    ],
+    "QA-2": [
+      "P05-INTERIORS",
+      "P06-TRANSIT",
+      "P07-VEHICLES",
+      "P08-CHARACTERS"
+    ],
+    "QA-3": [
+      "P09-NPC-NAV",
+      "P10-GAMEPLAY",
+      "P11-ONBOARDING",
+      "P12-UNREAL-INTEGRATION"
+    ],
+    "creative_leads": "SCRIBE and LENS require independent QA; ChatGPT assigns a reviewer who is not the author."
+  },
+  "tasks": [
+    {
+      "task_id": "OPEN-SCRIBE",
+      "agent_id": "SCRIBE",
+      "qa_supervisor_id": null,
+      "review_policy": "coordinator_assigns_independent_qa",
+      "parallel_group": "creative_foundation",
+      "title": "Opening narrative and Bella Rose direction",
+      "deliverables": [
+        "planning/deliverables/opening_narrative_beat_sheet.md",
+        "planning/deliverables/bella_rose_dialogue_and_tour_states.md"
+      ],
+      "hard_dependencies": [],
+      "acceptance_criteria": [
+        "Preserves approved opening beats and player-control lock",
+        "Defines short and full tour branches with Hustle Towers mandatory first stop",
+        "Bella dialogue matches approved personality and is tied to visible scene action",
+        "Marks unresolved destination names and canon questions instead of guessing"
+      ]
+    },
+    {
+      "task_id": "OPEN-LENS",
+      "agent_id": "LENS",
+      "qa_supervisor_id": null,
+      "review_policy": "coordinator_assigns_independent_qa",
+      "parallel_group": "creative_foundation",
+      "title": "Opening cinematic shot and camera plan",
+      "deliverables": [
+        "planning/deliverables/opening_cinematic_shot_list.md"
+      ],
+      "hard_dependencies": [],
+      "acceptance_criteria": [
+        "Covers rain-window opening, train approach, skyline reveal, station, Bella, Towers and tour",
+        "Specifies shot intent, camera movement, transitions and approximate timing",
+        "Maintains cinematic/guided control until introduction ends",
+        "Coordinates camera beats with SCRIBE narrative beats"
+      ]
+    },
+    {
+      "task_id": "OPEN-P01",
+      "agent_id": "P01-GEOGRAPHY",
+      "qa_supervisor_id": "QA-1",
+      "parallel_group": "world_foundation",
+      "title": "Rainy rail corridor and city-arrival geography",
+      "deliverables": [
+        "world/opening_arrival_geography.md"
+      ],
+      "hard_dependencies": [],
+      "acceptance_criteria": [
+        "Defines fictional approach corridor, terrain, water and weather profile",
+        "Identifies skyline sightlines and station arrival envelope",
+        "Uses approved scale/coordinate conventions or flags missing values",
+        "Does not invent final city dimensions or map positions"
+      ]
+    },
+    {
+      "task_id": "OPEN-P02",
+      "agent_id": "P02-CITY-PLAN",
+      "qa_supervisor_id": "QA-1",
+      "parallel_group": "world_foundation",
+      "title": "Station-to-city masterplan and arrival route",
+      "deliverables": [
+        "world/opening_station_to_towers_route_plan.md"
+      ],
+      "hard_dependencies": [],
+      "acceptance_criteria": [
+        "Places station, arrival district and Hustle Towers within approved geography",
+        "Documents route continuity and skyline composition",
+        "Preserves Hustle District and Trapper District identities",
+        "Flags unresolved boundaries or map placements"
+      ]
+    },
+    {
+      "task_id": "OPEN-P03",
+      "agent_id": "P03-DISTRICTS",
+      "qa_supervisor_id": "QA-1",
+      "parallel_group": "district_design",
+      "title": "Arrival district and neighborhood identity",
+      "deliverables": [
+        "world/opening_arrival_district_design.md"
+      ],
+      "hard_dependencies": [
+        "OPEN-P02"
+      ],
+      "acceptance_criteria": [
+        "Defines arrival district character and neighborhood context",
+        "Preserves upscale Hustle District versus gritty Trapper District contrast",
+        "Provides visual/material/land-use guidance without changing canon",
+        "Identifies venue and destination placement dependencies"
+      ]
+    },
+    {
+      "task_id": "OPEN-P04",
+      "agent_id": "P04-ARCHITECTURE",
+      "qa_supervisor_id": "QA-1",
+      "parallel_group": "built_environment",
+      "title": "Station and Hustle Towers exterior architecture",
+      "deliverables": [
+        "architecture/opening_station_and_towers_exteriors.md"
+      ],
+      "hard_dependencies": [
+        "OPEN-P02",
+        "OPEN-P03"
+      ],
+      "acceptance_criteria": [
+        "Defines station and Towers massing, scale, entrances and exterior envelope",
+        "Includes courtyard and access interfaces for interiors/navigation",
+        "Uses approved world scale and flags unresolved dimensions",
+        "Provides modular asset breakdown and integration anchors"
+      ]
+    },
+    {
+      "task_id": "OPEN-P05",
+      "agent_id": "P05-INTERIORS",
+      "qa_supervisor_id": "QA-2",
+      "parallel_group": "built_environment",
+      "title": "Concierge hall, courtyard and Towers interiors",
+      "deliverables": [
+        "architecture/opening_station_and_towers_interiors.md"
+      ],
+      "hard_dependencies": [
+        "OPEN-P04"
+      ],
+      "acceptance_criteria": [
+        "Covers concierge hall, courtyard dressing, lobby, Bella room and player room",
+        "Defines circulation, furniture, service points and room-booking location",
+        "Matches approved architecture envelope and access points",
+        "Lists asset needs and provenance requirements"
+      ]
+    },
+    {
+      "task_id": "OPEN-P06",
+      "agent_id": "P06-TRANSIT",
+      "qa_supervisor_id": "QA-2",
+      "parallel_group": "rail_arrival",
+      "title": "HIM train, tracks, platform and disembark sequence",
+      "deliverables": [
+        "transport/opening_him_train_arrival_spec.md"
+      ],
+      "hard_dependencies": [
+        "OPEN-P01",
+        "OPEN-P02"
+      ],
+      "acceptance_criteria": [
+        "Uses HIM for intercity arrival and keeps HCTA as separate local network",
+        "Defines train, track, platform, stop and disembark flow",
+        "Coordinates passenger route into concierge hall",
+        "Identifies train/rail assets and integration interfaces"
+      ]
+    },
+    {
+      "task_id": "OPEN-P07",
+      "agent_id": "P07-VEHICLES",
+      "qa_supervisor_id": "QA-2",
+      "parallel_group": "arrival_ambience",
+      "title": "Station access traffic and vehicle ambience",
+      "deliverables": [
+        "transport/opening_station_access_traffic.md"
+      ],
+      "hard_dependencies": [
+        "OPEN-P02",
+        "OPEN-P03"
+      ],
+      "acceptance_criteria": [
+        "Defines station access, curbside and roadside ambience",
+        "Maintains safe automated traffic and pedestrian separation",
+        "Does not invent manual driving as the required travel model",
+        "Documents future transport compatibility"
+      ]
+    },
+    {
+      "task_id": "OPEN-P08",
+      "agent_id": "P08-CHARACTERS",
+      "qa_supervisor_id": "QA-2",
+      "parallel_group": "character_foundation",
+      "title": "Bella Rose and arrival-group character requirements",
+      "deliverables": [
+        "characters/bella_rose_opening_character_spec.md"
+      ],
+      "hard_dependencies": [
+        "OPEN-SCRIBE"
+      ],
+      "acceptance_criteria": [
+        "Defines Bella presentation, rig, animation, facial and gesture requirements",
+        "Defines arriving player-group staging and continuity",
+        "Preserves approved Bella personality and narrative role",
+        "Identifies required character assets and compatibility needs"
+      ]
+    },
+    {
+      "task_id": "OPEN-P09",
+      "agent_id": "P09-NPC-NAV",
+      "qa_supervisor_id": "QA-3",
+      "parallel_group": "guided_movement",
+      "title": "Passenger crowd and Bella guided-route behavior",
+      "deliverables": [
+        "gameplay/opening_crowd_and_bella_guided_navigation.md"
+      ],
+      "hard_dependencies": [
+        "OPEN-P04",
+        "OPEN-P06",
+        "OPEN-P08"
+      ],
+      "acceptance_criteria": [
+        "Defines passenger flow and crowd navigation from train to concierge hall",
+        "Defines Bella escort route to Towers and guided tour path behavior",
+        "Includes stuck-route recovery and safe navigation constraints",
+        "Maintains no player control until introduction/tour completion"
+      ]
+    },
+    {
+      "task_id": "OPEN-P10",
+      "agent_id": "P10-GAMEPLAY",
+      "qa_supervisor_id": "QA-3",
+      "parallel_group": "onboarding_systems",
+      "title": "Room booking and guided-tour interactions",
+      "deliverables": [
+        "gameplay/opening_room_booking_and_tour_interactions.md"
+      ],
+      "hard_dependencies": [
+        "OPEN-P04",
+        "OPEN-P05"
+      ],
+      "acceptance_criteria": [
+        "Defines player room booking and service interactions",
+        "Defines short/full tour selection and destination-by-destination choices",
+        "Tracks toured destinations and skip/revisit behavior",
+        "Keeps movement/camera control locked until introduction completion"
+      ]
+    },
+    {
+      "task_id": "OPEN-P11",
+      "agent_id": "P11-ONBOARDING",
+      "qa_supervisor_id": "QA-3",
+      "parallel_group": "onboarding_systems",
+      "title": "Persistent introduction, tour and start-location state",
+      "deliverables": [
+        "gameplay/opening_onboarding_progression_state.md"
+      ],
+      "hard_dependencies": [
+        "OPEN-SCRIBE",
+        "OPEN-LENS",
+        "OPEN-P09",
+        "OPEN-P10"
+      ],
+      "acceptance_criteria": [
+        "Defines new-player and returning-player paths",
+        "Makes Hustle Towers the mandatory first full-tour stop and default home/start base",
+        "Stores tour completion and revisited destinations",
+        "Unlocks player control only after Bella closes the introduction"
+      ]
+    },
+    {
+      "task_id": "OPEN-P12",
+      "agent_id": "P12-UNREAL-INTEGRATION",
+      "qa_supervisor_id": "QA-3",
+      "parallel_group": "unreal_assembly",
+      "title": "Unreal vertical-slice integration and validation plan",
+      "deliverables": [
+        "engineering/opening_unreal_vertical_slice_integration.md"
+      ],
+      "hard_dependencies": [
+        "OPEN-LENS",
+        "OPEN-P04",
+        "OPEN-P05",
+        "OPEN-P06",
+        "OPEN-P07",
+        "OPEN-P08",
+        "OPEN-P09",
+        "OPEN-P10",
+        "OPEN-P11"
+      ],
+      "acceptance_criteria": [
+        "Defines UE5 project/module/Blueprint/Sequencer integration path",
+        "Lists approved asset inputs and provenance metadata",
+        "Defines a viewable test-map/prototype acceptance checklist",
+        "Includes smoke, performance, packaging and QA evidence requirements"
+      ]
+    }
+  ]
+}
