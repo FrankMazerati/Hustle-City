@@ -75,6 +75,15 @@ Never grant an item solely because the client reports purchase success. Handle p
 All values intentionally TBD: starting Hustle Money, starting Diamonds, starting Poker Chips, daily earn rates, referral payouts, card pack prices, individual card purchase eligibility, upgrade prices, travel fares, limits, bundle contents, taxes/regions, refund rules and premium entitlements.
 
 
+## 9. Login rewards and prize-wheel economy
+- Daily login rewards and seven-day streak bonuses are server-issued economy grants.
+- The standard reward pool includes Hustle Money, Diamonds and Poker Chips. Wings inclusion remains a creator decision; do not assume it is part of the routine daily grant.
+- A separate seven-day completion bonus is granted in addition to the seventh daily reward.
+- A proposed optional daily prize wheel may grant Hustle Money, Diamonds or Poker Chips; Wings only if explicitly approved.
+- Exact quantities, wheel probabilities, reset boundary, missed-day/streak policy and reward calendar remain TBD.
+- The wheel outcome must be server-selected, odds disclosed, and grant idempotent. No paid spin is authorized by this specification.
+- Track daily and weekly currency issuance and compare it with sinks to control inflation.
+
 ## 9. Final creator-confirmed currency definitions
 There are exactly four currencies: **Hustle Money, Diamonds, Wings and Poker Chips**. There is no separate “poker money” balance.
 - Hustle Money: ordinary in-game purchases, goods, services and eligible upgrades.
