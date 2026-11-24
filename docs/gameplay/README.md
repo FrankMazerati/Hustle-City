@@ -10,7 +10,7 @@ This directory is the connected, engine-neutral gameplay specification library. 
 5. [Ownership Card Catalogue and Live Progression](OWNERSHIP_CARD_CATALOGUE_AND_LIVE_PROGRESSION.md) — asset/entitlement catalogue, expandable packs, player levels, stats, reputation, stars and live operations.
 6. [City Identity and Local Business Catalogue](CITY_IDENTITY_AND_LOCAL_BUSINESS_CATALOGUE.md) — city-specific business/venue names, dealership brands, five-card character ladders and the 30-city expansion authoring system.
 7. [Property, Buildings and Business Ownership](PROPERTY_BUILDINGS_AND_BUSINESSES.md) — ownership unlocks, upgrades, operations, club hosting and party permissions.
-8. [Social Network, Sharing and Referrals](SOCIAL_NETWORK_AND_SHARING.md) — feeds, invitations, external share links, referrals, chat, privacy and moderation.
+8. [Social Network, Sharing and Referrals](SOCIAL_NETWORK_AND_SHARING.md) — universal gameplay shareability, generated share artifacts, screenshot-proof verification, one-time sharing rewards, referral attribution, privacy and moderation.
 9. [Cruising, Travel and Events](TRAVEL_CRUISING_AND_EVENTS.md) — destination travel, Diamonds, convoys, cruises, calendars and events.
 10. [Player Commerce and Customization](PLAYER_COMMERCE_AND_CUSTOMIZATION.md) — clothing, accessories, vehicles, apartments and business upgrade flows.
 11. [Gameplay State and Acceptance Tests](GAMEPLAY_STATE_AND_ACCEPTANCE.md) — shared state, transaction invariants, QA scenarios and release gates.
