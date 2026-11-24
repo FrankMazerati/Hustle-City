@@ -9,9 +9,10 @@ The mobility catalogue can include HCTA local rail (elevated, underground and st
 HCTA connects downtown, all six central districts, neighborhoods and outer areas. HIM connects Hustle City with other cities/regions. Outer neighborhoods need HCTA station access and a transfer path to HIM; direct HIM service to every neighborhood is not assumed.
 
 ## 3. Fare rules
-- Basic transport is free or paid with Hustle Money according to the service.
-- Basic transport must never require Diamonds.
-- Diamonds may pay for premium travel options only.
+- Boats and cars use Diamonds under the approved vehicle/marine catalogue, including eligible purchase and upgrade transactions.
+- Flying / air-travel services use Wings.
+- Hustle Money is for ordinary in-game purchases and services, not the default currency for boats, cars or flying.
+- Poker Chips are reserved for poker/table play.
 - Before booking, show destination, service, currency, price, group/seat details, ETA if authoritative, cancellation and failure policy.
 - Reserve then charge atomically. Failed pre-departure service releases/refunds the reservation.
 - Exact Diamond costs, premium tiers, Hustle Money fares and travel catalogue remain TBD.
