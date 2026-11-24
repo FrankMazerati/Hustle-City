@@ -3,9 +3,9 @@
 ## 1. Currency definitions
 | Currency | Meaning | Primary uses | Must not be used for |
 |---|---|---|---|
-| Hustle Money | General in-game cash | Ordinary goods/services, eligible vehicle/property/business upgrades, basic rides where priced | Poker stakes unless explicitly configured; premium-only travel |
-| Diamonds | Premium currency | Premium travel choices and approved premium store goods | Mandatory basic travel or essential social access |
-| Wings | Flyer resource | Approved flyer distribution and promotion uses | Travel or poker/table play |
+| Hustle Money | General in-game cash | Ordinary in-game purchases, services, clothing, jewelry and eligible property/business upgrades | Poker play, flying, and premium boat/car purchases reserved for Diamonds |
+| Diamonds | Premium transport/vehicle currency | Boats and cars, including eligible purchase/upgrade transactions defined by the vehicle and marine catalogues | Poker play, flyer distribution or ordinary everyday in-game purchases |
+| Wings | Flight currency | Flying and approved air-travel/flight services | Flyer promotion, poker/table play or boat/car purchases |
 | Hustle City Poker Chips | Virtual game chips | Poker and approved chip-based table activities | General retail, cash-out or real-world redemption |
 
 No implicit conversion. If conversion is later approved, it needs an explicit exchange screen, rate, limits, cooldown, server transaction and audit record.
@@ -17,6 +17,14 @@ Every transaction records: transaction_id, player_id, currency, signed amount, r
 
 ## 3. Sources and sinks
 Create a creator-approved economy table for every earn/spend source. Candidate sources requiring balancing include gameplay rewards, approved missions/events, referrals, business revenue and platform packages. Candidate sinks include clothing/accessories, ordinary services, eligible upgrades, card packs and premium travel. These are categories, not final reward rates or prices.
+
+## 4. Transport, vehicles and flight
+- **Diamonds** are used for boats and cars, including their approved purchase/upgrade transactions.
+- **Wings** are used for flying / air-travel services.
+- **Hustle Money** is for ordinary in-game purchases and services.
+- Basic transport rules, if any, must be specified separately; do not silently charge Diamonds or Wings for ordinary everyday activity.
+- Quote the exact currency and fare before confirmation; reserve then charge atomically.
+- Exact vehicle/boat prices, flight fares, routes and upgrade costs remain unresolved.
 
 ## 4. Basic and premium travel
 - Basic public transit and ordinary rideshare remain available without Diamonds.
@@ -68,7 +76,13 @@ Never grant an item solely because the client reports purchase success. Handle p
 All values intentionally TBD: starting Hustle Money, starting Diamonds, starting Poker Chips, daily earn rates, referral payouts, card pack prices, individual card purchase eligibility, upgrade prices, travel fares, limits, bundle contents, taxes/regions, refund rules and premium entitlements.
 
 
-## 8. Wings and store terminology
-Wings are a distinct dedicated resource for the flyer system. Diamonds remain the premium travel currency. Hustle Money remains ordinary in-game cash. Hustle City Poker Chips remain virtual poker/table chips. The creator also uses the phrase “poker money”; until clarified, treat it as a display synonym for Poker Chips rather than creating a fifth wallet balance.
+## 9. Final creator-confirmed currency definitions
+There are exactly four currencies: **Hustle Money, Diamonds, Wings and Poker Chips**. There is no separate “poker money” balance.
+- Hustle Money: ordinary in-game purchases, goods, services and eligible upgrades.
+- Diamonds: boats and cars, including approved purchase/upgrade flows.
+- Wings: flying and air-travel services.
+- Poker Chips: actually playing poker and chip-denominated table activities.
+
+Never substitute one currency for another. The full In-App Store, memberships, rewards, ads and owner dashboard are specified in [Hustle Club Memberships and Package Store](HUSTLE_CLUB_MEMBERSHIPS_AND_PACKAGE_STORE.md).
 
 The full Hustle City In-App Store, six candidate Hustle Club monthly price points, one-time currency/item packages, daily login rewards, bar recovery loop, advertising formats, revenue forecasting and owner dashboard are specified in [Hustle Club Memberships and Package Store](HUSTLE_CLUB_MEMBERSHIPS_AND_PACKAGE_STORE.md). Exact benefit quantities, package contents, reward amounts and prices remain subject to creator approval.
