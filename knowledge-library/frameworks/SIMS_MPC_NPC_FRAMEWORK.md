@@ -590,3 +590,33 @@ No agent may independently invent database schemas, network authority or transac
 5. Card discovery can lead directly to conversation and a trade request, while actual transfer requires the normal explicit trade safeguards.
 6. The loop supports repeated voluntary inspection without accidental selection, forced interaction or excessive UI friction.
 7. Ordinary profile browsing is not mistaken for trust-building or used as a basis for relationship rewards; spammy invitations remain controlled.
+
+
+## 30. Tap-to-identify presentation and cross-platform interaction
+**Creator-approved requirement:** Replace persistent floating name labels above characters with player-directed identification through the in-world profile interaction system. The ordinary roaming scene should not display a name tag above every NPC/player by default.
+
+### Visual identification and inspection
+- Characters remain visually readable through their appearance, clothing, animation, position and contextual behavior; names and detailed stats are revealed when a player deliberately selects/taps a person.
+- On touch devices, tapping a visible person opens the compact portrait/profile pop-up already defined in sections 27–29. It exposes the permitted identity and profile information and immediate actions such as Chat, sit/drink/meal invitations and group requests where context permits.
+- Keep the scene visible behind or around the compact overlay where practical. Provide a clear close/back action and a reliable way to select another person.
+- In dense crowds, support unambiguous target selection through touch hit-testing, focus/selection feedback, cycling or an alternate nearby-person selector as appropriate. Do not guess the target or trigger an action merely because someone is nearby.
+- Permanent name tags may remain an accessibility or optional user setting only if later approved; they are not the default presentation direction.
+
+### Cross-platform target and adaptive UI
+- Design for tablet as a primary target, with phone and PC support and possible future PlayStation/Xbox support.
+- Use a shared interaction model and adaptable UI layouts rather than separate incompatible gameplay systems.
+- Tablet and phone use touch selection and compact touch-friendly profile panels. Phone is intended to support a landscape/horizontal presentation as the current design direction; exact orientation policy, safe areas and responsive layout remain to be validated.
+- PC supports mouse selection and appropriate keyboard navigation/shortcuts.
+- Future console support should map the same character-selection, profile-inspection and social-action flow to controller focus/navigation and confirm/back inputs.
+- Adapt profile panel size, readable text, target-selection affordances and scene framing to each screen size and input method. Avoid simply shrinking the tablet interface until text and touch targets become unusable.
+- The game should preserve the same underlying player/NPC identity, profile visibility, relationship, invitation and trade rules across platforms.
+
+### Acceptance criteria
+1. The default roaming scene does not place a permanent name label above every character.
+2. A player can deliberately tap/select a visible person and reveal their identity/profile through the compact pop-up.
+3. The player can inspect multiple people in succession without navigating away from the live scene.
+4. Crowded scenes provide clear target-selection feedback and do not select the wrong person silently.
+5. Tablet, phone and PC use the same core interaction behavior with layouts and controls adapted to their input and display.
+6. The interaction model is designed so future controller-based console support can use the same profile and social-action flow.
+7. Profile visibility, blocks, consent/recipient agency, moderation and trade safeguards remain consistent across platforms.
+8. Phone landscape is evaluated as the intended presentation, with final orientation and responsive behavior validated during UI/platform design.
