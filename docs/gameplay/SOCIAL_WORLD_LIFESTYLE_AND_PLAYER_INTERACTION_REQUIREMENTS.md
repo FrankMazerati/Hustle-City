@@ -483,3 +483,27 @@ The creator explicitly requires the following to be playable in the initial rele
 **Phased rollout remains in effect for the rest of the city:** The creator's launch requirement above identifies signature locations and systems that must be included from the start. Other businesses, buildings, blocks, neighborhoods, services and attractions can still be activated in later waves and may be visibly marked Coming Soon until ready. The initial playable map should connect the required locations into a coherent usable experience; do not interpret the phased rollout approach as permission to postpone any item in the creator-approved list above.
 
 **Scope still to define:** Detailed acceptance criteria and service depth for each named destination; exact launch map boundaries and connections; NPC staffing; business inventories and activities; beach activities; car/yacht-club feature sets; Hustle Towers' full functional program; the number and selection of playable houses per neighborhood; vehicle roster and acquisition; airport operations/routes; and the two stations' route/service coverage. These implementation details do not weaken the approved requirement that each listed location/system be playable at initial launch.
+
+## Creator direction — player condition, food routines and social relationships
+### Food, health and energy — required gameplay direction; detailed model remains open
+
+- Players should be able to purchase food and drinks from restaurants, convenience stores/gas stations and other appropriate businesses, and eat at suitable locations including their own houses.
+- Food should have a gameplay purpose: helping maintain or restore the player's condition so the character can continue participating in city life. At poker tables, the previously approved direction is that players buy food and drinks with **Hustle Money**, not Poker Chips, and different menu items have different prices and restoration effects.
+- Character activity should matter. Extended poker sessions, substantial walking, traveling between destinations and other sustained activities may deplete energy/condition over time, creating a reason to take breaks, eat, drink or rest.
+- The creator is considering a realistic meal routine (for example, two or three meals across a day), but does **not** want the system to become excessive or turn ordinary play into constant maintenance. Treat meal frequency, hunger/energy decay and any daily schedule as unresolved design parameters, not fixed rules.
+- Eating at home should be supported as an alternative to buying every meal outside. Restaurant and grocery/convenience purchases should be useful choices, not mandatory chores.
+- Keep the distinction between **health**, **energy/stamina**, **hunger/nutrition** and any other condition meters unresolved until the system is designed together. Do not silently assume food restores health rather than energy, or that sleep is the only energy recovery method. The existing approved poker-table food/drink spending direction must be preserved while this model is resolved.
+- Avoid punishing players for being offline, missing a real-world meal schedule or choosing to focus on social activities. The system should encourage believable routines without requiring real-time three-meals-a-day attendance.
+- Exact meters, thresholds, decay rates, activity costs, meal timing, item effects, recovery rates, safe-state behavior and balancing remain TBD.
+
+### Relationships, friends and social circles
+
+The creator has directed that the social world support player relationships and a broader social network, including:
+- A player may have a **girlfriend or boyfriend / romantic partner** and a supported in-game love-life/relationship experience.
+- A persistent **friends list** for player connections.
+- Distinct social-circle concepts such as **close homies** and **associates**, rather than treating every contact as the same relationship level.
+- **Crews** remain an established group/social structure and should connect with the friends and social-circle systems without being conflated with an individual friendship or romantic relationship.
+
+These are required social-world directions. The exact relationship progression, mutual-consent/acceptance flow, privacy and visibility settings, breakup/block/report tools, relationship status display, group permissions, benefits (if any), NPC relationship scope, and moderation/safety rules remain to be designed. Do not invent romance bonuses, exclusivity rules, marriage, shared property or other relationship mechanics without creator approval.
+
+The social architecture should support clear player control: relationship invitations and status changes should be consensual, reversible and protected by privacy/blocking controls. No player should be forced into a romantic or social interaction.
