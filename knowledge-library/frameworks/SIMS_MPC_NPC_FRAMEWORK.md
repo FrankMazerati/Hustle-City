@@ -525,3 +525,35 @@ No agent may independently invent database schemas, network authority or transac
 4. Meaningful social communication may contribute to experience/star progression, but spam and repetitive low-value interactions do not.
 5. Star/level progression is distinct from another player's trust, familiarity, consent and trade decisions.
 6. Any real-money progression mechanic remains unimplemented until separately specified and explicitly approved.
+
+
+## 27. Tap-to-inspect profiles and contextual social actions
+**Creator-approved requirement:** Players should be able to directly select another visible character in the world using the tablet/touchscreen interface, inspect that character's profile and immediately choose a social action from a compact on-screen profile pop-up. This interaction should work for player characters and named NPCs, using the appropriate profile and relationship information for each.
+
+### Selecting and inspecting a character
+- A player can tap a visible person in the world (for example, Ebony at the bar or someone seated with a group) to select them. Proximity-based interaction may also surface an interaction prompt or make nearby characters easier to select; the exact input/targeting behavior remains an implementation detail.
+- Selection opens a compact profile pop-up with the character's profile picture/portrait, display name and useful approved status/profile information. It can provide access to the fuller profile without forcing a full-screen navigation away from the live scene.
+- The player can inspect stats and visible profile details, then act directly from the same pop-up. Keep the scene context visible where practical and avoid covering too much of the gameplay view.
+- When several characters are close together (such as a seated group), targeting must make it clear who is selected. Provide a way to dismiss the pop-up or select another person. Do not trigger actions merely because a character is nearby or was accidentally tapped.
+
+### Contextual actions from the profile pop-up
+- **Chat:** A visible Chat action opens a conversation with the selected character. For another player, this can initiate a direct chat/invitation; the recipient's privacy, availability, block and acceptance settings apply. For an NPC, the conversation uses that NPC's personality, schedule, current context, relationship history and boundaries.
+- **Invite to sit with me:** The player can invite the selected person to come sit with them, where seating and scene conditions support it. The recipient can accept, decline or defer; an accepted invitation should coordinate a suitable seat/arrival rather than teleporting or overriding agency.
+- **Ask to join their group:** The player can ask to join the selected character's current social group. The group/host and relevant members or group rules can accept, decline or defer according to the social context. The player should not be inserted into a group without the appropriate acceptance.
+- Additional contextual actions may appear only when valid for the target and situation. Do not show impossible actions (for example, sitting invitations where no suitable seating exists).
+- The same profile surface should allow the player to review the target's visible profile/stats before choosing whether to chat, invite or request to join. It should not imply that profile inspection grants access or consent.
+
+### Social interaction and agency
+- Requests and invitations are explicit social actions, not forced movement or automatic relationship changes. Recipients retain agency and can ignore, decline or defer without penalty.
+- Respect player privacy, blocks, mute settings, availability, safety/moderation controls and NPC boundaries. Repeated unwanted requests should be rate-limited or otherwise controlled.
+- Chat initiated from the pop-up feeds the existing conversation and relationship systems. Meaningful reciprocal communication may contribute to social progression under section 26, while pair-specific familiarity and trust remain separately evaluated.
+- NPCs and player characters can be engaged in different contexts—at a bar, seated alone, or socializing with a group—while preserving the character's current activity and social context.
+
+### Acceptance tests
+1. Tapping a visible character selects the intended target and opens their portrait/profile pop-up.
+2. The pop-up exposes useful profile information and a direct Chat action without requiring a separate profile-screen navigation.
+3. The player can send an invitation to sit together when a suitable seat/context exists; the recipient can accept, decline or defer.
+4. The player can ask to join an existing group; the group/host can accept, decline or defer, and no automatic insertion occurs.
+5. Tapping one person in a close group does not accidentally select another; the selected target is clear and the pop-up can be dismissed.
+6. NPC responses reflect their personality, schedule, current activity, relationship and boundaries; player-to-player requests respect privacy and availability controls.
+7. Chat/invitations do not automatically grant trust, familiarity, consent or social access. Repeated unwanted requests are controlled.
