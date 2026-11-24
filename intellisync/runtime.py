@@ -180,6 +180,33 @@ class IntelliSync:
                                {"station_id": station_id, "attempt": run["attempt"]})
             con.commit()
 
+    def release_failed_claim(self, run_id: str, agent_id: str, reason: str) -> bool:
+        """Return a failed in-progress run to the ready queue without losing it."""
+        with self._connect() as con:
+            con.execute("BEGIN IMMEDIATE")
+            run = con.execute(
+                "SELECT package_id,station_id,agent_id,status FROM station_runs WHERE run_id=?",
+                (run_id,)
+            ).fetchone()
+            if not run or run["agent_id"] != agent_id or run["status"] != "in_progress":
+                con.rollback()
+                return False
+            now = utc_now()
+            con.execute(
+                "UPDATE station_runs SET status='ready',started_at=NULL WHERE run_id=?",
+                (run_id,)
+            )
+            con.execute(
+                "UPDATE packages SET status='ready',updated_at=? WHERE package_id=?",
+                (now, run["package_id"])
+            )
+            self._record_event(
+                con, run["package_id"], "station_claim_released", agent_id,
+                {"run_id": run_id, "station_id": run["station_id"], "reason": reason}
+            )
+            con.commit()
+            return True
+
     def submit(self, package_id: str, station_id: str, agent_id: str,
                output_text: str, event_key: str | None = None) -> None:
         if not output_text.strip():
