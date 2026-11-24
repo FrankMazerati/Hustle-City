@@ -63,6 +63,17 @@ Server-authoritative: balances, ledger, paid entitlements, card ownership, pack 
 - All reward grants create auditable ledger entries and update the corresponding separate wallet.
 - Reward schedules and wheel pools are versioned and can be rolled back without altering already-earned grants.
 
+
+## Venue collection and property progression acceptance
+- Each configured building/venue collection has exactly five ranked card slots and a stable target/collection mapping.
+- Completing a set grants only its configured entitlement; it cannot accidentally grant venue ownership, casino operation, all vehicles at a dealership or all boats at a marina.
+- A new Hustle Towers player can be represented as an apartment tenant; completing the correct apartment-specific five-card set unlocks a permanent ownership claim for that apartment.
+- Rental state and permanent ownership state remain distinct across reconnects and devices; rent terms and expiry behavior are explicit configuration, not inferred.
+- Shuffle Club remains a shared venue and is never granted as player-owned property. Its configured card collection can grant private-room access only. Casino remains an experience inside the Shuffle Club unless separately approved as a distinct collection (not a separate building by default).
+- Velvet Lounge collection completion does not grant an unspecified reward; the system blocks publishing an unapproved completion entitlement.
+- Marina/yacht-club venue collection and dealership collection are separate from individual boat and car collections.
+- Beach has no five-card building ownership collection.
+
 ## 5. QA evidence required
 For each feature, retain test ID, build/version, account fixtures, setup, action, expected result, actual result, server log/transaction reference, pass/fail and defect link. QA supervisors must independently verify economy, card/ownership and social privacy boundaries.
 
