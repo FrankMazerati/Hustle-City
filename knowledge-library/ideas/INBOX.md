@@ -181,3 +181,13 @@ _Add new entries above this line._
 - **Presentation:** Attendants should recognize players naturally and never mention hidden codes, database records or technical memory systems.
 - **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 36.
 - **Source:** Creator conversation, 2026-11-24.
+
+### 2026-11-24 — Player profile balances and visual card-collection discovery
+- **Status:** APPROVED
+- **Profile fields:** When a player is tapped, show their visible in-game money, stars, poker chips, level, rank, neighborhood and crew. Keep these as distinct authoritative game values.
+- **Cards:** Show the player's visible owned trading-card collection and quantities/duplicates. Clearly separate owned cards from explicitly trade-listed cards. A shared wishlist/needed-card list can reveal what the player is seeking.
+- **Gameplay purpose:** Let players visually discover who has cards they need and who may want cards they own, encouraging natural conversation and negotiation at tables and venues instead of repeatedly asking everyone.
+- **Trade safety:** Inspection is informational only; it does not reserve or transfer anything. Actual trades require explicit offer, acceptance, final confirmation and ownership validation.
+- **Visibility:** Respect profile/inventory visibility settings; never expose real-world payment or account credentials, or unshared wishlist/hidden inventory.
+- **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 37.
+- **Source:** Creator conversation, 2026-11-24.
