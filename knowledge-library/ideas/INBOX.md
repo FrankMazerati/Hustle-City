@@ -191,3 +191,14 @@ _Add new entries above this line._
 - **Visibility:** Respect profile/inventory visibility settings; never expose real-world payment or account credentials, or unshared wishlist/hidden inventory.
 - **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 37.
 - **Source:** Creator conversation, 2026-11-24.
+
+### 2026-11-24 — Device-native phone, tablet and PC gameplay
+- **Status:** APPROVED
+- **Phone direction:** A tap-driven experience suited to the small screen. Players should be able to choose a destination/activity and tap to go there for ordinary city navigation, rather than having to manually navigate every trip in a small live view.
+- **Hands-on gameplay:** Poker remains a real playable activity on the phone: players see their hand, play their cards and make decisions throughout the hand using touch-friendly controls. Mobile activities should use focused interaction surfaces rather than becoming passive result screens.
+- **Tablet direction:** Tablet remains the primary design target, offering a larger view of the living city and richer exploration, profile, social and activity interfaces.
+- **PC direction:** Use the larger display and mouse/keyboard for an expanded interface while keeping the same game rules and persistent world.
+- **Cross-platform rule:** Adapt each layout and interaction model to its device; do not merely shrink the tablet UI for phone. Keep world state, identity, progression, inventory and game rules consistent.
+- **Still open:** Phone orientation, camera, travel transitions, detailed controls for activities beyond poker, and responsive breakpoints.
+- **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 38.
+- **Source:** Creator conversation, 2026-11-24.
