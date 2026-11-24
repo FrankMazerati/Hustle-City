@@ -166,3 +166,38 @@ No agent may independently invent database schemas, network authority or transac
 - Simulation budgets, persistence intervals, server authority and network replication details.
 - Exact database schema, APIs, job marketplace/employer economy and wages.
 - “MPC” meaning and scope, pending creator clarification.
+
+
+## 14. NPC wardrobe, fashion identity and 30-day outfit rotation
+**Creator-approved requirement:** Every Sim/NPC represented in the population has a substantial, individually assigned wardrobe capable of supporting approximately one month of varied outfits. This is a wardrobe-content and rotation target, not a requirement to render or load every garment simultaneously.
+
+### Individual wardrobe ownership
+- Each person has a persistent wardrobe profile linked to their stable NPC instance ID. Garment definitions use catalog/type IDs and each owned/assigned garment instance uses the universal item identity rules where instance tracking is needed.
+- Build enough complete outfit combinations for roughly 30 days of distinct looks per Sim, using a scalable mix of complete outfits, interchangeable garments, accessories and role uniforms. Avoid making every NPC wear a unique hand-authored full outfit if modular combinations can provide variety without obvious repetition.
+- Wardrobes should reflect character identity, occupation, income/lifestyle, personality, neighborhood, age-appropriate presentation, personal taste and weather. Keep a character recognizable across outfit changes.
+- Support everyday casualwear, workwear/uniforms, business attire, upscale eveningwear, nightlife looks, beach/swimwear, athletic/leisure clothing, sleepwear/homewear and cold/rain/snow clothing as relevant to the character and world.
+- Rotate outfits by day, activity, venue, work shift, event, weather and season. Reuse should be managed to avoid the same nearby crowd appearing in identical outfits; exact rotation cadence and wardrobe inventory size remain implementation/budget decisions.
+
+### Venue and occupation dress codes
+- Casino and shuffle-club staff should have polished, coordinated, upscale uniforms appropriate to their job: host/hostess, dealer, cashier, bartender, server, concierge, doorman and valet each need a recognizable role-appropriate look.
+- Adult casino guests and nightlife patrons may wear glamorous, fashionable, sexy upscale eveningwear, including fitted dresses, short dresses/skirts, low-cut or open-neckline designs, heels and statement jewelry. Keep designs within the game's approved age rating and platform rules; no explicit nudity or sexualized depiction of minors.
+- Beach and waterfront venues support swimwear, resortwear, cover-ups, sandals, sunglasses and relaxed luxury fashion appropriate to the location.
+- Restaurants, bars, rooftops, yacht clubs, concerts and private events each have a style range matching the venue's atmosphere, from casual to premium/formal.
+- Neighborhood/street fashion should be distinct and authentic to each district, including fashionable streetwear and nightlife looks, without reducing communities to stereotypes or assigning clothing based on protected traits.
+- Player characters should have comparable outfit categories and customization depth, subject to the player's owned/unlocked items and the same content/rating rules.
+
+### Wardrobe operations and visual continuity
+- Define outfit selection rules, outfit presets, layering, garment compatibility, body/rig fit, footwear, accessories, seasonal storage and outfit-change locations/animations.
+- NPCs should dress for their shift and change into/out of work uniforms where appropriate; off-duty looks should differ from work attire.
+- Weather-aware selection should consider rain, heat, cold and occasional snow. Avoid inappropriate winter clothing on a hot beach or swimwear during a formal indoor shift unless the context supports it.
+- Coordinate with P08 character systems, P03 district identity, P04/P05 venue design, P09 NPC schedules/jobs, P10 interactions/events and P12 asset pipeline. Clothing assets must be catalogued, licensed/original, optimized and validated for clipping and animation compatibility.
+
+### Deliverables and acceptance
+- Wardrobe category taxonomy and garment catalog standards.
+- Venue/occupation dress-code matrix and style guides.
+- NPC wardrobe profile and 30-day outfit rotation specification.
+- Modular outfit combination, repetition avoidance and weather/season selection rules.
+- Role uniform sets for launch-critical casino, hospitality, transport and service jobs.
+- QA proving adult NPCs vary their outfits across a representative month, staff dress appropriately for shifts, beach/nightlife/restaurant looks match context, characters remain recognizable, and garments fit rigs/animations without severe clipping.
+
+**Open design details:** exact garment counts per category, number of unique authored assets versus modular combinations, outfit repetition window, body/rig compatibility standards, monetization/unlock rules and final rating boundaries require separate content and technical planning. Do not assume premium fashion must be paid-only; basic wardrobe variety and role uniforms are part of a believable living city.
