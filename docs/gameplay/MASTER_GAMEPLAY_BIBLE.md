@@ -9,6 +9,18 @@ Hustle City is a persistent cinematic realistic 3D social-world / city-life game
 
 The game must support both active play and social presence: a player can be at a venue, cruising with a crew, hosting an event, collecting cards, shopping, or simply checking feeds and responding to invitations.
 
+
+## Property progression clarification: five-card collections and venue-specific rewards
+
+Each configured building/venue collection uses five ranked cards. Completing a collection grants only its explicitly configured reward; it does not automatically grant ownership of the whole venue.
+
+- Hustle Towers: players may begin by renting an apartment; completing that apartment's five-card collection unlocks permanent ownership of that specific apartment.
+- Shuffle Club (with the casino inside): the club and casino are not player-owned. A five-card collection may unlock a private room inside the club. Whether the casino has a separate collection or shares the club set remains TBD.
+- Velvet Lounge: five-card collection; completion privilege TBD.
+- Other configured venues—including Hustle Club, Hustle City Marina and Yacht Club, American Swagger Clothing, the car dealership, Upper Level Entertainment Studios, Upper Level Films and Monster Beats—need their own five-card mappings and explicitly approved completion rewards.
+- Venue collections are separate from individual car and boat collections. The beach is excluded.
+
+Keep renting, permanent apartment ownership, private-room access, venue ownership, business operation and individual vehicle ownership as distinct game entitlements. Do not invent rent prices, card rank titles, collection contents or completion rewards.
 ## 2. Player lifecycle
 1. **Discover and join:** player arrives through the opening experience, creates a character/profile and username, accepts terms and configures privacy.
 2. **Establish identity:** profile, avatar, wardrobe, optional crew affiliation, friends and social preferences.
