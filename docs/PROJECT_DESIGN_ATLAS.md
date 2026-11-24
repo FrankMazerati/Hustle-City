@@ -69,3 +69,22 @@ Hustle City is the gateway into a broader expandable universe. Player obtains a 
 
 ## 14. Creator Studio and operations
 Secure Creator Studio should manage vehicle packs, clothing, buildings, characters, crews, neighborhoods and events through create/import/preview/test/approve/publish. Global operations dashboard manages players, content, campaigns, staff roles, permissions, metrics and audit logs.
+
+
+## 15. Everyday lifestyle costs and vehicle ownership (design direction)
+- Hustle City should be able to represent ordinary lifestyle responsibilities such as housing, vehicle ownership, insurance, fuel, phone service and maintenance.
+- Candidate vehicle paths include outright ownership and financing/car-note arrangements. Candidate housing paths include renting and owning.
+- The creator raised the risk that separate recurring bills could make the experience feel like a second job. The design must therefore prioritize a low-friction, simplified default rather than requiring players to micromanage many bills.
+- A bundled recurring lifestyle payment covering selected ordinary expenses is a candidate default. Optional itemized/detail management may be explored for players who want it. Neither the bundle contents, payment cadence, prices, missed-payment consequences nor final level of detail are approved.
+- Gas/fuel may be represented as a lightweight ownership/use cost; decide whether it is automatically included, simplified, or separately managed before implementation.
+- Vehicle insurance is a candidate ownership/service system. Avoid designing random crashes merely to create insurance claims.
+- Traffic and vehicle simulation should prioritize predictable, safe behavior and collision avoidance. If a collision occurs because of a simulation or pathfinding fault, recovery must protect player-owned vehicles and possessions; do not punish players for system defects.
+- Vehicle maintenance and insurance should not create pay-to-win advantages or block access to core social/poker experiences. Detailed costs, coverage, claim flows and ownership rules remain unresolved.
+
+## 16. In-world mobile phone and communication
+- Players should have a visible, usable in-world cellphone.
+- A player can physically pull out/look at the phone while walking or standing, open a phone interface, select a contact and text/message another player.
+- Phone interactions should support the established player-to-player communication system, with appropriate notification and conversation state.
+- The phone is both a diegetic character prop/animation and an interface entry point; it should not require the player to leave the city world or permanently replace the main HUD.
+- Exact calling/voice features, phone models, apps, contact permissions, message delivery rules, UI layout and animation scope remain to be designed.
+- Phone communication must respect existing social safety requirements, including blocking, reporting, privacy and unwanted-contact protections.
