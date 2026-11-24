@@ -49,3 +49,12 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - **Approved design goal:** Balance membership value against gameplay earning and optional individual purchases. Do not over-grant currency or make paid membership necessary for core progression.
 - **Unresolved:** Billing cadence, exact currency quantities and tier allocations, daily reward amounts/streak rules, card acquisition methods, store catalog/prices and Poker Chip monetization.
 - Canonical specification: `docs/economy/MEMBERSHIPS_AND_REWARDS.md`.
+
+## Live entertainment, sports and music
+- **Approved direction:** Hustle City should support social entertainment as part of the living world, including venues where players can gather, socialize and enjoy events.
+- **Approved direction:** Build fictional sports broadcasts and shared in-world watch parties first, using original Hustle City basketball/football content. Real-world NBA, NFL and other sports broadcasts are a later phase, after the game is built and has an active player base, and only after the required rights and distribution agreements are secured.
+- **Approved direction:** Real-world music by real artists is intended from the outset; music is part of the world experience (for example, clubs, lounges, bars, vehicles and events), not only a separate menu player. Use only music with the appropriate rights cleared for the intended game uses.
+- **Approved experience direction:** DJ sets/music events, nightclubs/lounges, sports bars with screens and watch parties, and potential concert/performance venues.
+- **Unresolved:** Specific artists, tracks, labels/publishers, rights agreements, licensing budget, venue names/locations/counts, radio/playback design, event schedules, fictional team/league identities, match simulation/broadcast details and implementation scope.
+- Rights for compositions and sound recordings, territories, platforms, term, interactive playback, marketing, player streams/clips and other uses must be reviewed and secured as applicable. Consumer music subscriptions are not game-use licenses.
+- Canonical specification: `docs/gameplay/LIVE_ENTERTAINMENT_SPORTS_AND_MUSIC.md`.
