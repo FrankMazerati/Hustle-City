@@ -201,3 +201,31 @@ No agent may independently invent database schemas, network authority or transac
 - QA proving adult NPCs vary their outfits across a representative month, staff dress appropriately for shifts, beach/nightlife/restaurant looks match context, characters remain recognizable, and garments fit rigs/animations without severe clipping.
 
 **Open design details:** exact garment counts per category, number of unique authored assets versus modular combinations, outfit repetition window, body/rig compatibility standards, monetization/unlock rules and final rating boundaries require separate content and technical planning. Do not assume premium fashion must be paid-only; basic wardrobe variety and role uniforms are part of a believable living city.
+
+
+## 15. Initial named population roster — 10,000 Sims
+**Creator-approved starting scale:** Begin with a planned population roster of 10,000 individually named Sims/NPCs, organized and authored/imported in manageable batches of 10,000-person population cohorts as the world expands. The initial cohort target is 5,000 men and 5,000 women, with varied ages, skin tones, racial/ethnic backgrounds, appearances, body types, fashion, personalities, occupations and lifestyles. The 10,000-person roster is a content/population target, not a demand to render every person simultaneously.
+
+### Every person is an individual
+- Every Sim in the roster must have a stable unique person instance ID and a distinct, usable display name. Names should be culturally varied and plausible for the character's chosen background, while avoiding accidental duplicate full names within the active roster where practical.
+- Each profile includes an age or age band, gender presentation where relevant to the approved character design, appearance/skin-tone palette, style/swagger profile, occupation/function, home/work anchors, schedule, wardrobe, personality and routine. Exact age distribution and demographic mix remain to be designed; do not invent fixed percentages without creator approval.
+- The creator's initial population composition target is 5,000 men and 5,000 women. This is a starting content target, not a rule that every future population expansion must preserve that exact ratio.
+- Represent a broad, respectful range of racial/ethnic backgrounds and skin tones. Diversity is intentional world population design, not a gameplay stat.
+- Race, ethnicity, skin tone, gender or age must not determine a character's intelligence, morality, income, criminality, job qualification, dialogue quality, personality, social status or behavior. Build individual personalities and life circumstances independently; avoid stereotypes and caricatures.
+- Give each person recognizable swagger/style through clothing, grooming, posture, accessories, voice/dialogue style and behavior preferences. Do not reduce identity to appearance alone.
+
+### Population batch management and updates
+- Treat the initial 10,000 as a versioned roster/cohort that can be added to, corrected or expanded in later batches. Each batch needs a manifest, unique ID range/namespace allocation, count reconciliation, duplicate checks and validation before integration.
+- Adding a batch must never regenerate or overwrite existing identities. Names, jobs, ages or appearances may be corrected through versioned profile updates while the stable person ID remains unchanged.
+- Track roster totals by approved, non-sensitive content dimensions for production validation (e.g. age bands, gender presentation, broad visual diversity, occupation coverage) without exposing demographic profiles as player-facing rankings or using them to drive discriminatory outcomes.
+- Maintain population distribution across neighborhoods, workplaces, businesses, venues, households, commuting routes and day/night schedules so the city feels occupied at different hours—not 10,000 people concentrated in one place.
+- Ensure visible crowd density is plausible for each district, venue capacity, time of day and event. Background residents continue their abstract routines when not visible; when a player returns, familiar named people can reappear with continuity.
+
+### First roster production deliverables
+1. A 10,000-person roster plan and cohort manifest, targeting 5,000 men and 5,000 women.
+2. A culturally varied name-generation/curation standard and duplicate-name audit.
+3. A creator-reviewed age-band and broad representation plan; exact distribution percentages remain open.
+4. Individual profile fields for name, stable ID, age, appearance/skin tone, style/swagger, personality, occupation, home/work, schedule and wardrobe.
+5. A job and neighborhood distribution plan aligned with business staffing and city activity needs.
+6. Batch import/update validation: unique IDs, name checks, required-field completeness, occupation assignment, schedule validity, and no overwriting of existing people.
+7. Crowd and return-visit tests demonstrating that the city feels inhabited and that named Sims retain identity across player sessions.
