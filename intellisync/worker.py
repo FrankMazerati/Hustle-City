@@ -48,7 +48,13 @@ def load_agent(agent_id: str):
 
 def build_prompt(agent_id: str, role: dict, assignment: dict, task: str) -> str:
     context = MASTER_CONTEXT.read_text(encoding="utf-8") if MASTER_CONTEXT.exists() else ""
-    prompt_pack = PROMPTS.read_text(encoding="utf-8") if PROMPTS.exists() else ""
+    prompt_pack = ""
+    if PROMPTS.exists():
+        full_prompt_pack = PROMPTS.read_text(encoding="utf-8")
+        start = full_prompt_pack.find("## Universal base prompt")
+        end = full_prompt_pack.find("## Role-specific directives", start)
+        if start >= 0:
+            prompt_pack = full_prompt_pack[start:end if end > start else len(full_prompt_pack)]
     responsibilities = role.get("responsibilities", [])
     if isinstance(responsibilities, list):
         responsibilities = "\n".join(f"- {item}" for item in responsibilities)
