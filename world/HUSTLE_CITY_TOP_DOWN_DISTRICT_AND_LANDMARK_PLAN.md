@@ -325,3 +325,43 @@ The Diamond District is the downtown landmark center and must plan for the follo
 Treat each as a distinct landmark/destination in the downtown master-planning inventory. The stadium concepts are four separate sports venues, not one interchangeable arena. Give them meaningful site presence, public approaches, pedestrian/crowd space and connections to the city transport network. Include active NPC life around them and preserve room for future game-day events and expanded player interactions.
 
 Exact parcel placement, building names/final fictionalized identities, stadium design/capacity, team and league licensing, sports gameplay, event schedules and launch phasing remain unresolved. The Chicago references are visual/worldbuilding direction, not permission to copy protected marks or claim official affiliation. Do not invent exact locations or coordinates before the downtown plan is reviewed.
+
+
+## 14. Creator correction — Transportation District, Financial District and district color system (2026-11-24)
+
+This section is the latest creator direction and supersedes the older statement in section 8 that Transportation is not a district.
+
+### Seven official districts
+1. Entertainment District.
+2. Downtown Diamond District.
+3. Trapper District.
+4. Hustle District.
+5. Swagger District.
+6. Transportation District.
+7. Financial District.
+
+### Transportation District — official district
+Transportation District is centered on the airport, car lot/automotive destination and marina/yacht facilities. It is an official destination district, not merely the citywide rail/transit corridor. The citywide road, rail and public-transit network remains continuous and connects all districts. Proposed palette: slate gray and teal; pending final color approval.
+
+### Financial District — new official district
+Create a separate banking, finance and corporate-business district, distinct from Downtown Diamond District's luxury/prestige identity. Include banks, financial institutions, corporate offices, investment/financial services, office towers, business hotels, meeting facilities and related business services. Proposed palette: emerald green and platinum/silver; pending final color approval.
+
+### Current color register
+- Entertainment: electric/cobalt blue — approved.
+- Downtown Diamond: black/gold — approved.
+- Trapper: blue/white — approved.
+- Hustle: red/white — approved.
+- Swagger: purple/silver — proposed.
+- Transportation: slate gray/teal — proposed.
+- Financial: emerald/platinum-silver — proposed.
+
+### Waterfront and visual continuity
+Shuffle Club remains directly beside the beach on the right/east side of the established layout. Transportation District's marina must have a navigable entrance/channel to open water; boats must not be trapped in enclosed basins. The airport, car lot and marina grouping is approved, but exact parcel placement, runway geometry, district boundaries and shoreline configuration remain unresolved.
+
+### Ten-image visual blueprint process
+The creator requires ten coordinated images per blueprint push, with a fixed geographic source of truth. Progressively zoom from full city overhead to districts, neighborhoods, adjoining building clusters, building front/back/left/right, street-level venues, interiors, characters and vehicles. Every image must preserve road, building, railway, coastline and landmark placement. Add camera/location IDs and inspect functional access (roads, rail, airport taxiways, harbor exits, building entrances and pedestrian paths).
+
+See `docs/VISUAL_WORLD_BLUEPRINT_AND_META_AI_MANUSCRIPT.md` for the consolidated Meta AI visual production manuscript.
+
+### Naming conflicts requiring confirmation before global replacement
+This conversation currently specifies Booker Cole Theater and Jokes on You Comedy Club. Older repository content contains Book of Code Movie Theater and Ain't You Funny Comedy Club. Use the latest creator-provided names in the new visual brief, but do not silently rename or delete the older canonical entries until the creator resolves the discrepancy.
