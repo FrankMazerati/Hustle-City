@@ -89,6 +89,14 @@ Daily engagement rewards are a core retention system and must be visible in the 
 - Show the reward, claim status, next reset countdown and streak progress clearly.
 - A daily claim is granted once per account/reward day, server-authoritatively and idempotently. Logging in on multiple devices or reconnecting cannot duplicate it.
 
+### Building card packs as login rewards
+- Daily login reward configuration must support a building-specific card pack, a selectable building pack, or an approved general card pack alongside currency rewards.
+- The seven-day bonus should be able to award a more valuable/selectable building pack as well as its currency bonus; exact contents and quantities remain TBD.
+- The daily prize wheel may include approved card packs or card rewards, with disclosed odds and server-authoritative results.
+- Daily login, weekly streak and wheel rewards must use the canonical card inventory/pack service and must not create cards through client-side shortcuts.
+- Poker gameplay can also grant cards or building packs through approved participation and achievement rewards; it must not require high-stakes play to obtain essential collection progression.
+- Exact daily pack schedule, building selection method, pack size, odds and poker reward milestones remain open balancing decisions.
+
 ### Seven-day login streak bonus
 - Track consecutive qualifying daily reward claims.
 - On completing seven consecutive reward days, grant a separate **seven-day weekly bonus** in addition to the ordinary daily reward for day seven.
