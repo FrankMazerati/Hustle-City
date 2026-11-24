@@ -152,3 +152,20 @@ A progressive seven-day reward was also proposed: the daily cash amount might in
 **Additional petty-cash routes — to design:** Consider small, repeatable, city-life-appropriate tasks and social/community participation that provide modest Hustle Money without replacing the core hustle, poker, career/business or premium progression loops. Candidate examples and exact payouts are not yet approved. Any social reward must be optional, privacy-respecting, idempotent, rate-limited and protected against spam, fake accounts, collusion and engagement farming.
 
 **Unresolved — do not invent:** Neighborhood names and final economic tiers; exact price multipliers or item-by-item price differences; which goods/services vary by location; NPC population composition and archetypes by neighborhood; daily cash/chip amounts; seven-day reward schedule; streak/catch-up rules; additional petty-cash activities and payouts; and the relationship between free rewards, memberships/kits, premium activities and paid content.
+
+
+## Everyday living expenses and recurring city-life spending
+
+**Creator-approved direction:** Hustle City should include meaningful everyday expenses beyond optional shopping. Players pay for rideshare transportation, fuel for applicable owned vehicles, convenience-store purchases, food and drinks, and personal-care products. These spending sinks help make modest daily rewards and petty-cash earning useful while preserving larger progression and premium purchases.
+
+Required economy coverage:
+- Paid rideshare trips using believable real-world-style fare principles; rides are not free.
+- Fuel purchases at gas stations for fuel-powered vehicles, with costs connected to vehicle and usage characteristics.
+- Convenience-store purchases such as chips, snacks, soda/pop, water, food, cigarettes/cigars where permitted by the game's finalized catalog and rating, and everyday goods.
+- Food/drink items may restore health or affect other player conditions according to balanced, item-specific rules.
+- Personal hygiene and care products players can purchase and use, with appropriate locations and interactions.
+- Neighborhood-specific selection and pricing where appropriate, consistent with the neighborhood economic identity requirements.
+
+**To be designed — do not invent:** Rideshare fare formula and service tiers; fuel prices, consumption and refueling costs; convenience-store item list and prices; health/recovery effects; personal-care product catalog and costs; whether a hygiene/cleanliness stat exists and its consequences; product depletion; and exact recurring-cost targets.
+
+Balance recurring expenses against free-player earning, daily rewards, Poker Chip conversion, memberships/kits and premium activities. Everyday costs should make the world feel lived in without turning basic participation into an exhausting upkeep tax or making free players unable to get around and participate.
