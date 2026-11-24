@@ -197,3 +197,15 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - **Readiness rule:** A location must not be presented as open until its actual player-facing functionality is available. Activated businesses need a defined purpose, NPC/staff behavior, interaction, products/services or activities, payment/earning rules and appropriate social/feed integration.
 - **Unresolved:** Initial playable boundary and first-wave business list; activation schedule; job catalog/payouts; player-owned business systems; service catalogs and prices; NPC staffing density; and implementation/production phasing.
 - **Canonical specifications:** docs/gameplay/SOCIAL_WORLD_LIFESTYLE_AND_PLAYER_INTERACTION_REQUIREMENTS.md and docs/economy/MEMBERSHIPS_AND_REWARDS.md.
+
+
+## Initial playable release — signature Hustle City locations and mobility
+
+- **Creator-approved launch requirement:** The initial playable release must include the creator's established signature businesses, destinations and core transportation systems as functional playable content. These named items must not be deferred to later Coming Soon phases.
+- **Required playable launch locations/systems:** the casino; the cigar lounges; the Velvet Lounge; the beach; the car club; the yacht club; Hustle Towers; cars and core vehicle gameplay; the airport; and both established train stations.
+- **Residential coverage:** Include a selection of playable houses in every neighborhood from the initial release. Exact house count and property selection per neighborhood remain TBD.
+- **Meaning of playable:** Each named location/system must offer its intended access, interactions, services, activities or transportation functionality. A background façade, static scenery, inaccessible destination or Coming Soon marker does not meet the requirement.
+- **Phased rollout clarification:** The wider city may still be developed and activated in later waves. However, the creator-approved signature locations and systems above are mandatory in the initial playable release. Other buildings, businesses, neighborhoods, services and attractions may be marked Coming Soon until activated.
+- **Unresolved implementation details:** Exact service/activity scope and acceptance tests for each location; NPC staffing; business inventory; beach activities; car/yacht club features; Hustle Towers' functional program; number and selection of houses in each neighborhood; vehicle roster and acquisition; airport routes/operations; both train stations' rail/transit coverage; and initial map connections.
+- **Economy and compliance:** Do not invent prices, fees or payouts for these locations. Casino implementation remains subject to legal, platform-policy, age-rating and consumer-protection review; no real-world cash redemption or gambling is implied.
+- **Canonical specifications:** docs/gameplay/SOCIAL_WORLD_LIFESTYLE_AND_PLAYER_INTERACTION_REQUIREMENTS.md and docs/economy/MEMBERSHIPS_AND_REWARDS.md.
