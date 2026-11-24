@@ -171,3 +171,13 @@ _Add new entries above this line._
 - **Open details:** Database product, exact schema, indexing/partitioning and retention policy.
 - **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 35.
 - **Source:** Creator conversation, 2026-11-24.
+
+### 2026-11-24 — Valet/concierge visit history and individual attendant recognition
+- **Status:** APPROVED
+- **Direction:** Save each valet/concierge service event in the database: player, attendant, vehicle, service location, date/time and outcome. Repeated visits and multiple cars must be individually recorded (e.g. seven cars across seven days).
+- **Individual memory:** Each attendant builds their own recognition and relationship with the player from the services and conversations they personally experienced. Ricky remembers his interactions; Sammy remembers his. Do not copy one attendant's personal memory/trust to another.
+- **Operational vs personal data:** Shared workplace service records may support vehicle retrieval and shift handoffs, but remain separate from each attendant's personal memory.
+- **Progression:** Meaningful communication can contribute to player stars/experience/levels. These are distinct from NPC familiarity/trust. Parking alone may support recognition but does not automatically create trust or award repeatable social progression; prevent spam/farming.
+- **Presentation:** Attendants should recognize players naturally and never mention hidden codes, database records or technical memory systems.
+- **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 36.
+- **Source:** Creator conversation, 2026-11-24.
