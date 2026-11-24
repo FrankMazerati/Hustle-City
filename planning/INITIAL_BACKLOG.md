@@ -280,3 +280,17 @@
 - [ ] Ensure later population batches and profile corrections never regenerate or overwrite existing identities.
 - [ ] Prohibit demographic stereotyping: race, ethnicity, skin tone, gender and age must not determine intelligence, morality, criminality, income, job qualification or personality.
 - [ ] QA return visits, familiar NPC recognition/continuity, city crowd distribution, staffing coverage, schedule realism and scalable simulation at the 10,000-person roster target.
+
+
+## P20 — Memorable relationship NPCs and player recognition
+- [ ] Make meaningful recurring service/venue NPCs named, persistent individuals rather than interchangeable service prompts.
+- [ ] Cover casino hosts/dealers/cashiers, club and venue staff, bartenders, servers, restaurant/hotel/venue concierge, doormen, valets/parking attendants and other recurring service roles.
+- [ ] Persist NPC identity, role, workplace, personality and relevant life continuity across player sessions.
+- [ ] Implement player-scoped relationship memory: first meeting, repeat visits, familiarity, relevant preferences and notable prior interactions.
+- [ ] Make familiarity grow naturally with repeat encounters; vary greetings and dialogue by personality, role, relationship and actual context.
+- [ ] Support role-specific memories: bartender's usual order; concierge/valet's verified vehicle history; casino host's appropriate visit/service preferences; venue host's seating/event preferences.
+- [ ] Allow NPCs to notice relevant changes, such as a regular arriving in a different authorized car, without inventing facts.
+- [ ] Ensure NPCs retain their own schedules, coworkers, routines and relationships independent of player presence.
+- [ ] Define privacy-scoped memory, data minimization, retention/correction/deletion controls and strict isolation between players.
+- [ ] Prevent NPCs from fabricating memories, exposing another player's information, pressuring casino spending or compromising poker fairness.
+- [ ] QA recurring NPC recognition across separate sessions, familiarity progression, varied accurate dialogue, vehicle authorization checks, preference changes and memory-unavailable fallback behavior.
