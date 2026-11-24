@@ -86,3 +86,14 @@ This register captures decisions promoted through the knowledge library. The exi
 - Players can converse using either pre-selected dialogue boxes or player-typed messages. Both routes use the same contextual evaluation of relevance, respect, reciprocity, NPC personality, response and boundaries.
 - This applies to social conversations such as talking with someone at a bar as well as conversations with service NPCs. Trust gains are not guaranteed for every message and need not be symmetrical between player and NPC.
 - **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 23.
+
+
+## 2026-11-24 — Player-to-player recognition, profiles and social trading visibility
+- **Status:** APPROVED — creator explicitly directed that the NPC/player recognition model also apply to player-to-player interactions.
+- Player profiles can show approved in-game identity fields including display name, rank, level, stars, neighborhood affiliation and crew representation.
+- Players build familiarity and trust with other players using the same conceptual distinction: recognition/familiarity can grow through meaningful repeated encounters; trust primarily grows through actual meaningful conversation and reciprocal interaction. Repeated sightings alone do not automatically build trust.
+- Player-to-player conversations should support pre-selected dialogue and typed messages. Relationship history is specific to each pair and is not automatically visible to all players; trust need not be symmetrical.
+- Profile inspection should show relevant game assets the player makes visible, including cards and keys, with a clear distinction between owned/collected items and those explicitly available for trade.
+- Players may initiate trade offers for eligible visible cards/keys, but inspection does not reserve or transfer items. Transfers require explicit confirmation and applicable game-economy safeguards. Hidden inventory, private information and real account credentials remain protected.
+- **Open implementation details:** exact profile layout and visibility controls; relationship UI; neighborhood/crew identity rules; asset metadata; trade eligibility, confirmation, cancellation and anti-fraud flow.
+- **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 24.
