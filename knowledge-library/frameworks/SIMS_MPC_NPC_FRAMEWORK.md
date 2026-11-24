@@ -694,3 +694,22 @@ No agent may independently invent database schemas, network authority or transac
 4. Earnings and savings derive from recorded work and economic transactions; no arbitrary unexplained money is injected.
 5. Personal history and memories reflect events that actually occurred in the simulation.
 6. Player-facing profiles reveal only approved public/social information, not private simulation records.
+
+
+## 33. Aspirational wealth, luxury consumption and high-end NPC lifestyles
+**Creator-approved requirement:** The city should include wealthy Sims from the beginning of the game. Their visible lifestyles create an aspirational social and economic layer that gives players goals to pursue and makes the city feel economically varied.
+
+- Include affluent Sims and households at launch, with believable income, savings, assets and spending capacity. This does not mean every Sim is wealthy; preserve a varied population and socioeconomic range.
+- Wealthy Sims can spend earned income and accumulated resources on luxury travel, hotels, vacations, entertainment and event tickets, parties, yacht ownership/charters, expensive vehicles, luxury homes, estates and eventually mansions.
+- NPCs may host or attend high-end social events, including yacht parties, consistent with their finances, relationships, interests, invitations, schedules and event access.
+- Luxury purchases and ongoing costs must be grounded in the authoritative economy: income, savings, prices, operating costs and affordability. Do not grant unexplained funds or assets merely to stage a luxury scene.
+- NPC wealth and consumption should have consequences for their financial state. Purchases reduce available funds; earnings and savings can support future goals. Wealthy Sims can have different spending habits and priorities.
+- The aspirational layer should be discoverable through the living city and NPC behavior, not a promise that every player can immediately access every luxury.
+- **Open implementation details:** starting wealth distribution, income bands, luxury price curves, upkeep, financing/ownership rules, and the balance between accessible aspiration and economic progression.
+
+### Acceptance criteria
+1. The launch population includes identifiable affluent Sims alongside other economic circumstances.
+2. High-end lifestyle activity is supported by actual NPC resources and recorded economic transactions.
+3. Luxury travel, hotels, tickets, parties, yachts, vehicles, homes, estates and mansions can form part of NPC lifestyles as supported by game systems.
+4. Spending changes the Sim's available resources and does not create arbitrary wealth.
+5. Wealth does not automatically determine personality, trustworthiness or social worth.
