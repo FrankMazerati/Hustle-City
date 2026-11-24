@@ -171,3 +171,18 @@ Secure Creator Studio should manage vehicle packs, clothing, buildings, characte
 - Apply spam controls: per-player send limits, duplicate detection, cooldowns, abuse monitoring and recipient opt-out. Do not allow bulk unsolicited SMS/email campaigns. Keep sender identity and event details clear, and do not expose phone numbers/email addresses to other players.
 - Separate player-initiated event shares from Hustle City marketing/re-engagement notifications. Platform email/SMS notifications need channel-specific opt-in, quiet hours, frequency caps, unsubscribe and audit records; authentication/social login alone is not consent.
 - Exact presence visibility defaults, audience rules, message retention, external delivery provider, SMS/email costs, consent wording and rate limits require creator approval and privacy/security review.
+
+
+## 24. Phone-based transportation and automated scenic travel
+- Add a Transportation area to the in-game phone, with service actions:
+  - **Call my car:** choose an owned/authorized vehicle and request delivery to the player's location.
+  - **Taxi/cab:** request an in-world cab pickup.
+  - **Ride-hailing:** request an app-style in-world ride.
+  - **Concierge:** arrange a premium car/chauffeur service.
+  - **Private aircraft:** request an owned/authorized plane to be staged at the airport and prepared for departure, including fuel readiness.
+- Show available service/vehicle, pickup and destination, estimated arrival/travel information where supported, price where applicable, and clear request/cancel/arrival states. Enforce ownership and permission distinctions: a player may only summon vehicles they own or have permission to use.
+- Initial launch travel is **automated passenger mode**, not direct player steering. The selected car/cab/chauffeur vehicle follows a safe, predictable route using system-controlled navigation and traffic behavior.
+- Make automated travel feel immersive: player is seated in/associated with the chosen vehicle, with a rotatable/orbit camera that can look around at city streets, districts, landmarks, skyline and passing scenery. Camera movement must not affect vehicle navigation.
+- Use safe routing, traffic-aware movement and collision avoidance. Prevent random collisions and protect player-owned assets and balances from pathing/simulation defects. No damage charges or loss of a vehicle caused by an automated travel bug.
+- Manual driving is outside initial launch scope unless the creator separately approves it after a dedicated feasibility and safety review. The automated travel approach is the approved initial direction.
+- Define vehicle/aircraft staging, access permissions, airport/terminal flow, fuel state, service costs, travel duration, routing, camera controls, cancellation and recovery from interrupted sessions before implementation.
