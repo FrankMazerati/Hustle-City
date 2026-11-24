@@ -294,3 +294,15 @@
 - [ ] Define privacy-scoped memory, data minimization, retention/correction/deletion controls and strict isolation between players.
 - [ ] Prevent NPCs from fabricating memories, exposing another player's information, pressuring casino spending or compromising poker fairness.
 - [ ] QA recurring NPC recognition across separate sessions, familiarity progression, varied accurate dialogue, vehicle authorization checks, preference changes and memory-unavailable fallback behavior.
+
+
+## P21 — Shared social world and off-duty NPC lives
+- [ ] Separate NPC occupation/workplace identity from current activity and location so staff remain the same people when off duty.
+- [ ] Give named NPCs believable off-duty routines, errands, leisure interests, friendships, social invitations and destinations across the city.
+- [ ] Allow recurring NPCs to appear naturally in public spaces and social venues outside their workplace: streets, shops, beaches, clubs, concerts, restaurants, neighborhood gatherings and parties.
+- [ ] Preserve recognition and relationship memory across contexts; NPCs can remember where they met the player and refer to shared events when relevant.
+- [ ] Build NPC-to-NPC social connections and group outings so their social lives do not revolve exclusively around players.
+- [ ] Support mixed player/NPC gatherings, including player-hosted yacht parties and beach parties with invited player friends/crew and suitable NPC guests.
+- [ ] Distinguish invited NPC guests, ambient attendees and venue staff; guests should socialize and participate as guests, not all act as employees.
+- [ ] Make NPC event attendance schedule-, relationship-, capacity- and context-aware; do not force attendance when unavailable.
+- [ ] QA cross-location identity continuity, off-duty encounters, party participation, NPC-to-NPC social behavior and later recognition of shared encounters.
