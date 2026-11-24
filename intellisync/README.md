@@ -30,7 +30,7 @@ This is an on-demand single-task worker, not an always-on agent fleet. It has no
 ## What it does not do yet
 
 - It does not autonomously schedule or continuously invoke the 17 roles. Workers are started manually, one task at a time. The current local workforce target is SCRIBE, LENS, three QA supervisors and twelve production specialists; ChatGPT is external coordinator, not a local worker.
-- A scheduler prototype exists in `intellisync/services.py`, including bounded worker batches and a timed 20/5/5 cycle with an optional 10-minute extension. Its current cycle runs global production, QA, and correction phases sequentially; it does **not** yet implement the approved rolling per-agent overlapping windows. The required design is documented in `intellisync/OVERLAPPING_WORKFORCE_SPEC.md`.
+- The scheduler in `intellisync/services.py` now uses a rolling queue: QA-pending packages and unrelated ready production/correction packages can advance in the same tick. A single bounded executor caps simultaneous model calls; the safe configured default remains one. This removes the old global production → QA → correction phase barrier. Exact 20/5/5 wall-clock deadlines, correction expiry/escalation, and the optional 10-minute extension are still not enforced; the current worker is a one-shot model invocation, not a 20-minute autonomous checkpointing session. See `intellisync/OVERLAPPING_WORKFORCE_SPEC.md` and `intellisync/IMPLEMENTATION_STATUS.md`.
 - It does not connect to Supabase. SQLite is a local starter adapter pending confirmation of the dedicated project.
 - It does not change the existing model router or old manual GitHub pilot.
 - It does not merge code, deploy services, spend money, or activate schedules.
