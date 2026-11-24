@@ -306,3 +306,13 @@ Create a reusable naming framework for cities, casinos, venues and businesses. G
 - Different named workers can cover the same valet, parking, bar, concierge or other service role at different times. Players can learn who is commonly on duty at familiar in-game times.
 - Shift handoffs preserve active service records but do not transfer one worker's personal familiarity, trust or memories to another worker.
 - NPCs retain their own identity and relationships across shift changes, off-duty activities, venues and player sessions.
+
+
+## 21. Reciprocal NPC/player profiles and social recognition UI
+- Approaching or interacting with a named NPC can surface a compact profile/relationship panel alongside conversation, with an optional fuller profile view.
+- The player sees the NPC's stable name and role plus their own player-specific familiarity level and trust bar with that NPC.
+- NPC recognition may use approved player-visible in-game fields: display name, level, stars/rank, playtime/tenure and visit frequency at the relevant venue.
+- NPC greetings and interaction style adapt to verified context such as first visit, returning guest, venue regular and prior shared interactions.
+- NPCs may only use information made visible to them by game rules. Private/account information and other players' relationship histories remain inaccessible.
+- Level, stars and playtime are contextual cues only; they do not prove trustworthiness, wealth, consent, authority, attraction or entitlement.
+- See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 21.
