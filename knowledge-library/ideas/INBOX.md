@@ -64,3 +64,14 @@ _Add new entries above this line._
 - **Expanded notes:** Recognition/familiarity can rise from meaningful repeat encounters when an NPC plausibly notices the player. Trust primarily comes from actual meaningful conversation and reciprocal interaction. A player can use a service and leave without gaining trust. Mere proximity or idle hanging around does not automatically create trust. Both pre-selected dialogue and typed messages feed the same contextual relationship evaluation; message quality and NPC response matter, not message count. Apply this to service encounters and social/dating conversations.
 - **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 23.
 - **Source:** Creator conversation, 2026-11-24.
+
+
+### 2026-11-24 — Player-to-player profiles, recognition and tradable cards/keys
+- **Status:** APPROVED — creator-directed feature requirement.
+- **Domain:** multiplayer / social simulation / profiles / economy / trading
+- **Origin:** conversation / creator direction
+- **Original idea:** “And we can use that same type of recognition system for player-to-player interactions too with the familiarity with the person's name is, with their rank is, what their level, their stars, what neighborhood they're from, what crew they represent. And build conversation and trust with cards they have available for, well, cards to trade their cards, their keys. You should be able to see all of that in-game stuff.”
+- **Expanded notes:** Extend player/NPC profile and relationship concepts to player/player encounters. Other players' approved profiles can show display name, rank, level, stars, neighborhood and crew. Players can build pair-specific familiarity and trust through encounters and meaningful conversations, using selected dialogue or typed messages. Profile inspection can show visible cards and keys and identify which are available for trade. Viewing does not transfer or reserve items; trade offers require explicit confirmation. Protect hidden inventory and private/account data.
+- **Open questions:** Which profile fields are public by default; exact card/key item definitions and metadata; trade eligibility and confirmation rules; whether additional inventory categories are included.
+- **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 24.
+- **Source:** Creator conversation, 2026-11-24.
