@@ -208,3 +208,31 @@ Entertainment venues should be designed around repeatable player activity and so
 - The creator intends later development of scheduled events, missions and automated interactive sequences involving NPCs. Design the venue framework so these can be added after the core destinations and interactions are established; do not invent specific missions, event names, rewards or schedules yet.
 
 These directions should inform the Entertainment District zoom-in: district boundaries, street frontage, pedestrian approaches, parking/vehicle access, venue entrances, crowd areas, service access and links to the citywide road/transport network.
+
+
+## 10. Creator correction — separate Hollywood-style production campuses and named comedy club
+
+This section supersedes earlier wording that grouped Upper Level Entertainment Studios, Upper Level Films and Monster Beats into one shared campus. The creator has now directed a more substantial, separated production geography:
+
+### Upper Level Entertainment Studios — its own major grounds
+- Give **Upper Level Entertainment Studios** its own large, clearly defined campus area within the broader Entertainment District.
+- The studios grounds should be a major destination with active video-production culture: artists and groups arriving, crews recording rap videos, people filming content, and visible production activity.
+- The creator described **“Monster Beach”** as being inside Upper Level Entertainment Studios. Its exact identity/name is pending clarification against the previously established **Monster Beats** name; do not silently substitute one for the other or create both as separate entities until clarified.
+- The campus should feel busy and recognizable, with visible activity and NPC production crews rather than a quiet collection of façades.
+
+### Upper Level Films, Television & Production — separate major campus
+- Give the Upper Level Films / television / production operation its **own large production-campus area**, distinct from the Upper Level Entertainment Studios grounds.
+- Keep it close enough to Upper Level Entertainment Studios to form a connected Hollywood-style production zone, while preserving separate campus identities, entrances and grounds.
+- Support the broader identity of a working film and television production center: movie shoots, television production, sets, crews and production activity. Detailed facilities and gameplay loops remain to be planned.
+
+### Connected Hollywood-style production zone
+- The two large campuses should create a recognizable entertainment-industry neighborhood where music-video shoots, rap-video recording, film shoots and television production are visibly happening.
+- Plan for recurring NPC crews, artists, performers, visitors and production activity so the area feels active even without player-hosted sessions.
+- Preserve the wider Entertainment District's other approved destinations, including Book of Code Movie Theater, Ain't You Funny Comedy Club, outdoor concert amphitheater and the separate automotive destinations.
+- The campuses' exact footprints, street frontage, internal roads, security/access zones, soundstage placement and connecting streets remain for the district zoom-in.
+
+### Ain't You Funny Comedy Club — confirmed venue name
+- The comedy club's creator-confirmed name is **Ain't You Funny Comedy Club**. Preserve the spelling and punctuation.
+- It remains a social, NPC-performed venue with group outings, admission where applicable, audience participation and the previously described supported social activities.
+
+This is a creator-directed correction to the earlier single-campus arrangement. Do not revert to treating Upper Level Entertainment Studios, Upper Level Films and Monster Beats as three co-equal buildings inside one shared campus without further creator approval.
