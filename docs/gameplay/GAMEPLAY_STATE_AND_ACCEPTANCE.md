@@ -41,6 +41,16 @@ Server-authoritative: balances, ledger, paid entitlements, card ownership, pack 
 17. Event reaches capacity; extra RSVP/entry is rejected gracefully and host sees accurate count.
 18. Player disconnects during travel, trade, pack opening or purchase; state reconciles safely on return.
 
+## 5. Daily rewards and streak acceptance
+- One qualifying login can claim at most one daily reward per server-defined reward day.
+- Daily reward may grant Hustle Money, Diamonds or Poker Chips; Wings are excluded unless a creator-approved reward configuration explicitly includes them.
+- Seven consecutive daily claims trigger one separate weekly bonus in addition to the seventh daily reward.
+- A missed-day/streak policy is explicitly configured and displayed; it is never inferred by the client.
+- Optional prize wheel has one configured spin entitlement per eligible period; outcome is server-selected before the client animation.
+- Wheel odds/prize pool are disclosed; duplicate requests, retries and reconnects cannot produce extra spins or grants.
+- All reward grants create auditable ledger entries and update the corresponding separate wallet.
+- Reward schedules and wheel pools are versioned and can be rolled back without altering already-earned grants.
+
 ## 5. QA evidence required
 For each feature, retain test ID, build/version, account fixtures, setup, action, expected result, actual result, server log/transaction reference, pass/fail and defect link. QA supervisors must independently verify economy, card/ownership and social privacy boundaries.
 
