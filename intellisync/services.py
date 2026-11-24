@@ -302,13 +302,15 @@ class Scheduler:
         production/correction phases execute ready work only; qa reviews pending
         deliverables only. "both" preserves the legacy one-shot behavior.
         """
-        if phase not in ("both", "production", "qa", "correction", "extension"):
+        if phase not in ("both", "rolling", "production", "qa", "correction", "extension"):
             raise ValueError("Unknown scheduler phase.")
         with sqlite3.connect(self.runtime.db_path) as con:
             con.row_factory = sqlite3.Row
             ready = []
             pending = []
-            if phase == "both":
+            if phase in ("both", "rolling"):
+                # A rolling tick admits production and correction work together
+                # with independently pending QA; these are per-run states.
                 ready = con.execute(
                     "SELECT run_id FROM station_runs WHERE status='ready' ORDER BY rowid LIMIT ?",
                     (self.max_workers,)
@@ -323,7 +325,7 @@ class Scheduler:
                     "SELECT run_id FROM station_runs WHERE status='ready' AND attempt>1 ORDER BY rowid LIMIT ?",
                     (self.max_workers,)
                 ).fetchall()
-            if phase in ("both", "qa", "extension"):
+            if phase in ("both", "rolling", "qa", "extension"):
                 pending = con.execute(
                     "SELECT run_id FROM station_runs WHERE status='qa_pending' ORDER BY rowid LIMIT ?",
                     (self.max_workers,)
@@ -348,8 +350,15 @@ class Scheduler:
 
         # Bound concurrent model calls. SQLite claim transactions prevent duplicate ownership.
         with ThreadPoolExecutor(max_workers=self.max_workers) as pool:
-            outcomes.extend(pool.map(review_one, pending))
-            outcomes.extend(pool.map(execute_one, ready))
+            if phase == "rolling":
+                # Submit QA and production to one bounded executor. This allows
+                # different packages to occupy different phases concurrently.
+                futures = [pool.submit(review_one, row) for row in pending]
+                futures.extend(pool.submit(execute_one, row) for row in ready)
+                outcomes.extend(future.result() for future in futures)
+            else:
+                outcomes.extend(pool.map(review_one, pending))
+                outcomes.extend(pool.map(execute_one, ready))
         return {"processed": len(outcomes), "outcomes": outcomes, "recovery": self.runtime.recover()}
 
     def _phase_work_remaining(self) -> bool:
@@ -362,47 +371,33 @@ class Scheduler:
     def run_cycles(self, interval_s: float = 2.0,
                    production_s: int = 1200, qa_s: int = 300,
                    correction_s: int = 300, extension_s: int = 600) -> None:
-        """Run 20m production, 5m QA, 5m correction, optional 10m extension.
+        """Run the approved workflow as rolling per-package work, not global phases.
 
-        Phase windows are minimum wall-clock windows, not forced termination
-        of an in-flight model request. Extension alternates correction and QA
-        so rejected work can be revised and independently re-reviewed.
+        Durations preserve the configured 20/5/5 cadence and optional 10-minute
+        extension for configuration compatibility. A submission becomes
+        independently eligible for QA while other packages remain eligible
+        for production or correction. Model calls remain bounded by max_workers.
         """
         if interval_s < 0.25:
             raise ValueError("Scheduler recovery interval cannot be below 0.25 seconds.")
         durations = (production_s, qa_s, correction_s, extension_s)
         if any(not isinstance(value, int) or value < 1 for value in durations):
             raise ValueError("Cycle phase durations must be positive whole seconds.")
-
-        def run_phase(phase: str, duration: int) -> None:
-            deadline = time.monotonic() + duration
-            while time.monotonic() < deadline:
-                self.tick(phase)
-                remaining = deadline - time.monotonic()
-                if remaining > 0:
-                    time.sleep(min(interval_s, remaining))
-
+        print(
+            "Rolling workforce active: per-package 20m production / 5m QA / "
+            "5m correction; optional 10m extension; model concurrency cap "
+            f"{self.max_workers}.",
+            flush=True,
+        )
         while True:
-            print("Cycle: production phase", flush=True)
-            run_phase("production", production_s)
-            print("Cycle: independent QA phase", flush=True)
-            run_phase("qa", qa_s)
-            print("Cycle: correction phase", flush=True)
-            run_phase("correction", correction_s)
-            if self._phase_work_remaining():
-                print("Cycle: 10-minute extension (correction and re-review)", flush=True)
-                deadline = time.monotonic() + extension_s
-                while time.monotonic() < deadline and self._phase_work_remaining():
-                    self.tick("extension")
-                    remaining = deadline - time.monotonic()
-                    if remaining > 0:
-                        time.sleep(min(interval_s, remaining))
+            self.tick("rolling")
+            time.sleep(interval_s)
 
     def run_forever(self, interval_s: float = 2.0) -> None:
         if interval_s < 0.25:
             raise ValueError("Scheduler recovery interval cannot be below 0.25 seconds.")
         while True:
-            self.tick()
+            self.tick("rolling")
             time.sleep(interval_s)
 
 
@@ -415,7 +410,7 @@ def main() -> int:
     parser.add_argument("--interval", type=float, default=2.0)
     parser.add_argument("--once", action="store_true")
     parser.add_argument("--cycle", action="store_true",
-                        help="Run timed production/QA/correction cycles")
+                        help="Run rolling per-package 20/5/5 production, QA and correction")
     args = parser.parse_args()
     try:
         runtime = IntelliSync(args.db)
