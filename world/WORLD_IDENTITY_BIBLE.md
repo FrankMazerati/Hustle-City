@@ -117,3 +117,12 @@ Creator direction: place Hustle Club in the waterfront cluster as a beachfront c
 - Hustle Club is in the waterfront cluster as a beachfront casino/nightlife destination. Get Wild Beach remains its own distinct beach-party area in the coastal zone.
 
 **Next map pass:** replace simple district rectangles with a larger street-and-water drawing board. Show continuous expressway and arterial paths, the through-running transportation corridor, local street grids and block shapes, lakes/waterways, bridges/causeways, shoreline, waterfront destinations and district boundaries. Mark road and water geometry as proposed until the creator approves the actual map. Do not invent street names or lock compass orientation yet.
+
+
+## 15. Creator clarification — Monster Beats and Monster Beach are separate
+
+- **Monster Beats** belongs within the Upper Level Entertainment Studios campus in the Entertainment District.
+- **Monster Beach** remains in the waterfront cluster beside the Hustle Club beachfront casino.
+- They are separate destinations in separate areas. Never conflate their names or placements.
+- The separate Upper Level Films / Television / Production campus remains nearby to Upper Level Entertainment Studios as part of the broader Hollywood-style production zone.
+- Ain't You Funny Comedy Club is the creator-confirmed comedy-club name.
