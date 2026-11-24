@@ -222,3 +222,14 @@ This register captures decisions promoted through the knowledge library. The exi
 - Profile/card inspection does not reserve, offer or transfer an item. Trades require explicit offer, acceptance, final confirmation and authoritative ownership validation.
 - Do not expose real-world payment, bank or account credentials. Apply existing in-game profile visibility controls.
 - **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 37.
+
+ 
+## 2026-11-24 — Device-native phone, tablet and PC gameplay
+- **Status:** APPROVED — creator-directed platform experience requirement; detailed layouts and controls remain to be prototyped.
+- Hustle City must adapt its interaction model to each device rather than simply shrink or enlarge one interface.
+- **Phone:** prioritize a tap-driven experience. General travel and navigation should let players select a destination/activity and tap to go there, with compact, readable contextual interfaces. Preserve hands-on play for activities that need it: poker must let players see and play the cards in their hand and make the actual decisions in a complete hand through touch controls.
+- **Tablet:** remains the primary design target, with a larger live-city view and room for richer exploration, profiles, social discovery, poker and activity interfaces.
+- **PC:** provide an expanded presentation suited to mouse/keyboard and a larger display while preserving the same world and game rules.
+- Across all devices, preserve authoritative game state and consistent gameplay. Adapt layout, navigation density and input affordances; do not treat phone as a tiny tablet.
+- Phone orientation, camera, travel transitions, detailed mobile activity controls and responsive breakpoints remain open design/prototyping decisions.
+- **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 38.
