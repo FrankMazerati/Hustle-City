@@ -107,3 +107,11 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - **Implementation details still open:** Dialogue variation, personality/context systems, animation/gesture sets, player consent controls, voice and localization.
 - **Canonical specification:** `docs/gameplay/SOCIAL_WORLD_LIFESTYLE_AND_PLAYER_INTERACTION_REQUIREMENTS.md`.
 
+## Contextual quick replies and free-text NPC conversation
+- **Approved creator direction:** NPC questions and service offers should present a few immediate, context-specific quick replies (for example, relevant drinks/food, another cigar, view options, ask a question, or decline).
+- **Approved creator direction:** Players must also be able to type a custom natural-language response; the NPC should respond in context and maintain conversation continuity.
+- **Approved creator direction:** Choices must match the NPC's role, venue inventory/services and current player/game state. NPCs cannot promise unavailable services or invent prices, stock or events.
+- **Approved creator direction:** Purchases/services must be clearly selected and confirmed before fulfillment/charging; declines must be respected.
+- **Implementation details still open:** Choice layout/count, touch UI, text entry, voice input, moderation, localization and dialogue orchestration.
+- **Canonical specification:** `docs/gameplay/SOCIAL_WORLD_LIFESTYLE_AND_PLAYER_INTERACTION_REQUIREMENTS.md`.
+
