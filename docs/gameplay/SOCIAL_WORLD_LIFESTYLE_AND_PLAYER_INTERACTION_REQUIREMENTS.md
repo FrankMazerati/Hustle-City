@@ -591,3 +591,53 @@ Prior card-system decisions to preserve:
 The creator is unsure whether a full player-job system should be central to progression and is not currently endorsing it as the main loop. Keep jobs/side hustles optional or unresolved; do not make employment a prerequisite for card collection, city travel or poker participation. The intended core motivation remains playing poker, collecting/trading cards, unlocking meaningful content, traveling between cities and building a social lifestyle.
 
 All card drop rates, duplicate handling, trading restrictions, pity/guarantee rules, set sizes beyond the established five-card concept, qualifying poker hands, login rewards, city completion requirements, unlock inventory, pacing and monetization rules remain TBD and require creator approval.
+
+
+## Creator direction — unified player levels, stars and card acquisition
+
+### One overall Hustle City progression level
+
+The creator wants one unified player level spanning the Hustle City experience, rather than separate unrelated level ladders for poker, social life, collections, travel and other game systems. The overall progression identity should connect the player's full journey through the game, with a visible star system as part of the level presentation/progression.
+
+- The long-term progression concept should be capable of supporting very high levels, with **level 1,000** discussed as a possible top-end milestone. The creator also referenced level 900 as an example of a high-level player. The final maximum level, whether progression continues beyond it, and the prestige/endgame structure are not yet locked.
+- Player rank/title names should progress through distinctive Hustle City-themed tiers, beginning with entry-level identities such as **Rookie** or **Starter** and evolving toward increasingly prestigious titles. The complete title ladder and exact level ranges are TBD; do not invent or publish a finalized 1,000-level title list.
+- Stars should be integrated into the overall level/progression presentation. Their exact meaning, quantity, thresholds, reset behavior (if any), visual treatment and relationship to level are unresolved.
+- The level should represent the player's overall journey, with poker remaining the central game motivation. How XP or progression credit is earned across poker, daily sessions, achievements, collections, social play, travel and other activities remains to be designed. Do not create separate competing player levels unless the creator later approves them.
+- Progression must be long-term and rewarding without relying on arbitrary grind, pay-to-win advantages or punitive attendance requirements. No XP values, level curves, reward quantities or tier thresholds are approved yet.
+
+### Card acquisition sources and controlled distribution
+
+The creator's current direction is that cards should come primarily from active participation and achievement, with three approved acquisition channels:
+
+1. **Poker hands and achievements:** Players can earn cards by winning hands, reaching qualifying win streaks, achieving hand-specific milestones or completing other poker/casino achievements. The broader direction is that qualifying casino play can produce card rewards, not only one specific poker table mode. Exact eligible games, hand conditions, achievement thresholds and reward quantities remain TBD.
+2. **Daily sessions:** Participating in a daily play session can provide card-earning opportunities or rewards. This must not require logging in multiple times per day, penalize offline time or contradict the approved rule that energy does not drain while logged out. Exact cadence, eligibility and quantities remain TBD.
+3. **Player-to-player trading:** Players should be able to trade cards with one another. Trading is a way to complete collections and exchange duplicates, not a source that creates additional cards in the overall economy.
+
+The creator gave examples such as earning two cards after a fifth win or after a three-win streak. These are illustrative balancing ideas only; they do not establish approved thresholds, guaranteed drops or fixed quantities.
+
+### Duplicate-aware collection economy
+
+Card distribution should be randomized and controlled so that players do not repeatedly receive the same cards without meaningful progress. Duplicates are expected to occur and can create a reason for player-to-player trading. The system should support collection completion while preserving scarcity and long-term interest.
+
+To be designed before balancing:
+- Drop tables and rarity distribution by game, hand achievement and session participation.
+- Whether a reward is guaranteed at a milestone or uses a probability.
+- Duplicate handling, duplicate protection and collection-progress safeguards.
+- Trade eligibility, confirmation, anti-scam protections, trade limits/cooldowns if needed, and transaction history.
+- Whether cards are bound to a city, collection, player account or other progression context.
+- How card acquisition relates to the established five-card sets, city collections and unlock rewards.
+- Anti-farming, collusion and multi-account protections, especially for casino outcomes and repeated achievement triggers.
+
+The card economy should be controlled through verified server-side game events and an auditable reward ledger. A player should not receive a card merely because a client reports a win; the authoritative game result must validate the reward. Trading transfers an existing card between players and must not duplicate it.
+
+### Relationship between level progression and card progression
+
+The unified player level and collectible card system are related but distinct progression tracks:
+- The overall player level/stars represent the player's broad Hustle City journey.
+- Cards are collectible rewards earned through poker/casino achievements, daily sessions and trades.
+- Completed card sets/collections can unlock specified additional content or opportunities, subject to the existing launch-scope rule that creator-mandated launch destinations are playable from the start.
+- The final design should make these systems reinforce one another without making card drops the only way to level up or making level advancement a substitute for completing collections.
+
+The creator's stated core loop remains poker and casino participation, earning and trading cards, completing collections, unlocking additional content, traveling between cities and building a social lifestyle. A full job/employment system is not approved as a required progression pillar; keep it optional/unresolved unless the creator later directs otherwise.
+
+All final level caps, rank names, star rules, XP sources and formulas, thresholds, reward tables, drop probabilities, daily-session definitions, card rarity, set requirements, trade rules and progression pacing require further design and creator approval.
