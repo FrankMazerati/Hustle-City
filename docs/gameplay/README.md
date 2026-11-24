@@ -4,13 +4,14 @@ This directory is the connected, engine-neutral gameplay specification library. 
 
 ## Documents
 1. [Master Gameplay Bible](MASTER_GAMEPLAY_BIBLE.md) — player lifecycle, system map, canon and cross-system rules.
-2. [Currencies, Economy and Monetization](ECONOMY_AND_MONETIZATION.md) — Hustle Money, Diamonds, Poker Chips, Play Store purchases, pricing safeguards and transaction rules.
-3. [Collectible Cards, Packs and Trading](CARDS_PACKS_AND_TRADING.md) — card catalog, packs, collection completion, five-card building keys, trading and anti-abuse.
-4. [Property, Buildings and Business Ownership](PROPERTY_BUILDINGS_AND_BUSINESSES.md) — ownership unlocks, upgrades, operations, club hosting and party permissions.
-5. [Social Network, Sharing and Referrals](SOCIAL_NETWORK_AND_SHARING.md) — feeds, invitations, external share links, referrals, chat, privacy and moderation.
-6. [Cruising, Travel and Events](TRAVEL_CRUISING_AND_EVENTS.md) — destination travel, Diamonds, convoys, cruises, calendars and events.
-7. [Player Commerce and Customization](PLAYER_COMMERCE_AND_CUSTOMIZATION.md) — clothing, accessories, vehicles, apartments and business upgrade flows.
-9. [Gameplay State and Acceptance Tests](GAMEPLAY_STATE_AND_ACCEPTANCE.md) — shared state, transaction invariants, QA scenarios and release gates.
+2. [Currencies, Economy and Monetization](ECONOMY_AND_MONETIZATION.md) — Hustle Money, Diamonds, Poker Chips, Wings, wallets and economy rules.
+3. [In-App Store, Memberships, Rewards, Ads and Revenue](HUSTLE_CLUB_MEMBERSHIPS_AND_PACKAGE_STORE.md) — Hustle Club monthly tiers, one-time packages, daily rewards, the bar recovery loop, banner/rewarded/interstitial ads, revenue forecasting and the professional owner dashboard.
+4. [Collectible Cards, Packs and Trading](CARDS_PACKS_AND_TRADING.md) — card catalog, packs, collection completion, five-card building keys, trading and anti-abuse.
+5. [Property, Buildings and Business Ownership](PROPERTY_BUILDINGS_AND_BUSINESSES.md) — ownership unlocks, upgrades, operations, club hosting and party permissions.
+6. [Social Network, Sharing and Referrals](SOCIAL_NETWORK_AND_SHARING.md) — feeds, invitations, external share links, referrals, chat, privacy and moderation.
+7. [Cruising, Travel and Events](TRAVEL_CRUISING_AND_EVENTS.md) — destination travel, Diamonds, convoys, cruises, calendars and events.
+8. [Player Commerce and Customization](PLAYER_COMMERCE_AND_CUSTOMIZATION.md) — clothing, accessories, vehicles, apartments and business upgrade flows.
+10. [Gameplay State and Acceptance Tests](GAMEPLAY_STATE_AND_ACCEPTANCE.md) — shared state, transaction invariants, QA scenarios and release gates.
 
 ## Canon discipline
 - **Established** means supported by existing creator-approved repository design.
