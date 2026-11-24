@@ -104,3 +104,16 @@ The established six central district concepts remain Entertainment, Diamond, Swa
 ## 12. Hustle Club waterfront placement
 
 Creator direction: place Hustle Club in the waterfront cluster as a beachfront casino/nightlife destination. It is separate from the Diamond District downtown cluster. Get Wild Beach remains a distinct beach-party destination within the broader coastal plan. Do not assign exact parcels or shoreline adjacency until the detailed street/water map is approved.
+
+
+## 13. Creator-directed citywide street, expressway, water and district relationships
+
+- **Trapper District and Hustle District must be on opposite sides of one another**, facing across the city rather than placed adjacent as neighboring districts. The exact compass sides remain unapproved.
+- **Hustle District takes the position previously shown for Transportation** in the earlier conceptual arrangement. Do not use that earlier placement as current geography.
+- **Transportation is a continuous citywide movement corridor/system**, not a boxed-in district. Plan connected transit/rail and road movement through the city, with the two established train stations integrated into the continuous network. The exact alignment, mode separation and station positions remain to be resolved.
+- Plan the city as a real connected street network: expressways, arterial roads, local streets, bridges, ramps/interchanges, pedestrian connections and rail/transit corridors. Avoid isolated road fragments or districts that cannot be reached naturally.
+- Lakes, rivers, canals, shoreline and other water features must be deliberate parts of the geography. Roads and rail must respond to them through planned bridges, causeways, crossings and waterfront access. Do not draw water as decorative disconnected ponds or route roads straight through water.
+- Keep Diamond District as the downtown center, Swagger as the hip-hop/streetwear district, and Entertainment as a broader entertainment district with the blue/black Upper Level Entertainment Studios, Upper Level Films and Monster Beats campus plus additional appropriately themed named buildings.
+- Hustle Club is in the waterfront cluster as a beachfront casino/nightlife destination. Get Wild Beach remains its own distinct beach-party area in the coastal zone.
+
+**Next map pass:** replace simple district rectangles with a larger street-and-water drawing board. Show continuous expressway and arterial paths, the through-running transportation corridor, local street grids and block shapes, lakes/waterways, bridges/causeways, shoreline, waterfront destinations and district boundaries. Mark road and water geometry as proposed until the creator approves the actual map. Do not invent street names or lock compass orientation yet.
