@@ -119,3 +119,12 @@ This register captures decisions promoted through the knowledge library. The exi
 - Keep earned stars/level separate from pair-specific familiarity/trust, consent, reliability and trade acceptance.
 - **Proposed / unresolved:** Creator began considering spending real-world money in-app to reach a progression/status point, but did not finish specifying the idea. No paid progression, status boosts or pay-to-win mechanic is approved by this entry.
 - **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 26.
+
+
+## 2026-11-24 — Tap-to-inspect profile and contextual social actions
+- **Status:** APPROVED — creator-directed interaction feature.
+- Players can tap a visible character on the touchscreen/tablet interface to open a compact portrait/profile pop-up and inspect the character's visible stats/profile details.
+- The pop-up includes a direct **Chat** action, plus contextual social requests such as **Invite to sit with me** and **Ask to join their group** when supported by the scene.
+- Apply to player characters and NPCs with their respective conversation, relationship, availability and agency systems. Proximity may assist selection, but direct touch selection is the clear intended interaction; exact targeting mechanics remain open.
+- Invitations are requests, not forced actions. The recipient/group may accept, decline or defer. Respect privacy, blocks, boundaries, available seating, group context and moderation controls.
+- **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 27.
