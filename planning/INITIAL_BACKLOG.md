@@ -209,3 +209,20 @@
 - [ ] Preserve safe predictable transportation; weather must not create random crashes, player-asset damage, loss or unfair financial penalties.
 - [ ] Define in-game day length/time acceleration, calendar/date behavior, synchronization across clients/world instances, weather-region boundaries, transition rates, forecast horizon and seasonal rules before implementation.
 - [ ] Test clock/weather consistency across multiple players, reconnects, server restarts and travel between districts.
+
+
+## P15 — Neighborhood lifestyle spaces, landmarks and ambient city life
+- [ ] Define distinct neighborhood visual identities, including architecture, landscaping, amenities and social atmosphere.
+- [ ] Add rooftop terraces/lounges, private balconies, residential back porches, patios and waterfront decks to appropriate properties and venues.
+- [ ] Create intimate private/semi-private waterfront dining decks with tables, seating, lighting and water views.
+- [ ] Add player interactions for sitting, dining, eating together, relaxing, talking, socializing and inviting friends into permitted spaces.
+- [ ] Add suitable rooftop social amenities such as skyline-view lounges and pools where appropriate to the location.
+- [ ] Model access rules for private decks, porches, rooftops and shared spaces using ownership, tenancy, venue access and invitation permissions.
+- [ ] Add palm trees and deliberate landscaping to appropriate neighborhoods, streets and waterfront locations.
+- [ ] Give important buildings, towers, clubs, restaurants and landmarks recognizable names and world signage.
+- [ ] Display the player's current district and, where useful, named building, venue or nearby landmark in the HUD/map.
+- [ ] Populate appropriate districts with premium vehicles and visible fashion/jewelry, consistent with character customization, NPC identity and the game's economy.
+- [ ] Add occasional ambient commercial/private plane and helicopter flybys with varied routes, altitude, direction and timing; keep ambient aircraft distinct from player-owned or interactive aircraft.
+- [ ] Extend the world calendar/weather design to include cold-weather periods and the possibility of occasional snow.
+- [ ] Define snow coverage, frequency, accumulation, seasonal behavior and NPC/environment response without locking dates or frequency before creator review.
+- [ ] Preserve safe pedestrian and automated vehicle behavior in rain, cold and snow; no random crashes, asset damage, loss or financial penalties caused by weather simulation.
