@@ -278,3 +278,16 @@ No agent may independently invent database schemas, network authority or transac
 - NPCs may accept/decline invitations or attend appropriate public events according to their schedules and relationships. Do not guarantee attendance when a character is unavailable; provide believable alternatives and continuity.
 - Preserve social continuity: if a player meets an NPC at a party and later sees them at work or elsewhere, the NPC can recognize the player and optionally refer to the shared event when relevant.
 - Coordinate P09 with P10 for event/party systems, P03/P04/P05 for public spaces and venues, P06/P07 for NPC travel, and P08 for persistent character appearance.
+
+
+## 18. Player-specific friendships, dating and shared activities
+**Creator-approved requirement:** An NPC's relationship with one player must be distinct from that NPC's relationship with every other player. A bartender might be a familiar acquaintance to one player, a close friend to another, a dating partner to another, and a stranger to someone else. Do not use one global NPC relationship score as the relationship for the whole server.
+
+- Maintain separate player↔NPC relationship records, with relationship state, familiarity, trust/affinity where appropriate, shared interaction history, boundaries and current context.
+- Let relationships develop through meaningful repeated interactions: conversations, frequent visits, meals, invitations, events, activities and dates. Avoid instant friendship or romance from a single interaction.
+- Support friendship and dating pathways, invitations to lunch/dinner, comedy shows, concerts, clubs, beach gatherings, yacht parties and other approved social activities.
+- NPCs make their own choices: they may accept, decline, suggest another time or end an interaction based on their personality, availability, relationship and boundaries. A player cannot force friendship, dating or attendance.
+- NPCs remember shared experiences with the specific player and can refer to them naturally. Information learned with one player must not leak into another player's relationship or dialogue.
+- Build respectful consent, age-appropriate relationship rules, rejection handling, block/report tools and anti-harassment protections. Dating/romance is adult-only where applicable; never enable romantic or sexual interactions involving minors.
+- Keep NPCs' independent lives and other relationships active. NPCs are not exclusive player-owned companions and can have their own friends, dates, plans and social circles.
+- Coordinate P09 relationship simulation with P10 social activities/invitations/events and the account/privacy systems.
