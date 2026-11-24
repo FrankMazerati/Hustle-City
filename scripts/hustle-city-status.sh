@@ -99,7 +99,17 @@ for agent_id, role, group in agents:
 print("-" * 68)
 print(f"Configured roles: {len(agents)}")
 print("Live agents      : NOT VERIFIED — no agent heartbeat/status feed is connected.")
-print("Model assignment : NOT CONFIGURED in the active roster; model availability is not an assignment.")
+assignment_path = root / "intellisync" / "config" / "model_assignments.json"
+if assignment_path.exists():
+    try:
+        assignment_cfg = json.loads(assignment_path.read_text(encoding="utf-8"))
+        assignments = assignment_cfg.get("agents", [])
+        print(f"Model assignments: {len(assignments)} configured / {len(agents)} roles")
+        print("Assignment status : CONFIGURED / NOT YET BENCHMARKED")
+    except Exception as exc:
+        print(f"Model assignments: ERROR reading registry ({exc})")
+else:
+    print("Model assignments: NOT CONFIGURED")
 print()
 print("QUICK INTERPRETATION")
 print("  INSTALLED = model is present in this Ollama model store.")
@@ -109,6 +119,7 @@ print()
 print("NEXT CHECKS")
 print("  ollama list       # installed models")
 print("  ollama ps         # currently loaded models")
-print("  python -m intellisync.runtime --help")
+print("  python -m intellisync.worker list   # show role-to-model assignments")
+print("  python -m intellisync.worker run --agent P01-GEOGRAPHY --task \\"Describe a small test deliverable.\\"")
 print()
 PY
