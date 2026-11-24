@@ -291,3 +291,18 @@ The initial casino destinations are Shuffle Club and Hustle Towers. Shuffle Club
 
 ## Procedural naming and automated city population
 Create a reusable naming framework for cities, casinos, venues and businesses. Generated names should fit the world's naming principles and local city/region flavor, remain distinguishable, avoid duplicates and unsuitable/offensive or trademark-confusing results, and be stable once assigned. Generated businesses/venues receive stable IDs, type, city/district location, brand/name metadata, staffing requirements and NPC population/activity schedules. The pipeline is repeatable, seedable, auditable and creator-overrideable, so expansion does not require manually naming and populating every new location. Exact name grammar, approval rules and generation mechanics remain open.
+
+
+## 19. Persistent NPC familiarity, recognition and trust
+- Every meaningful recurring NPC interaction can build persistent familiarity between that specific player and that specific NPC. This applies to everyday workers and service characters as well as social/dating characters.
+- Familiarity progression and trust are separate: familiarity reflects repeated meaningful encounters and recognition; trust is a distinct visible meter/bar earned through behavior and shared experiences.
+- NPC traits and player presentation/social traits (including height, style/swagger and conversation approach) influence contextual reactions. NPC mood, confidence, social awareness, preferences, relationship status and boundaries remain individual and authoritative.
+- NPCs recognize returning players from verified game history, and players can recognize recurring NPCs through stable identity and schedule continuity. Relationship records are per player-NPC pair.
+- Higher trust may support greater openness, but does not guarantee attraction, romance, consent, access or acceptance. Familiarity can increase without trust.
+- See the canonical [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), sections 16–20.
+
+## 20. Persistent shift rosters and recurring service staff
+- Staff roles use stable named NPC rosters and predictable schedules. Three staggered eight-hour shifts are the creator-approved example for 24-hour coverage where needed; each business can configure hours, staffing, overlap, breaks and days off.
+- Different named workers can cover the same valet, parking, bar, concierge or other service role at different times. Players can learn who is commonly on duty at familiar in-game times.
+- Shift handoffs preserve active service records but do not transfer one worker's personal familiarity, trust or memories to another worker.
+- NPCs retain their own identity and relationships across shift changes, off-duty activities, venues and player sessions.
