@@ -220,3 +220,35 @@ Required direction:
 
 This is a core living-world requirement. The exact dialogue architecture, memory/context boundaries, interaction UI, voice/text presentation, language/localization, concurrency and runtime model strategy remain technical design work.
 
+## 20. Large multi-table poker rooms and ambient venue population
+
+Poker rooms must support the feeling of a substantial, active entertainment venue rather than a single isolated table or small empty room. Required world-design direction:
+- A large room containing multiple poker tables operating within the same venue.
+- From a player's table, the room should reveal other tables, player groups, NPCs and venue activity across the space.
+- Multiple player and NPC groups can occupy different tables and areas simultaneously.
+- NPC staff circulate through the room on purposeful service routes, approaching different tables and players.
+- Staff navigation should avoid repeatedly obstructing seated players, active gameplay, camera views and table access.
+- The room should include supporting hospitality areas and staff activity appropriate to the venue.
+- Ambient conversation, service dialogue, movement and background activity should make the room feel populated and socially active.
+
+Exact room dimensions, table count, occupancy limits, NPC population density, performance budgets and streaming/LOD strategy remain to be designed and tested.
+
+## 21. Roaming poker-room service NPCs and spoken ordering
+
+Poker-room service must be proactive as well as menu-driven. NPC servers should circulate among tables and approach players who may want service rather than requiring every player to open a menu first.
+
+Required interaction direction:
+- NPC servers can approach an individual player or table and audibly offer service, with lines such as asking whether the player wants a drink or something to eat.
+- Players can answer using contextual dialogue/interaction choices, voice or text input as supported by the eventual interface.
+- The NPC can present available food and drink choices, take the order and communicate the order back.
+- The NPC then travels to the appropriate bar, kitchen, service station or inventory source, obtains the ordered item and returns to deliver it.
+- The purchase is charged to the correct player only after the order is confirmed under the finalized transaction flow.
+- Delivery updates the player's item state and is represented by visible character/object animations.
+- Servers should be aware of relevant service context, such as whether a player already has a drink or food, whether the player is busy/in an unavailable state, and whether the venue can fulfill the requested item.
+- Players can decline or dismiss an offer; NPCs should respect the response and avoid pestering.
+- Service must coexist with poker gameplay and the room's other activities.
+
+The desired visual direction includes predominantly adult female hospitality staff, with attractive, glamorous, confident presentation and venue-appropriate fashionable or revealing uniforms, including lingerie-inspired styling where suitable to the venue's rating, platform rules and setting. Staff should be treated as fully realized characters with professional service roles, not static decorative bodies. Final wardrobe designs and visual references remain to be supplied/reviewed by the creator.
+
+NPC service dialogue should be audible and context-aware. Voice lines, dialogue selection, speech/audio settings, localization, NPC behavior state, pathfinding, service queues, transaction handling and performance requirements remain implementation design work.
+
