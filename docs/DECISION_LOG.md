@@ -155,3 +155,12 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - **Unresolved:** Home/whole-block prices and purchase currencies; exact house density; ownership limits; listing, rental, resale and transfer rules; social reward values/limits; rideshare pricing; vehicle/yacht/aircraft unlocks and premium package contents; detailed property-state and transaction implementation.
 - **Guardrail:** No real-world cash-out is implied by Poker Chip conversion. Legal/platform/consumer-protection and anti-fraud review is required for paid chips, wagering/prizes, social rewards and premium property/vehicle transactions.
 - Canonical economy specification: docs/economy/MEMBERSHIPS_AND_REWARDS.md.
+
+
+## Neighborhood price identity and daily petty-cash rewards
+- **Approved direction:** Comparable goods and services should have neighborhood-appropriate prices rather than one assumed universal citywide price. Neighborhoods need distinct identities spanning upscale/affluent, middle-income, working-class and lower-income/hood environments.
+- **Approved direction:** NPC populations, fashion, vehicles, dialogue, behavior, local businesses and ambient activity should fit each neighborhood's identity while preserving individual character variation and avoiding caricature.
+- **Proposed, not locked:** Daily login rewards and other modest petty-cash routes should let free players cover ordinary day-to-day spending without eliminating the value of memberships/kits, larger earning loops or premium activities.
+- **Proposed values only:** Around $500 Hustle Money daily; around 5,000–10,000 Poker Chips daily; a possible seven-day progression adding roughly $100 cash; and a floated 100,000-chip starting example that the creator reconsidered. These are discussion values, not approved tuning.
+- **Unresolved:** Neighborhood names/economic tiers; localized price lists and multipliers; NPC population distributions; exact daily reward amounts and schedule; streak/catch-up rules; petty-cash activity list and payouts; and balancing against Poker Chip conversion, kits and premium activity costs.
+- Canonical specifications: docs/economy/MEMBERSHIPS_AND_REWARDS.md and docs/gameplay/SOCIAL_WORLD_LIFESTYLE_AND_PLAYER_INTERACTION_REQUIREMENTS.md.
