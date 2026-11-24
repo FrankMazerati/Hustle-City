@@ -253,3 +253,17 @@
 - [ ] Implement detailed/local/background simulation tiers and profile performance at staged population scales; retain identity and abstract state when people are outside active streaming range.
 - [ ] Deliver role-specific service workflows for launch-critical staff and test each end-to-end against authoritative venue/economy systems.
 - [ ] Independently QA identity continuity, job completion, breaks, commuting, meals, dialogue, service queues, transaction integrity, pathfinding recovery, multiplayer consistency and performance.
+
+
+## P18 — 30-day Sim wardrobes and contextual fashion
+- [ ] Define a wardrobe profile for every represented Sim, linked to their persistent person identity and universal item catalog.
+- [ ] Design enough modular garments, accessories and complete outfit combinations to support approximately 30 days of varied looks per Sim without loading all garments at once.
+- [ ] Define outfit rotation and repetition avoidance across time, districts, crowds, shifts, venues, events and weather.
+- [ ] Create venue/occupation dress-code matrices for casino hosts, dealers, cashiers, bartenders, servers, concierge, doormen, valets, rideshare/taxi drivers, barbershop staff and other workers.
+- [ ] Create upscale casino and nightlife guest fashion styles, including glamorous/sexy adult eveningwear; define coordinated staff uniforms separately.
+- [ ] Create beach/resort, restaurant, bar, rooftop, yacht-club, concert, private-event, neighborhood streetwear, everyday and leisure categories.
+- [ ] Support work-uniform changes at shift start/end and distinguish off-duty clothing.
+- [ ] Integrate weather/season-aware clothing for heat, rain, cold and occasional snow.
+- [ ] Validate garments against body rigs, animation, seating, dining, vehicle entry and interaction poses; track clipping and performance budgets.
+- [ ] Apply content-rating and platform constraints; never sexualize minors or include explicit nudity. Avoid stereotype-based clothing assignments.
+- [ ] Independently QA month-scale outfit variety, contextual dress, uniform correctness, continuity, fit and rendering performance.
