@@ -557,3 +557,36 @@ No agent may independently invent database schemas, network authority or transac
 5. Tapping one person in a close group does not accidentally select another; the selected target is clear and the pop-up can be dismissed.
 6. NPC responses reflect their personality, schedule, current activity, relationship and boundaries; player-to-player requests respect privacy and availability controls.
 7. Chat/invitations do not automatically grant trust, familiarity, consent or social access. Repeated unwanted requests are controlled.
+
+
+## 28. Roaming social discovery and player-driven collectible hunts
+**Creator-approved requirement:** Tapping and inspecting people should be a major everyday activity throughout Hustle City. Players may roam venues and public spaces, tap visible characters one after another, learn who is present, inspect their profiles and collections, and decide whom to approach. This is a core gameplay loop—not merely a secondary UI convenience.
+
+### Social exploration loop
+- In social spaces such as clubs, bars, restaurants, lounges and other populated locations, players can tap visible people to inspect their profile and learn their in-game identity. This can include display name, age as represented in the game, neighborhood, level, rank, stars, crew and other visible profile fields.
+- From the profile pop-up, players can choose contextual actions such as chat, invite to sit, invite for a drink, invite for a meal, or ask to join a group. Additional actions can be made available when the target, venue and circumstances support them.
+- Players may repeat this process while roaming, discovering who is in the room, who is available to talk, who shares interests, and who has items or experiences they are looking for.
+- Make selection quick and responsive, with clear target feedback in crowds, compact profile overlays, easy dismissal/next-target flow and no forced scene transition for every inspection. Proximity can assist targeting, but the player should remain in control of whom they inspect.
+- Invitations remain social requests. Recipients can accept, decline or defer; seating, drink/meal service, group capacity, availability, consent, NPC schedules and venue rules must be respected.
+
+### Trading-card discovery as a reason to explore
+- A player looking for a specific missing card can inspect other players in the same room or venue and see whether they own it, subject to the owner's chosen profile/collection visibility rules.
+- Clearly distinguish **owns this card**, **has duplicates**, **available for trade**, and **not offered for trade**. A duplicate is not automatically for sale/trade; the owner decides what to list.
+- Make it possible to identify whether another player has the exact card sought and how many copies they have, where those inventory details are made visible. Do not reveal hidden inventory or protected collection details.
+- Discovery can lead naturally to chat, a trade request or negotiation. The actual trade must still use the explicit offer/acceptance/confirmation and ownership-validation flow; seeing a card does not reserve or transfer it.
+- The same player-driven discovery pattern can support other visible tradable collectibles/keys where explicitly enabled, but this section's primary motivating example is trading cards.
+
+### Intended engagement and safeguards
+- The intended experience includes spending time roaming and inspecting people—sometimes many people—to discover social connections and locate specific collectible cards. This creates meaningful reasons to remain in a venue and interact with its population.
+- Keep the loop player-directed and rewarding through discovery, collection completion, conversation and negotiation. Do not force repetitive waits, arbitrary tap limits or needless menus that obstruct the intended exploration.
+- Preserve privacy settings, blocks, moderation, age-appropriate venue rules and recipient agency. Prevent abusive repeated invitations or automated spam without suppressing ordinary rapid profile inspection.
+- Profile inspection alone does not increase trust or familiarity. Meaningful conversation and reciprocal interaction continue to govern relationship progression; valid social participation may contribute to the separate experience/star system under section 26.
+
+### Acceptance tests
+1. A player can roam a populated venue and rapidly tap multiple visible people to inspect their profiles without leaving the live scene.
+2. Profiles show permitted identity details, including the game's age representation, and expose contextual actions such as chat, sit, drink, meal and group invitations when valid.
+3. A player searching for a named card can inspect visible collections and determine which people own it and, where disclosed, how many copies they have.
+4. Owned, duplicate, trade-listed and not-for-trade states are clearly distinguished; duplicates are not automatically transferable.
+5. Card discovery can lead directly to conversation and a trade request, while actual transfer requires the normal explicit trade safeguards.
+6. The loop supports repeated voluntary inspection without accidental selection, forced interaction or excessive UI friction.
+7. Ordinary profile browsing is not mistaken for trust-building or used as a basis for relationship rewards; spammy invitations remain controlled.
