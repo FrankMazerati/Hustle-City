@@ -342,3 +342,12 @@ Create a reusable naming framework for cities, casinos, venues and businesses. G
 - This applies to conversations with service NPCs and social interactions such as talking with someone at a bar. Message count alone never determines trust.
 - Recognition and trust must remain independently tracked and may progress differently.
 - See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 23.
+
+
+## 25. Player-to-player recognition, relationships and visible trade assets
+- Extend the recognition/profile model to player-to-player encounters. An inspected player profile can show display name, rank, level, stars, neighborhood and crew representation.
+- Players build pair-specific familiarity and trust. Recognition can grow through meaningful repeated encounters; trust primarily grows through actual conversation and reciprocal interaction. Repeated sightings alone do not automatically build trust.
+- Player conversations support both pre-selected dialogue options and typed messages. Trust depends on interaction quality and both participants' responses; message count is not a progression shortcut.
+- Profile inspection can show in-game cards and keys the owner makes visible, distinguishing owned assets from those explicitly available for trade. Players can initiate offers for eligible assets, but viewing does not reserve or transfer anything; transfers require explicit confirmation.
+- Keep pair-specific relationship history private unless a defined game feature exposes a permitted summary. Do not expose hidden inventory, protected assets, private data or real account credentials.
+- See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 24.
