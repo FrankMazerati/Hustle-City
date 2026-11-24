@@ -109,3 +109,13 @@ This register captures decisions promoted through the knowledge library. The exi
 - **Privacy boundary:** show only profile categories/items the owner has made visible under game rules. Do not expose exact home addresses, private/account data, credentials or hidden inventory. Profile wealth/status does not substitute for relationship trust.
 - **Open implementation details:** exact categories and labels; profile visibility defaults and controls; which property/vehicle details are public; inventory filters and item metadata; trade flow and validation.
 - **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 25.
+
+
+## 2026-11-24 — Player choice, social discovery and communication progression
+- **Status:** APPROVED — profile-driven player choice and optional social discovery; communication-based progression is approved in principle, with reward tuning open.
+- Players use visible profile information—level, rank, stars, neighborhood/crew, properties, vehicles, travel/lifestyle accomplishments and collections—to decide whom they want to meet, socialize with, do business with or trade with.
+- Players may prefer comparable progression/assets or deliberately seek newer/less-established players. Optional filters and profile comparisons can support these preferences, but should not impose universal rank/wealth gates or treat low-level players as inferior.
+- Meaningful, reciprocal communication can contribute to experience/star progression. Spam, repetitive messages, empty interactions and farming loops must not.
+- Keep earned stars/level separate from pair-specific familiarity/trust, consent, reliability and trade acceptance.
+- **Proposed / unresolved:** Creator began considering spending real-world money in-app to reach a progression/status point, but did not finish specifying the idea. No paid progression, status boosts or pay-to-win mechanic is approved by this entry.
+- **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 26.
