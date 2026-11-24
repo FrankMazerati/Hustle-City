@@ -40,3 +40,12 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - AI model choices, laptop hardware, n8n version, credentials and workflow runtime.
 - Real-world brand licensing and permitted use of map/transit/image data.
 - Unspecified card-game rules and exact first-release scope.
+
+
+## Hustle City memberships and currency economy
+- **Approved:** Eight membership tiers and USD price points: Hustle City Starter ($9.99), Hustle City Connect ($19.99), Hustle City Boss ($29.99), Hustle City Mogul ($39.99), Hustle City Elite ($49.99), Hustle City Royalty ($59.99), Hustle City Legend ($79.99), Hustle City Empire ($99.99). There is no $69.99 tier.
+- **Approved:** Membership packages contain only Hustle Money, Diamonds, Poker Chips and Wings. No membership includes cards, card packs or card drops.
+- **Approved:** Cards are earned through a separate gameplay system; specific activities and award rules are unresolved. Daily login, poker participation and other activities are candidates only, not finalized card sources.
+- **Approved design goal:** Balance membership value against gameplay earning and optional individual purchases. Do not over-grant currency or make paid membership necessary for core progression.
+- **Unresolved:** Billing cadence, exact currency quantities and tier allocations, daily reward amounts/streak rules, card acquisition methods, store catalog/prices and Poker Chip monetization.
+- Canonical specification: `docs/economy/MEMBERSHIPS_AND_REWARDS.md`.
