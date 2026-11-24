@@ -119,3 +119,8 @@ Poker and casino-style activities use Poker Chips as non-redeemable virtual curr
 
 ## 13. Implementation rule
 All systems share stable player, item, currency, building, venue, event and transaction IDs. Do not implement duplicate wallets or parallel ownership records. See the other documents in this folder for detailed flows and QA.
+
+
+## Expandable world and lifelong progression
+
+Hustle City is designed as a living game. Its launch buildings, businesses, assets, card collections and progression tracks are an initial catalogue, not a fixed limit. New approved content can add venues, districts, properties, studios, stores, car lots, vehicles, yachts, events, card collections, themed packs and progression rewards over time. The five-card collection is the standard ownership/unlock format for configured targets; it does not mean every new feature must use cards. Player XP/level, stats, reputation, stars/prestige, achievements, business/crew growth and collection milestones remain distinct progression systems. Exact scales, formulas, caps, pack odds, quantities and release cadence require creator approval. See [Ownership Card Catalogue and Live Progression](OWNERSHIP_CARD_CATALOGUE_AND_LIVE_PROGRESSION.md) as the living master register.
