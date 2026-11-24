@@ -80,3 +80,22 @@ Unreal Engine 5 is the primary production runtime. Unity 6 is the secondary migr
 - VECTOR: Unreal gameplay/client implementation and Unity adapter coordination.
 - NEXUS: persistent and authoritative backend/multiplayer state.
 - SENTINEL: independent visual, functional, safety, performance and compatibility QA.
+
+
+## 11. Creator-directed flagship district composition
+
+The creator has approved the following top-down planning relationships for the flagship Hustle City visual map. These are spatial/identity requirements for the World Architect and future City Planner; exact coordinates, parcel boundaries, road geometry and block assignments remain open for the dedicated map-planning pass.
+
+- **Diamond District:** the central downtown anchor of Hustle City. It should read clearly as the city's central high-rise/downtown core.
+- **Diamond Row:** a distinct downtown destination/strip within the Diamond District's downtown context. Preserve the distinction between the district and the Row; do not treat them as interchangeable names.
+- **Downtown nightlife cluster:** place the Velvet Lounge, cigar bar/cigar lounges and a small additional selection of lounges/venues within the downtown/Diamond District area. The creator wants a few of these venues to be functional on day one; exact additional venue names and count remain TBD.
+- **Swagger District:** the city's fashion/clothing district, with clothing retailers, shoe shops and related style retail. Preserve its established Swagger identity.
+- **Waterfront cluster:** group the car lot, airport and yacht club within the waterfront-oriented part of the city plan. The waterfront must be legible as a coherent geography with shoreline, access roads and appropriate transport connections. Their exact adjacency and parcel layout remain to be resolved against airport runway safety/land-use needs and marina/yacht access.
+- **Entertainment/media campus:** place Upper Level Entertainment Studios, Upper Level Films and Monster Beats together in one shared area/campus. Their coordinated visual identity is blue and black. Keep the three entities distinct while expressing a unified campus identity.
+- **Residential distribution:** maintain the existing creator-approved requirement for a selection of playable houses in every neighborhood in the initial playable release.
+
+The established six central district concepts remain Entertainment, Diamond, Swagger, Transportation, Hustle and Trapper. The waterfront and media campus in this section are planning clusters/areas, not newly approved district names. Do not silently add a seventh central district. Preserve the 7x7 master planning framework (six central district concepts and 43 potential outer neighborhood boxes, each outer box planned as 5x5 blocks) as long-range capacity rather than a claim that all 49 boxes must ship at launch.
+
+**Visual-map production rule:** The first overhead plan should show the central Diamond downtown anchor, Diamond Row, the Swagger fashion district, the waterfront cluster and the blue/black media campus as recognizable, connected planning areas. It should also indicate the other established district concepts without inventing their exact boundaries. The map is a planning schematic until the creator approves precise geography. The World Architect should use it to establish visual identity, skyline massing, terrain/water, major roads and district transitions; the City Planner should later resolve exact streets, blocks, parcels, building footprints and service/transport routing.
+
+**Unresolved:** compass orientation and exact relative placement; whether the airport shares the immediate waterfront parcel or a connected airport/waterfront zone; exact media-campus footprint; Diamond Row boundaries; lounge identities/count; exact district boundaries and street/block geometry. Do not guess these as locked canon.
