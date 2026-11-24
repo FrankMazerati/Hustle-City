@@ -376,3 +376,12 @@ Create a reusable naming framework for cities, casinos, venues and businesses. G
 - Use clear target selection in crowded scenes and keep the live scene visible where practical. Proximity can assist selection, but mere proximity must not trigger a social action.
 - Invitations are requests: the recipient or relevant group can accept, decline or defer. Respect seating availability, current activity, group context, privacy, blocks, boundaries and moderation rules. No forced movement or automatic group entry.
 - Support both NPC and player targets using their respective conversation and agency systems. See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 27.
+
+
+## 29. Roaming social discovery and collectible hunts
+- Tapping and inspecting people while roaming populated venues is a core everyday gameplay loop. Players can rapidly inspect visible people, learn their permitted in-game identity/profile details (including game age), and choose whom to approach.
+- Contextual profile actions include chat, invite to sit, invite for a drink, invite for a meal and ask to join a group, where the venue and social context support them. Recipients retain the ability to accept, decline or defer.
+- Trading cards create a purposeful discovery loop: a player seeking a specific missing card can inspect people in the room to discover who owns it and, when disclosed, how many copies they have.
+- Clearly distinguish owned cards, duplicates, cards listed for trade and cards not offered. An extra copy is not automatically tradable; the owner controls listings. Discovery can lead to chat and negotiation, but transfers require explicit trade confirmation and validation.
+- Keep profile inspection quick and player-directed, without arbitrary friction. Respect privacy, blocks, moderation and recipient agency. Profile inspection alone does not increase trust/familiarity.
+- See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 28.
