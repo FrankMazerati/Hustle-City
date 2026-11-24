@@ -179,3 +179,25 @@ Balance recurring expenses against free-player earning, daily rewards, Poker Chi
 - **Cash-out meaning:** Cashing out means converting eligible game chips into Hustle Money for in-game spending only. It does not authorize real-world withdrawals, cash redemption, cash prizes or claims of real monetary value.
 - **Unresolved:** City selection; game rules/variants; supported wager wallets; table limits; payout schedules/house edge; NPC and player participation; game-specific economic balancing; venue access; and release sequencing.
 - **Mandatory review:** Gambling simulation, paid currency, purchases, wagers, prizes, chip conversion, transferability and cash-out wording require legal, platform-policy, age-rating and consumer-protection review in each target market. Fictional currency alone should not be treated as proof that no restrictions apply.
+
+
+## Functional business economy, player employment and phased activation
+
+**Approved creator direction — functional businesses:** Commercial buildings in Hustle City should be real, functional businesses rather than decorative storefronts. Each activated business must have a defined economic or gameplay role, such as selling goods, providing paid services, offering activities, employing players or serving as a social destination. Non-commercial buildings included as meaningful destinations should likewise have a defined purpose and appropriate interactions.
+
+**NPC business operations:** NPC owners, employees and service workers operate the city's businesses, sell products, fulfill services, serve customers and contribute to ambient activity. Reusable business, staffing, stock, checkout, service and transaction systems should support multiple business types without making every venue feel identical.
+
+**Business examples:** Barbershops, beauty/braiding salons, nail salons, car washes, gas stations, convenience stores, clothing/retail stores, restaurants, shopping malls, lounges, casinos, concert venues and nightlife businesses. These are intended business categories, not a statement that every category must open at launch.
+
+**Player earning through employment and side hustles:**
+- Players should have opportunities to take jobs, work shifts and perform side hustles to earn Hustle Money and have purposeful activities in the city.
+- Candidate earning activities include retail and restaurant work, hospitality/service roles, deliveries and errands, car washing/detailing, automotive support, and event/concert staffing.
+- Completed work must be verified by authoritative game state and paid through the server-side economy ledger. Show compensation/terms before a player accepts a job or task.
+- NPC-run businesses remain operational when no player employee is online. Player labor adds a gameplay path; it is not a prerequisite for ordinary business services.
+- Job types, eligibility, shift schedules, task requirements, employer/player ownership, progression, payouts, caps and anti-farming rules remain TBD. Do not invent earnings or guarantee a particular job catalog.
+
+**Phased commercial activation:** Hustle City may launch with a deliberately scoped set of fully playable areas and businesses while other buildings/areas are visible and clearly labeled Coming Soon. As the player population and development capacity grow, additional stores, salons, barbershops, car washes, malls, concert venues, neighborhoods and other destinations can be activated in later waves. Do not represent a coming-soon business as open or charge for a service that is not available.
+
+**Economy guardrails:** Balance job and side-hustle income against everyday goods/services, transportation/fuel, entertainment, property and aspirational purchases, daily rewards, Poker Chip conversion, memberships/kits and premium content. Jobs should provide meaningful participation and progression without making premium experiences trivial or forcing players into repetitive grinding. All grants and purchases require authoritative, auditable, idempotent server-side ledger handling.
+
+**Unresolved:** Initial playable-area boundary; first-wave business categories; job roster and task loops; job pay and schedules; business staffing and NPC density; player-owned business mechanics; service/product prices; business opening sequence; and economy balancing. All quantities and launch phases require further design and creator approval.
