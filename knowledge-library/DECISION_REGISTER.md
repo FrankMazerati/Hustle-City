@@ -171,3 +171,21 @@ This register captures decisions promoted through the knowledge library. The exi
 - Sims work and save money. Earnings and savings must come from recorded wages and supported economic transactions; do not invent arbitrary wealth or unexplained balances. Exact wages, expenses and banking details remain economy-design decisions.
 - Distinguish internal simulation knowledge from player-visible profile fields; protect private residential coordinates, private financial/account details and personal memories not designated public.
 - **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 32.
+
+
+## 2026-11-24 — Launch wealth strata and aspirational NPC luxury economy
+- **Status:** APPROVED — creator-directed world/economy requirement.
+- The starting city should include wealthy Sims whose visible lifestyles create aspiration and social/economic activity. This means an affluent population segment at launch, not that every Sim is rich.
+- Their earned income and accumulated resources can fund luxury travel, hotels, vacations, entertainment tickets, parties, yachts, expensive vehicles, luxury homes, estates and eventually mansions.
+- Luxury spending, assets and event hosting must reconcile with actual income, savings, prices and costs. Do not inject unexplained wealth. Wealth does not imply character quality or trustworthiness.
+- Starting wealth distribution, income bands, prices, upkeep and financing remain open implementation/economy details.
+- **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 33.
+
+## 2026-11-24 — Per-Sim person memory library and communication-earned recognition
+- **Status:** APPROVED — creator-directed identity/memory requirement.
+- Each Sim maintains a persistent, individual memory/relationship record for each person they have meaningfully communicated with, including player characters, other Sims and coworkers. It should support remembering names/identities (e.g. Frank, Bobby, Nancy, Sam, Ian and Lee), encounter context, conversation details worth retaining, familiarity and trust.
+- Merely tapping/selecting a character, opening a profile or touching an object does not establish a personal connection or increase trust. Communication is the key event that can establish a named social memory; the content and quality of interaction determine what is retained and whether familiarity/trust change.
+- Preserve separate familiarity and trust measurements. Trust is not awarded simply for sending a message; meaningful, contextual, respectful exchange is evaluated under existing relationship rules. Pair-specific records remain distinct.
+- Design for the stated scale example of 10,000 players and 100,000 Sims. Use persistent sparse per-person/per-pair records and event/memory retention policies rather than assuming every entity has a fully populated all-to-all relationship matrix. Preserve identity and records across sessions.
+- **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), sections 34 and related relationship sections.
+
