@@ -19,6 +19,14 @@ Player post fields: post_id, author_id, content, optional approved media, visibi
 ## 4. Chat and relationships
 Support private 1:1 chat, public table chat, nearby chat where enabled, crew chat, group/travel chat and event/venue chat. Friends, friend requests, crew invitations, business invitations and event invitations are distinct invitation types. Include accept/decline, expiry, block/report and notification preferences.
 
+## 5. In-game friends and card-trading social layer
+- Friend discovery, friend requests, accept/decline/removal, block/report and privacy settings are first-class in-game systems.
+- Players can open another eligible player's public trading profile, subject to inventory visibility settings, and see only the card details that player has chosen to share.
+- The in-game Card Finder matches missing cards against tradeable duplicates and supports wish lists, reciprocal matches, trade requests and notifications.
+- The trade conversation, counteroffers, approvals, receipts and history remain inside Hustle City. No external app or group is required to find or complete a trade.
+- Friend status is not consent to reveal private inventory, messages or location. Blocks and privacy settings override discovery.
+- Refer to [Cards, Packs and Trading](CARDS_PACKS_AND_TRADING.md) for the authoritative card-exchange protocol.
+
 ## 5. External social sharing
 Provide share actions for supported installed apps and OS share sheet targets, including social networks and messaging. Previously discussed examples include Facebook, Instagram, TikTok, Snapchat, X, WhatsApp, Messenger, text and email; availability depends on platform/app installation and current API policies.
 
