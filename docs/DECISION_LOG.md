@@ -26,12 +26,17 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - Neighborhoods can be visually complete/ambient while only a small number of locations are fully interactive at launch.
 - Existing SAM-led 10-person named Hustle City cohort and 48-role specialist catalog remain the canonical agent system; engine-specific role mappings must reflect Unreal primary / Unity secondary.
  
+- **City identity system:** The initial expansion plan targets 30 cities. Each city may have distinct local business/venue names and its own character cast and five-card role/title ladder. The underlying five-card low-to-high progression remains recognizable while local names, characters, ages, genders, personalities, biographies and artwork vary by city.
+- **Automotive parent group:** **Hustle Boys Automotive Group** is the creator-approved name. Individual dealerships may have different local names in each city.
+
 ## Working direction
 - Fictional city draws from Chicago and Miami/Florida but has original geography, names, architecture, landmarks and district identities.
 - Develop/test locally and host live multiplayer in the cloud.
 - Build reusable world-building foundations and expand through validated layers.
 - Use Unreal Engine 5 for primary implementation; keep Unity 6 compatibility contracts and adapters documented/testable without duplicating production effort.
 - 8K is a cinematic capture/output ambition where hardware permits, not a minimum real-time gameplay resolution.
+
+- Final 30-city roster, local dealership/venue names and city-to-business assignments remain open; brainstormed examples are not automatically canon.
 
 ## Unresolved
 - Final city name and exact geography.
