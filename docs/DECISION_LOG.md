@@ -68,3 +68,9 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - **Menu identity examples:** Chicago-style pizza and local comfort food; New York borough-specific menus; Texas regional food; Florida/Caribbean/seafood influences; California regional and international food; and distinct local specialties across the remaining markets. Hustle City's own broad menu direction includes soul food bowls, jerk chicken, shrimp dinners, rib tip dinners and seafood.
 - **Unresolved:** final roster confirmation/substitutions; full item-level menus; final prices, portions and bottle sizes; venue-specific menus; food/health/energy effects; clothing prices; and daily reward amounts. Do not finalize daily rewards before the food/beverage and other major spending catalogs are modeled.
 - **Canonical catalog foundation:** `docs/economy/30_CITY_FOOD_BEVERAGE_CATALOG.md`. The selected roster and menu examples are a working foundation; individual items and prices remain subject to research and creator approval.
+
+
+## Initial item-level food and beverage menus
+- **Working proposal, not yet creator-approved:** `docs/economy/ANCHOR_ITEM_LEVEL_MENUS_DRAFT.md` defines draft item-level menus for the flagship fictional Hustle City market and Chicago, including item IDs, serving descriptions and proposed Hustle Money prices.
+- The draft preserves creator-provided anchors: basic meal around $5.00; hamburger and fries $5.99; pop/soda around $2–$3; inexpensive liquor serving around $5.00. All other draft prices require creator review.
+- **Unresolved:** final item selection, names, prices, portion sizes, venue availability, food/health/energy effects and alcohol details. The draft does not authorize implementation or final daily-reward amounts.
