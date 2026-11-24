@@ -150,3 +150,10 @@ Place the North Side, South Side, East Side and West Side neighborhoods outside 
 - Neighborhoods within each side may have distinct identities; do not assume uniform socioeconomic character or architecture.
 - Exact counts per side, neighborhood boundaries, block IDs and street geometry remain to be determined. Do not invent an equal split of the 43 potential neighborhood boxes.
 - The overhead master map should place the central city in the middle, show the four outer cardinal neighborhood groupings, and include a north arrow. Detailed coordinates and parcel geometry remain provisional.
+
+
+## 18. Creator-confirmed primary expressway — Hustle City Drive
+
+The main expressway running around the city is officially named **Hustle City Drive**. Show and label it prominently as the primary citywide expressway, with access connections to the central city and the North, South, East and West Side neighborhood areas.
+
+Secondary expressways, ramps, interchanges, arterial roads and local streets connect into this primary route; their names and precise alignments remain TBD until the creator reviews the street plan. Keep the rail network distinct: trains run through the city and connect the two established train stations with neighborhood stations. Water routes remain a separate connected travel system, with boat access to selected upscale/waterfront neighborhoods considered for detailed planning; routine boat access to hood neighborhoods is not currently included.
