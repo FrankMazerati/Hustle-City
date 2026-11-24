@@ -76,3 +76,13 @@ This register captures decisions promoted through the knowledge library. The exi
 - Player-hosted parties remain supported; NPC-hosted events are a separate capability in which NPCs have genuine social agency rather than acting as decoration.
 - **Open implementation details:** conversation topic catalog and scoring/decay model; trust increment sizes and thresholds; NPC memory representation; social graph and host selection; event scheduling, capacity, invitation discovery and safety/content rules.
 - **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 22.
+
+
+## 2026-11-24 — Recognition through encounters; trust through conversation
+- **Status:** APPROVED — creator clarified that recognition and trust must progress through different signals.
+- Recognition/familiarity may increase when an NPC meaningfully sees or encounters a returning player, including repeat service visits. Trust should primarily come from actual, meaningful conversation and reciprocal interaction.
+- A player who parks a vehicle with Marcus and leaves without talking may become more recognizable to Marcus over time, but should not automatically gain meaningful trust from the service transaction alone.
+- Repeated venue visits or standing nearby are not substitutes for conversation. Passive proximity does not automatically build trust; recognition only changes when the NPC plausibly notices a meaningful encounter.
+- Players can converse using either pre-selected dialogue boxes or player-typed messages. Both routes use the same contextual evaluation of relevance, respect, reciprocity, NPC personality, response and boundaries.
+- This applies to social conversations such as talking with someone at a bar as well as conversations with service NPCs. Trust gains are not guaranteed for every message and need not be symmetrical between player and NPC.
+- **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 23.
