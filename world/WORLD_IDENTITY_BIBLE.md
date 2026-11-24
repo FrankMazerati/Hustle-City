@@ -157,3 +157,21 @@ Place the North Side, South Side, East Side and West Side neighborhoods outside 
 The main expressway running around the city is officially named **Hustle City Drive**. Show and label it prominently as the primary citywide expressway, with access connections to the central city and the North, South, East and West Side neighborhood areas.
 
 Secondary expressways, ramps, interchanges, arterial roads and local streets connect into this primary route; their names and precise alignments remain TBD until the creator reviews the street plan. Keep the rail network distinct: trains run through the city and connect the two established train stations with neighborhood stations. Water routes remain a separate connected travel system, with boat access to selected upscale/waterfront neighborhoods considered for detailed planning; routine boat access to hood neighborhoods is not currently included.
+
+## 19. Creator-approved visual-map orientation and waterfront party-area continuity
+
+The creator has explicitly approved a Chicago-inspired overhead-map presentation orientation. This supersedes any earlier wording that left the cardinal arrangement undecided:
+
+- **North Side = top of map.**
+- **South Side = left of map.**
+- **West Side = right of map.**
+- **East Side = bottom of map.**
+- Keep the central city centered and arrange the four outer neighborhood groupings in this exact visual orientation. Include a north arrow consistent with it.
+- Apply this orientation consistently to master maps, transportation maps, district boards, multi-angle concept sheets and zoomed-in views. This is an original Hustle City layout direction inspired by Chicago's urban identity, not permission to copy Chicago's real geography or street grid.
+
+The creator has also confirmed a fixed waterfront relationship:
+- **Hustle Club** is the beachfront casino/nightlife destination.
+- **Get Wild Beach must remain directly beside Hustle Club.** Together they form one connected beachfront party area. Do not move the casino elsewhere or separate it from the beach in future visualizations.
+- **Monster Beach** is a different beach inside the Upper Level Entertainment Studios campus. Keep Monster Beach separate from Get Wild Beach.
+- Detailed parcels, shoreline shape and circulation remain to be designed, but the direct adjacency of Hustle Club and Get Wild Beach is approved canon and must be preserved.
+
