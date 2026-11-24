@@ -5,6 +5,7 @@
 |---|---|---|---|
 | Hustle Money | General in-game cash | Ordinary goods/services, eligible vehicle/property/business upgrades, basic rides where priced | Poker stakes unless explicitly configured; premium-only travel |
 | Diamonds | Premium currency | Premium travel choices and approved premium store goods | Mandatory basic travel or essential social access |
+| Wings | Flyer resource | Approved flyer distribution and promotion uses | Travel or poker/table play |
 | Hustle City Poker Chips | Virtual game chips | Poker and approved chip-based table activities | General retail, cash-out or real-world redemption |
 
 No implicit conversion. If conversion is later approved, it needs an explicit exchange screen, rate, limits, cooldown, server transaction and audit record.
@@ -65,3 +66,9 @@ Never grant an item solely because the client reports purchase success. Handle p
 
 ## 8. Unresolved economy worksheet
 All values intentionally TBD: starting Hustle Money, starting Diamonds, starting Poker Chips, daily earn rates, referral payouts, card pack prices, individual card purchase eligibility, upgrade prices, travel fares, limits, bundle contents, taxes/regions, refund rules and premium entitlements.
+
+
+## 8. Wings and store terminology
+Wings are a distinct dedicated resource for the flyer system. Diamonds remain the premium travel currency. Hustle Money remains ordinary in-game cash. Hustle City Poker Chips remain virtual poker/table chips. The creator also uses the phrase “poker money”; until clarified, treat it as a display synonym for Poker Chips rather than creating a fifth wallet balance.
+
+The full Hustle City In-App Store, six candidate Hustle Club monthly price points, one-time currency/item packages, daily login rewards, bar recovery loop, advertising formats, revenue forecasting and owner dashboard are specified in [Hustle Club Memberships and Package Store](HUSTLE_CLUB_MEMBERSHIPS_AND_PACKAGE_STORE.md). Exact benefit quantities, package contents, reward amounts and prices remain subject to creator approval.
