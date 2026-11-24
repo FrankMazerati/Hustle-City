@@ -208,3 +208,42 @@ Before approval, check geography, color identity, building footprint, neighborin
 Separate approved requirements, proposed additions, unresolved details, reference images awaiting approval, approved references and rejected/superseded images. Do not silently turn proposals into canon. The creator approves significant geography and design changes.
 
 **ONE CITY. SEVEN DISTRICTS. ONE PERMANENT GEOGRAPHIC FOUNDATION. TEN COORDINATED IMAGES PER BLUEPRINT PUSH. FUNCTIONAL GEOGRAPHY. NO RANDOM RELOCATIONS.**
+
+## Creator-approved revision — rotated compass, equal grid and all district palettes (2026-11-24)
+
+This revision supersedes earlier statements that Swagger, Transportation or Financial colors were merely proposed, and supersedes any conventional north-up assumption.
+
+### Master-map orientation
+Every city/district/neighborhood top-down view must use the creator's fixed display orientation: WEST at the top, NORTH at the right, EAST at the bottom, SOUTH at the left. Add the compass key visibly to every map. Never mirror, flip or rotate a derived view independently. Keep waterways, coastlines, bridges, roads, rail and building relationships continuous across zoom levels.
+
+### Equal master grid
+Use a 7 × 7 grid of 49 equal square master boxes. Preserve six central-core boxes and 43 outer neighborhood boxes. Every box has the same dimensions, equal gutters and consistent line weight. The rows progress WEST (top) to EAST (bottom); columns progress SOUTH (left) to NORTH (right). Each outer neighborhood box is subdivided into 5 × 5 equal block boxes at neighborhood zoom. Include stable cell/block IDs, a scale and revision ID. Do not force coastlines, canals or building footprints into square shapes; the grid is the organizing overlay, not the physical terrain.
+
+### All seven district palettes — approved
+| District | Approved palette |
+|---|---|
+| Entertainment | Electric blue / cobalt blue |
+| Downtown Diamond | Black / gold |
+| Trapper | Red / white |
+| Hustle | Blue / white |
+| Swagger | Purple / silver |
+| Transportation | Slate gray / teal |
+| Financial | Emerald green / platinum-silver |
+
+Use palette accents for identity and wayfinding, not uniform paint. Trapper City is a neighborhood/area identity within Trapper District unless separately reclassified by the creator. Trapper is red/white; Hustle is blue/white.
+
+### Neighborhood layers and supporting city buildings
+Keep the seven official districts as the top-level district structure. Map Hollywood-style Entertainment, Downtown Diamond, Transportation/Travel, Trapper City, Hustle, Swagger and Financial as recognizable neighborhood/campus/area identities within that structure; do not accidentally create extra official districts.
+
+Fill blocks with coherent supporting city fabric—residential buildings, mixed-use properties, shops, offices, hotels, restaurants, civic buildings, parking, warehouses, transit and parks. Creator-owned landmarks remain distinct. Other fictional buildings receive original names appropriate to their area and stable IDs in the form HC-[DISTRICT]-[GRID-CELL]-[TYPE]-[NNN]. Keep an asset register connecting ID, visible name, type/use, cell, block and ownership category. Example names such as Westline Exchange and Southgate Market are illustrative only, not canon landmarks. Do not use real brands or imply the creator owns background businesses.
+
+### Map-production sequence
+1. Draw the entire city as the equal 7 × 7 master grid with rotated compass.
+2. Mark the six central core cells and 43 outer neighborhood cells.
+3. Place approved water/coastline/river/canal systems and preserve continuous access.
+4. Place only established creator-owned landmarks and known relationships.
+5. Map the seven districts and their approved palettes; keep unresolved borders provisional.
+6. Fill remaining cells with coherent neighborhood types and stable fictional support-building IDs/names.
+7. Zoom each outer cell into its 5 × 5 block grid.
+8. Produce district, neighborhood, block, building and interior views, all carrying the same map revision and coordinate references.
+9. Validate no shifted/mirrored assets, broken roads/rail, blocked entrances or trapped marina access.
