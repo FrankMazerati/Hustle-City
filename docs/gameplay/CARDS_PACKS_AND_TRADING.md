@@ -26,6 +26,17 @@ A pack definition includes pack_id, display_name, theme/set, price_currency, pri
 
 Do not invent pack names, prices, odds, rarity tiers, guaranteed cards or limited-time schedules.
 
+## 5. Daily login, poker and building-pack acquisition
+Building card packs must be part of the daily engagement loop, not only a store product.
+- The reward schedule should be able to grant a building-specific card pack or a selectable building pack as a daily login reward.
+- Daily rewards can also include individual cards or card-pack fragments only if that reward type is explicitly configured.
+- Playing poker can earn card rewards through approved gameplay milestones, session objectives, tournament/event placement or other defined achievements. Poker Chips remain the currency used to play poker; they are not a card-reward currency and are not automatically debited to award cards.
+- Poker card rewards must be based on participation/achievement rules that are published and balanced; do not reward only high-stakes play or encourage wagering to obtain essential progression cards.
+- The seven-day login streak may award a higher-value or selectable building pack as its special bonus. Exact pack tier, card count and selection rules remain TBD.
+- The daily prize wheel may include approved building packs or card rewards, with the same server-authoritative odds disclosure and anti-duplication controls.
+- Pack catalogue must support a pack associated with each eligible building/set, plus any approved general or event pack. Do not invent building names, card contents, rarity or odds.
+- Rewarded packs use the same server-side pack-opening and inventory grant path as purchased packs; free does not mean client-authoritative.
+
 ## 5. Acquisition catalogue
 The card catalogue should identify each permitted source separately: earned gameplay rewards, event rewards, referral rewards if approved, card packs, direct purchase of a specified missing card if approved, and player-to-player trade. The exact source list and eligibility are unresolved. Store listings must clearly distinguish randomized packs from guaranteed single-card offers.
 
