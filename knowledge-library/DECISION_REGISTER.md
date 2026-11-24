@@ -161,3 +161,13 @@ This register captures decisions promoted through the knowledge library. The exi
 - Where supported by authoritative records, profiles may show homes, total properties, vehicles, car lots/businesses and other approved possessions. Do not fabricate ownership or expose exact private residential coordinates.
 - Profiles must remain consistent with actual persistent identity, employment, schedule, residence and asset records.
 - **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 31.
+
+
+## 2026-11-24 — Sim self-knowledge, personal history and earned finances
+- **Status:** APPROVED — creator-directed simulation requirement.
+- Each Sim must maintain a coherent persistent self-profile and personal history: where they live, where they work, their job/schedule, what they own, how they travel, their interests, hobbies, weekend preferences and meaningful life experiences.
+- Sims should know and describe their own circumstances accurately in conversation and make choices consistent with their recorded lives. Memories must be grounded in events that actually happened.
+- Track vehicle ownership/authorized use. Sims without a vehicle may use supported transport such as walking, transit, taxi or ride-hail. Uber/Lyft are examples only; real-world branding/licensing remains unresolved.
+- Sims work and save money. Earnings and savings must come from recorded wages and supported economic transactions; do not invent arbitrary wealth or unexplained balances. Exact wages, expenses and banking details remain economy-design decisions.
+- Distinguish internal simulation knowledge from player-visible profile fields; protect private residential coordinates, private financial/account details and personal memories not designated public.
+- **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 32.
