@@ -256,3 +256,18 @@ This correction supersedes the previous section 11 placement of Monster Beach:
 - Preserve Upper Level Films / Television / Production as its own large, nearby but separate campus.
 - The existing Monster Beats name remains a distinct established name; its exact relationship to Monster Beach and any campus sub-areas should not be inferred beyond the creator-approved placements above.
 - Ain't You Funny Comedy Club remains the confirmed comedy-club name.
+
+
+## 13. Creator-approved cardinal neighborhood layout around the central city
+
+The creator has directed that the North Side, South Side, East Side and West Side neighborhoods sit **outside and around the central city**, with neighborhood areas occupying the corresponding cardinal sides of the central urban district framework.
+
+- Treat the six established central district concepts (Entertainment, Diamond, Swagger, Hustle, Trapper and the continuous Transportation system/corridor) as the central-city planning area.
+- Arrange the outer residential/neighborhood areas around that center in four broad cardinal groupings: **North Side neighborhoods** to the north, **South Side neighborhoods** to the south, **East Side neighborhoods** to the east and **West Side neighborhoods** to the west.
+- These are geographic neighborhood groupings, not four additional central districts. Preserve the existing neighborhood framework and long-range 7×7 / 43 outer-neighborhood planning capacity.
+- The cardinal side groupings should read clearly on the overhead map and connect to the central city through the citywide expressway, arterial, local-street, bridge and transit network.
+- Do not assume all neighborhoods within a side have identical wealth, architecture or culture; individual neighborhood identities remain distinct and can be authored separately.
+- The central city should remain visually and spatially distinguishable from the outer neighborhoods. Show the transition from dense central districts to surrounding neighborhood areas.
+- Exact neighborhood counts per side, boundaries, block IDs, street names and precise road alignments remain unresolved. Do not divide the 43 potential outer neighborhood boxes into invented equal counts.
+
+**Map composition requirement:** the next master drawing board should show the central city in the middle and North Side, South Side, East Side and West Side neighborhood zones outside it on their corresponding sides. Include a north arrow because the creator has now established cardinal orientation at the macro-layout level; detailed surveyed coordinates and parcel geometry remain provisional.
