@@ -58,3 +58,13 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - **Unresolved:** Specific artists, tracks, labels/publishers, rights agreements, licensing budget, venue names/locations/counts, radio/playback design, event schedules, fictional team/league identities, match simulation/broadcast details and implementation scope.
 - Rights for compositions and sound recordings, territories, platforms, term, interactive playback, marketing, player streams/clips and other uses must be reviewed and secured as applicable. Consumer music subscriptions are not game-use licenses.
 - Canonical specification: `docs/gameplay/LIVE_ENTERTAINMENT_SPORTS_AND_MUSIC.md`.
+
+
+## 30-city food and beverage catalog foundation
+- **Approved direction:** Build distinct local food and beverage menus for 30 major U.S. starter city markets, while keeping everyday affordability and shared price tiers reasonably comparable across markets.
+- **Creator-provided price anchors:** basic meal around $5.00; hamburger-and-fries example $5.99; pop/soda around $2–$3; inexpensive liquor serving/example around $5; bottles and premium liquor cost more according to size/tier. These are reference anchors, not a complete or final price list.
+- **Approved currency rule:** Food and drinks are purchased with Hustle Money, not Poker Chips. Keep Hustle Money, Diamonds, Poker Chips and Wings as separate wallets.
+- **Working 30-market roster selected under creator direction:** Chicago; Manhattan, Brooklyn, Queens, The Bronx and Staten Island; Houston, Dallas, Austin and San Antonio; Boston; Philadelphia; Washington, D.C.; Atlanta; New Orleans; Miami, Tampa and Orlando; Los Angeles, San Francisco, San Diego and Sacramento; Las Vegas; Phoenix; Denver; Seattle; Portland; Detroit; Nashville; Honolulu.
+- **Menu identity examples:** Chicago-style pizza and local comfort food; New York borough-specific menus; Texas regional food; Florida/Caribbean/seafood influences; California regional and international food; and distinct local specialties across the remaining markets. Hustle City's own broad menu direction includes soul food bowls, jerk chicken, shrimp dinners, rib tip dinners and seafood.
+- **Unresolved:** final roster confirmation/substitutions; full item-level menus; final prices, portions and bottle sizes; venue-specific menus; food/health/energy effects; clothing prices; and daily reward amounts. Do not finalize daily rewards before the food/beverage and other major spending catalogs are modeled.
+- **Canonical catalog foundation:** `docs/economy/30_CITY_FOOD_BEVERAGE_CATALOG.md`. The selected roster and menu examples are a working foundation; individual items and prices remain subject to research and creator approval.
