@@ -438,3 +438,31 @@ No agent may independently invent database schemas, network authority or transac
 5. At a bar or other social venue, both pre-selected dialogue and typed messages can support trust progression under the same relationship rules.
 6. Empty, repetitive, intrusive or disrespectful messages do not farm trust and may leave it unchanged or reduce it.
 7. Recognition/familiarity and trust can progress independently in either direction.
+
+
+## 24. Player-to-player recognition, profiles, relationships and tradable game assets
+**Creator-approved requirement:** Extend the same recognition, profile and relationship concepts to player-to-player encounters. Players should be able to identify and learn about other players through approved in-game profile information, build familiarity and trust through interaction, and inspect relevant game assets that the other player makes available for viewing or trade.
+
+### Player-to-player identity and recognition profile
+- When encountering or inspecting another player, provide an in-game profile/recognition view that can include their display name, rank, level, stars, home/neighborhood affiliation and crew representation/tag.
+- These fields help players recognize one another and understand their in-world identity and affiliations. Show only game-designated public/social fields and respect player visibility controls where applicable.
+- Support familiarity and trust between each pair of players as separate relationship measurements. Familiarity can grow through meaningful repeated encounters and recognition; trust primarily grows through actual conversation and reciprocal interaction, not merely seeing someone or standing nearby.
+- Conversation should support both pre-selected dialogue options and player-typed messages, using consistent evaluation of context, relevance, respect, reciprocity and boundaries. Message count alone must not farm trust.
+- Relationship history is pair-specific and must not be copied across different players. Do not assume trust is automatically symmetrical: each participant can interpret the same interaction differently.
+- Keep player-to-player relationship information distinct from public profile fields. A player's trust/familiarity with someone is not automatically visible to every other player.
+
+### Visible game assets, cards and keys
+- The inspected profile should surface relevant in-game collection/inventory information that the player has made available for others to see, including cards and keys, and clearly identify which cards or keys are available for trade.
+- Distinguish owned/collected assets from assets explicitly offered or marked as tradable. Viewing an item does not reserve it, transfer it or imply consent to trade.
+- Provide a clear path from profile inspection to a trade interaction or offer for eligible cards/keys, subject to the game's ownership, eligibility, confirmation and anti-fraud rules.
+- Do not expose hidden inventory, protected assets, account/security credentials, private data or items the owner has not made visible. “Keys” refers to in-game key items/entitlements as defined by the game economy; never expose real account access credentials.
+- The profile and trade view should make ownership and trade availability legible, while the final inventory layout, item metadata, filters and trade workflow remain implementation details.
+
+### Acceptance tests
+1. Inspecting another player can show their approved display name, rank, level, stars, neighborhood and crew affiliation.
+2. Players can build separate familiarity and trust relationships with other players; repeated sightings alone do not automatically create trust.
+3. Meaningful player-to-player conversations can use pre-selected dialogue or typed messages and affect trust according to interaction quality and both participants' responses.
+4. A player's relationship values with another player are private to that pair unless an explicit game feature exposes a permitted summary.
+5. The profile can display visible cards and keys and distinguish items owned from items available for trade.
+6. A player can initiate a trade offer for eligible listed cards/keys, but no item transfers without the required explicit confirmations.
+7. Hidden inventory, private information and real account credentials are never exposed through social profiles or trade displays.
