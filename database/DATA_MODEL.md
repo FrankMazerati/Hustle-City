@@ -78,7 +78,7 @@ The draft enables RLS on every application table and defines no permissive polic
 ## Health, consumables and currency boundaries
 - Player health/condition and any food/drink effects need authoritative state and item-effect definitions if the health system is retained in the playable design.
 - Food and beverages purchased at venues use Hustle Money/Cash, not Poker Chips. Food and drinks at poker tables are specifically intended to restore table health; the wider distinction among health, energy/stamina, hunger and condition remains a design question. Store item identity, price charged, effect applied and transaction outcome so restoration can be audited and replay-safe.
-- Keep four distinct wallets: Hustle Money/Cash, Diamonds, Poker Chips and Wings. The current SQL draft's three-currency constraint is incomplete relative to the approved four-currency economy and must be reconciled before migration.
+- Keep four distinct wallets: Hustle Money/Cash, Diamonds, Poker Chips and Wings. The draft SQL wallet constraint now includes all four codes; it still requires full migration review and testing.
 - Poker Chip → Hustle Money conversion is a separate, explicit cashier/kiosk flow with atomic debit/credit and an auditable idempotent transaction. It is not direct Poker Chip payment for ordinary goods.
 
 ## Profile and collection records
@@ -87,4 +87,4 @@ The draft enables RLS on every application table and defines no permissive polic
 - Apply visibility controls and never expose hidden inventory, unshared wishlists, private account/payment credentials or private NPC memory.
 
 ## Existing data-model status
-These are requirements to reconcile into a reviewed schema migration. The current SQL draft does not yet implement the full Sim memory/relationship/service-event model or the complete four-wallet currency contract. Do not claim these tables or policies exist until designed, migrated and tested.
+These are requirements to reconcile into a reviewed schema migration. The current SQL draft includes the four-wallet currency contract but does not yet implement the full Sim identity/memory/relationship/service-event model, authoritative health/consumable records or all required progression/reward records. Do not claim these tables or policies exist until designed, migrated and tested.
