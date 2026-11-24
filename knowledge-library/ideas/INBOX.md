@@ -86,3 +86,13 @@ _Add new entries above this line._
 - **Privacy/implementation notes:** The owner controls visibility of profile categories/items under game rules. Never expose exact home addresses, credentials, private account data or hidden inventory. Define exact category visibility, profile layout and trade validation separately.
 - **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 25.
 - **Source:** Creator conversation, 2026-11-24.
+
+
+### 2026-11-24 — Profile-based social choice and communication progression
+- **Status:** APPROVED for social choice, optional discovery and meaningful communication progression. Monetization thought remains proposed pending clarification.
+- **Domain:** multiplayer / social discovery / player progression / economy
+- **Creator direction:** Players should be able to use another player's level, rank, stars, neighborhood, crew, vehicles, houses/properties, travel/lifestyle and other visible profile details to decide whether they want to deal, socialize, trade or do business with them. Some may seek comparable holdings and experience; others may prefer meeting newer players.
+- **Design notes:** Optional profile filters/comparisons can support player preferences, but must not make wealth or rank a universal gate to interaction. Meaningful reciprocal communication may earn experience/stars; message spam, repeated low-value interactions and farming do not. Progression rewards are separate from pair-specific trust/familiarity and do not guarantee acceptance or access.
+- **Unresolved proposal:** The creator started a thought about spending real-world money in-app to reach a certain point, but did not finish the mechanic. Keep monetization unapproved until clarified.
+- **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 26.
+- **Source:** Creator conversation, 2026-11-24.
