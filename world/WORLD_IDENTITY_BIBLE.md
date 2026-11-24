@@ -99,3 +99,8 @@ The established six central district concepts remain Entertainment, Diamond, Swa
 **Visual-map production rule:** The first overhead plan should show the central Diamond downtown anchor, Diamond Row, the Swagger fashion district, the waterfront cluster and the blue/black media campus as recognizable, connected planning areas. It should also indicate the other established district concepts without inventing their exact boundaries. The map is a planning schematic until the creator approves precise geography. The World Architect should use it to establish visual identity, skyline massing, terrain/water, major roads and district transitions; the City Planner should later resolve exact streets, blocks, parcels, building footprints and service/transport routing.
 
 **Unresolved:** compass orientation and exact relative placement; whether the airport shares the immediate waterfront parcel or a connected airport/waterfront zone; exact media-campus footprint; Diamond Row boundaries; lounge identities/count; exact district boundaries and street/block geometry. Do not guess these as locked canon.
+
+
+## 12. Hustle Club waterfront placement
+
+Creator direction: place Hustle Club in the waterfront cluster as a beachfront casino/nightlife destination. It is separate from the Diamond District downtown cluster. Get Wild Beach remains a distinct beach-party destination within the broader coastal plan. Do not assign exact parcels or shoreline adjacency until the detailed street/water map is approved.
