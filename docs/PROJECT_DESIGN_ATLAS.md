@@ -404,3 +404,11 @@ Create a reusable naming framework for cities, casinos, venues and businesses. G
 - Use the tap-to-identify profile pop-up and expanded profile view; no permanent floating name tags. Keep private residential coordinates and internal simulation data out of the player-facing view.
 - Profiles should reflect changes to work, schedule, residence and ownership while preserving the Sim's stable identity.
 - See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 31.
+
+## 32. Sim self-knowledge, personal history and earned finances
+- Every Sim should have a persistent self-model: identity, age, home/neighborhood, occupation/workplace, schedule, possessions, vehicle or transport options, interests, hobbies, social connections and meaningful personal history.
+- Sims should know their own circumstances and speak/act consistently with their actual records. Weekend and off-duty activities reflect individual interests and preferences while allowing variation.
+- Track vehicle ownership or authorized use. Sims without a vehicle can use available walking, transit, taxi or ride-hail options. Uber/Lyft are examples; licensed real-world branding is not assumed.
+- Sims work and save money. Earnings and savings must derive from recorded wages and economic transactions, not arbitrary unexplained wealth. Exact wage/expense/banking rules remain open.
+- Personal memories must be grounded in events that occurred. Keep internal self-knowledge separate from player-visible profile information; protect private residence coordinates and financial/account details.
+- See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 32.
