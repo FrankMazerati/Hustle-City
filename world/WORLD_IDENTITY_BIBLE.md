@@ -175,3 +175,18 @@ The creator has also confirmed a fixed waterfront relationship:
 - **Monster Beach** is a different beach inside the Upper Level Entertainment Studios campus. Keep Monster Beach separate from Get Wild Beach.
 - Detailed parcels, shoreline shape and circulation remain to be designed, but the direct adjacency of Hustle Club and Get Wild Beach is approved canon and must be preserved.
 
+## 20. Creator-directed Chicago-inspired downtown landmarks and sports destinations
+Diamond District is the central downtown landmark core. The creator has directed that its skyline and civic identity include the following staple destinations and recognizable Chicago-inspired references:
+
+- **Hustle Towers** — the original Hustle City signature skyscraper.
+- **Sears Tower / Willis Tower** — Chicago-inspired supertall landmark reference.
+- **John Hancock Building** — Chicago-inspired high-rise landmark reference.
+- **The Bean / Cloud Gate** — the reflective silver public-art landmark the creator described as the little gray ball.
+- **Bulls stadium** — basketball destination.
+- **Blackhawks stadium** — hockey destination.
+- **Sox stadium** — baseball destination.
+- **Cubs stadium** — baseball destination.
+
+These are required planning landmarks, not merely anonymous skyline dressing. They should be designed as recognizable destinations with active NPC presence and room for future expansion: visitors, crowds, vendors, staff/security, public gathering activity and event-day atmosphere. Sports venues should be architected so later phases can add richer events, ticketing, merchandise, watch parties and player-facing activities.
+
+The creator's direction is Chicago-inspired. Exact in-game names, fictionalization/licensing approach, architectural fidelity, parcel footprints, stadium capacities, team/league rights, event schedules, playable sports and launch scope remain to be resolved. Do not imply official team/league affiliation or reproduce protected branding without the appropriate rights review. Preserve the four distinct sports-venue concepts; do not collapse them into one generic stadium.
