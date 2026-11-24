@@ -54,8 +54,8 @@ These questions must be settled before production policies, RPCs, or live deploy
 - Persist valet/concierge service events with player, individual attendant, vehicle, service point, timestamp and outcome. Operational shift handoff data must remain separate from an attendant's personal memory/trust.
 
 ### Economy, consumables and profiles
-- The approved economy has four distinct currency types: Hustle Money (also called Hustle Cash in some food/drink discussion), Diamonds, Poker Chips and Wings. The existing SQL draft currently lists only Hustle Money, Diamonds and Poker Chips; add Wings to the reviewed wallet contract before any migration.
-- Food and drinks at bars, restaurants and poker tables are paid with Hustle Money/Cash, never directly with Poker Chips. They may restore health/condition; exact health model, item effects, prices and balancing remain open.
+- The approved economy has four distinct currency types: Hustle Money (also called Hustle Cash in some food/drink discussion), Diamonds, Poker Chips and Wings. The draft wallet constraint now includes all four codes; this remains a draft and still requires migration review and testing.
+- Food and drinks at bars, restaurants and poker tables are paid with Hustle Money/Cash, never directly with Poker Chips. The creator specifically directed that table food/drinks restore table health. The broader health/energy/condition model, item effects, prices and balancing remain open.
 - Poker Chip → Hustle Money exchange is a separate cashier/kiosk conversion. The approved nominal in-game rate is 1:1; atomic debit/credit, audit history, idempotency and legal/platform review remain required.
 - Player profile balances, progression, owned-card counts, trade listings and shared wishlists must be sourced from authoritative records and visibility permissions.
 - Membership tier names/prices, no-card package rule, and allowed package currencies are already recorded in the economy membership/rewards specification. Preserve those rules; exact quantities and billing cadence remain unresolved.
