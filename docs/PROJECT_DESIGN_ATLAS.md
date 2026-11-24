@@ -451,3 +451,12 @@ Create a reusable naming framework for cities, casinos, venues and businesses. G
 - Profile inspection is informational only; it does not reserve, offer or transfer cards. Trades require explicit offer, acceptance, confirmation and authoritative ownership validation.
 - Respect profile/inventory visibility settings and never reveal real-world payment/account credentials or unshared wishlists/hidden inventory.
 - See [Sims / MPC / NPC Simulation Framework](../knowledge-library/SIMS_MPC_NPC_FRAMEWORK.md), section 37.
+
+ 
+## 38. Device-native phone, tablet and PC experiences
+- **Phone:** Build a tap-driven interface for the small screen. Ordinary city travel/navigation should let players select a destination or activity and tap to go there, with concise contextual screens. Keep hands-on activities genuinely playable: poker must show the player's hand and support playing cards and making decisions through a complete hand with touch controls.
+- **Tablet:** Maintain tablet as the primary design target, using its larger display for a richer live-city view, exploration, profiles, social discovery and activity interfaces.
+- **PC:** Provide an expanded layout for mouse/keyboard and larger displays while preserving the same world and game rules.
+- **Cross-device consistency:** Do not simply scale one UI across all devices. Adapt information density, navigation and controls while keeping persistent world state, player identity, progression, inventory and rules consistent.
+- **Open design work:** Phone orientation, camera treatment, travel transitions, mobile controls for other activities and responsive breakpoints require prototyping.
+- See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 38.
