@@ -1,5 +1,8 @@
 # IntelliSync implementation status
 
+> **Current roster correction (2026-11-24):** The existing IntelliSync configuration and implementation notes describe an older 12-specialist + 3-QA setup. The current creator-approved target is 17 local roles (SCRIBE, LENS, QA-1–QA-3, P01–P12), with ChatGPT as the external coordinator. The 17-role roster has not yet been reconciled into runtime configuration. The scheduler remains disabled; do not treat old assignments as proof of current model availability or live agents.
+
+
 ## Consolidated foundation
 
 - [x] PR #8 Unreal Engine 5 foundation work incorporated into canonical PR #11.
