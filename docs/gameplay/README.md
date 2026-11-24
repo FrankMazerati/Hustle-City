@@ -10,7 +10,7 @@ This directory is the connected, engine-neutral gameplay specification library. 
 5. [Social Network, Sharing and Referrals](SOCIAL_NETWORK_AND_SHARING.md) — feeds, invitations, external share links, referrals, chat, privacy and moderation.
 6. [Cruising, Travel and Events](TRAVEL_CRUISING_AND_EVENTS.md) — destination travel, Diamonds, convoys, cruises, calendars and events.
 7. [Player Commerce and Customization](PLAYER_COMMERCE_AND_CUSTOMIZATION.md) — clothing, accessories, vehicles, apartments and business upgrade flows.
-8. [Gameplay State and Acceptance Tests](GAMEPLAY_STATE_AND_ACCEPTANCE.md) — shared state, transaction invariants, QA scenarios and release gates.
+9. [Gameplay State and Acceptance Tests](GAMEPLAY_STATE_AND_ACCEPTANCE.md) — shared state, transaction invariants, QA scenarios and release gates.
 
 ## Canon discipline
 - **Established** means supported by existing creator-approved repository design.
