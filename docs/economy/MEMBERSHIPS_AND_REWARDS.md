@@ -201,3 +201,26 @@ Balance recurring expenses against free-player earning, daily rewards, Poker Chi
 **Economy guardrails:** Balance job and side-hustle income against everyday goods/services, transportation/fuel, entertainment, property and aspirational purchases, daily rewards, Poker Chip conversion, memberships/kits and premium content. Jobs should provide meaningful participation and progression without making premium experiences trivial or forcing players into repetitive grinding. All grants and purchases require authoritative, auditable, idempotent server-side ledger handling.
 
 **Unresolved:** Initial playable-area boundary; first-wave business categories; job roster and task loops; job pay and schedules; business staffing and NPC density; player-owned business mechanics; service/product prices; business opening sequence; and economy balancing. All quantities and launch phases require further design and creator approval.
+
+
+## Initial launch economy — signature businesses and destinations
+
+**Creator-approved initial-release requirement:** The initial playable release must include the creator's established signature Hustle City businesses, destinations and core mobility systems as functional playable content. These must not be postponed to later expansion waves simply because the broader city is being phased.
+
+Required playable launch content:
+- The casino, with functional casino gameplay subject to required simulated-gambling legal/platform/age-rating/consumer-protection review.
+- The cigar lounges, operating as real NPC-supported businesses with appropriate goods, services and social use.
+- The Velvet Lounge as a functioning venue.
+- The beach as an accessible, meaningful player destination.
+- The car club and yacht club as functioning social/vehicle destinations.
+- Hustle Towers as an accessible, playable signature property.
+- A selection of playable houses in every neighborhood.
+- Cars and the core vehicle gameplay.
+- The airport as a functioning transportation destination.
+- Both established train stations as accessible, functioning rail/transit destinations.
+
+**Economy implications:** These launch locations must connect to the appropriate existing economy systems: purchases and service charges, vehicle-related costs, venue spending, eligible transportation fares and other relevant transactions. Do not invent prices, fees, wages, vehicle costs, flight fares, club dues or business revenues; those remain subject to their respective creator-approved catalog and balancing passes. All currency movements must use authoritative, auditable and idempotent ledger transactions.
+
+The broader phased city plan remains valid for additional businesses, buildings, neighborhoods, stores, attractions and services not included in the creator's required launch list. The initial release must nevertheless contain all the specific items enumerated above in playable form.
+
+**Unresolved implementation details:** The exact business/service depth, inventories, activities, NPC staffing, house count/selection in each neighborhood, vehicle roster/acquisition, airport routes and operations, rail routes and service coverage for both stations, map connections and launch acceptance tests. These details require further design; they do not change the initial-playable requirement.
