@@ -58,12 +58,14 @@ Diamond District clothing is luxury/upscale retail, not the hip-hop streetwear i
 Swagger is the hip-hop/streetwear fashion destination: urban clothing stores, sneaker and shoe shops, streetwear boutiques and related fashion businesses. Keep its retail identity visually and commercially distinct from Diamond District's upscale jewelry and boutique shopping.
 
 ### Get Wild Beach — beach-party destination
-Get Wild Beach is a distinct beach-party area connected to the broader coastal/waterfront geography. Give it a recognizable party/beach identity and room for beach gatherings and event activity. Do not collapse it into the yacht club or treat it as generic shoreline decoration. Exact footprint and adjacency remain unresolved.
+Get Wild Beach is a distinct beach-party area connected to the broader coastal/waterfront geography. Give it a recognizable party/beach identity and room for beach gatherings and event activity. Do not collapse it into the yacht club or Hustle Club, or treat it as generic shoreline decoration. Exact footprint and adjacency remain unresolved.
 
-### Hustle Towers and Hustle Club — separate functions and locations
-- Hustle Towers remains a major downtown landmark in Diamond District. Its own interior can host the approved gambling experience; gambling does not need to be placed inside Hustle Club.
-- Hustle Club is a separate club/nightlife destination and should **not** be placed in the downtown/Diamond District cluster by default. Its final district and exact placement remain unresolved pending creator direction.
-- Do not conflate Hustle Club with Hustle Towers or treat the club as the casino merely because both may support social/nightlife experiences.
+### Hustle Club — waterfront beachfront casino / nightlife destination
+- Place Hustle Club in the waterfront cluster as a beachfront casino/nightlife destination.
+- Its identity should connect beach, waterfront social life, casino entertainment and nightlife. It is a distinct destination, not a downtown Diamond District venue.
+- Hustle Towers remains a separate major downtown landmark in Diamond District. Preserve its own approved building functions; do not merge Hustle Club and Hustle Towers into one location.
+- The waterfront cluster therefore includes the car lot, airport, yacht club and Hustle Club, with Get Wild Beach as a distinct beach-party area connected to the coastal plan.
+- Exact parcel arrangement, access, casino floor scope and how Hustle Club relates physically to Get Wild Beach remain to be planned.
 
 ## 2. Conceptual overhead relationship diagram
 
@@ -149,3 +151,8 @@ After the World Architect establishes the visual composition, the City Planner s
 - `docs/gameplay/SOCIAL_WORLD_LIFESTYLE_AND_PLAYER_INTERACTION_REQUIREMENTS.md`
 
 This plan records the creator's spatial relationships and hands off implementation detail without promoting unresolved geography into canon.
+
+
+## 7. Creator correction — Hustle Club waterfront placement
+
+The creator has now directed that Hustle Club belongs in the waterfront cluster, envisioned as a beachfront casino. Treat this as the current approved placement and identity direction. It is not a downtown Diamond District venue. Keep Get Wild Beach distinct as its own beach-party destination within the broader coastal/waterfront geography. The exact adjacency, parcels and shoreline circulation are still unresolved.
