@@ -128,3 +128,18 @@
 - [ ] Apply privacy, mutual-consent, moderation, block/report and safety controls to networking; off-platform contact exchange must be voluntary and mutually authorized.
 - [ ] Connect event reminders to in-game inbox and separately consented supported notification channels, with quiet hours, frequency caps, deduplication and unsubscribe controls.
 - [ ] Test the daily return loop for usefulness and enjoyment; ensure reminders invite players back rather than shame or pressure them.
+
+
+## P10 — Crew presence, event invitations and external sharing
+- [ ] Add a friends/crew “Who's online” surface to the in-game phone, respecting each player's presence visibility settings.
+- [ ] Add appear-offline/limited-presence controls and define who can see online status, current activity and venue/location.
+- [ ] Add opt-in alerts for selected friends/crew coming online and for crew/neighborhood event announcements.
+- [ ] Build an event invitation composer with event/venue/time/message, audience selection (specific friends, crew or authorized group), preview and send.
+- [ ] Support in-game direct messages and event invitations with accepted/declined/maybe responses and event update/cancellation messages.
+- [ ] Add optional SMS/text and email share actions initiated by the player, with recipient selection, preview and explicit send confirmation.
+- [ ] Do not silently scan, upload or message address-book contacts; any optional contact access requires explicit OS permission and must remain optional.
+- [ ] Keep phone numbers and email addresses private; expose only in-game identity/profile information the recipient's settings permit.
+- [ ] Add controls for who can message or invite a player, plus mute, block, report and moderation actions across messages and invitations.
+- [ ] Implement anti-spam safeguards: rate limits, cooldowns, duplicate detection, abuse monitoring and recipient opt-out; prohibit unsolicited bulk external messaging.
+- [ ] Separate player-initiated event shares from platform-generated marketing/re-engagement alerts; require appropriate channel-specific consent for platform email/SMS.
+- [ ] Define presence defaults, audience permissions, invitation limits, notification cadence, retention, provider costs and consent language with creator approval and privacy/security review.
