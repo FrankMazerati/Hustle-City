@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0.0",
+  "project": "Hustle City",
+  "runtime": "ollama_local",
+  "activation_mode": "manual_single_task",
+  "concurrency": {
+    "max_active_workers": 1,
+    "serialize_requests": true,
+    "unload_model_after_task": true
+  },
+  "endpoint": {
+    "base_url": "http://127.0.0.1:11434",
+    "generate_path": "/api/generate",
+    "timeout_seconds": 900
+  },
+  "note": "Initial assignments are capability-based defaults, not benchmark results. Every worker is invoked on demand; no background scheduler or always-on agents are activated.",
+  "model_pool": [
+    {
+      "model": "deepseek-r1:1.5b",
+      "profile": "reasoning_and_planning"
+    },
+    {
+      "model": "gemma3:1b",
+      "profile": "lightweight_summaries_and_triage"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "profile": "general_instruction_and_analysis"
+    },
+    {
+      "model": "llama3.2:3b",
+      "profile": "creative_direction_and_general_writing"
+    },
+    {
+      "model": "gemma2:2b",
+      "profile": "independent_review_and_critique"
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "profile": "structured_technical_output"
+    }
+  ],
+  "agents": [
+    {
+      "agent_id": "SCRIBE",
+      "model": "llama3.2:3b",
+      "profile": "creative_direction_and_general_writing",
+      "enabled": true
+    },
+    {
+      "agent_id": "LENS",
+      "model": "llama3.2:3b",
+      "profile": "creative_direction_and_general_writing",
+      "enabled": true
+    },
+    {
+      "agent_id": "QA-1",
+      "model": "gemma2:2b",
+      "profile": "independent_review_and_critique",
+      "enabled": true
+    },
+    {
+      "agent_id": "QA-2",
+      "model": "gemma2:2b",
+      "profile": "independent_review_and_critique",
+      "enabled": true
+    },
+    {
+      "agent_id": "QA-3",
+      "model": "gemma2:2b",
+      "profile": "independent_review_and_critique",
+      "enabled": true
+    },
+    {
+      "agent_id": "P01-GEOGRAPHY",
+      "model": "deepseek-r1:1.5b",
+      "profile": "reasoning_and_planning",
+      "enabled": true
+    },
+    {
+      "agent_id": "P02-CITY-PLAN",
+      "model": "deepseek-r1:1.5b",
+      "profile": "reasoning_and_planning",
+      "enabled": true
+    },
+    {
+      "agent_id": "P03-DISTRICTS",
+      "model": "qwen3:1.7b",
+      "profile": "general_instruction_and_analysis",
+      "enabled": true
+    },
+    {
+      "agent_id": "P04-ARCHITECTURE",
+      "model": "qwen2.5:1.5b",
+      "profile": "structured_technical_output",
+      "enabled": true
+    },
+    {
+      "agent_id": "P05-INTERIORS",
+      "model": "qwen3:1.7b",
+      "profile": "general_instruction_and_analysis",
+      "enabled": true
+    },
+    {
+      "agent_id": "P06-TRANSIT",
+      "model": "deepseek-r1:1.5b",
+      "profile": "reasoning_and_planning",
+      "enabled": true
+    },
+    {
+      "agent_id": "P07-VEHICLES",
+      "model": "qwen2.5:1.5b",
+      "profile": "structured_technical_output",
+      "enabled": true
+    },
+    {
+      "agent_id": "P08-CHARACTERS",
+      "model": "llama3.2:3b",
+      "profile": "creative_direction_and_general_writing",
+      "enabled": true
+    },
+    {
+      "agent_id": "P09-NPC-NAV",
+      "model": "qwen3:1.7b",
+      "profile": "general_instruction_and_analysis",
+      "enabled": true
+    },
+    {
+      "agent_id": "P10-GAMEPLAY",
+      "model": "qwen2.5:1.5b",
+      "profile": "structured_technical_output",
+      "enabled": true
+    },
+    {
+      "agent_id": "P11-ONBOARDING",
+      "model": "llama3.2:3b",
+      "profile": "creative_direction_and_general_writing",
+      "enabled": true
+    },
+    {
+      "agent_id": "P12-UNREAL-INTEGRATION",
+      "model": "qwen2.5:1.5b",
+      "profile": "structured_technical_output",
+      "enabled": true
+    }
+  ]
+}
