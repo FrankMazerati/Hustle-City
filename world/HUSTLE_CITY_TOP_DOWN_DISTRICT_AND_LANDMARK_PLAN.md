@@ -365,3 +365,87 @@ See `docs/VISUAL_WORLD_BLUEPRINT_AND_META_AI_MANUSCRIPT.md` for the consolidated
 
 ### Naming conflicts requiring confirmation before global replacement
 This conversation currently specifies Booker Cole Theater and Jokes on You Comedy Club. Older repository content contains Book of Code Movie Theater and Ain't You Funny Comedy Club. Use the latest creator-provided names in the new visual brief, but do not silently rename or delete the older canonical entries until the creator resolves the discrepancy.
+
+## Creator-approved master-map update — orientation, equal grid and neighborhood layers (2026-11-24)
+
+This section supersedes any earlier conflicting palette status or compass-layout wording in this document.
+
+### A. Approved color register — all seven official districts
+
+| Official district | Identity | Approved palette |
+|---|---|---|
+| Entertainment District | Hollywood-style film, television, music, comedy, performance and nightlife | Electric blue / cobalt blue |
+| Downtown Diamond District | Downtown skyline, luxury, prestige, high-end retail and nightlife | Black / gold |
+| Trapper District | Gritty, distressed, lower-income neighborhood character | Red / white |
+| Hustle District | Upscale, polished neighborhood character | Blue / white |
+| Swagger District | Hip-hop fashion, streetwear, shoes and style retail | Purple / silver |
+| Transportation District | Airport, automotive destination, marina and yacht facilities | Slate gray / teal |
+| Financial District | Banking, finance, corporate offices and business services | Emerald green / platinum-silver |
+
+All seven palettes are now creator-approved. Use them as coherent identity systems for district signage, wayfinding, public-space accents, lighting and selected architecture. Do not paint every structure a single flat color. Keep Entertainment's electric/cobalt blue visually distinct from Hustle's blue/white treatment.
+
+### B. City map orientation — creator's rotated compass
+
+For every top-down city, district, neighborhood and block map, use this fixed screen orientation:
+- Top = WEST
+- Right = NORTH
+- Bottom = EAST
+- Left = SOUTH
+
+This is the project's map-display convention. Do not silently rotate, mirror or reinterpret it as a conventional north-up map. Put a visible compass/orientation key on every master blueprint and derived map. Waterways, shoreline, bridges, rail, roads and approved landmark relationships remain part of the same continuous geography.
+
+### C. Equal 7 × 7 master grid
+
+Retain the established 7 × 7 = 49 equal master cells. Draw every master cell as the same square size, with consistent gutters, line weight and coordinate labels. The six central cells remain the central urban/core planning area; the other 43 are outer neighborhood planning cells. Do not stretch edge cells or distort the grid to fit labels.
+
+The screen-coordinate convention is:
+- Grid rows run from WEST at the top toward EAST at the bottom.
+- Grid columns run from SOUTH at the left toward NORTH at the right.
+- Label each cell by row and column (for example W1-S1, W1-N7, E7-S1, E7-N7); use one consistent row/column index system in all map exports.
+- Preserve the existing six-cell central-core designation. Do not assign exact district boundaries or parcel coordinates until the creator approves the actual map layout.
+- Each outer neighborhood cell retains the existing 5 × 5 block subdivision concept. Draw those 25 block boxes evenly inside the parent cell. Individual building lots may subdivide blocks later, without changing the parent grid.
+
+### D. Neighborhood and district hierarchy
+
+The seven named official districts remain the top-level city districts. Neighborhoods, sub-neighborhoods and corridor identities sit inside or across those districts as mapped areas; they are not automatically new official districts.
+
+The visual journey should make the transition from polished/high-value downtown and entertainment areas toward more distressed neighborhood environments legible through changing architecture, maintenance, storefronts, streetscape, lighting, density and public realm—not through disconnected or randomly relocated map pieces.
+
+Explicit neighborhood/area identities to show in the updated blueprint include:
+- Hollywood-style Entertainment neighborhood/campus zone.
+- Downtown Diamond core.
+- Transportation/Travel neighborhood and airport/automotive/marina destination zone.
+- Trapper City / Trapper neighborhood identity, using the approved red-and-white Trapper palette.
+- Hustle neighborhood identity, using the approved blue-and-white Hustle palette.
+- Swagger fashion/streetwear neighborhood.
+- Financial business/corporate neighborhood.
+
+Trapper City may be used as a neighborhood/area label within Trapper District unless the creator later directs it to become a separate formal district. Do not create a second overlapping Trapper District entity merely to represent a red zone. Trapper is red/white; Hustle is blue/white.
+
+### E. Buildings, parcels and naming conventions
+
+Keep creator-owned named landmarks and venues exactly identifiable. Fill the rest of each neighborhood with believable supporting city fabric: apartment buildings, mixed-use blocks, offices, hotels, corner stores, restaurants, service businesses, parking structures, warehouses, civic buildings, small parks, transit facilities and ordinary residential buildings as appropriate to that neighborhood.
+
+For supporting buildings/businesses that are not creator-owned named landmarks:
+- Use original fictional names that fit the neighborhood's local character and the city's naming language.
+- Do not use real company brands, imply creator ownership, or give a supporting structure the name of an existing creator-owned venue.
+- Use a consistent map asset ID separate from the visible fictional name.
+- Suggested asset ID: HC-[DISTRICT]-[GRID-CELL]-[TYPE]-[NNN].
+- Suggested visible naming pattern: [Local identity word] + [building/use descriptor] (for example, fictional names such as Westline Exchange for an office building or Southgate Market for a neighborhood market). These are naming examples, not approved canon landmarks.
+- Maintain a register with asset ID, visible name, use/type, grid cell, block, owner category (creator-owned landmark / generic fictional city property), status and source.
+- If the building is only background dressing, it still receives a stable asset ID and remains geographically consistent between images.
+
+### F. Updated blueprint drawing requirements
+
+The next master blueprint must be a clean, top-down, square 7 × 7 grid sheet with:
+1. 49 equal master boxes, with the six central core boxes clearly distinguished and 43 outer neighborhood boxes.
+2. 5 × 5 equal block boxes inside each outer neighborhood cell when zoomed to neighborhood scale.
+3. The rotated compass key: WEST top, NORTH right, EAST bottom, SOUTH left.
+4. The seven approved district palettes shown in a legend.
+5. A clear hierarchy for official districts, neighborhoods, corridors, creator-owned landmarks and generic supporting buildings.
+6. Continuous, legible waterways and shoreline, with bridge/causeway and navigable harbor/marina access.
+7. Existing creator-owned landmark placements preserved; unconfirmed parcels and boundaries labeled provisional rather than guessed.
+8. A supporting-building naming/asset-ID register.
+9. A fixed scale, grid coordinates and map revision ID repeated on every zoom level.
+
+This grid is a planning scaffold, not permission to flatten the organic coastline, river/canal routes or irregular building footprints into square geometry. The square boxes organize land-use planning; real geography and architecture may have irregular shapes while remaining registered to the grid.
