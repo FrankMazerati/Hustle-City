@@ -153,3 +153,10 @@ Paste this as the operating instruction when resuming:
 - [ ] No paid calls, no credentials committed, no unsupported “online” claims.
 
 **Definition of tomorrow's first success:** one real local production agent completes a scoped Hustle City task, an independent QA role tests it, the production agent corrects any defect, and the accepted artifact is committed with evidence. Then scale the pipeline.
+
+
+## 9. Creator correction — confirmed Primitive FTPd workaround (2026-11-24)
+
+The earlier direct-USB-mount diagnosis above is superseded by the creator's confirmation that the access problem was already solved earlier today. The established route is to expose tablet storage through **Primitive FTPd** and have UserLAnd access it over the network. The prior known SFTP port was **1234**; the previous example command was sftp -P 1234 user@192.168.1.9, but the IP/account must be checked against the app's current displayed settings. Do not ask the creator to repeat the original workaround or revert to assuming direct USB mounting is required. At startup, verify connection, listing, and a harmless test-file write/read/delete in the intended shared folder. Keep passwords and private connection credentials out of Git. Distinguish SFTP access from a native mounted filesystem: do not place a live Git working tree or Ollama model directory on an SFTP path unless the specific client/mount arrangement and file-locking/rename behavior have been validated.
+
+The full 8-hour, 17-role task assignments and four-agent rotation are in [FULL_DAY_17_AGENT_PRODUCTION_SCHEDULE_2026-11-25.md](FULL_DAY_17_AGENT_PRODUCTION_SCHEDULE_2026-11-25.md). The creator-directed target is up to four concurrent local model sessions, subject to a measured stability test; reduce concurrency if memory or thermal behavior is unstable.
