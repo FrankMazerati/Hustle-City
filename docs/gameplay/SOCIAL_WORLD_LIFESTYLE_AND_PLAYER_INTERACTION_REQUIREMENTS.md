@@ -252,3 +252,20 @@ The desired visual direction includes predominantly adult female hospitality sta
 
 NPC service dialogue should be audible and context-aware. Voice lines, dialogue selection, speech/audio settings, localization, NPC behavior state, pathfinding, service queues, transaction handling and performance requirements remain implementation design work.
 
+## 22. Flirting, playful banter and social chemistry
+
+The social world must support playful, charming, flirtatious interactions between adult characters. NPCs and players should be able to exchange natural, context-sensitive banter that adds warmth, humor and personality to venues and everyday city life.
+
+Required interaction direction:
+- Adult female NPCs may flirt playfully with adult male players, and adult male NPCs may flirt playfully with adult female players.
+- Players can respond positively, flirt back, joke, change the subject or politely decline.
+- NPCs can initiate light, situational banter where appropriate, including hospitality interactions while greeting guests, taking orders or serving tables.
+- Characters can smile, laugh, make eye contact, use expressive facial reactions and conversational body language.
+- Dialogue can include playful teasing, compliments and remarks about a player's outfit, hairstyle or accessories, without making every interaction romantic or repetitive.
+- Appropriate friendly gestures can include a brief shoulder touch or similar light contact, but physical contact must be context-sensitive and governed by interaction/consent settings. No forced intimate contact or harassment.
+- NPCs should recognize a player's response and respect disinterest, refusal, blocking or social boundaries. Repeated unwanted advances must not occur.
+- Flirting should be optional social flavor, not a requirement for service, progression, purchases or access to venues.
+- Keep romantic/flirtatious interactions between adult characters; do not sexualize minors or ambiguous-age characters.
+
+Dialogue personality, relationship/memory depth, player-to-player consent controls, animation sets, voice performance and localization remain to be designed.
+
