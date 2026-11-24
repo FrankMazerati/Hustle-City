@@ -195,3 +195,17 @@
 - [ ] Simulate supply and economy behavior at 1,000, 10,000, 100,000 and higher player populations; test simultaneous issuance/trading and ensure no duplicate ownership or count drift.
 - [ ] Require creator approval for card-to-player ratios, issuance thresholds, new values/variants/sets, rarity distributions and any supply inflation rules.
 - [ ] Select database schema, ID encoding, indexes/partitioning, retention and operational admin tools after the domain model is reviewed.
+
+
+## P14 — In-game clock, day/night cycle and weather
+- [ ] Design a server-authoritative shared world clock for each multiplayer world instance.
+- [ ] Add a persistent HUD display of in-game time and current local weather; clearly distinguish game time from the player's real-world device time.
+- [ ] Implement smooth dawn, sunrise, morning, noon, afternoon, golden hour, sunset, dusk and night transitions.
+- [ ] Coordinate sun position, sky, ambient lighting, shadows, reflections and artificial lights with the world clock.
+- [ ] Design and implement changing climate-appropriate weather: sunny/clear, cloudy, humid/hazy, rain/showers, thunderstorms and fog.
+- [ ] Support district/region-aware weather where appropriate, with smooth transitions across boundaries.
+- [ ] Display concise weather conditions and determine whether temperature, wind, precipitation intensity and forecast details belong in the initial HUD or phone.
+- [ ] Connect time/weather state to NPC schedules, traffic, venue ambience, event presentation, ambient audio and environmental effects where appropriate.
+- [ ] Preserve safe predictable transportation; weather must not create random crashes, player-asset damage, loss or unfair financial penalties.
+- [ ] Define in-game day length/time acceleration, calendar/date behavior, synchronization across clients/world instances, weather-region boundaries, transition rates, forecast horizon and seasonal rules before implementation.
+- [ ] Test clock/weather consistency across multiple players, reconnects, server restarts and travel between districts.
