@@ -79,6 +79,42 @@ class ServiceTests(unittest.TestCase):
         self.assertEqual(qa["outcomes"][0]["qa"]["result"], "released:city-builder")
         self.assertEqual(self.runtime.status("HC-SERVICE-TEST")[0]["current_station"], "city-builder")
 
+    def test_rolling_tick_advances_qa_and_unrelated_production_together(self):
+        class RoutingFakeOllama:
+            def chat(self, model, messages, temperature=0.2):
+                system = messages[0]["content"]
+                if "independent Hustle City QA supervisor" in system:
+                    return json.dumps({
+                        "decision": "approve",
+                        "feedback": "All required checks passed.",
+                        "checks": ["scope", "completeness"],
+                        "confidence": 0.97
+                    })
+                return "A complete independent production deliverable."
+
+        first = self.runtime.create_package(
+            "test_package", {"objective": "Package awaiting QA"}, {}, "HC-ROLLING-QA"
+        )
+        self.runtime.claim(first, "world-builder", "world-builder")
+        self.runtime.submit(first, "world-builder", "world-builder", "First package draft")
+
+        self.runtime.create_package(
+            "test_package", {"objective": "Unrelated production"}, {}, "HC-ROLLING-PROD"
+        )
+        services = AgentServices(self.runtime, self.agent_config, RoutingFakeOllama())
+        scheduler = Scheduler(services, max_workers=2)
+
+        result = scheduler.tick("rolling")
+        self.assertEqual(result["processed"], 2)
+        self.assertEqual(
+            {item.get("result") for item in result["outcomes"] if "result" in item},
+            {"submitted_for_qa"}
+        )
+        self.assertTrue(any("qa" in item for item in result["outcomes"]))
+        statuses = {item["package_id"]: item for item in self.runtime.status()}
+        self.assertEqual(statuses["HC-ROLLING-QA"]["current_station"], "city-builder")
+        self.assertEqual(statuses["HC-ROLLING-PROD"]["status"], "qa_pending")
+
     def test_invalid_scheduler_phase_is_rejected(self):
         services = AgentServices(self.runtime, self.agent_config, FakeOllama([]))
         scheduler = Scheduler(services)
