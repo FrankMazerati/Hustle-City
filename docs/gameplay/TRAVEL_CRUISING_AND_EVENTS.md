@@ -33,5 +33,18 @@ Flow: create → validate rights/availability → publish → invite/share → R
 ## 7. Event discovery and calendar
 Provide upcoming, nearby/visible, friends, crew and venue event views. Filters by date, district, venue and event type. Calendar time zone must be explicit. Notifications respect user settings. Event cancellations or changes notify invitees.
 
+## 7A. City travel as card-collection progression
+
+Travel between cities is a core progression loop, not just transportation convenience. Each city owns its own card catalogue and City Key track.
+
+- A player must physically travel to a city to earn/collect cards assigned to that city.
+- Hustle City cards are earned in Hustle City; Chicago cards in Chicago; Miami cards in Miami; Texas cards in the relevant Texas city; and likewise for every approved destination.
+- Playing poker, visiting businesses, completing activities, attending events, opening eligible packs and claiming card rewards in a city may award cards for that current city only.
+- Cards from another city cannot be earned remotely while the player remains elsewhere.
+- Players can view their Card Album and trade eligible cards from anywhere. Trading is the explicit exception to the presence requirement.
+- City Keys are city-specific major milestones with significant bonus/surprise rewards and configured city-business unlocks. Exact key requirements and reward contents are defined per city and remain subject to creator approval.
+- The city progression loop should make each destination worth visiting again: explore, play, complete activities, collect local cards, complete local collections, pursue that city's key and unlock its configured opportunities.
+- Do not make travel costs, fares or card reward rates up. Basic transportation rules and currency constraints remain governed by this document's existing fare rules and the economy specification.
+
 ## 8. QA
 Test fare quote mismatch, insufficient currency, service outage, group boarding, convoy split, disconnect/rejoin, privacy opt-out, blocked invite, schedule overlap, venue closure, capacity overflow, event cancellation and refund/idempotency behavior.
