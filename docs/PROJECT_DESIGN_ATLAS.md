@@ -395,3 +395,12 @@ Create a reusable naming framework for cities, casinos, venues and businesses. G
 - Preserve readable profiles, usable touch targets, clear selection feedback in crowds and the live scene context. Do not simply shrink the tablet UI or infer selection from proximity.
 - Exact orientation rules, responsive breakpoints, accessibility settings and console control mapping remain open implementation details.
 - See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 30.
+
+## 31. Full inspectable profiles for Sims/NPCs
+- Named Sims/NPCs should have full tap-to-inspect profiles, parallel in depth to player profiles. Show name, in-world age, neighborhood/residential information, occupation/workplace, workdays, shift hours, days off and supported ownership/asset details.
+- Example: Ebony works at the bar Monday–Friday, 9 AM–5 PM, with Saturday/Sunday off. Individual schedules are persistent and vary by person and employer.
+- Track each Sim's city/game tenure and stable population cohort (first, second, third 10,000-person batch, etc.). Keep cohort provenance, introduction/tenure and in-world age as separate fields. Cohort does not define identity, rank or quality.
+- Supported assets may include homes, properties, vehicles, car lots/businesses and other possessions, backed by authoritative ownership records rather than invented profile flavor.
+- Use the tap-to-identify profile pop-up and expanded profile view; no permanent floating name tags. Keep private residential coordinates and internal simulation data out of the player-facing view.
+- Profiles should reflect changes to work, schedule, residence and ownership while preserving the Sim's stable identity.
+- See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 31.
