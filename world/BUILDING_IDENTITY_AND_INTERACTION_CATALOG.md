@@ -197,3 +197,14 @@ These are separate, creator-directed identities and must not be conflated:
 - **Monster Beach** is a separate waterfront destination located by the **Hustle Club beachfront casino**.
 - Do not move Monster Beach into the studios grounds, rename Monster Beats, or treat the names as interchangeable.
 - **Ain't You Funny Comedy Club** is the confirmed comedy-club name.
+
+
+## 3F. Creator correction — Monster Beach vs. Get Wild Beach
+
+This section supersedes the previous section 3E placement of Monster Beach:
+- **Get Wild Beach** is beside the **Hustle Club beachfront casino** in the waterfront cluster.
+- **Monster Beach** is inside the grounds of **Upper Level Entertainment Studios** in the Entertainment District.
+- These are distinct beach destinations with distinct locations. Never conflate their names or move one into the other's area.
+- **Monster Beats** remains an established separate name; do not assume it is a synonym for Monster Beach or invent a relationship between them.
+- Upper Level Films / Television / Production remains a separate, nearby major campus.
+- Ain't You Funny Comedy Club remains the creator-confirmed comedy-club name.
