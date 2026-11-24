@@ -42,3 +42,15 @@ _Add new entries above this line._
 - **Expanded notes:** Provide a contextual NPC profile/relationship panel on approach or during conversation, with NPC name/role and this player's familiarity and trust values. NPC recognition may consult approved player-visible social profile fields such as display name, level, stars/rank, playtime/tenure and venue-specific visit frequency. Use verified context to adapt greetings and behavior. Keep private/account data hidden; stats do not establish trust, consent, entitlement or attraction.
 - **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 21.
 - **Source:** Creator conversation, 2026-11-24.
+
+
+### 2026-11-24 — Conversation-earned trust and NPC-hosted parties
+- **Status:** APPROVED — creator-directed feature requirements; tuning and implementation details remain open.
+- **Domain:** Sims-MPC-NPC / gameplay / social simulation / events
+- **Origin:** conversation / creator direction
+- **Original idea:** “Trust should come from conversations. The more conversations you have with somebody, asking questions, the pre-selected available interactions like talk, park a vehicle. But let's say you want to stand there and talk to Marcus for a little while longer. So then your trust goes up to 63, 64, 65. Maybe you can ask personal questions and he can respond. Man, how's your family? Man, I just bought a new yacht yesterday, man. You need to come and check it out. You know the deal. Sims can have yacht parties and throw parties and stuff too. That should be, who should be doing the main most of the social stuff, throwing yacht parties, street car parties, club parties, venue, shit like that. And then inviting the players, the new players.”
+- **Expanded notes:** A service or activity interaction should be extensible into an optional ongoing conversation with the same NPC. Topic choices range from everyday conversation to personal questions when appropriate. Trust changes gradually in response to meaningful, reciprocal, respectful conversation and the NPC's reaction; do not reward spam, empty repetition or mere proximity. NPCs can share personal updates, ask questions and remember actual exchanges.
+- **NPC social events:** NPCs or NPC social circles can originate and host yacht parties, street-car meets/parties, club parties and other gatherings. They select guests and invite players—including newcomers—through credible contextual paths. Support invitations, responses, attendance and persistent social consequences. NPC-hosted gatherings are distinct from player-hosted events.
+- **Open questions:** Dialogue/topic catalog, trust tuning, NPC social graph/host selection, event types and schedules, invitation rules, capacities and content/safety restrictions.
+- **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 22.
+- **Source:** Creator conversation, 2026-11-24.
