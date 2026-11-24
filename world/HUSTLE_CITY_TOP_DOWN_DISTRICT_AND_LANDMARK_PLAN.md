@@ -236,3 +236,12 @@ This section supersedes earlier wording that grouped Upper Level Entertainment S
 - It remains a social, NPC-performed venue with group outings, admission where applicable, audience participation and the previously described supported social activities.
 
 This is a creator-directed correction to the earlier single-campus arrangement. Do not revert to treating Upper Level Entertainment Studios, Upper Level Films and Monster Beats as three co-equal buildings inside one shared campus without further creator approval.
+
+
+## 11. Creator clarification — Monster Beats and Monster Beach are distinct
+
+- **Monster Beats** stays within the **Upper Level Entertainment Studios** campus in the Entertainment District.
+- **Monster Beach** stays in the **waterfront cluster by the Hustle Club beachfront casino**.
+- These are distinct destinations/identities in separate city areas. Do not place Monster Beach inside Upper Level Entertainment Studios, and do not rename Monster Beats.
+- The Upper Level Films / Television / Production campus remains a separate, nearby large campus adjacent in the broader Hollywood-style production zone.
+- Ain't You Funny Comedy Club remains the confirmed comedy-club name.
