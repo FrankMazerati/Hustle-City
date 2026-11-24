@@ -25,6 +25,29 @@ Use the existing A–E building interaction tiers. Tier A signature destinations
 ## 5. Property and apartment operations
 Apartment/property features may include furnishing, decor, layout packages, storage, garage/parking, guest permissions and access settings only where the selected property tier supports them. Upgrade catalogue must distinguish visual-only cosmetics from functional capacity/feature upgrades. Exact upgrade paths, prices, capacities and item catalogue are TBD.
 
+
+## 5A. Renting first, permanent apartment ownership, and venue privileges
+
+### Hustle Towers apartments
+- A new player may start as a tenant renting an apartment in Hustle Towers.
+- Each apartment's five-card collection is tied to that specific apartment or explicitly defined apartment entitlement.
+- Completing all five required cards unlocks the permanent ownership claim for that apartment, subject to availability and any creator-approved eligibility rules.
+- Renting and permanent ownership are different states. The UI must show the current tenancy, rent terms/renewal rules (TBD), collection progress, and the permanent-ownership unlock path.
+- Do not silently convert rent payments into ownership or imply that renting alone completes the card collection.
+- Decide whether the five cards are retained, locked or consumed only through an explicit creator-approved card policy.
+
+### Shuffle Club and casino
+- The Shuffle Club remains a shared venue; players cannot own the Shuffle Club or the casino inside it.
+- A configured five-card collection may unlock a private room inside the Shuffle Club. This is a room/access entitlement, not ownership of the venue, casino, gaming operation or surrounding property.
+- The casino is an experience inside the Shuffle Club, not a separate building by default. Whether it receives a separate five-card set or shares the club collection is TBD.
+
+### Other venues
+- Velvet Lounge has a five-card collection, but its completion reward is TBD; do not presume ownership.
+- Hustle Club, Hustle City Marina and Yacht Club, American Swagger Clothing, the car dealership, Upper Level Entertainment Studios, Upper Level Films and Monster Beats may each have venue-specific collections. Their completion rewards require explicit creator approval.
+- The marina/yacht-club venue collection does not grant ownership of every boat. The dealership collection does not grant ownership of every car. Individual vehicle collections remain separate.
+- The beach is excluded from the five-card building collection requirement.
+
+The building registry must distinguish venue ownership, private-room access, apartment tenancy, permanent apartment ownership, business operating rights and individual vehicle ownership as separate entitlement types.
 ## 6. Business operations
 A business record should define business_id, building_id, owner_id, managers, business_type, operating_state, hours, staff roles, service catalogue, inventory/stock, upgrade_level, revenue ledger, expenses, event capability and moderation/access policy. Revenue must come from simulated, auditable game activity; do not promise passive income rates until balanced.
 
