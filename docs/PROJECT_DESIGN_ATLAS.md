@@ -260,3 +260,9 @@ This is an approved product requirement for the architecture and backlog, not a 
 - Snow presentation may include accumulation, frosted surfaces, altered ambience and appropriate NPC clothing/behavior where supported. Define whether snow is citywide, district-specific or a rare special weather event.
 - Maintain safe predictable automated transportation and pedestrian movement in cold/snow conditions. Weather must not cause random crashes, damage, asset loss or financial penalties.
 - Decide season/calendar model, cold-weather duration, snow frequency and accumulation behavior during environment design; do not invent fixed dates or frequency yet.
+
+
+## NPC and player wardrobe depth
+Hustle City requires a substantial fashion system for the named Sim population and player avatars. Each Sim should have a wardrobe supporting approximately 30 days of varied outfits, using a scalable mix of modular garments, accessories, uniforms and outfit presets. Outfit selection reflects the individual's identity, job, income/lifestyle, personality, neighborhood, activity, venue, weather and season.
+
+Venue styles must be distinct: casino/shuffle-club staff wear coordinated upscale role uniforms; adult casino and nightlife guests can wear glamorous, sexy evening fashion including fitted/short dresses and skirts, low-cut/open-neckline styles, heels and statement jewelry; beaches support swimwear and resortwear; restaurants, bars, rooftops, yacht clubs and concerts have appropriate casual-to-formal ranges; neighborhood streetwear reflects local style without stereotypes. Work uniforms differ from off-duty clothing. Rain, heat, cold and snow influence wardrobe choices. Keep all designs within the approved content rating and platform rules; never sexualize minors or depict explicit nudity. P08 owns the wardrobe system and coordinates with P03/P04/P05/P09/P10/P12. Exact catalog counts, asset budgets and repetition windows remain open.
