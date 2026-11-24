@@ -26,14 +26,13 @@ Create a creator-approved economy table for every earn/spend source. Candidate s
 - Quote the exact currency and fare before confirmation; reserve then charge atomically.
 - Exact vehicle/boat prices, flight fares, routes and upgrade costs remain unresolved.
 
-## 4. Basic and premium travel
-- Basic public transit and ordinary rideshare remain available without Diamonds.
-- Basic services may be free or use Hustle Money, according to the specific service.
-- Premium travel options may use Diamonds.
-- Before confirmation show origin, destination, service tier, currency, fare, party/seat constraints and refund/cancellation rule.
-- Never charge until the server reserves the travel service and confirms the quoted fare.
-- If travel fails before departure, refund or release the reservation automatically. If interrupted after departure, apply the published service-specific policy; never silently consume a premium fare.
-- Exact Diamond fares, tiers and routes are unresolved.
+## 4. Vehicle, boat and flight currency rules
+- Boats and cars use Diamonds under their approved purchase and upgrade rules.
+- Flying and air-travel services use Wings.
+- Hustle Money is used for ordinary in-game purchases, goods, services and eligible upgrades.
+- Poker Chips are used to actually play poker and other explicitly chip-denominated table activities.
+- The exact fare, route, vehicle class, ownership and upgrade rules remain unresolved. The UI must show the required currency and exact price before confirmation.
+- Do not charge a player until the server validates availability and reserves the transaction. Failed transactions must not debit a wallet.
 
 ## 5. Poker Chips
 Poker Chips are separate from the other currencies. The initial policy is non-redeemable virtual chips with no cash-out. A table buy-in, ante, stake, payout and rake (if any) must be denominated in Poker Chips and recorded by the game server. The table must disclose limits before joining. No real-money wagering is specified.
