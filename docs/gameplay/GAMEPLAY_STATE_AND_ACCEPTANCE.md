@@ -41,6 +41,18 @@ Server-authoritative: balances, ledger, paid entitlements, card ownership, pack 
 17. Event reaches capacity; extra RSVP/entry is rejected gracefully and host sees accurate count.
 18. Player disconnects during travel, trade, pack opening or purchase; state reconciles safely on return.
 
+## 5. Card rewards and in-game trading acceptance
+- Daily login reward configuration can grant building-specific, selectable or general card packs through the canonical pack service.
+- Poker gameplay rewards can grant approved cards/packs through defined participation or achievement milestones without making high-stakes play necessary for essential collection progression.
+- Player can add another player as a friend, manage requests and block/report users.
+- Player can search for a missing building card and find eligible traders inside Hustle City.
+- Card Album, wish lists, inventory visibility and Card Finder obey privacy settings.
+- Players can propose multi-card exchanges, counteroffer and approve exact final terms.
+- Both parties approve the same trade version before the server atomically transfers all cards.
+- Pending offers reserve cards; cancel/decline/expiry releases them; reconnect and retries preserve the authoritative state.
+- Trade history, notifications, abuse reporting and moderator audit trail function in-game.
+- No external app, website, Discord, Facebook group or spreadsheet is needed to discover, negotiate or complete a card trade.
+
 ## 5. Daily rewards and streak acceptance
 - One qualifying login can claim at most one daily reward per server-defined reward day.
 - Daily reward may grant Hustle Money, Diamonds or Poker Chips; Wings are excluded unless a creator-approved reward configuration explicitly includes them.
