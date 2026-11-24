@@ -169,3 +169,13 @@ Required economy coverage:
 **To be designed — do not invent:** Rideshare fare formula and service tiers; fuel prices, consumption and refueling costs; convenience-store item list and prices; health/recovery effects; personal-care product catalog and costs; whether a hygiene/cleanliness stat exists and its consequences; product depletion; and exact recurring-cost targets.
 
 Balance recurring expenses against free-player earning, daily rewards, Poker Chip conversion, memberships/kits and premium activities. Everyday costs should make the world feel lived in without turning basic participation into an exhausting upkeep tax or making free players unable to get around and participate.
+
+
+## Expanded gambling activities and casino-city economy
+- **Approved creator direction:** Some city markets should have a “hood version of Vegas” identity, where gambling is woven into nightlife, entertainment, social activity and the local economy.
+- **Approved creator direction:** The gambling catalog should extend beyond poker to recognizable games including blackjack, baccarat, roulette, craps/dice tables, slot machines and street dice/shooting dice.
+- **Approved venue direction:** Support varied environments such as polished casino floors, neighborhood dice games, local craps tables, card rooms, lounges and late-night gambling venues. City identity and venue mix should be distinct rather than duplicated everywhere.
+- **Economy flow:** Players wager supported in-game currency, game outcomes settle wins/losses, and eligible Poker Chips can use the existing cashier/kiosk conversion flow into Hustle Money at the approved nominal 1:1 in-game rate. All wallet movement and game settlement must be authoritative, atomic, auditable and protected against replay, duplicate settlement and concurrency exploits.
+- **Cash-out meaning:** Cashing out means converting eligible game chips into Hustle Money for in-game spending only. It does not authorize real-world withdrawals, cash redemption, cash prizes or claims of real monetary value.
+- **Unresolved:** City selection; game rules/variants; supported wager wallets; table limits; payout schedules/house edge; NPC and player participation; game-specific economic balancing; venue access; and release sequencing.
+- **Mandatory review:** Gambling simulation, paid currency, purchases, wagers, prizes, chip conversion, transferability and cash-out wording require legal, platform-policy, age-rating and consumer-protection review in each target market. Fictional currency alone should not be treated as proof that no restrictions apply.
