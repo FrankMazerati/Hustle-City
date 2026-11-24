@@ -620,3 +620,40 @@ No agent may independently invent database schemas, network authority or transac
 6. The interaction model is designed so future controller-based console support can use the same profile and social-action flow.
 7. Profile visibility, blocks, consent/recipient agency, moderation and trade safeguards remain consistent across platforms.
 8. Phone landscape is evaluated as the intended presentation, with final orientation and responsive behavior validated during UI/platform design.
+
+
+## 31. Full inspectable Sim/NPC profiles and population cohort history
+**Creator-approved requirement:** Give named Sims/NPCs a full inspectable in-world profile, using the same tap-to-identify interaction pattern as player profiles. Players should be able to learn who a Sim is, how they live, what they do, what they own and how long they have been part of Hustle City.
+
+### Identity and life profile
+- Show the Sim's stable name, portrait/appearance, in-world age or approved age representation, neighborhood/district and residential/home information at the level of detail intended for public gameplay display.
+- Show occupation, employer/business and workplace, role, current work/off-duty status and a readable work schedule.
+- Work schedules should identify working days, shift start/end times, breaks where useful and days off. Example: Ebony works at a bar Monday–Friday, 9:00 AM–5:00 PM, and is off Saturday/Sunday. This is an illustrative individual schedule, not a universal schedule for all workers.
+- Show relevant household and lifestyle details where designed, while keeping exact private residential coordinates/address and other non-public simulation data out of the player-facing profile.
+
+### City tenure and population cohort provenance
+- Record when each Sim was introduced into the persistent city population and how long they have existed/been active in the game world.
+- Assign a stable population cohort/batch identifier so the profile or an appropriate expanded information view can indicate whether the Sim came from the first 10,000-person cohort, second 10,000-person cohort, third 10,000-person cohort, etc.
+- Cohort/batch is provenance metadata, not the Sim's identity, social rank, age, quality or importance. Adding later cohorts must not renumber or replace earlier residents.
+- Distinguish in-world age from city tenure and cohort introduction date. These are separate facts and must not be conflated.
+- Preserve the same person's identity and history through population expansion, schedule changes, moves, job changes and reconnects.
+
+### Ownership and assets
+- Where supported by the game economy and simulation, show the Sim's owned homes/houses, total properties, vehicles, car lots/businesses and other approved possessions.
+- Keep counts and item categories distinct (for example, a home is not automatically every property; a car lot is not the same as a personally owned vehicle).
+- Where the design permits, let players inspect item-level public details in addition to ownership totals. Use authoritative ownership records and update profiles after valid purchases, sales or transfers.
+- Do not fabricate assets for profile flavor. A Sim's possessions, residence, employment and schedule must correspond to persistent game records and simulated world state.
+
+### Profile interaction and presentation
+- Tapping/selecting a Sim in the live scene opens the same compact portrait/profile pop-up pattern used for player characters, without permanent floating name tags above every person.
+- Offer context-appropriate actions such as chat, invite to sit, invite for a drink/meal or other social interaction, subject to the Sim's schedule, current activity, personality, availability and agency.
+- A compact view should surface useful identity, occupation, neighborhood and status at a glance; an expanded profile can expose schedule, tenure/cohort and ownership categories without overwhelming the live scene.
+- The profile is a truthful window into the Sim's persistent identity and life, not a static lore card detached from the simulation.
+
+### Acceptance criteria
+1. A player can tap a named Sim such as Ebony and open a persistent, accurate profile.
+2. The profile can show name, in-world age, neighborhood/residence, occupation/workplace, working days, shift hours and days off.
+3. A Sim's profile can identify their population cohort (for example, first, second or third 10,000-person batch) and city tenure without confusing either with in-world age.
+4. Supported ownership totals and item lists reflect authoritative Sim ownership records.
+5. Profile details remain coherent after the Sim changes shifts, jobs, residence or possessions and after population expansion.
+6. Tapping a Sim does not expose private simulation internals or exact private residential location, and does not create a permanent overhead name label.
