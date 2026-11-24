@@ -188,3 +188,12 @@ Entertainment venues should support purposeful social sessions and NPC activity.
 - Future systems should support creator-designed events, missions and automated NPC-interactive sequences. These are a planned extension of the venue framework; no specific event, mission, schedule, reward or automation behavior is locked by this entry.
 
 Implementation must distinguish a visible prop from a functioning interaction. Admission, party/group arrival, NPC performance, social activities and any consumable/card interactions must be connected to real game state and validated systems when implemented. Exact mechanics, schedules, pricing and launch scope remain TBD.
+
+
+## 3E. Creator clarification — Monster Beats vs. Monster Beach
+
+These are separate, creator-directed identities and must not be conflated:
+- **Monster Beats** is part of the **Upper Level Entertainment Studios** campus in the Entertainment District.
+- **Monster Beach** is a separate waterfront destination located by the **Hustle Club beachfront casino**.
+- Do not move Monster Beach into the studios grounds, rename Monster Beats, or treat the names as interchangeable.
+- **Ain't You Funny Comedy Club** is the confirmed comedy-club name.
