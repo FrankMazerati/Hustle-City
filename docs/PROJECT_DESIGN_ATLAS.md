@@ -242,3 +242,21 @@ This is an approved product requirement for the architecture and backlog, not a 
 - Choose world-day duration and time acceleration, calendar/date rules, pause/maintenance behavior, server-authoritative synchronization and handling of players in different world instances.
 - Define weather-region boundaries, transition rates, forecast horizon/accuracy, seasonal behavior and whether/when major weather events are scripted.
 - Ensure clock, lighting and weather remain consistent across clients and recover correctly after reconnects or server restarts.
+
+
+## 27. Neighborhood lifestyle spaces and ambient city activity
+### Residential and waterfront social spaces
+- Build distinct neighborhood identities with appropriate architecture, landscaping, amenities and social energy. Upscale neighborhoods should feel lived-in and aspirational rather than functioning only as backdrops.
+- Include rooftop terraces, rooftop lounges, private balconies, back porches, patios and waterfront decks. Some waterfront homes, restaurants and venues should have intimate private/semi-private dining decks close to the water, with tables, comfortable seating, lighting and scenic views.
+- Let players use these spaces to sit, eat meals, relax, talk, socialize, invite friends and host small gatherings. Support shared dining and conversation interactions; gate access through ownership, tenancy, venue access or invitations as appropriate.
+- Include rooftop social spaces with skyline views and suitable amenities (for example, lounges or pools where the location calls for them). Preserve quieter residential spaces such as a back porch for dinner and conversation.
+### Visual identity and ambient traffic
+- Use palm trees and deliberate landscaping throughout appropriate districts. Give major buildings, towers, clubs, restaurants and landmarks recognizable names and legible world signage.
+- Keep the player's location legible: display district name and, when useful, the named building, venue or nearby landmark in the HUD/map/location panel.
+- Populate streets and venues with premium vehicles and visible fashion/jewelry as appropriate to the neighborhood, NPC, player character and venue. Expensive cars and jewelry contribute to the city's lifestyle identity but should remain coherent with district character and character customization/economy systems.
+- Add occasional ambient aircraft flybys: distant commercial/private planes on believable routes and helicopters passing over the city. Vary timing, altitude, direction and frequency to avoid obvious loops. These ambient aircraft are distinct from player-owned aircraft, aircraft services and interactive flight systems.
+### Seasonal and cold-weather presentation
+- Expand weather beyond warm coastal conditions to include cold-weather periods and occasional snow where appropriate to the world calendar and district climate. The creator explicitly wants the possibility of snow at some point.
+- Snow presentation may include accumulation, frosted surfaces, altered ambience and appropriate NPC clothing/behavior where supported. Define whether snow is citywide, district-specific or a rare special weather event.
+- Maintain safe predictable automated transportation and pedestrian movement in cold/snow conditions. Weather must not cause random crashes, damage, asset loss or financial penalties.
+- Decide season/calendar model, cold-weather duration, snow frequency and accumulation behavior during environment design; do not invent fixed dates or frequency yet.
