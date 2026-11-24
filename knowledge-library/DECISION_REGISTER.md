@@ -189,3 +189,14 @@ This register captures decisions promoted through the knowledge library. The exi
 - Design for the stated scale example of 10,000 players and 100,000 Sims. Use persistent sparse per-person/per-pair records and event/memory retention policies rather than assuming every entity has a fully populated all-to-all relationship matrix. Preserve identity and records across sessions.
 - **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), sections 34 and related relationship sections.
 
+
+
+## 2026-11-24 — Database persistence for Sim memory libraries
+- **Status:** APPROVED — creator-directed persistence requirement.
+- Sim person-memory libraries and relationship records must be attached to and persisted in the game's database, not held only in session memory or transient runtime context.
+- Persist stable person references, the remembering Sim, meaningful encounter/conversation history, familiarity, trust and relevant relationship state. Keep event history distinct from current relationship values.
+- Records survive logout, reconnect, server/process restart and population expansion. Runtime caches may improve speed but are not the source of truth.
+- Relationship records are directional and pair-specific: one Sim's memory/trust does not automatically become the other person's, or another Sim's.
+- Use sparse, indexed retrieval for the 10,000-player / 100,000-Sim scale example; do not pre-create every possible relationship pair. Access controls, data minimization, retention, deletion, backup and migrations are required.
+- Exact schema, database product, indexes/partitioning and retention implementation remain open.
+- **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 35.
