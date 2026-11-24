@@ -197,12 +197,12 @@ create table if not exists public.business_ownership (
   check (released_at is null or released_at >= acquired_at)
 );
 
--- Three distinct currencies. The ledger, not a client-supplied balance, is authoritative.
+-- Four distinct currencies: Hustle Money, Diamonds, Poker Chips and Wings. The ledger, not a client-supplied balance, is authoritative.
 create table if not exists public.wallet_accounts (
   id uuid primary key default gen_random_uuid(),
   player_id uuid references public.profiles(id) on delete cascade,
   crew_id uuid references public.crews(id) on delete cascade,
-  currency_code text not null check (currency_code in ('HUSTLE_MONEY','DIAMONDS','POKER_CHIPS')),
+  currency_code text not null check (currency_code in ('HUSTLE_MONEY','DIAMONDS','POKER_CHIPS','WINGS')),
   created_at timestamptz not null default now(),
   check ((player_id is not null and crew_id is null) or (player_id is null and crew_id is not null))
 );
