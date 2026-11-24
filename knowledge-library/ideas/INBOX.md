@@ -75,3 +75,14 @@ _Add new entries above this line._
 - **Open questions:** Which profile fields are public by default; exact card/key item definitions and metadata; trade eligibility and confirmation rules; whether additional inventory categories are included.
 - **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 24.
 - **Source:** Creator conversation, 2026-11-24.
+
+
+### 2026-11-24 — Full player status, property, vehicle and collection profile
+- **Status:** APPROVED — creator-directed profile expansion; visibility and detailed UI rules remain open.
+- **Domain:** multiplayer / player profiles / economy / property / vehicles / collectibles / trading
+- **Origin:** conversation / creator direction
+- **Original idea:** “What neighborhood, how many houses they own, how many cars, cars or car lots they own. All of the in-game stats, neighborhood, hustle district, stars level online. Tricks in-game keys, trading cards. Which cards he has, which ones he has to trade. How many properties he owns. How many cars he owns, stuff like that.”
+- **Expanded notes:** Player inspection should expose a comprehensive in-game profile: display name, online status, rank, level, stars, neighborhood, crew, house/home count, total property count, vehicle count, car-lot/dealership ownership, card collection and in-game keys. Where permitted, show item-level lists as well as totals and clearly distinguish owned assets from assets listed for trade. Keep car-lot ownership separate from vehicle ownership. Data must reflect authoritative current game state; profile viewing does not transfer or reserve items.
+- **Privacy/implementation notes:** The owner controls visibility of profile categories/items under game rules. Never expose exact home addresses, credentials, private account data or hidden inventory. Define exact category visibility, profile layout and trade validation separately.
+- **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 25.
+- **Source:** Creator conversation, 2026-11-24.
