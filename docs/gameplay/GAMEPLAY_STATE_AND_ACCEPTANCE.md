@@ -90,3 +90,13 @@ For each feature, retain test ID, build/version, account fixtures, setup, action
 
 ## 6. Not ready for production until approved
 Exact pack odds/prices, card catalog, building-to-five-card mappings, card consumption policy, currency earn/spend table, Play Store SKUs/prices, Diamond travel fares, upgrade effects/prices, referral payouts, poker variants/stakes/venue layout and event capacity policies.
+
+
+## Expandable content and progression acceptance
+- New approved asset collections can be added through versioned data/configuration and stable IDs without schema redesign or hard-coded collection-count limits.
+- A new collection points to one exact asset/privilege entitlement and preserves host-building ownership boundaries.
+- New card packs can be released, scheduled, retired or rolled back without deleting owned cards, breaking trades, invalidating completed collections or revoking earned entitlements.
+- Player level/XP, stats, reputation, stars/prestige, achievements, business/crew progression and collection milestones are stored as distinct tracks with versioned rules.
+- Adding a progression track or new level/reward band does not require resetting existing player progress.
+- No level cap, XP curve, stat formula, star scale, pack odds, card quantity or expansion cadence is hard-coded as final before creator approval.
+- All new rewards, packs, progression changes and entitlements remain server-authoritative, idempotent and auditable.
