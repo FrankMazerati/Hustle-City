@@ -1,5 +1,8 @@
 # Hustle City IntelliSync — Rolling Assembly-Line Production Standard
 
+> **Current creator-approved workforce overlay (2026-11-24):** This operating-model document contains earlier department/role descriptions. The current local workforce target is 17 agents: SCRIBE and LENS (parallel creative leads), QA-1 through QA-3, and P01–P12 (12 production specialists in three groups of four, each group owned by one QA supervisor). ChatGPT in the coordinating conversation is the overall coordinator; Trinity is not a locally running agent/model. Production uses overlapping waves with a 20-minute production window, 5-minute independent QA window and 5-minute correction window. The shared repository workflow is one shared `main` branch, not per-agent branches. The existing 12-specialist/3-QA configs and department mapping are legacy and must not be treated as the current roster or activated until reconciled. The 17-role target does not mean 17 workers are currently running.
+
+
 **Status:** Operating model approved in principle by the creator; exact specialist station order beyond the confirmed foundation stages must follow the approved 12-specialist roster.  
 **Applies to:** Trinity, all three QA supervisors, and all 12 production specialists.  
 **Primary objective:** Keep production moving continuously through small, versioned, quality-checked packages instead of waiting for one agent or department to finish an entire project.
