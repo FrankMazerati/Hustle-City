@@ -73,3 +73,10 @@
 - [ ] Add economy simulations for income, weekly package costs, upgrades, sinks, inflation and new-player affordability.
 - [ ] Add healthy-engagement metrics and player-feedback checks alongside retention metrics; prohibit deceptive urgency, coercive streak loss and uncapped playtime incentives.
 - [ ] Obtain creator approval for package tiers/prices, weekly billing rules, rewards, streak policy, XP curves and upgrade costs before implementation.
+
+- [ ] Design reversible offline/away-state apartment neglect visuals (e.g. dust, flies/roaches) and vehicle maintenance-due states after creator-approved absence thresholds; never evict players or permanently damage/remove assets due to inactivity.
+- [ ] Define clear, affordable return-to-care actions for cleaning/restoring an apartment and servicing a vehicle, without blocking poker/social access.
+- [ ] Add onboarding opt-ins for email and SMS/text updates, with separate explicit consent, disclosed purpose/frequency, editable preferences and straightforward unsubscribe/STOP handling.
+- [ ] Treat social login (including Facebook) as authentication only; require separate supported permission/consent for any social-platform notifications.
+- [ ] Build a low-frequency re-engagement notification service with quiet hours, frequency caps, deduplication, privacy-safe message previews, delivery audit and channel preference enforcement.
+- [ ] Define absence thresholds, deterioration stages, maintenance timing, restoration costs, reminder cadence and approved message templates with the creator before implementation.
