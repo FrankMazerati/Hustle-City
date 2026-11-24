@@ -91,3 +91,12 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - **Implementation discipline:** These are required product directions, not claims that features are already implemented or included in the first playable release. Interaction details, content, capacities, economics, technical architecture and production phasing remain to be designed. The creator remains final design authority.
 - **Canonical specification:** `docs/gameplay/SOCIAL_WORLD_LIFESTYLE_AND_PLAYER_INTERACTION_REQUIREMENTS.md`.
 
+## Large poker rooms and proactive roaming service staff
+- **Approved creator direction:** Poker rooms should be large, impressive multi-table spaces where a player can see other active tables, player groups, NPCs and venue activity from their own table.
+- **Approved creator direction:** NPC waitstaff circulate through poker rooms and approach different tables/players rather than remaining stationary.
+- **Approved creator direction:** Servers proactively offer food and drinks through audible, conversational dialogue; players can respond, order, decline or dismiss the offer.
+- **Approved creator direction:** After an order is confirmed, the NPC obtains the selected item from the appropriate service point and visibly returns to deliver it; charges and inventory updates must be accurate.
+- **Approved creator visual direction:** Hospitality staff should include predominantly adult female characters with glamorous, attractive, venue-appropriate fashionable/revealing uniforms, potentially lingerie-inspired where compatible with the game's rating, platform rules and setting. Final outfit references/designs remain to be reviewed.
+- **Implementation details still open:** Room dimensions/table count/occupancy, NPC density and performance budget, pathfinding/service routes, spoken dialogue and localization, order/payment timing, animation coverage and staff scheduling.
+- **Canonical specification:** `docs/gameplay/SOCIAL_WORLD_LIFESTYLE_AND_PLAYER_INTERACTION_REQUIREMENTS.md`.
+
