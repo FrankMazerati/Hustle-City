@@ -137,3 +137,16 @@ This section supersedes the previous section 15 placement:
 - Monster Beats remains a separate established name; do not treat it as another name for Monster Beach or assume an unapproved relationship.
 - Upper Level Films / Television / Production remains a separate nearby campus.
 - Ain't You Funny Comedy Club is the confirmed comedy-club name.
+
+
+## 17. Creator-approved cardinal neighborhood layout
+
+Place the North Side, South Side, East Side and West Side neighborhoods outside and around the central city, on their corresponding compass sides.
+
+- The six established central district concepts and continuous transportation corridor form the central-city planning area.
+- North Side neighborhoods sit north of the central city; South Side neighborhoods south; East Side neighborhoods east; West Side neighborhoods west.
+- These are outer neighborhood groupings, not four new central districts. Preserve the 7×7 long-range framework and 43 potential outer-neighborhood boxes.
+- Distinguish the central city's denser district fabric from the surrounding neighborhood areas, while connecting them through the citywide road, expressway, bridge and transit network.
+- Neighborhoods within each side may have distinct identities; do not assume uniform socioeconomic character or architecture.
+- Exact counts per side, neighborhood boundaries, block IDs and street geometry remain to be determined. Do not invent an equal split of the 43 potential neighborhood boxes.
+- The overhead master map should place the central city in the middle, show the four outer cardinal neighborhood groupings, and include a north arrow. Detailed coordinates and parcel geometry remain provisional.
