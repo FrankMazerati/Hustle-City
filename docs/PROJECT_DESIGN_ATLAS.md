@@ -351,3 +351,12 @@ Create a reusable naming framework for cities, casinos, venues and businesses. G
 - Profile inspection can show in-game cards and keys the owner makes visible, distinguishing owned assets from those explicitly available for trade. Players can initiate offers for eligible assets, but viewing does not reserve or transfer anything; transfers require explicit confirmation.
 - Keep pair-specific relationship history private unless a defined game feature exposes a permitted summary. Do not expose hidden inventory, protected assets, private data or real account credentials.
 - See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 24.
+
+
+## 26. Full player status, ownership and collection profile
+- Player inspection should expose an expanded in-game profile with display name, online status, rank, level, stars, neighborhood/home district and crew affiliation.
+- Include ownership counts for houses/homes, total properties, vehicles and car lots/dealerships. Keep house/property categories distinct and do not confuse car-lot ownership with vehicle ownership. Where permitted, let viewers inspect owned-item lists as well as totals.
+- Show card collections and in-game keys, including item-level details the owner makes visible and a clear designation of items currently available for trade.
+- Use authoritative live ownership/inventory records so counts and item lists stay accurate after transactions. Viewing a profile does not reserve or transfer an item; trades require explicit confirmation and eligibility/ownership validation.
+- Provide a compact profile summary with expanded category views. Respect owner visibility settings and protect exact home addresses, private account data, credentials and hidden inventory. Status and wealth indicators do not automatically establish trust.
+- See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 25.
