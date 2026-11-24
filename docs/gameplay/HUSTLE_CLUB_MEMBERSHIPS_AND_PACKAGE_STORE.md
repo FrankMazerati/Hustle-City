@@ -77,7 +77,43 @@ Provide a daily reward claim system:
 
 Daily rewards are a retention mechanic, not an unbounded currency faucet. Monitor earned/spent balances, inflation and impact on paid purchases.
 
-## 5. The Bar: social hub, recovery and ad-supported dwell time
+## 5. Daily login rewards, seven-day streak bonus and prize wheel
+
+Daily engagement rewards are a core retention system and must be visible in the player experience, not buried in the store.
+
+### Daily login claim
+- A player earns one daily login reward for a qualifying login in each server-defined reward day.
+- The daily reward pool can include **Hustle Money, Diamonds and Poker Chips**.
+- **Wings are optional** in the daily pool. The creator has not decided whether Wings should be included as a regular login reward, a rare wheel result, or kept separate and earned through flight-related gameplay/store packages. Do not include Wings by default until approved.
+- Reward amounts, reset hour/time zone, eligibility, missed-day behavior and exact reward calendar are TBD.
+- Show the reward, claim status, next reset countdown and streak progress clearly.
+- A daily claim is granted once per account/reward day, server-authoritatively and idempotently. Logging in on multiple devices or reconnecting cannot duplicate it.
+
+### Seven-day login streak bonus
+- Track consecutive qualifying daily reward claims.
+- On completing seven consecutive reward days, grant a separate **seven-day weekly bonus** in addition to the ordinary daily reward for day seven.
+- The weekly bonus may combine Hustle Money, Diamonds and Poker Chips; Wings may be included only if the creator approves the Wings policy.
+- Exact amounts and mix are TBD. The seven-day bonus should feel meaningfully special without destabilizing the economy.
+- Display progress (e.g. 3/7 days), the reward preview, the claim state and the next qualifying day.
+- Decide whether a missed day resets the streak, uses a grace day, or preserves progress; do not silently choose a punitive rule. This is an open balancing decision.
+- Weekly bonus grant must be idempotent and separately recorded from the day-seven daily reward.
+
+### Daily prize / spinning wheel
+- Add an optional **daily reward wheel** that players can spin to receive an additional prize.
+- Default proposal: one free spin per qualifying daily login, separate from the daily login gift and seven-day streak bonus. This is a proposal, not approved final behavior.
+- Prize pool can include Hustle Money, Diamonds and Poker Chips. Wings may be a rare or occasional prize only if approved.
+- Publish the prize pool and exact probability/odds before the spin. The server selects and records the result; client animation only reveals the already-authoritative result.
+- Prevent rerolls, duplicate spins, client manipulation and reward duplication. A disconnect after spin must restore the same result.
+- Do not require a purchase or ad view to claim the ordinary daily gift or seven-day bonus. If a rewarded-ad bonus spin is later considered, it must be clearly optional, separately disclosed, capped and approved.
+- Do not introduce paid spins or randomized real-money purchases without a separate design, odds disclosure, age/jurisdiction review and platform compliance review.
+
+### Economy controls and measurement
+- Configure each reward schedule and wheel pool by version, with start/end dates and rollback.
+- Monitor currency issued by daily gifts, weekly bonuses and wheel prizes against currency sinks and total wallet balances.
+- Dashboard reports: daily claim rate, streak completion rate, wheel participation, reward distribution by currency, average grant per active player, inflation, return rate and day-1/day-7/day-30 retention.
+- Run controlled experiments only with visible versioning and budget ceilings; never change a player's already-earned reward retroactively.
+
+## 6. The Bar: social hub, recovery and ad-supported dwell time
 
 The in-world **bar** is a real social destination and recovery location, not merely a blocking timer:
 - Players can enter when energy is low and/or when they have run out of Poker Chips.
