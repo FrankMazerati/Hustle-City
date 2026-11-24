@@ -49,3 +49,13 @@
 - [ ] Design an in-world cellphone prop and pull-out/look-at interaction that opens a diegetic phone UI while the player remains in the world.
 - [ ] Connect phone messaging to player contacts/conversations, notifications, delivery state and social privacy/block/report enforcement.
 - [ ] Define optional voice/calling capability separately; do not assume it is part of the first phone implementation.
+
+
+## P5 — Launch product focus and expansion readiness
+- [ ] Define and protect the initial product as a poker-first multiplayer social activity game; prioritize player acquisition, retention, community and sustainable revenue.
+- [ ] Lock launch exclusions: no player robbery/theft, player-directed crime, weapons, player arrests/jail, player death or player hospital/medical consequence loops; no punitive player-targeted law-enforcement gameplay.
+- [ ] Keep police, fire, ambulance, arrests, jail and medical emergencies as NPC-only ambient simulation at launch, with only safe/friendly contextual authority interactions for players (for example, a yacht-party noise reminder).
+- [ ] Ensure NPC ambient incidents never silently turn into player crime, arrest, death or medical systems.
+- [ ] Build modular activation boundaries and documentation so later systems can be introduced without rebuilding the social/poker foundation.
+- [ ] Treat crime-oriented player gameplay, jail scenarios, weapons and drugs as possible post-launch proposals only; require separate creator approval plus legal, platform-rating, safety, moderation and technical review before specification or implementation.
+- [ ] Prepare concise architecture/product documentation that future investors, partners and development contributors can understand without changing the approved launch scope.
