@@ -65,3 +65,26 @@ The draft enables RLS on every application table and defines no permissive polic
 - Reuse the existing social_conversations, conversation_participants and messages foundation for phone-based player messaging rather than creating a disconnected duplicate messaging system.
 - Phone UI/device state and message presentation are client/gameplay concerns unless persistent device ownership or settings become necessary.
 - Enforce the same server-side authorization, privacy, blocking, reporting and moderation rules regardless of whether a message is opened from the phone UI or another social interface.
+
+
+## Persistent Sims, relationships and service history
+- Preserve stable NPC/Sim identity records for the named population, with profile/self-model attributes and links to home, work, schedule, possessions and supported history. The 100,000-person target is a roster/persistence scale, not a requirement to execute every Sim at full fidelity simultaneously.
+- Add a sparse personal-memory model: a memory owner (the Sim doing the remembering), the person remembered, the actual encounter/conversation/event, and the facts/details legitimately retained. Do not share one Sim's personal memory with another.
+- Add directional relationship state for each relevant pair. Familiarity, trust and current relationship state are separate mutable values; retain historical events separately. One person's trust or memory must not imply reciprocity.
+- Persist these records through logout, reconnect, process/server restart and population expansion. Runtime caches may be used, but durable database records remain authoritative.
+- Add valet/concierge service-event history keyed to the actual player, attendant, vehicle, service location/business, timestamp and outcome. Shared workplace service tickets may support retrieval and shift handoff, but must not transfer personal recognition/trust between attendants.
+- Use sparse indexed queries for one Sim's known people, one relationship pair, or a player's service history. Do not create every possible Sim/player relationship in advance.
+
+## Health, consumables and currency boundaries
+- Player health/condition and any food/drink effects need authoritative state and item-effect definitions if the health system is retained in the playable design.
+- Food and beverages purchased at venues use Hustle Money/Cash, not Poker Chips. Store item identity, price charged, effect applied and transaction outcome so health restoration can be audited and replay-safe.
+- Keep four distinct wallets: Hustle Money/Cash, Diamonds, Poker Chips and Wings. The current SQL draft's three-currency constraint is incomplete relative to the approved four-currency economy and must be reconciled before migration.
+- Poker Chip → Hustle Money conversion is a separate, explicit cashier/kiosk flow with atomic debit/credit and an auditable idempotent transaction. It is not direct Poker Chip payment for ordinary goods.
+
+## Profile and collection records
+- Player-visible balances, progression values, neighborhood/crew details, owned-card quantities, trade listings and shared wishlists must be derived from authoritative profile, wallet, progression and inventory records.
+- Distinguish cards owned from cards listed for trade and from cards merely sought on a shared wishlist. Profile inspection is informational and must not reserve or transfer inventory.
+- Apply visibility controls and never expose hidden inventory, unshared wishlists, private account/payment credentials or private NPC memory.
+
+## Existing data-model status
+These are requirements to reconcile into a reviewed schema migration. The current SQL draft does not yet implement the full Sim memory/relationship/service-event model or the complete four-wallet currency contract. Do not claim these tables or policies exist until designed, migrated and tested.
