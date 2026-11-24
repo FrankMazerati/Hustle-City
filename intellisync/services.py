@@ -209,11 +209,18 @@ class AgentServices:
             "approved_input": payload, "QA_correction_feedback": feedback,
             "instruction": "Produce this station's deliverable. Include assumptions, dependencies, risks and handoff notes."
         }, ensure_ascii=False, indent=2)
-        output = self.client.chat(self._model_for(item["agent_id"]),
-                                  [{"role": "system", "content": system},
-                                   {"role": "user", "content": user}])
-        self.runtime.submit(item["package_id"], item["station_id"], item["agent_id"],
-                            output, event_key=f"{run_id}:submission")
+        try:
+            output = self.client.chat(self._model_for(item["agent_id"]),
+                                      [{"role": "system", "content": system},
+                                       {"role": "user", "content": user}])
+            self.runtime.submit(item["package_id"], item["station_id"], item["agent_id"],
+                                output, event_key=f"{run_id}:submission")
+        except Exception as exc:
+            # Do not strand a package in in_progress if Ollama is unavailable,
+            # times out, or returns an unusable result. Requeue only if submit
+            # did not already move the run into QA.
+            self.runtime.release_failed_claim(run_id, item["agent_id"], str(exc))
+            raise
         self.messages.send(item["agent_id"], "Deliverable submitted",
                            f"Package {item['package_id']} is waiting for QA at {item['station_id']}.",
                            feed="command", package_id=item["package_id"])
