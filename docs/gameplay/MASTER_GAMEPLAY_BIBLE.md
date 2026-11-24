@@ -21,6 +21,18 @@ Each configured building/venue collection uses five ranked cards. Completing a c
 - Venue collections are separate from individual car and boat collections. The beach is excluded.
 
 Keep renting, permanent apartment ownership, private-room access, venue ownership, business operation and individual vehicle ownership as distinct game entitlements. Do not invent rent prices, card rank titles, collection contents or completion rewards.
+## Creator-approved property, business and production distinctions
+
+Five-card collections unlock the configured asset/privilege, which may be inside a building rather than ownership of the building itself:
+- Monster Beats is a production company. Players can own a studio inside its facility and produce music; they do not own the Monster Beats building or company.
+- Players can form their own film crew and make movies through the Upper Level studio/production facility. This does not itself grant ownership of the studio building. Confirm exact naming relationship between Upper Level Films and Upper Level Entertainment Studios.
+- Players can own a car lot, a clothing store and an individual yacht. Yacht ownership does not include the Hustle City Marina and Yacht Club.
+- Players can own the Hustle Club and the Velvet Lounge as venues/businesses.
+- Players can unlock a private room inside the Shuffle Club casino, but cannot own the Shuffle Club or casino.
+- Hustle Towers progression can begin with renting an apartment; completing that apartment's five-card collection grants permanent ownership of that specific apartment.
+
+Keep the venue/building, business, studio unit, film crew, car lot, clothing store, individual yacht, private room and apartment as separate game entities and entitlements. A card collection must grant only the explicitly configured one.
+
 ## 2. Player lifecycle
 1. **Discover and join:** player arrives through the opening experience, creates a character/profile and username, accepts terms and configures privacy.
 2. **Establish identity:** profile, avatar, wardrobe, optional crew affiliation, friends and social preferences.
