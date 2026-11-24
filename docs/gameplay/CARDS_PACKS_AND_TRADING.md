@@ -93,5 +93,18 @@ No card can be in two active trades simultaneously. Reject stale offers, missing
 ## 7. Duplicate cards
 Duplicate handling is unresolved. The system must support one or more creator-selected policies: keep duplicates for trading; allow duplicates toward separate sets only if the rules say so; convert duplicates to a defined reward only if approved; or mark duplicates as non-tradeable. Do not auto-convert duplicates by default.
 
+## 8. In-game card trading acceptance
+- A player can add another player as a friend and initiate a card trade entirely in Hustle City.
+- A player can search for a missing card and discover eligible traders without leaving the game.
+- Collection visibility and wish-list visibility obey player privacy settings.
+- A player can make a multi-card offer, receive a counteroffer and approve the final terms.
+- No card transfers until both sides approve the same offer version.
+- Cards in pending offers are reserved and cannot be spent, reoffered or used to satisfy another transaction.
+- Concurrent trade attempts, reconnects, retries and stale offers cannot duplicate or destroy cards.
+- Decline, cancel and expiry release all reserved cards.
+- Blocked users cannot contact or trade with the blocking player; reports are routed to moderation.
+- Trade history and audit records are available to players and authorized support staff under role controls.
+- The full experience works without external trading apps, websites or social groups.
+
 ## 8. Anti-abuse and QA
 Test pack purchase retries, server timeout, duplicate grants, manipulated client odds, card duplication, concurrent trades, trade cancellation, blocked players, bound cards, set completion, ownership claim, refund/revocation, and version changes to card sets. Audit every acquisition and transfer.
