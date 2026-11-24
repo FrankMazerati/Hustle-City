@@ -54,3 +54,13 @@ _Add new entries above this line._
 - **Open questions:** Dialogue/topic catalog, trust tuning, NPC social graph/host selection, event types and schedules, invitation rules, capacities and content/safety restrictions.
 - **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 22.
 - **Source:** Creator conversation, 2026-11-24.
+
+
+### 2026-11-24 — Separate recognition from conversation-earned trust; typed or selected dialogue
+- **Status:** APPROVED — creator clarification.
+- **Domain:** Sims-MPC-NPC / gameplay / social simulation / dialogue
+- **Origin:** conversation / creator direction
+- **Original idea:** “If you just park your car and don't say nothing to Marcus or you just, you know, you're just trying to hurry up and get in the venue, then your trust will stay low, but your recognition will be probably go up a little bit unless you maybe just hang out in the area or talk to them like that.” The creator also specified that conversations can use pre-selected dialogue boxes or actual typed messages, including social conversations at a bar.
+- **Expanded notes:** Recognition/familiarity can rise from meaningful repeat encounters when an NPC plausibly notices the player. Trust primarily comes from actual meaningful conversation and reciprocal interaction. A player can use a service and leave without gaining trust. Mere proximity or idle hanging around does not automatically create trust. Both pre-selected dialogue and typed messages feed the same contextual relationship evaluation; message quality and NPC response matter, not message count. Apply this to service encounters and social/dating conversations.
+- **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 23.
+- **Source:** Creator conversation, 2026-11-24.
