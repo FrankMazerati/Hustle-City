@@ -32,3 +32,13 @@ _Add new entries above this line._
 - **Open questions:** Exact familiarity levels/thresholds, trust scale/weights, shift start times/overlaps/staffing by business, UI details and technical implementation.
 - **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), sections 16–20.
 - **Source:** Creator conversation, 2026-11-24.
+
+
+### 2026-11-24 — Reciprocal NPC/player profiles and social recognition display
+- **Status:** APPROVED — creator-directed product requirement; UI and privacy implementation details remain open.
+- **Domain:** Sims-MPC-NPC / character / gameplay / UI / social simulation
+- **Origin:** conversation / creator direction
+- **Original idea:** “That could be something that pops up for the NPC and the player. Like if Marcus is the parking attendant, when I walk up to Marcus, you know, it can have a conversation area either on screen or in this little relationship profile box. The levels are outside of that: familiarity and then trust, that's cool. And then Marcus can see mine and I can see his, his name. And then he can see, let's say Frank Maserati, my level, my stars, how long I've been on the game, how often I come to this place or whatever. That'd be cool so the NPC, the sim will have something to recognize as well as the player playing the game about the other person. And then know how to interact accordingly.”
+- **Expanded notes:** Provide a contextual NPC profile/relationship panel on approach or during conversation, with NPC name/role and this player's familiarity and trust values. NPC recognition may consult approved player-visible social profile fields such as display name, level, stars/rank, playtime/tenure and venue-specific visit frequency. Use verified context to adapt greetings and behavior. Keep private/account data hidden; stats do not establish trust, consent, entitlement or attraction.
+- **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 21.
+- **Source:** Creator conversation, 2026-11-24.
