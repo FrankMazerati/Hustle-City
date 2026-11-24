@@ -267,3 +267,16 @@
 - [ ] Validate garments against body rigs, animation, seating, dining, vehicle entry and interaction poses; track clipping and performance budgets.
 - [ ] Apply content-rating and platform constraints; never sexualize minors or include explicit nudity. Avoid stereotype-based clothing assignments.
 - [ ] Independently QA month-scale outfit variety, contextual dress, uniform correctness, continuity, fit and rendering performance.
+
+
+## P19 — Initial 10,000 individually named Sim population
+- [ ] Plan the initial 10,000-person named NPC roster, managed as a versioned cohort and validated in batches.
+- [ ] Target 5,000 men and 5,000 women in the initial roster; preserve this as the creator's starting composition target, not a rule for every future expansion.
+- [ ] Define varied age bands, broad racial/ethnic representation, skin-tone and appearance palettes, body types, style/swagger profiles and personality variation; exact demographic percentages beyond the stated gender target require creator review.
+- [ ] Give every person a stable unique ID and distinct usable name; define cultural naming guidance and duplicate-name checks.
+- [ ] Require each profile to include age/age band, appearance, style, personality, job/function, employer/workplace, home anchor, schedule, wardrobe and daily routine.
+- [ ] Distribute population across districts, households, businesses, shifts, commutes, public spaces, venues and events to make the city feel lived-in throughout the day.
+- [ ] Build batch manifests, ID allocation, import validation, duplicate detection, required-field checks, roster count reconciliation and safe update rules.
+- [ ] Ensure later population batches and profile corrections never regenerate or overwrite existing identities.
+- [ ] Prohibit demographic stereotyping: race, ethnicity, skin tone, gender and age must not determine intelligence, morality, criminality, income, job qualification or personality.
+- [ ] QA return visits, familiar NPC recognition/continuity, city crowd distribution, staffing coverage, schedule realism and scalable simulation at the 10,000-person roster target.
