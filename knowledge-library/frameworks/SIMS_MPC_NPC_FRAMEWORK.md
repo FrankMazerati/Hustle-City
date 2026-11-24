@@ -713,3 +713,27 @@ No agent may independently invent database schemas, network authority or transac
 3. Luxury travel, hotels, tickets, parties, yachts, vehicles, homes, estates and mansions can form part of NPC lifestyles as supported by game systems.
 4. Spending changes the Sim's available resources and does not create arbitrary wealth.
 5. Wealth does not automatically determine personality, trustworthiness or social worth.
+
+
+## 35. Database-backed persistent Sim memory and relationship records
+**Creator-approved requirement:** Sim self-memory libraries and person-to-person relationship records must be persisted in the game's database. They are not session-only state, transient prompt context or disposable runtime cache.
+
+- Persist each Sim's person-memory library and pair-specific relationship state in durable database records. Records may reference player identities, other Sim identities and coworker identities.
+- Store the stable identity/reference of the person remembered, the remembering Sim, first/last meaningful interaction timestamps, relevant encounter context, conversation-derived memory summaries or events, familiarity, trust and supported relationship metadata.
+- Preserve the distinction between an event/history record and the current relationship state. The current familiarity/trust values may evolve, while meaningful historical events remain available under retention/privacy rules.
+- A tap, profile view or selection alone must not create a meaningful relationship-memory entry or raise trust. Save social memory when qualifying communication occurs; evaluate the conversation content and context before updating familiarity/trust.
+- Records must survive logout, reconnect, process/server restart and population expansion. Rehydration must restore the correct relationship for the correct Sim/person pair.
+- Use stable IDs and explicit relationship ownership/direction. A Sim's memory of Frank is not automatically Frank's memory of that Sim, nor is it copied to another Sim.
+- Design storage for sparse, indexed, queryable records at the target scale (creator example: 10,000 players and 100,000 Sims). Do not materialize every possible pair in advance. Support efficient retrieval of a Sim's known people, a specific pair's history and relevant recent memories.
+- Apply database access controls and data minimization. Keep private/internal memories and financial details out of public profiles; only authorized game services should read/write internal records. Define retention, deletion, backup and migration behavior as part of implementation.
+- Runtime caches may accelerate access, but the database is the durable source of truth. Cache loss must not erase identity, memory or relationship progress.
+- **Open implementation details:** exact schema/normalization, database product, event storage vs summarized memory representation, indexing/partitioning, retention policy, backup/restore and access-control implementation.
+
+### Acceptance criteria
+1. A qualifying conversation creates or updates durable database records for the correct Sim/person relationship.
+2. A Sim can retrieve and use those records after logout/reconnect and server restart.
+3. Each direction of a relationship remains independently recorded; no automatic memory or trust mirroring.
+4. Profile inspection/tapping alone does not create a conversation memory or trust increase.
+5. The system can query a Sim's known people and retrieve one pair's relationship/history without scanning all possible entities.
+6. Runtime cache loss does not erase persisted records.
+7. Internal memory data is not exposed to unauthorized players or public profile views.
