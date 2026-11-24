@@ -641,3 +641,16 @@ The unified player level and collectible card system are related but distinct pr
 The creator's stated core loop remains poker and casino participation, earning and trading cards, completing collections, unlocking additional content, traveling between cities and building a social lifestyle. A full job/employment system is not approved as a required progression pillar; keep it optional/unresolved unless the creator later directs otherwise.
 
 All final level caps, rank names, star rules, XP sources and formulas, thresholds, reward tables, drop probabilities, daily-session definitions, card rarity, set requirements, trade rules and progression pacing require further design and creator approval.
+
+
+## Creator clarification — level-based titles, profile themes and long-term progression
+
+- Higher overall Hustle City levels should unlock **special titles, character animations and profile presentation/display options**.
+- Higher levels should **not** unlock clothing as a level reward. Clothing remains something players can purchase through the established clothing/fashion economy; do not make level-gated clothing part of this reward track.
+- The player's profile/dashboard should visually evolve with their rank. The creator wants distinct rank-themed profile/dashboard styles—for example, Rookie, Starter, Hustler, All-Star and Heavyweight should each have a recognizable color, visual treatment or layout identity. These are presentation themes, not clothing unlocks.
+- **Hustle City Rookie** and **Hustle City Starter** must both be represented as explicit early progression titles. The previously discussed Hustler, All-Star and Heavyweight names are also favored candidate titles. More intermediate and advanced titles are needed to create a substantial ladder.
+- The creator wants the progression plan to account for at least 100 meaningful rank/title stages or divisions across the long journey, rather than relying on only a handful of names spread across 1,000 levels. The exact mapping of 100 stages to 1,000 levels (for example, level bands per stage), title names, boundaries and star presentation remain to be designed and confirmed.
+- Level 1,000 is a long-term milestone under consideration, but the progression design must also answer what happens after a player reaches it. The system should be architected so the level ceiling and post-1,000 progression can be extended without invalidating existing levels, titles, profile themes, stars or player history. Whether post-1,000 progression uses additional numbered levels, prestige cycles, star ranks, an endless progression track or another structure is unresolved; do not present any one option as approved.
+- Level rewards should remain cosmetic/status-oriented in the ways described above and must not grant clothing or create pay-to-win advantages. Card collection completion remains the separate path for designated collection-based unlocks such as additional venues, assets or opportunities.
+
+The approved direction is level-based titles, animations and evolving profile/dashboard themes; clothing is purchased, not awarded by level. Exact stage count/mapping, titles, visual themes, animation rewards, star rules, level cap and post-cap progression require further design and creator approval.
