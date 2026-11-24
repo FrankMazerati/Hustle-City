@@ -123,3 +123,16 @@ Secure Creator Studio should manage vehicle packs, clothing, buildings, characte
 - Send occasional, factual, friendly reminders such as an apartment-care notice or vehicle-maintenance reminder. Avoid alarmist/shaming copy and deceptive urgency.
 - Notification delivery must support frequency caps, quiet hours, deduplication, channel preferences, unsubscribe/STOP handling for SMS, auditability and applicable privacy/messaging/carrier/platform requirements. Avoid revealing sensitive account/property details in lock-screen previews.
 - Final thresholds, decay stages, restoration costs, reminder cadence, supported channels and consent language require creator approval and testing.
+
+
+## 20. Advertising placements, monetization and delivery target
+- Creator target: complete and launch a focused Hustle City release by **May 2027**, with a goal of at least **$10,000 monthly revenue**. Treat both as targets, not promises; create a milestone plan and forecast from actual audience, conversion and monetization assumptions.
+- The release plan must prioritize a shippable poker-first social MVP; the full city vision remains modular follow-on scope.
+- Free-player monetization may include a small persistent bottom banner that does not cover gameplay or controls. Refresh timing must follow the selected ad provider's policies and optimization. The proposed 10–15-second refresh is not approved; Google AdMob currently documents custom banner refresh at 30–150 seconds and recommends optimized refresh.
+- Provide optional rewarded video at the bar when a player has depleted their poker chips, offering a disclosed, limited virtual-chip reward. Preserve non-ad ways to earn chips and return to play.
+- Provide occasional opt-in reward doubling after selected activities/claims, not every action. Apply cooldowns, frequency caps and clear reward disclosure.
+- Consider only sparse, context-appropriate casino ad opportunities (roughly one or two in a relevant visit/session was suggested), subject to legal, age-rating, gambling-advertising and platform review.
+- Never interrupt a live poker hand or critical social interaction with forced advertising. Ads must not imply virtual chips are redeemable for cash.
+- Evaluate an ad-free experience only if consistent with the already-approved membership offer; verify entitlements before implementation.
+- Track impressions, fill, completion, eCPM, revenue per DAU, payer conversion, retention and complaints. Forecast gross and net revenue separately after ad-network share, store fees and taxes.
+- Final provider, ad placement dimensions, refresh interval, chip reward, cooldowns, eligibility rules and ad-free membership entitlements remain unresolved.
