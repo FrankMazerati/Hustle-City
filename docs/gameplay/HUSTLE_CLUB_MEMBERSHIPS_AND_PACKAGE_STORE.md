@@ -83,7 +83,7 @@ The in-world **bar** is a real social destination and recovery location, not mer
 - Players can enter when energy is low and/or when they have run out of Poker Chips.
 - The bar has a DJ area, social seating, player presence, chat/emotes and licensed music playback once the necessary music rights are secured.
 - Players may socialize while waiting for recovery. Do not force an ad view to enter, sit, socialize or receive baseline recovery.
-- Poker Chip recovery and energy recovery are separate meters with separate server rules. The creator suggested a wait of roughly 30 minutes for poker money/chips to restore; this is a tentative balancing idea, not a final timer.
+- Poker Chip recovery and energy recovery are separate meters with separate server rules. The creator suggested a wait of roughly 30 minutes for Poker Chips to restore; this is a tentative balancing idea, not a final timer.
 - Show the remaining recovery time and any recovery cap/next grant clearly.
 - Optional rewarded ads may offer a clearly disclosed, capped bonus (for example, a limited acceleration or extra small reward) after the player chooses to watch. Reward amounts and daily caps remain unresolved.
 - A player who does not watch ads still receives the standard recovery benefit.
@@ -207,7 +207,6 @@ The owner needs a secure professional web dashboard, separate from the player-fa
 
 ## 11. Decisions still open
 - Final membership tier names, whether all six prices launch, and exact benefit matrix/quantities.
-- Whether “poker money” is an alias for Poker Chips (working assumption) or a separate currency.
 - Exact one-time package contents, prices, repeat limits and permanent/consumable classification.
 - Daily reward calendar, reset time and reward amounts.
 - Energy and Poker Chip recovery rates/caps; the suggested ~30-minute chip recovery is tentative.
