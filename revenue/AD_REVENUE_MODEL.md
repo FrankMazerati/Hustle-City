@@ -34,85 +34,88 @@ The scheduled opportunity count is four per completed active hour. A partial hou
 
 These are opportunities, not guaranteed paid impressions. If an ad is unavailable, the player is busy, or a safe transition does not occur, skip that opportunity; do not queue missed ads or show them back-to-back. Count active foreground play, not idle/background time.
 
-## 3. Benchmark input and calculation method
+## 3. Benchmark inputs and calculation method
 
-A 2025 Appodeal report chart gives approximate US Android averages of **$12.30 interstitial eCPM** and **$0.60 banner eCPM**. These are historical market benchmarks, not a promise of Hustle City's rates. Actual results vary by country, device/platform, audience, ad network/mediation, fill, viewability, season, and policy compliance.
+For an illustrative planning scenario, this document uses:
+- **Interstitial eCPM:** $12.30 per 1,000 paid impressions.
+- **Banner eCPM:** $0.60 per 1,000 paid impressions.
+- **Banner refresh assumption:** one new paid banner impression per 60 seconds while the banner is visible and the app is active.
+- **Interstitial delivery assumption:** all four scheduled opportunities per active hour become paid impressions.
 
-Formula:
+These are historical/illustrative market inputs, not Hustle City forecasts or guaranteed rates. eCPM varies by geography, platform, audience, ad network/mediation, fill, viewability, season, and policy compliance. The $0.60 banner figure is a historical US Android benchmark cited in industry reporting; actual banner eCPM can be materially lower or higher. The 60-second refresh is a modeling assumption, not an approved implementation setting.
 
+Google AdMob says its optimized banner refresh is recommended and permits custom refresh settings between 30 and 150 seconds. Google also notes that refresh occurs only while the banner is visible. The final setting must follow the chosen provider's current rules and measured UX/performance.
+
+Formulas:
 - Interstitial revenue = (paid interstitial impressions ÷ 1,000) × realized interstitial eCPM.
 - Banner revenue = (paid banner impressions ÷ 1,000) × realized banner eCPM.
-- Total ad revenue = interstitial + banner + separately measured rewarded ads + any approved contextual formats.
+- Combined scheduled + banner revenue = interstitial revenue + banner revenue.
+- Total advertising revenue = combined scheduled + banner revenue + separately measured rewarded ads + any approved contextual formats.
 
-For the simple session table below, use four **served and monetized** interstitial impressions per active hour and the illustrative $12.30 US Android eCPM:
+At the assumptions above:
+- Interstitial: 4 × $12.30 ÷ 1,000 = **$0.0492 per active player-hour**.
+- Banner: 60 × $0.60 ÷ 1,000 = **$0.0360 per active player-hour**.
+- Combined: $0.0492 + $0.0360 = **$0.0852 per active player-hour**.
 
-**Illustrative gross interstitial yield = 4 × $12.30 ÷ 1,000 = $0.0492 per active player-hour.**
+A paid impression must be recorded as billable by the ad network. An opportunity, request, loaded ad, or closeable ad is not automatically a paid impression. If only a fraction of scheduled opportunities or banner refreshes becomes paid impressions, multiply the relevant revenue by its actual paid-impression realization rate. These are gross amounts before platform fees, taxes, invalid-traffic adjustments, operating costs, and other deductions.
 
-This is a gross illustration before platform fees, taxes, invalid-traffic adjustments, operating costs, and any other deductions. If only a fraction of scheduled opportunities become paid impressions, multiply the result by that realized served-impression fraction. For example, at 75% realization, multiply by 0.75. Do not treat an ad opportunity, a loaded ad, or a closeable ad as a paid impression unless the network records a billable impression.
+## 4. Combined per-player yield for one continuous session
 
-## 4. Per-player session yield — interstitials only
+Assumes the player remains active, the bottom banner remains visible, it refreshes once per minute, and all scheduled interstitial opportunities become paid impressions.
 
-| Active play in one session | Opportunities | Illustrative gross yield at 100% paid delivery |
+| Active session | Interstitial ads | Banner impressions (assumed) | Interstitial revenue | Banner revenue | Combined gross revenue |
+|---:|---:|---:|---:|---:|---:|
+| 1 hour | 4 | 60 | $0.0492 | $0.0360 | **$0.0852** |
+| 2 hours | 8 | 120 | $0.0984 | $0.0720 | **$0.1704** |
+| 3 hours | 12 | 180 | $0.1476 | $0.1080 | **$0.2556** |
+| 4 hours | 16 | 240 | $0.1968 | $0.1440 | **$0.3408** |
+
+## 5. Combined monthly yield if the player plays every day
+
+Assumes 30 active days per month with the same daily play duration, 60-second banner refresh, $0.60 banner eCPM, four paid interstitial impressions per active hour, and $12.30 interstitial eCPM.
+
+| Average active play per day | Interstitial revenue/month | Banner revenue/month | Combined gross ads/player/month |
+|---:|---:|---:|---:|
+| 1 hour/day | $1.476 | $1.080 | **$2.556** |
+| 2 hours/day | $2.952 | $2.160 | **$5.112** |
+| 3 hours/day | $4.428 | $3.240 | **$7.668** |
+| 4 hours/day | $5.904 | $4.320 | **$10.224** |
+
+This table is an illustrative upper-case calculation under the stated assumptions, not a forecast. If paid delivery is 75% for both formats, multiply each combined amount by 0.75. For example, the 3-hour/day case becomes about **$5.75 gross per player per month**, before deductions. Banner and interstitial delivery rates should ultimately be measured separately.
+
+## 6. What this means for the $10,000/month target
+
+Under the 100%-paid-delivery assumptions in section 5, approximate active players required to generate $10,000/month in combined banner + interstitial gross ad revenue:
+
+| Average active hours per player per day | Combined gross per player/month | Approx. active players for $10,000 gross/month |
 |---:|---:|---:|
-| 1 hour | 4 | $0.0492 |
-| 2 hours | 8 | $0.0984 |
-| 3 hours | 12 | $0.1476 |
-| 4 hours | 16 | $0.1968 |
-| 5 hours | 20 | $0.2460 |
+| 1 hour/day | $2.556 | 3,913 |
+| 2 hours/day | $5.112 | 1,956 |
+| 3 hours/day | $7.668 | 1,304 |
+| 4 hours/day | $10.224 | 978 |
 
-### Monthly illustration by average daily active play
+These are arithmetic scenarios, not audience forecasts. They assume every listed player is active every day for 30 days and every assumed ad impression is paid. At 75% paid delivery for both formats, the player counts would be approximately one-third higher. Real requirements may also be higher if realized eCPM, banner visibility, fill, retention, or daily active participation is lower. Recalculate using actual network reporting after launch.
 
-Assumes 30 active days per month, the same active hours each day, four paid interstitial impressions per hour, and the illustrative $12.30 eCPM. This is not a forecast.
+## 7. Persistent banner implementation and measurement
 
-| Average active play per day | Paid interstitial impressions/month | Gross interstitial revenue/player/month |
-|---:|---:|---:|
-| 1 hour/day | 120 | $1.476 |
-| 2 hours/day | 240 | $2.952 |
-| 3 hours/day | 360 | $4.428 |
-| 4 hours/day | 480 | $5.904 |
-| 5 hours/day | 600 | $7.380 |
+The bottom banner is always part of the experience, including for paid members. It is not removed by membership.
 
-At a 75% paid-delivery realization rate, multiply each monthly amount by 0.75. Example: 3 hours/day becomes approximately $3.32 gross interstitial revenue per active player per 30-day month.
+Google AdMob's automatic banner refresh settings allow a custom interval of 30–150 seconds, while recommending its optimized rate. Refresh is only expected while the banner is visible. Therefore:
+- The 60-second interval in this model is a scenario input, not a locked technical requirement.
+- Test the provider-optimized rate against a 60-second custom rate if permitted and available.
+- Do not generate refresh requests while the game is backgrounded or the banner is not visible.
+- Keep the banner in a fixed, non-interactive gameplay-safe area; it must not cover controls or create accidental clicks.
+- Track requests, served impressions, viewable impressions, fill rate, realized eCPM, visible time, refresh events, and banner revenue per DAU/MAU.
 
-## 5. What this means for the $10,000/month target
-
-At the illustrative $12.30 eCPM, four paid interstitial impressions per active hour produce about $0.0492 per active player-hour. Interstitials alone would therefore require roughly **203,252 active player-hours per month** to generate $10,000 gross before deductions.
-
-Illustrative scale examples:
-
-| Average active hours per player per day | Approx. monthly active players needed for $10,000 gross interstitial revenue |
-|---:|---:|
-| 1 hour/day | 6,776 |
-| 2 hours/day | 3,388 |
-| 3 hours/day | 2,259 |
-| 4 hours/day | 1,694 |
-| 5 hours/day | 1,356 |
-
-These are arithmetic scenarios, not audience forecasts. They assume every scheduled opportunity becomes a paid impression at the benchmark eCPM, all listed players are active every day for 30 days, and no deductions. Real requirements will be higher if delivery, fill, retention, or realized eCPM is lower. The model must be recalculated with actual ad-network reporting after launch.
-
-## 6. Persistent banner — separate calculation
-
-The bottom banner is always part of the experience, including for paid members. Do not assume one impression per minute or any refresh rate until the selected provider, platform rules, and placement implementation are confirmed.
-
-Track:
-- Banner requests, served impressions, viewable impressions, fill rate, and realized eCPM.
-- Actual visible time and refresh events while the app is foregrounded.
-- Banner revenue per daily active user and per monthly active user.
-
-Formula: monthly banner revenue per player = (that player's paid banner impressions in the month ÷ 1,000) × realized banner eCPM.
-
-The $0.60 US Android banner eCPM in the cited 2025 report is only an illustrative benchmark. The banner is not removed by membership.
-
-## 7. Short versus 30-second ad test
+## 8. Short versus 30-second interstitial test
 
 Test the creator's two candidate experiences as separate ad placements/creative experiences, subject to provider capabilities and policy:
-
 - Variant A: 10–15 seconds before a close option is available, if the served format supports it.
 - Variant B: 30 seconds with a close option, if the served format supports it.
 
 Measure realized eCPM, paid impressions per eligible opportunity, completion/close behavior, session length, next-day and 7-day retention, complaints, accidental clicks, and revenue per active user. A longer ad does **not** automatically pay more: pricing is based on the ad auction and billable event, not simply the number of seconds the player watches. Do not force a 30-second watch where the network's format or policy requires a different experience.
 
-## 8. Revenue streams to model separately
+## 9. Revenue streams to model separately
 
 1. Persistent bottom banner (all players, including members).
 2. Scheduled interstitial opportunities (up to four per active hour, safely deferred or skipped).
@@ -123,7 +126,7 @@ Measure realized eCPM, paid impressions per eligible opportunity, completion/clo
 
 Do not add revenue streams together until each has a measured or explicitly labeled assumed input. Report gross ad revenue, net proceeds after store/platform/network fees, and operating profit separately.
 
-## 9. Measurement and dashboard requirements
+## 10. Measurement and dashboard requirements
 
 For every session and player cohort, measure:
 - Active foreground minutes and session duration buckets (15, 30, 45, 60, 90, 120, 180+ minutes).
@@ -136,13 +139,15 @@ For every session and player cohort, measure:
 
 Use privacy-conscious analytics and applicable consent, child-safety, advertising, store, and regional requirements. Never optimize revenue by creating accidental clicks, deceptive close controls, or interruptions during core play.
 
-## 10. Policy and implementation checks
+## 11. Policy and implementation checks
 
-Google AdMob guidance says interstitials belong at natural transition points, warns against surprising or excessive interruptions, and notes that close timing can vary by format and demand source. Google also provides frequency caps. The proposed 15-minute cadence is a product hypothesis to test, not a guarantee of provider approval. Confirm current network rules and the exact game implementation before launch.
+Google AdMob guidance says interstitials belong at natural transition points, warns against surprising or excessive interruptions, and provides frequency caps. The proposed 15-minute cadence is a product hypothesis to test, not a guarantee of provider approval. Confirm current network rules and exact game implementation before launch.
 
-## 11. Sources
+## 12. Sources
 
-- Appodeal, *The Latest eCPM Report 2025* (US Android chart; approximate banner $0.60, interstitial $12.30): https://appodeal.com/wp-content/uploads/2025/03/Appodeal-The-Latest-eCPM-Report-2025.pdf
+- Appodeal, *The Latest eCPM Report 2025*: https://appodeal.com/wp-content/uploads/2025/03/Appodeal-The-Latest-eCPM-Report-2025.pdf
+- Historical US Android banner eCPM reference ($0.60): https://www.blog.udonis.co/mobile-marketing/mobile-apps/ecpms
+- Google AdMob, *Use automatic refresh for your banner ads*: https://support.google.com/admob/answer/3245199
 - Google AdMob, *Interstitial ad guidance*: https://support.google.com/admob/answer/6066980
 - Google AdMob, *Disallowed interstitial implementations*: https://support.google.com/admob/answer/6201362
 - Google AdMob, *Set frequency caps for apps or ad units*: https://support.google.com/admob/answer/6244508
