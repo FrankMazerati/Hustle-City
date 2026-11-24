@@ -135,3 +135,12 @@ _Add new entries above this line._
 - **Design notes:** Use the tap-to-identify profile pop-up, no permanent overhead name labels. Compact summary plus expanded details; social actions remain contextual to schedule, activity and agency.
 - **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 31.
 - **Source:** Creator conversation, 2026-11-24.
+
+### 2026-11-24 — Sim self-knowledge, lifestyle, history and earned finances
+- **Status:** APPROVED
+- **Domain:** NPC intelligence / persistent identity / memory / economy / transportation
+- **Creator direction:** Sims should be familiar with their own identity and personal history. They know where they live and work, what kind of vehicle they own or whether they use ride-hail (Uber/Lyft given as examples), what they like doing on weekends, and other facts about their own lives.
+- **Financial direction:** Sims work and save money. Their earnings/savings should be grounded in actual employment and recorded economic activity, not arbitrary unexplained wealth. Exact wage and expense systems remain open.
+- **Simulation notes:** Maintain a persistent self-model that supports accurate conversation and lifestyle decisions. Interests and weekend routines guide behavior but allow variation. Memories must reflect actual simulated events. Keep internal facts distinct from player-visible profile fields and protect private details. Real-world ride-hail branding/licensing is not assumed.
+- **Related framework:** [Sims / MPC / NPC Simulation Framework](../frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 32.
+- **Source:** Creator conversation, 2026-11-24.
