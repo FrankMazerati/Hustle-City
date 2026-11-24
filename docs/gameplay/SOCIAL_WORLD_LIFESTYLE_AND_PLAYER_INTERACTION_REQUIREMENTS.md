@@ -322,3 +322,34 @@ Required creator direction:
 - Distinct identity must not undermine service accuracy, player boundaries or the authoritative game-state rules governing bookings, purchases, inventory and other actions.
 
 Exact character roster, voice approach, dialogue performance, visual archetypes, animation sets, memory/continuity depth and production budgets remain to be designed.
+
+
+## 26. Social participation, player networking and optional community sharing
+
+Hustle City should encourage players to build relationships and participate in the community as part of the living social world.
+
+Creator direction:
+- Support player-to-player communication and friend discovery/adding as core social features.
+- Support optional social posts or sharing of in-game moments/progress.
+- Social participation may become an additional gameplay earning or reward path, alongside poker and other activities, but exact qualifying actions, reward types, amounts, cadence and caps remain unresolved.
+- Do not require players to publish to external social media, expose personal information or post publicly to access core gameplay or progression.
+- Build protections against spam, fake accounts, repeated low-effort posts, referral abuse, collusion and engagement farming. Rewards must be idempotent, rate-limited and validated by authoritative server-side rules.
+- Provide appropriate privacy, blocking, reporting and audience controls for player communications and shared content.
+
+Social feature UI, eligible activities, reward budget, moderation and privacy implementation remain to be designed.
+
+## 27. Neighborhood parcel identity and home ownership experience
+
+Neighborhood homes should be represented as individually identifiable, persistent properties rather than anonymous interchangeable house models.
+
+Creator direction:
+- Homes may be listed for sale when vacant/unoccupied and available for purchase.
+- Every home/parcel needs a stable unique ID linked to its street address, city block and neighborhood.
+- The property system must display authoritative availability/occupancy and ownership status, preventing a player from purchasing a home that is occupied, reserved or already owned.
+- Players may be able to own multiple homes on one block and potentially acquire an entire block. Five homes or a whole block were given as examples; exact ownership caps and acquisition rules are not finalized.
+- Preserve the distinction between individual property ownership, owning several homes, whole-block ownership and founding/claiming a neighborhood. A home or block purchase does not automatically grant neighborhood-founder status.
+- The accepted world layout is 7×7 large boxes (49 total), with six central districts and 43 neighborhood boxes. Each neighborhood box has a 5×5 grid of city blocks (25 per neighborhood box). This establishes the city-block structure, not the number of houses on a block.
+
+Proposed planning range only: approximately 5–10 houses on a city block. The final count, parcel sizes, prices, purchase currency, property types, ownership caps, rental/resale/transfer rules, taxes/maintenance and whole-block purchase behavior remain open for creator decision.
+
+Implementation should use authoritative parcel records, unique IDs, transaction history, concurrency-safe purchase processing, explicit purchase confirmation and clear owner/occupancy states.
