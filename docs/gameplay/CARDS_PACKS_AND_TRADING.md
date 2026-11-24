@@ -152,3 +152,8 @@ Duplicate handling is unresolved. The system must support one or more creator-se
 
 ## 11. Anti-abuse and QA
 Test pack purchase retries, server timeout, duplicate grants, manipulated client odds, card duplication, concurrent trades, trade cancellation, blocked players, bound cards, set completion, ownership claim, refund/revocation, and version changes to card sets. Audit every acquisition and transfer.
+
+
+## 12. Expandable catalogue and live progression
+
+The master asset/entitlement catalogue and future expansion rules live in [Ownership Card Catalogue and Live Progression](OWNERSHIP_CARD_CATALOGUE_AND_LIVE_PROGRESSION.md). Treat that document as the source of truth for asset targets, host-building boundaries, future card-pack releases and progression tracks. New collections use stable IDs and versioned definitions; adding content must not require hard-coded schema changes or invalidate existing cards, trades, completed sets or entitlements. Five cards remain the standard ownership collection unless the creator approves another format. Player level, XP, stats, reputation, stars and achievements are separate expandable progression tracks, not synonyms for card collection completion.
