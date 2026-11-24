@@ -30,9 +30,9 @@ The six price points are recorded as the creator's proposed ladder, not a finali
 ### Benefit matrix to author and approve
 Each tier must specify exact quantities and cadence, rather than vague claims of “more value.” Candidate benefit columns:
 - Hustle Money grant.
-- Diamonds grant (travel currency).
-- Wings grant (flyer currency).
-- Hustle City Poker Chips grant.
+- Diamonds grant (boat and car currency).
+- Wings grant (flying / air-travel currency).
+- Poker Chips grant.
 - Card pack or card benefit, with full odds/guarantee disclosure.
 - Member cosmetics: profile badge/frame, clothing, jewelry or exclusive styles.
 - Convenience and customization entitlements.
@@ -47,9 +47,9 @@ All listed categories must be represented in the catalogue and can be offered in
 | Store category | Purchase examples | Currency / entitlement |
 |---|---|---|
 | Hustle Money | Cash bundles | Hustle Money |
-| Diamonds | Travel-currency bundles | Diamonds |
-| Wings | Flyer-resource bundles | Wings |
-| Poker Chips | Table-chip bundles | Hustle City Poker Chips |
+| Diamonds | Boat and car currency bundles | Diamonds |
+| Wings | Flight / air-travel bundles | Wings |
+| Poker Chips | Poker-play chip bundles | Poker Chips |
 | Cards | Card packs; a specific last-missing-card offer if approved | Card inventory |
 | Vehicles | Cars, cosmetics and eligible upgrades | Permanent ownership / upgrade |
 | Fashion | Clothing, shoes, outfits and accessories | Cosmetic inventory |
@@ -58,7 +58,7 @@ All listed categories must be represented in the catalogue and can be offered in
 | Businesses and venues | Business, club and venue upgrades | Business state |
 | Flyers and events | Flyer templates, visual styles or distribution boosts | Cosmetic entitlement / Wings where approved |
 
-**Currency terminology:** Diamonds are for premium travel. Wings are for flyers. Hustle Money is ordinary in-game cash. Hustle City Poker Chips are virtual poker/table chips. The creator also said “poker money”; whether this is simply another name for Poker Chips or a distinct fifth balance is unresolved. Until confirmed, treat “poker money” as a display/search synonym for Poker Chips, not a separate currency or conversion path.
+**Creator-confirmed currency rules (exactly four balances):** Hustle Money pays for ordinary in-game stuff. Diamonds are for boats and cars. Wings are for flying. Poker Chips are for actually playing poker. There is no separate poker-money currency. Never silently convert between these balances.
 
 Building/property upgrades bought with **actual money** must be represented as real-money in-app products only when explicitly sold through platform billing. Ordinary in-world upgrades paid with Hustle Money remain a separate gameplay transaction. Store listings must state which one is being purchased.
 
@@ -70,7 +70,7 @@ Provide a daily reward claim system:
 - One claim per eligible player per defined reset period.
 - Display the reward before claim and show the next reset time in the player's local timezone.
 - Reward schedule is server-authoritative and versioned.
-- Candidate reward types: Hustle Money, Poker Chips, Wings, Diamonds only if explicitly balanced, card packs, cosmetics or temporary boosts.
+- Candidate reward types: Hustle Money, Poker Chips, Wings, Diamonds, card packs, cosmetics or temporary boosts. Reward amounts and eligibility remain to be approved.
 - Exact amounts, sequence length, streak behavior, missed-day handling and eligibility are unresolved.
 - Do not punish players with harsh streak loss or imply a purchase is required to claim a daily reward.
 - Record claim idempotently so reconnects, retries or multiple devices cannot duplicate rewards.
