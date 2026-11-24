@@ -88,7 +88,8 @@
 - [ ] Implement a persistent, unobtrusive bottom banner for every player, including all paid membership tiers; it is never removed by membership and helps fund in-game content/operations. Ensure it does not cover gameplay or controls and respects provider policy.
 - [ ] Validate banner refresh rules with the selected ad provider. Do not implement the proposed 10–15-second refresh unless explicitly permitted; AdMob's documented custom refresh range is 30–150 seconds and it recommends optimized refresh.
 - [ ] Design an optional rewarded-video chip recovery offer at the bar when a player runs out of poker chips, with a clear reward, frequency cap and non-ad earning alternative.
-- [ ] Design a capped schedule of short non-rewarded in-app ad breaks: starting target no more than four per active hour, two in each half-hour, only at natural breaks; test whether three per hour produces a better experience.
+- [ ] Design predictable short non-rewarded in-app ad breaks at 15, 30, 45 and 60 minutes of active play, then every 15 active minutes (maximum four per hour); show only at safe natural transitions and skip missed opportunities rather than stacking them.
+- [ ] Verify whether the selected ad format/provider supports a close option after approximately five seconds, as requested by the creator.
 - [ ] Validate the desired close-after-about-five-seconds behavior against actual provider/creative capabilities; do not promise or implement it unless the selected format supports it.
 - [ ] Design occasional opt-in double-reward videos for selected activities/claims, with cooldowns and no prompt on every action.
 - [ ] Review any casino-context advertising for age-rating, gambling-advertising, legal and platform compliance; do not imply virtual chips have cash value or are redeemable.
