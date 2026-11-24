@@ -38,3 +38,16 @@ This register captures decisions promoted through the knowledge library. The exi
 - Design HIM terminal(s) and intercity route map.
 - Define building framework details and confirm the intended meaning/scope of “MPC” in the Sims/MPC discussion.
 - Recover and index original conversations and visual references.
+
+
+## 2026-11-24 — Persistent NPC familiarity, recognition, trust and shift continuity
+- **Status:** APPROVED — creator explicitly directed that this system be built out as a Hustle City requirement.
+- Every meaningful recurring NPC interaction can build persistent, player-specific familiarity, including dating/social NPCs and everyday workers such as valets, parking attendants, bartenders, servers, shop staff, mechanics, hosts and other service NPCs.
+- Familiarity and trust are separate measurements. Familiarity tracks recognition built through meaningful repeat encounters; trust is a distinct visible meter/bar that reflects earned comfort and confidence. Familiarity may rise while trust remains low.
+- Trust develops through behavior and shared experiences, can change in either direction, and is not equivalent to attraction, friendship, relationship status, consent or guaranteed access.
+- Player characteristics such as height, appearance, style/swagger and conversation approach, alongside NPC personality, preferences, relationship status, mood, confidence, social awareness and boundaries, inform contextual social reactions without deterministic stereotypes or overriding NPC agency.
+- NPCs and players should recognize recurring people using stable identity and verified encounter history. Each player↔NPC relationship is separate; one player's familiarity/trust must not leak to another.
+- Recurring workplaces use persistent shift rosters. Three staggered eight-hour shifts are an approved example pattern for 24-hour coverage; business-specific shift start times, staffing levels, overlaps, days off and opening hours remain configurable.
+- Different named workers can cover the same role at different times. Players can learn who is commonly on duty at familiar in-game times. Incoming workers retain their own independent familiarity/trust records; they do not inherit another worker's personal relationship.
+- **Open implementation details:** familiarity level count and thresholds; trust scale and change weights; exact shift hours and staffing per business; UI presentation; persistence schema; recognition implementation and performance budgets.
+- **Canonical specification:** [Sims / MPC / NPC Simulation Framework](knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), sections 16–20.
