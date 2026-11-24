@@ -47,6 +47,18 @@ class RuntimeTests(unittest.TestCase):
         self.app.submit(pid, "world-builder", "world-builder", "Corrected draft")
         self.assertEqual(self.app.review(pid, "world-builder", "QA-1", "approve"), "released:city-builder")
 
+    def test_failed_worker_claim_can_be_requeued(self):
+        pid = self.make_package()
+        self.app.claim(pid, "world-builder", "world-builder")
+        with self.app._connect() as con:
+            run_id = con.execute(
+                "SELECT run_id FROM station_runs WHERE package_id=? AND station_id=?",
+                (pid, "world-builder")
+            ).fetchone()["run_id"]
+        self.assertTrue(self.app.release_failed_claim(run_id, "world-builder", "Ollama timeout"))
+        self.assertEqual(self.app.status(pid)[0]["stations"][0]["status"], "ready")
+        self.assertFalse(self.app.release_failed_claim(run_id, "world-builder", "duplicate release"))
+
     def test_wrong_reviewer_and_self_approval_are_blocked(self):
         pid = self.make_package()
         self.app.claim(pid, "world-builder", "world-builder")
