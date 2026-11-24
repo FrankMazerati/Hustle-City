@@ -344,3 +344,38 @@ No agent may independently invent database schemas, network authority or transac
 6. NPC recognition persists across player sessions, district travel and NPC off-duty activities where supported.
 7. Player appearance, height, swagger and conversation approach can inform social reactions without overriding NPC agency, consent or boundaries.
 8. Trust/familiarity never guarantees a date, access, confidential information or a positive response.
+
+
+## 21. Reciprocal NPC/player social profiles and contextual interaction UI
+**Creator-approved requirement:** When a player approaches or interacts with a named NPC, the game can surface a compact profile/relationship panel alongside the conversation. The player can see who the NPC is and the current player↔NPC familiarity and trust; the NPC's recognition/decision system can also consult an approved, gameplay-visible profile of the player. Both sides have identity and context to support more appropriate interaction.
+
+### Player-facing NPC profile
+- Show the NPC's stable display name, portrait/recognizable appearance, occupation or social role, and relevant workplace/venue identity.
+- Show the relationship measurements for this exact player-NPC pair: familiarity level and trust meter/bar. Keep these outside or alongside the conversation area so the conversation remains readable.
+- Optionally surface relevant context such as whether the NPC recognizes the player, whether they are on or off shift, and the last meaningful encounter where appropriate.
+- The profile can appear contextually on approach, during a conversation, or through an explicit inspect/profile action. Support a compact on-screen conversation panel and a fuller profile view; final layout/platform behavior remains design work.
+- Do not expose hidden NPC reasoning, private memories, sensitive traits or information the NPC has not chosen/been authorized to share.
+
+### NPC-facing player recognition profile
+- The NPC's recognition system may consult the player's approved in-game public/social identity, including display name (example: “Frank Maserati”), player level, visible star/rank indicators, accumulated playtime or tenure where approved, and visit frequency/history at the relevant venue.
+- Use these signals to establish context: a first-time visitor, a returning guest, a venue regular, an experienced player or a recognized community member. Venue-specific visit frequency is distinct from total game tenure.
+- The NPC should use only fields the game designates as visible to that NPC in that context. Do not expose account credentials, real-world identity, private communications, hidden moderation data, precise login tracking or unrelated personal information.
+- Define player controls for public/social profile visibility where appropriate. The creator's requested recognition behavior is the product direction; exact visibility defaults and privacy settings remain implementation decisions.
+- NPCs must not treat a high level, star count or long playtime as proof of trustworthiness, wealth, consent, authority or romantic compatibility. These are context cues, not substitutes for actual interaction history or the NPC's independent judgment.
+
+### Contextual behavior and dialogue adaptation
+- Combine the player's visible profile with the NPC's own role, personality, schedule, mood, familiarity, trust and verified shared history to select an appropriate greeting and interaction style.
+- Example: a first-time visitor receives a welcoming introduction; a repeat guest may be greeted by display name; a venue regular may receive a familiar greeting or a relevant comment about their visit pattern.
+- A valet may recognize a returning guest and, where authoritative vehicle records permit, refer to a vehicle the player commonly brings. A bartender may recognize a returning customer and recall a relevant usual order. A club NPC may refer to a previous conversation only when it is actually recorded.
+- Profile indicators must not dictate scripted favoritism, service quality, pricing, access, or relationship outcomes unless a separate approved game rule explicitly requires it. NPCs should remain respectful and consistent toward newcomers and experienced players.
+- Dialogue generation must be grounded in the data actually available to the NPC. If a field is hidden, unavailable or uncertain, the NPC must not claim to know it.
+
+### Acceptance tests
+1. Approaching a named NPC can show a profile with stable name, role and that player's familiarity/trust values.
+2. During conversation, the profile/relationship panel does not obscure essential dialogue or interaction controls.
+3. The NPC can greet a returning player by their approved display name when recognition data supports it.
+4. The NPC can distinguish a venue regular from a first-time guest using verified venue visit history.
+5. Player level, stars/rank and playtime are used only as approved contextual signals and never as automatic proof of trust, wealth, consent or entitlement.
+6. Different players see their own separate relationship values with the same NPC.
+7. Hidden/private player data and another player's relationship history are never exposed.
+8. If recognition/profile data is missing or unavailable, the NPC uses a natural neutral greeting and the profile omits unsupported fields.
