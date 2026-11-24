@@ -503,3 +503,25 @@ No agent may independently invent database schemas, network authority or transac
 7. No trade or ownership transfer occurs from profile viewing; trades require explicit confirmation and server-side validation.
 8. Profile visibility controls prevent disclosure of hidden categories, private inventory, exact home addresses and account credentials.
 9. Wealth/asset counts, stars, rank and level do not automatically increase another player's trust or familiarity.
+
+
+## 26. Player choice, social discovery and experience progression
+**Creator-approved requirement:** Comprehensive player profiles are intended to help players decide who they want to communicate with, socialize with, partner with, do business with or trade with. The profile is decision-support information, not a forced matchmaking rule.
+
+- Players may consider another player's level, rank, stars/experience, neighborhood, crew, properties, homes, vehicles, car lots, travel/lifestyle accomplishments and visible collections when deciding whether to interact.
+- A player may prefer people with a similar level of progression, comparable vehicle or property holdings, or similar travel/lifestyle experiences. Other players may deliberately seek out new, lower-level or less-established players. Both are valid player choices.
+- Support useful profile comparison and optional discovery filters/sorting for game-approved fields (for example, progression range, neighborhood, crew, vehicle/property categories or visible trade inventory). Filters help players find people with compatible interests or goals; they must not silently prevent ordinary interaction or make a stat threshold mandatory.
+- Profiles and filters must not imply that lower-level players are inferior, unsafe or unworthy. A player's rank, stars, level or wealth does not prove character, trustworthiness, skill, consent or business reliability.
+- Social communication can contribute to experience/star progression, as the creator described earning stars for communicating with people. Reward meaningful, context-appropriate, reciprocal communication and constructive social participation—not message volume, repetitive greetings, empty messages, spam, scripted farming or harassment. Exact reward amounts, star meaning and progression balance remain implementation details.
+- Keep communication progression distinct from pair-specific familiarity and trust. Earning progression stars does not automatically make another player trust the speaker, nor does a high star count guarantee access, trade acceptance or friendship.
+- Maintain player agency: players choose whether to approach, respond, accept invitations, negotiate or trade. Respect blocks, privacy settings, boundaries, safety and moderation rules.
+
+**Monetization note — proposed, not approved:** The creator began considering whether players might spend real-world money in-app to reach a particular progression or status point, but the thought was unfinished. Do not implement or assume paid level/star advancement, pay-to-win benefits, paid social access or monetized status boosts until the creator clarifies the intended mechanic and approves it. Any eventual purchase design must be transparent and respect platform/payment rules.
+
+### Acceptance tests
+1. A player can inspect a profile and use visible progression, lifestyle and asset information to decide whether to approach or trade.
+2. Optional filters/comparisons can help find players with similar interests or asset categories without imposing mandatory rank/wealth gates on general social interaction.
+3. Lower-level players remain able to be discovered, approached, helped and included where player choices and game rules allow.
+4. Meaningful social communication may contribute to experience/star progression, but spam and repetitive low-value interactions do not.
+5. Star/level progression is distinct from another player's trust, familiarity, consent and trade decisions.
+6. Any real-money progression mechanic remains unimplemented until separately specified and explicitly approved.
