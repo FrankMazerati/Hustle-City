@@ -412,3 +412,16 @@ Create a reusable naming framework for cities, casinos, venues and businesses. G
 - Sims work and save money. Earnings and savings must derive from recorded wages and economic transactions, not arbitrary unexplained wealth. Exact wage/expense/banking rules remain open.
 - Personal memories must be grounded in events that occurred. Keep internal self-knowledge separate from player-visible profile information; protect private residence coordinates and financial/account details.
 - See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 32.
+
+## 33. Wealthy Sims and aspirational luxury lifestyles
+- Include an affluent segment of Sims from the beginning of the game. Their lifestyles create aspiration and visible high-end social/economic activity; not every Sim is wealthy.
+- Their income and savings can fund luxury travel, hotels, vacations, entertainment tickets, parties, yachts, expensive vehicles, luxury homes, estates and eventually mansions.
+- Purchases, ownership, event hosting and upkeep must be grounded in recorded finances and affordability. Do not inject unexplained wealth. Wealth is not a proxy for trustworthiness or personal worth.
+- Starting wealth distribution, income bands, luxury pricing, upkeep and financing remain open economy-design details.
+- See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 33.
+
+## 34. Per-Sim person memory library and communication-earned recognition
+- Every Sim should maintain persistent individual records for people they have meaningfully communicated with, including players, other Sims and coworkers. Records can preserve identity/name, encounter context, meaningful conversation details, familiarity and separate trust state.
+- Merely tapping/selecting someone, opening a profile or touching an object does not create a meaningful social connection or increase trust. Communication establishes the named social memory; conversational substance and quality govern what is retained and relationship changes.
+- Keep each relationship pair-specific and persistent across sessions. Design for 10,000 players and 100,000 Sims with sparse per-person/per-pair records and sensible event/memory retention, not a fully populated all-to-all matrix.
+- See [Sims / MPC / NPC Simulation Framework](../knowledge-library/frameworks/SIMS_MPC_NPC_FRAMEWORK.md), section 34 and related relationship sections.
