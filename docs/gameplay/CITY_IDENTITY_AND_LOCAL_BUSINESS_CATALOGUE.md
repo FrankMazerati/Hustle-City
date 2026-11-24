@@ -103,6 +103,24 @@ For each approved city:
 9. Record creator approval and publish versioned content.
 10. Preserve existing player collections and earned rewards when new cities or businesses are added.
 
+## 5A. Strict city-presence rule for card collection
+
+**Creator-approved strict rule:** A player may acquire/collect a new card only while physically present in the in-game city to which that card belongs. City identity is attached to every card definition and every acquisition grant.
+
+- Chicago cards can be earned only while the player is in Chicago.
+- Los Angeles cards can be earned only while the player is in Los Angeles.
+- Miami cards can be earned only while the player is in Miami.
+- Texas-city cards can be earned only while the player is in the relevant Texas city.
+- Apply the same rule to all cities in the approved 30-city expansion roster.
+- The rule covers card packs, poker/activity rewards, daily login rewards, prize-wheel rewards, events, achievements, direct card grants and any other new-card acquisition route. A reward may be claimed/opened only when the player is present in the card's city. A reward earned in one city must not silently grant a card belonging to another city.
+- A pack that contains cards from multiple cities may be opened only if every card in its eligible pool belongs to the player's current city; otherwise it must be unavailable or clearly separated into city-specific packs.
+- **Trading is the exception:** players may trade eligible cards with other players anywhere, regardless of the cities those cards belong to. Trading does not count as collecting through a city activity and does not bypass trade restrictions.
+- City presence must be validated by authoritative server-side world/session state at the moment of acquisition. A client location claim, menu selection, remote purchase or spoofed city value is insufficient.
+- If a player leaves the city before claiming/opening a pending card reward, preserve the unclaimed reward safely but require return to the card's city before granting/opening it. Exact pending-reward UX is an implementation detail; never lose a valid reward.
+- A player may view their album and trade cards anywhere. Viewing or trading does not grant a new card.
+
+This is a core progression rule, not an optional event modifier. Any exception requires an explicit creator decision and a versioned rule change.
+
 ## 6. Data model and expansion requirements
 
 Use stable IDs and versioned data, never display names as database keys.
