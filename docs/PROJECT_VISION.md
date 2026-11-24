@@ -65,3 +65,22 @@ Bella Rose is a confident, fashionable, street-smart guide with humor and attitu
 - Engine-neutral rules, data schemas, content definitions and source assets live in SHARED_CORE and SHARED_ASSETS. Engine-specific rendering, physics, animation, input, UI, networking and packaging live in ENGINE/unreal or ENGINE/unity.
 - Godot is retired from the approved engine architecture. Existing Godot work and history are not to be destructively deleted; archive or remove active references only after preserving relevant assets and documenting disposition.
 - Local development/testing and cloud-hosted live multiplayer are the intended direction; provider and detailed topology are undecided.
+
+
+## Product rollout strategy — launch scope and expansion
+The initial commercial/product objective is to attract and retain players with a polished **poker-first social activity game**: a welcoming, lively city where people meet, communicate, visit venues, play poker using non-redeemable virtual chips, attend social activities and build friendships/crew identity. The first release should prove the core social loop, player acquisition, retention and sustainable revenue before attempting a much broader open-world simulation.
+
+### Initial release boundaries
+- Prioritize multiplayer social presence, poker/card activities, venues, events, player identity, messaging, virtual economy and a convincing ambient city.
+- The city may depict NPC-only street incidents and emergency activity as environmental storytelling, but these are not player crime systems.
+- Initial players do not rob, steal, use weapons, commit player-directed crimes, get arrested, go to jail, die, or enter player medical/hospital consequence loops. Do not build player-targeted law-enforcement gameplay into the initial release.
+- NPC police/fire/ambulance and NPC arrest/hospital/jail simulations may operate as ambient background systems, with player interaction limited to safe, friendly, non-punitive encounters (for example, officers asking a yacht party to lower its noise).
+- Keep player movement and transport safe; no intentional random vehicle crashes. Preserve player assets and progress when simulation faults occur.
+- Everyday lifestyle systems (housing, vehicles, insurance, fuel, phone service and maintenance) must remain lightweight and must not obstruct the core poker/social loop. A bundled/simple default is under consideration; exact costs and rules are not approved.
+
+### Expansion strategy
+- Design modular systems and clean data/content boundaries so the world can grow without rebuilding the foundation.
+- After the initial game is established, has players and generates revenue, later phases may explore expanded open-world/crime-oriented gameplay, including player law-enforcement consequences, jail scenarios, weapons and drugs. These are future possibilities only—not launch requirements, not approved feature specifications, and not permission to implement them now.
+- Any later expansion requires a separate creator-approved scope, product/business case, technical and safety review, platform-age-rating review, legal/compliance review where applicable, and explicit design of player protections and moderation.
+- Growth may be supported by future investors, partners and additional development contributors. The architecture and documentation should make the product understandable, modular and extensible for those collaborators.
+- Protect the original launch identity: a social-first poker and city-lifestyle game. Do not let speculative future features delay getting the initial experience into players' hands.
