@@ -1,3 +1,5 @@
+> **LEGACY CATALOG — SUPERSEDED (2026-11-25):** This multi-agent catalog is retained for historical reference only. The active workforce is one Super Agent plus ChatGPT as external Project Lead/QA. See [SUPER_AGENT_CHARTER.md](SUPER_AGENT_CHARTER.md).
+
 # Hustle City AI Studio — Specialist Agent Catalog
 
 ## Operating model and roster authority
