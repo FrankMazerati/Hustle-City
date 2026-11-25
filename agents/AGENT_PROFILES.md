@@ -1,3 +1,5 @@
+> **LEGACY PROFILES — SUPERSEDED (2026-11-25):** These multi-agent profiles are retained for historical reference only. Do not activate them as separate workers. See [SUPER_AGENT_CHARTER.md](SUPER_AGENT_CHARTER.md) for the active single-agent design.
+
 # Hustle City — Agent Profiles & Execution Standards
 
 **Status:** Proposed operating profiles for the approved workforce. These profiles strengthen role instructions without changing the approved roster, model assignments, department structure, creative canon, or activation status. They define expected behavior; they do not mean agents are instantiated or online.
