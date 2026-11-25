@@ -1,8 +1,8 @@
 {
   "schema_version": "1.1.0",
   "project": "Hustle City",
-  "runtime_mode": "grouped_package_relay",
-  "note": "Four production departments are defined. Multi-agent group fan-out and the three-stage QA workflow are specified but not yet implemented in the current scheduler. Do not activate until those runtime gates pass.",
+  "runtime_mode": "legacy_multi_agent_disabled",
+  "note": "LEGACY multi-agent pipeline retained for reference only. Superseded 2026-11-25 by one Super Agent plus external ChatGPT Project Lead/QA. Do not activate; scheduler remains disabled pending new runtime support.",
   "stations": [
     {
       "station_id": "city-fabric-infrastructure",
@@ -86,5 +86,6 @@
       }
     ],
     "trinity_oversight": "audit routing, resolve ownership conflicts, monitor queue and escalate; never silently change creator-approved canon"
-  }
+  },
+  "superseded_by": "intellisync/config/super_agent.json"
 }
