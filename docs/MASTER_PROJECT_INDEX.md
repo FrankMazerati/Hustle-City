@@ -15,6 +15,7 @@
 - [Batch Roadmap](../agents/SUPER_AGENT_BATCH_ROADMAP.md)
 - [Package Handoff Template](../agents/templates/SUPER_AGENT_PACKAGE_HANDOFF_TEMPLATE.md)
 - [Package Manifest Schema](../agents/schemas/super-agent-package-manifest.schema.json)
+- [Opening Cinematic and Station Arrival Brief](OPENING_CINEMATIC_AND_STATION_ARRIVAL.md) — HC-B01-P02; Creator-directed production draft, not implemented
 - Runtime target config: `intellisync/config/super_agent.json`
 
 ## Nine memory sections
@@ -54,7 +55,7 @@
 | Batch | Name | Status | Exit gate |
 |---|---|---|---|
 | HC-B00 | Agent readiness and project intake | not verified / pending evidence | Actual host model inference, storage/backup, selective memory and handoff dry-run |
-| HC-B01 | Creative and cinematic foundation | queued | Creator-approved creative brief and opening train-arrival cinematic requirements |
+| HC-B01 | Creative and cinematic foundation | in progress — P02 brief drafted; Creator review required | Creator-approved creative brief and opening train-arrival cinematic requirements |
 | HC-B02 | Hustle City master plan | queued | Creator-approved city footprint, orientation and spatial registry |
 | HC-B03 | Expressway network | queued | Network fits approved master plan |
 | HC-B04 | Street network and public realm | queued | Street/intersection registry and connectivity reviewed |
@@ -77,7 +78,7 @@
 2. HC-B00-P02 — Verify memory/asset roots and backup on the target host (only if not already supported by current evidence).
 3. HC-B00-P03 — Verify actual model tag and bounded inference on the target host (only if not already supported by current evidence).
 4. HC-B00-P04 — Run selective-memory and package/handoff/correction dry run.
-5. HC-B01-P01 — Consolidate approved SCRIBE & LENS direction.
+5. HC-B01-P01 — Consolidate approved SCRIBE & LENS direction.\n6. HC-B01-P02 — Develop opening train-arrival cinematic and station/Bella Rose encounter (draft brief created; Creator review required).
 
 ### Super Agent correction queue
 - No active correction tickets registered in this index. Add only evidenced defects with severity, affected record, expected/observed result, owner and retest criteria.
