@@ -195,3 +195,16 @@ Every new creator-approved requirement should be added to its canonical domain d
 
 ### Audit coverage limitation
 This is an incremental diagnostic against repository files and connected live Supabase metadata, plus the conversation history/summaries available to this session. It is not a byte-for-byte audit of every raw historical chat message. No claim of complete transcript export is made.
+
+
+## 4. Creator-approved workforce supersession (2026-11-25)
+
+The creator has superseded the earlier 17-role / 12-specialist / multi-agent workforce target. The current target is:
+- One production identity: **Hustle City Super Agent**, using one shared primary model and one continuous project history.
+- ChatGPT in the coordinating conversation is the external Project Lead and independent QA supervisor; it plans and prioritizes packages, reviews submitted versions, records defects, returns corrections, and verifies resubmissions.
+- SCRIBE and LENS are combined creative responsibilities inside the Super Agent, retained as a dedicated SCRIBE & LENS memory section; they are not separate running agents.
+- Nine selective memory sections: MASTER PROJECT, SCRIBE & LENS, WORLD, PEOPLE, TRANSPORTATION, SYSTEMS, QUALITY, ASSET LIBRARY, SOCIAL & LIFESTYLE.
+- Default production window is 30 minutes per bounded package. The agent builds Package A, starts independent Package B while ChatGPT reviews A, then receives A's correction packet after B is checkpointed. Corrections are handled in a later block and independently rechecked.
+- The target is documented in `agents/SUPER_AGENT_CHARTER.md`, `agents/SUPER_AGENT_SYSTEM_PROMPT.md`, `agents/SUPER_AGENT_MEMORY_ARCHITECTURE.md`, `agents/SUPER_AGENT_PRODUCTION_CYCLE.md`, and `intellisync/config/super_agent.json`.
+
+**Implementation status:** The legacy IntelliSync runtime/configuration was designed for multiple production agents and internal QA stages. The new target config is a specification, not yet an executable runtime path. Scheduler remains disabled. Model availability, host inference, selective memory retrieval/write-back, two-build handoff, and end-to-end tests must be verified before autonomous activation. Do not count documentation or a model tag as a running Super Agent.
