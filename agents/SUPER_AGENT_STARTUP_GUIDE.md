@@ -1,5 +1,22 @@
 # Hustle City Super Agent — Startup and First-Run Guide
 
+## 0. Immediate chat-first operating mode
+
+**You do not need Termux, UserLAnd, an attached external drive or a locally running model to begin project-definition work.**
+
+Until the local worker is verified, the Creator may use the coordinating ChatGPT conversation as a temporary, chat-assisted production workspace:
+- ChatGPT can draft and organize creative briefs, city plans, requirements, package specifications, memory records and repository documentation.
+- Save durable work to the existing repository branch/PR and update the Master Project index.
+- The Creator reviews and directs changes.
+- Do not describe this as the local Super Agent running, autonomous background production, or independent QA of ChatGPT-authored work.
+- Keep review status as `draft` or `Creator review required` until an appropriate independent review/approval occurs.
+- This mode requires no model download and no local model RAM. ChatGPT availability and repository connector access are the only immediate dependencies.
+
+**What still requires local setup:** local inference, autonomous/continuous background execution, direct access to external-drive assets, Blender/mesh processing and local runtime tests. Defer those until a concrete package needs them.
+
+The first chat-first production task is Batch 1: consolidate approved SCRIBE & LENS direction and produce the opening train-arrival cinematic brief. Batch 0 host checks must not block this documentation/creative work; complete only the missing host checks before enabling local autonomy.
+
+
 **Canonical entry point:** This guide  
 **Worker:** One Hustle City Super Agent identity / one configured primary model  
 **Project Lead and independent QA:** ChatGPT coordinating conversation  
