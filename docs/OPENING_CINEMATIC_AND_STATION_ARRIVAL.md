@@ -85,32 +85,32 @@
 > - The cue should feel confident, celebratory and unmistakably like the start of a new chapter. It should sit naturally in the mix with the station's real soundscape rather than erase it.
 > - Earlier opening-credit and train-reveal music timing should be reconciled in the final edit so the cue builds into the arrival and reaches its strongest impact as passengers disembark. Avoid an abrupt, unexplained double-start.
 >
-> ### Scene 5 — Concierge hall / station concourse
->
-> - Follow the arriving passengers from the platform into the station's public concourse, referred to in the established concept as the concierge hall.
-> - The hall contains shops and active public circulation. It should feel like a real transportation hub with people arriving, departing, waiting, meeting, shopping and navigating.
-> - Populate the space with varied NPC routines: people walking in both directions, checking departure information, talking, greeting one another, carrying purchases, using phones, waiting near meeting points, approaching shops and moving toward exits or connections.
-> - Include readable storefronts, signage, seating, lighting, wayfinding, service counters and believable station architecture. Store names and final tenant list remain subject to the established brand/location registry.
-> - Keep the camera at human scale as it moves from the platform into the concourse. Let the player absorb the crowd, sound, shops and energy.
-> - Music can continue underneath, but station announcements, footsteps, conversations and local ambience remain present.
->
-> ### Scene 6 — Bella Rose introduction
->
-> - Bella Rose is encountered in the station concourse/concierge hall, not randomly spawned in an unrelated location.
-> - Frank and his female companion enter the concourse with their luggage. Bella notices or approaches them in a natural way, creating a believable first interaction.
-> - Bella introduces herself with confidence, warmth, humor and street-smart attitude. She should feel like someone who belongs in Hustle City and knows the city—not a generic tutorial narrator.
-> - Dialogue intent (draft, not final):
->
->   **Bella:** “Hey, welcome to Hustle City. I'm Bella Rose. Y'all made it in just in time. First time here?”
->
->   **Frank / companion:** Respond naturally; exact lines and companion identity remain to be approved.
->
->   **Bella:** Briefly welcomes them, establishes that she knows her way around, and offers to show them where to get settled and what the city has going on.
->
-> - Preserve space for the Creator to shape Bella's exact voice, slang, humor, cadence and dialogue. Do not force exaggerated slang or profanity into every line; make her personality feel authentic.
-> - The encounter transitions into the established Hustle Towers introduction in the Diamond District.
->
-> ## 4. Living-station behavior requirements
+> ### Scene 5 — Station concourse shopping and everyday life
+
+- Follow Frank and his companion from the platform into the station's public concourse, referred to in the established concept as the concierge hall.
+- The concourse is an active, shop-lined transportation hub. Include believable everyday station businesses such as clothing stores, handbag and luggage shops, travel-gear retailers, convenience shops, food counters and restaurants. Final tenants, names and signage must follow the canonical location/brand register.
+- Frank and his companion browse naturally rather than walking straight to Bella or being pulled into a scripted greeting. They pause at storefronts, look through displays, handle or inspect items where appropriate, and move on at an unhurried pace.
+- At approximately the second or third shop they visit, Bella Rose is also shopping. She notices something about Frank's companion that catches her eye—such as an outfit detail, accessory, bag or personal-style choice—and uses that as a natural opening to start a conversation.
+- Bella and the companion fall into an easy back-and-forth conversation for several minutes. Let the interaction feel spontaneous and social, with reactions, pauses, shared observations and humor. Do not rush directly into introductions or exposition.
+- During this conversation, Frank is nearby and occupied with his own browsing: looking at merchandise, displays or other things in the shop/concourse. He can remain within the scene and occasionally react, but he is not the focus of the women's conversation and the camera does not yet reveal his face.
+- Keep the wider concourse alive around them: people moving in both directions, checking departure information, talking, greeting one another, carrying purchases, using phones, waiting near meeting points and entering or leaving shops.
+- Use human-scale framing and natural staging. Let the audience absorb the storefronts, purchases, crowd, sound and energy without turning the scene into a rushed montage.
+
+### Scene 6 — Bella Rose meets the companion; Frank's name and face reveal
+
+- Bella's first connection is with Frank's companion, not Frank. She and the companion chat casually for a while before Bella introduces herself.
+- After the initial back-and-forth, Bella gives her name in a warm, confident, natural way—e.g. “Well, yeah, girl, my name is Bella Rose”—and the companion introduces herself. **The companion's name and final character details remain unapproved; do not invent them.**
+- Let their conversation continue naturally. Bella asks where the two of them are staying or where they're headed. The companion explains their situation in Creator-approved dialogue.
+- Bella offers to help: she says she is living at Hustle Towers and suggests they may be able to get a room there, offering to take them over. Keep the offer conversational rather than making Bella sound like a tutorial prompt or salesperson.
+- Frank remains nearby, looking at merchandise or other things in the station and allowing the two women to talk. Keep his face hidden; do not cut to a revealing angle or make him the center of the conversation prematurely.
+- Once the conversation winds down and the group is about to leave, Bella finally turns to Frank and says, in substance: “By the way, I didn't catch your name, sir. What's your name?”
+- Frank answers: “I'm Frank Maserati.” **On his answer, the camera swings around and reveals his face for the first time.** Preserve this exact dramatic trigger: do not reveal his face earlier in the train, on the platform, during the concourse walk, or while Bella is talking with his companion.
+- Bella responds: “All right, Frank Maserati. Welcome to Hustle City. Why don't y'all follow me?” Her exact phrasing, cadence and performance remain Creator-controlled.
+- After this reveal and welcome, use a deliberate cinematic transition—potentially a brief new opening-credit/title card sequence—then establish Frank, his companion and Bella arriving at or already being at Hustle Towers in the Diamond District. The transition may compress the journey from station to Towers rather than showing every step of the trip.
+- At Hustle Towers, continue into Bella's established introduction/guided-tour sequence. Do not enable player control until the selected tour is complete, Bella has said goodbye, and the player indicates they have seen enough.
+- Preserve Bella's confident, fashionable, street-smart personality, humor and authentic voice. Avoid forcing exaggerated slang or profanity into every line.
+
+## 4. Living-station behavior requirements
 >
 > The station must not be a static cinematic backdrop. The scene should establish reusable city simulation behavior:
 >
@@ -171,8 +171,12 @@
 > - Train doors open only after the train stops.
 > - Arriving passengers disembark while other passengers wait and prepare to board.
 > - The music cue is tied to the act of arriving and stepping onto the platform, subject to music rights.
-> - The concourse has shops and convincing two-way everyday pedestrian activity.
-> - Bella Rose meets Frank and his female companion in the concourse and introduces herself in character.
+> - The concourse has active clothing, bag, travel-gear, convenience and food/restaurant businesses, with convincing two-way pedestrian activity.
+> - Frank and his companion browse naturally; Bella notices something she likes about the companion at approximately the second or third shop and starts a conversation with her.
+> - Bella and the companion chat for several minutes, exchange names, and discuss where the pair are staying before Bella offers Hustle Towers as a place to get settled.
+> - Frank remains nearby browsing independently while the women talk.
+> - Only as they are about to leave does Bella ask Frank his name; his answer triggers the first face reveal, followed by Bella's welcome and invitation to follow her.
+> - A deliberate title/credit transition may bridge the station encounter to their arrival at Hustle Towers, where Bella's guided tour continues.
 > - The sequence hands off into the established Hustle Towers / guided-tour story.
 > - No player control is enabled before the selected tour is completed and Bella says goodbye.
 > - Any unbuilt asset, animation, audio, code or engine integration is reported as a production dependency—not represented as completed.
@@ -191,7 +195,7 @@
 >
 > **Established in prior design:** storm/train arrival premise, intercity train, passenger disembarkation, station concourse, Bella Rose as local guide, and the subsequent Hustle Towers / guided-tour progression.
 >
-> **Expanded by this Creator direction:** dynamic aerial camera operation with rear, back-left and back-right three-quarter angles and zoom adjustments; cloud sweep/descent; a continuous-feeling entry into the train; a sequential camera journey through several occupied passenger cars; a delayed reveal of Frank and his companion in a later car as they rise and gather their belongings; several-minutes-before-arrival conductor announcement; train bounce and braking; simultaneous arriving/departing passenger flows; music impact as passengers step off; active shop-lined concierge hall; and Bella Rose's first introduction.
+> **Expanded by this Creator direction:** dynamic aerial camera operation with rear, back-left and back-right three-quarter angles and zoom adjustments; cloud sweep/descent; a continuous-feeling entry into the train; a sequential camera journey through several occupied passenger cars; a delayed reveal of Frank and his companion in a later car as they rise and gather their belongings; several-minutes-before-arrival conductor announcement; train bounce and braking; simultaneous arriving/departing passenger flows; music impact as passengers step off; active shop-lined concierge hall with clothing, bags, travel gear and restaurants; Bella's companion-first shopping encounter after roughly the second or third shop; several minutes of conversation and introductions; the companion's explanation of where they are staying; Bella's offer of a room at Hustle Towers; Frank browsing independently; the delayed name question and first face reveal; and a cinematic transition to Hustle Towers.
 >
 > **Not verified as built:** playable train/camera sequence, train and station environment, crowd simulation, passenger/luggage animations, conductor VO, music implementation, Bella Rose model/animation/dialogue, and engine integration.
 >
