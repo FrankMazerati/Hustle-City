@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1.0",
-  "operating_mode": "configured_not_activated",
+  "operating_mode": "legacy_superseded_not_for_activation",
   "ollama": {
     "endpoint": "http://127.0.0.1:11434",
     "timeout_seconds": 180
@@ -87,11 +87,13 @@
     }
   },
   "notes": [
+    "SUPERSEDED 2026-11-25: legacy multi-agent model map retained for reference only; do not activate.",
     "Local Ollama is the default backend; all 12 specialist and three QA model assignments are explicit.",
     "Model assignments are configuration only; they do not prove that agents are instantiated or running.",
     "The shared mobile device uses one model call at a time to avoid competing memory use.",
     "The scheduler remains disabled until the three-stage QA workflow and group execution are implemented and tested.",
     "Hosted providers remain disabled unless exact model, free quota, and data terms are verified.",
     "Trinity is a deterministic coordinator service in the current runtime; no LLM model is assigned to Trinity yet."
-  ]
+  ],
+  "superseded_by": "intellisync/config/super_agent.json"
 }
