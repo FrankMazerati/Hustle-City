@@ -2,7 +2,7 @@
 >
 > **Package:** HC-B01-P02  
 > **Related package:** HC-B01-P01 (Creator-approved SCRIBE & LENS direction)  
-> **Status:** Creator-directed scene brief; production draft; not an implemented or playable scene  
+> **Status:** Creator-directed final-product requirement; detailed production specification in progress; implementation not yet verified  
 > **Owner:** Hustle City Super Agent (when local production runtime is available)  
 > **Project Lead / review:** ChatGPT coordinating conversation  
 > **Authority:** Creator has final approval over canon, dialogue, music, camera, pacing and presentation.
@@ -11,7 +11,7 @@
 >
 > Introduce Hustle City as a busy, atmospheric, lived-in city through an arrival sequence that moves continuously from a stormy aerial train approach to the station concourse and the first meeting with Bella Rose. The sequence must feel like arriving in a real city at an active time of day—not loading into an empty environment.
 >
-> This document consolidates the established opening concept and the Creator's expanded direction. It does not claim that the scene, assets, animation, audio or playable implementation already exist.
+> This document specifies the intended finished experience, not an optional concept or a feature to be simplified away. It does not claim that the scene, assets, animation, audio or playable implementation already exist.
 >
 > ## 2. Canon and continuity
 >
@@ -57,7 +57,7 @@
 >   “Good afternoon, passengers. We are now approaching Hustle City. Hustle City is our next and final stop. Please gather your personal belongings, check the overhead racks and the space around your seats, and prepare to exit when the doors open. Thank you for travelling with us.”
 >
 > - Treat the wording as a performance-ready draft, not final locked dialogue. The delivery should sound like a real conductor: clear, warm, professional and audible over the train—not a dramatic movie-trailer voice.
-> - Passengers begin preparing to leave: reaching into overhead racks, pulling down suitcases and duffel bags, collecting backpacks, checking phones, gathering books and smaller personal items, helping companions and moving toward the doors without instantly teleporting into position.
+> - As the camera arrives at Frank and his companion, catch them at the exact moment they begin getting up from their seats in response to the approaching stop/announcement. They collect their belongings naturally: reaching overhead for bags, taking down suitcases or duffels, retrieving backpacks, checking phones, gathering smaller personal items and making sure they have everything. Their actions should unfold in real time, with seatbelts/seat areas cleared as appropriate, bags handled with believable weight, and natural coordination between the two. This is the reveal of the central arriving characters after the audience has seen the wider passenger community.\n> - Other passengers throughout the carriage are also preparing to leave, but at different speeds and with different routines. Keep the car alive around Frank and his companion; do not freeze all background passengers for their reveal.
 >
 > ### Scene 3 — Station arrival and disembarkation
 >
@@ -127,7 +127,7 @@
 >
 > ## 6. Camera and edit requirements
 >
-> - Camera movement must be continuous and motivated: aerial follow → lateral cloud sweep → descending push-in → train-follow → platform arrival → human-scale concourse follow → Bella encounter.
+> - Camera movement must be continuous and motivated: high rear aerial follow → dynamic back-left/back-right rear-three-quarter tracking and zoom adjustments → lateral cloud sweep → descending push-in → approach and entry into the train → sequential passage through multiple passenger cars → delayed reveal of Frank and his companion as they rise and gather belongings → exterior/platform arrival → human-scale concourse follow → Bella encounter.
 > - Maintain train direction, geography, screen direction and weather continuity between shots.
 > - Use cuts only when they improve clarity or hide a necessary transition; avoid arbitrary camera jumps.
 > - Keep important character actions visible: conductor announcement, passengers collecting luggage, doors opening, disembarking, the two-way platform flow, entering the concourse and Bella's introduction.
@@ -149,7 +149,7 @@
 > ## 8. Acceptance criteria
 >
 > - The opening clearly identifies the arriving train as intercity passenger service, not the local city train.
-> - The aerial camera follows the train from behind, sweeps laterally through/along storm clouds, descends and reveals the city before the station approach.
+> - The aerial camera follows the train from behind, dynamically varies between rear and back-left/back-right rear-three-quarter angles, sweeps laterally through/along storm clouds, zooms and descends while revealing the city.\n> - The camera makes a motivated continuous-feeling entry into the train and passes through several occupied passenger cars before reaching Frank and his companion.\n> - Frank and his companion are not shown in the first car; their reveal occurs only after the camera has introduced passengers in multiple preceding cars.\n> - The camera reaches them as they begin standing and collecting their belongings, with the rest of the carriage continuing its own natural pre-arrival activity.
 > - The storm, train movement, city reveal and station arrival form a coherent visual sequence.
 > - The conductor gives a clear next-stop announcement a few minutes before arrival.
 > - Passengers visibly collect varied personal belongings before leaving.
@@ -176,8 +176,8 @@
 >
 > **Established in prior design:** storm/train arrival premise, intercity train, passenger disembarkation, station concourse, Bella Rose as local guide, and the subsequent Hustle Towers / guided-tour progression.
 >
-> **Expanded by this Creator direction:** helicopter-like aerial follow behind the train, lateral cloud sweep and descent, close train-follow into the city, several-minutes-before-arrival conductor announcement, detailed luggage/phone preparation, train bounce and braking, simultaneous arriving/departing passenger flows, music impact as passengers step off, active shop-lined concierge hall, and Bella Rose's first introduction.
+> **Expanded by this Creator direction:** dynamic aerial camera operation with rear, back-left and back-right three-quarter angles and zoom adjustments; cloud sweep/descent; a continuous-feeling entry into the train; a sequential camera journey through several occupied passenger cars; a delayed reveal of Frank and his companion in a later car as they rise and gather their belongings; several-minutes-before-arrival conductor announcement; train bounce and braking; simultaneous arriving/departing passenger flows; music impact as passengers step off; active shop-lined concierge hall; and Bella Rose's first introduction.
 >
 > **Not verified as built:** playable train/camera sequence, train and station environment, crowd simulation, passenger/luggage animations, conductor VO, music implementation, Bella Rose model/animation/dialogue, and engine integration.
 >
-> This package is a Creator-directed production brief. It remains **draft / Creator review required** until the Creator approves the final storyboard and dialogue, and implementation evidence is separately reviewed.
+> This package records the Creator's required finished-product direction. Fine-grained shot timing, exact camera path, final dialogue and implementation details still require production development and Creator review, but the core elements above are not optional concepts. Implementation evidence must be reviewed separately; documentation alone does not mean the cinematic has been built.
