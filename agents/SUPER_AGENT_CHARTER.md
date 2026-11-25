@@ -86,12 +86,16 @@ The first work is creative intelligence and city foundation, not construction of
 
 The opening cinematic's train station, train route, camera staging and weather requirements must be reserved in the city plan early. Detailed outer-world construction is deferred; build Hustle City itself first.
 
-## 6. Runtime status
+## 6. Batch execution and startup
+
+The canonical execution sequence is defined in `agents/SUPER_AGENT_BATCH_ROADMAP.md`; startup and activation steps are defined in `agents/SUPER_AGENT_STARTUP_GUIDE.md`; current queues and batch status live in `docs/MASTER_PROJECT_INDEX.md`. A batch contains multiple independently reviewable packages. Each package uses a default 30-minute checkpoint, versioned handoff, dependency check and exit criteria. These documents are subordinate to Creator-approved requirements and must not silently change canon.
+
+## 7. Runtime status
 
 This charter is the canonical target design. The existing IntelliSync runtime was built around earlier multi-agent stations and does not yet prove support for this single-worker plus external ChatGPT QA cycle. Keep the scheduler disabled until a dedicated configuration, handoff/QA workflow, tests, and target-host model inference have been verified.
 
 
-## 7. Continuous production and correction ownership
+## 8. Continuous production and correction ownership
 
 The default is to let the Super Agent continue productive work while ChatGPT reviews earlier submitted packages. ChatGPT does not interrupt the worker for every small defect.
 
