@@ -89,3 +89,15 @@ The opening cinematic's train station, train route, camera staging and weather r
 ## 6. Runtime status
 
 This charter is the canonical target design. The existing IntelliSync runtime was built around earlier multi-agent stations and does not yet prove support for this single-worker plus external ChatGPT QA cycle. Keep the scheduler disabled until a dedicated configuration, handoff/QA workflow, tests, and target-host model inference have been verified.
+
+
+## 7. Continuous production and correction ownership
+
+The default is to let the Super Agent continue productive work while ChatGPT reviews earlier submitted packages. ChatGPT does not interrupt the worker for every small defect.
+
+- ChatGPT may make a small, isolated, unambiguous, low-risk correction directly when the necessary repository/file access exists and the change does not require the Super Agent's specialist tools or environment. Every such edit must be logged and verified.
+- Moderate, technical, multi-file, asset, or domain-specific corrections are assigned to the Super Agent in a prioritized correction queue. The agent can finish its current safe package before taking them.
+- The Creator may inspect deliverables and give small direction changes. ChatGPT records and routes them; do not make the Creator repeat known requirements.
+- Stop starting new packages and request a Creator + ChatGPT + Super Agent group review when core architecture/direction is wrong, a critical dependency is broken, the same major defect recurs, a safety/security/data-loss issue appears, or multiple related high-severity issues accumulate (guideline: three or more related moderate/high issues in one package).
+- Keep production, correction and minor-fix queues distinct. Do not modify an immutable package version during active QA. Submit versioned corrections.
+- ChatGPT must not silently perform substantial production work, invent verification, or claim an untested change is fixed. The Super Agent remains responsible for specialist implementation.
