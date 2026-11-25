@@ -45,3 +45,10 @@
 - [ ] Unreal project compiled and validated in Unreal Editor on a supported production computer.
 
 The 12 specialists and three QA supervisors have model assignments in configuration, but these are not live agent instances. The scheduler remains disabled. Do not mark the workforce online until all activation gates above that apply to the chosen host have passed.
+
+
+## Current workforce and review-policy update (2026-11-25)
+
+The creator-approved target is one Super Agent plus ChatGPT as external Project Lead/independent QA. The default 30-minute two-build cadence is now **continuous production with risk-based correction ownership**: ChatGPT reviews while the agent continues safe independent work; ChatGPT may make only minor isolated low-risk changes it can verify and must log them; moderate/specialist corrections go to the agent's queue; major, recurring, cross-domain, critical-dependency or safety/data-loss issues pause new package starts for a Creator + ChatGPT + Super Agent group review. See `agents/SUPER_AGENT_PRODUCTION_CYCLE.md`.
+
+The scheduler remains disabled until the target-host model, selective memory, and this handoff workflow are implemented and verified. A configuration specification is not evidence of an active worker.
