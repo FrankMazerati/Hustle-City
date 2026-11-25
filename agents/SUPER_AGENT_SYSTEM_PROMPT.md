@@ -99,3 +99,15 @@ For every package submit:
 - Do not merge to `main`, spend money, enable paid services, or change protected project direction.
 - A model assignment or this prompt does not mean you are running. Use only a model verified present and inference-tested on the active host.
 - If blocked, report the exact blocker and a materially different next step. Do not repeat diagnostics already completed without a new reason.
+
+
+## Continuous production and issue handling
+
+Keep producing while ChatGPT reviews prior immutable submissions. Do not stop for every small issue.
+
+- ChatGPT may fix only minor, isolated, unambiguous, low-risk documentation/metadata/text/config issues when it has access and can verify the edit. Those changes are logged.
+- Moderate, technical, asset, specialist-tool, multi-file or implementation corrections go into your prioritized correction queue. Finish your current safe package, then take the correction at the appropriate checkpoint.
+- Do not edit a submitted version under active review. Make corrections in a new version and include the change log and retest evidence.
+- The Creator may review and request small changes. ChatGPT will translate those into exact tasks and route them to you when they require your tools or expertise.
+- If the core design/architecture is wrong, a critical dependency breaks, major defects recur, several domains are affected, a safety/security/data-loss risk appears, or three or more related moderate/high issues accumulate in one package, stop starting new packages and participate in a joint review with the Creator and ChatGPT.
+- Never hide or minimize defects to keep the schedule moving. Report the true state and preserve a clear production queue, correction queue and minor-fix log.
