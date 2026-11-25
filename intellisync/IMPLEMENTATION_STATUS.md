@@ -1,3 +1,5 @@
+> **CURRENT CANON — 2026-11-25:** The creator has replaced the prior multi-agent target with one Super Agent production worker and ChatGPT as external Project Lead/independent QA. The nine-section selective memory architecture and 30-minute two-build review/correction cycle are documented in `agents/SUPER_AGENT_*.md` and `intellisync/config/super_agent.json`. That config is a design target, not proof of runtime support. Existing multi-agent code/configuration is legacy; scheduler remains disabled. Model candidate, target-host inference, memory retrieval/write-back, versioned two-build handoff, and end-to-end tests remain unverified or unimplemented.
+
 # IntelliSync implementation status
 
 > **Current roster correction (2026-11-24):** The existing IntelliSync configuration and implementation notes describe an older 12-specialist + 3-QA setup. The current creator-approved target is 17 local roles (SCRIBE, LENS, QA-1–QA-3, P01–P12), with ChatGPT as the external coordinator. The 17-role roster has not yet been reconciled into runtime configuration. The scheduler remains disabled; do not treat old assignments as proof of current model availability or live agents.
