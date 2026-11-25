@@ -109,3 +109,39 @@ Before the first real production block:
 - Keep the scheduler disabled until the runtime implements this operating model and its tests pass.
 
 If the runtime is not yet ready, the Creator and ChatGPT can still prepare/QA the first package and run the Super Agent manually through the verified model interface; do not describe this as autonomous scheduling.
+
+
+## 8. Revised continuous-production review policy (Creator direction, 2026-11-25)
+
+The default is **keep the Super Agent producing while review happens**. ChatGPT should not interrupt the worker for every small defect or automatically send every issue back immediately.
+
+### Normal flow
+
+1. Super Agent builds Package A for a 30-minute block and submits an immutable checkpoint.
+2. Super Agent starts Package B for another 30-minute block when B is independent and safe to build.
+3. While B is underway, ChatGPT inspects A and records findings.
+4. The Creator may inspect the submitted work and provide small changes or preferences. ChatGPT records these as creator feedback and routes each change to the safest owner.
+5. ChatGPT handles a minor, isolated correction directly when it has the necessary file access, the change is unambiguous, low-risk, and does not require the Super Agent's specialist tools or local environment. Examples: a small documentation correction, metadata/label adjustment, typo, or straightforward isolated text/config edit.
+6. If the change requires production tools, domain-specific implementation, asset editing, code execution, model inference, or risks breaking linked systems, ChatGPT records it as a correction task for the Super Agent. The worker may finish its current block/package before taking it.
+7. The agent continues with subsequent packages while the correction queue remains small and safe. Corrections must be versioned; never mutate a submitted artifact that is actively being reviewed.
+
+### Correction severity and ownership
+
+- **Minor / ChatGPT may fix:** isolated, unambiguous, low-risk, easily verified changes with available access. Record before/after, file/record, reason and verification.
+- **Moderate / Super Agent queue:** implementation changes, asset changes, nontrivial code, multi-file edits, domain-specific changes, or anything needing the agent's build environment. Add a precise ticket and let the agent finish its current safe work before returning to it.
+- **Major / pause and group meeting:** stop starting new packages and convene the Creator, ChatGPT and Super Agent for a shared decision when the core direction or architecture is wrong, a critical dependency is broken, the same class of defect recurs after correction, multiple domains are affected, a safety/data-loss/security risk appears, or the defect backlog is growing faster than it can be resolved. A practical trigger is 3 or more related moderate/high-severity defects in one package or repeated recurrence of the same major issue. This is a trigger for discussion, not an automatic blame or rejection.
+
+### Creator review loop
+
+The Creator can review outputs at convenient checkpoints and say things such as "change this to that" or "move this there." ChatGPT records the exact requested change, checks whether it is a small safe edit or needs the Super Agent, and updates the task/QA record. Creator direction takes precedence over inferred preferences. Do not stop the agent for a minor preference change unless it affects work currently being edited or invalidates a dependency.
+
+### Queue discipline
+
+Maintain three visible queues in Master Project:
+- **Agent production queue:** next packages the Super Agent should build.
+- **Correction queue:** moderate issues the Super Agent must address, prioritized by severity and dependencies.
+- **ChatGPT minor-fix log:** small changes made directly, with file/record, before/after and verification.
+
+At each checkpoint, summarize: what the agent built, what ChatGPT inspected, what minor changes were made, what corrections are queued, what the Creator wants changed, and whether production should continue or pause for a meeting.
+
+The 30-minute block remains a default checkpoint, not a hard completion deadline. ChatGPT should not make broad or speculative changes on the agent's behalf. Independent review remains independent even when ChatGPT makes a small correction.
