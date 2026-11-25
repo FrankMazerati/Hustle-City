@@ -29,7 +29,7 @@ Until these are verified, run packages manually through the verified model inter
    - `agents/SUPER_AGENT_PRODUCTION_CYCLE.md`
    - `agents/SUPER_AGENT_BATCH_ROADMAP.md`
    - `intellisync/config/super_agent.json`
-3. Read the Master Project index and current queue.
+3. Read `docs/MASTER_PROJECT_INDEX.md` and the current queue.
 4. Verify the actual active model tag on the host and run one small inference. Record exact model tag, host, available memory, inference result and date. Do not use an unverified candidate.
 5. Verify memory root, asset root and backup location are readable/writable. Keep original asset files immutable.
 6. Load only the records needed for Batch 0 / the active package. Do not load all nine memory archives into every prompt.
