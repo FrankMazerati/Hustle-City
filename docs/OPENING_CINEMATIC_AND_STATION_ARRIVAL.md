@@ -164,7 +164,7 @@
 > - Near the two-minute/one-minute arrival announcements, the camera holds a wide elevated view of several passengers so the player does not yet know who it will follow.
 > - Other passengers may disembark before Frank and his companion; the close rear follow begins only when the pair leave the train.
 > - The platform/concourse follow preserves rear and rear-three-quarter views of Frank and his companion, showing their clothing, bags and style without revealing their faces before Bella asks Frank's name.
-> - Bella's “What's your name?” question triggers the first deliberate reveal of Frank's face; his “I'm Frank Maserati” answer and Bella's “Welcome to Hustle City” response land as the scene's reveal/payoff and transition point.
+> - Bella's “What's your name?” question prompts Frank's “I'm Frank Maserati” answer, and that answer triggers the first deliberate reveal of his face; Bella's “Welcome to Hustle City” response lands as the scene's reveal/payoff and transition point.
 > - The storm, train movement, city reveal and station arrival form a coherent visual sequence.
 > - The conductor gives a clear next-stop announcement a few minutes before arrival.
 > - Passengers visibly collect varied personal belongings before leaving.
