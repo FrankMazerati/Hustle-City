@@ -43,6 +43,12 @@
 - Scheduler remains disabled until target-host inference, memory retrieval/write-back and end-to-end package workflow are tested.
 - No paid fallback, spending or merge to `main` without explicit Creator approval.
 
+## Immediate execution mode
+
+- **Available now:** chat-assisted Batch 1 documentation and creative production; repository commits on the foundation branch; Creator review.
+- **Not yet available/verified:** local autonomous Super Agent, background scheduling, local model inference, external-drive asset processing or independent QA of ChatGPT-authored outputs.
+- **No Termux/UserLAnd/external-drive setup is required for the first creative and planning packages.** Do not block Batch 1 on local runtime readiness.
+
 ## Current batch status
 
 | Batch | Name | Status | Exit gate |
