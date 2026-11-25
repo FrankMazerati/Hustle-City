@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "project": "Hustle City",
+  "operating_mode": "single_super_agent_with_external_project_lead_qa",
+  "activation_status": "disabled_pending_host_and_runtime_verification",
+  "production_worker": {
+    "agent_id": "super-agent",
+    "display_name": "Hustle City Super Agent",
+    "identity_count": 1,
+    "responsibilities": [
+      "combined_scribe_lens_creative_direction",
+      "world_and_city",
+      "people_and_simulation",
+      "transportation",
+      "social_and_lifestyle",
+      "systems_and_gameplay",
+      "asset_pipeline",
+      "integration_preparation"
+    ],
+    "model_backend": "ollama",
+    "primary_model_candidate": "qwen2.5-coder:1.5b",
+    "primary_model_verified_on_target_host": false,
+    "backup_model_candidates": [],
+    "model_selection_rule": "Use only a model tag verified present and inference-tested on the active host; do not assume prior download reports remain current."
+  },
+  "project_lead_and_qa": {
+    "agent_id": "chatgpt-coordinating-conversation",
+    "type": "external_chat_project_lead_and_independent_qa",
+    "responsibilities": [
+      "translate_creator_direction_into_packages",
+      "set_priorities_and_dependencies",
+      "review_submitted_artifacts",
+      "record_defects_and_corrections",
+      "verify_resubmissions",
+      "maintain_master_project_status",
+      "escalate_creator_reserved_decisions"
+    ],
+    "self_approval_allowed": false
+  },
+  "memory": {
+    "section_count": 9,
+    "index_section": "MASTER_PROJECT",
+    "retrieval_mode": "selective_on_demand",
+    "write_back_required": true,
+    "sections": [
+      "MASTER_PROJECT",
+      "SCRIBE_AND_LENS",
+      "WORLD",
+      "PEOPLE",
+      "TRANSPORTATION",
+      "SYSTEMS",
+      "QUALITY",
+      "ASSET_LIBRARY",
+      "SOCIAL_AND_LIFESTYLE"
+    ],
+    "external_storage": "project_memory_root",
+    "backup_required": true
+  },
+  "production_cycle": {
+    "default_build_block_minutes": 30,
+    "pipeline": [
+      "build_package_a",
+      "checkpoint_package_a",
+      "build_independent_package_b",
+      "external_qa_package_a_during_b",
+      "return_package_a_corrections_after_b",
+      "correct_package_a",
+      "verify_package_a_and_continue"
+    ],
+    "correction_block_minutes": {
+      "minimum": 15,
+      "default": 30
+    },
+    "allow_incomplete_checkpoint": true,
+    "require_versioned_handoffs": true,
+    "prevent_edits_to_submitted_version_during_qa": true,
+    "downstream_may_use_unapproved_output_as_final": false
+  },
+  "resource_policy": {
+    "max_concurrent_local_model_calls": 1,
+    "cloud_default": false,
+    "paid_fallback": false,
+    "hosted_provider_requires_verified_zero_cost_quota_and_approved_data_terms": true
+  },
+  "runtime": {
+    "scheduler_enabled": false,
+    "activation_requirements": [
+      "single_super_agent_runtime_configuration_supported",
+      "selective_memory_retrieval_and_writeback_tested",
+      "two_build_qa_correction_handoff_tested",
+      "model_tag_verified_on_target_host",
+      "bounded_inference_passed",
+      "persistent_package_and_version_records_verified",
+      "all_required_tests_passed"
+    ]
+  },
+  "canonical_documents": [
+    "agents/SUPER_AGENT_CHARTER.md",
+    "agents/SUPER_AGENT_MEMORY_ARCHITECTURE.md",
+    "agents/SUPER_AGENT_PRODUCTION_CYCLE.md"
+  ]
+}
