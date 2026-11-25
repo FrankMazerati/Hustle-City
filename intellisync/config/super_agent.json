@@ -123,7 +123,21 @@
       "bounded_inference_passed",
       "persistent_package_and_version_records_verified",
       "all_required_tests_passed"
-    ]
+    ],
+    "chat_first_mode": {
+      "enabled": true,
+      "status": "available_for_documentation_and_creative_packages",
+      "local_model_required": false,
+      "external_drive_required": false,
+      "termux_or_userland_required": false,
+      "limitations": [
+        "not a locally running or autonomous Super Agent",
+        "ChatGPT-authored work is not independently QA-approved by the same ChatGPT session",
+        "local model inference, background scheduling, Blender/asset processing and direct external-drive access remain gated on host setup"
+      ],
+      "first_batch": "HC-B01",
+      "first_package": "HC-B01-P01"
+    }
   },
   "canonical_documents": [
     "agents/SUPER_AGENT_STARTUP_GUIDE.md",
@@ -279,5 +293,14 @@
     "package_id_convention": "HC-BNN-PNN; preserve existing HC-000 through HC-007 identifiers as legacy aliases where they already exist",
     "batch_exit_report_required": true,
     "creator_approval_required_for_batch_gates": true
+  },
+  "model_selection": {
+    "status": "candidate_not_verified",
+    "recommendation": "evaluate_qwen3_1.7b_as_general_purpose_candidate_only_if_target_host_has_sufficient_free_ram",
+    "alternatives": [
+      "qwen2.5-coder:1.5b for code-focused packages",
+      "qwen3:0.6b for lightweight runtime smoke testing only"
+    ],
+    "rule": "Do not download or install any model until one candidate is selected and the target host has a verified free-RAM and storage check; do not reinstall the previous multi-model stack."
   }
 }
