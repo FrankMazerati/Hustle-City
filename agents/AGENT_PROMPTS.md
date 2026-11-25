@@ -1,3 +1,5 @@
+> **LEGACY PROMPT PACK — NOT THE ACTIVE WORKFORCE PROMPT (2026-11-25):** The multi-role prompts below are retained as historical/reference material. The active single-worker prompt and authority rules are in [SUPER_AGENT_CHARTER.md](SUPER_AGENT_CHARTER.md). Do not instantiate the legacy roles as separate workers.
+
 # Agent System Prompt Pack
 
 Use the universal base prompt below plus the role-specific directive for each agent ID in `AGENT_CATALOG.md`. These are prompt definitions; they do not start workers. Each runtime instance must also receive scoped tools, approved knowledge and permission settings.
