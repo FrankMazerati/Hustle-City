@@ -1,3 +1,5 @@
+> **CURRENT WORKFORCE DIRECTION — 2026-11-25:** The active target is one Super Agent plus ChatGPT as external Project Lead/independent QA, with nine selective memory sections and 30-minute build blocks. Start with [the Super Agent charter](../agents/SUPER_AGENT_CHARTER.md), [memory architecture](../agents/SUPER_AGENT_MEMORY_ARCHITECTURE.md), [production cycle](../agents/SUPER_AGENT_PRODUCTION_CYCLE.md), and [target config](config/super_agent.json). The older multi-agent runtime files below are retained for reference and are not the active workforce configuration. The scheduler remains disabled pending implementation and verification.
+
 # Hustle City IntelliSync Runtime
 
 IntelliSync is the durable work-package relay, agent execution and coordination foundation for Hustle City.
