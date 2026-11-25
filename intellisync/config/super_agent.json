@@ -74,7 +74,28 @@
     "allow_incomplete_checkpoint": true,
     "require_versioned_handoffs": true,
     "prevent_edits_to_submitted_version_during_qa": true,
-    "downstream_may_use_unapproved_output_as_final": false
+    "downstream_may_use_unapproved_output_as_final": false,
+    "review_policy": "continuous_production_with_risk_based_corrections",
+    "chatgpt_minor_fix_allowed": true,
+    "minor_fix_constraints": [
+      "isolated",
+      "unambiguous",
+      "low_risk",
+      "necessary_file_access_available",
+      "does_not_require_super_agent_specialist_tools_or_environment",
+      "record_before_after_and_verify"
+    ],
+    "moderate_correction_owner": "super_agent_correction_queue_after_current_safe_package",
+    "major_issue_action": "pause_starting_new_packages_and_hold_creator_chatgpt_super_agent_group_review",
+    "major_issue_triggers": [
+      "core_direction_or_architecture_wrong",
+      "critical_dependency_broken",
+      "same_major_defect_recurs_after_correction",
+      "multiple_domains_affected",
+      "safety_security_or_data_loss_risk",
+      "three_or_more_related_moderate_or_high_severity_defects_in_one_package"
+    ],
+    "creator_review_feedback_enabled": true
   },
   "resource_policy": {
     "max_concurrent_local_model_calls": 1,
