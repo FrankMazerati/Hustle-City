@@ -59,13 +59,19 @@
   "production_cycle": {
     "default_build_block_minutes": 30,
     "pipeline": [
-      "build_package_a",
-      "checkpoint_package_a",
-      "build_independent_package_b",
-      "external_qa_package_a_during_b",
-      "return_package_a_corrections_after_b",
-      "correct_package_a",
-      "verify_package_a_and_continue"
+      "read_master_project_and_active_batch",
+      "selectively_retrieve_relevant_memory",
+      "build_package_a_in_30_minute_checkpoint",
+      "save_immutable_versioned_checkpoint_and_handoff",
+      "start_independent_safe_package_b",
+      "chatgpt_reviews_package_a_during_b",
+      "route_minor_issues_to_chatgpt_verified_minor_fix_log",
+      "route_moderate_issues_to_super_agent_correction_queue",
+      "continue_safe_production_while_review_and_corrections_are_managed",
+      "pause_new_package_starts_for_major_group_review_when_triggered",
+      "version_corrections_and_retest",
+      "update_memory_quality_and_master_project_queues",
+      "check_batch_exit_gate"
     ],
     "correction_block_minutes": {
       "minimum": 15,
@@ -95,7 +101,8 @@
       "safety_security_or_data_loss_risk",
       "three_or_more_related_moderate_or_high_severity_defects_in_one_package"
     ],
-    "creator_review_feedback_enabled": true
+    "creator_review_feedback_enabled": true,
+    "correction_policy": "continuous_production_with_risk_based_corrections"
   },
   "resource_policy": {
     "max_concurrent_local_model_calls": 1,
@@ -108,7 +115,10 @@
     "activation_requirements": [
       "single_super_agent_runtime_configuration_supported",
       "selective_memory_retrieval_and_writeback_tested",
-      "two_build_qa_correction_handoff_tested",
+      "immutable_package_checkpoint_and_manifest_validation_tested",
+      "continuous_two_package_overlap_and_external_qa_handoff_tested",
+      "minor_fix_log_and_moderate_correction_queue_tested",
+      "major_issue_escalation_tested",
       "model_tag_verified_on_target_host",
       "bounded_inference_passed",
       "persistent_package_and_version_records_verified",
@@ -116,8 +126,158 @@
     ]
   },
   "canonical_documents": [
+    "agents/SUPER_AGENT_STARTUP_GUIDE.md",
     "agents/SUPER_AGENT_CHARTER.md",
+    "agents/SUPER_AGENT_SYSTEM_PROMPT.md",
     "agents/SUPER_AGENT_MEMORY_ARCHITECTURE.md",
-    "agents/SUPER_AGENT_PRODUCTION_CYCLE.md"
-  ]
+    "agents/SUPER_AGENT_PRODUCTION_CYCLE.md",
+    "agents/SUPER_AGENT_BATCH_ROADMAP.md",
+    "agents/schemas/super-agent-package-manifest.schema.json"
+  ],
+  "batch_execution": {
+    "roadmap": "agents/SUPER_AGENT_BATCH_ROADMAP.md",
+    "startup_guide": "agents/SUPER_AGENT_STARTUP_GUIDE.md",
+    "package_manifest_schema": "agents/schemas/super-agent-package-manifest.schema.json",
+    "package_handoff_template": "agents/templates/SUPER_AGENT_PACKAGE_HANDOFF_TEMPLATE.md",
+    "batch_policy": "one_batch_contains_multiple_reviewable_packages; each_package_uses_30_minute_default_checkpoint; multiple_blocks_allowed",
+    "initial_sequence": [
+      {
+        "batch_id": "HC-B00",
+        "name": "Agent readiness and project intake",
+        "gate": "model inference, storage/backup, selective memory and end-to-end dry-run verified"
+      },
+      {
+        "batch_id": "HC-B01",
+        "name": "Creative and cinematic foundation",
+        "legacy_package_ids": [
+          "HC-000"
+        ],
+        "memory_sections": [
+          "SCRIBE_AND_LENS",
+          "MASTER_PROJECT",
+          "QUALITY"
+        ]
+      },
+      {
+        "batch_id": "HC-B02",
+        "name": "Hustle City master plan",
+        "legacy_package_ids": [
+          "HC-001"
+        ],
+        "memory_sections": [
+          "WORLD",
+          "MASTER_PROJECT",
+          "QUALITY"
+        ]
+      },
+      {
+        "batch_id": "HC-B03",
+        "name": "Expressway network",
+        "legacy_package_ids": [
+          "HC-002"
+        ],
+        "memory_sections": [
+          "WORLD",
+          "SYSTEMS",
+          "QUALITY"
+        ]
+      },
+      {
+        "batch_id": "HC-B04",
+        "name": "Street network and public realm",
+        "legacy_package_ids": [
+          "HC-003"
+        ],
+        "memory_sections": [
+          "WORLD",
+          "SYSTEMS",
+          "QUALITY"
+        ]
+      },
+      {
+        "batch_id": "HC-B05",
+        "name": "Rail, train and subway network",
+        "legacy_package_ids": [
+          "HC-004"
+        ],
+        "memory_sections": [
+          "TRANSPORTATION",
+          "WORLD",
+          "SYSTEMS",
+          "SCRIBE_AND_LENS",
+          "QUALITY"
+        ]
+      },
+      {
+        "batch_id": "HC-B06",
+        "name": "Marina and waterfront access",
+        "legacy_package_ids": [
+          "HC-005"
+        ],
+        "memory_sections": [
+          "WORLD",
+          "TRANSPORTATION",
+          "SYSTEMS",
+          "QUALITY"
+        ]
+      },
+      {
+        "batch_id": "HC-B07",
+        "name": "Districts and neighborhoods",
+        "legacy_package_ids": [
+          "HC-006"
+        ],
+        "memory_sections": [
+          "WORLD",
+          "SCRIBE_AND_LENS",
+          "MASTER_PROJECT",
+          "QUALITY"
+        ]
+      },
+      {
+        "batch_id": "HC-B08",
+        "name": "Building plots and development framework",
+        "legacy_package_ids": [
+          "HC-007"
+        ],
+        "memory_sections": [
+          "WORLD",
+          "SYSTEMS",
+          "MASTER_PROJECT",
+          "QUALITY"
+        ]
+      },
+      {
+        "batch_id": "HC-B09",
+        "name": "Building kits, landmarks and venues"
+      },
+      {
+        "batch_id": "HC-B10",
+        "name": "People and character foundation"
+      },
+      {
+        "batch_id": "HC-B11",
+        "name": "Transportation assets and operations"
+      },
+      {
+        "batch_id": "HC-B12",
+        "name": "Social and lifestyle"
+      },
+      {
+        "batch_id": "HC-B13",
+        "name": "Core gameplay and simulation systems"
+      },
+      {
+        "batch_id": "HC-B14",
+        "name": "Integration and playable vertical slice"
+      },
+      {
+        "batch_id": "HC-B15_PLUS",
+        "name": "Expansion waves"
+      }
+    ],
+    "package_id_convention": "HC-BNN-PNN; preserve existing HC-000 through HC-007 identifiers as legacy aliases where they already exist",
+    "batch_exit_report_required": true,
+    "creator_approval_required_for_batch_gates": true
+  }
 }
