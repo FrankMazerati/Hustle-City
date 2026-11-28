@@ -195,3 +195,6 @@ Cinematic, intriguing, grounded, characterful and sometimes funny. Street-smart 
 - The canonical thief and detailed global chain of responsibility must be internally consistent, but should remain hidden from players until intended late-story discoveries.
 - Do not overwrite the existing five-card collection/ownership system when authoring the separate six-card story progression.
 - Keep exact established names and use stable content IDs independent of display names.
+
+## 13. Multi-city story architecture
+Hustle City is the flagship city's story bible. Every other playable city must also receive its own complete local story package containing twelve district storylines, city-specific district leaders, business problems, character casts, six-card progressions where configured, ambient conversations, local rumors, choices and consequences. Do not copy Hustle City's missions with only names changed. Each city must have its own identity and local conflicts; global organizations provide gradual connective tissue rather than making every local mission a conspiracy mission. Use docs/story/CITY_STORY_PACK_TEMPLATE.md as the production standard.
