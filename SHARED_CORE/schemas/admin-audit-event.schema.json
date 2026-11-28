@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hustlecity.example/schemas/admin-audit-event.schema.json",
+  "title": "Hustle City Admin Audit Event",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "event_id",
+    "actor_admin_id",
+    "actor_role",
+    "action",
+    "target_type",
+    "target_id",
+    "reason",
+    "environment",
+    "occurred_at",
+    "result",
+    "correlation_id"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "actor_admin_id": {
+      "type": "string"
+    },
+    "actor_role": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string"
+    },
+    "target_type": {
+      "type": "string"
+    },
+    "target_id": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "environment": {
+      "enum": [
+        "development",
+        "staging",
+        "production"
+      ]
+    },
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "result": {
+      "enum": [
+        "success",
+        "denied",
+        "failed",
+        "pending_approval",
+        "cancelled"
+      ]
+    },
+    "correlation_id": {
+      "type": "string"
+    },
+    "approval_admin_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "before_state_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "after_state_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ledger_transaction_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "metadata": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}
