@@ -56,3 +56,13 @@ The active target workforce is 17 local agents: SCRIBE, LENS, three QA superviso
 
 ## Termux operator checks
 From the cloned repository in Termux, use `ollama list` to inspect installed models and `ollama ps` to inspect models currently loaded in memory. See the [AI master context](AI/KNOWLEDGE/HUSTLE_CITY_MASTER_CONTEXT.md) for additional storage checks and the distinction between configured agent roles and live agent processes. A complete live-agent status CLI is not yet implemented.
+
+
+## Story and administration specifications
+- [Master Hustle City story bible](docs/story/HUSTLE_CITY_STORY_BIBLE.md)
+- [Twelve district storyline framework](docs/story/DISTRICT_STORYLINE_FRAMEWORK.md)
+- [NPC ambient intelligence and narrative discovery](docs/story/NARRATIVE_DISCOVERY_AND_AMBIENT_INTELLIGENCE.md)
+- [Creative production mandate for the existing agent workforce](agents/CREATIVE_PRODUCTION_MANDATE.md)
+- [Administration dashboard functional specification](docs/admin/ADMINISTRATION_DASHBOARD_SPEC.md)
+
+The mission/business layer and hidden underworld-discovery layer are separate but connected. See the story bible for the creator-approved distinction and the separate six-card story / five-card venue-collection systems.

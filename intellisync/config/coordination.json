@@ -27,7 +27,12 @@
           "storyline and narrative architecture",
           "opening sequence and Bella Rose dialogue direction",
           "character motivations, plot continuity and narrative canon",
-          "story packages and handoffs to production specialists"
+          "story packages and handoffs to production specialists",
+          "maintain the master Hustle City story bible and the three overlapping narrative arcs",
+          "author twelve district storylines and six-card character handoff progressions",
+          "design ambient underworld discovery through NPC conversations, phone calls, rumors, approaches and private meetings",
+          "preserve separation between playable business missions and hidden Ghost Freight/Inner Circle/Ghost Network discovery",
+          "author supporting character identities, ages, nicknames, alignments and dialogue autonomously within canon"
         ]
       },
       {
@@ -105,9 +110,11 @@
         "role": "District & Neighborhood Design",
         "qa_supervisor": "QA-1",
         "responsibilities": [
-          "Hustle District and Trapper District contrast",
+          "Hustle District and Trappa District contrast",
           "neighborhood identity, boundaries and street-level composition",
-          "venue and destination placement"
+          "venue and destination placement",
+          "maintain the approved twelve-district roster and exact spelling Trappa District",
+          "coordinate district-specific playable story settings and business/district outcome hooks"
         ]
       },
       {
@@ -167,7 +174,11 @@
         "responsibilities": [
           "NPC schedules, crowd behavior and navigation",
           "Bella Rose guided movement and companion behavior",
-          "pedestrian flow and stuck-route recovery"
+          "pedestrian flow and stuck-route recovery",
+          "implement contextual ambient conversations, overheard phone calls and NPC-initiated approaches",
+          "track NPC knowledge boundaries, rumor provenance, player discovery and repeat-conversation suppression",
+          "connect mission/business state to conversation eligibility without automatically revealing hidden story truth",
+          "support NPC/world operations telemetry for the administration dashboard"
         ]
       },
       {
@@ -177,7 +188,10 @@
         "responsibilities": [
           "room booking and player interaction systems",
           "dialogue, doors, elevators and destination interactions",
-          "venue services, guided tour state and save/revisit behavior"
+          "venue services, guided tour state and save/revisit behavior",
+          "implement six-card business/district story progression as distinct from five-card building/venue collections",
+          "support mission branches, district-fund allocation, business outcomes, district outcomes and character contact handoffs",
+          "support administration dashboard player-facing operational views and mission/reward workflow integration"
         ]
       },
       {
@@ -187,7 +201,10 @@
         "responsibilities": [
           "new-player introduction flow and tour modes",
           "short/full tour choices and tour completion gating",
-          "player start location, skip/revisit and return-home rules"
+          "player start location, skip/revisit and return-home rules",
+          "maintain story-aware onboarding and Bella Rose dialogue without premature conspiracy exposition",
+          "support Afterplay Library discovery records, rumor/evidence summaries and player-facing narrative knowledge views",
+          "coordinate narrative/content administration workflows and story progression diagnostics"
         ]
       },
       {
@@ -197,7 +214,10 @@
         "responsibilities": [
           "Unreal project integration and asset import pipeline",
           "Blueprint/C++ integration, build and automation checks",
-          "asset provenance, performance, packaging and validation"
+          "asset provenance, performance, packaging and validation",
+          "integrate approved mission, NPC intelligence and administration dashboard interfaces into Unreal client systems",
+          "preserve server authority for rewards, player presence, mission outcomes and privileged admin actions",
+          "coordinate with backend/security specialists for global player online counts, reward ledgers and admin audit contracts"
         ]
       }
     ]

@@ -171,3 +171,54 @@ These commands report installed models, currently loaded Ollama models, the conf
 8. Provide concrete deliverables, changed paths, commit IDs and test evidence.
 9. Distinguish configured roles from instantiated, running and healthy agents.
 10. Never claim unverified work is complete.
+
+
+## 12. Narrative architecture and creator approval boundary (authoritative update)
+
+The creator has clarified that ordinary character and story details are delegated to the creative team. Agents may create character names, ages, nicknames, biographies, personalities, alignments (helpful, harmful, compromised, mistaken, deceptive), supporting cast, dialogue, rumors, ordinary businesses, mission details and consequences without asking for individual approval.
+
+Creator approval is required for major organization names, district names, building names/major landmarks, and changes to the overall game strategy or central product direction. If one of these is unresolved, use a descriptive placeholder and continue unrelated work. Never overwrite an established name.
+
+### Two separate narrative channels
+The playable mission/business layer and the ambient underworld-discovery layer are connected but distinct.
+
+- Missions concern practical business/district problems, investigation of operational facts, business decisions, district-specific funds, execution, recovery/loss, financial outcomes, relationships and district standing.
+- The deeper Ghost Freight / The Twelve / Inner Circle / Ghost Network story is discovered through NPCs: overheard conversations, phone calls, rumors, people approaching the player, repeat encounters, invitations, private meetings, social events, news and fragments of evidence.
+- Completing a mission does not reveal who stole the Ghost Freight and does not automatically reveal the global conspiracy. Mission outcomes can change which NPCs talk, what they say, trust and access, but the hidden story is not a mission-completion reward.
+- NPCs have bounded knowledge. Rumors, first-hand accounts, evidence, misinformation, player theories and canonical truth must remain distinct.
+- Preserve the Afterplay Library as the player's record of discovered information, sources, confidence, contradictions and unresolved theories.
+
+### Canon anchors
+The Inner Circle is a global organization. The Ghost Network is its equally powerful global opponent. The Ghost Freight is the stolen shipment/opening incident. The Twelve are Hustle City's twelve district leaders, not a global organization. The Ghost Network has its own city, twelve districts and twelve district leaders. The player eventually learns the Twelve have been working for Frank Maserati; this is an intermediate reveal, not the global reveal. Ultimate Ghost Network controllers remain unknown through the main storyline. The player can eventually choose either global organization.
+
+### Canonical district correction
+The approved spelling is **Trappa District** (T-R-A-P-P-A), not “Trapper District.” The approved twelve districts are Entertainment, Downtown, Hustle, Trappa, Transportation, Swagger, Diamond, Medical, After Hours, Financial, Industrial and Police. Police District is District 12, not a thirteenth district. This creator clarification supersedes older inconsistent wording elsewhere in the repository; update dependent references when safely editing them.
+
+### Six-card story progression versus five-card collections
+The six-card sequence is a character handoff story arc: discover, investigate, choose an approach, execute with district funds, resolve the business outcome, resolve the district outcome. It is separate from the existing five-card building/venue collections that grant configured ownership/access rewards. Do not merge or replace these systems.
+
+See docs/story/HUSTLE_CITY_STORY_BIBLE.md, docs/story/NARRATIVE_DISCOVERY_AND_AMBIENT_INTELLIGENCE.md and docs/story/DISTRICT_STORYLINE_FRAMEWORK.md.
+
+## 13. Administration dashboard
+
+The Administration Dashboard is a first-class operational system. Its specification is docs/admin/ADMINISTRATION_DASHBOARD_SPEC.md. Required capabilities include global online-player counts and breakdowns, player directory/detail, live sessions, rewards and economy ledger, mission/story progression, city/district/business operations, live events, NPC/world operations, support/moderation, analytics, role-based permissions and audit logs.
+
+Keep the four player currencies (Hustle Money, Poker Chips, Wings, Diamonds) distinct from district mission funds and business accounts. Reward grants must be server-authoritative, permissioned, idempotent and auditable. Online counts must come from presence/session heartbeats and show freshness. A written specification is not proof of a live dashboard or connected data source.
+
+## 14. Multi-city story requirement
+Every playable city receives its own complete local story package with twelve city-specific district storylines. Hustle City's story bible is the flagship reference, not a substitute for other cities' local stories. Vary local power structures, district leaders, businesses, cast, relationships, rumors, mission decisions and consequences. Use docs/story/CITY_STORY_PACK_TEMPLATE.md. Global organizations connect city stories gradually; not every district mission is a conspiracy mission.
+
+
+## 13. Persistent world memory and continuous Story Architect
+
+The canonical specification is `docs/story/PERSISTENT_WORLD_MEMORY_AND_AUTONOMOUS_STORY_ARCHITECT.md`. Every narrative agent and coordinator responsible for story production must consult it.
+
+The Story Architect requires distinct, linked memory scopes for world, city, district, every individual building/business/location, every significant character, relationships, events/timelines, missions/arcs, player discoveries and production history. Building-level memory is mandatory: do not store a building's full identity and evolving history only as a subsection of generic district memory. Character memory and character knowledge boundaries are mandatory.
+
+Keep canonical truth, each NPC's knowledge/beliefs, player-discovered knowledge and production hypotheses separate. Every clue, rumor and knowledge transfer needs source/provenance. An NPC must never speak with knowledge they have not acquired.
+
+Story production continues beyond the initial onboarding and launch content. The agent should observe state, retrieve relevant scopes, plan and generate bounded batches of new missions, follow-on stories, ambient scenes and evolving relationships, validate continuity, simulate branches, save versioned work and maintain an unresolved-thread/backlog register.
+
+The two deep competing long-term paths are the Inner Circle and the Ghost Network. Their identities and conflict are gradually discovered through the living world and ambient NPC intelligence, not revealed by mission completion or an early binary-choice prompt. Both paths require distinct people, methods, interests, internal conflicts, recruitment and consequences. Ultimate Ghost Network controllers remain hidden through the main storyline.
+
+This is an architecture requirement, not proof of an active independent agent. Do not claim cross-session persistence, autonomous execution or continuous content generation until the memory service, orchestration runtime, worker loop, QA/release gates and monitoring are implemented and tested.

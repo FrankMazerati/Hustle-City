@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hustlecity.example/schemas/narrative-intelligence-item.schema.json",
+  "title": "Hustle City Narrative Intelligence Item",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "id",
+    "kind",
+    "summary",
+    "source",
+    "knowledge_state",
+    "player_discovery",
+    "visibility"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]+$"
+    },
+    "kind": {
+      "enum": [
+        "rumor",
+        "first_hand_account",
+        "second_hand_report",
+        "direct_evidence",
+        "public_report",
+        "misinformation",
+        "player_theory"
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "canonical_truth_ref": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Authoring-only reference; never expose directly to player clients."
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "source_type",
+        "source_id"
+      ],
+      "properties": {
+        "source_type": {
+          "enum": [
+            "npc",
+            "public_media",
+            "document",
+            "world_event",
+            "player_observation"
+          ]
+        },
+        "source_id": {
+          "type": "string"
+        },
+        "source_reliability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "independent_source_group": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "knowledge_state": {
+      "enum": [
+        "unheard",
+        "heard_unverified",
+        "corroborated",
+        "disputed",
+        "disproven",
+        "confirmed"
+      ]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "first_observed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "location_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "related_character_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "related_district_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "related_business_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "corroborates": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "contradicts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "player_discovery": {
+      "type": "object",
+      "required": [
+        "eligible",
+        "discovered"
+      ],
+      "properties": {
+        "eligible": {
+          "type": "boolean"
+        },
+        "discovered": {
+          "type": "boolean"
+        },
+        "discovered_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "player_note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "visibility": {
+      "type": "object",
+      "required": [
+        "player_safe_summary",
+        "authoring_only"
+      ],
+      "properties": {
+        "player_safe_summary": {
+          "type": "string"
+        },
+        "authoring_only": {
+          "type": "boolean"
+        },
+        "spoiler_tier": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

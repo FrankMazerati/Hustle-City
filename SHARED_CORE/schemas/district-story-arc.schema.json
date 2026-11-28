@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hustlecity.example/schemas/district-story-arc.schema.json",
+  "title": "Hustle City Six-Card District Story Arc",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "id",
+    "district_id",
+    "central_problem_id",
+    "canonical_responsible_character_id",
+    "chapters",
+    "outcome_dimensions"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]+$"
+    },
+    "district_id": {
+      "type": "string"
+    },
+    "business_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "central_problem_id": {
+      "type": "string"
+    },
+    "canonical_responsible_character_id": {
+      "type": "string"
+    },
+    "chapters": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": [
+          "card_number",
+          "chapter_type",
+          "primary_character_id",
+          "objectives",
+          "handoff"
+        ],
+        "properties": {
+          "card_number": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 6
+          },
+          "chapter_type": {
+            "enum": [
+              "discover",
+              "investigate",
+              "choose",
+              "execute",
+              "business_outcome",
+              "district_outcome"
+            ]
+          },
+          "primary_character_id": {
+            "type": "string"
+          },
+          "objectives": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "optional_objectives": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "supporting_character_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "exclusive_route_group": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "handoff": {
+            "type": "object",
+            "required": [
+              "next_character_id",
+              "requires_return_report"
+            ],
+            "properties": {
+              "next_character_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "requires_return_report": {
+                "type": "boolean"
+              },
+              "contact_unlock_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "outcome_dimensions": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "enum": [
+          "business_financial_result",
+          "district_financial_result",
+          "asset_recovery",
+          "puzzle_discovery",
+          "relationship_standing",
+          "district_stability",
+          "future_access"
+        ]
+      }
+    },
+    "mission_funds_ledger_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ambient_intelligence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "five_card_collection_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Separate venue/building collection; never reuse story chapter card IDs."
+    }
+  },
+  "additionalProperties": false
+}
