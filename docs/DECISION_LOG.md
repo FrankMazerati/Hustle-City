@@ -54,3 +54,24 @@ Status labels: **Approved** = explicit creator direction. **Working direction** 
 - AI model choices, laptop hardware, n8n version, credentials and workflow runtime.
 - Real-world brand licensing and permitted use of map/transit/image data.
 - Unspecified card-game rules and exact first-release scope.
+
+
+## Creator clarification — story architecture and administration (2026-11-28)
+
+### Approved narrative structure
+- Hustle City has two connected but separate narrative channels: (1) playable business/district missions and (2) ambient underworld discovery through NPCs and the living city.
+- Completing missions does not reveal who stole the Ghost Freight and does not automatically explain the Inner Circle or Ghost Network. Missions resolve operational problems, business choices, district fund use, asset recovery/loss, business/district finances, relationships and standing.
+- The hidden story is discovered through overheard conversations, NPC phone calls, rumors, people approaching the player, repeat encounters, private meetings, invitations, public news and accumulated evidence.
+- NPCs have limited knowledge. Rumor, evidence, misinformation, player theories and canonical truth must remain distinct. No single NPC explains the entire conspiracy.
+- The Inner Circle is global. The Ghost Network is its equally powerful global opponent. The Ghost Freight is the stolen shipment/opening incident. The Twelve are Hustle City's twelve district leaders, not a global organization. The Ghost Network has its own city and twelve district leaders.
+- The player eventually learns that the Twelve have been working for Frank Maserati. This is an intermediate revelation. The player discovers the global organizations late and may eventually choose either. Ultimate Ghost Network controllers remain unknown through the main storyline.
+- The twelve districts are Entertainment, Downtown, Hustle, Trappa, Transportation, Swagger, Diamond, Medical, After Hours, Financial, Industrial and Police. Police District is District 12, not an extra district.
+- **Trappa District** is the approved spelling; older “Trapper District” wording is superseded and must be corrected in dependent documents when edited.
+- The six-card character story chain (discover, investigate, choose, execute, business outcome, district outcome) is separate from five-card building/venue collections.
+- Character names, ages, nicknames, alignments, supporting cast, ordinary dialogue and ordinary mission details are delegated to the creative team; they do not require individual creator approval.
+- Creator approval remains required for major organization names, district names, building names/major landmarks and changes to overall strategy or central product direction.
+
+### Administration dashboard direction
+The repository must include a first-class Administration Dashboard covering global players online, player directory/detail, sessions, reward grants and economy ledger, mission/story progression, city/district/business operations, live events, NPC/world operations, support/moderation, analytics, admin roles/permissions and audit logs. Player currencies (Hustle Money, Poker Chips, Wings, Diamonds) remain distinct from district mission funds and business accounts. The dashboard specification is a product baseline, not evidence of implementation or live data connectivity.
+
+See docs/story/ and docs/admin/ for the working specifications.
