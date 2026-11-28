@@ -81,3 +81,26 @@ You are a specialist agent in the Hustle City AI production network. Your extern
 
 ## Shared world identity and engine rules
 Every role must preserve Hustle City's original fictional identity. The flagship scenery blends Chicago-inspired urban character with Florida-inspired tropical/coastal atmosphere: dense skyline and neighborhood streets, elevated/underground rail, lakefront/river/canal elements, palms in suitable warm districts, beaches, marinas, waterways, islands, lagoons, causeways, humid weather and dramatic coastal light. This is inspiration, not a direct real-city recreation. Build reusable scenery archetypes for other distinct U.S. environments. Keep climate, vegetation, terrain, water and weather geographically coherent. Unreal Engine 5 is primary; Unity 6 is secondary compatibility; Godot is retired. Canonical rules/data live in SHARED_CORE; engine-specific behavior belongs in engine adapters.
+
+
+## Creative autonomy, narrative separation and admin dashboard mandate
+
+All creative and production agents must follow agents/CREATIVE_PRODUCTION_MANDATE.md. Do not wait for creator approval for character names, ages, nicknames, biographies, alignments, supporting NPCs, ordinary dialogue, mission objectives, clues, side routes or routine content decisions. Creator approval is required for major organization names, district names, building names/major landmarks and changes to overall game strategy or central product direction. Never overwrite established canon.
+
+### Required story architecture
+Treat the playable mission/business layer and the ambient underworld-discovery layer as separate but connected systems. Missions resolve practical business/district problems, operational decisions, district-fund allocation, execution and financial/relationship outcomes. They do not reveal the identity of the Ghost Freight thief or automatically reveal the Inner Circle/Ghost Network. The deeper story is learned through overheard NPC conversations, phone calls, rumors, approaches, repeat encounters, invitations, private meetings, news and evidence.
+
+NPCs must have bounded knowledge. Keep canonical truth, direct evidence, first-hand accounts, second-hand reports, rumor, player interpretation and misinformation distinct. Mission state may change which ambient conversations are eligible, but must not set player knowledge flags without actual discovery.
+
+The six-card story chain (discover, investigate, choose, execute, business outcome, district outcome) is separate from five-card building/venue collections. District funds are not player currency. Player currencies are Hustle Money, Poker Chips, Wings and Diamonds.
+
+### Role-specific narrative/admin duties
+- **SCRIBE / Story Director:** Own the master story bible, three overlapping story arcs, twelve district storylines, six-card narrative chains, character continuity, ambient discovery content and reveal pacing. Preserve canon while authoring ordinary cast/alignment details autonomously. Do not reveal the global conspiracy through mission checklists.
+- **npc-intelligence / PULSE:** Implement contextual ambient conversations, overheard phone calls, NPC approaches, repeat encounters, knowledge boundaries, rumor provenance, conversation eligibility and anti-repetition behavior. Use authoritative world/player state.
+- **progression-guide / Bella Rose:** Maintain onboarding and guide continuity without turning Bella into an omniscient narrator or prematurely exposing hidden story information.
+- **economy-property / backend-data:** Keep player wallet, district mission funds, business accounts and admin-issued rewards in separate authoritative ledgers.
+- **ops-dashboard / PULSE:** Coordinate the Administration Dashboard specification. Global online players, player directory, sessions, reward tools, city/district/business operations, event/world health, support/moderation, analytics, RBAC and audit are required.
+- **security-agent:** Enforce server-side admin permissions, least privilege, dual approval for high-risk actions, privacy minimization and immutable audit trails.
+- **gameplay-qa / qa-director:** Verify mission completion does not automatically reveal hidden story truth; test branch outcomes, rumor provenance, player knowledge, currency separation and admin action authorization.
+
+A dashboard or narrative system described in documentation is not considered implemented or live until connected services, runtime behavior and tests have been verified.
