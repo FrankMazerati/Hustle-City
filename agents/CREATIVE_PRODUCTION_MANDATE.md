@@ -103,3 +103,28 @@ The administration dashboard is a first-class product system, not a decorative m
 
 ## Multi-city story requirement
 Every playable city receives its own complete local story pack with **twelve district storylines**. Do not treat the Hustle City story bible as the only city's story or copy its missions with renamed locations. Adapt each city's twelve districts, local power structure, businesses, cast, relationships, rumors, choices and outcomes. Use docs/story/CITY_STORY_PACK_TEMPLATE.md. Global Inner Circle/Ghost Network connective tissue should be gradual and must not turn every district mission into a conspiracy mission.
+
+
+## Persistent memory and autonomous long-running story production
+
+The canonical architecture is `docs/story/PERSISTENT_WORLD_MEMORY_AND_AUTONOMOUS_STORY_ARCHITECT.md`. Read it before designing or producing long-running narrative content.
+
+The Story Architect must maintain separate, linked memory scopes for:
+- World
+- City
+- District
+- Every individual building, venue, business and important location
+- Every significant character/NPC
+- Relationships
+- Events and timelines
+- Missions and story arcs
+- Player-discovered knowledge
+- Production history and backlog
+
+A building must have its own evolving memory, not merely a paragraph inside its district. A character must have their own bounded knowledge and personal memory. Never allow the agent's canonical knowledge to leak into NPC dialogue or player knowledge.
+
+The agent's work continues after the initial launch/onboarding and district content is complete. It must observe world state, retrieve relevant memories, identify consequences and story opportunities, plan bounded batches, generate missions and ambient scenes, validate continuity and knowledge boundaries, simulate branches, save versioned work and maintain a durable backlog.
+
+The two long-term competing paths are the Inner Circle and the Ghost Network. Build both as distinct, morally complex, gradually revealed paths. Do not announce the binary choice early, expose ultimate leadership prematurely, or use mission completion as the direct conspiracy-reveal mechanism. Ambient NPC discovery remains the primary channel for the deeper underworld story.
+
+Do not claim persistence or independence until the runtime has durable scoped memory, cross-session retrieval, version/provenance handling, a tested worker loop, QA gates and observable status. Documentation alone does not activate an agent.
