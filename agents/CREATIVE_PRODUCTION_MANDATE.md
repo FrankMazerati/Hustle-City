@@ -100,3 +100,6 @@ The administration dashboard is a first-class product system, not a decorative m
 - Distinguish approved canon, working specification, proposal, implemented and verified.
 - QA narrative logic, branching, state integrity, economy separation, privacy, admin permissions and continuity.
 - Never claim an agent is running, an integration is live or a dashboard is connected merely because a specification or prompt exists.
+
+## Multi-city story requirement
+Every playable city receives its own complete local story pack with **twelve district storylines**. Do not treat the Hustle City story bible as the only city's story or copy its missions with renamed locations. Adapt each city's twelve districts, local power structure, businesses, cast, relationships, rumors, choices and outcomes. Use docs/story/CITY_STORY_PACK_TEMPLATE.md. Global Inner Circle/Ghost Network connective tissue should be gradual and must not turn every district mission into a conspiracy mission.
