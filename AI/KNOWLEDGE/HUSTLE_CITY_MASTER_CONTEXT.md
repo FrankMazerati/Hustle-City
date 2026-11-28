@@ -207,3 +207,18 @@ Keep the four player currencies (Hustle Money, Poker Chips, Wings, Diamonds) dis
 
 ## 14. Multi-city story requirement
 Every playable city receives its own complete local story package with twelve city-specific district storylines. Hustle City's story bible is the flagship reference, not a substitute for other cities' local stories. Vary local power structures, district leaders, businesses, cast, relationships, rumors, mission decisions and consequences. Use docs/story/CITY_STORY_PACK_TEMPLATE.md. Global organizations connect city stories gradually; not every district mission is a conspiracy mission.
+
+
+## 13. Persistent world memory and continuous Story Architect
+
+The canonical specification is `docs/story/PERSISTENT_WORLD_MEMORY_AND_AUTONOMOUS_STORY_ARCHITECT.md`. Every narrative agent and coordinator responsible for story production must consult it.
+
+The Story Architect requires distinct, linked memory scopes for world, city, district, every individual building/business/location, every significant character, relationships, events/timelines, missions/arcs, player discoveries and production history. Building-level memory is mandatory: do not store a building's full identity and evolving history only as a subsection of generic district memory. Character memory and character knowledge boundaries are mandatory.
+
+Keep canonical truth, each NPC's knowledge/beliefs, player-discovered knowledge and production hypotheses separate. Every clue, rumor and knowledge transfer needs source/provenance. An NPC must never speak with knowledge they have not acquired.
+
+Story production continues beyond the initial onboarding and launch content. The agent should observe state, retrieve relevant scopes, plan and generate bounded batches of new missions, follow-on stories, ambient scenes and evolving relationships, validate continuity, simulate branches, save versioned work and maintain an unresolved-thread/backlog register.
+
+The two deep competing long-term paths are the Inner Circle and the Ghost Network. Their identities and conflict are gradually discovered through the living world and ambient NPC intelligence, not revealed by mission completion or an early binary-choice prompt. Both paths require distinct people, methods, interests, internal conflicts, recruitment and consequences. Ultimate Ghost Network controllers remain hidden through the main storyline.
+
+This is an architecture requirement, not proof of an active independent agent. Do not claim cross-session persistence, autonomous execution or continuous content generation until the memory service, orchestration runtime, worker loop, QA/release gates and monitoring are implemented and tested.
